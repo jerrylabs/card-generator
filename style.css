@@ -1,0 +1,22 @@
+
+body {
+  color: white;
+  background: black;
+  -webkit-print-color-adjust: exact;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.cards {
+  display: flex;
+}
+
+.card {
+  flex: 0 0 4.4cm;
+  width: 4.4cm;
+  height: 6.7cm;
+  border: 0.2mm solid yellow;
+  padding: 1cm;
+}
