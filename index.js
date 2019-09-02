@@ -7,11 +7,13 @@ csvToObject = (data) => parse(data, {
   skip_empty_lines: true
 });
 
-generateHtml = (cardsData, stylesheet) =>
+generateHtml = (cardsData, css) =>
   `<!DOCTYPE html>
   <html>
     <head>
-      <link rel="stylesheet" type="text/css" href="style.css">
+      <style type="text/css">
+        ${css}
+      </style>
     </head>
     <body>
       <div class="cards"> ${
@@ -29,10 +31,10 @@ generateHtml = (cardsData, stylesheet) =>
 
 (async function() {
   try {
-    const csvData = fs.readFileSync('sample.csv', 'utf8')
+    const csvData = fs.readFileSync('sample.csv', 'utf8');
+    const cssData = fs.readFileSync('style.css', 'utf8');
     const cardsData = csvToObject(csvData);
-    const htmlData = generateHtml(cardsData, 'style.css');
-console.log(htmlData)
+    const htmlData = generateHtml(cardsData, cssData);
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
     await page.setContent(htmlData);
