@@ -18,7 +18,7 @@ generateHtml = (cardsData, css) =>
     <body>
       <div class="cards"> ${
         cardsData.map(cardData =>
-          `<div class="card"> ${
+          `<div class="card ${cardData.typ || ''}"> ${
             Object.keys(cardData).map(cardProperty =>
               `<div class="${cardProperty}">${cardData[cardProperty]}</div>` // here condition for specific fields
             ).join('')
@@ -35,6 +35,7 @@ generateHtml = (cardsData, css) =>
     const cssData = fs.readFileSync('style.css', 'utf8');
     const cardsData = csvToObject(csvData);
     const htmlData = generateHtml(cardsData, cssData);
+console.log(htmlData);
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
     await page.setContent(htmlData);

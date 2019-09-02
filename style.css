@@ -18,3 +18,11 @@ html, body {
   border: 0.2mm solid yellow;
   padding: 1cm;
 }
+
+.card.bojovnik {
+  border-color: red;
+}
+
+.card.rostlina {
+  border-color: green;
+}
