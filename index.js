@@ -60,6 +60,7 @@ fs.writeFile("myhtml.html", htmlData, function(err) {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
     await page.setContent(htmlData);
+    await page.evaluateHandle('document.fonts.ready');
     // await page.emulateMedia('screen');
     await page.emulateMedia('print');
     await page.content();

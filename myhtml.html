@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <style type="text/css">
+        @page {
+    size: A4 landscape;
+    margin: 4.5mm;
+}
+
+body {
+  -webkit-print-color-adjust: exact;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+}
+
+.cards {
+  text-align: center;
+}
+
+.card {
+  font-size: 12px;
+  display: inline-block;
+  overflow: hidden;
+  width: 44.0mm;
+  height: 67.0mm;
+  border: 2mm solid white;
+  box-sizing: border-box;
+  page-break-inside: avoid;
+  position: relative;
+}
+
+.card:before {
+  content: ' ';
+  position: absolute;
+  z-index: 0;
+  background:  rgba(255, 255, 255, 0.5);
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.typ {
+  display: none;
+}
+
+.card.bio {
+  background: transparent url(http://localhost:8080/background-bio.png) center center;
+  background-size: cover;
+}
+
+.nazev {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Krona One Regular";
+  font-size: 2.8mm;
+  background: transparent url(http://localhost:8080/background-title-top.png) center center no-repeat;
+  background-size: contain;
+  height: 7mm;
+  width: 28mm;
+}
+      </style>
+    </head>
+    <body>
+      <div class="cards"> <div class="card bio"> <div class="typ">bio</div><div class="nazev">Paže wrestlera</div><div class="requires">B</div><div class="provides">H</div><div class="attributes">PPH</div><div class="image">paze</div></div><div class="card bio"> <div class="typ">bio</div><div class="nazev">Vystřelovací pěst</div><div class="requires">B</div><div class="provides">H</div><div class="attributes">PSL</div><div class="image">vystrelovaci</div></div><div class="card bio"> <div class="typ">bio</div><div class="nazev">Chmatákova ruka</div><div class="requires">B</div><div class="provides">H</div><div class="attributes">SL</div><div class="image">chmatakova</div><div class="text">Jednou za kolo si můžeš vzít náhodnou kartu z ruky protihráče.</div></div><div class="card bio"> <div class="typ">bio</div><div class="nazev">Natažitelná ruka</div><div class="requires">B</div><div class="provides">H</div><div class="attributes">SIL</div><div class="image">natazitelna</div></div><div class="card bio"> <div class="typ">bio</div><div class="nazev">Diablovo kopyto</div><div class="requires">B</div><div class="provides">L</div><div class="attributes">PSL</div><div class="image">diablovo</div></div><div class="card bio"> <div class="typ">bio</div><div class="nazev">Opičí noha</div><div class="requires">B</div><div class="provides">HL</div><div class="attributes">SSL</div><div class="image">opici</div></div><div class="card bio"> <div class="typ">bio</div><div class="nazev">Žahavé chapadlo</div><div class="requires">B</div><div class="provides">HH</div><div class="attributes">PL</div><div class="image">zahave</div></div><div class="card bio"> <div class="typ">bio</div><div class="nazev">Dual ruka</div><div class="requires">B</div><div class="provides">HH</div><div class="attributes">PL</div><div class="image">dualruka</div></div><div class="card bio"> <div class="typ">bio</div><div class="nazev">Integrovaný rotačák</div><div class="requires">B</div><div class="attributes">SSLL</div><div class="image">integrovany</div></div><div class="card bio"> <div class="typ">bio</div><div class="nazev">Megavrták</div><div class="requires">B</div><div class="attributes">PPLL</div><div class="image">megavrtak</div></div><div class="card bio"> <div class="typ">bio</div><div class="nazev">Kyber biceps</div><div class="provides">H</div><div class="attributes">SL</div><div class="image">kyber</div></div><div class="card bio"> <div class="typ">bio</div><div class="nazev">Sloní chobot</div><div class="provides">H</div><div class="attributes">PL</div><div class="image">sloni</div></div><div class="card bio"> <div class="typ">bio</div><div class="nazev">Roboruce</div><div class="provides">HH</div><div class="attributes">L</div><div class="image">roboruce</div></div><div class="card bio"> <div class="typ">bio</div><div class="nazev">Údní nástavec</div><div class="provides">B</div><div class="attributes">L</div><div class="image">udni</div></div><div class="card bio"> <div class="typ">bio</div><div class="nazev">Údní nástavec</div><div class="provides">B</div><div class="attributes">L</div><div class="image">udni</div></div><div class="card bio"> <div class="typ">bio</div><div class="nazev">Průhledná kůže</div><div class="attributes">I</div><div class="image">pruhledna</div></div><div class="card bio"> <div class="typ">bio</div><div class="nazev">Laserové oko</div><div class="attributes">P</div><div class="image">laserove</div></div><div class="card bio"> <div class="typ">bio</div><div class="nazev">Měňavost</div><div class="attributes">I</div><div class="image">menavost</div></div><div class="card bio"> <div class="typ">bio</div><div class="nazev">Kyselinný pot</div><div class="attributes">S</div><div class="image">kyselinny</div></div><div class="card bio"> <div class="typ">bio</div><div class="nazev">Kyselinná krev</div><div class="attributes">P</div><div class="image">kyselinna</div></div><div class="card bio"> <div class="typ">bio</div><div class="nazev">Chameleoní kůže</div><div class="attributes">I</div><div class="image">chameleoni</div></div><div class="card bio"> <div class="typ">bio</div><div class="nazev">Mozek asiata</div><div class="attributes">I</div><div class="image">mozek</div></div><div class="card bio"> <div class="typ">bio</div><div class="nazev">Žhavá kůže</div><div class="attributes">P</div><div class="image">zhava</div></div><div class="card bio"> <div class="typ">bio</div><div class="nazev">Mrazivý dech</div><div class="attributes">P</div><div class="image">mrazivyd</div></div><div class="card bio"> <div class="typ">bio</div><div class="nazev">Srdeční pumpa</div><div class="attributes">S</div><div class="image">srdecni</div></div><div class="card bio"> <div class="typ">bio</div><div class="nazev">Hydraulický biceps</div><div class="attributes">PL</div><div class="image">hydraulicky</div></div><div class="card bio"> <div class="typ">bio</div><div class="nazev">Žraločí zuby</div><div class="attributes">PL</div><div class="image">zraloci</div></div><div class="card bio"> <div class="typ">bio</div><div class="nazev">Titanove zuby</div><div class="attributes">PL</div><div class="image">titanove</div></div><div class="card bio"> <div class="typ">bio</div><div class="nazev">Netopýří uši</div><div class="attributes">IL</div><div class="image">netopyri</div></div><div class="card bio"> <div class="typ">bio</div><div class="nazev">Kachní žaludek</div><div class="attributes">PLL</div><div class="image">kachni</div></div><div class="card bio"> <div class="typ">bio</div><div class="nazev">Kovová kostra</div><div class="attributes">PLL</div><div class="image">kovova</div></div><div class="card bio"> <div class="typ">bio</div><div class="nazev">Statečné srdce</div><div class="attributes">LLL</div><div class="image">statecne</div></div><div class="card bio"> <div class="typ">bio</div><div class="nazev">Šmírákovo oko</div><div class="attributes">IL</div><div class="image">smirakovo</div><div class="text">Jednou za kolo se můžeš podívat do karet na ruce jednoho protihráče.</div></div><div class="card bio"> <div class="typ">bio</div><div class="nazev">Rentgenové oko</div><div class="attributes">IL</div><div class="image">rentgenove</div><div class="text">Jednou za kolo se můžeš podívat na vrchní kartz z balíčku úkolů.</div></div><div class="card bio"> <div class="typ">bio</div><div class="nazev">Kamenná kůže</div><div class="image">kamenna</div><div class="text">Při ztrátě více než jednoho *L* ztrácíš i *L* méně.</div></div><div class="card bio"> <div class="typ">bio</div><div class="nazev">Regenerace</div><div class="image">regenerace</div><div class="text">Můžeš si vykládat zelená BIO vylepšení z odhazovacího balíčku, jakoby jsi je měl v ruce.</div></div></div>
+    </body>
+  </html>
