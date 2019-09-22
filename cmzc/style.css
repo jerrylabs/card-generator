@@ -3,10 +3,6 @@
     margin: 4.5mm;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 body {
   -webkit-print-color-adjust: exact;
 }
@@ -64,7 +60,7 @@ html, body {
   background: transparent url(http://localhost:8080/background-title-top.png) center -2px no-repeat;
   background-size: contain;
   height: 7.5mm;
-  width: 28mm;
+  width: 27mm;
   padding: 0.4mm 3mm;
   line-height: 7mm;
 }
@@ -92,3 +88,19 @@ html, body {
 .joint.single.leg { bottom: 1.5cm; }
 .joint.first { top: 0; }
 .joint.second { bottom: 0; }
+
+.attributes {
+  position: absolute;
+  bottom: 5mm;
+  text-align: center;
+  width: 100%;
+  padding: 5mm;
+  box-sizing: border-box;
+  z-index: 0;
+  line-height: 0;
+}
+
+.attribute {
+  width: 11mm;
+  margin: 1mm;
+}
