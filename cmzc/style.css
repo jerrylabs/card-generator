@@ -31,17 +31,27 @@ html, body {
 .card:before {
   content: ' ';
   position: absolute;
-  z-index: 0;
+  z-index: 1;
   background:  rgba(255, 255, 255, 0.5);
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+}
+
+.card-frame {
   height: 100%;
   width: 100%;
   top: 0;
   left: 0;
   border: 2mm solid white;
   box-sizing: border-box;
+  position: absolute;
+  z-index: 2;
 }
 
-.typ {
+.type {
   display: none;
 }
 
@@ -52,6 +62,7 @@ html, body {
 
 .title {
   position: absolute;
+  z-index: 2;
   top: 2mm;
   left: 50%;
   transform: translateX(-50%);
@@ -80,7 +91,7 @@ html, body {
   background-image: url(http://localhost:8080/background-title-bottom.png);
 }
 
-.joint { position: absolute; height: 1.5cm; }
+.joint { position: absolute; z-index: 3; height: 1.5cm; }
 .joint.required { left: 0; }
 .joint.provided { right: 0; }
 .joint.single.bone { top: 1.5cm; }
@@ -91,18 +102,17 @@ html, body {
 
 .attributes, .lives {
   position: absolute;
-  bottom: 5mm;
+  z-index: 2;
+  bottom: 10mm;
   text-align: center;
   width: 100%;
-  padding: 5mm;
   box-sizing: border-box;
-  z-index: 0;
   line-height: 0;
 }
 
 .lives {
   bottom: auto;
-  top: 6mm;
+  top: 11mm;
 }
 
 .attribute {
@@ -112,6 +122,75 @@ html, body {
 
 .life {
   width: 10mm;
-  margin: -1mm;
+  margin: -1mm 0;
+}
+
+.card-horizontal .lives-and-attributes {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  right: 3mm;
+}
+
+.card-horizontal .attributes,
+.card-horizontal .lives,
+.card-vertical .attributes,
+.card-vertical .lives {
+  position: static;
+}
+
+.card-vertical .lives-and-attributes {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  top: 10mm;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-vertical .lives, .card-vertical .attributes {
+  flex: 0 1 0;
+}
+
+.card-vertical .life, .card-vertical .attribute {
+  transform: rotate(-90deg);
+}
+
+.card-horizontal .attribute-power {
+  transform: rotate(180deg);
+}
+
+.card-horizontal .life {
+  display: block;
+  margin: 1mm 2mm;
+}
+
+.illustration {
+  position: absolute;
+  z-index: 1;
+  width: 40mm;
+  top: 50%;
+  left: 2mm;
+  transform: translateY(-50%);
+}
+
+.card-horizontal .illustration {
+  transform: translateY(-50%) rotate(90deg);
+  left: -7mm;
+  width: 42mm;
+}
+
+.card-vertical .illustration {
+  top: 53%;
+}
+
+.card-big-text .illustration {
+  top: 35%;
 }
 
