@@ -89,7 +89,7 @@ html, body {
 .joint.first { top: 0; }
 .joint.second { bottom: 0; }
 
-.attributes {
+.attributes, .lives {
   position: absolute;
   bottom: 5mm;
   text-align: center;
@@ -100,7 +100,18 @@ html, body {
   line-height: 0;
 }
 
+.lives {
+  bottom: auto;
+  top: 6mm;
+}
+
 .attribute {
   width: 11mm;
   margin: 1mm;
 }
+
+.life {
+  width: 10mm;
+  margin: -1mm;
+}
+

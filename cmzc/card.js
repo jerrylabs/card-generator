@@ -14,13 +14,9 @@ shortcut = (c) => {
 getJointMarkup = (order, rel, type) =>
   `<img class="joint ${rel} ${order} ${type}" src="http://localhost:8080/${rel}-${type}.png" />`;
 
-getAttrMarkup = (c, i) => (
-  (c == 'Z')
-  ? `<img class="attribute life" src="http://localhost:8080/${shortcut(c)}.png" />`
-  : `<img class="attribute" src="http://localhost:8080/attr-${shortcut(c)}.png" />`
-);
+getLiveMarkup = (c, i) => `<img class="life" src="http://localhost:8080/${shortcut(c)}.png" />`;
 
-
+getAttrMarkup = (c, i) => `<img class="attribute" src="http://localhost:8080/attr-${shortcut(c)}.png" />`;
 
 getFieldMarkup = (title, value, card) => {
   let markup;
@@ -46,7 +42,8 @@ getFieldMarkup = (title, value, card) => {
       }
     break;
     case 'attributes':
-      markup = `<div class="attributes">${value.split('').map(getAttrMarkup).join('')}</div>`;
+      markup = `<div class="lives">${value.split('').filter(v => v == 'Z').map(getLiveMarkup).join('')}</div>
+        <div class="attributes">${value.split('').filter(v => v != 'Z').map(getAttrMarkup).join('')}</div>`;
     break;
     default:
       markup = `<div class="${title}">${value}</div>`;
