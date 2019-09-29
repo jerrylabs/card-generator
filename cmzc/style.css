@@ -28,6 +28,7 @@ html, body {
   position: relative;
 }
 
+/* bg overlay */
 .card:before {
   content: ' ';
   position: absolute;
@@ -58,6 +59,17 @@ html, body {
 .card.bio {
   background: transparent url(http://localhost:8080/background-bio.png) center center;
   background-size: cover;
+}
+
+.card.bio .card-icons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent url(http://localhost:8080/icons-bio.png) center center;
+  z-index: 1;
+  background-size: 100% 100%;
 }
 
 .title {
@@ -91,12 +103,12 @@ html, body {
   background-image: url(http://localhost:8080/background-title-bottom.png);
 }
 
-.joint { position: absolute; z-index: 3; height: 1.5cm; }
+.joint { position: absolute; z-index: 4; height: 1.5cm; }
 .joint.required { left: 0; }
 .joint.provided { right: 0; }
-.joint.single.bone { top: 1.5cm; }
+.joint.single.bone { top: 1cm; }
 .joint.single.hand,
-.joint.single.leg { bottom: 1.5cm; }
+.joint.single.leg { bottom: 1cm; }
 .joint.first { top: 0; }
 .joint.second { bottom: 0; }
 
@@ -186,11 +198,26 @@ html, body {
   width: 42mm;
 }
 
-.card-vertical .illustration {
-  top: 53%;
+.card-vertical.card-no-attributes .illustration {
+  top: 42%;
 }
 
-.card-big-text .illustration {
-  top: 35%;
+.text {
+  position: absolute;
+  z-index: 3;
+  left: 3mm;
+  bottom: 3mm;
+  width: 38mm;
+  background: transparent url(http://localhost:8080/background-text.png) center center no-repeat;
+  background-size: 100% 100%;
+  font-family: "Open Sans";
+  padding: 1.4mm;
+  box-sizing: border-box;
 }
+
+.card-vertical.card-no-joints .text {
+  padding: 0;
+  bottom: 8mm;
+}
+
 

@@ -66,8 +66,8 @@ const isHorizontal = (cardData) =>
 const isVertical = (cardData) =>
   cardData.type != 'voodoo' && cardData.text
 
-const hasBigText = (cardData) =>
-  cardData.type == 'bio' && cardData.text && !cardData.requires && !cardData.provides && !cardData.attributes;
+const hasNoAttributes = (cardData) =>
+  cardData.type == !cardData.attributes;
 
 module.exports = (cardData) => {
   return `<div
@@ -75,9 +75,11 @@ module.exports = (cardData) => {
       ${cardData.type || ''}
       ${isHorizontal(cardData) ? ' card-horizontal' : ''}
       ${isVertical(cardData) ? ' card-vertical' : ''}
-      ${hasBigText(cardData) ? ' card-big-text' : ''}
+      ${!cardData.attributes ? ' card-no-attributes' : ''}
+      ${!cardData.requires && !cardData.provides ? 'card-no-joints' : ''}
   }">
     <div class="card-frame"></div>
+    <div class="card-icons"></div>
     ${
       Object.keys(cardData).map(cardProperty =>
         cardData[cardProperty]
