@@ -131,7 +131,7 @@ html, body {
 .joint.first { top: 0; }
 .joint.second { bottom: 0; }
 
-.attributes, .lives {
+.attributes, .lives, .rerolls {
   position: absolute;
   z-index: 2;
   bottom: 10mm;
@@ -146,6 +146,16 @@ html, body {
   top: 11mm;
 }
 
+.tech .lives {
+  top: auto;
+  bottom: 11mm;
+}
+
+.rerolls {
+  bottom: auto;
+  top: 10mm;
+}
+
 .attribute {
   width: 11mm;
   margin: 1mm;
@@ -155,6 +165,23 @@ html, body {
   width: 10mm;
   margin: -1mm 0;
 }
+
+.test, .reroll {
+  width: 15mm;
+  height: 15mm;
+  display: inline-block;
+}
+
+.reroll {
+  background-size: contain;
+}
+
+.reroll img {
+  width: 100%;
+}
+
+.reroll-green { background-image: url(http://localhost:8080/reroll-green.png); }
+.reroll-red { background-image: url(http://localhost:8080/reroll-red.png); }
 
 .card-horizontal .lives-and-attributes {
   position: absolute;
