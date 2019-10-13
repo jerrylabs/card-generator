@@ -41,6 +41,10 @@ html, body {
   box-sizing: border-box;
 }
 
+.card.voodoo:before {
+  display: none;
+}
+
 .card-frame {
   height: 100%;
   width: 100%;
@@ -69,6 +73,11 @@ html, body {
 .card.basic {
   background: transparent url(http://localhost:8080/background-basic.png) center center;
   background-size: cover;
+}
+
+.card.voodoo {
+  background: transparent url(http://localhost:8080/background-voodoo.png) center center;
+  background-size: 100% 100%;
 }
 
 .card-icons {
@@ -111,6 +120,14 @@ html, body {
   width: 27mm;
   padding: 0.4mm 3mm;
   line-height: 7mm;
+}
+
+.voodoo .title {
+  background: none;
+  height: 11.5mm;
+  width: 40mm;
+  padding: 2mm 3mm 0 12mm;
+  box-sizing: border-box;
 }
 
 .title span {
@@ -269,6 +286,10 @@ html, body {
   transform: translateY(-50%);
 }
 
+.voodoo .illustration {
+  top: 39%;
+}
+
 .text {
   position: absolute;
   z-index: 3;
@@ -278,12 +299,16 @@ html, body {
   background: transparent url(http://localhost:8080/background-text.png) center center no-repeat;
   background-size: 100% 100%;
   font-family: "Open Sans";
-  padding: 0.8mm;
+  padding: 1mm;
   box-sizing: border-box;
 }
 
 .card-has-joints .text {
   padding: 1.4mm;
+}
+
+.voodoo .text {
+  background: none;
 }
 
 
