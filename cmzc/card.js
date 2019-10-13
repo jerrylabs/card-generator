@@ -54,13 +54,31 @@ const getRerollsMarkup = (value) => {
   return markup;
 }
 
+getTextMarkup = (text, cardData) => {
+  if (cardData.type != 'voodoo') {
+    return text;
+  }
+  text = text
+    .replace(/X😀/g, '<img class="emo emo-epic" src="http://localhost:8080/cross.png" />')
+    .replace(/X😬/g, '<img class="emo emo-tragic" src="http://localhost:8080/cross.png" />')
+    .replace(/😀/g, '<img class="emo" src="http://localhost:8080/emo-epic.png" />')
+    .replace(/😬/g, '<img class="emo" src="http://localhost:8080/emo-tragic.png" />')
+    .replace(/#/g, '<img class="emo" src="http://localhost:8080/dice-cross.png" />')
+    .replace(/=>/g, '<img class="emo arrow" src="http://localhost:8080/arrow.png" />')
+    .replace(/\?/g, '<img class="emo" src="http://localhost:8080/dice-any.png" />');
+
+  return text;
+}
+
 const getFieldMarkup = (title, value, card) => {
   let markup;
   switch (title) {
 
     /* nazev karty */
     case 'title':
-      markup = `<div class="${title}"><span>${value}</span></div>`;
+      markup = `<div class="${title}${value.length > 32 ? ' title-long' : ''}">
+        <span>${value}</span>
+      </div>`;
       if ((card.requires || card.provides) && !card.text) {
         markup += `<div class="title title-reversed"><span>${value}</span></div>`;
       }
@@ -97,6 +115,9 @@ const getFieldMarkup = (title, value, card) => {
     break;
     case 'rerolls':
       markup = `<div class="rerolls">${getRerollsMarkup(value)}</div>`;
+    break;
+    case 'text':
+       markup = `<div class="text">${getTextMarkup(value, card)}</div>`;
     break;
     default:
       markup = `<div class="${title}">${value}</div>`;

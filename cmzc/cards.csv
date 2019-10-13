@@ -19,7 +19,7 @@ basic,Noha,B,L,SZ,,,,
 basic,Noha,B,L,SZ,,,,
 bio,Paže wrestlera,B,H,PPZ,,paze,,
 bio,Vystřelovací pěst,B,H,PSZ,,vystrelovaci,,
-bio,Chmatákova ruka,B,H,SZ,,chmatakova,,Jednou za kolo si můžeš vzít náhodnou kartu z ruky protihráče.
+bio,Chmatákova ruka,B,H,SZ,,chmatakova,,Jednou za kolo si<br>můžeš vzít náhodnou kartu z ruky protihráče.
 bio,Natažitelná ruka,B,H,SIZ,,natazitelna,,
 bio,Diablovo kopyto,B,L,PSZ,,diablovo,,
 bio,Opičí noha,B,HL,SSZ,,opici,,
@@ -106,4 +106,8 @@ voodoo,Nafukující se hemeroid,,,,,nafukujici,,😬
 voodoo,Padající šištice,,,,,padajici,,😬
 voodoo,Zkažená ústřice ve včerejší večeři,,,,,zkazena,,😬
 voodoo,Šlápnutí do hovna,,,,,slapnuti,,😬
-voodoo,Blesk,,,,,blesk,,DDD
+voodoo,Blesk,,,,,blesk,,###
+voodoo,Smradlavý dech,,,,,smradlavy,,#
+voodoo,Mrazivý paprsek,,,,,mrazivyp,,#
+voodoo,Pyrokineze,,,,,pyrokineze,,X😀 nebo X😬
+voodoo,Talisman,,,,,talisman,,? => ?
