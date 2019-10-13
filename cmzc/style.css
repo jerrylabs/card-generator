@@ -261,24 +261,11 @@ html, body {
 }
 
 .card-vertical .life, .card-vertical .attribute {
-  transform: rotate(-90deg);
   margin: 1mm 0.5mm;
 }
 
 .card-vertical .rerolls .life {
   margin: 2mm 0;
-}
-
-.card-vertical .attribute-power {
-  transform: rotate(90deg);
-}
-
-.card-vertical .test {
-  transform: rotate(-90deg);
-}
-
-.card-vertical .test[src*="power"] {
-  transform: rotate(90deg);
 }
 
 .illustration {
@@ -360,10 +347,10 @@ html, body {
 
 .voodoo .test {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 58%;
+  left: 17%;
   transform: translate(-50%, -50%) !important;
   z-index: 3;
-  width: 20mm;
-  height: 20mm;
+  width: 16mm;
+  height: 16mm;
 }

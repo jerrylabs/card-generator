@@ -36,8 +36,8 @@ const getRerollsMarkup = (value) => {
   let markup = getTestMarkup(value); /* pozadavek na test, je-li nejaky */
   let diceAmount;
   diceAmount = value.match(/[1-3]/g);
-  if (value.includes('🙁')) { diceAmount = '-sad'; }
-  else if (value.includes('😬')) { diceAmount = '-tragic'; }
+  if (value.includes('🙁')) { diceAmount = '-small-sad'; }
+  else if (value.includes('😬')) { diceAmount = '-small-tragic'; }
   if (diceAmount) {
     markup = `${markup}
       <div class="reroll reroll${value.includes('X') ? '-red' : '-green'}">
@@ -63,6 +63,7 @@ getTextMarkup = (text) => text
   .replace(/\[🙂\]/g, '<img class="emo" src="http://localhost:8080/dice-happy.png" />')
   .replace(/\[😐\]/g, '<img class="emo" src="http://localhost:8080/dice-neutral.png" />')
   .replace(/\[🙁\]/g, '<img class="emo" src="http://localhost:8080/dice-sad.png" />')
+  .replace(/\[🙂🙂\]/g, '<img class="emo" src="http://localhost:8080/dice-double.png" />')
   .replace(/X😀/g, '<img class="emo emo-epic" src="http://localhost:8080/cross.png" />')
   .replace(/X😬/g, '<img class="emo emo-tragic" src="http://localhost:8080/cross.png" />')
   .replace(/X🙂/g, '<img class="emo emo-happy" src="http://localhost:8080/cross.png" />')
