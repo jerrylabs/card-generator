@@ -321,6 +321,16 @@ html, body {
   font-size: 3.5mm;
 }
 
+.voodoo .texts {
+  flex-direction: column;
+}
+
+.voodoo .text-part {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .voodoo .text .emo {
   width: 12mm;
   margin: -0.5mm;
@@ -333,12 +343,27 @@ html, body {
   z-index: 1;
 }
 
-.emo-epic {
-  background-image: url(http://localhost:8080/emo-epic.png)
+.emo-epic    { background-image: url(http://localhost:8080/emo-epic.png); }
+.emo-tragic  { background-image: url(http://localhost:8080/emo-tragic.png); }
+.emo-sad     { background-image: url(http://localhost:8080/emo-sad.png); }
+.emo-happy   { background-image: url(http://localhost:8080/emo-happy.png); }
+.emo-neutral { background-image: url(http://localhost:8080/emo-neutral.png); }
+
+.card-two-texts .text .emo {
+  width: 9mm;
+  margin: 0;
 }
 
-.emo-tragic {
-  background-image: url(http://localhost:8080/emo-tragic.png)
+.card-two-texts .text .emo.arrow {
+  margin: -3.5mm;
 }
 
-
+.voodoo .test {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) !important;
+  z-index: 3;
+  width: 20mm;
+  height: 20mm;
+}

@@ -18,10 +18,8 @@ const getLiveMarkup = (c, i) => `<img class="life" src="http://localhost:8080/${
 
 const getAttrMarkup = (c, i) => `<img class="attribute attribute-${shortcut(c)}" src="http://localhost:8080/attr-${shortcut(c)}.png" />`;
 
-const getRerollsMarkup = (value) => {
+const getTestMarkup = (value) => {
   let markup = '';
-
-  /* pozadavek na test, je-li nejaky */
   if (value.includes('P') || value.includes('S') || value.includes('I')){
     let testImgNamePart;
     if (value.includes('PI'))      { testImgNamePart = 'poweriq'; }
@@ -31,7 +29,12 @@ const getRerollsMarkup = (value) => {
     else if (value.includes('I'))  { testImgNamePart = 'iq'; }
     markup = `<img class="test" src="http://localhost:8080/test-${testImgNamePart}.png" />`;
   }
-  let diceAmount, diceValue;
+  return markup;
+}
+
+const getRerollsMarkup = (value) => {
+  let markup = getTestMarkup(value); /* pozadavek na test, je-li nejaky */
+  let diceAmount;
   diceAmount = value.match(/[1-3]/g);
   if (value.includes('🙁')) { diceAmount = '-sad'; }
   else if (value.includes('😬')) { diceAmount = '-tragic'; }
@@ -54,24 +57,28 @@ const getRerollsMarkup = (value) => {
   return markup;
 }
 
-getTextMarkup = (text, cardData) => {
-  if (cardData.type != 'voodoo') {
-    return text;
-  }
-  text = text
-    .replace(/X😀/g, '<img class="emo emo-epic" src="http://localhost:8080/cross.png" />')
-    .replace(/X😬/g, '<img class="emo emo-tragic" src="http://localhost:8080/cross.png" />')
-    .replace(/😀/g, '<img class="emo" src="http://localhost:8080/emo-epic.png" />')
-    .replace(/😬/g, '<img class="emo" src="http://localhost:8080/emo-tragic.png" />')
-    .replace(/#/g, '<img class="emo" src="http://localhost:8080/dice-cross.png" />')
-    .replace(/=>/g, '<img class="emo arrow" src="http://localhost:8080/arrow.png" />')
-    .replace(/\?/g, '<img class="emo" src="http://localhost:8080/dice-any.png" />');
-
-  return text;
-}
+getTextMarkup = (text) => text
+  .replace(/\[😀\]/g, '<img class="emo" src="http://localhost:8080/dice-epic.png" />')
+  .replace(/\[😬\]/g, '<img class="emo" src="http://localhost:8080/dice-tragic.png" />')
+  .replace(/\[🙂\]/g, '<img class="emo" src="http://localhost:8080/dice-happy.png" />')
+  .replace(/\[😐\]/g, '<img class="emo" src="http://localhost:8080/dice-neutral.png" />')
+  .replace(/\[🙁\]/g, '<img class="emo" src="http://localhost:8080/dice-sad.png" />')
+  .replace(/X😀/g, '<img class="emo emo-epic" src="http://localhost:8080/cross.png" />')
+  .replace(/X😬/g, '<img class="emo emo-tragic" src="http://localhost:8080/cross.png" />')
+  .replace(/X🙂/g, '<img class="emo emo-happy" src="http://localhost:8080/cross.png" />')
+  .replace(/X🙁/g, '<img class="emo emo-sad" src="http://localhost:8080/cross.png" />')
+  .replace(/😀/g, '<img class="emo" src="http://localhost:8080/emo-epic.png" />')
+  .replace(/😬/g, '<img class="emo" src="http://localhost:8080/emo-tragic.png" />')
+  .replace(/🙂/g, '<img class="emo" src="http://localhost:8080/emo-happy.png" />')
+  .replace(/😐/g, '<img class="emo" src="http://localhost:8080/emo-neutral.png" />')
+  .replace(/🙁/g, '<img class="emo" src="http://localhost:8080/emo-sad.png" />')
+  .replace(/#/g, '<img class="emo" src="http://localhost:8080/dice-cross.png" />')
+  .replace(/=>/g, '<img class="emo arrow" src="http://localhost:8080/arrow.png" />')
+  .replace(/\?/g, '<img class="emo" src="http://localhost:8080/dice-any.png" />')
+  .replace(/2/g, '<div class="reroll reroll-green"><img src="http://localhost:8080/dice2.png"></div>');
 
 const getFieldMarkup = (title, value, card) => {
-  let markup;
+  let markup = ``;
   switch (title) {
 
     /* nazev karty */
@@ -116,8 +123,22 @@ const getFieldMarkup = (title, value, card) => {
     case 'rerolls':
       markup = `<div class="rerolls">${getRerollsMarkup(value)}</div>`;
     break;
+    case 'text2':
+    case 'disjunction':
+    break;
     case 'text':
-       markup = `<div class="text">${getTextMarkup(value, card)}</div>`;
+      if (card.text2) {
+        markup = `<div class="text texts">
+          <div class="text-part">${getTextMarkup(value)}</div>
+          ${ card.disjunction ? 'nebo' : '' }
+          <div class="text-part">${getTextMarkup(card.text2)}</div>
+        </div>`;
+      } else {
+        markup = `<div class="text">${getTextMarkup(value)}</div>`;
+      }
+    break;
+    case 'test':
+      markup = getTestMarkup(value);
     break;
     default:
       markup = `<div class="${title}">${value}</div>`;
@@ -132,6 +153,7 @@ module.exports = (cardData) => {
       ${(cardData.text) ? ' card-with-text' : ''}
       ${!cardData.requires && !cardData.provides ? 'card-no-joints' : 'card-has-joints'}
       ${(!cardData.requires && !cardData.provides) || cardData.text ? 'card-vertical' : ''}
+      ${(cardData.text2) ? ' card-two-texts' : ''}
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>

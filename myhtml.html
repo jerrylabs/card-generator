@@ -325,6 +325,16 @@ html, body {
   font-size: 3.5mm;
 }
 
+.voodoo .texts {
+  flex-direction: column;
+}
+
+.voodoo .text-part {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .voodoo .text .emo {
   width: 12mm;
   margin: -0.5mm;
@@ -337,16 +347,30 @@ html, body {
   z-index: 1;
 }
 
-.emo-epic {
-  background-image: url(http://localhost:8080/emo-epic.png)
+.emo-epic    { background-image: url(http://localhost:8080/emo-epic.png); }
+.emo-tragic  { background-image: url(http://localhost:8080/emo-tragic.png); }
+.emo-sad     { background-image: url(http://localhost:8080/emo-sad.png); }
+.emo-happy   { background-image: url(http://localhost:8080/emo-happy.png); }
+.emo-neutral { background-image: url(http://localhost:8080/emo-neutral.png); }
+
+.card-two-texts .text .emo {
+  width: 9mm;
+  margin: 0;
 }
 
-.emo-tragic {
-  background-image: url(http://localhost:8080/emo-tragic.png)
+.card-two-texts .text .emo.arrow {
+  margin: -3.5mm;
 }
 
-
-
+.voodoo .test {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) !important;
+  z-index: 3;
+  width: 20mm;
+  height: 20mm;
+}
       </style>
     </head>
     <body>
@@ -356,25 +380,6 @@ html, body {
       
       card-has-joints
       
-  }">
-    <div class="card-frame"></div>
-    <div class="card-icons"></div>
-    <div class="type">basic</div><div class="title">
-        <span>Ruka</span>
-      </div><div class="title title-reversed"><span>Ruka</span></div><img class="joint required single bone" src="http://localhost:8080/required-bone.png" /><img class="joint provided single hand" src="http://localhost:8080/provided-hand.png" /><div class="lives-and-attributes">
-        <div class="attributes">
-          <img class="attribute attribute-power" src="http://localhost:8080/attr-power.png" />
-        </div>
-        <div class="lives 
-        ">
-          <img class="life" src="http://localhost:8080/heart.png" />
-        </div>
-      </div>
-  </div><div
-    class="card
-      basic
-      
-      card-has-joints
       
   }">
     <div class="card-frame"></div>
@@ -396,25 +401,6 @@ html, body {
       
       card-has-joints
       
-  }">
-    <div class="card-frame"></div>
-    <div class="card-icons"></div>
-    <div class="type">basic</div><div class="title">
-        <span>Ruka</span>
-      </div><div class="title title-reversed"><span>Ruka</span></div><img class="joint required single bone" src="http://localhost:8080/required-bone.png" /><img class="joint provided single hand" src="http://localhost:8080/provided-hand.png" /><div class="lives-and-attributes">
-        <div class="attributes">
-          <img class="attribute attribute-power" src="http://localhost:8080/attr-power.png" />
-        </div>
-        <div class="lives 
-        ">
-          <img class="life" src="http://localhost:8080/heart.png" />
-        </div>
-      </div>
-  </div><div
-    class="card
-      basic
-      
-      card-has-joints
       
   }">
     <div class="card-frame"></div>
@@ -436,25 +422,6 @@ html, body {
       
       card-has-joints
       
-  }">
-    <div class="card-frame"></div>
-    <div class="card-icons"></div>
-    <div class="type">basic</div><div class="title">
-        <span>Ruka</span>
-      </div><div class="title title-reversed"><span>Ruka</span></div><img class="joint required single bone" src="http://localhost:8080/required-bone.png" /><img class="joint provided single hand" src="http://localhost:8080/provided-hand.png" /><div class="lives-and-attributes">
-        <div class="attributes">
-          <img class="attribute attribute-power" src="http://localhost:8080/attr-power.png" />
-        </div>
-        <div class="lives 
-        ">
-          <img class="life" src="http://localhost:8080/heart.png" />
-        </div>
-      </div>
-  </div><div
-    class="card
-      basic
-      
-      card-has-joints
       
   }">
     <div class="card-frame"></div>
@@ -476,25 +443,6 @@ html, body {
       
       card-has-joints
       
-  }">
-    <div class="card-frame"></div>
-    <div class="card-icons"></div>
-    <div class="type">basic</div><div class="title">
-        <span>Ruka</span>
-      </div><div class="title title-reversed"><span>Ruka</span></div><img class="joint required single bone" src="http://localhost:8080/required-bone.png" /><img class="joint provided single hand" src="http://localhost:8080/provided-hand.png" /><div class="lives-and-attributes">
-        <div class="attributes">
-          <img class="attribute attribute-power" src="http://localhost:8080/attr-power.png" />
-        </div>
-        <div class="lives 
-        ">
-          <img class="life" src="http://localhost:8080/heart.png" />
-        </div>
-      </div>
-  </div><div
-    class="card
-      basic
-      
-      card-has-joints
       
   }">
     <div class="card-frame"></div>
@@ -516,6 +464,7 @@ html, body {
       
       card-has-joints
       
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -535,6 +484,91 @@ html, body {
       basic
       
       card-has-joints
+      
+      
+  }">
+    <div class="card-frame"></div>
+    <div class="card-icons"></div>
+    <div class="type">basic</div><div class="title">
+        <span>Ruka</span>
+      </div><div class="title title-reversed"><span>Ruka</span></div><img class="joint required single bone" src="http://localhost:8080/required-bone.png" /><img class="joint provided single hand" src="http://localhost:8080/provided-hand.png" /><div class="lives-and-attributes">
+        <div class="attributes">
+          <img class="attribute attribute-power" src="http://localhost:8080/attr-power.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/heart.png" />
+        </div>
+      </div>
+  </div><div
+    class="card
+      basic
+      
+      card-has-joints
+      
+      
+  }">
+    <div class="card-frame"></div>
+    <div class="card-icons"></div>
+    <div class="type">basic</div><div class="title">
+        <span>Ruka</span>
+      </div><div class="title title-reversed"><span>Ruka</span></div><img class="joint required single bone" src="http://localhost:8080/required-bone.png" /><img class="joint provided single hand" src="http://localhost:8080/provided-hand.png" /><div class="lives-and-attributes">
+        <div class="attributes">
+          <img class="attribute attribute-power" src="http://localhost:8080/attr-power.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/heart.png" />
+        </div>
+      </div>
+  </div><div
+    class="card
+      basic
+      
+      card-has-joints
+      
+      
+  }">
+    <div class="card-frame"></div>
+    <div class="card-icons"></div>
+    <div class="type">basic</div><div class="title">
+        <span>Ruka</span>
+      </div><div class="title title-reversed"><span>Ruka</span></div><img class="joint required single bone" src="http://localhost:8080/required-bone.png" /><img class="joint provided single hand" src="http://localhost:8080/provided-hand.png" /><div class="lives-and-attributes">
+        <div class="attributes">
+          <img class="attribute attribute-power" src="http://localhost:8080/attr-power.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/heart.png" />
+        </div>
+      </div>
+  </div><div
+    class="card
+      basic
+      
+      card-has-joints
+      
+      
+  }">
+    <div class="card-frame"></div>
+    <div class="card-icons"></div>
+    <div class="type">basic</div><div class="title">
+        <span>Ruka</span>
+      </div><div class="title title-reversed"><span>Ruka</span></div><img class="joint required single bone" src="http://localhost:8080/required-bone.png" /><img class="joint provided single hand" src="http://localhost:8080/provided-hand.png" /><div class="lives-and-attributes">
+        <div class="attributes">
+          <img class="attribute attribute-power" src="http://localhost:8080/attr-power.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/heart.png" />
+        </div>
+      </div>
+  </div><div
+    class="card
+      basic
+      
+      card-has-joints
+      
       
   }">
     <div class="card-frame"></div>
@@ -556,25 +590,6 @@ html, body {
       
       card-has-joints
       
-  }">
-    <div class="card-frame"></div>
-    <div class="card-icons"></div>
-    <div class="type">basic</div><div class="title">
-        <span>Noha</span>
-      </div><div class="title title-reversed"><span>Noha</span></div><img class="joint required single bone" src="http://localhost:8080/required-bone.png" /><img class="joint provided single leg" src="http://localhost:8080/provided-leg.png" /><div class="lives-and-attributes">
-        <div class="attributes">
-          <img class="attribute attribute-speed" src="http://localhost:8080/attr-speed.png" />
-        </div>
-        <div class="lives 
-        ">
-          <img class="life" src="http://localhost:8080/heart.png" />
-        </div>
-      </div>
-  </div><div
-    class="card
-      basic
-      
-      card-has-joints
       
   }">
     <div class="card-frame"></div>
@@ -596,25 +611,6 @@ html, body {
       
       card-has-joints
       
-  }">
-    <div class="card-frame"></div>
-    <div class="card-icons"></div>
-    <div class="type">basic</div><div class="title">
-        <span>Noha</span>
-      </div><div class="title title-reversed"><span>Noha</span></div><img class="joint required single bone" src="http://localhost:8080/required-bone.png" /><img class="joint provided single leg" src="http://localhost:8080/provided-leg.png" /><div class="lives-and-attributes">
-        <div class="attributes">
-          <img class="attribute attribute-speed" src="http://localhost:8080/attr-speed.png" />
-        </div>
-        <div class="lives 
-        ">
-          <img class="life" src="http://localhost:8080/heart.png" />
-        </div>
-      </div>
-  </div><div
-    class="card
-      basic
-      
-      card-has-joints
       
   }">
     <div class="card-frame"></div>
@@ -636,25 +632,6 @@ html, body {
       
       card-has-joints
       
-  }">
-    <div class="card-frame"></div>
-    <div class="card-icons"></div>
-    <div class="type">basic</div><div class="title">
-        <span>Noha</span>
-      </div><div class="title title-reversed"><span>Noha</span></div><img class="joint required single bone" src="http://localhost:8080/required-bone.png" /><img class="joint provided single leg" src="http://localhost:8080/provided-leg.png" /><div class="lives-and-attributes">
-        <div class="attributes">
-          <img class="attribute attribute-speed" src="http://localhost:8080/attr-speed.png" />
-        </div>
-        <div class="lives 
-        ">
-          <img class="life" src="http://localhost:8080/heart.png" />
-        </div>
-      </div>
-  </div><div
-    class="card
-      basic
-      
-      card-has-joints
       
   }">
     <div class="card-frame"></div>
@@ -676,6 +653,7 @@ html, body {
       
       card-has-joints
       
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -695,6 +673,70 @@ html, body {
       basic
       
       card-has-joints
+      
+      
+  }">
+    <div class="card-frame"></div>
+    <div class="card-icons"></div>
+    <div class="type">basic</div><div class="title">
+        <span>Noha</span>
+      </div><div class="title title-reversed"><span>Noha</span></div><img class="joint required single bone" src="http://localhost:8080/required-bone.png" /><img class="joint provided single leg" src="http://localhost:8080/provided-leg.png" /><div class="lives-and-attributes">
+        <div class="attributes">
+          <img class="attribute attribute-speed" src="http://localhost:8080/attr-speed.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/heart.png" />
+        </div>
+      </div>
+  </div><div
+    class="card
+      basic
+      
+      card-has-joints
+      
+      
+  }">
+    <div class="card-frame"></div>
+    <div class="card-icons"></div>
+    <div class="type">basic</div><div class="title">
+        <span>Noha</span>
+      </div><div class="title title-reversed"><span>Noha</span></div><img class="joint required single bone" src="http://localhost:8080/required-bone.png" /><img class="joint provided single leg" src="http://localhost:8080/provided-leg.png" /><div class="lives-and-attributes">
+        <div class="attributes">
+          <img class="attribute attribute-speed" src="http://localhost:8080/attr-speed.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/heart.png" />
+        </div>
+      </div>
+  </div><div
+    class="card
+      basic
+      
+      card-has-joints
+      
+      
+  }">
+    <div class="card-frame"></div>
+    <div class="card-icons"></div>
+    <div class="type">basic</div><div class="title">
+        <span>Noha</span>
+      </div><div class="title title-reversed"><span>Noha</span></div><img class="joint required single bone" src="http://localhost:8080/required-bone.png" /><img class="joint provided single leg" src="http://localhost:8080/provided-leg.png" /><div class="lives-and-attributes">
+        <div class="attributes">
+          <img class="attribute attribute-speed" src="http://localhost:8080/attr-speed.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/heart.png" />
+        </div>
+      </div>
+  </div><div
+    class="card
+      basic
+      
+      card-has-joints
+      
       
   }">
     <div class="card-frame"></div>
@@ -715,6 +757,7 @@ html, body {
       bio
       
       card-has-joints
+      
       
   }">
     <div class="card-frame"></div>
@@ -736,6 +779,7 @@ html, body {
       
       card-has-joints
       
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -756,6 +800,7 @@ html, body {
        card-with-text
       card-has-joints
       card-vertical
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -775,6 +820,7 @@ html, body {
       bio
       
       card-has-joints
+      
       
   }">
     <div class="card-frame"></div>
@@ -796,6 +842,7 @@ html, body {
       
       card-has-joints
       
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -815,6 +862,7 @@ html, body {
       bio
       
       card-has-joints
+      
       
   }">
     <div class="card-frame"></div>
@@ -837,6 +885,7 @@ html, body {
       
       card-has-joints
       
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -857,6 +906,7 @@ html, body {
       bio
       
       card-has-joints
+      
       
   }">
     <div class="card-frame"></div>
@@ -879,6 +929,7 @@ html, body {
       
       card-has-joints
       
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -898,6 +949,7 @@ html, body {
       bio
       
       card-has-joints
+      
       
   }">
     <div class="card-frame"></div>
@@ -919,6 +971,7 @@ html, body {
       
       card-has-joints
       
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -939,6 +992,7 @@ html, body {
       
       card-has-joints
       
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -958,6 +1012,7 @@ html, body {
       bio
       
       card-has-joints
+      
       
   }">
     <div class="card-frame"></div>
@@ -980,6 +1035,7 @@ html, body {
       
       card-has-joints
       
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -999,6 +1055,7 @@ html, body {
       bio
       
       card-has-joints
+      
       
   }">
     <div class="card-frame"></div>
@@ -1020,6 +1077,7 @@ html, body {
       
       card-no-joints
       card-vertical
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -1040,6 +1098,7 @@ html, body {
       
       card-no-joints
       card-vertical
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -1060,6 +1119,7 @@ html, body {
       
       card-no-joints
       card-vertical
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -1080,6 +1140,7 @@ html, body {
       
       card-no-joints
       card-vertical
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -1100,6 +1161,7 @@ html, body {
       
       card-no-joints
       card-vertical
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -1120,6 +1182,7 @@ html, body {
       
       card-no-joints
       card-vertical
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -1140,6 +1203,7 @@ html, body {
       
       card-no-joints
       card-vertical
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -1160,6 +1224,7 @@ html, body {
       
       card-no-joints
       card-vertical
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -1180,6 +1245,7 @@ html, body {
       
       card-no-joints
       card-vertical
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -1200,6 +1266,7 @@ html, body {
       
       card-no-joints
       card-vertical
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -1220,6 +1287,7 @@ html, body {
       
       card-no-joints
       card-vertical
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -1240,6 +1308,7 @@ html, body {
       
       card-no-joints
       card-vertical
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -1260,6 +1329,7 @@ html, body {
       
       card-no-joints
       card-vertical
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -1280,6 +1350,7 @@ html, body {
       
       card-no-joints
       card-vertical
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -1300,6 +1371,7 @@ html, body {
       
       card-no-joints
       card-vertical
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -1320,6 +1392,7 @@ html, body {
       
       card-no-joints
       card-vertical
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -1340,6 +1413,7 @@ html, body {
       
       card-no-joints
       card-vertical
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -1360,6 +1434,7 @@ html, body {
        card-with-text
       card-no-joints
       card-vertical
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -1380,6 +1455,7 @@ html, body {
        card-with-text
       card-no-joints
       card-vertical
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -1400,6 +1476,7 @@ html, body {
        card-with-text
       card-no-joints
       card-vertical
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -1412,6 +1489,7 @@ html, body {
        card-with-text
       card-no-joints
       card-vertical
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -1423,6 +1501,7 @@ html, body {
       tech
       
       card-has-joints
+      
       
   }">
     <div class="card-frame"></div>
@@ -1439,6 +1518,7 @@ html, body {
       
       card-has-joints
       
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -1453,6 +1533,7 @@ html, body {
       tech
       
       card-has-joints
+      
       
   }">
     <div class="card-frame"></div>
@@ -1469,6 +1550,7 @@ html, body {
       
       card-has-joints
       
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -1483,6 +1565,7 @@ html, body {
       tech
       
       card-has-joints
+      
       
   }">
     <div class="card-frame"></div>
@@ -1499,6 +1582,7 @@ html, body {
       
       card-has-joints
       
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -1513,6 +1597,7 @@ html, body {
       tech
       
       card-has-joints
+      
       
   }">
     <div class="card-frame"></div>
@@ -1529,6 +1614,7 @@ html, body {
       
       card-has-joints
       
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -1543,6 +1629,7 @@ html, body {
       tech
       
       card-has-joints
+      
       
   }">
     <div class="card-frame"></div>
@@ -1559,6 +1646,7 @@ html, body {
       
       card-has-joints
       
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -1573,6 +1661,7 @@ html, body {
       tech
       
       card-has-joints
+      
       
   }">
     <div class="card-frame"></div>
@@ -1589,6 +1678,7 @@ html, body {
       
       card-has-joints
       
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -1603,6 +1693,7 @@ html, body {
       tech
       
       card-has-joints
+      
       
   }">
     <div class="card-frame"></div>
@@ -1619,6 +1710,7 @@ html, body {
       
       card-has-joints
       
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -1633,6 +1725,7 @@ html, body {
       tech
       
       card-has-joints
+      
       
   }">
     <div class="card-frame"></div>
@@ -1649,6 +1742,7 @@ html, body {
       
       card-has-joints
       
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -1662,6 +1756,7 @@ html, body {
       tech
       
       card-has-joints
+      
       
   }">
     <div class="card-frame"></div>
@@ -1677,6 +1772,7 @@ html, body {
       tech
       
       card-has-joints
+      
       
   }">
     <div class="card-frame"></div>
@@ -1694,6 +1790,7 @@ html, body {
       
       card-has-joints
       
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -1709,6 +1806,7 @@ html, body {
       tech
       
       card-has-joints
+      
       
   }">
     <div class="card-frame"></div>
@@ -1726,6 +1824,7 @@ html, body {
       
       card-has-joints
       
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -1741,6 +1840,7 @@ html, body {
       tech
       
       card-has-joints
+      
       
   }">
     <div class="card-frame"></div>
@@ -1758,6 +1858,7 @@ html, body {
       
       card-has-joints
       
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -1773,6 +1874,7 @@ html, body {
       tech
       
       card-has-joints
+      
       
   }">
     <div class="card-frame"></div>
@@ -1790,6 +1892,7 @@ html, body {
       
       card-has-joints
       
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -1805,6 +1908,7 @@ html, body {
       tech
       
       card-has-joints
+      
       
   }">
     <div class="card-frame"></div>
@@ -1822,6 +1926,7 @@ html, body {
       
       card-has-joints
       
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -1837,6 +1942,7 @@ html, body {
       tech
       
       card-has-joints
+      
       
   }">
     <div class="card-frame"></div>
@@ -1856,6 +1962,7 @@ html, body {
       
       card-no-joints
       card-vertical
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -1871,6 +1978,7 @@ html, body {
       
       card-no-joints
       card-vertical
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -1886,6 +1994,7 @@ html, body {
       
       card-no-joints
       card-vertical
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -1901,6 +2010,7 @@ html, body {
       
       card-no-joints
       card-vertical
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -1916,6 +2026,7 @@ html, body {
       
       card-no-joints
       card-vertical
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -1933,6 +2044,7 @@ html, body {
       
       card-no-joints
       card-vertical
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -1950,6 +2062,7 @@ html, body {
        card-with-text
       card-no-joints
       card-vertical
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -1962,6 +2075,7 @@ html, body {
        card-with-text
       card-no-joints
       card-vertical
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -1974,6 +2088,7 @@ html, body {
        card-with-text
       card-no-joints
       card-vertical
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -1986,6 +2101,7 @@ html, body {
        card-with-text
       card-no-joints
       card-vertical
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -1998,6 +2114,7 @@ html, body {
        card-with-text
       card-no-joints
       card-vertical
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -2010,6 +2127,7 @@ html, body {
        card-with-text
       card-no-joints
       card-vertical
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -2022,6 +2140,7 @@ html, body {
        card-with-text
       card-no-joints
       card-vertical
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -2034,6 +2153,7 @@ html, body {
        card-with-text
       card-no-joints
       card-vertical
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -2046,6 +2166,7 @@ html, body {
        card-with-text
       card-no-joints
       card-vertical
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -2058,6 +2179,7 @@ html, body {
        card-with-text
       card-no-joints
       card-vertical
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -2070,6 +2192,7 @@ html, body {
        card-with-text
       card-no-joints
       card-vertical
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -2082,6 +2205,7 @@ html, body {
        card-with-text
       card-no-joints
       card-vertical
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -2094,6 +2218,7 @@ html, body {
        card-with-text
       card-no-joints
       card-vertical
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -2106,6 +2231,7 @@ html, body {
        card-with-text
       card-no-joints
       card-vertical
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -2118,6 +2244,7 @@ html, body {
        card-with-text
       card-no-joints
       card-vertical
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -2130,6 +2257,7 @@ html, body {
        card-with-text
       card-no-joints
       card-vertical
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -2142,6 +2270,7 @@ html, body {
        card-with-text
       card-no-joints
       card-vertical
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -2154,6 +2283,7 @@ html, body {
        card-with-text
       card-no-joints
       card-vertical
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -2166,6 +2296,7 @@ html, body {
        card-with-text
       card-no-joints
       card-vertical
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -2178,6 +2309,7 @@ html, body {
        card-with-text
       card-no-joints
       card-vertical
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -2190,6 +2322,7 @@ html, body {
        card-with-text
       card-no-joints
       card-vertical
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -2202,6 +2335,7 @@ html, body {
        card-with-text
       card-no-joints
       card-vertical
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -2214,6 +2348,7 @@ html, body {
        card-with-text
       card-no-joints
       card-vertical
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -2226,12 +2361,107 @@ html, body {
        card-with-text
       card-no-joints
       card-vertical
+      
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
     <div class="type">voodoo</div><div class="title">
         <span>Talisman</span>
       </div><img src="http://localhost:8080/imgs/talisman.png" class="illustration" /><div class="text"><img class="emo" src="http://localhost:8080/dice-any.png" /> <img class="emo arrow" src="http://localhost:8080/arrow.png" /> <img class="emo" src="http://localhost:8080/dice-any.png" /></div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      card-vertical
+      
+  }">
+    <div class="card-frame"></div>
+    <div class="card-icons"></div>
+    <div class="type">voodoo</div><div class="title">
+        <span>Plamenné prdy</span>
+      </div><img src="http://localhost:8080/imgs/plamenne.png" class="illustration" /><div class="text">všechny <img class="emo emo-sad" src="http://localhost:8080/cross.png" /></div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      card-vertical
+       card-two-texts
+  }">
+    <div class="card-frame"></div>
+    <div class="card-icons"></div>
+    <div class="type">voodoo</div><div class="title">
+        <span>Nemrtvý mazlíček</span>
+      </div><img src="http://localhost:8080/imgs/nemrtvy.png" class="illustration" /><div class="text texts">
+          <div class="text-part">všechny <img class="emo" src="http://localhost:8080/dice-neutral.png" /> <img class="emo arrow" src="http://localhost:8080/arrow.png" /> <img class="emo" src="http://localhost:8080/dice-happy.png" /></div>
+          nebo
+          <div class="text-part">všechny <img class="emo" src="http://localhost:8080/dice-neutral.png" /> <img class="emo arrow" src="http://localhost:8080/arrow.png" /> <img class="emo" src="http://localhost:8080/dice-sad.png" /></div>
+        </div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      card-vertical
+       card-two-texts
+  }">
+    <div class="card-frame"></div>
+    <div class="card-icons"></div>
+    <div class="type">voodoo</div><div class="title">
+        <span>Levitace</span>
+      </div><img src="http://localhost:8080/imgs/levitace.png" class="illustration" /><div class="text texts">
+          <div class="text-part">všechny <img class="emo emo-happy" src="http://localhost:8080/cross.png" /></div>
+          nebo
+          <div class="text-part">všechny <img class="emo emo-sad" src="http://localhost:8080/cross.png" /></div>
+        </div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      card-vertical
+       card-two-texts
+  }">
+    <div class="card-frame"></div>
+    <div class="card-icons"></div>
+    <div class="type">voodoo</div><div class="title">
+        <span>Explodující flusanec</span>
+      </div><img src="http://localhost:8080/imgs/explodujici.png" class="illustration" /><div class="text texts">
+          <div class="text-part">všechny <img class="emo" src="http://localhost:8080/dice-neutral.png" /> <img class="emo arrow" src="http://localhost:8080/arrow.png" /> <img class="emo" src="http://localhost:8080/dice-happy.png" /></div>
+          
+          <div class="text-part">všechny <img class="emo" src="http://localhost:8080/dice-sad.png" /> <img class="emo arrow" src="http://localhost:8080/arrow.png" /> <img class="emo" src="http://localhost:8080/dice-happy.png" /></div>
+        </div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      card-vertical
+       card-two-texts
+  }">
+    <div class="card-frame"></div>
+    <div class="card-icons"></div>
+    <div class="type">voodoo</div><div class="title">
+        <span>Hypnóza</span>
+      </div><img src="http://localhost:8080/imgs/hypnoza.png" class="illustration" /><div class="text texts">
+          <div class="text-part">všechny <img class="emo emo-epic" src="http://localhost:8080/cross.png" /></div>
+          
+          <div class="text-part">všechny <img class="emo emo-tragic" src="http://localhost:8080/cross.png" /></div>
+        </div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      card-vertical
+      
+  }">
+    <div class="card-frame"></div>
+    <div class="card-icons"></div>
+    <div class="type">voodoo</div><div class="title">
+        <span>Pyromancie</span>
+      </div><img src="http://localhost:8080/imgs/pyromancie.png" class="illustration" /><img class="test" src="http://localhost:8080/test-powerspeed.png" /><div class="text"><div class="reroll reroll-green"><img src="http://localhost:8080/dice2.png"></div></div>
   </div></div>
     </body>
   </html>
