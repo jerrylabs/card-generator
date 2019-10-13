@@ -95,6 +95,12 @@ html, body {
   background-image: url(http://localhost:8080/icons-tech.png);
 }
 
+.card-vertical .card-icons {
+  height: 50%;
+  background-position: center top;
+  background-size: 100% 200%;
+}
+
 .title {
   position: absolute;
   z-index: 2;
@@ -150,14 +156,29 @@ html, body {
   top: 11mm;
 }
 
-.tech .lives {
+.lives-down {
   top: auto;
   bottom: 11mm;
+}
+
+.tech.card-vertical .lives-down {
+  bottom: 5mm;
 }
 
 .rerolls {
   bottom: auto;
   top: 10mm;
+}
+
+.tech.card-has-joints .rerolls {
+  bottom: 0;
+  height: 100%;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  right: 10px;
+  justify-content: center;
 }
 
 .attribute {
@@ -170,43 +191,44 @@ html, body {
   margin: -1mm 0;
 }
 
+.rerolls .life {
+  margin: 0.2mm 1mm;
+}
+
 .test, .reroll {
-  width: 15mm;
-  height: 15mm;
+  width: 13mm;
+  height: 13mm;
   display: inline-block;
+  background-repeat: no-repeat;
 }
 
 .reroll {
+  position: relative;
+}
+
+.reroll::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
   background-size: contain;
+  content: ' ';
 }
 
 .reroll img {
   width: 100%;
 }
 
-.reroll-green { background-image: url(http://localhost:8080/reroll-green.png); }
-.reroll-red { background-image: url(http://localhost:8080/reroll-red.png); }
+.reroll-green::before { background-image: url(http://localhost:8080/reroll-green.png); }
+.reroll-red::before { background-image: url(http://localhost:8080/reroll-red.png); }
 
-.card-horizontal .lives-and-attributes {
-  position: absolute;
-  z-index: 2;
-  top: 50%;
-  transform: translateY(-50%);
-  height: 80%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  right: 3mm;
-}
-
-.card-horizontal .attributes,
-.card-horizontal .lives,
-.card-vertical .attributes,
-.card-vertical .lives {
+.bio.card-vertical .attributes,
+.bio.card-vertical .lives {
   position: static;
 }
 
-.card-vertical .lives-and-attributes {
+.bio.card-vertical .lives-and-attributes {
   position: absolute;
   z-index: 2;
   display: flex;
@@ -216,21 +238,30 @@ html, body {
   justify-content: center;
 }
 
-.card-vertical .lives, .card-vertical .attributes {
+.bio.card-vertical .lives, .bio.card-vertical .attributes {
   flex: 0 1 0;
+  display: flex;
 }
 
 .card-vertical .life, .card-vertical .attribute {
   transform: rotate(-90deg);
+  margin: 1mm 0.5mm;
 }
 
-.card-horizontal .attribute-power {
-  transform: rotate(180deg);
+.card-vertical .rerolls .life {
+  margin: 2mm 0;
 }
 
-.card-horizontal .life {
-  display: block;
-  margin: 1mm 2mm;
+.card-vertical .attribute-power {
+  transform: rotate(90deg);
+}
+
+.card-vertical .test {
+  transform: rotate(-90deg);
+}
+
+.card-vertical .test[src*="power"] {
+  transform: rotate(90deg);
 }
 
 .illustration {
@@ -242,16 +273,6 @@ html, body {
   transform: translateY(-50%);
 }
 
-.card-horizontal .illustration {
-  transform: translateY(-50%) rotate(90deg);
-  left: -7mm;
-  width: 42mm;
-}
-
-.card-vertical.card-no-attributes .illustration {
-  top: 42%;
-}
-
 .text {
   position: absolute;
   z-index: 3;
@@ -261,13 +282,12 @@ html, body {
   background: transparent url(http://localhost:8080/background-text.png) center center no-repeat;
   background-size: 100% 100%;
   font-family: "Open Sans";
-  padding: 1.4mm;
+  padding: 0.8mm;
   box-sizing: border-box;
 }
 
-.card-vertical.card-no-joints .text {
-  padding: 0;
-  bottom: 8mm;
+.card-has-joints .text {
+  padding: 1.4mm;
 }
 
 
@@ -279,949 +299,948 @@ html, body {
     class="card
       basic
       
-      
-      
-      
-  }">
-    <div class="card-frame"></div>
-    <div class="card-icons"></div>
-    <div class="type">basic</div><div class="title"><span>Ruka</span></div><div class="title title-reversed"><span>Ruka</span></div><img class="joint required single bone" src="http://localhost:8080/required-bone.png" /><img class="joint provided single hand" src="http://localhost:8080/provided-hand.png" /><div class="lives-and-attributes">
-        <div class="lives">
-          <img class="life" src="http://localhost:8080/heart.png" />
-        </div>
-        <div class="attributes">
-          <img class="attribute attribute-power" src="http://localhost:8080/attr-power.png" />
-        </div>
-      </div>
-  </div><div
-    class="card
-      basic
-      
-      
-      
+      card-has-joints
       
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
     <div class="type">basic</div><div class="title"><span>Ruka</span></div><div class="title title-reversed"><span>Ruka</span></div><img class="joint required single bone" src="http://localhost:8080/required-bone.png" /><img class="joint provided single hand" src="http://localhost:8080/provided-hand.png" /><div class="lives-and-attributes">
-        <div class="lives">
-          <img class="life" src="http://localhost:8080/heart.png" />
-        </div>
         <div class="attributes">
           <img class="attribute attribute-power" src="http://localhost:8080/attr-power.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/heart.png" />
         </div>
       </div>
   </div><div
     class="card
       basic
       
-      
-      
+      card-has-joints
       
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
     <div class="type">basic</div><div class="title"><span>Ruka</span></div><div class="title title-reversed"><span>Ruka</span></div><img class="joint required single bone" src="http://localhost:8080/required-bone.png" /><img class="joint provided single hand" src="http://localhost:8080/provided-hand.png" /><div class="lives-and-attributes">
-        <div class="lives">
-          <img class="life" src="http://localhost:8080/heart.png" />
-        </div>
         <div class="attributes">
           <img class="attribute attribute-power" src="http://localhost:8080/attr-power.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/heart.png" />
         </div>
       </div>
   </div><div
     class="card
       basic
       
-      
-      
+      card-has-joints
       
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
     <div class="type">basic</div><div class="title"><span>Ruka</span></div><div class="title title-reversed"><span>Ruka</span></div><img class="joint required single bone" src="http://localhost:8080/required-bone.png" /><img class="joint provided single hand" src="http://localhost:8080/provided-hand.png" /><div class="lives-and-attributes">
-        <div class="lives">
-          <img class="life" src="http://localhost:8080/heart.png" />
-        </div>
         <div class="attributes">
           <img class="attribute attribute-power" src="http://localhost:8080/attr-power.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/heart.png" />
         </div>
       </div>
   </div><div
     class="card
       basic
       
-      
-      
+      card-has-joints
       
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
     <div class="type">basic</div><div class="title"><span>Ruka</span></div><div class="title title-reversed"><span>Ruka</span></div><img class="joint required single bone" src="http://localhost:8080/required-bone.png" /><img class="joint provided single hand" src="http://localhost:8080/provided-hand.png" /><div class="lives-and-attributes">
-        <div class="lives">
-          <img class="life" src="http://localhost:8080/heart.png" />
-        </div>
         <div class="attributes">
           <img class="attribute attribute-power" src="http://localhost:8080/attr-power.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/heart.png" />
         </div>
       </div>
   </div><div
     class="card
       basic
       
-      
-      
+      card-has-joints
       
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
     <div class="type">basic</div><div class="title"><span>Ruka</span></div><div class="title title-reversed"><span>Ruka</span></div><img class="joint required single bone" src="http://localhost:8080/required-bone.png" /><img class="joint provided single hand" src="http://localhost:8080/provided-hand.png" /><div class="lives-and-attributes">
-        <div class="lives">
-          <img class="life" src="http://localhost:8080/heart.png" />
-        </div>
         <div class="attributes">
           <img class="attribute attribute-power" src="http://localhost:8080/attr-power.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/heart.png" />
         </div>
       </div>
   </div><div
     class="card
       basic
       
-      
-      
+      card-has-joints
       
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
     <div class="type">basic</div><div class="title"><span>Ruka</span></div><div class="title title-reversed"><span>Ruka</span></div><img class="joint required single bone" src="http://localhost:8080/required-bone.png" /><img class="joint provided single hand" src="http://localhost:8080/provided-hand.png" /><div class="lives-and-attributes">
-        <div class="lives">
-          <img class="life" src="http://localhost:8080/heart.png" />
-        </div>
         <div class="attributes">
           <img class="attribute attribute-power" src="http://localhost:8080/attr-power.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/heart.png" />
         </div>
       </div>
   </div><div
     class="card
       basic
       
-      
-      
+      card-has-joints
       
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
     <div class="type">basic</div><div class="title"><span>Ruka</span></div><div class="title title-reversed"><span>Ruka</span></div><img class="joint required single bone" src="http://localhost:8080/required-bone.png" /><img class="joint provided single hand" src="http://localhost:8080/provided-hand.png" /><div class="lives-and-attributes">
-        <div class="lives">
-          <img class="life" src="http://localhost:8080/heart.png" />
-        </div>
         <div class="attributes">
           <img class="attribute attribute-power" src="http://localhost:8080/attr-power.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/heart.png" />
         </div>
       </div>
   </div><div
     class="card
       basic
       
-      
-      
+      card-has-joints
       
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
     <div class="type">basic</div><div class="title"><span>Ruka</span></div><div class="title title-reversed"><span>Ruka</span></div><img class="joint required single bone" src="http://localhost:8080/required-bone.png" /><img class="joint provided single hand" src="http://localhost:8080/provided-hand.png" /><div class="lives-and-attributes">
-        <div class="lives">
-          <img class="life" src="http://localhost:8080/heart.png" />
-        </div>
         <div class="attributes">
           <img class="attribute attribute-power" src="http://localhost:8080/attr-power.png" />
         </div>
-      </div>
-  </div><div
-    class="card
-      basic
-      
-      
-      
-      
-  }">
-    <div class="card-frame"></div>
-    <div class="card-icons"></div>
-    <div class="type">basic</div><div class="title"><span>Noha</span></div><div class="title title-reversed"><span>Noha</span></div><img class="joint required single bone" src="http://localhost:8080/required-bone.png" /><img class="joint provided single leg" src="http://localhost:8080/provided-leg.png" /><div class="lives-and-attributes">
-        <div class="lives">
+        <div class="lives 
+        ">
           <img class="life" src="http://localhost:8080/heart.png" />
-        </div>
-        <div class="attributes">
-          <img class="attribute attribute-speed" src="http://localhost:8080/attr-speed.png" />
         </div>
       </div>
   </div><div
     class="card
       basic
       
-      
-      
+      card-has-joints
       
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
-    <div class="type">basic</div><div class="title"><span>Noha</span></div><div class="title title-reversed"><span>Noha</span></div><img class="joint required single bone" src="http://localhost:8080/required-bone.png" /><img class="joint provided single leg" src="http://localhost:8080/provided-leg.png" /><div class="lives-and-attributes">
-        <div class="lives">
-          <img class="life" src="http://localhost:8080/heart.png" />
-        </div>
+    <div class="type">basic</div><div class="title"><span>Ruka</span></div><div class="title title-reversed"><span>Ruka</span></div><img class="joint required single bone" src="http://localhost:8080/required-bone.png" /><img class="joint provided single hand" src="http://localhost:8080/provided-hand.png" /><div class="lives-and-attributes">
         <div class="attributes">
-          <img class="attribute attribute-speed" src="http://localhost:8080/attr-speed.png" />
+          <img class="attribute attribute-power" src="http://localhost:8080/attr-power.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/heart.png" />
         </div>
       </div>
   </div><div
     class="card
       basic
       
-      
-      
+      card-has-joints
       
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
     <div class="type">basic</div><div class="title"><span>Noha</span></div><div class="title title-reversed"><span>Noha</span></div><img class="joint required single bone" src="http://localhost:8080/required-bone.png" /><img class="joint provided single leg" src="http://localhost:8080/provided-leg.png" /><div class="lives-and-attributes">
-        <div class="lives">
-          <img class="life" src="http://localhost:8080/heart.png" />
-        </div>
         <div class="attributes">
           <img class="attribute attribute-speed" src="http://localhost:8080/attr-speed.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/heart.png" />
         </div>
       </div>
   </div><div
     class="card
       basic
       
-      
-      
+      card-has-joints
       
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
     <div class="type">basic</div><div class="title"><span>Noha</span></div><div class="title title-reversed"><span>Noha</span></div><img class="joint required single bone" src="http://localhost:8080/required-bone.png" /><img class="joint provided single leg" src="http://localhost:8080/provided-leg.png" /><div class="lives-and-attributes">
-        <div class="lives">
-          <img class="life" src="http://localhost:8080/heart.png" />
-        </div>
         <div class="attributes">
           <img class="attribute attribute-speed" src="http://localhost:8080/attr-speed.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/heart.png" />
         </div>
       </div>
   </div><div
     class="card
       basic
       
-      
-      
+      card-has-joints
       
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
     <div class="type">basic</div><div class="title"><span>Noha</span></div><div class="title title-reversed"><span>Noha</span></div><img class="joint required single bone" src="http://localhost:8080/required-bone.png" /><img class="joint provided single leg" src="http://localhost:8080/provided-leg.png" /><div class="lives-and-attributes">
-        <div class="lives">
-          <img class="life" src="http://localhost:8080/heart.png" />
-        </div>
         <div class="attributes">
           <img class="attribute attribute-speed" src="http://localhost:8080/attr-speed.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/heart.png" />
         </div>
       </div>
   </div><div
     class="card
       basic
       
-      
-      
+      card-has-joints
       
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
     <div class="type">basic</div><div class="title"><span>Noha</span></div><div class="title title-reversed"><span>Noha</span></div><img class="joint required single bone" src="http://localhost:8080/required-bone.png" /><img class="joint provided single leg" src="http://localhost:8080/provided-leg.png" /><div class="lives-and-attributes">
-        <div class="lives">
-          <img class="life" src="http://localhost:8080/heart.png" />
-        </div>
         <div class="attributes">
           <img class="attribute attribute-speed" src="http://localhost:8080/attr-speed.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/heart.png" />
         </div>
       </div>
   </div><div
     class="card
       basic
       
-      
-      
+      card-has-joints
       
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
     <div class="type">basic</div><div class="title"><span>Noha</span></div><div class="title title-reversed"><span>Noha</span></div><img class="joint required single bone" src="http://localhost:8080/required-bone.png" /><img class="joint provided single leg" src="http://localhost:8080/provided-leg.png" /><div class="lives-and-attributes">
-        <div class="lives">
-          <img class="life" src="http://localhost:8080/heart.png" />
-        </div>
         <div class="attributes">
           <img class="attribute attribute-speed" src="http://localhost:8080/attr-speed.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/heart.png" />
         </div>
       </div>
   </div><div
     class="card
       basic
       
-      
-      
+      card-has-joints
       
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
     <div class="type">basic</div><div class="title"><span>Noha</span></div><div class="title title-reversed"><span>Noha</span></div><img class="joint required single bone" src="http://localhost:8080/required-bone.png" /><img class="joint provided single leg" src="http://localhost:8080/provided-leg.png" /><div class="lives-and-attributes">
-        <div class="lives">
-          <img class="life" src="http://localhost:8080/heart.png" />
-        </div>
         <div class="attributes">
           <img class="attribute attribute-speed" src="http://localhost:8080/attr-speed.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/heart.png" />
         </div>
       </div>
   </div><div
     class="card
       basic
       
-      
-      
+      card-has-joints
       
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
     <div class="type">basic</div><div class="title"><span>Noha</span></div><div class="title title-reversed"><span>Noha</span></div><img class="joint required single bone" src="http://localhost:8080/required-bone.png" /><img class="joint provided single leg" src="http://localhost:8080/provided-leg.png" /><div class="lives-and-attributes">
-        <div class="lives">
-          <img class="life" src="http://localhost:8080/heart.png" />
-        </div>
         <div class="attributes">
           <img class="attribute attribute-speed" src="http://localhost:8080/attr-speed.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/heart.png" />
+        </div>
+      </div>
+  </div><div
+    class="card
+      basic
+      
+      card-has-joints
+      
+  }">
+    <div class="card-frame"></div>
+    <div class="card-icons"></div>
+    <div class="type">basic</div><div class="title"><span>Noha</span></div><div class="title title-reversed"><span>Noha</span></div><img class="joint required single bone" src="http://localhost:8080/required-bone.png" /><img class="joint provided single leg" src="http://localhost:8080/provided-leg.png" /><div class="lives-and-attributes">
+        <div class="attributes">
+          <img class="attribute attribute-speed" src="http://localhost:8080/attr-speed.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/heart.png" />
+        </div>
+      </div>
+  </div><div
+    class="card
+      basic
+      
+      card-has-joints
+      
+  }">
+    <div class="card-frame"></div>
+    <div class="card-icons"></div>
+    <div class="type">basic</div><div class="title"><span>Noha</span></div><div class="title title-reversed"><span>Noha</span></div><img class="joint required single bone" src="http://localhost:8080/required-bone.png" /><img class="joint provided single leg" src="http://localhost:8080/provided-leg.png" /><div class="lives-and-attributes">
+        <div class="attributes">
+          <img class="attribute attribute-speed" src="http://localhost:8080/attr-speed.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/heart.png" />
         </div>
       </div>
   </div><div
     class="card
       bio
       
-      
-      
+      card-has-joints
       
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
     <div class="type">bio</div><div class="title"><span>Paže wrestlera</span></div><div class="title title-reversed"><span>Paže wrestlera</span></div><img class="joint required single bone" src="http://localhost:8080/required-bone.png" /><img class="joint provided single hand" src="http://localhost:8080/provided-hand.png" /><div class="lives-and-attributes">
-        <div class="lives">
-          <img class="life" src="http://localhost:8080/heart.png" />
-        </div>
         <div class="attributes">
           <img class="attribute attribute-power" src="http://localhost:8080/attr-power.png" /><img class="attribute attribute-power" src="http://localhost:8080/attr-power.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/heart.png" />
         </div>
       </div><img src="http://localhost:8080/imgs/paze.png" class="illustration" />
   </div><div
     class="card
       bio
       
-      
-      
+      card-has-joints
       
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
     <div class="type">bio</div><div class="title"><span>Vystřelovací pěst</span></div><div class="title title-reversed"><span>Vystřelovací pěst</span></div><img class="joint required single bone" src="http://localhost:8080/required-bone.png" /><img class="joint provided single hand" src="http://localhost:8080/provided-hand.png" /><div class="lives-and-attributes">
-        <div class="lives">
-          <img class="life" src="http://localhost:8080/heart.png" />
-        </div>
         <div class="attributes">
           <img class="attribute attribute-power" src="http://localhost:8080/attr-power.png" /><img class="attribute attribute-speed" src="http://localhost:8080/attr-speed.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/heart.png" />
         </div>
       </div><img src="http://localhost:8080/imgs/vystrelovaci.png" class="illustration" />
   </div><div
     class="card
       bio
-      
-       card-vertical
-      
-      
+       card-with-text
+      card-has-joints
+      card-vertical
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
     <div class="type">bio</div><div class="title"><span>Chmatákova ruka</span></div><img class="joint required single bone" src="http://localhost:8080/required-bone.png" /><img class="joint provided single hand" src="http://localhost:8080/provided-hand.png" /><div class="lives-and-attributes">
-        <div class="lives">
-          <img class="life" src="http://localhost:8080/heart.png" />
-        </div>
         <div class="attributes">
           <img class="attribute attribute-speed" src="http://localhost:8080/attr-speed.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/heart.png" />
         </div>
       </div><img src="http://localhost:8080/imgs/chmatakova.png" class="illustration" /><div class="text">Jednou za kolo si můžeš vzít náhodnou kartu z ruky protihráče.</div>
   </div><div
     class="card
       bio
       
-      
-      
+      card-has-joints
       
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
     <div class="type">bio</div><div class="title"><span>Natažitelná ruka</span></div><div class="title title-reversed"><span>Natažitelná ruka</span></div><img class="joint required single bone" src="http://localhost:8080/required-bone.png" /><img class="joint provided single hand" src="http://localhost:8080/provided-hand.png" /><div class="lives-and-attributes">
-        <div class="lives">
-          <img class="life" src="http://localhost:8080/heart.png" />
-        </div>
         <div class="attributes">
           <img class="attribute attribute-speed" src="http://localhost:8080/attr-speed.png" /><img class="attribute attribute-iq" src="http://localhost:8080/attr-iq.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/heart.png" />
         </div>
       </div><img src="http://localhost:8080/imgs/natazitelna.png" class="illustration" />
   </div><div
     class="card
       bio
       
-      
-      
+      card-has-joints
       
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
     <div class="type">bio</div><div class="title"><span>Diablovo kopyto</span></div><div class="title title-reversed"><span>Diablovo kopyto</span></div><img class="joint required single bone" src="http://localhost:8080/required-bone.png" /><img class="joint provided single leg" src="http://localhost:8080/provided-leg.png" /><div class="lives-and-attributes">
-        <div class="lives">
-          <img class="life" src="http://localhost:8080/heart.png" />
-        </div>
         <div class="attributes">
           <img class="attribute attribute-power" src="http://localhost:8080/attr-power.png" /><img class="attribute attribute-speed" src="http://localhost:8080/attr-speed.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/heart.png" />
         </div>
       </div><img src="http://localhost:8080/imgs/diablovo.png" class="illustration" />
   </div><div
     class="card
       bio
       
-      
-      
+      card-has-joints
       
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
     <div class="type">bio</div><div class="title"><span>Opičí noha</span></div><div class="title title-reversed"><span>Opičí noha</span></div><img class="joint required single bone" src="http://localhost:8080/required-bone.png" /><img class="joint provided first hand" src="http://localhost:8080/provided-hand.png" />
           <img class="joint provided second leg" src="http://localhost:8080/provided-leg.png" /><div class="lives-and-attributes">
-        <div class="lives">
-          <img class="life" src="http://localhost:8080/heart.png" />
-        </div>
         <div class="attributes">
           <img class="attribute attribute-speed" src="http://localhost:8080/attr-speed.png" /><img class="attribute attribute-speed" src="http://localhost:8080/attr-speed.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/heart.png" />
         </div>
       </div><img src="http://localhost:8080/imgs/opici.png" class="illustration" />
   </div><div
     class="card
       bio
       
-      
-      
+      card-has-joints
       
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
     <div class="type">bio</div><div class="title"><span>Žahavé chapadlo</span></div><div class="title title-reversed"><span>Žahavé chapadlo</span></div><img class="joint required single bone" src="http://localhost:8080/required-bone.png" /><img class="joint provided first hand" src="http://localhost:8080/provided-hand.png" />
           <img class="joint provided second hand" src="http://localhost:8080/provided-hand.png" /><div class="lives-and-attributes">
-        <div class="lives">
-          <img class="life" src="http://localhost:8080/heart.png" />
-        </div>
         <div class="attributes">
           <img class="attribute attribute-power" src="http://localhost:8080/attr-power.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/heart.png" />
         </div>
       </div><img src="http://localhost:8080/imgs/zahave.png" class="illustration" />
   </div><div
     class="card
       bio
       
-      
-      
+      card-has-joints
       
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
     <div class="type">bio</div><div class="title"><span>Dual ruka</span></div><div class="title title-reversed"><span>Dual ruka</span></div><img class="joint required single bone" src="http://localhost:8080/required-bone.png" /><img class="joint provided first hand" src="http://localhost:8080/provided-hand.png" />
           <img class="joint provided second hand" src="http://localhost:8080/provided-hand.png" /><div class="lives-and-attributes">
-        <div class="lives">
-          <img class="life" src="http://localhost:8080/heart.png" />
-        </div>
         <div class="attributes">
           <img class="attribute attribute-power" src="http://localhost:8080/attr-power.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/heart.png" />
         </div>
       </div><img src="http://localhost:8080/imgs/dualruka.png" class="illustration" />
   </div><div
     class="card
       bio
       
-      
-      
+      card-has-joints
       
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
     <div class="type">bio</div><div class="title"><span>Integrovaný rotačák</span></div><div class="title title-reversed"><span>Integrovaný rotačák</span></div><img class="joint required single bone" src="http://localhost:8080/required-bone.png" /><div class="lives-and-attributes">
-        <div class="lives">
-          <img class="life" src="http://localhost:8080/heart.png" /><img class="life" src="http://localhost:8080/heart.png" />
-        </div>
         <div class="attributes">
           <img class="attribute attribute-speed" src="http://localhost:8080/attr-speed.png" /><img class="attribute attribute-speed" src="http://localhost:8080/attr-speed.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/heart.png" /><img class="life" src="http://localhost:8080/heart.png" />
         </div>
       </div><img src="http://localhost:8080/imgs/integrovany.png" class="illustration" />
   </div><div
     class="card
       bio
       
-      
-      
+      card-has-joints
       
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
     <div class="type">bio</div><div class="title"><span>Megavrták</span></div><div class="title title-reversed"><span>Megavrták</span></div><img class="joint required single bone" src="http://localhost:8080/required-bone.png" /><div class="lives-and-attributes">
-        <div class="lives">
-          <img class="life" src="http://localhost:8080/heart.png" /><img class="life" src="http://localhost:8080/heart.png" />
-        </div>
         <div class="attributes">
           <img class="attribute attribute-power" src="http://localhost:8080/attr-power.png" /><img class="attribute attribute-power" src="http://localhost:8080/attr-power.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/heart.png" /><img class="life" src="http://localhost:8080/heart.png" />
         </div>
       </div><img src="http://localhost:8080/imgs/megavrtak.png" class="illustration" />
   </div><div
     class="card
       bio
       
-      
-      
+      card-has-joints
       
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
-    <div class="type">bio</div><div class="title"><span>Kyber biceps</span></div><div class="title title-reversed"><span>Kyber biceps</span></div><img class="joint provided single hand" src="http://localhost:8080/provided-hand.png" /><div class="lives-and-attributes">
-        <div class="lives">
-          <img class="life" src="http://localhost:8080/heart.png" />
-        </div>
+    <div class="type">bio</div><div class="title"><span>Kyber paže</span></div><div class="title title-reversed"><span>Kyber paže</span></div><img class="joint provided single hand" src="http://localhost:8080/provided-hand.png" /><div class="lives-and-attributes">
         <div class="attributes">
           <img class="attribute attribute-speed" src="http://localhost:8080/attr-speed.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/heart.png" />
         </div>
       </div><img src="http://localhost:8080/imgs/kyber.png" class="illustration" />
   </div><div
     class="card
       bio
       
-      
-      
+      card-has-joints
       
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
     <div class="type">bio</div><div class="title"><span>Sloní chobot</span></div><div class="title title-reversed"><span>Sloní chobot</span></div><img class="joint provided single hand" src="http://localhost:8080/provided-hand.png" /><div class="lives-and-attributes">
-        <div class="lives">
-          <img class="life" src="http://localhost:8080/heart.png" />
-        </div>
         <div class="attributes">
           <img class="attribute attribute-power" src="http://localhost:8080/attr-power.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/heart.png" />
         </div>
       </div><img src="http://localhost:8080/imgs/sloni.png" class="illustration" />
   </div><div
     class="card
       bio
       
-      
-      
+      card-has-joints
       
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
     <div class="type">bio</div><div class="title"><span>Roboruce</span></div><div class="title title-reversed"><span>Roboruce</span></div><img class="joint provided first hand" src="http://localhost:8080/provided-hand.png" />
           <img class="joint provided second hand" src="http://localhost:8080/provided-hand.png" /><div class="lives-and-attributes">
-        <div class="lives">
-          <img class="life" src="http://localhost:8080/heart.png" />
-        </div>
         <div class="attributes">
           
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/heart.png" />
         </div>
       </div><img src="http://localhost:8080/imgs/roboruce.png" class="illustration" />
   </div><div
     class="card
       bio
       
-      
-      
+      card-has-joints
       
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
     <div class="type">bio</div><div class="title"><span>Údní nástavec</span></div><div class="title title-reversed"><span>Údní nástavec</span></div><img class="joint provided single bone" src="http://localhost:8080/provided-bone.png" /><div class="lives-and-attributes">
-        <div class="lives">
-          <img class="life" src="http://localhost:8080/heart.png" />
-        </div>
         <div class="attributes">
           
+        </div>
+        <div class="lives lives-down
+        ">
+          <img class="life" src="http://localhost:8080/heart.png" />
         </div>
       </div><img src="http://localhost:8080/imgs/udni.png" class="illustration" />
   </div><div
     class="card
       bio
       
-      
-      
+      card-has-joints
       
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
     <div class="type">bio</div><div class="title"><span>Údní nástavec</span></div><div class="title title-reversed"><span>Údní nástavec</span></div><img class="joint provided single bone" src="http://localhost:8080/provided-bone.png" /><div class="lives-and-attributes">
-        <div class="lives">
-          <img class="life" src="http://localhost:8080/heart.png" />
-        </div>
         <div class="attributes">
           
+        </div>
+        <div class="lives lives-down
+        ">
+          <img class="life" src="http://localhost:8080/heart.png" />
         </div>
       </div><img src="http://localhost:8080/imgs/udni.png" class="illustration" />
   </div><div
     class="card
       bio
-       card-horizontal
-      
       
       card-no-joints
+      card-vertical
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
-    <div class="type">bio</div><div class="title"><span>Průhledná kůže</span></div><div class="title title-reversed"><span>Průhledná kůže</span></div><div class="lives-and-attributes">
-        <div class="lives">
-          
-        </div>
+    <div class="type">bio</div><div class="title"><span>Průhledná kůže</span></div><div class="lives-and-attributes">
         <div class="attributes">
           <img class="attribute attribute-iq" src="http://localhost:8080/attr-iq.png" />
+        </div>
+        <div class="lives 
+        ">
+          
         </div>
       </div><img src="http://localhost:8080/imgs/pruhledna.png" class="illustration" />
   </div><div
     class="card
       bio
-       card-horizontal
-      
       
       card-no-joints
+      card-vertical
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
-    <div class="type">bio</div><div class="title"><span>Laserové oko</span></div><div class="title title-reversed"><span>Laserové oko</span></div><div class="lives-and-attributes">
-        <div class="lives">
-          
-        </div>
+    <div class="type">bio</div><div class="title"><span>Laserové oko</span></div><div class="lives-and-attributes">
         <div class="attributes">
           <img class="attribute attribute-power" src="http://localhost:8080/attr-power.png" />
+        </div>
+        <div class="lives 
+        ">
+          
         </div>
       </div><img src="http://localhost:8080/imgs/laserove.png" class="illustration" />
   </div><div
     class="card
       bio
-       card-horizontal
-      
       
       card-no-joints
+      card-vertical
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
-    <div class="type">bio</div><div class="title"><span>Měňavost</span></div><div class="title title-reversed"><span>Měňavost</span></div><div class="lives-and-attributes">
-        <div class="lives">
-          
-        </div>
+    <div class="type">bio</div><div class="title"><span>Měňavost</span></div><div class="lives-and-attributes">
         <div class="attributes">
           <img class="attribute attribute-iq" src="http://localhost:8080/attr-iq.png" />
+        </div>
+        <div class="lives 
+        ">
+          
         </div>
       </div><img src="http://localhost:8080/imgs/menavost.png" class="illustration" />
   </div><div
     class="card
       bio
-       card-horizontal
-      
       
       card-no-joints
+      card-vertical
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
-    <div class="type">bio</div><div class="title"><span>Kyselinný pot</span></div><div class="title title-reversed"><span>Kyselinný pot</span></div><div class="lives-and-attributes">
-        <div class="lives">
-          
-        </div>
+    <div class="type">bio</div><div class="title"><span>Kyselinný pot</span></div><div class="lives-and-attributes">
         <div class="attributes">
           <img class="attribute attribute-speed" src="http://localhost:8080/attr-speed.png" />
+        </div>
+        <div class="lives 
+        ">
+          
         </div>
       </div><img src="http://localhost:8080/imgs/kyselinny.png" class="illustration" />
   </div><div
     class="card
       bio
-       card-horizontal
-      
       
       card-no-joints
+      card-vertical
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
-    <div class="type">bio</div><div class="title"><span>Kyselinná krev</span></div><div class="title title-reversed"><span>Kyselinná krev</span></div><div class="lives-and-attributes">
-        <div class="lives">
-          
-        </div>
+    <div class="type">bio</div><div class="title"><span>Kyselinná krev</span></div><div class="lives-and-attributes">
         <div class="attributes">
           <img class="attribute attribute-power" src="http://localhost:8080/attr-power.png" />
+        </div>
+        <div class="lives 
+        ">
+          
         </div>
       </div><img src="http://localhost:8080/imgs/kyselinna.png" class="illustration" />
   </div><div
     class="card
       bio
-       card-horizontal
-      
       
       card-no-joints
+      card-vertical
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
-    <div class="type">bio</div><div class="title"><span>Chameleoní kůže</span></div><div class="title title-reversed"><span>Chameleoní kůže</span></div><div class="lives-and-attributes">
-        <div class="lives">
-          
-        </div>
+    <div class="type">bio</div><div class="title"><span>Chameleoní kůže</span></div><div class="lives-and-attributes">
         <div class="attributes">
           <img class="attribute attribute-iq" src="http://localhost:8080/attr-iq.png" />
+        </div>
+        <div class="lives 
+        ">
+          
         </div>
       </div><img src="http://localhost:8080/imgs/chameleoni.png" class="illustration" />
   </div><div
     class="card
       bio
-       card-horizontal
-      
       
       card-no-joints
+      card-vertical
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
-    <div class="type">bio</div><div class="title"><span>Mozek asiata</span></div><div class="title title-reversed"><span>Mozek asiata</span></div><div class="lives-and-attributes">
-        <div class="lives">
-          
-        </div>
+    <div class="type">bio</div><div class="title"><span>Mozek asiata</span></div><div class="lives-and-attributes">
         <div class="attributes">
           <img class="attribute attribute-iq" src="http://localhost:8080/attr-iq.png" />
+        </div>
+        <div class="lives 
+        ">
+          
         </div>
       </div><img src="http://localhost:8080/imgs/mozek.png" class="illustration" />
   </div><div
     class="card
       bio
-       card-horizontal
-      
       
       card-no-joints
+      card-vertical
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
-    <div class="type">bio</div><div class="title"><span>Žhavá kůže</span></div><div class="title title-reversed"><span>Žhavá kůže</span></div><div class="lives-and-attributes">
-        <div class="lives">
-          
-        </div>
+    <div class="type">bio</div><div class="title"><span>Žhavá kůže</span></div><div class="lives-and-attributes">
         <div class="attributes">
           <img class="attribute attribute-power" src="http://localhost:8080/attr-power.png" />
+        </div>
+        <div class="lives 
+        ">
+          
         </div>
       </div><img src="http://localhost:8080/imgs/zhava.png" class="illustration" />
   </div><div
     class="card
       bio
-       card-horizontal
-      
       
       card-no-joints
+      card-vertical
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
-    <div class="type">bio</div><div class="title"><span>Mrazivý dech</span></div><div class="title title-reversed"><span>Mrazivý dech</span></div><div class="lives-and-attributes">
-        <div class="lives">
-          
-        </div>
+    <div class="type">bio</div><div class="title"><span>Mrazivý dech</span></div><div class="lives-and-attributes">
         <div class="attributes">
           <img class="attribute attribute-power" src="http://localhost:8080/attr-power.png" />
+        </div>
+        <div class="lives 
+        ">
+          
         </div>
       </div><img src="http://localhost:8080/imgs/mrazivyd.png" class="illustration" />
   </div><div
     class="card
       bio
-       card-horizontal
-      
       
       card-no-joints
+      card-vertical
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
-    <div class="type">bio</div><div class="title"><span>Srdeční pumpa</span></div><div class="title title-reversed"><span>Srdeční pumpa</span></div><div class="lives-and-attributes">
-        <div class="lives">
-          
-        </div>
+    <div class="type">bio</div><div class="title"><span>Srdeční pumpa</span></div><div class="lives-and-attributes">
         <div class="attributes">
           <img class="attribute attribute-speed" src="http://localhost:8080/attr-speed.png" />
+        </div>
+        <div class="lives 
+        ">
+          
         </div>
       </div><img src="http://localhost:8080/imgs/srdecni.png" class="illustration" />
   </div><div
     class="card
       bio
-       card-horizontal
-      
       
       card-no-joints
+      card-vertical
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
-    <div class="type">bio</div><div class="title"><span>Hydraulický biceps</span></div><div class="title title-reversed"><span>Hydraulický biceps</span></div><div class="lives-and-attributes">
-        <div class="lives">
-          <img class="life" src="http://localhost:8080/heart.png" />
-        </div>
+    <div class="type">bio</div><div class="title"><span>Hydraulický biceps</span></div><div class="lives-and-attributes">
         <div class="attributes">
           <img class="attribute attribute-power" src="http://localhost:8080/attr-power.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/heart.png" />
         </div>
       </div><img src="http://localhost:8080/imgs/hydraulicky.png" class="illustration" />
   </div><div
     class="card
       bio
-       card-horizontal
-      
       
       card-no-joints
+      card-vertical
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
-    <div class="type">bio</div><div class="title"><span>Žraločí zuby</span></div><div class="title title-reversed"><span>Žraločí zuby</span></div><div class="lives-and-attributes">
-        <div class="lives">
-          <img class="life" src="http://localhost:8080/heart.png" />
-        </div>
+    <div class="type">bio</div><div class="title"><span>Žraločí zuby</span></div><div class="lives-and-attributes">
         <div class="attributes">
           <img class="attribute attribute-power" src="http://localhost:8080/attr-power.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/heart.png" />
         </div>
       </div><img src="http://localhost:8080/imgs/zraloci.png" class="illustration" />
   </div><div
     class="card
       bio
-       card-horizontal
-      
       
       card-no-joints
+      card-vertical
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
-    <div class="type">bio</div><div class="title"><span>Titanové zuby</span></div><div class="title title-reversed"><span>Titanové zuby</span></div><div class="lives-and-attributes">
-        <div class="lives">
-          <img class="life" src="http://localhost:8080/heart.png" />
-        </div>
+    <div class="type">bio</div><div class="title"><span>Titanové zuby</span></div><div class="lives-and-attributes">
         <div class="attributes">
           <img class="attribute attribute-power" src="http://localhost:8080/attr-power.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/heart.png" />
         </div>
       </div><img src="http://localhost:8080/imgs/titanove.png" class="illustration" />
   </div><div
     class="card
       bio
-       card-horizontal
-      
       
       card-no-joints
+      card-vertical
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
-    <div class="type">bio</div><div class="title"><span>Netopýří uši</span></div><div class="title title-reversed"><span>Netopýří uši</span></div><div class="lives-and-attributes">
-        <div class="lives">
-          <img class="life" src="http://localhost:8080/heart.png" />
-        </div>
+    <div class="type">bio</div><div class="title"><span>Netopýří uši</span></div><div class="lives-and-attributes">
         <div class="attributes">
           <img class="attribute attribute-iq" src="http://localhost:8080/attr-iq.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/heart.png" />
         </div>
       </div><img src="http://localhost:8080/imgs/netopyri.png" class="illustration" />
   </div><div
     class="card
       bio
-       card-horizontal
-      
       
       card-no-joints
+      card-vertical
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
-    <div class="type">bio</div><div class="title"><span>Kachní žaludek</span></div><div class="title title-reversed"><span>Kachní žaludek</span></div><div class="lives-and-attributes">
-        <div class="lives">
-          <img class="life" src="http://localhost:8080/heart.png" /><img class="life" src="http://localhost:8080/heart.png" />
-        </div>
+    <div class="type">bio</div><div class="title"><span>Kachní žaludek</span></div><div class="lives-and-attributes">
         <div class="attributes">
           <img class="attribute attribute-power" src="http://localhost:8080/attr-power.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/heart.png" /><img class="life" src="http://localhost:8080/heart.png" />
         </div>
       </div><img src="http://localhost:8080/imgs/kachni.png" class="illustration" />
   </div><div
     class="card
       bio
-       card-horizontal
-      
       
       card-no-joints
+      card-vertical
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
-    <div class="type">bio</div><div class="title"><span>Kovová kostra</span></div><div class="title title-reversed"><span>Kovová kostra</span></div><div class="lives-and-attributes">
-        <div class="lives">
-          <img class="life" src="http://localhost:8080/heart.png" /><img class="life" src="http://localhost:8080/heart.png" />
-        </div>
+    <div class="type">bio</div><div class="title"><span>Kovová kostra</span></div><div class="lives-and-attributes">
         <div class="attributes">
           <img class="attribute attribute-power" src="http://localhost:8080/attr-power.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/heart.png" /><img class="life" src="http://localhost:8080/heart.png" />
         </div>
       </div><img src="http://localhost:8080/imgs/kovova.png" class="illustration" />
   </div><div
     class="card
       bio
-       card-horizontal
-      
       
       card-no-joints
+      card-vertical
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
-    <div class="type">bio</div><div class="title"><span>Statečné srdce</span></div><div class="title title-reversed"><span>Statečné srdce</span></div><div class="lives-and-attributes">
-        <div class="lives">
-          <img class="life" src="http://localhost:8080/heart.png" /><img class="life" src="http://localhost:8080/heart.png" /><img class="life" src="http://localhost:8080/heart.png" />
-        </div>
+    <div class="type">bio</div><div class="title"><span>Statečné srdce</span></div><div class="lives-and-attributes">
         <div class="attributes">
           
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/heart.png" /><img class="life" src="http://localhost:8080/heart.png" /><img class="life" src="http://localhost:8080/heart.png" />
         </div>
       </div><img src="http://localhost:8080/imgs/statecne.png" class="illustration" />
   </div><div
     class="card
       bio
-      
-       card-vertical
-      
+       card-with-text
       card-no-joints
+      card-vertical
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
     <div class="type">bio</div><div class="title"><span>Šmírákovo oko</span></div><div class="lives-and-attributes">
-        <div class="lives">
-          <img class="life" src="http://localhost:8080/heart.png" />
-        </div>
         <div class="attributes">
           <img class="attribute attribute-iq" src="http://localhost:8080/attr-iq.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/heart.png" />
         </div>
       </div><img src="http://localhost:8080/imgs/smirakovo.png" class="illustration" /><div class="text">Jednou za kolo se můžeš podívat do karet na ruce jednoho protihráče.</div>
   </div><div
     class="card
       bio
-      
-       card-vertical
-      
+       card-with-text
       card-no-joints
+      card-vertical
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
     <div class="type">bio</div><div class="title"><span>Rentgenové oko</span></div><div class="lives-and-attributes">
-        <div class="lives">
-          <img class="life" src="http://localhost:8080/heart.png" />
-        </div>
         <div class="attributes">
           <img class="attribute attribute-iq" src="http://localhost:8080/attr-iq.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/heart.png" />
         </div>
       </div><img src="http://localhost:8080/imgs/rentgenoveo.png" class="illustration" /><div class="text">Jednou za kolo se můžeš podívat na vrchní kartu z balíčku úkolů.</div>
   </div><div
     class="card
       bio
-      
-       card-vertical
-       card-no-attributes
+       card-with-text
       card-no-joints
+      card-vertical
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -1229,10 +1248,9 @@ html, body {
   </div><div
     class="card
       bio
-      
-       card-vertical
-       card-no-attributes
+       card-with-text
       card-no-joints
+      card-vertical
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -1241,8 +1259,7 @@ html, body {
     class="card
       tech
       
-      
-       card-no-attributes
+      card-has-joints
       
   }">
     <div class="card-frame"></div>
@@ -1255,8 +1272,7 @@ html, body {
     class="card
       tech
       
-      
-       card-no-attributes
+      card-has-joints
       
   }">
     <div class="card-frame"></div>
@@ -1269,8 +1285,7 @@ html, body {
     class="card
       tech
       
-      
-       card-no-attributes
+      card-has-joints
       
   }">
     <div class="card-frame"></div>
@@ -1283,8 +1298,7 @@ html, body {
     class="card
       tech
       
-      
-       card-no-attributes
+      card-has-joints
       
   }">
     <div class="card-frame"></div>
@@ -1297,8 +1311,7 @@ html, body {
     class="card
       tech
       
-      
-       card-no-attributes
+      card-has-joints
       
   }">
     <div class="card-frame"></div>
@@ -1311,8 +1324,7 @@ html, body {
     class="card
       tech
       
-      
-       card-no-attributes
+      card-has-joints
       
   }">
     <div class="card-frame"></div>
@@ -1325,8 +1337,7 @@ html, body {
     class="card
       tech
       
-      
-       card-no-attributes
+      card-has-joints
       
   }">
     <div class="card-frame"></div>
@@ -1339,8 +1350,7 @@ html, body {
     class="card
       tech
       
-      
-       card-no-attributes
+      card-has-joints
       
   }">
     <div class="card-frame"></div>
@@ -1353,8 +1363,7 @@ html, body {
     class="card
       tech
       
-      
-       card-no-attributes
+      card-has-joints
       
   }">
     <div class="card-frame"></div>
@@ -1367,8 +1376,7 @@ html, body {
     class="card
       tech
       
-      
-       card-no-attributes
+      card-has-joints
       
   }">
     <div class="card-frame"></div>
@@ -1381,8 +1389,7 @@ html, body {
     class="card
       tech
       
-      
-       card-no-attributes
+      card-has-joints
       
   }">
     <div class="card-frame"></div>
@@ -1395,8 +1402,7 @@ html, body {
     class="card
       tech
       
-      
-       card-no-attributes
+      card-has-joints
       
   }">
     <div class="card-frame"></div>
@@ -1409,8 +1415,7 @@ html, body {
     class="card
       tech
       
-      
-       card-no-attributes
+      card-has-joints
       
   }">
     <div class="card-frame"></div>
@@ -1423,8 +1428,7 @@ html, body {
     class="card
       tech
       
-      
-       card-no-attributes
+      card-has-joints
       
   }">
     <div class="card-frame"></div>
@@ -1437,8 +1441,7 @@ html, body {
     class="card
       tech
       
-      
-       card-no-attributes
+      card-has-joints
       
   }">
     <div class="card-frame"></div>
@@ -1451,31 +1454,32 @@ html, body {
     class="card
       tech
       
-      
-       card-no-attributes
+      card-has-joints
       
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
-    <div class="type">tech</div><div class="title"><span>Čakram</span></div><div class="title title-reversed"><span>Čakram</span></div><img class="joint required single hand" src="http://localhost:8080/required-hand.png" /><div class="rerolls"><img class="test" src="http://localhost:8080/test-iq.png" /></div><img src="http://localhost:8080/imgs/cakram.png" class="illustration" />
+    <div class="type">tech</div><div class="title"><span>Čakram</span></div><div class="title title-reversed"><span>Čakram</span></div><img class="joint required single hand" src="http://localhost:8080/required-hand.png" /><div class="rerolls"><img class="test" src="http://localhost:8080/test-iq.png" />
+      <img class="test" src="http://localhost:8080/dice-cross.png" />
+    </div><img src="http://localhost:8080/imgs/cakram.png" class="illustration" />
   </div><div
     class="card
       tech
       
-      
-       card-no-attributes
+      card-has-joints
       
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
     <div class="type">tech</div><div class="title"><span>Bejzbolka</span></div><div class="title title-reversed"><span>Bejzbolka</span></div><img class="joint required first hand" src="http://localhost:8080/required-hand.png" />
-          <img class="joint required second hand" src="http://localhost:8080/required-hand.png" /><div class="rerolls"></div><img src="http://localhost:8080/imgs/bejzbolka.png" class="illustration" />
+          <img class="joint required second hand" src="http://localhost:8080/required-hand.png" /><div class="rerolls">
+      <img class="test" src="http://localhost:8080/dice-cross.png" />
+    </div><img src="http://localhost:8080/imgs/bejzbolka.png" class="illustration" />
   </div><div
     class="card
       tech
       
-      
-       card-no-attributes
+      card-has-joints
       
   }">
     <div class="card-frame"></div>
@@ -1489,8 +1493,7 @@ html, body {
     class="card
       tech
       
-      
-       card-no-attributes
+      card-has-joints
       
   }">
     <div class="card-frame"></div>
@@ -1504,8 +1507,7 @@ html, body {
     class="card
       tech
       
-      
-       card-no-attributes
+      card-has-joints
       
   }">
     <div class="card-frame"></div>
@@ -1519,8 +1521,7 @@ html, body {
     class="card
       tech
       
-      
-       card-no-attributes
+      card-has-joints
       
   }">
     <div class="card-frame"></div>
@@ -1534,8 +1535,7 @@ html, body {
     class="card
       tech
       
-      
-       card-no-attributes
+      card-has-joints
       
   }">
     <div class="card-frame"></div>
@@ -1549,8 +1549,7 @@ html, body {
     class="card
       tech
       
-      
-       card-no-attributes
+      card-has-joints
       
   }">
     <div class="card-frame"></div>
@@ -1564,8 +1563,7 @@ html, body {
     class="card
       tech
       
-      
-       card-no-attributes
+      card-has-joints
       
   }">
     <div class="card-frame"></div>
@@ -1579,8 +1577,7 @@ html, body {
     class="card
       tech
       
-      
-       card-no-attributes
+      card-has-joints
       
   }">
     <div class="card-frame"></div>
@@ -1594,8 +1591,7 @@ html, body {
     class="card
       tech
       
-      
-       card-no-attributes
+      card-has-joints
       
   }">
     <div class="card-frame"></div>
@@ -1609,8 +1605,7 @@ html, body {
     class="card
       tech
       
-      
-       card-no-attributes
+      card-has-joints
       
   }">
     <div class="card-frame"></div>
@@ -1624,35 +1619,28 @@ html, body {
     class="card
       tech
       
-      
-      
+      card-has-joints
       
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
     <div class="type">tech</div><div class="title"><span>Jízdní pásy</span></div><div class="title title-reversed"><span>Jízdní pásy</span></div><img class="joint required first bone" src="http://localhost:8080/required-bone.png" />
-          <img class="joint required second leg" src="http://localhost:8080/required-leg.png" /><div class="lives-and-attributes">
-        <div class="lives">
-          <img class="life" src="http://localhost:8080/heart.png" /><img class="life" src="http://localhost:8080/heart.png" />
-        </div>
-        <div class="attributes">
-          
-        </div>
-      </div><div class="rerolls"><img class="test" src="http://localhost:8080/test-powerspeed.png" />
+          <img class="joint required second leg" src="http://localhost:8080/required-leg.png" /><div class="rerolls"><img class="test" src="http://localhost:8080/test-powerspeed.png" />
       <div class="reroll reroll-green">
         <img src="http://localhost:8080/dice2.png" />
-      </div></div><img src="http://localhost:8080/imgs/jizdni.png" class="illustration" />
+      </div>
+      <img class="life" src="http://localhost:8080/heart.png" /><img class="life" src="http://localhost:8080/heart.png" />
+    </div><img src="http://localhost:8080/imgs/jizdni.png" class="illustration" />
   </div><div
     class="card
       tech
       
-      
-       card-no-attributes
       card-no-joints
+      card-vertical
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
-    <div class="type">tech</div><div class="title"><span>Rentgenové čočky</span></div><div class="title title-reversed"><span>Rentgenové čočky</span></div><div class="rerolls"><img class="test" src="http://localhost:8080/test-iq.png" />
+    <div class="type">tech</div><div class="title"><span>Rentgenové čočky</span></div><div class="rerolls"><img class="test" src="http://localhost:8080/test-iq.png" />
       <div class="reroll reroll-green">
         <img src="http://localhost:8080/dice1.png" />
       </div></div><img src="http://localhost:8080/imgs/rentgenovec.png" class="illustration" />
@@ -1660,13 +1648,12 @@ html, body {
     class="card
       tech
       
-      
-       card-no-attributes
       card-no-joints
+      card-vertical
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
-    <div class="type">tech</div><div class="title"><span>Brýle nočního vidění</span></div><div class="title title-reversed"><span>Brýle nočního vidění</span></div><div class="rerolls"><img class="test" src="http://localhost:8080/test-iq.png" />
+    <div class="type">tech</div><div class="title"><span>Brýle nočního vidění</span></div><div class="rerolls"><img class="test" src="http://localhost:8080/test-iq.png" />
       <div class="reroll reroll-green">
         <img src="http://localhost:8080/dice1.png" />
       </div></div><img src="http://localhost:8080/imgs/bryle.png" class="illustration" />
@@ -1674,13 +1661,12 @@ html, body {
     class="card
       tech
       
-      
-       card-no-attributes
       card-no-joints
+      card-vertical
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
-    <div class="type">tech</div><div class="title"><span>Kapesní arsenál</span></div><div class="title title-reversed"><span>Kapesní arsenál</span></div><div class="rerolls">
+    <div class="type">tech</div><div class="title"><span>Kapesní arsenál</span></div><div class="rerolls">
       <div class="reroll reroll-red">
         <img src="http://localhost:8080/dice1.png" />
       </div></div><img src="http://localhost:8080/imgs/kapesnia.png" class="illustration" />
@@ -1688,59 +1674,51 @@ html, body {
     class="card
       tech
       
-      
-       card-no-attributes
       card-no-joints
+      card-vertical
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
-    <div class="type">tech</div><div class="title"><span>Svářečské brýle</span></div><div class="title title-reversed"><span>Svářečské brýle</span></div><div class="rerolls"></div><img src="http://localhost:8080/imgs/svarecske.png" class="illustration" />
+    <div class="type">tech</div><div class="title"><span>Svářečské brýle</span></div><div class="rerolls">
+      <div class="reroll reroll-green">
+        <img src="http://localhost:8080/dice-sad.png" />
+      </div></div><img src="http://localhost:8080/imgs/svarecske.png" class="illustration" />
   </div><div
     class="card
       tech
       
-      
-      
       card-no-joints
+      card-vertical
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
-    <div class="type">tech</div><div class="title"><span>Neprůstřelná vesta</span></div><div class="title title-reversed"><span>Neprůstřelná vesta</span></div><div class="lives-and-attributes">
-        <div class="lives">
-          <img class="life" src="http://localhost:8080/heart.png" />
-        </div>
-        <div class="attributes">
-          
-        </div>
-      </div><div class="rerolls"></div><img src="http://localhost:8080/imgs/neprustrelna.png" class="illustration" />
+    <div class="type">tech</div><div class="title"><span>Neprůstřelná vesta</span></div><div class="rerolls">
+      <div class="reroll reroll-green">
+        <img src="http://localhost:8080/dice-tragic.png" />
+      </div>
+      <img class="life" src="http://localhost:8080/heart.png" />
+    </div><img src="http://localhost:8080/imgs/neprustrelna.png" class="illustration" />
   </div><div
     class="card
       tech
       
-      
-      
       card-no-joints
+      card-vertical
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
-    <div class="type">tech</div><div class="title"><span>Ocelové brnění</span></div><div class="title title-reversed"><span>Ocelové brnění</span></div><div class="lives-and-attributes">
-        <div class="lives">
-          <img class="life" src="http://localhost:8080/heart.png" />
-        </div>
-        <div class="attributes">
-          
-        </div>
-      </div><div class="rerolls"><img class="test" src="http://localhost:8080/test-power.png" />
+    <div class="type">tech</div><div class="title"><span>Ocelové brnění</span></div><div class="rerolls"><img class="test" src="http://localhost:8080/test-power.png" />
       <div class="reroll reroll-green">
         <img src="http://localhost:8080/dice1.png" />
-      </div></div><img src="http://localhost:8080/imgs/ocelove.png" class="illustration" />
+      </div>
+      <img class="life" src="http://localhost:8080/heart.png" />
+    </div><img src="http://localhost:8080/imgs/ocelove.png" class="illustration" />
   </div><div
     class="card
       tech
-      
-       card-vertical
-       card-no-attributes
+       card-with-text
       card-no-joints
+      card-vertical
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>
@@ -1748,10 +1726,9 @@ html, body {
   </div><div
     class="card
       tech
-      
-       card-vertical
-       card-no-attributes
+       card-with-text
       card-no-joints
+      card-vertical
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>

@@ -31,12 +31,25 @@ const getRerollsMarkup = (value) => {
     else if (value.includes('I'))  { testImgNamePart = 'iq'; }
     markup = `<img class="test" src="http://localhost:8080/test-${testImgNamePart}.png" />`;
   }
-  let diceAmount;
-  if (diceAmount = value.match(/[1-3]/g)) {
+  let diceAmount, diceValue;
+  diceAmount = value.match(/[1-3]/g);
+  if (value.includes('🙁')) { diceAmount = '-sad'; }
+  else if (value.includes('😬')) { diceAmount = '-tragic'; }
+  if (diceAmount) {
     markup = `${markup}
       <div class="reroll reroll${value.includes('X') ? '-red' : '-green'}">
         <img src="http://localhost:8080/dice${diceAmount}.png" />
       </div>`;
+  }
+  if (value.includes('Z')) {
+    markup = `${markup}
+      ${value.split('').filter(v => v == 'Z').map(getLiveMarkup).join('')}
+    `;
+  }
+  if (value.includes('D')) {
+    markup = `${markup}
+      <img class="test" src="http://localhost:8080/dice-cross.png" />
+    `;
   }
   return markup;
 }
@@ -48,7 +61,7 @@ const getFieldMarkup = (title, value, card) => {
     /* nazev karty */
     case 'title':
       markup = `<div class="${title}"><span>${value}</span></div>`;
-      if (card.text == '') {
+      if ((card.requires || card.provides) && !card.text) {
         markup += `<div class="title title-reversed"><span>${value}</span></div>`;
       }
     break;
@@ -66,11 +79,16 @@ const getFieldMarkup = (title, value, card) => {
     break;
     case 'attributes':
       markup = `<div class="lives-and-attributes">
-        <div class="lives">
-          ${value.split('').filter(v => v == 'Z').map(getLiveMarkup).join('')}
-        </div>
         <div class="attributes">
           ${value.split('').filter(v => v != 'Z').map(getAttrMarkup).join('')}
+        </div>
+        <div class="lives ${
+          (card.title == 'Údní nástavec' || card.type == 'tech')
+          ? 'lives-down' : ''
+        }
+        ${card.title == 'Jízdní pásy' ? 'lives-with-rerolls' : ''
+      }">
+          ${value.split('').filter(v => v == 'Z').map(getLiveMarkup).join('')}
         </div>
       </div>`;
     break;
@@ -86,23 +104,13 @@ const getFieldMarkup = (title, value, card) => {
   return markup;
 }
 
-const isHorizontal = (cardData) =>
-  cardData.type != 'voodoo' && !cardData.requires && !cardData.provides && !cardData.text && !cardData.rerolls;
-
-const isVertical = (cardData) =>
-  cardData.type != 'voodoo' && cardData.text
-
-const hasNoAttributes = (cardData) =>
-  cardData.type == !cardData.attributes;
-
 module.exports = (cardData) => {
   return `<div
     class="card
       ${cardData.type || ''}
-      ${isHorizontal(cardData) ? ' card-horizontal' : ''}
-      ${isVertical(cardData) ? ' card-vertical' : ''}
-      ${!cardData.attributes ? ' card-no-attributes' : ''}
-      ${!cardData.requires && !cardData.provides ? 'card-no-joints' : ''}
+      ${(cardData.text) ? ' card-with-text' : ''}
+      ${!cardData.requires && !cardData.provides ? 'card-no-joints' : 'card-has-joints'}
+      ${(!cardData.requires && !cardData.provides) || cardData.text ? 'card-vertical' : ''}
   }">
     <div class="card-frame"></div>
     <div class="card-icons"></div>

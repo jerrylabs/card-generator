@@ -91,6 +91,12 @@ html, body {
   background-image: url(http://localhost:8080/icons-tech.png);
 }
 
+.card-vertical .card-icons {
+  height: 50%;
+  background-position: center top;
+  background-size: 100% 200%;
+}
+
 .title {
   position: absolute;
   z-index: 2;
@@ -146,14 +152,29 @@ html, body {
   top: 11mm;
 }
 
-.tech .lives {
+.lives-down {
   top: auto;
   bottom: 11mm;
+}
+
+.tech.card-vertical .lives-down {
+  bottom: 5mm;
 }
 
 .rerolls {
   bottom: auto;
   top: 10mm;
+}
+
+.tech.card-has-joints .rerolls {
+  bottom: 0;
+  height: 100%;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  right: 10px;
+  justify-content: center;
 }
 
 .attribute {
@@ -166,43 +187,44 @@ html, body {
   margin: -1mm 0;
 }
 
+.rerolls .life {
+  margin: 0.2mm 1mm;
+}
+
 .test, .reroll {
-  width: 15mm;
-  height: 15mm;
+  width: 13mm;
+  height: 13mm;
   display: inline-block;
+  background-repeat: no-repeat;
 }
 
 .reroll {
+  position: relative;
+}
+
+.reroll::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
   background-size: contain;
+  content: ' ';
 }
 
 .reroll img {
   width: 100%;
 }
 
-.reroll-green { background-image: url(http://localhost:8080/reroll-green.png); }
-.reroll-red { background-image: url(http://localhost:8080/reroll-red.png); }
+.reroll-green::before { background-image: url(http://localhost:8080/reroll-green.png); }
+.reroll-red::before { background-image: url(http://localhost:8080/reroll-red.png); }
 
-.card-horizontal .lives-and-attributes {
-  position: absolute;
-  z-index: 2;
-  top: 50%;
-  transform: translateY(-50%);
-  height: 80%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  right: 3mm;
-}
-
-.card-horizontal .attributes,
-.card-horizontal .lives,
-.card-vertical .attributes,
-.card-vertical .lives {
+.bio.card-vertical .attributes,
+.bio.card-vertical .lives {
   position: static;
 }
 
-.card-vertical .lives-and-attributes {
+.bio.card-vertical .lives-and-attributes {
   position: absolute;
   z-index: 2;
   display: flex;
@@ -212,21 +234,30 @@ html, body {
   justify-content: center;
 }
 
-.card-vertical .lives, .card-vertical .attributes {
+.bio.card-vertical .lives, .bio.card-vertical .attributes {
   flex: 0 1 0;
+  display: flex;
 }
 
 .card-vertical .life, .card-vertical .attribute {
   transform: rotate(-90deg);
+  margin: 1mm 0.5mm;
 }
 
-.card-horizontal .attribute-power {
-  transform: rotate(180deg);
+.card-vertical .rerolls .life {
+  margin: 2mm 0;
 }
 
-.card-horizontal .life {
-  display: block;
-  margin: 1mm 2mm;
+.card-vertical .attribute-power {
+  transform: rotate(90deg);
+}
+
+.card-vertical .test {
+  transform: rotate(-90deg);
+}
+
+.card-vertical .test[src*="power"] {
+  transform: rotate(90deg);
 }
 
 .illustration {
@@ -238,16 +269,6 @@ html, body {
   transform: translateY(-50%);
 }
 
-.card-horizontal .illustration {
-  transform: translateY(-50%) rotate(90deg);
-  left: -7mm;
-  width: 42mm;
-}
-
-.card-vertical.card-no-attributes .illustration {
-  top: 42%;
-}
-
 .text {
   position: absolute;
   z-index: 3;
@@ -257,13 +278,12 @@ html, body {
   background: transparent url(http://localhost:8080/background-text.png) center center no-repeat;
   background-size: 100% 100%;
   font-family: "Open Sans";
-  padding: 1.4mm;
+  padding: 0.8mm;
   box-sizing: border-box;
 }
 
-.card-vertical.card-no-joints .text {
-  padding: 0;
-  bottom: 8mm;
+.card-has-joints .text {
+  padding: 1.4mm;
 }
 
 
