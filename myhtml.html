@@ -329,9 +329,30 @@ html, body {
   background-size: contain;
 }
 
+.voodoo .text:not(.texts) .emo.dice {
+  width: 9mm;
+  margin: 1mm;
+}
+
 .voodoo .text .emo.arrow {
   margin: -4.5mm;
   z-index: 1;
+}
+
+.group-all {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.group {
+  display: flex;
+}
+
+.voodoo .text .group .emo {
+    width: 9mm;
+    margin: 0;
 }
 
 .emo-epic    { background-image: url(http://localhost:8080/emo-epic.png); }
@@ -2354,7 +2375,7 @@ html, body {
     <div class="card-icons"></div>
     <div class="type">voodoo</div><div class="title">
         <span>Talisman</span>
-      </div><img src="http://localhost:8080/imgs/talisman.png" class="illustration" /><div class="text"><img class="emo" src="http://localhost:8080/dice-any.png" /> <img class="emo arrow" src="http://localhost:8080/arrow.png" /> <img class="emo" src="http://localhost:8080/dice-any.png" /></div>
+      </div><img src="http://localhost:8080/imgs/talisman.png" class="illustration" /><div class="text"><img class="emo dice" src="http://localhost:8080/dice-any.png" /> <img class="emo arrow" src="http://localhost:8080/arrow.png" /> <img class="emo dice" src="http://localhost:8080/dice-any.png" /></div>
   </div><div
     class="card
       voodoo
@@ -2474,7 +2495,7 @@ html, body {
     <div class="card-icons"></div>
     <div class="type">voodoo</div><div class="title">
         <span>Mozkokašící řev</span>
-      </div><img src="http://localhost:8080/imgs/mozkokasici.png" class="illustration" /><img class="test" src="http://localhost:8080/test-iq.png" /><div class="text"><img class="emo" src="http://localhost:8080/dice-any.png" /> <img class="emo arrow" src="http://localhost:8080/arrow.png" /> <img class="emo" src="http://localhost:8080/dice-any.png" /></div>
+      </div><img src="http://localhost:8080/imgs/mozkokasici.png" class="illustration" /><img class="test" src="http://localhost:8080/test-iq.png" /><div class="text"><img class="emo dice" src="http://localhost:8080/dice-any.png" /> <img class="emo arrow" src="http://localhost:8080/arrow.png" /> <img class="emo dice" src="http://localhost:8080/dice-any.png" /></div>
   </div><div
     class="card
       voodoo
@@ -2487,7 +2508,7 @@ html, body {
     <div class="card-icons"></div>
     <div class="type">voodoo</div><div class="title">
         <span>Plynná forma</span>
-      </div><img src="http://localhost:8080/imgs/plynna.png" class="illustration" /><img class="test" src="http://localhost:8080/test-iq.png" /><div class="text"><img class="emo" src="http://localhost:8080/dice-any.png" /> <img class="emo arrow" src="http://localhost:8080/arrow.png" /> <img class="emo" src="http://localhost:8080/dice-any.png" /></div>
+      </div><img src="http://localhost:8080/imgs/plynna.png" class="illustration" /><img class="test" src="http://localhost:8080/test-iq.png" /><div class="text"><img class="emo dice" src="http://localhost:8080/dice-any.png" /> <img class="emo arrow" src="http://localhost:8080/arrow.png" /> <img class="emo dice" src="http://localhost:8080/dice-any.png" /></div>
   </div><div
     class="card
       voodoo
@@ -2516,7 +2537,7 @@ html, body {
     <div class="card-frame"></div>
     <div class="card-icons"></div>
     <div class="type">voodoo</div><div class="title">
-        <span>Extatický tanev</span>
+        <span>Extatický tanec</span>
       </div><img src="http://localhost:8080/imgs/extaticky.png" class="illustration" /><img class="test" src="http://localhost:8080/test-speed.png" /><div class="text texts">
           <div class="text-part"> <img class="emo" src="http://localhost:8080/emo-happy.png" /><img class="emo" src="http://localhost:8080/emo-happy.png" /></div>
           nebo
@@ -2554,7 +2575,7 @@ html, body {
       </div><img src="http://localhost:8080/imgs/zmenseni.png" class="illustration" /><img class="test" src="http://localhost:8080/test-power.png" /><div class="text texts">
           <div class="text-part"> <img class="emo emo-tragic" src="http://localhost:8080/cross.png" /></div>
           nebo
-          <div class="text-part">Všechny <img class="emo" src="http://localhost:8080/dice-happy.png" /> <img class="emo arrow" src="http://localhost:8080/arrow.png" /> <img class="emo" src="http://localhost:8080/dice-double.png" /></div>
+          <div class="text-part">všechny <img class="emo" src="http://localhost:8080/dice-happy.png" /> <img class="emo arrow" src="http://localhost:8080/arrow.png" /> <img class="emo" src="http://localhost:8080/dice-double.png" /></div>
         </div>
   </div><div
     class="card
@@ -2571,7 +2592,7 @@ html, body {
       </div><img src="http://localhost:8080/imgs/demonicka.png" class="illustration" /><img class="test" src="http://localhost:8080/test-speed.png" /><div class="text texts">
           <div class="text-part"> <img class="emo emo-tragic" src="http://localhost:8080/cross.png" /></div>
           nebo
-          <div class="text-part">Všechny <img class="emo" src="http://localhost:8080/dice-happy.png" /> <img class="emo arrow" src="http://localhost:8080/arrow.png" /> <img class="emo" src="http://localhost:8080/dice-double.png" /></div>
+          <div class="text-part">všechny <img class="emo" src="http://localhost:8080/dice-happy.png" /> <img class="emo arrow" src="http://localhost:8080/arrow.png" /> <img class="emo" src="http://localhost:8080/dice-double.png" /></div>
         </div>
   </div><div
     class="card
@@ -2588,8 +2609,445 @@ html, body {
       </div><img src="http://localhost:8080/imgs/neviditelnost.png" class="illustration" /><img class="test" src="http://localhost:8080/test-iq.png" /><div class="text texts">
           <div class="text-part"> <img class="emo emo-tragic" src="http://localhost:8080/cross.png" /></div>
           nebo
-          <div class="text-part">Všechny <img class="emo" src="http://localhost:8080/dice-happy.png" /> <img class="emo arrow" src="http://localhost:8080/arrow.png" /> <img class="emo" src="http://localhost:8080/dice-double.png" /></div>
+          <div class="text-part">všechny <img class="emo" src="http://localhost:8080/dice-happy.png" /> <img class="emo arrow" src="http://localhost:8080/arrow.png" /> <img class="emo" src="http://localhost:8080/dice-double.png" /></div>
         </div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      card-vertical
+       card-two-texts
+  }">
+    <div class="card-frame"></div>
+    <div class="card-icons"></div>
+    <div class="type">voodoo</div><div class="title">
+        <span>Moment osvícení</span>
+      </div><img src="http://localhost:8080/imgs/moment.png" class="illustration" /><img class="test" src="http://localhost:8080/test-iq.png" /><div class="text texts">
+          <div class="text-part"><img class="emo" src="http://localhost:8080/dice-epic.png" /> <img class="emo arrow" src="http://localhost:8080/arrow.png" /> <img class="emo dice" src="http://localhost:8080/dice-any.png" /></div>
+          nebo
+          <div class="text-part"><img class="emo" src="http://localhost:8080/dice-tragic.png" /> <img class="emo arrow" src="http://localhost:8080/arrow.png" /> <img class="emo dice" src="http://localhost:8080/dice-any.png" /></div>
+        </div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      card-vertical
+       card-two-texts
+  }">
+    <div class="card-frame"></div>
+    <div class="card-icons"></div>
+    <div class="type">voodoo</div><div class="title">
+        <span>Betonový vývrh</span>
+      </div><img src="http://localhost:8080/imgs/betonovy.png" class="illustration" /><img class="test" src="http://localhost:8080/test-power.png" /><div class="text texts">
+          <div class="text-part"><img class="emo" src="http://localhost:8080/dice-epic.png" /> <img class="emo arrow" src="http://localhost:8080/arrow.png" /> <img class="emo dice" src="http://localhost:8080/dice-any.png" /></div>
+          nebo
+          <div class="text-part"><img class="emo" src="http://localhost:8080/dice-tragic.png" /> <img class="emo arrow" src="http://localhost:8080/arrow.png" /> <img class="emo dice" src="http://localhost:8080/dice-any.png" /></div>
+        </div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      card-vertical
+      
+  }">
+    <div class="card-frame"></div>
+    <div class="card-icons"></div>
+    <div class="type">voodoo</div><div class="title">
+        <span>360° úhel pohledu</span>
+      </div><img src="http://localhost:8080/imgs/360.png" class="illustration" /><img class="test" src="http://localhost:8080/test-speed.png" /><div class="text text-all"><div class="group-all">všechny<div class="group"><img class="emo" src="http://localhost:8080/dice-happy.png" /><img class="emo" src="http://localhost:8080/dice-double.png" /></div></div> <img class="emo arrow" src="http://localhost:8080/arrow.png" /><img class="emo" src="http://localhost:8080/dice-epic.png" /></div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      card-vertical
+      
+  }">
+    <div class="card-frame"></div>
+    <div class="card-icons"></div>
+    <div class="type">voodoo</div><div class="title">
+        <span>Zvětšení</span>
+      </div><img src="http://localhost:8080/imgs/zvetseni.png" class="illustration" /><img class="test" src="http://localhost:8080/test-power.png" /><div class="text text-all"><div class="group-all">všechny<div class="group"><img class="emo" src="http://localhost:8080/dice-happy.png" /><img class="emo" src="http://localhost:8080/dice-double.png" /></div></div> <img class="emo arrow" src="http://localhost:8080/arrow.png" /><img class="emo" src="http://localhost:8080/dice-epic.png" /></div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      card-vertical
+      
+  }">
+    <div class="card-frame"></div>
+    <div class="card-icons"></div>
+    <div class="type">voodoo</div><div class="title">
+        <span>Zkameňující dotyk</span>
+      </div><img src="http://localhost:8080/imgs/zkamenujici.png" class="illustration" /><img class="test" src="http://localhost:8080/test-power.png" /><div class="text text-all"><div class="group-all">všechny<div class="group"><img class="emo" src="http://localhost:8080/dice-happy.png" /><img class="emo" src="http://localhost:8080/dice-double.png" /></div></div> <img class="emo arrow" src="http://localhost:8080/arrow.png" /><img class="emo dice" src="http://localhost:8080/dice-any.png" /></div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      card-vertical
+      
+  }">
+    <div class="card-frame"></div>
+    <div class="card-icons"></div>
+    <div class="type">voodoo</div><div class="title">
+        <span>Amok</span>
+      </div><img src="http://localhost:8080/imgs/amok.png" class="illustration" /><img class="test" src="http://localhost:8080/test-power.png" /><div class="text text-all"><div class="group-all">všechny<div class="group"><img class="emo" src="http://localhost:8080/dice-happy.png" /><img class="emo" src="http://localhost:8080/dice-double.png" /><img class="emo" src="http://localhost:8080/dice-neutral.png" /></div></div> <img class="emo arrow" src="http://localhost:8080/arrow.png" /><img class="emo dice" src="http://localhost:8080/dice-any.png" /></div>
+  </div><div
+    class="card
+      voodoo
+      
+      card-no-joints
+      card-vertical
+      
+  }">
+    <div class="card-frame"></div>
+    <div class="card-icons"></div>
+    <div class="type">voodoo</div><div class="title">
+        <span>Vize</span>
+      </div><img src="http://localhost:8080/imgs/vize.png" class="illustration" />
+  </div><div
+    class="card
+      voodoo
+      
+      card-no-joints
+      card-vertical
+      
+  }">
+    <div class="card-frame"></div>
+    <div class="card-icons"></div>
+    <div class="type">voodoo</div><div class="title">
+        <span>Intuice</span>
+      </div><img src="http://localhost:8080/imgs/intuice.png" class="illustration" />
+  </div><div
+    class="card
+      voodoo
+      
+      card-no-joints
+      card-vertical
+      
+  }">
+    <div class="card-frame"></div>
+    <div class="card-icons"></div>
+    <div class="type">voodoo</div><div class="title">
+        <span>Pomatení</span>
+      </div><img src="http://localhost:8080/imgs/pomateni.png" class="illustration" />
+  </div><div
+    class="card
+      voodoo
+      
+      card-no-joints
+      card-vertical
+      
+  }">
+    <div class="card-frame"></div>
+    <div class="card-icons"></div>
+    <div class="type">voodoo</div><div class="title">
+        <span>Nabídni oběť</span>
+      </div><img src="http://localhost:8080/imgs/nabidni.png" class="illustration" />
+  </div><div
+    class="card
+      voodoo
+      
+      card-no-joints
+      card-vertical
+      
+  }">
+    <div class="card-frame"></div>
+    <div class="card-icons"></div>
+    <div class="type">voodoo</div><div class="title">
+        <span>Nostalgické vzpomínky</span>
+      </div><img src="http://localhost:8080/imgs/nostalgicke.png" class="illustration" />
+  </div><div
+    class="card
+      voodoo
+      
+      card-no-joints
+      card-vertical
+      
+  }">
+    <div class="card-frame"></div>
+    <div class="card-icons"></div>
+    <div class="type">voodoo</div><div class="title">
+        <span>Ďábelská inspirace</span>
+      </div><img src="http://localhost:8080/imgs/dabelska.png" class="illustration" />
+  </div><div
+    class="card
+      voodoo
+      
+      card-no-joints
+      card-vertical
+      
+  }">
+    <div class="card-frame"></div>
+    <div class="card-icons"></div>
+    <div class="type">voodoo</div><div class="title">
+        <span>Falešná důvěra</span>
+      </div><img src="http://localhost:8080/imgs/falesna.png" class="illustration" />
+  </div><div
+    class="card
+      voodoo
+      
+      card-no-joints
+      card-vertical
+      
+  }">
+    <div class="card-frame"></div>
+    <div class="card-icons"></div>
+    <div class="type">voodoo</div><div class="title">
+        <span>Nalákání do pasti</span>
+      </div><img src="http://localhost:8080/imgs/nalakani.png" class="illustration" />
+  </div><div
+    class="card
+      voodoo
+      
+      card-no-joints
+      card-vertical
+      
+  }">
+    <div class="card-frame"></div>
+    <div class="card-icons"></div>
+    <div class="type">voodoo</div><div class="title">
+        <span>Náhodná teleportace</span>
+      </div><img src="http://localhost:8080/imgs/nahodna.png" class="illustration" />
+  </div><div
+    class="card
+      voodoo
+      
+      card-no-joints
+      card-vertical
+      
+  }">
+    <div class="card-frame"></div>
+    <div class="card-icons"></div>
+    <div class="type">voodoo</div><div class="title">
+        <span>Zaječí pacička</span>
+      </div><img src="http://localhost:8080/imgs/zajeci.png" class="illustration" />
+  </div><div
+    class="card
+      voodoo
+      
+      card-no-joints
+      card-vertical
+      
+  }">
+    <div class="card-frame"></div>
+    <div class="card-icons"></div>
+    <div class="type">voodoo</div><div class="title">
+        <span>Erupce na slunci</span>
+      </div><img src="http://localhost:8080/imgs/erupce.png" class="illustration" />
+  </div><div
+    class="card
+      voodoo
+      
+      card-no-joints
+      card-vertical
+      
+  }">
+    <div class="card-frame"></div>
+    <div class="card-icons"></div>
+    <div class="type">voodoo</div><div class="title">
+        <span>Nečekaný prd</span>
+      </div><img src="http://localhost:8080/imgs/necekany.png" class="illustration" />
+  </div><div
+    class="card
+      voodoo
+      
+      card-no-joints
+      card-vertical
+      
+  }">
+    <div class="card-frame"></div>
+    <div class="card-icons"></div>
+    <div class="type">voodoo</div><div class="title">
+        <span>Mozkový elektrošok</span>
+      </div><img src="http://localhost:8080/imgs/mozkovy.png" class="illustration" />
+  </div><div
+    class="card
+      voodoo
+      
+      card-no-joints
+      card-vertical
+      
+  }">
+    <div class="card-frame"></div>
+    <div class="card-icons"></div>
+    <div class="type">voodoo</div><div class="title">
+        <span>Našel jsi na zemi lízátko</span>
+      </div><img src="http://localhost:8080/imgs/nasel.png" class="illustration" />
+  </div><div
+    class="card
+      voodoo
+      
+      card-no-joints
+      card-vertical
+      
+  }">
+    <div class="card-frame"></div>
+    <div class="card-icons"></div>
+    <div class="type">voodoo</div><div class="title">
+        <span>Slevněný energy drink</span>
+      </div><img src="http://localhost:8080/imgs/slevneny.png" class="illustration" />
+  </div><div
+    class="card
+      voodoo
+      
+      card-no-joints
+      card-vertical
+      
+  }">
+    <div class="card-frame"></div>
+    <div class="card-icons"></div>
+    <div class="type">voodoo</div><div class="title">
+        <span>Čokodortík s malinami</span>
+      </div><img src="http://localhost:8080/imgs/cokodortik.png" class="illustration" />
+  </div><div
+    class="card
+      voodoo
+      
+      card-no-joints
+      card-vertical
+      
+  }">
+    <div class="card-frame"></div>
+    <div class="card-icons"></div>
+    <div class="type">voodoo</div><div class="title">
+        <span>Zhnití</span>
+      </div><img src="http://localhost:8080/imgs/zhniti.png" class="illustration" />
+  </div><div
+    class="card
+      voodoo
+      
+      card-no-joints
+      card-vertical
+      
+  }">
+    <div class="card-frame"></div>
+    <div class="card-icons"></div>
+    <div class="type">voodoo</div><div class="title">
+        <span>Nepopsatelně sprostý trik</span>
+      </div><img src="http://localhost:8080/imgs/nepopsatelne.png" class="illustration" />
+  </div><div
+    class="card
+      voodoo
+      
+      card-no-joints
+      card-vertical
+      
+  }">
+    <div class="card-frame"></div>
+    <div class="card-icons"></div>
+    <div class="type">voodoo</div><div class="title">
+        <span>Zmrtvýchvstání</span>
+      </div><img src="http://localhost:8080/imgs/zmrtvychvstani.png" class="illustration" />
+  </div><div
+    class="card
+      voodoo
+      
+      card-no-joints
+      card-vertical
+      
+  }">
+    <div class="card-frame"></div>
+    <div class="card-icons"></div>
+    <div class="type">voodoo</div><div class="title">
+        <span>Kontejner od charity</span>
+      </div><img src="http://localhost:8080/imgs/kontejner.png" class="illustration" />
+  </div><div
+    class="card
+      voodoo
+      
+      card-no-joints
+      card-vertical
+      
+  }">
+    <div class="card-frame"></div>
+    <div class="card-icons"></div>
+    <div class="type">voodoo</div><div class="title">
+        <span>Detoxikace</span>
+      </div><img src="http://localhost:8080/imgs/detoxikace.png" class="illustration" />
+  </div><div
+    class="card
+      voodoo
+      
+      card-no-joints
+      card-vertical
+      
+  }">
+    <div class="card-frame"></div>
+    <div class="card-icons"></div>
+    <div class="type">voodoo</div><div class="title">
+        <span>Naštval jsi fanoušky</span>
+      </div><img src="http://localhost:8080/imgs/nastval.png" class="illustration" />
+  </div><div
+    class="card
+      voodoo
+      
+      card-no-joints
+      card-vertical
+      
+  }">
+    <div class="card-frame"></div>
+    <div class="card-icons"></div>
+    <div class="type">voodoo</div><div class="title">
+        <span>Dvě mouchy jednou ranou</span>
+      </div><img src="http://localhost:8080/imgs/dve.png" class="illustration" />
+  </div><div
+    class="card
+      voodoo
+      
+      card-no-joints
+      card-vertical
+      
+  }">
+    <div class="card-frame"></div>
+    <div class="card-icons"></div>
+    <div class="type">voodoo</div><div class="title">
+        <span>Odvážnému štěstí přeje</span>
+      </div><img src="http://localhost:8080/imgs/odvaznemu.png" class="illustration" />
+  </div><div
+    class="card
+      voodoo
+      
+      card-no-joints
+      card-vertical
+      
+  }">
+    <div class="card-frame"></div>
+    <div class="card-icons"></div>
+    <div class="type">voodoo</div><div class="title">
+        <span>Diváci žádají opakování</span>
+      </div><img src="http://localhost:8080/imgs/divaci.png" class="illustration" />
+  </div><div
+    class="card
+      voodoo
+      
+      card-no-joints
+      card-vertical
+      
+  }">
+    <div class="card-frame"></div>
+    <div class="card-icons"></div>
+    <div class="type">voodoo</div><div class="title">
+        <span>Skandál</span>
+      </div><img src="http://localhost:8080/imgs/skandal.png" class="illustration" />
+  </div><div
+    class="card
+      voodoo
+      
+      card-no-joints
+      card-vertical
+      
+  }">
+    <div class="card-frame"></div>
+    <div class="card-icons"></div>
+    <div class="type">voodoo</div><div class="title">
+        <span>Trapas</span>
+      </div><img src="http://localhost:8080/imgs/trapas.png" class="illustration" />
   </div></div>
     </body>
   </html>

@@ -325,9 +325,30 @@ html, body {
   background-size: contain;
 }
 
+.voodoo .text:not(.texts) .emo.dice {
+  width: 9mm;
+  margin: 1mm;
+}
+
 .voodoo .text .emo.arrow {
   margin: -4.5mm;
   z-index: 1;
+}
+
+.group-all {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.group {
+  display: flex;
+}
+
+.voodoo .text .group .emo {
+    width: 9mm;
+    margin: 0;
 }
 
 .emo-epic    { background-image: url(http://localhost:8080/emo-epic.png); }

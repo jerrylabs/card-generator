@@ -121,8 +121,41 @@ voodoo,Oslepující záře,,,,,oslepujici,,,V jakémkoliv testu přehoď libovol
 voodoo,Mozkokašící řev,,,,,mozkokasici,I,,? => ?,
 voodoo,Plynná forma,,,,,plynna,I,,? => ?,
 voodoo,Masotrhající řev,,,,,masotrhajici,P,x, 🙂🙂,🙁🙁
-voodoo,Extatický tanev,,,,,extaticky,S,x, 🙂🙂,🙁🙁
+voodoo,Extatický tanec,,,,,extaticky,S,x, 🙂🙂,🙁🙁
 voodoo,Démonický pohled,,,,,demonicky,I,x, 🙂🙂,🙁🙁
 voodoo,Zmenšení,,,,,zmenseni,P,x, X😬,všechny [🙂] => [🙂🙂]
 voodoo,Démonická rychlost,,,,,demonicka,S,x, X😬,všechny [🙂] => [🙂🙂]
 voodoo,Neviditelnost,,,,,neviditelnost,I,x, X😬,všechny [🙂] => [🙂🙂]
+voodoo,Moment osvícení,,,,,moment,I,x,[😀] => ?,[😬] => ?
+voodoo,Betonový vývrh,,,,,betonovy,P,x,[😀] => ?,[😬] => ?
+voodoo,360° úhel pohledu,,,,,360,S,,{[🙂][🙂🙂]} =>[😀],
+voodoo,Zvětšení,,,,,zvetseni,P,,{[🙂][🙂🙂]} =>[😀],
+voodoo,Zkameňující dotyk,,,,,zkamenujici,P,,{[🙂][🙂🙂]} =>?,
+voodoo,Amok,,,,,amok,P,,{[🙂][🙂🙂][😐]} =>?,
+voodoo,Vize,,,,,vize,,,,
+voodoo,Intuice,,,,,intuice,,,,
+voodoo,Pomatení,,,,,pomateni,,,,
+voodoo,Nabídni oběť,,,,,nabidni,,,,
+voodoo,Nostalgické vzpomínky,,,,,nostalgicke,,,,
+voodoo,Ďábelská inspirace,,,,,dabelska,,,,
+voodoo,Falešná důvěra,,,,,falesna,,,,
+voodoo,Nalákání do pasti,,,,,nalakani,,,,
+voodoo,Náhodná teleportace,,,,,nahodna,,,,
+voodoo,Zaječí pacička,,,,,zajeci,,,,
+voodoo,Erupce na slunci,,,,,erupce,,,,
+voodoo,Nečekaný prd,,,,,necekany,,,,
+voodoo,Mozkový elektrošok,,,,,mozkovy,,,,
+voodoo,Našel jsi na zemi lízátko,,,,,nasel,,,,
+voodoo,Slevněný energy drink,,,,,slevneny,,,,
+voodoo,Čokodortík s malinami,,,,,cokodortik,,,,
+voodoo,Zhnití,,,,,zhniti,,,,
+voodoo,Nepopsatelně sprostý trik,,,,,nepopsatelne,,,,
+voodoo,Zmrtvýchvstání,,,,,zmrtvychvstani,,,,
+voodoo,Kontejner od charity,,,,,kontejner,,,,
+voodoo,Detoxikace,,,,,detoxikace,,,,
+voodoo,Naštval jsi fanoušky,,,,,nastval,,,,
+voodoo,Dvě mouchy jednou ranou,,,,,dve,,,,
+voodoo,Odvážnému štěstí přeje,,,,,odvaznemu,,,,
+voodoo,Diváci žádají opakování,,,,,divaci,,,,
+voodoo,Skandál,,,,,skandal,,,,
+voodoo,Trapas,,,,,trapas,,,,

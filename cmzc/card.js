@@ -75,8 +75,10 @@ getTextMarkup = (text) => text
   .replace(/🙁/g, '<img class="emo" src="http://localhost:8080/emo-sad.png" />')
   .replace(/#/g, '<img class="emo" src="http://localhost:8080/dice-cross.png" />')
   .replace(/=>/g, '<img class="emo arrow" src="http://localhost:8080/arrow.png" />')
-  .replace(/\?/g, '<img class="emo" src="http://localhost:8080/dice-any.png" />')
-  .replace(/2/g, '<div class="reroll reroll-green"><img src="http://localhost:8080/dice2.png"></div>');
+  .replace(/\?/g, '<img class="emo dice" src="http://localhost:8080/dice-any.png" />')
+  .replace(/2/g, '<div class="reroll reroll-green"><img src="http://localhost:8080/dice2.png"></div>')
+  .replace(/\{/g, '<div class="group-all">všechny<div class="group">')
+  .replace(/\}/g, '</div></div>');
 
 const getFieldMarkup = (title, value, card) => {
   let markup = ``;
@@ -135,7 +137,7 @@ const getFieldMarkup = (title, value, card) => {
           <div class="text-part">${getTextMarkup(card.text2)}</div>
         </div>`;
       } else {
-        markup = `<div class="text">${getTextMarkup(value)}</div>`;
+        markup = `<div class="text${card.text.includes("{") ? ' text-all' : ''}">${getTextMarkup(value)}</div>`;
       }
     break;
     case 'test':
