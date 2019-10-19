@@ -58,12 +58,12 @@ const getRerollsMarkup = (value) => {
 }
 
 getTextMarkup = (text) => text
-  .replace(/\[😀\]/g, '<img class="emo" src="http://localhost:8080/dice-epic.png" />')
-  .replace(/\[😬\]/g, '<img class="emo" src="http://localhost:8080/dice-tragic.png" />')
-  .replace(/\[🙂\]/g, '<img class="emo" src="http://localhost:8080/dice-happy.png" />')
-  .replace(/\[😐\]/g, '<img class="emo" src="http://localhost:8080/dice-neutral.png" />')
-  .replace(/\[🙁\]/g, '<img class="emo" src="http://localhost:8080/dice-sad.png" />')
-  .replace(/\[🙂🙂\]/g, '<img class="emo" src="http://localhost:8080/dice-double.png" />')
+  .replace(/\[😀\]/g, '<img class="emo dice" src="http://localhost:8080/dice-epic.png" />')
+  .replace(/\[😬\]/g, '<img class="emo dice" src="http://localhost:8080/dice-tragic.png" />')
+  .replace(/\[🙂\]/g, '<img class="emo dice" src="http://localhost:8080/dice-happy.png" />')
+  .replace(/\[😐\]/g, '<img class="emo dice" src="http://localhost:8080/dice-neutral.png" />')
+  .replace(/\[🙁\]/g, '<img class="emo dice" src="http://localhost:8080/dice-sad.png" />')
+  .replace(/\[🙂🙂\]/g, '<img class="emo dice" src="http://localhost:8080/dice-double.png" />')
   .replace(/X😀/g, '<img class="emo emo-epic" src="http://localhost:8080/cross.png" />')
   .replace(/X😬/g, '<img class="emo emo-tragic" src="http://localhost:8080/cross.png" />')
   .replace(/X🙂/g, '<img class="emo emo-happy" src="http://localhost:8080/cross.png" />')
@@ -76,7 +76,7 @@ getTextMarkup = (text) => text
   .replace(/#/g, '<img class="emo" src="http://localhost:8080/dice-cross.png" />')
   .replace(/=>/g, '<img class="emo arrow" src="http://localhost:8080/arrow.png" />')
   .replace(/\?/g, '<img class="emo dice" src="http://localhost:8080/dice-any.png" />')
-  .replace(/2/g, '<div class="reroll reroll-green"><img src="http://localhost:8080/dice2.png"></div>')
+  .replace(/\(2\)/g, '<div class="reroll reroll-green"><img src="http://localhost:8080/dice2.png"></div>')
   .replace(/\{/g, '<div class="group-all">všechny<div class="group">')
   .replace(/\}/g, '</div></div>');
 

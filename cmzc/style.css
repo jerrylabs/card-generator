@@ -300,12 +300,12 @@ html, body {
   bottom: 5mm;
   width: 38mm;
   background: none;
-  padding: 1mm 2mm;
+  padding: 1mm;
   height: 22mm;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 3.5mm;
+  font-size: 3.4mm;
 }
 
 .voodoo .texts {
@@ -325,9 +325,17 @@ html, body {
   background-size: contain;
 }
 
-.voodoo .text:not(.texts) .emo.dice {
+.voodoo .text .emo.dice {
   width: 9mm;
-  margin: 1mm;
+  margin: 0 1mm;
+}
+
+.voodoo .texts .emo.dice {
+  margin: 0 0.2mm;
+}
+
+.voodoo .text.text-all .emo.dice {
+  margin: 0 0.1mm;
 }
 
 .voodoo .text .emo.arrow {
