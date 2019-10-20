@@ -125,7 +125,7 @@ html, body {
 .voodoo .title {
   background: none;
   height: 11.5mm;
-  width: 40mm;
+  width: 42mm;
   padding: 2.25mm 3mm 0 12mm;
   box-sizing: border-box;
 }
@@ -240,6 +240,7 @@ html, body {
 .reroll-green::before { background-image: url(http://localhost:8080/reroll-green.png); }
 .reroll-red::before { background-image: url(http://localhost:8080/reroll-red.png); }
 
+/* // originally just for .bio-card vertical, now applied for all
 .bio.card-vertical .attributes,
 .bio.card-vertical .lives {
   position: static;
@@ -266,7 +267,46 @@ html, body {
 
 .card-vertical .rerolls .life {
   margin: 2mm 0;
+}  */
+
+/* version: originally just for .bio-card vertical, now applied for all */
+.attributes,
+.lives {
+  position: static;
+  flex: 0 1 0;
+  display: flex;
 }
+
+.lives-and-attributes {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  top: 10mm;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.life, .attribute {
+  margin: 1mm 0.5mm;
+}
+
+.card-vertical .rerolls .life {
+  margin: 2mm 0;
+}
+
+.tech.card-has-joints .rerolls {
+  bottom: 11mm;
+  width: 100%;
+  display: flex;
+  top: auto;
+  justify-content: center;
+  height: auto;
+  flex-direction: row;
+  right: auto;
+}
+/* end of version */
+
 
 .illustration {
   position: absolute;
@@ -296,6 +336,12 @@ html, body {
   font-weight: bold;
 }
 
+.bio .text {
+  height: 18mm;
+  display: flex;
+  align-items: center;
+}
+
 .voodoo .text {
   bottom: 5mm;
   width: 38mm;
@@ -306,6 +352,11 @@ html, body {
   align-items: center;
   justify-content: center;
   font-size: 3.4mm;
+  line-height: 1.2;
+}
+
+.voodoo .text-long {
+  font-size: 3mm;
 }
 
 .voodoo .texts {
