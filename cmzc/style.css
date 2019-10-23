@@ -187,14 +187,14 @@ html, body {
   top: 10mm;
 }
 
-.tech.card-has-joints .rerolls {
+.card-has-joints.two-handed .rerolls {
   bottom: 0;
   height: 100%;
   width: auto;
   display: flex;
   flex-direction: column;
   top: 0;
-  right: 10px;
+  left: 10px;
   justify-content: center;
 }
 
@@ -209,7 +209,7 @@ html, body {
 }
 
 .rerolls .life {
-  margin: 0.2mm 1mm;
+  margin: -0.5mm 1mm;
 }
 
 .test, .reroll {
@@ -281,10 +281,24 @@ html, body {
   position: absolute;
   z-index: 2;
   display: flex;
-  top: 10mm;
+  top: 11mm;
   width: 100%;
   align-items: center;
   justify-content: center;
+}
+
+.bio.card-has-joints .attr3 {
+  padding-left: 3mm;
+}
+
+.bio .attr4 {
+  flex-wrap: wrap;
+  max-width: 34mm;
+  left: 5mm;
+}
+
+.bio .attr4 .life {
+  margin: -0.5mm 0.5mm;
 }
 
 .life, .attribute {
@@ -295,7 +309,7 @@ html, body {
   margin: 2mm 0;
 }
 
-.tech.card-has-joints .rerolls {
+.card-has-joints .rerolls {
   bottom: 11mm;
   width: 100%;
   display: flex;

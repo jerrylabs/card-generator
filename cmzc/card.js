@@ -106,7 +106,7 @@ const getFieldMarkup = (title, value, card) => {
       }
     break;
     case 'attributes':
-      markup = `<div class="lives-and-attributes">
+      markup = `<div class="lives-and-attributes attr${card.attributes.length}">
         <div class="attributes">
           ${value.split('').filter(v => v != 'Z').map(getAttrMarkup).join('')}
         </div>
@@ -159,6 +159,7 @@ module.exports = (cardData) => {
       ${cardData.type || ''}
       ${(cardData.text) ? ' card-with-text' : ''}
       ${!cardData.requires && !cardData.provides ? 'card-no-joints' : 'card-has-joints'}
+      ${cardData.requires.length == 2 ? 'two-handed' : ''}
       ${(!cardData.requires && !cardData.provides) || cardData.text ? 'card-vertical' : ''}
       ${(cardData.text2) ? ' card-two-texts' : ''}
   }">
