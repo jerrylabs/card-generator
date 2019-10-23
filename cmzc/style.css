@@ -194,7 +194,7 @@ html, body {
   display: flex;
   flex-direction: column;
   top: 0;
-  left: 10px;
+  left: 2.5mm;
   justify-content: center;
 }
 
@@ -360,7 +360,7 @@ html, body {
   bottom: 5mm;
   width: 38mm;
   background: none;
-  padding: 1mm;
+  padding: 1mm 1.7mm;
   height: 22mm;
   display: flex;
   align-items: center;
@@ -371,6 +371,7 @@ html, body {
 
 .voodoo .text-long {
   font-size: 3mm;
+  line-height: 1.1;
 }
 
 .voodoo .texts {
