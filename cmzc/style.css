@@ -22,18 +22,24 @@ html, body {
   display: inline-block;
   overflow: hidden;
   width: 44.0mm;
-  height: 67.0mm;
+  height: 64.0mm;
   box-sizing: border-box;
   page-break-inside: avoid;
   position: relative;
 }
 
+.card.quest {
+  width: 64.0mm;
+  height: 88.0mm;
+}
+
 /* bg overlay */
-.card:before {
+.tech.card::before,
+.bio.card::before {
   content: ' ';
   position: absolute;
   z-index: 1;
-  background:  rgba(255, 255, 255, 0.5);
+  background:  rgba(255, 255, 255, 0.7);
   height: 100%;
   width: 100%;
   top: 0;
@@ -41,7 +47,7 @@ html, body {
   box-sizing: border-box;
 }
 
-.card.voodoo:before {
+.card.voodoo::before {
   display: none;
 }
 
@@ -77,6 +83,11 @@ html, body {
 
 .card.voodoo {
   background: transparent url(http://localhost:8080/background-voodoo.png) center center;
+  background-size: 100% 100%;
+}
+
+.card.quest {
+  background: transparent url(http://localhost:8080/background-quest.png) center center;
   background-size: 100% 100%;
 }
 
@@ -442,10 +453,70 @@ html, body {
 
 .voodoo .test {
   position: absolute;
-  top: 58%;
-  left: 17%;
+  top: 37.1mm;
+  left: 8mm;
   transform: translate(-50%, -50%) !important;
   z-index: 3;
   width: 16mm;
   height: 16mm;
+}
+
+/********************
+ ***    QUESTS    ***
+ ********************/
+
+.quest .title {
+    top: 4mm;
+    left: 50%;
+    font-size: 3.5mm;
+    background: transparent url(http://localhost:8080/background-quest-title.png) center -2px no-repeat;
+    height: 11.5mm;
+    width: 34mm;
+    padding: 2.4mm 10mm;
+    line-height: 12mm;
+}
+
+.quest .title span {
+    line-height: 5.5mm;
+}
+
+.quest .title-long span {
+    line-height: 4.5mm;
+}
+
+.quest .title-superlong span {
+    line-height: 3.2mm;
+}
+
+.quest .card-icons {
+  z-index: 3;
+}
+
+.quest .card-icons::before,
+.quest .card-icons::after {
+  display: block;
+  position: absolute;
+  content: ' ';
+  background: transparent url(http://localhost:8080/quest-star.png) center center no-repeat;
+  background-size: contain;
+  height: 14mm;
+  width: 14mm;
+  top: 5mm;
+}
+
+.quest .card-icons::before { left: 0mm; }
+.quest .card-icons::after  { right: 0mm; }
+
+.quest .illustration {
+  width: 60mm;
+  top: 41mm;
+}
+
+.quest .text {
+    left: 4mm;
+    bottom: 4mm;
+    width: 56mm;
+    background: transparent url(http://localhost:8080/background-quest-text.png) center center no-repeat;
+    background-size: 100% 100%;
+    height: 22mm;
 }

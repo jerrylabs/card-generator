@@ -1,14 +1,14 @@
-const parse = require('csv-parse/lib/sync')
-const puppeteer = require('puppeteer')
-const fs = require('fs')
-const generateCmzcCard = require('./cmzc/card.js')
+const parse = require('csv-parse/lib/sync');
+const puppeteer = require('puppeteer');
+const fs = require('fs');
+const generateCmzcCard = require('./cmzc/card');
 
-csvToObject = (data) => parse(data, {
+const csvToObject = (data) => parse(data, {
   columns: true,
   skip_empty_lines: true
 });
 
-generateCardMarkup = cardData => {
+const generateCardMarkup = cardData => {
   if (process.argv[2] == 'cmzc') {
     return generateCmzcCard(cardData);
   } else return `<div class="card"}"> ${
@@ -20,7 +20,7 @@ generateCardMarkup = cardData => {
   }</div>`
 }
 
-generateHtml = (cardsData, css) =>
+const generateHtml = (cardsData, css) =>
   `<!DOCTYPE html>
   <html>
     <head>

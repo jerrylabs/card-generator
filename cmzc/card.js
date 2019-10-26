@@ -86,10 +86,14 @@ const getFieldMarkup = (title, value, card) => {
 
     /* nazev karty */
     case 'title':
-      markup = `<div class="${title}${value.length > 32 ? ' title-long' : ''}">
+      markup = `<div class="
+        ${title}
+        ${value.length > 32 || (card.type == 'quest' && value.length >= 20) ? ' title-long' : ''}
+        ${value == 'Lektvar podezřele světélkující kapaliny' ? 'title-superlong' : ''}
+      ">
         <span>${value}</span>
       </div>`;
-      if ((card.requires || card.provides) && !card.text) {
+      if ((card.requires || card.provides) && !card.text && card.type != 'quest') {
         markup += `<div class="title title-reversed"><span>${value}</span></div>`;
       }
     break;
@@ -97,13 +101,17 @@ const getFieldMarkup = (title, value, card) => {
     /* vyzadovane a poskytovane kosti, ruce a nohy */
     case 'requires':
     case 'provides':
-      const relation = title.replace('s', 'd');
-      if (value.length == 1) {
-        markup = getJointMarkup('single', relation, shortcut(value));
-      } else if (value.length == 2) {
-        markup = `${getJointMarkup('first', relation, shortcut(value[0]))}
-          ${getJointMarkup('second', relation, shortcut(value[1]))}`;
-      }
+      if (card.type == 'quest') {
+        markup = getQuestMarkup(card.requires, card.provides);
+      } else {
+        const relation = title.replace('s', 'd');
+        if (value.length == 1) {
+          markup = getJointMarkup('single', relation, shortcut(value));
+        } else if (value.length == 2) {
+          markup = `${getJointMarkup('first', relation, shortcut(value[0]))}
+            ${getJointMarkup('second', relation, shortcut(value[1]))}`;
+        }
+    }
     break;
     case 'attributes':
       markup = `<div class="lives-and-attributes attr${card.attributes.length}">
@@ -121,7 +129,9 @@ const getFieldMarkup = (title, value, card) => {
       </div>`;
     break;
     case 'image':
-      markup = `<img src="http://localhost:8080/imgs/${value}.png" class="illustration" />`;
+        markup = `<img
+          src="http://localhost:8080/imgs/${card.type == 'quest' ? 'quests/':''}${value}.png"
+          class="illustration" />`;
     break;
     case 'rerolls':
       markup = `<div class="rerolls">${getRerollsMarkup(value)}</div>`;
@@ -151,6 +161,15 @@ const getFieldMarkup = (title, value, card) => {
       markup = `<div class="${title}">${value}</div>`;
   }
   return markup;
+}
+
+const getQuestMarkup = (attribute, rewards) => {
+  return `<div class="text">
+    <div class="test">
+      Otestuj
+      ${getTestMarkup(attribute)}
+    </div>
+  </div>`;
 }
 
 module.exports = (cardData) => {
