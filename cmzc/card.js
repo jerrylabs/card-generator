@@ -12,11 +12,11 @@ shortcut = (c) => {
 }
 
 const getJointMarkup = (order, rel, type) =>
-  `<img class="joint ${rel} ${order} ${type}" src="http://localhost:8080/${rel}-${type}.png" />`;
+  `<img class="joint ${rel} ${order} ${type}" src="http://localhost:8080/imgs/${rel}-${type}.png" />`;
 
-const getLiveMarkup = (c, i) => `<img class="life" src="http://localhost:8080/${shortcut(c)}.png" />`;
+const getLiveMarkup = (c, i) => `<img class="life" src="http://localhost:8080/imgs/${shortcut(c)}.png" />`;
 
-const getAttrMarkup = (c, i) => `<img class="attribute attribute-${shortcut(c)}" src="http://localhost:8080/attr-${shortcut(c)}.png" />`;
+const getAttrMarkup = (c, i) => `<img class="attribute attribute-${shortcut(c)}" src="http://localhost:8080/imgs/attr-${shortcut(c)}.png" />`;
 
 const getTestMarkup = (value) => {
   let markup = '';
@@ -27,7 +27,7 @@ const getTestMarkup = (value) => {
     else if (value.includes('P'))  { testImgNamePart = 'power'; }
     else if (value.includes('S'))  { testImgNamePart = 'speed'; }
     else if (value.includes('I'))  { testImgNamePart = 'iq'; }
-    markup = `<img class="test" src="http://localhost:8080/test-${testImgNamePart}.png" />`;
+    markup = `<img class="test" src="http://localhost:8080/imgs/test-${testImgNamePart}.png" />`;
   }
   return markup;
 }
@@ -41,7 +41,7 @@ const getRerollsMarkup = (value) => {
   if (diceAmount) {
     markup = `${markup}
       <div class="reroll reroll${value.includes('X') ? '-red' : '-green'}">
-        <img src="http://localhost:8080/dice${diceAmount}.png" />
+        <img src="http://localhost:8080/imgs/dice${diceAmount}.png" />
       </div>`;
   }
   if (value.includes('Z')) {
@@ -51,33 +51,33 @@ const getRerollsMarkup = (value) => {
   }
   if (value.includes('D')) {
     markup = `${markup}
-      <img class="test" src="http://localhost:8080/dice-cross.png" />
+      <img class="test" src="http://localhost:8080/imgs/dice-cross.png" />
     `;
   }
   return markup;
 }
 
 getTextMarkup = (text) => text
-  .replace(/\[😀\]/g, '<img class="emo dice" src="http://localhost:8080/dice-epic.png" />')
-  .replace(/\[😬\]/g, '<img class="emo dice" src="http://localhost:8080/dice-tragic.png" />')
-  .replace(/\[🙂\]/g, '<img class="emo dice" src="http://localhost:8080/dice-happy.png" />')
-  .replace(/\[😐\]/g, '<img class="emo dice" src="http://localhost:8080/dice-neutral.png" />')
-  .replace(/\[🙁\]/g, '<img class="emo dice" src="http://localhost:8080/dice-sad.png" />')
-  .replace(/\[🙂🙂\]/g, '<img class="emo dice" src="http://localhost:8080/dice-double.png" />')
-  .replace(/X😀/g, '<img class="emo emo-epic" src="http://localhost:8080/cross.png" />')
-  .replace(/X😬/g, '<img class="emo emo-tragic" src="http://localhost:8080/cross.png" />')
-  .replace(/X🙂/g, '<img class="emo emo-happy" src="http://localhost:8080/cross.png" />')
-  .replace(/X🙁/g, '<img class="emo emo-sad" src="http://localhost:8080/cross.png" />')
-  .replace(/😀/g, '<img class="emo" src="http://localhost:8080/emo-epic.png" />')
-  .replace(/😬/g, '<img class="emo" src="http://localhost:8080/emo-tragic.png" />')
-  .replace(/🙂/g, '<img class="emo" src="http://localhost:8080/emo-happy.png" />')
-  .replace(/😐/g, '<img class="emo" src="http://localhost:8080/emo-neutral.png" />')
-  .replace(/🙁/g, '<img class="emo" src="http://localhost:8080/emo-sad.png" />')
-  .replace(/#/g, '<img class="emo" src="http://localhost:8080/dice-cross.png" />')
-  .replace(/=>/g, '<img class="emo arrow" src="http://localhost:8080/arrow.png" />')
-  .replace(/\?/g, '<img class="emo dice" src="http://localhost:8080/dice-any.png" />')
-  .replace(/\(2\)/g, '<div class="reroll reroll-green"><img src="http://localhost:8080/dice2.png"></div>')
-  .replace(/\{/g, '<div class="group-all">všechny<div class="group">')
+  .replace(/\[😀\]/g, '<img class="emo dice" src="http://localhost:8080/imgs/dice-epic.png" />')
+  .replace(/\[😬\]/g, '<img class="emo dice" src="http://localhost:8080/imgs/dice-tragic.png" />')
+  .replace(/\[🙂\]/g, '<img class="emo dice" src="http://localhost:8080/imgs/dice-happy.png" />')
+  .replace(/\[😐\]/g, '<img class="emo dice" src="http://localhost:8080/imgs/dice-neutral.png" />')
+  .replace(/\[🙁\]/g, '<img class="emo dice" src="http://localhost:8080/imgs/dice-sad.png" />')
+  .replace(/\[🙂🙂\]/g, '<img class="emo dice" src="http://localhost:8080/imgs/dice-double.png" />')
+  .replace(/X😀/g, '<img class="emo emo-epic" src="http://localhost:8080/imgs/cross.png" />')
+  .replace(/X😬/g, '<img class="emo emo-tragic" src="http://localhost:8080/imgs/cross.png" />')
+  .replace(/X🙂/g, '<img class="emo emo-happy" src="http://localhost:8080/imgs/cross.png" />')
+  .replace(/X🙁/g, '<img class="emo emo-sad" src="http://localhost:8080/imgs/cross.png" />')
+  .replace(/😀/g, '<img class="emo" src="http://localhost:8080/imgs/emo-epic.png" />')
+  .replace(/😬/g, '<img class="emo" src="http://localhost:8080/imgs/emo-tragic.png" />')
+  .replace(/🙂/g, '<img class="emo" src="http://localhost:8080/imgs/emo-happy.png" />')
+  .replace(/😐/g, '<img class="emo" src="http://localhost:8080/imgs/emo-neutral.png" />')
+  .replace(/🙁/g, '<img class="emo" src="http://localhost:8080/imgs/emo-sad.png" />')
+  .replace(/#/g, '<img class="emo" src="http://localhost:8080/imgs/dice-cross.png" />')
+  .replace(/=>/g, '<img class="emo arrow" src="http://localhost:8080/imgs/arrow.png" />')
+  .replace(/\?/g, '<img class="emo dice" src="http://localhost:8080/imgs/dice-any.png" />')
+  .replace(/\(2\)/g, '<div class="reroll reroll-green"><img src="http://localhost:8080/imgs/dice2.png"></div>')
+  .replace(/\{/g, '<div class="group-all"><span class="white-shadow">všechny</span><div class="group">')
   .replace(/\}/g, '</div></div>');
 
 const getFieldMarkup = (title, value, card) => {
@@ -89,7 +89,6 @@ const getFieldMarkup = (title, value, card) => {
       markup = `<div class="
         ${title}
         ${value.length > 32 || (card.type == 'quest' && value.length >= 20) ? ' title-long' : ''}
-        ${value == 'Lektvar podezřele světélkující kapaliny' ? 'title-superlong' : ''}
       ">
         <span>${value}</span>
       </div>`;
@@ -98,7 +97,7 @@ const getFieldMarkup = (title, value, card) => {
       }
     break;
 
-    /* vyzadovane a poskytovane kosti, ruce a nohy */
+    /* vyzadovane a poskytovane kosti, ruce a nohy, u ukolu vlastnost, stupen a odmeny */
     case 'requires':
     case 'provides':
       if (card.type == 'quest') {
@@ -130,7 +129,7 @@ const getFieldMarkup = (title, value, card) => {
     break;
     case 'image':
         markup = `<img
-          src="http://localhost:8080/imgs/${card.type == 'quest' ? 'quests/':''}${value}.png"
+          src="http://localhost:8080/imgs/ilus/${card.type == 'quest' ? 'quests/':''}${value}.png"
           class="illustration" />`;
     break;
     case 'rerolls':
@@ -143,7 +142,7 @@ const getFieldMarkup = (title, value, card) => {
       if (card.text2) {
         markup = `<div class="text texts">
           <div class="text-part">${getTextMarkup(value)}</div>
-          ${ card.disjunction ? 'nebo' : '' }
+          ${ card.disjunction ? '<span class="white-shadow">nebo</span>' : '' }
           <div class="text-part">${getTextMarkup(card.text2)}</div>
         </div>`;
       } else {
@@ -164,11 +163,22 @@ const getFieldMarkup = (title, value, card) => {
 }
 
 const getQuestMarkup = (attribute, rewards) => {
+  const questLevel = parseInt(rewards);
+  const match = rewards.match(/c/g);
+  const rewardCards = match ? match.length : 0;
+  const rewardReputation = questLevel - rewardCards;
   return `<div class="text">
     <div class="test">
       Otestuj
       ${getTestMarkup(attribute)}
     </div>
+    <div class="quest__success">úspěch</div>
+    <div class="quest__fail">neúspěch</div>
+    <div class="quest__reward">
+      ${rewardReputation > 0 ? `<div class="quest__reputation">${rewardReputation}</div>` : ''}
+      ${rewardCards > 0 ? `<div class="quest__cards">+${rewardCards}</div>` : ''}
+    </div>
+    <div class="quest__penalty">-${questLevel}</div>
   </div>`;
 }
 
