@@ -128,9 +128,13 @@ const getFieldMarkup = (title, value, card) => {
       </div>`;
     break;
     case 'image':
-        markup = `<img
-          src="http://localhost:8080/imgs/ilus/${card.type == 'quest' ? 'quests/':''}${value}.png"
-          class="illustration" />`;
+      let prefix = '';
+      if (card.type == 'quest' || card.type == 'animatron') {
+        prefix = `${card.type}s/`;
+      }
+      markup = `<img
+        src="http://localhost:8080/imgs/ilus/${prefix}${value}.png"
+        class="illustration" />`;
     break;
     case 'rerolls':
       markup = `<div class="rerolls">${getRerollsMarkup(value)}</div>`;
@@ -182,6 +186,19 @@ const getQuestMarkup = (attribute, rewards) => {
   </div>`;
 }
 
+// except image which renders as ordinary field
+const getAnimatronMarkup = (card) => `
+  <img class="joint provided bone bone1" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone2" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone3" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone4" src="http://localhost:8080/imgs/provided-bone.png">
+  <div class="animatron__cards">4</div>
+  ${card.image == 'zombie'
+    ? '<div class="animatron__reputation">-2</div>'
+    : '<img class="attribute attribute-iq" src="http://localhost:8080/imgs/attr-iq.png" />'
+  }
+`
+
 module.exports = (cardData) => {
   return `<div
     class="card
@@ -191,9 +208,13 @@ module.exports = (cardData) => {
       ${cardData.requires.length == 2 ? 'two-handed' : ''}
       ${(!cardData.requires && !cardData.provides) || cardData.text ? 'card-vertical' : ''}
       ${(cardData.text2) ? ' card-two-texts' : ''}
-  }">
-    <div class="card-frame"></div>
-    <div class="card-icons"></div>
+  ">
+    ${cardData.type == 'animatron'
+      ? getAnimatronMarkup(cardData)
+      : (`
+      <div class="card-frame"></div>
+      <div class="card-icons"></div>
+    `)}
     ${
       Object.keys(cardData).map(cardProperty =>
         cardData[cardProperty]
