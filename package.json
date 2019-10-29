@@ -1,7 +1,7 @@
 {
   "lockfileVersion": 1,
   "dependencies": {
-    "csv-parse": "^4.4.5",
+    "csv-parse": "^4.4.6",
     "fs": "0.0.1-security",
     "puppeteer": "^1.19.0"
   }
