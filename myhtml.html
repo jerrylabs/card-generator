@@ -2,12 +2,7 @@
   <html>
     <head>
       <style type="text/css">
-        @page {
-    size: A4 landscape;
-    margin: 4.5mm;
-}
-
-body {
+        body {
   -webkit-print-color-adjust: exact;
 }
 
@@ -35,8 +30,15 @@ html, body {
 .card.quest {
   width: 64.0mm;
   height: 88.0mm;
-  /* transform: rotate(-90deg);
-    margin: -12mm 12mm; */
+  transform: rotate(-90deg);
+  margin: -12mm 12mm;
+}
+
+.card.animatron {
+  width: 88mm;
+  height: 118mm;
+  transform: rotate(-90deg);
+  margin: -11mm 19mm; /* +4mm on all sides */
 }
 
 /* bg overlay */
@@ -613,6 +615,89 @@ html, body {
   padding: 2.3mm 1mm 0mm 0;
   font-size: 7mm;
   text-shadow: 0 0 3px white, 0 0 3px white, 0 0 3px white, 0 0 3px white, 0 0 3px white;
+}
+
+/************************************************************
+ ***************** * * *  ANIMATRONS  * * * *****************
+ ************************************************************/
+
+.animatron .title {
+  top: -2px;
+  font-size: 6mm;
+  width: auto;
+  padding: 3mm 10mm;
+  background-size: 100% 100%;
+  white-space: nowrap;
+}
+
+.animatron .illustration {
+  height: 100%;
+  width: auto;
+  top: 0;
+  transform: translateX(-50%);
+  left: 50%;
+}
+
+.animatron .bone1,
+.animatron .bone2 {
+  right: auto;
+  left: 0;
+  transform: rotate(180deg);
+  top: 39mm
+}
+
+.animatron .bone2 {
+  top: auto;
+  bottom: 10mm;
+}
+
+.animatron .bone3 {
+  top: 10mm
+}
+
+.animatron .bone4 {
+  bottom: 39mm;
+}
+
+.animatron__cards {
+  height: 22mm;
+  width: 25mm;
+  background: transparent url(http://localhost:8080/imgs/quest-cards.png) center center no-repeat;
+  background-size: contain;
+  box-sizing: border-box;
+  padding: 3.5mm 5mm 0 0;
+  font-size: 12mm;
+  text-shadow: 0 0 3px white, 0 0 3px white, 0 0 3px white, 0 0 3px white, 0 0 3px white;
+  position: absolute;
+  top: 80mm;
+  left: 44mm;
+  z-index: 4;
+  font-family: 'Impact Condensed';
+}
+
+.animatron .attribute {
+  position: absolute;
+  top: 80mm;
+  left: 20mm;
+  z-index: 4;
+  width: 20mm;
+}
+
+.animatron__reputation {
+  height: 22mm;
+  width: 19mm;
+  background: transparent url(http://localhost:8080/imgs/quest-medal.png) center center no-repeat;
+  background-size: contain;
+  box-sizing: border-box;
+  font-size: 10.5mm;
+  text-shadow: 0.5mm 0.5mm 2px black, -0.5mm 0.5mm 2px black, 0.5mm -0.5mm 2px black, -0.5mm -0.5mm 2px black;
+  padding: 1mm 1.5mm 0 0;
+  position: absolute;
+  top: 82mm;
+  left: 22mm;
+  z-index: 4;
+  font-family: 'Impact Condensed';
+  color: red;
 }
       </style>
     </head>
@@ -6615,7 +6700,12 @@ html, body {
   <div class="animatron__cards">4</div>
   <img class="attribute attribute-iq" src="http://localhost:8080/imgs/attr-iq.png" />
 
-    <div class="type">animatron</div><img
+    <div class="type">animatron</div><div class="
+        title
+        
+      ">
+        <span>Chuckie</span>
+      </div><img
         src="http://localhost:8080/imgs/ilus/animatrons/chuckie.png"
         class="illustration" />
   </div><div
@@ -6635,7 +6725,12 @@ html, body {
   <div class="animatron__cards">4</div>
   <img class="attribute attribute-iq" src="http://localhost:8080/imgs/attr-iq.png" />
 
-    <div class="type">animatron</div><img
+    <div class="type">animatron</div><div class="
+        title
+        
+      ">
+        <span>Hentai Barbie</span>
+      </div><img
         src="http://localhost:8080/imgs/ilus/animatrons/hentaibarbie.png"
         class="illustration" />
   </div><div
@@ -6655,7 +6750,12 @@ html, body {
   <div class="animatron__cards">4</div>
   <img class="attribute attribute-iq" src="http://localhost:8080/imgs/attr-iq.png" />
 
-    <div class="type">animatron</div><img
+    <div class="type">animatron</div><div class="
+        title
+        
+      ">
+        <span>Číslo 5</span>
+      </div><img
         src="http://localhost:8080/imgs/ilus/animatrons/cislo5.png"
         class="illustration" />
   </div><div
@@ -6675,7 +6775,12 @@ html, body {
   <div class="animatron__cards">4</div>
   <img class="attribute attribute-iq" src="http://localhost:8080/imgs/attr-iq.png" />
 
-    <div class="type">animatron</div><img
+    <div class="type">animatron</div><div class="
+        title
+        
+      ">
+        <span>Humunculus</span>
+      </div><img
         src="http://localhost:8080/imgs/ilus/animatrons/humunculus.png"
         class="illustration" />
   </div><div
@@ -6695,7 +6800,12 @@ html, body {
   <div class="animatron__cards">4</div>
   <img class="attribute attribute-iq" src="http://localhost:8080/imgs/attr-iq.png" />
 
-    <div class="type">animatron</div><img
+    <div class="type">animatron</div><div class="
+        title
+        
+      ">
+        <span>Gaybot</span>
+      </div><img
         src="http://localhost:8080/imgs/ilus/animatrons/gaybot.png"
         class="illustration" />
   </div><div
@@ -6715,7 +6825,12 @@ html, body {
   <div class="animatron__cards">4</div>
   <img class="attribute attribute-iq" src="http://localhost:8080/imgs/attr-iq.png" />
 
-    <div class="type">animatron</div><img
+    <div class="type">animatron</div><div class="
+        title
+        
+      ">
+        <span>Replikant</span>
+      </div><img
         src="http://localhost:8080/imgs/ilus/animatrons/replikant.png"
         class="illustration" />
   </div><div
@@ -6733,9 +6848,64 @@ html, body {
   <img class="joint provided bone bone3" src="http://localhost:8080/imgs/provided-bone.png">
   <img class="joint provided bone bone4" src="http://localhost:8080/imgs/provided-bone.png">
   <div class="animatron__cards">4</div>
+  <img class="attribute attribute-iq" src="http://localhost:8080/imgs/attr-iq.png" />
+
+    <div class="type">animatron</div><div class="
+        title
+        
+      ">
+        <span>Organoid</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/animatrons/organoid.png"
+        class="illustration" />
+  </div><div
+    class="card
+      animatron
+      
+      card-no-joints
+      
+      card-vertical
+      
+  ">
+    
+  <img class="joint provided bone bone1" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone2" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone3" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone4" src="http://localhost:8080/imgs/provided-bone.png">
+  <div class="animatron__cards">4</div>
+  <img class="attribute attribute-iq" src="http://localhost:8080/imgs/attr-iq.png" />
+
+    <div class="type">animatron</div><div class="
+        title
+        
+      ">
+        <span>Ilegální klon</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/animatrons/klon.png"
+        class="illustration" />
+  </div><div
+    class="card
+      animatron
+      
+      card-no-joints
+      
+      card-vertical
+      
+  ">
+    
+  <img class="joint provided bone bone1" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone2" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone3" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone4" src="http://localhost:8080/imgs/provided-bone.png">
+  <div class="animatron__cards">4</div>
   <div class="animatron__reputation">-2</div>
 
-    <div class="type">animatron</div><img
+    <div class="type">animatron</div><div class="
+        title
+        
+      ">
+        <span>Zombie</span>
+      </div><img
         src="http://localhost:8080/imgs/ilus/animatrons/zombie.png"
         class="illustration" />
   </div><div
@@ -6755,7 +6925,12 @@ html, body {
   <div class="animatron__cards">4</div>
   <div class="animatron__reputation">-2</div>
 
-    <div class="type">animatron</div><img
+    <div class="type">animatron</div><div class="
+        title
+        
+      ">
+        <span>Zombie</span>
+      </div><img
         src="http://localhost:8080/imgs/ilus/animatrons/zombie.png"
         class="illustration" />
   </div><div
@@ -6775,7 +6950,12 @@ html, body {
   <div class="animatron__cards">4</div>
   <div class="animatron__reputation">-2</div>
 
-    <div class="type">animatron</div><img
+    <div class="type">animatron</div><div class="
+        title
+        
+      ">
+        <span>Zombie</span>
+      </div><img
         src="http://localhost:8080/imgs/ilus/animatrons/zombie.png"
         class="illustration" />
   </div><div
@@ -6795,7 +6975,12 @@ html, body {
   <div class="animatron__cards">4</div>
   <div class="animatron__reputation">-2</div>
 
-    <div class="type">animatron</div><img
+    <div class="type">animatron</div><div class="
+        title
+        
+      ">
+        <span>Zombie</span>
+      </div><img
         src="http://localhost:8080/imgs/ilus/animatrons/zombie.png"
         class="illustration" />
   </div><div
@@ -6815,7 +7000,12 @@ html, body {
   <div class="animatron__cards">4</div>
   <div class="animatron__reputation">-2</div>
 
-    <div class="type">animatron</div><img
+    <div class="type">animatron</div><div class="
+        title
+        
+      ">
+        <span>Zombie</span>
+      </div><img
         src="http://localhost:8080/imgs/ilus/animatrons/zombie.png"
         class="illustration" />
   </div><div
@@ -6835,7 +7025,62 @@ html, body {
   <div class="animatron__cards">4</div>
   <div class="animatron__reputation">-2</div>
 
-    <div class="type">animatron</div><img
+    <div class="type">animatron</div><div class="
+        title
+        
+      ">
+        <span>Zombie</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/animatrons/zombie.png"
+        class="illustration" />
+  </div><div
+    class="card
+      animatron
+      
+      card-no-joints
+      
+      card-vertical
+      
+  ">
+    
+  <img class="joint provided bone bone1" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone2" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone3" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone4" src="http://localhost:8080/imgs/provided-bone.png">
+  <div class="animatron__cards">4</div>
+  <div class="animatron__reputation">-2</div>
+
+    <div class="type">animatron</div><div class="
+        title
+        
+      ">
+        <span>Zombie</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/animatrons/zombie.png"
+        class="illustration" />
+  </div><div
+    class="card
+      animatron
+      
+      card-no-joints
+      
+      card-vertical
+      
+  ">
+    
+  <img class="joint provided bone bone1" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone2" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone3" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone4" src="http://localhost:8080/imgs/provided-bone.png">
+  <div class="animatron__cards">4</div>
+  <div class="animatron__reputation">-2</div>
+
+    <div class="type">animatron</div><div class="
+        title
+        
+      ">
+        <span>Zombie</span>
+      </div><img
         src="http://localhost:8080/imgs/ilus/animatrons/zombie.png"
         class="illustration" />
   </div></div>

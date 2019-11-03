@@ -68,7 +68,13 @@ fs.writeFile("myhtml.html", htmlData, function(err) {
       path: 'mypdf.pdf',
       format: 'A4',
       printBackground: true,
-      landscape: true
+      landscape: true,
+      margin: {
+          top: "9mm",
+          right: "16.5mm",
+          bottom: "9mm",
+          left: "16.5mm"
+      }
     });
 
     console.log('PDF generated 👍');
