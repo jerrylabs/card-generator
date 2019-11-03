@@ -20,8 +20,38 @@ const generateCardMarkup = cardData => {
   }</div>`
 }
 
-const generateHtml = (cardsData, css) =>
-  `<!DOCTYPE html>
+const addBackSides = (cardsMarkups) => {
+  let cardsMarkupsWithBacks = [];
+  let count = 0;
+  cardsMarkups.map((item, i) => {
+    cardsMarkupsWithBacks.push(item);
+    count++;
+    if ((item.includes('basic') || item.includes('bio') || item.includes('tech') || item.includes('voodoo')) && count == 18) {
+      for (i = 0; i < 18; i++) {
+        cardsMarkupsWithBacks.push(`<div class="card back-side${
+          item.includes('Ruka') ? ' ruka' : ''
+        }${
+          item.includes('Noha') ? ' noha' : ''
+        }"></div>`);
+      }
+      count = 0;
+    } else if (item.includes('quest') && count == 9) {
+      for (i = 0; i < 9; i++) {
+        cardsMarkupsWithBacks.push('<div class="card quest back-side"></div>');
+      }
+      count = 0;
+    }
+    return item;
+  });
+  return cardsMarkupsWithBacks;
+}
+
+const generateHtml = (cardsData, includeBackSides, css) => {
+  let cardsMarkups = cardsData.map(generateCardMarkup);
+  if (includeBackSides) {
+    cardsMarkups = addBackSides(cardsMarkups);
+  }
+  return `<!DOCTYPE html>
   <html>
     <head>
       <style type="text/css">
@@ -29,11 +59,12 @@ const generateHtml = (cardsData, css) =>
       </style>
     </head>
     <body>
-      <div class="cards"> ${
-        cardsData.map(generateCardMarkup).join('')
-      }</div>
+      <div class="cards">
+        ${cardsMarkups.join('')}
+      </div>
     </body>
   </html>`;
+}
 
 
 (async function() {
@@ -44,10 +75,14 @@ const generateHtml = (cardsData, css) =>
       csvFile = `${process.argv[2]}/${csvFile}`;
       cssFile = `${process.argv[2]}/${cssFile}`;
     }
+    let includeBackSides = false;
+    if (process.argv[3] && process.argv[3] == 'ruby') {
+      includeBackSides = true;
+    }
     const csvData = fs.readFileSync(csvFile, 'utf8');
     const cssData = fs.readFileSync(cssFile, 'utf8');
     const cardsData = csvToObject(csvData);
-    const htmlData = generateHtml(cardsData, cssData);
+    const htmlData = generateHtml(cardsData, includeBackSides, cssData);
 // console.log(htmlData); // kontrolni vypis HTML
 fs.writeFile("myhtml.html", htmlData, function(err) {
     if(err) {

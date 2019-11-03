@@ -695,3 +695,38 @@ html, body {
   font-family: 'Impact Condensed';
   color: red;
 }
+
+/* Fix last empty page */
+.cards {
+  margin-bottom: -10mm;
+}
+
+.cards {
+  overflow: hidden;
+}
+
+
+/************************************************************
+ ***************** * * *  BACK SIDES  * * * *****************
+ ************************************************************/
+
+.card.back-side {
+  background: white url(http://localhost:8080/imgs/cmzc-logo.png) center center no-repeat;
+  background-size: 3.5cm
+}
+
+.card.back-side:not(.quest) {
+  transform: rotate(180deg);
+}
+
+.card.quest.card.back-side {
+  background-size: 4.5cm;
+}
+
+.card.back-side.ruka {
+  background-image: url(http://localhost:8080/imgs/background-ruka.png);
+}
+
+.card.back-side.noha {
+  background-image: url(http://localhost:8080/imgs/background-noha.png);
+}
