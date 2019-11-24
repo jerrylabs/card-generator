@@ -26,15 +26,15 @@ html, body {
 .card.quest {
   width: 64.0mm;
   height: 88.0mm;
-  transform: rotate(-90deg);
-  margin: -12mm 12mm;
+  /* transform: rotate(-90deg);
+  margin: -12mm 12mm; */
 }
 
 .card.animatron {
   width: 88mm;
   height: 118mm;
-  transform: rotate(-90deg);
-  margin: -11mm 19mm; /* +4mm on all sides */
+  /* transform: rotate(-90deg);
+  margin: -11mm 19mm; // +4mm on all sides */
 }
 
 /* bg overlay */
@@ -171,8 +171,8 @@ html, body {
 .joint.single.bone { top: 1cm; }
 .joint.single.hand,
 .joint.single.leg { bottom: 1cm; }
-.joint.first { top: 0; }
-.joint.second { bottom: 0; }
+.joint.first { top: -2.5mm; }
+.joint.second { bottom: -2.5mm; }
 
 .attributes, .lives, .rerolls {
   position: absolute;

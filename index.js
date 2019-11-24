@@ -66,6 +66,18 @@ const generateHtml = (cardsData, includeBackSides, css) => {
   </html>`;
 }
 
+const savePdf = async (htmlData, settings ) => {
+    const browser = await puppeteer.launch();
+    const page = await browser.newPage();
+    await page.setContent(htmlData);
+    // await page.evaluateHandle('document.fonts.ready');
+    // await page.emulateMedia('screen');
+    await page.emulateMedia('screen');
+    await page.content();
+    await page.pdf(settings);
+    await browser.close();
+    console.log('PDF generated 👍');
+}
 
 (async function() {
   try {
@@ -76,44 +88,70 @@ const generateHtml = (cardsData, includeBackSides, css) => {
       cssFile = `${process.argv[2]}/${cssFile}`;
     }
     let includeBackSides = false;
-    if (process.argv[3] && process.argv[3] == 'ruby') {
+    if (process.argv.includes('ruby')) {
       includeBackSides = true;
     }
     const csvData = fs.readFileSync(csvFile, 'utf8');
     const cssData = fs.readFileSync(cssFile, 'utf8');
     const cardsData = csvToObject(csvData);
     const htmlData = generateHtml(cardsData, includeBackSides, cssData);
-// console.log(htmlData); // kontrolni vypis HTML
-fs.writeFile("myhtml.html", htmlData, function(err) {
-    if(err) {
-        return console.log(err);
+
+    if (process.argv.includes('log')) {
+      console.log(htmlData); // kontrolni vypis HTML
     }
-    console.log("The HTML file was saved 👍");
-});
 
+    if (process.argv.includes('html')) {
+      fs.writeFile("myhtml.html", htmlData, function(err) {
+        if(err) {
+            return console.log(err);
+        }
+        console.log("The HTML file was saved 👍");
+      });
+    }
 
-    const browser = await puppeteer.launch();
-    const page = await browser.newPage();
-    await page.setContent(htmlData);
-    // await page.evaluateHandle('document.fonts.ready');
-    // await page.emulateMedia('screen');
-    await page.emulateMedia('print');
-    await page.content();
-    await page.pdf({
-      path: 'mypdf.pdf',
-      format: 'A4',
-      printBackground: true,
-      landscape: true,
-      margin: {
-          top: "9mm",
-          right: "16.5mm",
-          bottom: "9mm",
-          left: "16.5mm"
-      }
-    });
+    if (process.argv.includes('cmzc')) {
+      const horizontalHtmlData = generateHtml(
+        cardsData.filter(c => ['basic', 'bio', 'tech', 'voodoo'].includes(c.type)),
+        includeBackSides,
+        cssData
+      );
+      const verticalHtmlData = generateHtml(
+        cardsData.filter(c => ['quest', 'animatron'].includes(c.type)),
+        includeBackSides,
+        cssData
+      );
+      await savePdf(horizontalHtmlData, {
+        path: 'cmzc-horizontal.pdf',
+        format: 'A4',
+        printBackground: true,
+        landscape: true,
+        margin: {
+            top: "9mm",
+            right: "16.5mm",
+            bottom: "9mm",
+            left: "16.5mm"
+        }
+      });
+      await savePdf(verticalHtmlData, {
+        path: 'cmzc-vertical.pdf',
+        format: 'A4',
+        printBackground: true,
+        landscape: false,
+        margin: {
+            right: "9mm",
+            top: "16.5mm",
+            left: "9mm",
+            bottom: "16.5mm"
+        }
+      });
+    } else {
+      savePdf(htmlData, {
+        path: 'mypdf.pdf',
+        format: 'A4',
+        printBackground: true
+      });
+    }
 
-    console.log('PDF generated 👍');
-    await browser.close();
     process.exit();
 
   } catch (e) {
