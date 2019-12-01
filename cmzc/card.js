@@ -128,12 +128,13 @@ const getFieldMarkup = (title, value, card) => {
       </div>`;
     break;
     case 'image':
-      let prefix = '';
-      if (card.type == 'quest' || card.type == 'animatron') {
-        prefix = `${card.type}s/`;
+      let subfolder = '', extension = 'png';
+      if (['quest', 'voodoo', 'animatron', 'basic'].includes(card.type)) {
+        subfolder = 'lq/';
+        extension = 'jpg';
       }
       markup = `<img
-        src="http://localhost:8080/imgs/ilus/${prefix}${value}.png"
+        src="http://localhost:8080/imgs/ilus/${subfolder}${card.type}/${value}.${extension}"
         class="illustration" />`;
     break;
     case 'rerolls':

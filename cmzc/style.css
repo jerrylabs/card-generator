@@ -72,27 +72,27 @@ html, body {
 }
 
 .card.bio {
-  background: transparent url(http://localhost:8080/imgs/background-bio.png) center center;
+  background: transparent url(http://localhost:8080/imgs/background-bio.jpg) center center;
   background-size: cover;
 }
 
 .card.tech {
-  background: transparent url(http://localhost:8080/imgs/background-tech.png) center center;
+  background: transparent url(http://localhost:8080/imgs/background-tech.jpg) center center;
   background-size: cover;
 }
 
 .card.basic {
-  background: transparent url(http://localhost:8080/imgs/background-basic.png) center center;
+  background: transparent url(http://localhost:8080/imgs/background-basic.jpg) center center;
   background-size: cover;
 }
 
 .card.voodoo {
-  background: transparent url(http://localhost:8080/imgs/background-voodoo.png) center center;
+  background: transparent url(http://localhost:8080/imgs/background-voodoo.jpg) center center;
   background-size: 100% 100%;
 }
 
 .card.quest {
-  background: transparent url(http://localhost:8080/imgs/background-quest.png) center center;
+  background: transparent url(http://localhost:8080/imgs/background-quest.jpg) center center;
   background-size: 100% 100%;
 }
 
