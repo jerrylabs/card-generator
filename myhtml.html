@@ -12,6 +12,10 @@ html, body {
   font-size: 0;
 }
 
+* {
+  background-repeat: no-repeat;
+}
+
 .cards {
   text-align: center;
 }
@@ -42,9 +46,9 @@ html, body {
 }
 
 /* bg overlay */
-.basic.card::before,
-.bio.card::before,
-.tech.card::before {
+/* .bio.card::before,
+.tech.card::before, */
+.basic.card::before {
   content: ' ';
   position: absolute;
   z-index: 1;
@@ -75,7 +79,7 @@ html, body {
   display: none;
 }
 
-.card.bio {
+/* .card.bio {
   background: transparent url(http://localhost:8080/imgs/background-bio.jpg) center center;
   background-size: cover;
 }
@@ -83,7 +87,7 @@ html, body {
 .card.tech {
   background: transparent url(http://localhost:8080/imgs/background-tech.jpg) center center;
   background-size: cover;
-}
+} */
 
 .card.basic {
   background: transparent url(http://localhost:8080/imgs/background-basic.jpg) center center;
@@ -106,7 +110,7 @@ html, body {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: 2;
   background-position: center center;
   background-size: 100% 100%;
 }
@@ -251,6 +255,7 @@ html, body {
   width: 100%;
   background-size: contain;
   content: ' ';
+  background-repeat: no-repeat;
 }
 
 .reroll img {
@@ -409,6 +414,7 @@ html, body {
   margin: -0.5mm;
   background-position: center center;
   background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .voodoo .text .emo.dice {
@@ -1809,7 +1815,7 @@ html, body {
           <img class="life" src="http://localhost:8080/imgs/heart.png" />
         </div>
       </div><img
-        src="http://localhost:8080/imgs/ilus/bio/paze.png"
+        src="http://localhost:8080/imgs/ilus/lq/bio/paze.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -1838,7 +1844,7 @@ html, body {
           <img class="life" src="http://localhost:8080/imgs/heart.png" />
         </div>
       </div><img
-        src="http://localhost:8080/imgs/ilus/bio/vystrelovaci.png"
+        src="http://localhost:8080/imgs/ilus/lq/bio/vystrelovaci.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -1867,7 +1873,7 @@ html, body {
           <img class="life" src="http://localhost:8080/imgs/heart.png" />
         </div>
       </div><img
-        src="http://localhost:8080/imgs/ilus/bio/chmatakova.png"
+        src="http://localhost:8080/imgs/ilus/lq/bio/chmatakova.jpg"
         class="illustration" /><div class="text">Jednou za kolo si<br>můžeš vzít náhodnou kartu z ruky protihráče.</div>
   </div><div
     class="card
@@ -1896,7 +1902,7 @@ html, body {
           <img class="life" src="http://localhost:8080/imgs/heart.png" />
         </div>
       </div><img
-        src="http://localhost:8080/imgs/ilus/bio/natazitelna.png"
+        src="http://localhost:8080/imgs/ilus/lq/bio/natazitelna.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -1925,7 +1931,7 @@ html, body {
           <img class="life" src="http://localhost:8080/imgs/heart.png" />
         </div>
       </div><img
-        src="http://localhost:8080/imgs/ilus/bio/diablovo.png"
+        src="http://localhost:8080/imgs/ilus/lq/bio/diablovo.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -1955,7 +1961,7 @@ html, body {
           <img class="life" src="http://localhost:8080/imgs/heart.png" />
         </div>
       </div><img
-        src="http://localhost:8080/imgs/ilus/bio/opici.png"
+        src="http://localhost:8080/imgs/ilus/lq/bio/opici.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -1985,7 +1991,7 @@ html, body {
           <img class="life" src="http://localhost:8080/imgs/heart.png" />
         </div>
       </div><img
-        src="http://localhost:8080/imgs/ilus/bio/zahave.png"
+        src="http://localhost:8080/imgs/ilus/lq/bio/zahave.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -2015,7 +2021,7 @@ html, body {
           <img class="life" src="http://localhost:8080/imgs/heart.png" />
         </div>
       </div><img
-        src="http://localhost:8080/imgs/ilus/bio/dualruka.png"
+        src="http://localhost:8080/imgs/ilus/lq/bio/dualruka.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -2044,7 +2050,7 @@ html, body {
           <img class="life" src="http://localhost:8080/imgs/heart.png" /><img class="life" src="http://localhost:8080/imgs/heart.png" />
         </div>
       </div><img
-        src="http://localhost:8080/imgs/ilus/bio/integrovany.png"
+        src="http://localhost:8080/imgs/ilus/lq/bio/integrovany.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -2073,7 +2079,7 @@ html, body {
           <img class="life" src="http://localhost:8080/imgs/heart.png" /><img class="life" src="http://localhost:8080/imgs/heart.png" />
         </div>
       </div><img
-        src="http://localhost:8080/imgs/ilus/bio/megavrtak.png"
+        src="http://localhost:8080/imgs/ilus/lq/bio/megavrtak.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -2102,7 +2108,7 @@ html, body {
           <img class="life" src="http://localhost:8080/imgs/heart.png" />
         </div>
       </div><img
-        src="http://localhost:8080/imgs/ilus/bio/kyber.png"
+        src="http://localhost:8080/imgs/ilus/lq/bio/kyber.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -2131,7 +2137,7 @@ html, body {
           <img class="life" src="http://localhost:8080/imgs/heart.png" />
         </div>
       </div><img
-        src="http://localhost:8080/imgs/ilus/bio/sloni.png"
+        src="http://localhost:8080/imgs/ilus/lq/bio/sloni.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -2161,7 +2167,7 @@ html, body {
           <img class="life" src="http://localhost:8080/imgs/heart.png" />
         </div>
       </div><img
-        src="http://localhost:8080/imgs/ilus/bio/roboruce.png"
+        src="http://localhost:8080/imgs/ilus/lq/bio/roboruce.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -2190,7 +2196,7 @@ html, body {
           <img class="life" src="http://localhost:8080/imgs/heart.png" />
         </div>
       </div><img
-        src="http://localhost:8080/imgs/ilus/bio/udni.png"
+        src="http://localhost:8080/imgs/ilus/lq/bio/udni.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -2219,7 +2225,7 @@ html, body {
           <img class="life" src="http://localhost:8080/imgs/heart.png" />
         </div>
       </div><img
-        src="http://localhost:8080/imgs/ilus/bio/udni.png"
+        src="http://localhost:8080/imgs/ilus/lq/bio/udni.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -2248,7 +2254,7 @@ html, body {
           
         </div>
       </div><img
-        src="http://localhost:8080/imgs/ilus/bio/pruhledna.png"
+        src="http://localhost:8080/imgs/ilus/lq/bio/pruhledna.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -2277,7 +2283,7 @@ html, body {
           
         </div>
       </div><img
-        src="http://localhost:8080/imgs/ilus/bio/laserove.png"
+        src="http://localhost:8080/imgs/ilus/lq/bio/laserove.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -2306,7 +2312,7 @@ html, body {
           
         </div>
       </div><img
-        src="http://localhost:8080/imgs/ilus/bio/menavost.png"
+        src="http://localhost:8080/imgs/ilus/lq/bio/menavost.jpg"
         class="illustration" />
   </div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div
     class="card
@@ -2335,7 +2341,7 @@ html, body {
           
         </div>
       </div><img
-        src="http://localhost:8080/imgs/ilus/bio/kyselinny.png"
+        src="http://localhost:8080/imgs/ilus/lq/bio/kyselinny.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -2364,7 +2370,7 @@ html, body {
           
         </div>
       </div><img
-        src="http://localhost:8080/imgs/ilus/bio/kyselinna.png"
+        src="http://localhost:8080/imgs/ilus/lq/bio/kyselinna.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -2393,7 +2399,7 @@ html, body {
           
         </div>
       </div><img
-        src="http://localhost:8080/imgs/ilus/bio/chameleoni.png"
+        src="http://localhost:8080/imgs/ilus/lq/bio/chameleoni.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -2422,7 +2428,7 @@ html, body {
           
         </div>
       </div><img
-        src="http://localhost:8080/imgs/ilus/bio/mozek.png"
+        src="http://localhost:8080/imgs/ilus/lq/bio/mozek.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -2451,7 +2457,7 @@ html, body {
           
         </div>
       </div><img
-        src="http://localhost:8080/imgs/ilus/bio/zhava.png"
+        src="http://localhost:8080/imgs/ilus/lq/bio/zhava.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -2480,7 +2486,7 @@ html, body {
           
         </div>
       </div><img
-        src="http://localhost:8080/imgs/ilus/bio/mrazivyd.png"
+        src="http://localhost:8080/imgs/ilus/lq/bio/mrazivyd.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -2509,7 +2515,7 @@ html, body {
           
         </div>
       </div><img
-        src="http://localhost:8080/imgs/ilus/bio/srdecni.png"
+        src="http://localhost:8080/imgs/ilus/lq/bio/srdecni.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -2538,7 +2544,7 @@ html, body {
           <img class="life" src="http://localhost:8080/imgs/heart.png" />
         </div>
       </div><img
-        src="http://localhost:8080/imgs/ilus/bio/hydraulicky.png"
+        src="http://localhost:8080/imgs/ilus/lq/bio/hydraulicky.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -2567,7 +2573,7 @@ html, body {
           <img class="life" src="http://localhost:8080/imgs/heart.png" />
         </div>
       </div><img
-        src="http://localhost:8080/imgs/ilus/bio/zraloci.png"
+        src="http://localhost:8080/imgs/ilus/lq/bio/zraloci.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -2596,7 +2602,7 @@ html, body {
           <img class="life" src="http://localhost:8080/imgs/heart.png" />
         </div>
       </div><img
-        src="http://localhost:8080/imgs/ilus/bio/titanove.png"
+        src="http://localhost:8080/imgs/ilus/lq/bio/titanove.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -2625,7 +2631,7 @@ html, body {
           <img class="life" src="http://localhost:8080/imgs/heart.png" />
         </div>
       </div><img
-        src="http://localhost:8080/imgs/ilus/bio/netopyri.png"
+        src="http://localhost:8080/imgs/ilus/lq/bio/netopyri.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -2654,7 +2660,7 @@ html, body {
           <img class="life" src="http://localhost:8080/imgs/heart.png" /><img class="life" src="http://localhost:8080/imgs/heart.png" />
         </div>
       </div><img
-        src="http://localhost:8080/imgs/ilus/bio/kachni.png"
+        src="http://localhost:8080/imgs/ilus/lq/bio/kachni.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -2683,7 +2689,7 @@ html, body {
           <img class="life" src="http://localhost:8080/imgs/heart.png" /><img class="life" src="http://localhost:8080/imgs/heart.png" />
         </div>
       </div><img
-        src="http://localhost:8080/imgs/ilus/bio/kovova.png"
+        src="http://localhost:8080/imgs/ilus/lq/bio/kovova.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -2712,7 +2718,7 @@ html, body {
           <img class="life" src="http://localhost:8080/imgs/heart.png" /><img class="life" src="http://localhost:8080/imgs/heart.png" /><img class="life" src="http://localhost:8080/imgs/heart.png" />
         </div>
       </div><img
-        src="http://localhost:8080/imgs/ilus/bio/statecne.png"
+        src="http://localhost:8080/imgs/ilus/lq/bio/statecne.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -2741,7 +2747,7 @@ html, body {
           <img class="life" src="http://localhost:8080/imgs/heart.png" />
         </div>
       </div><img
-        src="http://localhost:8080/imgs/ilus/bio/smirakovo.png"
+        src="http://localhost:8080/imgs/ilus/lq/bio/smirakovo.jpg"
         class="illustration" /><div class="text">Jednou za kolo se můžeš podívat do karet na ruce jednoho protihráče.</div>
   </div><div
     class="card
@@ -2770,7 +2776,7 @@ html, body {
           <img class="life" src="http://localhost:8080/imgs/heart.png" />
         </div>
       </div><img
-        src="http://localhost:8080/imgs/ilus/bio/rentgenoveo.png"
+        src="http://localhost:8080/imgs/ilus/lq/bio/rentgenoveo.jpg"
         class="illustration" /><div class="text">Jednou za kolo se můžeš podívat na vrchní kartu z balíčku úkolů.</div>
   </div><div
     class="card
@@ -2791,7 +2797,7 @@ html, body {
       ">
         <span>Kamenná kůže</span>
       </div><img
-        src="http://localhost:8080/imgs/ilus/bio/kamenna.png"
+        src="http://localhost:8080/imgs/ilus/lq/bio/kamenna.jpg"
         class="illustration" /><div class="text">Při ztrátě více než jednoho života ztrácíš o&nbsp;život méně.</div>
   </div><div
     class="card
@@ -2812,7 +2818,7 @@ html, body {
       ">
         <span>Regenerace</span>
       </div><img
-        src="http://localhost:8080/imgs/ilus/bio/regenerace.png"
+        src="http://localhost:8080/imgs/ilus/lq/bio/regenerace.jpg"
         class="illustration" /><div class="text text-long">Můžeš si vykládat zelená BIO vylepšení z&nbsp;odhazovacího balíčku, jakoby jsi je měl v ruce.</div>
   </div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div
     class="card
@@ -2836,7 +2842,7 @@ html, body {
       <div class="reroll reroll-green">
         <img src="http://localhost:8080/imgs/dice1.png" />
       </div></div><img
-        src="http://localhost:8080/imgs/ilus/tech/sekacek.png"
+        src="http://localhost:8080/imgs/ilus/lq/tech/sekacek.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -2860,7 +2866,7 @@ html, body {
       <div class="reroll reroll-green">
         <img src="http://localhost:8080/imgs/dice1.png" />
       </div></div><img
-        src="http://localhost:8080/imgs/ilus/tech/kyj.png"
+        src="http://localhost:8080/imgs/ilus/lq/tech/kyj.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -2884,7 +2890,7 @@ html, body {
       <div class="reroll reroll-green">
         <img src="http://localhost:8080/imgs/dice1.png" />
       </div></div><img
-        src="http://localhost:8080/imgs/ilus/tech/lopata.png"
+        src="http://localhost:8080/imgs/ilus/lq/tech/lopata.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -2908,7 +2914,7 @@ html, body {
       <div class="reroll reroll-green">
         <img src="http://localhost:8080/imgs/dice1.png" />
       </div></div><img
-        src="http://localhost:8080/imgs/ilus/tech/motorovy.png"
+        src="http://localhost:8080/imgs/ilus/lq/tech/motorovy.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -2932,7 +2938,7 @@ html, body {
       <div class="reroll reroll-green">
         <img src="http://localhost:8080/imgs/dice1.png" />
       </div></div><img
-        src="http://localhost:8080/imgs/ilus/tech/strikacka.png"
+        src="http://localhost:8080/imgs/ilus/lq/tech/strikacka.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -2956,7 +2962,7 @@ html, body {
       <div class="reroll reroll-green">
         <img src="http://localhost:8080/imgs/dice1.png" />
       </div></div><img
-        src="http://localhost:8080/imgs/ilus/tech/laserovy.png"
+        src="http://localhost:8080/imgs/ilus/lq/tech/laserovy.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -2980,7 +2986,7 @@ html, body {
       <div class="reroll reroll-green">
         <img src="http://localhost:8080/imgs/dice1.png" />
       </div></div><img
-        src="http://localhost:8080/imgs/ilus/tech/kapesnip.png"
+        src="http://localhost:8080/imgs/ilus/lq/tech/kapesnip.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -3004,7 +3010,7 @@ html, body {
       <div class="reroll reroll-green">
         <img src="http://localhost:8080/imgs/dice1.png" />
       </div></div><img
-        src="http://localhost:8080/imgs/ilus/tech/katana.png"
+        src="http://localhost:8080/imgs/ilus/lq/tech/katana.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -3028,7 +3034,7 @@ html, body {
       <div class="reroll reroll-green">
         <img src="http://localhost:8080/imgs/dice1.png" />
       </div></div><img
-        src="http://localhost:8080/imgs/ilus/tech/vyhroceny.png"
+        src="http://localhost:8080/imgs/ilus/lq/tech/vyhroceny.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -3052,7 +3058,7 @@ html, body {
       <div class="reroll reroll-green">
         <img src="http://localhost:8080/imgs/dice1.png" />
       </div></div><img
-        src="http://localhost:8080/imgs/ilus/tech/zubarska.png"
+        src="http://localhost:8080/imgs/ilus/lq/tech/zubarska.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -3076,7 +3082,7 @@ html, body {
       <div class="reroll reroll-red">
         <img src="http://localhost:8080/imgs/dice1.png" />
       </div></div><img
-        src="http://localhost:8080/imgs/ilus/tech/flusacka.png"
+        src="http://localhost:8080/imgs/ilus/lq/tech/flusacka.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -3100,7 +3106,7 @@ html, body {
       <div class="reroll reroll-red">
         <img src="http://localhost:8080/imgs/dice1.png" />
       </div></div><img
-        src="http://localhost:8080/imgs/ilus/tech/peprovy.png"
+        src="http://localhost:8080/imgs/ilus/lq/tech/peprovy.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -3124,7 +3130,7 @@ html, body {
       <div class="reroll reroll-red">
         <img src="http://localhost:8080/imgs/dice1.png" />
       </div></div><img
-        src="http://localhost:8080/imgs/ilus/tech/neuropad.png"
+        src="http://localhost:8080/imgs/ilus/lq/tech/neuropad.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -3148,7 +3154,7 @@ html, body {
       <div class="reroll reroll-red">
         <img src="http://localhost:8080/imgs/dice1.png" />
       </div></div><img
-        src="http://localhost:8080/imgs/ilus/tech/kouzelnicka.png"
+        src="http://localhost:8080/imgs/ilus/lq/tech/kouzelnicka.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -3172,7 +3178,7 @@ html, body {
       <div class="reroll reroll-green">
         <img src="http://localhost:8080/imgs/dice2.png" />
       </div></div><img
-        src="http://localhost:8080/imgs/ilus/tech/elektricka.png"
+        src="http://localhost:8080/imgs/ilus/lq/tech/elektricka.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -3195,7 +3201,7 @@ html, body {
       </div><div class="title title-reversed"><span>Čakram</span></div><img class="joint required single hand" src="http://localhost:8080/imgs/required-hand.png" /><div class="rerolls"><img class="test" src="http://localhost:8080/imgs/test-iq.png" />
       <img class="test" src="http://localhost:8080/imgs/dice-cross.png" />
     </div><img
-        src="http://localhost:8080/imgs/ilus/tech/cakram.png"
+        src="http://localhost:8080/imgs/ilus/lq/tech/cakram.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -3219,7 +3225,7 @@ html, body {
             <img class="joint required second hand" src="http://localhost:8080/imgs/required-hand.png" /><div class="rerolls">
       <img class="test" src="http://localhost:8080/imgs/dice-cross.png" />
     </div><img
-        src="http://localhost:8080/imgs/ilus/tech/bejzbolka.png"
+        src="http://localhost:8080/imgs/ilus/lq/tech/bejzbolka.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -3244,7 +3250,7 @@ html, body {
       <div class="reroll reroll-green">
         <img src="http://localhost:8080/imgs/dice2.png" />
       </div></div><img
-        src="http://localhost:8080/imgs/ilus/tech/retezova.png"
+        src="http://localhost:8080/imgs/ilus/lq/tech/retezova.jpg"
         class="illustration" />
   </div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div
     class="card
@@ -3269,7 +3275,7 @@ html, body {
       <div class="reroll reroll-green">
         <img src="http://localhost:8080/imgs/dice2.png" />
       </div></div><img
-        src="http://localhost:8080/imgs/ilus/tech/motorova.png"
+        src="http://localhost:8080/imgs/ilus/lq/tech/motorova.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -3294,7 +3300,7 @@ html, body {
       <div class="reroll reroll-green">
         <img src="http://localhost:8080/imgs/dice2.png" />
       </div></div><img
-        src="http://localhost:8080/imgs/ilus/tech/rotacni.png"
+        src="http://localhost:8080/imgs/ilus/lq/tech/rotacni.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -3319,7 +3325,7 @@ html, body {
       <div class="reroll reroll-green">
         <img src="http://localhost:8080/imgs/dice3.png" />
       </div></div><img
-        src="http://localhost:8080/imgs/ilus/tech/granatomet.png"
+        src="http://localhost:8080/imgs/ilus/lq/tech/granatomet.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -3344,7 +3350,7 @@ html, body {
       <div class="reroll reroll-green">
         <img src="http://localhost:8080/imgs/dice3.png" />
       </div></div><img
-        src="http://localhost:8080/imgs/ilus/tech/plasmomet.png"
+        src="http://localhost:8080/imgs/ilus/lq/tech/plasmomet.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -3369,7 +3375,7 @@ html, body {
       <div class="reroll reroll-green">
         <img src="http://localhost:8080/imgs/dice3.png" />
       </div></div><img
-        src="http://localhost:8080/imgs/ilus/tech/raketomet.png"
+        src="http://localhost:8080/imgs/ilus/lq/tech/raketomet.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -3394,7 +3400,7 @@ html, body {
       <div class="reroll reroll-green">
         <img src="http://localhost:8080/imgs/dice3.png" />
       </div></div><img
-        src="http://localhost:8080/imgs/ilus/tech/obourucni.png"
+        src="http://localhost:8080/imgs/ilus/lq/tech/obourucni.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -3419,7 +3425,7 @@ html, body {
       <div class="reroll reroll-green">
         <img src="http://localhost:8080/imgs/dice2.png" />
       </div></div><img
-        src="http://localhost:8080/imgs/ilus/tech/hoverboard.png"
+        src="http://localhost:8080/imgs/ilus/lq/tech/hoverboard.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -3444,7 +3450,7 @@ html, body {
       <div class="reroll reroll-green">
         <img src="http://localhost:8080/imgs/dice3.png" />
       </div></div><img
-        src="http://localhost:8080/imgs/ilus/tech/kulometny.png"
+        src="http://localhost:8080/imgs/ilus/lq/tech/kulometny.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -3469,7 +3475,7 @@ html, body {
       <div class="reroll reroll-green">
         <img src="http://localhost:8080/imgs/dice3.png" />
       </div></div><img
-        src="http://localhost:8080/imgs/ilus/tech/elektro.png"
+        src="http://localhost:8080/imgs/ilus/lq/tech/elektro.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -3490,13 +3496,13 @@ html, body {
       ">
         <span>Jízdní pásy</span>
       </div><div class="title title-reversed"><span>Jízdní pásy</span></div><img class="joint required first bone" src="http://localhost:8080/imgs/required-bone.png" />
-            <img class="joint required second leg" src="http://localhost:8080/imgs/required-leg.png" /><div class="rerolls"><img class="test" src="http://localhost:8080/imgs/test-powerspeed.png" />
+            <img class="joint required second bone" src="http://localhost:8080/imgs/required-bone.png" /><div class="rerolls"><img class="test" src="http://localhost:8080/imgs/test-powerspeed.png" />
       <div class="reroll reroll-green">
         <img src="http://localhost:8080/imgs/dice2.png" />
       </div>
       <img class="life" src="http://localhost:8080/imgs/heart.png" /><img class="life" src="http://localhost:8080/imgs/heart.png" />
     </div><img
-        src="http://localhost:8080/imgs/ilus/tech/jizdni.png"
+        src="http://localhost:8080/imgs/ilus/lq/tech/jizdni.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -3520,7 +3526,7 @@ html, body {
       <div class="reroll reroll-green">
         <img src="http://localhost:8080/imgs/dice1.png" />
       </div></div><img
-        src="http://localhost:8080/imgs/ilus/tech/rentgenovec.png"
+        src="http://localhost:8080/imgs/ilus/lq/tech/rentgenovec.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -3544,7 +3550,7 @@ html, body {
       <div class="reroll reroll-green">
         <img src="http://localhost:8080/imgs/dice1.png" />
       </div></div><img
-        src="http://localhost:8080/imgs/ilus/tech/bryle.png"
+        src="http://localhost:8080/imgs/ilus/lq/tech/bryle.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -3568,7 +3574,7 @@ html, body {
       <div class="reroll reroll-red">
         <img src="http://localhost:8080/imgs/dice1.png" />
       </div></div><img
-        src="http://localhost:8080/imgs/ilus/tech/kapesnia.png"
+        src="http://localhost:8080/imgs/ilus/lq/tech/kapesnia.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -3592,7 +3598,7 @@ html, body {
       <div class="reroll reroll-green">
         <img src="http://localhost:8080/imgs/dice-small-sad.png" />
       </div></div><img
-        src="http://localhost:8080/imgs/ilus/tech/svarecske.png"
+        src="http://localhost:8080/imgs/ilus/lq/tech/svarecske.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -3618,7 +3624,7 @@ html, body {
       </div>
       <img class="life" src="http://localhost:8080/imgs/heart.png" />
     </div><img
-        src="http://localhost:8080/imgs/ilus/tech/neprustrelna.png"
+        src="http://localhost:8080/imgs/ilus/lq/tech/neprustrelna.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -3644,7 +3650,7 @@ html, body {
       </div>
       <img class="life" src="http://localhost:8080/imgs/heart.png" />
     </div><img
-        src="http://localhost:8080/imgs/ilus/tech/ocelove.png"
+        src="http://localhost:8080/imgs/ilus/lq/tech/ocelove.jpg"
         class="illustration" />
   </div><div
     class="card
@@ -3665,7 +3671,7 @@ html, body {
       ">
         <span>Granát</span>
       </div><img
-        src="http://localhost:8080/imgs/ilus/tech/granat.png"
+        src="http://localhost:8080/imgs/ilus/lq/tech/granat.jpg"
         class="illustration" /><div class="text text-long">Odhoď tuto kartu ze hry během testu na sílu před hodem kostkami. Úkol je automaticky splněn.</div>
   </div><div
     class="card
@@ -3686,7 +3692,7 @@ html, body {
       ">
         <span>Jedovaté torpédo</span>
       </div><img
-        src="http://localhost:8080/imgs/ilus/tech/jedovate.png"
+        src="http://localhost:8080/imgs/ilus/lq/tech/jedovate.jpg"
         class="illustration" /><div class="text text-long">Odhoď tuto kartu ze hry během testu na rychlost před hodem kostkami. Úkol je automaticky splněn.</div>
   </div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div class="card back-side"></div><div
     class="card

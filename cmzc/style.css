@@ -8,6 +8,10 @@ html, body {
   font-size: 0;
 }
 
+* {
+  background-repeat: no-repeat;
+}
+
 .cards {
   text-align: center;
 }
@@ -38,9 +42,9 @@ html, body {
 }
 
 /* bg overlay */
-.basic.card::before,
-.bio.card::before,
-.tech.card::before {
+/* .bio.card::before,
+.tech.card::before, */
+.basic.card::before {
   content: ' ';
   position: absolute;
   z-index: 1;
@@ -71,7 +75,7 @@ html, body {
   display: none;
 }
 
-.card.bio {
+/* .card.bio {
   background: transparent url(http://localhost:8080/imgs/background-bio.jpg) center center;
   background-size: cover;
 }
@@ -79,7 +83,7 @@ html, body {
 .card.tech {
   background: transparent url(http://localhost:8080/imgs/background-tech.jpg) center center;
   background-size: cover;
-}
+} */
 
 .card.basic {
   background: transparent url(http://localhost:8080/imgs/background-basic.jpg) center center;
@@ -102,7 +106,7 @@ html, body {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: 2;
   background-position: center center;
   background-size: 100% 100%;
 }
@@ -247,6 +251,7 @@ html, body {
   width: 100%;
   background-size: contain;
   content: ' ';
+  background-repeat: no-repeat;
 }
 
 .reroll img {
@@ -405,6 +410,7 @@ html, body {
   margin: -0.5mm;
   background-position: center center;
   background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .voodoo .text .emo.dice {

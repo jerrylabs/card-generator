@@ -14,7 +14,7 @@ shortcut = (c) => {
 const getJointMarkup = (order, rel, type) =>
   `<img class="joint ${rel} ${order} ${type}" src="http://localhost:8080/imgs/${rel}-${type}.png" />`;
 
-const getLiveMarkup = (c, i) => `<img class="life" src="http://localhost:8080/imgs/${shortcut(c)}.png" />`;
+const getLifeMarkup = (c, i) => `<img class="life" src="http://localhost:8080/imgs/${shortcut(c)}.png" />`;
 
 const getAttrMarkup = (c, i) => `<img class="attribute attribute-${shortcut(c)}" src="http://localhost:8080/imgs/attr-${shortcut(c)}.png" />`;
 
@@ -46,7 +46,7 @@ const getRerollsMarkup = (value) => {
   }
   if (value.includes('Z')) {
     markup = `${markup}
-      ${value.split('').filter(v => v == 'Z').map(getLiveMarkup).join('')}
+      ${value.split('').filter(v => v == 'Z').map(getLifeMarkup).join('')}
     `;
   }
   if (value.includes('D')) {
@@ -80,6 +80,7 @@ getTextMarkup = (text) => text
   .replace(/\{/g, '<div class="group-all"><span class="white-shadow">všechny</span><div class="group">')
   .replace(/\}/g, '</div></div>');
 
+// Field = any column in source CSV
 const getFieldMarkup = (title, value, card) => {
   let markup = ``;
   switch (title) {
@@ -103,7 +104,7 @@ const getFieldMarkup = (title, value, card) => {
       if (card.type == 'quest') {
         markup = getQuestMarkup(card.requires, card.provides);
       } else {
-        const relation = title.replace('s', 'd');
+        const relation = title.replace('s', 'd'); // requires, provides => required, provided
         if (value.length == 1) {
           markup = getJointMarkup('single', relation, shortcut(value));
         } else if (value.length == 2) {
@@ -123,16 +124,16 @@ const getFieldMarkup = (title, value, card) => {
         }
         ${card.title == 'Jízdní pásy' ? 'lives-with-rerolls' : ''
       }">
-          ${value.split('').filter(v => v == 'Z').map(getLiveMarkup).join('')}
+          ${value.split('').filter(v => v == 'Z').map(getLifeMarkup).join('')}
         </div>
       </div>`;
     break;
     case 'image':
-      let subfolder = '', extension = 'png';
-      if (['quest', 'voodoo', 'animatron', 'basic'].includes(card.type)) {
-        subfolder = 'lq/';
-        extension = 'jpg';
-      }
+      let subfolder = 'lq/', extension = 'jpg';
+      // if (['quest', 'voodoo', 'animatron', 'basic', 'tech', 'bio'].includes(card.type)) {
+      //   subfolder = 'lq/';
+      //   extension = 'jpg';
+      // }
       markup = `<img
         src="http://localhost:8080/imgs/ilus/${subfolder}${card.type}/${value}.${extension}"
         class="illustration" />`;
