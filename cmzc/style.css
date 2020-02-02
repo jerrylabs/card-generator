@@ -61,14 +61,7 @@ html, body {
 }
 
 .card-frame {
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  border: 2mm solid white;
-  box-sizing: border-box;
-  position: absolute;
-  z-index: 2;
+  display: none;
 }
 
 .type {
@@ -344,12 +337,8 @@ html, body {
 
 
 .illustration {
-  position: absolute;
-  z-index: 1;
-  width: 40mm;
-  top: 50%;
-  left: 2mm;
-  transform: translateY(-50%);
+  width: 100%;
+  height: 100%;
 }
 
 .voodoo .illustration {

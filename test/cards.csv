@@ -1,0 +1,10 @@
+type,title,text,fight,image
+human,Musashi,He can make it with two swords.,4,musashi
+human,Maniac,"When attacking, it gets +4 power and sacrifice it at end of turn.",2,maniac
+human,Conscript,,1,conscript
+animal,Dog,"When fighting with Cat, it gets -2 to power.",3,dog
+animal,Cat,Sneaky bastard.,2,cat
+animal,Tyrannosaurus,He eats everything.,5,saurus
+plant,Dandelion,Very nice plant.,0,flower
+plant,Grass,All humans get -3 to power.,0,grass
+plant,Triffid,Poisonous bastard.,3,trifid

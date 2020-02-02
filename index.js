@@ -9,7 +9,7 @@ const csvToObject = (data) => parse(data, {
 });
 
 const generateCardMarkup = cardData => {
-  if (process.argv[2] == 'cmzc') {
+  if (process.argv[2] == 'cmzc' || process.argv[2] == 'test') {
     return generateCmzcCard(cardData);
   } else return `<div class="card"}"> ${
     Object.keys(cardData).map(cardProperty =>
@@ -101,6 +101,7 @@ const savePdf = async (htmlData, settings ) => {
     }
 
     if (process.argv.includes('html')) {
+      console.log(htmlData);
       fs.writeFile("myhtml.html", htmlData, function(err) {
         if(err) {
             return console.log(err);
