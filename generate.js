@@ -21,7 +21,7 @@ const csvToObject = (data) => parse(data, {
 });
 
 const generateDefaultCardMarkup = cardData => (
-  `<div class="card"}"> ${
+  `<div class="card"> ${
     Object.keys(cardData).map(cardProperty =>
       cardData[cardProperty]
       ? `<div class="${cardProperty}">${cardData[cardProperty]}</div>` // here condition for specific fields
@@ -93,7 +93,7 @@ const savePdf = async (htmlData, settings ) => {
     const cssData = fs.readFileSync(cssFile, 'utf8');
     const cardsData = csvToObject(csvData);
 
-    const customCardPath = `.${process.argv[2]}/card.js`;
+    const customCardPath = `./${process.argv[2]}/card.js`;
     const generateCardMarkup = fs.existsSync(customCardPath) ? require(customCardPath) : generateDefaultCardMarkup;
 
     const htmlData = generateHtml(cardsData, backgrounds, cssData, generateCardMarkup);
