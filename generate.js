@@ -7,8 +7,6 @@ const parse = require('csv-parse/lib/sync');
 const puppeteer = require('puppeteer');
 const fs = require('fs');
 const httpServer = require('http-server');
-const generateCmzcCard = require('./cmzc/card');
-
 
 const printInstructions = () => {
    const instructions = fs.readFileSync('README.md', 'utf8');
@@ -103,7 +101,6 @@ const savePdf = async (htmlData, settings ) => {
     }
 
     if (process.argv.includes('html')) {
-      console.log(htmlData);
       fs.writeFile("myhtml.html", htmlData, function(err) {
         if(err) {
             return console.log(err);
@@ -111,7 +108,7 @@ const savePdf = async (htmlData, settings ) => {
         console.log("The HTML file was saved 👍");
       });
     }
-return;
+
     if (process.argv.includes('cmzc')) {
       const horizontalHtmlData = generateHtml(
         cardsData.filter(c => ['basic', 'bio', 'tech', 'voodoo'].includes(c.type)),
@@ -148,10 +145,17 @@ return;
         }
       });
     } else {
-      savePdf(htmlData, {
+      await savePdf(htmlData, {
         path: 'mypdf.pdf',
         format: 'A4',
-        printBackground: true
+        printBackground: true,
+        landscape: false,
+        margin: {
+            right: "10.5mm",
+            top: "16.5mm",
+            left: "10.5mm",
+            bottom: "16.5mm"
+        }
       });
     }
 
@@ -161,5 +165,3 @@ return;
     console.log('Ooops! You made an error: ', e);
   }
 })();
-
-
