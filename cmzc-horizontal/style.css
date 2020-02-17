@@ -1,0 +1,519 @@
+body {
+  -webkit-print-color-adjust: exact;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+}
+
+* {
+  background-repeat: no-repeat;
+}
+
+.cards {
+  text-align: center;
+}
+
+.card {
+  font-size: 12px;
+  display: inline-block;
+  overflow: hidden;
+  width: 44.0mm;
+  height: 64.0mm;
+  box-sizing: border-box;
+  page-break-inside: avoid;
+  position: relative;
+}
+
+.card.quest {
+  width: 64.0mm;
+  height: 88.0mm;
+  /* transform: rotate(-90deg);
+  margin: -12mm 12mm; */
+}
+
+.card.animatron {
+  width: 88mm;
+  height: 118mm;
+  /* transform: rotate(-90deg);
+  margin: -11mm 19mm; // +4mm on all sides */
+}
+
+/* bg overlay */
+/* .bio.card::before,
+.tech.card::before, */
+.basic.card::before {
+  content: ' ';
+  position: absolute;
+  z-index: 1;
+  background:  rgba(255, 255, 255, 0.7);
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+}
+
+.card.voodoo::before {
+  display: none;
+}
+
+.card-frame {
+  display: none;
+}
+
+.type {
+  display: none;
+}
+
+/* .card.bio {
+  background: transparent url(http://localhost:8080/imgs/background-bio.jpg) center center;
+  background-size: cover;
+}
+
+.card.tech {
+  background: transparent url(http://localhost:8080/imgs/background-tech.jpg) center center;
+  background-size: cover;
+} */
+
+.card.basic {
+  background: transparent url(http://localhost:8080/imgs/background-basic.jpg) center center;
+  background-size: cover;
+}
+
+.card.voodoo {
+  background: transparent url(http://localhost:8080/imgs/background-voodoo.jpg) center center;
+  background-size: 100% 100%;
+}
+
+.card.quest {
+  background: transparent url(http://localhost:8080/imgs/background-quest.jpg) center center;
+  background-size: 100% 100%;
+}
+
+.card-icons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-position: center center;
+  background-size: 100% 100%;
+}
+
+.card.bio .card-icons {
+  background-image: url(http://localhost:8080/imgs/icons-bio.png);
+}
+
+
+.card.tech .card-icons {
+  background-image: url(http://localhost:8080/imgs/icons-tech.png);
+}
+
+.card-vertical .card-icons {
+  height: 50%;
+  background-position: center top;
+  background-size: 100% 200%;
+}
+
+.title {
+  position: absolute;
+  z-index: 2;
+  top: 2mm;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "BadaBoom CE";
+  font-size: 5.6mm;
+  background: transparent url(http://localhost:8080/imgs/background-title-top.png) center -2px no-repeat;
+  background-size: contain;
+  height: 7.5mm;
+  width: 44mm;
+  padding: 0.4mm 0;
+  line-height: 7mm;
+  color: yellow;
+  text-shadow: 1px 1px 0px black, -1px -1px 0px black, 1px -1px 0px black, -1px 1px 0px black, 0px 3px 3px rgba(0,0,0,0.6);
+}
+
+.title-long {
+  font-size: 5.3mm;
+}
+
+.card-double-joint .title {
+  width: 38mm;
+}
+
+.card-double-req-joint .title:not(.title-reversed),
+.card-double-prov-joint .title.title-reversed {
+  padding-left: 6.5mm;
+}
+
+.card-double-prov-joint .title:not(.title-reversed),
+.card-double-req-joint .title.title-reversed {
+  padding-right: 6.5mm;
+}
+
+.voodoo .title {
+  background: none;
+  height: 11.5mm;
+  width: 42mm;
+  padding: 2.25mm 3mm 0 12mm;
+  box-sizing: border-box;
+}
+
+.title span {
+  line-height: 5mm;
+  vertical-align: middle;
+  display: inline-block;
+  position: relative;
+  top: -0.2mm;
+}
+
+.title-reversed {
+  top: auto;
+  bottom: 2mm;
+  transform: translateX(-50%) rotate(-180deg);
+  background-image: url(http://localhost:8080/imgs/background-title-bottom.png);
+}
+
+.joint { position: absolute; z-index: 4; height: 1.5cm; }
+.joint.required { left: 0; }
+.joint.provided { right: 0; }
+.joint.single.bone { top: 1cm; }
+.joint.single.hand,
+.joint.single.leg { bottom: 1cm; }
+.joint.first { top: -2.5mm; }
+.joint.second { bottom: -2.5mm; }
+
+.attributes, .lives, .rerolls {
+  position: absolute;
+  z-index: 2;
+  bottom: 10mm;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  line-height: 0;
+}
+
+.lives {
+  bottom: auto;
+  top: 11mm;
+}
+
+.lives-down {
+  top: auto;
+  bottom: 11mm;
+}
+
+.tech.card-vertical .lives-down {
+  bottom: 5mm;
+}
+
+.rerolls {
+  bottom: auto;
+  top: 10mm;
+}
+
+.card-has-joints.two-handed .rerolls {
+  bottom: 0;
+  height: 100%;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  left: 2.5mm;
+  justify-content: center;
+}
+
+.attribute {
+  width: 11mm;
+  margin: 1mm;
+}
+
+.life {
+  width: 10mm;
+  margin: -1mm 0;
+}
+
+.rerolls .life {
+  margin: -0.5mm 1mm;
+}
+
+.test, .reroll {
+  width: 13mm;
+  height: 13mm;
+  display: inline-block;
+  background-repeat: no-repeat;
+}
+
+.reroll {
+  position: relative;
+}
+
+.reroll::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-size: contain;
+  content: ' ';
+  background-repeat: no-repeat;
+}
+
+.reroll img {
+  width: 100%;
+}
+
+.reroll-green::before { background-image: url(http://localhost:8080/imgs/reroll-green.png); }
+.reroll-red::before { background-image: url(http://localhost:8080/imgs/reroll-red.png); }
+
+/* // originally just for .bio-card vertical, now applied for all
+.bio.card-vertical .attributes,
+.bio.card-vertical .lives {
+  position: static;
+}
+
+.bio.card-vertical .lives-and-attributes {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  top: 10mm;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.bio.card-vertical .lives, .bio.card-vertical .attributes {
+  flex: 0 1 0;
+  display: flex;
+}
+
+.card-vertical .life, .card-vertical .attribute {
+  margin: 1mm 0.5mm;
+}
+
+.card-vertical .rerolls .life {
+  margin: 2mm 0;
+}  */
+
+/* version: originally just for .bio-card vertical, now applied for all */
+.attributes,
+.lives {
+  position: static;
+  flex: 0 1 0;
+  display: flex;
+}
+
+.lives-and-attributes {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  top: 11mm;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.bio.card-has-joints .attr3 {
+  padding-left: 3mm;
+}
+
+.bio .attr4 {
+  flex-wrap: wrap;
+  max-width: 34mm;
+  left: 5mm;
+}
+
+.bio .attr4 .life {
+  margin: -0.5mm 0.5mm;
+}
+
+.life, .attribute {
+  margin: 1mm 0.5mm;
+}
+
+.card-vertical .rerolls .life {
+  margin: 2mm 0;
+}
+
+.card-has-joints .rerolls {
+  bottom: 11mm;
+  width: 100%;
+  display: flex;
+  top: auto;
+  justify-content: center;
+  height: auto;
+  flex-direction: row;
+  right: auto;
+}
+/* end of version */
+
+
+.illustration {
+  width: 100%;
+  height: 100%;
+}
+
+.voodoo .illustration {
+  top: 39%;
+}
+
+.text {
+  position: absolute;
+  z-index: 3;
+  left: 1mm;
+  bottom: 1mm;
+  width: 42mm;
+  /* background: transparent url(http://localhost:8080/imgs/background-text.png) center center no-repeat;
+  background-size: 100% 100%; */
+  font-family: "Open Sans";
+  padding: 1mm;
+  box-sizing: border-box;
+  font-size: 2.8mm;
+  font-weight: bold;
+  background: linear-gradient(transparent 0%, rgba(0, 154, 0, 0.7) 50%)
+}
+
+.bio .text {
+  height: 18mm;
+  display: flex;
+  align-items: center;
+}
+
+.voodoo .text {
+  bottom: 5mm;
+  width: 38mm;
+  background: none;
+  padding: 1mm;
+  height: 21mm;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.4mm;
+  line-height: 1.2;
+}
+
+.voodoo .text-long {
+  font-size: 3mm;
+  line-height: 1.1;
+}
+
+.voodoo .texts {
+  flex-direction: column;
+}
+
+.voodoo .text-part {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.voodoo .text .emo {
+  width: 12mm;
+  margin: -0.5mm;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.voodoo .text .emo.dice {
+  width: 9mm;
+  margin: 0 1mm;
+}
+
+.voodoo .texts .emo.dice {
+  margin: 0 0.2mm;
+}
+
+.voodoo .text.text-all .emo.dice {
+  margin: 0 0.1mm;
+}
+
+.voodoo .text .emo.arrow {
+  margin: -4.5mm;
+  z-index: 1;
+}
+
+.group-all {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.group {
+  display: flex;
+}
+
+.voodoo .text .group .emo {
+    width: 9mm;
+    margin: 0;
+}
+
+.emo-epic    { background-image: url(http://localhost:8080/imgs/emo-epic.png); }
+.emo-tragic  { background-image: url(http://localhost:8080/imgs/emo-tragic.png); }
+.emo-sad     { background-image: url(http://localhost:8080/imgs/emo-sad.png); }
+.emo-happy   { background-image: url(http://localhost:8080/imgs/emo-happy.png); }
+.emo-neutral { background-image: url(http://localhost:8080/imgs/emo-neutral.png); }
+
+.card-two-texts .text .emo {
+  width: 9mm;
+  margin: 0;
+}
+
+.card-two-texts .text .emo.arrow {
+  margin: -3.5mm;
+}
+
+.voodoo .test {
+  position: absolute;
+  top: 37.1mm;
+  left: 8mm;
+  transform: translate(-50%, -50%) !important;
+  z-index: 3;
+  width: 16mm;
+  height: 16mm;
+}
+
+/************************************************************
+ ***************** * * *    QUESTS    * * * *****************
+ ************************************************************/
+
+
+
+/* Fix last empty page */
+.cards {
+  margin-bottom: -10mm;
+}
+
+.cards {
+  overflow: hidden;
+}
+
+/************************************************************
+ ***************** * * *  BACK SIDES  * * * *****************
+ ************************************************************/
+
+.card.back-side {
+  background: white url(http://localhost:8080/imgs/cmzc-logo.png) center center no-repeat;
+  background-size: 3.5cm
+}
+
+.card.back-side:not(.quest) {
+  transform: rotate(180deg);
+}
+
+.card.quest.card.back-side {
+  background-size: 4.5cm;
+}
+
+.card.back-side.ruka {
+  background-image: url(http://localhost:8080/imgs/background-ruka.png);
+}
+
+.card.back-side.noha {
+  background-image: url(http://localhost:8080/imgs/background-noha.png);
+}

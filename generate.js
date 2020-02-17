@@ -87,6 +87,7 @@ const savePdf = async (htmlData, settings ) => {
     const csvFile = `${process.argv[2]}/cards.csv`;
     const cssFile = `${process.argv[2]}/style.css`;
     const backgrounds = parseInt(process.argv[process.argv.indexOf('backgrounds') + 1]);
+    const customName = process.argv.includes('output') ? process.argv[process.argv.indexOf('output') + 1] : false;
     const csvData = fs.readFileSync(csvFile, 'utf8');
     const cssData = fs.readFileSync(cssFile, 'utf8');
     const cardsData = csvToObject(csvData);
@@ -109,55 +110,15 @@ const savePdf = async (htmlData, settings ) => {
       });
     }
 
-    if (process.argv.includes('cmzc')) {
-      const horizontalHtmlData = generateHtml(
-        cardsData.filter(c => ['basic', 'bio', 'tech', 'voodoo'].includes(c.type)),
-        includeBackSides,
-        cssData
-      );
-      const verticalHtmlData = generateHtml(
-        cardsData.filter(c => ['quest', 'animatron'].includes(c.type)),
-        includeBackSides,
-        cssData
-      );
-      await savePdf(horizontalHtmlData, {
-        path: 'cmzc-horizontal.pdf',
-        format: 'A4',
-        printBackground: true,
-        landscape: true,
-        margin: {
-            top: "9mm",
-            right: "16.5mm",
-            bottom: "9mm",
-            left: "16.5mm"
-        }
-      });
-      await savePdf(verticalHtmlData, {
-        path: 'cmzc-vertical.pdf',
-        format: 'A4',
-        printBackground: true,
-        landscape: false,
-        margin: {
-            right: "9mm",
-            top: "16.5mm",
-            left: "9mm",
-            bottom: "16.5mm"
-        }
-      });
-    } else {
-      await savePdf(htmlData, {
-        path: 'mypdf.pdf',
-        format: 'A4',
-        printBackground: true,
-        landscape: false,
-        margin: {
-            right: "10.5mm",
-            top: "16.5mm",
-            left: "10.5mm",
-            bottom: "16.5mm"
-        }
-      });
-    }
+    await savePdf(htmlData, {
+      path: customName ? `${customName}.pdf` : 'mypdf.pdf',
+      format: 'A4',
+      printBackground: true,
+      landscape: process.argv.includes('landscape'),
+      margin: {
+          top: process.argv.includes('landscape') ? "9mm" : "16.5mm",
+      }
+    });
 
     process.exit();
 
