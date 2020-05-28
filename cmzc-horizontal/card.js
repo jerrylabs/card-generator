@@ -135,7 +135,7 @@ const getFieldMarkup = (title, value, card) => {
     break;
     case 'image':
       markup = `<img
-        src="http://localhost:8080/imgs/ilus/${value}.jpg"
+        src="http://localhost:8080/imgs/ilus/png/${value}.png"
         class="illustration" />`;
     break;
     case 'rerolls':

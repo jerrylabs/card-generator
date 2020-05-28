@@ -1,0 +1,62 @@
+body {
+  -webkit-print-color-adjust: exact;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+}
+
+* {
+  background-repeat: no-repeat;
+}
+
+.cards {
+  text-align: center;
+}
+
+.card {
+  font-size: 12px;
+  display: inline-block;
+  overflow: hidden;
+  width: 44.0mm;
+  height: 64.0mm;
+  box-sizing: border-box;
+  page-break-inside: avoid;
+  position: relative;
+}
+
+.card-frame {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border: 2mm solid white;
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 2;
+}
+
+.type {
+  display: none;
+}
+
+.card.quest {
+  background: transparent url(http://localhost:8080/imgs/background-quest.jpg) center center;
+  background-size: 100% 100%;
+}
+
+
+/************************************************************
+ ***************** * * *  BACK SIDES  * * * *****************
+ ************************************************************/
+
+.card.back-side {
+  background: white url(http://localhost:8080/imgs/cmzc-logo.png) center center no-repeat;
+  background-size: 3.5cm
+}
+
+.card.back-side:not(.quest) {
+  transform: rotate(180deg);
+}
