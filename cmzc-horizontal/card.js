@@ -152,11 +152,17 @@ const getFieldMarkup = (title, value, card) => {
           <div class="text-part">${getTextMarkup(card.text2)}</div>
         </div>`;
       } else {
-        markup = `<div class="text${
-          card.text.includes("{") ? ' text-all' : ''
-        }${
-          card.text.length >= 85 ? ' text-long' : ''
-        }">${getTextMarkup(value)}</div>`;
+        // markup = `<div class="text${
+        //   card.text.includes("{") ? ' text-all' : ''
+        // }${
+        //   card.text.length >= 85 ? ' text-long' : ''
+        // }">${getTextMarkup(value)}</div>`;
+        if (card.type === 'bio' || card.type === 'tech') {
+          markup =  `<div class="text shadow">${getTextMarkup(value)}</div>
+          <div class="text">${getTextMarkup(value)}</div>`;
+        } else {
+          markup =  `<div class="text shadow">${getTextMarkup(value)}</div>`;
+        }
       }
     break;
     case 'test':

@@ -27,6 +27,8 @@ html, body {
   box-sizing: border-box;
   page-break-inside: avoid;
   position: relative;
+  background-size: 100% 100%;
+  background-position: center center;
 }
 
 .card.quest {
@@ -70,30 +72,11 @@ html, body {
   display: none;
 }
 
-.card.bio {
-  background: transparent url(http://localhost:8080/imgs/background-bio.jpg) center center;
-  background-size: contain;
-}
-
-.card.tech {
-  background: transparent url(http://localhost:8080/imgs/background-tech.jpg) center center;
-  background-size: contain;
-}
-
-.card.basic {
-  background: transparent url(http://localhost:8080/imgs/background-basic.jpg) center center;
-  background-size: contain;
-}
-
-.card.voodoo {
-  background: transparent url(http://localhost:8080/imgs/background-voodoo.jpg) center center;
-  background-size: 100% 100%;
-}
-
-.card.quest {
-  background: transparent url(http://localhost:8080/imgs/background-quest.jpg) center center;
-  background-size: 100% 100%;
-}
+.card.bio { background-image: url(http://localhost:8080/imgs/background-bio.jpg); }
+.card.tech { background-image: url(http://localhost:8080/imgs/background-tech.jpg); }
+.card.basic { background-image: url(http://localhost:8080/imgs/background-basic.jpg); }
+.card.voodoo { background-image: url(http://localhost:8080/imgs/background-voodoo.jpg); }
+.card.quest { background-image: url(http://localhost:8080/imgs/background-quest.jpg); }
 
 .card-icons {
   position: absolute;
@@ -230,8 +213,8 @@ html, body {
 }
 
 .attribute {
-  width: 11mm;
-  margin: 1mm;
+  width: 12mm;
+  margin: 0mm;
 }
 
 .life {
@@ -313,7 +296,7 @@ html, body {
   position: absolute;
   z-index: 2;
   display: flex;
-  top: 11mm;
+  top: 10.5mm;
   width: 100%;
   align-items: center;
   justify-content: center;
@@ -323,19 +306,10 @@ html, body {
   padding-left: 3mm;
 }
 
-.bio .attr4 {
-  flex-wrap: wrap;
-  max-width: 34mm;
-  left: 5mm;
-}
-
-.bio .attr4 .life {
-  margin: -0.5mm 0.5mm;
-}
-
-.life, .attribute {
-  margin: 1mm 0.5mm;
-}
+.life, .attribute { margin: 1mm 0.2mm; }
+.attr4 {margin-left: 3.5mm; }
+.attr4 .attribute { margin: 1mm -2mm; }
+.attr4 .life { margin: 1mm -1mm; }
 
 .card-vertical .rerolls .life {
   margin: 2mm 0;
@@ -369,24 +343,25 @@ html, body {
 .text {
   position: absolute;
   z-index: 3;
-  left: 1mm;
+  left: 0mm;
   bottom: 1mm;
-  width: 42mm;
+  width: 44mm;
   /* background: transparent url(http://localhost:8080/imgs/background-text.png) center center no-repeat;
   background-size: 100% 100%; */
-  font-family: "Open Sans";
+  font-family: "Mirza";
   padding: 1mm;
   box-sizing: border-box;
-  font-size: 2.8mm;
-  font-weight: bold;
-  background: linear-gradient(transparent 0%, rgba(0, 154, 0, 0.7) 50%)
+  font-size: 4.2mm;
+  line-height: 1;
+  font-weight: 700;
 }
 
-.bio .text {
-  height: 18mm;
-  display: flex;
-  align-items: center;
-}
+.bio .text, .tech .text { display: flex; align-items: center; }
+.text.shadow { color: transparent; }
+.bio .text.shadow { text-shadow: 5px 5px 10px #e9ffe9, -5px -5px 10px #e9ffe9, 5px -5px 10px #e9ffe9, -5px 5px 10px #e9ffe9; }
+.tech .text.shadow { text-shadow: 5px 5px 10px #e9e9ff, -5px -5px 10px #e9e9ff, 5px -5px 10px #e9e9ff, -5px 5px 10px #e9e9ff; }
+
+.text
 
 .voodoo .text {
   bottom: 5mm;
