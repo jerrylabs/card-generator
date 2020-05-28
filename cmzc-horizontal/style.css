@@ -120,6 +120,8 @@ html, body {
   line-height: 7mm;
   color: yellow;
   text-shadow: 1px 1px 0px black, -1px -1px 0px black, 1px -1px 0px black, -1px 1px 0px black, 0px 3px 3px rgba(0,0,0,0.6);
+  text-shadow: 2px 2px 2px black, -2px -2px 2px black, 2px -2px 2px black, -2px 2px 2px black, 0px 3px 3px rgba(0,0,0,0.6);
+  letter-spacing: 0.5px;
 }
 
 .title-long {
