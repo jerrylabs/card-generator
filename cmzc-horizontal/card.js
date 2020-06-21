@@ -153,7 +153,7 @@ const getFieldMarkup = (title, value, card) => {
           <div class="text-part">${getTextMarkup(card.text2)}</div>
         </div>`;
       } else {
-          markup =  `<div class="text">${getTextMarkup(value)}</div>`;
+          markup =  `<div class="text${value.includes('<br>') ? ' special' : ''}">${getTextMarkup(value)}</div>`;
           if (card.type === 'bio' || card.type === 'tech') {
             markup += `<div class="text text-shadow">${getTextMarkup(value)}</div>`;
           }

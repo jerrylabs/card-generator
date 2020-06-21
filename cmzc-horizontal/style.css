@@ -31,20 +31,6 @@ html, body {
   background-position: center center;
 }
 
-.card.quest {
-  width: 64.0mm;
-  height: 88.0mm;
-  /* transform: rotate(-90deg);
-  margin: -12mm 12mm; */
-}
-
-.card.animatron {
-  width: 88mm;
-  height: 118mm;
-  /* transform: rotate(-90deg);
-  margin: -11mm 19mm; // +4mm on all sides */
-}
-
 /* bg overlay */
 /* .bio.card::before,
 .tech.card::before, */
@@ -340,7 +326,7 @@ html, body {
   left: -10mm;
   bottom: 0mm;
   width: 64mm;
-  /* background: radial-gradient(ellipse farthest-side at center 50%, rgba(255, 255, 255, 0.5) 80%, transparent 100%); */
+  background: radial-gradient(ellipse farthest-side at center 50%, rgba(255, 255, 255, 0.5) 80%, transparent 100%);
   font-family: "Mirza";
   padding: 2mm 11mm;
 }
@@ -351,9 +337,9 @@ html, body {
   filter: blur(2px);
 }
 
-/* .bio .text.special, .tech .text.special {
+.bio .text.special, .tech .text.special {
   background: radial-gradient(ellipse farthest-side at center 55%, rgba(255, 255, 255, 0.5) 80%, transparent 100%);
-} */
+}
 
 .voodoo .text {
   bottom: 5mm;

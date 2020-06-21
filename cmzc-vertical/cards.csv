@@ -1,0 +1,62 @@
+"type","title","test","reward","image","text"
+"quest","Klika namazaná lepidlem","P",1,"01-klika_namazana_lepidlem",
+"quest","Neotevřitelná truhlička","P","1c","neotevritelna_truhlicka",
+"quest","Medvědí past","P",1,"03-medvedi_past",
+"quest","Padající mříž","P","1c","04-padajici_mriz",
+"quest","Drtička směšného odpadu","P",1,"05-drticka_smesneho_odpadu",
+"quest","Spolknutí vorvaněm","P",1,"06-spolknuti_vorvanem","Ham!"
+"quest","Lázeň s piraněmi","P",2,"07-lazen_s_piranemi",
+"quest","Lisovna plechu","P","2c","08-lisovna_plechu",
+"quest","Rajský plyn","P",2,"09-rajsky_plyn","Och, ta vůně!"
+"quest","Střevaleptající plyn","P",2,"10-strevaleptajici_plyn",
+"quest","Místnost cirkulárek","P","2c","11-mistnost_cirkularek",
+"quest","Kyselinokrvý kyanidoslinný biomutant","P",3,"12-kyselinokrvykyanidoslinny_biomutant",
+"quest","Motoropilozubý tygr","P","3c","13-motoropilozuby_tygr",
+"quest","Tyranosaurus","P",3,"14-tyranosaurus","Je to samice."
+"quest","Kabelnice","P","3cc","15-kabelnice",
+"quest","Zapastěná truhlička","S","1c","16-zapastena_truhlicka",
+"quest","Laserový řezák","S",1,"17-laserovy_rezak",
+"quest","Pramen kyseliny","S",1,"18-pramen_kyseliny",
+"quest","Bortící se chodba","S",1,"19-bortici_se_chodba",
+"quest","Propadlo","S",1,"20-propadlo",
+"quest","Úzký můstek","S","1c","uzky_mustek",
+"quest","Ohnivý kruh","S",2,"ohnivy_kruh","Skok nebo smrt!"
+"quest","Žhavé uhlíky","S",2,"zhave_uhliky",
+"quest","Bazén kyseliny","S","2c","bazen_kyseliny","Běž rychle, ale opatrně!"
+"quest","Naolejovaná šikmá plocha","S",2,"naolejovana_sikma_plocha",
+"quest","Lávová místnost","S","2c","lavova_mistnost","Běž opatrně, ale rychle!"
+"quest","Padající piraně","S",3,"padajici_pirane","Piraně, všude piraně!"
+"quest","Motýli s&nbsp;žiletkovými křídly","S","3c","motyli_s_ziletkovymi_kridly","Ostré jako laser."
+"quest","Hejno divokých sršňů","S",3,"hejno_divokych_srsnu","Dorůstají až 80 cm."
+"quest","Valící se kameň","S","3cc","valici_se_kamen",
+"quest","Otrávená hostina","I",1,"otravena_hostina","Za 30 stříbrných Jidáš zakoupil slevněné koření."
+"quest","Lektvar podivuhodného zápachu","I",1,"lektvar2","Jedo čuchnutí porazí slona."
+"quest","Lektvar podezřele světélkující kapaliny","I",1,"lektvar1","Světélkuje v divném rytmu."
+"quest","Automat s&nbsp;obžerstvením","I","1c","automat_s_obzerstvenim",
+"quest","Hloupý troll","I",1,"hloupy_troll",
+"quest","Zamčené dveře","I","1c","zamcene_dvere",
+"quest","Zrcadlový labyrint","I",2,"zrcadlovy_labyrint",
+"quest","Šifrovaný vzkaz","I","2c","sifrovany_vzkaz","Čitelný pouze za měsíčního svitu."
+"quest","Zapastěný automat s&nbsp;obžerstvením","I","2c","zapasteny_automat_s_obzerstvenim",
+"quest","Laserová místnost","I",2,"laserova_mistnost",
+"quest","Ozubená kola","I",2,"ozubena_kola",
+"quest","Nášlapné miny","I",3,"naslapne_miny",
+"quest","Místnost bez východu","I","3cc","mistnost_bez_vychodu",
+"quest","Zámek vysokého napětí","I","3c","zamek_vysokeho_napeti",
+"quest","Vrtačkoruký klaun","I",3,"vrtackoruky_klaun","Vrrrr!"
+"animatron","Chuckie",,,"chuckie",
+"animatron","Hentai Barbie",,,"hentaibarbie",
+"animatron","Číslo 5",,,"cislo5",
+"animatron","Humunculus",,,"humunculus",
+"animatron","Zombie",,,"zombie",
+"animatron","Zombie",,,"zombie",
+"animatron","Zombie",,,"zombie",
+"animatron","Zombie",,,"zombie",
+"animatron","Gaybot",,,"gaybot",
+"animatron","Replikant",,,"replikant",
+"animatron","Organoid",,,"organoid",
+"animatron","Ilegální klon",,,"klon",
+"animatron","Zombie",,,"zombie",
+"animatron","Zombie",,,"zombie",
+"animatron","Zombie",,,"zombie",
+"animatron","Zombie",,,"zombie",
