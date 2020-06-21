@@ -87,8 +87,7 @@ const getFieldMarkup = (title, value, card) => {
 
     /* nazev karty */
     case 'title':
-      markup = `<div class="
-        ${title}
+      markup = `<div class="${title}
 
         ${value.length >= 18 ? ' title-long' : ''}
         ${value.length > 32 || (card.type == 'quest' && value.length >= 20) ? ' title-long' : ''}
@@ -96,10 +95,12 @@ const getFieldMarkup = (title, value, card) => {
         <span>${value}</span>
       </div>`;
       if ((card.requires || card.provides) && !card.text && card.type != 'quest') {
-        markup += `<div class="
-          title title-reversed
+        markup += `<div class="title title-reversed
           ${value.length >= 18 ? ' title-long' : ''}
           "><span>${value}</span></div>`;
+      }
+      if (card.type === 'bio' || card.type === 'tech') {
+         markup += markup.replace(/\"title/g, '"title title-shadow');
       }
     break;
 
@@ -152,17 +153,10 @@ const getFieldMarkup = (title, value, card) => {
           <div class="text-part">${getTextMarkup(card.text2)}</div>
         </div>`;
       } else {
-        // markup = `<div class="text${
-        //   card.text.includes("{") ? ' text-all' : ''
-        // }${
-        //   card.text.length >= 85 ? ' text-long' : ''
-        // }">${getTextMarkup(value)}</div>`;
-        if (card.type === 'bio' || card.type === 'tech') {
-          markup =  `<div class="text shadow">${getTextMarkup(value)}</div>
-          <div class="text">${getTextMarkup(value)}</div>`;
-        } else {
-          markup =  `<div class="text shadow">${getTextMarkup(value)}</div>`;
-        }
+          markup =  `<div class="text">${getTextMarkup(value)}</div>`;
+          if (card.type === 'bio' || card.type === 'tech') {
+            markup += `<div class="text text-shadow">${getTextMarkup(value)}</div>`;
+          }
       }
     break;
     case 'test':

@@ -107,20 +107,17 @@ html, body {
 .title {
   position: absolute;
   z-index: 2;
-  top: 2mm;
+  top: 0mm;
   left: 50%;
   transform: translateX(-50%);
   font-family: "BadaBoom CE";
   font-size: 5.6mm;
-  background: transparent url(http://localhost:8080/imgs/background-title-top.png) center -2px no-repeat;
   background-size: contain;
-  height: 7.5mm;
   width: 44mm;
-  padding: 0.4mm 0;
-  line-height: 7mm;
+  padding: 2.5mm 0 1mm;
+  /* line-height: 7mm;
+  height: 7.5mm; */
   color: yellow;
-  /* text-shadow: 1px 1px 0px black, -1px -1px 0px black, 1px -1px 0px black, -1px 1px 0px black, 0px 3px 3px rgba(0,0,0,0.6);
-  text-shadow: 2px 2px 2px black, -2px -2px 2px black, 2px -2px 2px black, -2px 2px 2px black, 0px 3px 3px rgba(0,0,0,0.6); */
   letter-spacing: 0.5px;
 }
 
@@ -142,6 +139,12 @@ html, body {
   padding-right: 6.5mm;
 }
 
+.title-shadow {
+  color: black;
+  filter: blur(2px);
+  z-index: 0;
+}
+
 .voodoo .title {
   background: none;
   height: 11.5mm;
@@ -160,9 +163,8 @@ html, body {
 
 .title-reversed {
   top: auto;
-  bottom: 2mm;
+  bottom: 0mm;
   transform: translateX(-50%) rotate(-180deg);
-  background-image: url(http://localhost:8080/imgs/background-title-bottom.png);
 }
 
 .joint { position: absolute; z-index: 4; height: 1.5cm; }
@@ -324,8 +326,6 @@ html, body {
   left: 0mm;
   bottom: 1mm;
   width: 44mm;
-  /* background: transparent url(http://localhost:8080/imgs/background-text.png) center center no-repeat;
-  background-size: 100% 100%; */
   font-family: "Mirza";
   padding: 1mm;
   box-sizing: border-box;
@@ -334,12 +334,26 @@ html, body {
   font-weight: 700;
 }
 
-.bio .text, .tech .text { display: flex; align-items: center; }
-.text.shadow { color: transparent; }
-/* .bio .text.shadow { text-shadow: 5px 5px 10px #e9ffe9, -5px -5px 10px #e9ffe9, 5px -5px 10px #e9ffe9, -5px 5px 10px #e9ffe9; }
-.tech .text.shadow { text-shadow: 5px 5px 10px #e9e9ff, -5px -5px 10px #e9e9ff, 5px -5px 10px #e9e9ff, -5px 5px 10px #e9e9ff; } */
+.bio .text, .tech .text {
+  display: flex;
+  align-items: center;
+  left: -10mm;
+  bottom: 0mm;
+  width: 64mm;
+  /* background: radial-gradient(ellipse farthest-side at center 50%, rgba(255, 255, 255, 0.5) 80%, transparent 100%); */
+  font-family: "Mirza";
+  padding: 2mm 11mm;
+}
 
-.text
+.bio .text-shadow, .tech .text-shadow {
+  z-index: 0;
+  color: white;
+  filter: blur(2px);
+}
+
+/* .bio .text.special, .tech .text.special {
+  background: radial-gradient(ellipse farthest-side at center 55%, rgba(255, 255, 255, 0.5) 80%, transparent 100%);
+} */
 
 .voodoo .text {
   bottom: 5mm;
@@ -455,7 +469,7 @@ html, body {
  ***************** * * *  BACK SIDES  * * * *****************
  ************************************************************/
 
-.card.back-side {
+/* .card.back-side {
   background: white url(http://localhost:8080/imgs/cmzc-logo.png) center center no-repeat;
   background-size: 3.5cm
 }
@@ -474,4 +488,10 @@ html, body {
 
 .card.back-side.noha {
   background-image: url(http://localhost:8080/imgs/background-noha.png);
+} */
+
+.background {
+  background: white url(http://localhost:8080/imgs/cmzc-logo.png) center center no-repeat;
+  background-size: 3.5cm;
+  transform: rotate(180deg);
 }

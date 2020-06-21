@@ -111,20 +111,17 @@ html, body {
 .title {
   position: absolute;
   z-index: 2;
-  top: 2mm;
+  top: 0mm;
   left: 50%;
   transform: translateX(-50%);
   font-family: "BadaBoom CE";
   font-size: 5.6mm;
-  background: transparent url(http://localhost:8080/imgs/background-title-top.png) center -2px no-repeat;
   background-size: contain;
-  height: 7.5mm;
   width: 44mm;
-  padding: 0.4mm 0;
-  line-height: 7mm;
+  padding: 2.5mm 0 1mm;
+  /* line-height: 7mm;
+  height: 7.5mm; */
   color: yellow;
-  /* text-shadow: 1px 1px 0px black, -1px -1px 0px black, 1px -1px 0px black, -1px 1px 0px black, 0px 3px 3px rgba(0,0,0,0.6);
-  text-shadow: 2px 2px 2px black, -2px -2px 2px black, 2px -2px 2px black, -2px 2px 2px black, 0px 3px 3px rgba(0,0,0,0.6); */
   letter-spacing: 0.5px;
 }
 
@@ -146,6 +143,12 @@ html, body {
   padding-right: 6.5mm;
 }
 
+.title-shadow {
+  color: black;
+  filter: blur(2px);
+  z-index: 0;
+}
+
 .voodoo .title {
   background: none;
   height: 11.5mm;
@@ -164,9 +167,8 @@ html, body {
 
 .title-reversed {
   top: auto;
-  bottom: 2mm;
+  bottom: 0mm;
   transform: translateX(-50%) rotate(-180deg);
-  background-image: url(http://localhost:8080/imgs/background-title-bottom.png);
 }
 
 .joint { position: absolute; z-index: 4; height: 1.5cm; }
@@ -297,7 +299,6 @@ html, body {
   margin: 2mm 0;
 }
 
-
 .card-has-joints .rerolls {
   bottom: 11mm;
   width: 100%;
@@ -329,8 +330,6 @@ html, body {
   left: 0mm;
   bottom: 1mm;
   width: 44mm;
-  /* background: transparent url(http://localhost:8080/imgs/background-text.png) center center no-repeat;
-  background-size: 100% 100%; */
   font-family: "Mirza";
   padding: 1mm;
   box-sizing: border-box;
@@ -339,12 +338,26 @@ html, body {
   font-weight: 700;
 }
 
-.bio .text, .tech .text { display: flex; align-items: center; }
-.text.shadow { color: transparent; }
-/* .bio .text.shadow { text-shadow: 5px 5px 10px #e9ffe9, -5px -5px 10px #e9ffe9, 5px -5px 10px #e9ffe9, -5px 5px 10px #e9ffe9; }
-.tech .text.shadow { text-shadow: 5px 5px 10px #e9e9ff, -5px -5px 10px #e9e9ff, 5px -5px 10px #e9e9ff, -5px 5px 10px #e9e9ff; } */
+.bio .text, .tech .text {
+  display: flex;
+  align-items: center;
+  left: -10mm;
+  bottom: 0mm;
+  width: 64mm;
+  /* background: radial-gradient(ellipse farthest-side at center 50%, rgba(255, 255, 255, 0.5) 80%, transparent 100%); */
+  font-family: "Mirza";
+  padding: 2mm 11mm;
+}
 
-.text
+.bio .text-shadow, .tech .text-shadow {
+  z-index: 0;
+  color: white;
+  filter: blur(2px);
+}
+
+/* .bio .text.special, .tech .text.special {
+  background: radial-gradient(ellipse farthest-side at center 55%, rgba(255, 255, 255, 0.5) 80%, transparent 100%);
+} */
 
 .voodoo .text {
   bottom: 5mm;
@@ -460,7 +473,7 @@ html, body {
  ***************** * * *  BACK SIDES  * * * *****************
  ************************************************************/
 
-.card.back-side {
+/* .card.back-side {
   background: white url(http://localhost:8080/imgs/cmzc-logo.png) center center no-repeat;
   background-size: 3.5cm
 }
@@ -479,6 +492,12 @@ html, body {
 
 .card.back-side.noha {
   background-image: url(http://localhost:8080/imgs/background-noha.png);
+} */
+
+.background {
+  background: white url(http://localhost:8080/imgs/cmzc-logo.png) center center no-repeat;
+  background-size: 3.5cm;
+  transform: rotate(180deg);
 }
       </style>
     </head>
@@ -495,15 +514,21 @@ html, body {
       
       
   ">
-    <div class="type">bio</div><div class="
-        title
+    <div class="type">bio</div><div class="title
 
         
         
       ">
         <span>Paže wrestlera</span>
-      </div><div class="
-          title title-reversed
+      </div><div class="title title-reversed
+          
+          "><span>Paže wrestlera</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Paže wrestlera</span>
+      </div><div class="title title-shadow title-reversed
           
           "><span>Paže wrestlera</span></div><img class="joint required single bone" src="http://localhost:8080/imgs/required-bone.png" /><img class="joint provided single hand" src="http://localhost:8080/imgs/provided-hand.png" /><div class="lives-and-attributes attr3">
         <div class="attributes">
@@ -513,7 +538,9 @@ html, body {
         ">
           <img class="life" src="http://localhost:8080/imgs/heart.png" />
         </div>
-      </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/Paže wrestlera.png"
+        class="illustration" />
   </div><div
     class="card
       bio
@@ -525,15 +552,21 @@ html, body {
       
       
   ">
-    <div class="type">bio</div><div class="
-        title
+    <div class="type">bio</div><div class="title
 
         
         
       ">
         <span>Vystřelovací pěst</span>
-      </div><div class="
-          title title-reversed
+      </div><div class="title title-reversed
+          
+          "><span>Vystřelovací pěst</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Vystřelovací pěst</span>
+      </div><div class="title title-shadow title-reversed
           
           "><span>Vystřelovací pěst</span></div><img class="joint required single bone" src="http://localhost:8080/imgs/required-bone.png" /><img class="joint provided single hand" src="http://localhost:8080/imgs/provided-hand.png" /><div class="lives-and-attributes attr3">
         <div class="attributes">
@@ -543,7 +576,9 @@ html, body {
         ">
           <img class="life" src="http://localhost:8080/imgs/heart.png" />
         </div>
-      </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/vystrelovaci pest copy.png"
+        class="illustration" />
   </div><div
     class="card
       bio
@@ -555,8 +590,13 @@ html, body {
       
       
   ">
-    <div class="type">bio</div><div class="
-        title
+    <div class="type">bio</div><div class="title
+
+        
+        
+      ">
+        <span>Chmatákova ruka</span>
+      </div><div class="title title-shadow
 
         
         
@@ -570,8 +610,9 @@ html, body {
         ">
           <img class="life" src="http://localhost:8080/imgs/heart.png" />
         </div>
-      </div><div class="text shadow">Jednou za kolo si<br>můžeš vzít náhodnou kartu z ruky protihráče.</div>
-          <div class="text">Jednou za kolo si<br>můžeš vzít náhodnou kartu z ruky protihráče.</div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/chmatakova ruka.png"
+        class="illustration" /><div class="text">Jednou za kolo si<br>můžeš vzít náhodnou kartu z ruky protihráče.</div><div class="text text-shadow">Jednou za kolo si<br>můžeš vzít náhodnou kartu z ruky protihráče.</div>
   </div><div
     class="card
       bio
@@ -583,15 +624,21 @@ html, body {
       
       
   ">
-    <div class="type">bio</div><div class="
-        title
+    <div class="type">bio</div><div class="title
 
         
         
       ">
         <span>Natažitelná ruka</span>
-      </div><div class="
-          title title-reversed
+      </div><div class="title title-reversed
+          
+          "><span>Natažitelná ruka</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Natažitelná ruka</span>
+      </div><div class="title title-shadow title-reversed
           
           "><span>Natažitelná ruka</span></div><img class="joint required single bone" src="http://localhost:8080/imgs/required-bone.png" /><img class="joint provided single hand" src="http://localhost:8080/imgs/provided-hand.png" /><div class="lives-and-attributes attr3">
         <div class="attributes">
@@ -601,7 +648,9 @@ html, body {
         ">
           <img class="life" src="http://localhost:8080/imgs/heart.png" />
         </div>
-      </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/natazitelna.png"
+        class="illustration" />
   </div><div
     class="card
       bio
@@ -613,15 +662,21 @@ html, body {
       
       
   ">
-    <div class="type">bio</div><div class="
-        title
+    <div class="type">bio</div><div class="title
 
         
         
       ">
         <span>Diablovo kopyto</span>
-      </div><div class="
-          title title-reversed
+      </div><div class="title title-reversed
+          
+          "><span>Diablovo kopyto</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Diablovo kopyto</span>
+      </div><div class="title title-shadow title-reversed
           
           "><span>Diablovo kopyto</span></div><img class="joint required single bone" src="http://localhost:8080/imgs/required-bone.png" /><img class="joint provided single leg" src="http://localhost:8080/imgs/provided-leg.png" /><div class="lives-and-attributes attr3">
         <div class="attributes">
@@ -631,7 +686,9 @@ html, body {
         ">
           <img class="life" src="http://localhost:8080/imgs/heart.png" />
         </div>
-      </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/kopyto.png"
+        class="illustration" />
   </div><div
     class="card
       bio
@@ -643,15 +700,21 @@ html, body {
       
       
   ">
-    <div class="type">bio</div><div class="
-        title
+    <div class="type">bio</div><div class="title
 
         
         
       ">
         <span>Opičí noha</span>
-      </div><div class="
-          title title-reversed
+      </div><div class="title title-reversed
+          
+          "><span>Opičí noha</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Opičí noha</span>
+      </div><div class="title title-shadow title-reversed
           
           "><span>Opičí noha</span></div><img class="joint required single bone" src="http://localhost:8080/imgs/required-bone.png" /><img class="joint provided first hand" src="http://localhost:8080/imgs/provided-hand.png" />
             <img class="joint provided second leg" src="http://localhost:8080/imgs/provided-leg.png" /><div class="lives-and-attributes attr3">
@@ -662,7 +725,9 @@ html, body {
         ">
           <img class="life" src="http://localhost:8080/imgs/heart.png" />
         </div>
-      </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/opici noha-1.png"
+        class="illustration" />
   </div><div
     class="card
       bio
@@ -674,15 +739,21 @@ html, body {
       
       
   ">
-    <div class="type">bio</div><div class="
-        title
+    <div class="type">bio</div><div class="title
 
         
         
       ">
         <span>Žahavé chapadla</span>
-      </div><div class="
-          title title-reversed
+      </div><div class="title title-reversed
+          
+          "><span>Žahavé chapadla</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Žahavé chapadla</span>
+      </div><div class="title title-shadow title-reversed
           
           "><span>Žahavé chapadla</span></div><img class="joint required single bone" src="http://localhost:8080/imgs/required-bone.png" /><img class="joint provided first hand" src="http://localhost:8080/imgs/provided-hand.png" />
             <img class="joint provided second hand" src="http://localhost:8080/imgs/provided-hand.png" /><div class="lives-and-attributes attr2">
@@ -693,7 +764,9 @@ html, body {
         ">
           <img class="life" src="http://localhost:8080/imgs/heart.png" />
         </div>
-      </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/chapadlo.png"
+        class="illustration" />
   </div><div
     class="card
       bio
@@ -705,15 +778,21 @@ html, body {
       
       
   ">
-    <div class="type">bio</div><div class="
-        title
+    <div class="type">bio</div><div class="title
 
         
         
       ">
         <span>Dual ruka</span>
-      </div><div class="
-          title title-reversed
+      </div><div class="title title-reversed
+          
+          "><span>Dual ruka</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Dual ruka</span>
+      </div><div class="title title-shadow title-reversed
           
           "><span>Dual ruka</span></div><img class="joint required single bone" src="http://localhost:8080/imgs/required-bone.png" /><img class="joint provided first hand" src="http://localhost:8080/imgs/provided-hand.png" />
             <img class="joint provided second hand" src="http://localhost:8080/imgs/provided-hand.png" /><div class="lives-and-attributes attr2">
@@ -724,7 +803,9 @@ html, body {
         ">
           <img class="life" src="http://localhost:8080/imgs/heart.png" />
         </div>
-      </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/dual ruka.png"
+        class="illustration" />
   </div><div
     class="card
       bio
@@ -736,15 +817,21 @@ html, body {
       
       
   ">
-    <div class="type">bio</div><div class="
-        title
+    <div class="type">bio</div><div class="title
 
          title-long
         
       ">
         <span>Integrovaný rotačák</span>
-      </div><div class="
-          title title-reversed
+      </div><div class="title title-reversed
+           title-long
+          "><span>Integrovaný rotačák</span></div><div class="title title-shadow
+
+         title-long
+        
+      ">
+        <span>Integrovaný rotačák</span>
+      </div><div class="title title-shadow title-reversed
            title-long
           "><span>Integrovaný rotačák</span></div><img class="joint required single bone" src="http://localhost:8080/imgs/required-bone.png" /><div class="lives-and-attributes attr4">
         <div class="attributes">
@@ -754,7 +841,9 @@ html, body {
         ">
           <img class="life" src="http://localhost:8080/imgs/heart.png" /><img class="life" src="http://localhost:8080/imgs/heart.png" />
         </div>
-      </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/integrovany rotacak - N.png"
+        class="illustration" />
   </div><div
     class="card
       bio
@@ -766,15 +855,21 @@ html, body {
       
       
   ">
-    <div class="type">bio</div><div class="
-        title
+    <div class="type">bio</div><div class="title
 
         
         
       ">
         <span>Megavrták</span>
-      </div><div class="
-          title title-reversed
+      </div><div class="title title-reversed
+          
+          "><span>Megavrták</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Megavrták</span>
+      </div><div class="title title-shadow title-reversed
           
           "><span>Megavrták</span></div><img class="joint required single bone" src="http://localhost:8080/imgs/required-bone.png" /><div class="lives-and-attributes attr4">
         <div class="attributes">
@@ -784,7 +879,9 @@ html, body {
         ">
           <img class="life" src="http://localhost:8080/imgs/heart.png" /><img class="life" src="http://localhost:8080/imgs/heart.png" />
         </div>
-      </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/megavrtak.png"
+        class="illustration" />
   </div><div
     class="card
       bio
@@ -796,15 +893,21 @@ html, body {
       
       
   ">
-    <div class="type">bio</div><div class="
-        title
+    <div class="type">bio</div><div class="title
 
         
         
       ">
         <span>Kyber paže</span>
-      </div><div class="
-          title title-reversed
+      </div><div class="title title-reversed
+          
+          "><span>Kyber paže</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Kyber paže</span>
+      </div><div class="title title-shadow title-reversed
           
           "><span>Kyber paže</span></div><img class="joint provided single hand" src="http://localhost:8080/imgs/provided-hand.png" /><div class="lives-and-attributes attr2">
         <div class="attributes">
@@ -814,7 +917,9 @@ html, body {
         ">
           <img class="life" src="http://localhost:8080/imgs/heart.png" />
         </div>
-      </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/kyber paze.png"
+        class="illustration" />
   </div><div
     class="card
       bio
@@ -826,15 +931,21 @@ html, body {
       
       
   ">
-    <div class="type">bio</div><div class="
-        title
+    <div class="type">bio</div><div class="title
 
         
         
       ">
         <span>Sloní chobot</span>
-      </div><div class="
-          title title-reversed
+      </div><div class="title title-reversed
+          
+          "><span>Sloní chobot</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Sloní chobot</span>
+      </div><div class="title title-shadow title-reversed
           
           "><span>Sloní chobot</span></div><img class="joint provided single hand" src="http://localhost:8080/imgs/provided-hand.png" /><div class="lives-and-attributes attr2">
         <div class="attributes">
@@ -844,7 +955,9 @@ html, body {
         ">
           <img class="life" src="http://localhost:8080/imgs/heart.png" />
         </div>
-      </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/Sloní chobot.png"
+        class="illustration" />
   </div><div
     class="card
       bio
@@ -856,15 +969,21 @@ html, body {
       
       
   ">
-    <div class="type">bio</div><div class="
-        title
+    <div class="type">bio</div><div class="title
 
         
         
       ">
         <span>Roboruce</span>
-      </div><div class="
-          title title-reversed
+      </div><div class="title title-reversed
+          
+          "><span>Roboruce</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Roboruce</span>
+      </div><div class="title title-shadow title-reversed
           
           "><span>Roboruce</span></div><img class="joint provided first hand" src="http://localhost:8080/imgs/provided-hand.png" />
             <img class="joint provided second hand" src="http://localhost:8080/imgs/provided-hand.png" /><div class="lives-and-attributes attr1">
@@ -875,7 +994,9 @@ html, body {
         ">
           <img class="life" src="http://localhost:8080/imgs/heart.png" />
         </div>
-      </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/dalsie ruky.png"
+        class="illustration" />
   </div><div
     class="card
       bio
@@ -887,15 +1008,21 @@ html, body {
       
       
   ">
-    <div class="type">bio</div><div class="
-        title
+    <div class="type">bio</div><div class="title
 
         
         
       ">
         <span>Údní nástavec</span>
-      </div><div class="
-          title title-reversed
+      </div><div class="title title-reversed
+          
+          "><span>Údní nástavec</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Údní nástavec</span>
+      </div><div class="title title-shadow title-reversed
           
           "><span>Údní nástavec</span></div><img class="joint provided single bone" src="http://localhost:8080/imgs/provided-bone.png" /><div class="lives-and-attributes attr1">
         <div class="attributes">
@@ -905,7 +1032,9 @@ html, body {
         ">
           <img class="life" src="http://localhost:8080/imgs/heart.png" />
         </div>
-      </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/ud nastavec - N.png"
+        class="illustration" />
   </div><div
     class="card
       bio
@@ -917,15 +1046,21 @@ html, body {
       
       
   ">
-    <div class="type">bio</div><div class="
-        title
+    <div class="type">bio</div><div class="title
 
         
         
       ">
         <span>Údní nástavec</span>
-      </div><div class="
-          title title-reversed
+      </div><div class="title title-reversed
+          
+          "><span>Údní nástavec</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Údní nástavec</span>
+      </div><div class="title title-shadow title-reversed
           
           "><span>Údní nástavec</span></div><img class="joint provided single bone" src="http://localhost:8080/imgs/provided-bone.png" /><div class="lives-and-attributes attr1">
         <div class="attributes">
@@ -935,7 +1070,9 @@ html, body {
         ">
           <img class="life" src="http://localhost:8080/imgs/heart.png" />
         </div>
-      </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/ud nastavec - N.png"
+        class="illustration" />
   </div><div
     class="card
       bio
@@ -947,8 +1084,13 @@ html, body {
       
       
   ">
-    <div class="type">bio</div><div class="
-        title
+    <div class="type">bio</div><div class="title
+
+        
+        
+      ">
+        <span>Průhledná kůže</span>
+      </div><div class="title title-shadow
 
         
         
@@ -962,7 +1104,9 @@ html, body {
         ">
           
         </div>
-      </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/neviditelny plast.png"
+        class="illustration" />
   </div><div
     class="card
       bio
@@ -974,8 +1118,13 @@ html, body {
       
       
   ">
-    <div class="type">bio</div><div class="
-        title
+    <div class="type">bio</div><div class="title
+
+        
+        
+      ">
+        <span>Laserové oko</span>
+      </div><div class="title title-shadow
 
         
         
@@ -989,7 +1138,9 @@ html, body {
         ">
           
         </div>
-      </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/laserove oko.png"
+        class="illustration" />
   </div><div
     class="card
       bio
@@ -1001,8 +1152,13 @@ html, body {
       
       
   ">
-    <div class="type">bio</div><div class="
-        title
+    <div class="type">bio</div><div class="title
+
+        
+        
+      ">
+        <span>Měňavost</span>
+      </div><div class="title title-shadow
 
         
         
@@ -1016,8 +1172,10 @@ html, body {
         ">
           
         </div>
-      </div>
-  </div><div
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/menavec.png"
+        class="illustration" />
+  </div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div
     class="card
       bio
       
@@ -1028,8 +1186,13 @@ html, body {
       
       
   ">
-    <div class="type">bio</div><div class="
-        title
+    <div class="type">bio</div><div class="title
+
+        
+        
+      ">
+        <span>Kyselinný pot</span>
+      </div><div class="title title-shadow
 
         
         
@@ -1043,7 +1206,9 @@ html, body {
         ">
           
         </div>
-      </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/pot aliena.png"
+        class="illustration" />
   </div><div
     class="card
       bio
@@ -1055,8 +1220,13 @@ html, body {
       
       
   ">
-    <div class="type">bio</div><div class="
-        title
+    <div class="type">bio</div><div class="title
+
+        
+        
+      ">
+        <span>Kyselinná krev</span>
+      </div><div class="title title-shadow
 
         
         
@@ -1070,7 +1240,9 @@ html, body {
         ">
           
         </div>
-      </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/kyselina krev.png"
+        class="illustration" />
   </div><div
     class="card
       bio
@@ -1082,8 +1254,13 @@ html, body {
       
       
   ">
-    <div class="type">bio</div><div class="
-        title
+    <div class="type">bio</div><div class="title
+
+        
+        
+      ">
+        <span>Chameleoní kůže</span>
+      </div><div class="title title-shadow
 
         
         
@@ -1097,7 +1274,9 @@ html, body {
         ">
           
         </div>
-      </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/maskovani.png"
+        class="illustration" />
   </div><div
     class="card
       bio
@@ -1109,8 +1288,13 @@ html, body {
       
       
   ">
-    <div class="type">bio</div><div class="
-        title
+    <div class="type">bio</div><div class="title
+
+        
+        
+      ">
+        <span>Mozek asiata</span>
+      </div><div class="title title-shadow
 
         
         
@@ -1124,7 +1308,9 @@ html, body {
         ">
           
         </div>
-      </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/mozog aziata.png"
+        class="illustration" />
   </div><div
     class="card
       bio
@@ -1136,8 +1322,13 @@ html, body {
       
       
   ">
-    <div class="type">bio</div><div class="
-        title
+    <div class="type">bio</div><div class="title
+
+        
+        
+      ">
+        <span>Žhavá kůže</span>
+      </div><div class="title title-shadow
 
         
         
@@ -1151,7 +1342,9 @@ html, body {
         ">
           
         </div>
-      </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/žhavá kuže.png"
+        class="illustration" />
   </div><div
     class="card
       bio
@@ -1163,8 +1356,13 @@ html, body {
       
       
   ">
-    <div class="type">bio</div><div class="
-        title
+    <div class="type">bio</div><div class="title
+
+        
+        
+      ">
+        <span>Mrazivý dech</span>
+      </div><div class="title title-shadow
 
         
         
@@ -1178,7 +1376,9 @@ html, body {
         ">
           
         </div>
-      </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/Mrazivý dech.png"
+        class="illustration" />
   </div><div
     class="card
       bio
@@ -1190,8 +1390,13 @@ html, body {
       
       
   ">
-    <div class="type">bio</div><div class="
-        title
+    <div class="type">bio</div><div class="title
+
+        
+        
+      ">
+        <span>Srdeční pumpa</span>
+      </div><div class="title title-shadow
 
         
         
@@ -1205,7 +1410,9 @@ html, body {
         ">
           
         </div>
-      </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/Srdecní pumpa.png"
+        class="illustration" />
   </div><div
     class="card
       bio
@@ -1217,8 +1424,13 @@ html, body {
       
       
   ">
-    <div class="type">bio</div><div class="
-        title
+    <div class="type">bio</div><div class="title
+
+         title-long
+        
+      ">
+        <span>Hydraulický biceps</span>
+      </div><div class="title title-shadow
 
          title-long
         
@@ -1232,7 +1444,9 @@ html, body {
         ">
           <img class="life" src="http://localhost:8080/imgs/heart.png" />
         </div>
-      </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/hydraluicky biceps.png"
+        class="illustration" />
   </div><div
     class="card
       bio
@@ -1244,8 +1458,13 @@ html, body {
       
       
   ">
-    <div class="type">bio</div><div class="
-        title
+    <div class="type">bio</div><div class="title
+
+        
+        
+      ">
+        <span>Žraločí zuby</span>
+      </div><div class="title title-shadow
 
         
         
@@ -1259,7 +1478,9 @@ html, body {
         ">
           <img class="life" src="http://localhost:8080/imgs/heart.png" />
         </div>
-      </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/Žraločí zuby .png"
+        class="illustration" />
   </div><div
     class="card
       bio
@@ -1271,8 +1492,13 @@ html, body {
       
       
   ">
-    <div class="type">bio</div><div class="
-        title
+    <div class="type">bio</div><div class="title
+
+        
+        
+      ">
+        <span>Titanové zuby</span>
+      </div><div class="title title-shadow
 
         
         
@@ -1286,7 +1512,9 @@ html, body {
         ">
           <img class="life" src="http://localhost:8080/imgs/heart.png" />
         </div>
-      </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/Titanové zuby.png"
+        class="illustration" />
   </div><div
     class="card
       bio
@@ -1298,8 +1526,13 @@ html, body {
       
       
   ">
-    <div class="type">bio</div><div class="
-        title
+    <div class="type">bio</div><div class="title
+
+        
+        
+      ">
+        <span>Netopýří uši</span>
+      </div><div class="title title-shadow
 
         
         
@@ -1313,7 +1546,9 @@ html, body {
         ">
           <img class="life" src="http://localhost:8080/imgs/heart.png" />
         </div>
-      </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/netopiri usi.png"
+        class="illustration" />
   </div><div
     class="card
       bio
@@ -1325,8 +1560,13 @@ html, body {
       
       
   ">
-    <div class="type">bio</div><div class="
-        title
+    <div class="type">bio</div><div class="title
+
+        
+        
+      ">
+        <span>Kachní žaludek</span>
+      </div><div class="title title-shadow
 
         
         
@@ -1340,7 +1580,9 @@ html, body {
         ">
           <img class="life" src="http://localhost:8080/imgs/heart.png" /><img class="life" src="http://localhost:8080/imgs/heart.png" />
         </div>
-      </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/kachni zaludek.png"
+        class="illustration" />
   </div><div
     class="card
       bio
@@ -1352,8 +1594,13 @@ html, body {
       
       
   ">
-    <div class="type">bio</div><div class="
-        title
+    <div class="type">bio</div><div class="title
+
+        
+        
+      ">
+        <span>Kovová kostra</span>
+      </div><div class="title title-shadow
 
         
         
@@ -1367,7 +1614,9 @@ html, body {
         ">
           <img class="life" src="http://localhost:8080/imgs/heart.png" /><img class="life" src="http://localhost:8080/imgs/heart.png" />
         </div>
-      </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/kovova kostra.png"
+        class="illustration" />
   </div><div
     class="card
       bio
@@ -1379,8 +1628,13 @@ html, body {
       
       
   ">
-    <div class="type">bio</div><div class="
-        title
+    <div class="type">bio</div><div class="title
+
+        
+        
+      ">
+        <span>Statečné srdce</span>
+      </div><div class="title title-shadow
 
         
         
@@ -1394,7 +1648,9 @@ html, body {
         ">
           <img class="life" src="http://localhost:8080/imgs/heart.png" /><img class="life" src="http://localhost:8080/imgs/heart.png" /><img class="life" src="http://localhost:8080/imgs/heart.png" />
         </div>
-      </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/Statečné srdce.png"
+        class="illustration" />
   </div><div
     class="card
       bio
@@ -1406,8 +1662,13 @@ html, body {
       
       
   ">
-    <div class="type">bio</div><div class="
-        title
+    <div class="type">bio</div><div class="title
+
+        
+        
+      ">
+        <span>Šmírákovo oko</span>
+      </div><div class="title title-shadow
 
         
         
@@ -1421,8 +1682,9 @@ html, body {
         ">
           <img class="life" src="http://localhost:8080/imgs/heart.png" />
         </div>
-      </div><div class="text shadow">Jednou za kolo se můžeš podívat do karet na ruce jednoho protihráče.</div>
-          <div class="text">Jednou za kolo se můžeš podívat do karet na ruce jednoho protihráče.</div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/smirakaovo oko.png"
+        class="illustration" /><div class="text">Jednou za kolo se můžeš podívat do karet na ruce jednoho protihráče.</div><div class="text text-shadow">Jednou za kolo se můžeš podívat do karet na ruce jednoho protihráče.</div>
   </div><div
     class="card
       bio
@@ -1434,8 +1696,13 @@ html, body {
       
       
   ">
-    <div class="type">bio</div><div class="
-        title
+    <div class="type">bio</div><div class="title
+
+        
+        
+      ">
+        <span>Rentgenové oko</span>
+      </div><div class="title title-shadow
 
         
         
@@ -1449,8 +1716,9 @@ html, body {
         ">
           <img class="life" src="http://localhost:8080/imgs/heart.png" />
         </div>
-      </div><div class="text shadow">Jednou za kolo se můžeš podívat na vrchní kartu z&nbsp;balíčku úkolů.</div>
-          <div class="text">Jednou za kolo se můžeš podívat na vrchní kartu z&nbsp;balíčku úkolů.</div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/rentgenove okp.png"
+        class="illustration" /><div class="text">Jednou za kolo se můžeš podívat na vrchní kartu z&nbsp;balíčku úkolů.</div><div class="text text-shadow">Jednou za kolo se můžeš podívat na vrchní kartu z&nbsp;balíčku úkolů.</div>
   </div><div
     class="card
       bio
@@ -1462,15 +1730,21 @@ html, body {
       
       
   ">
-    <div class="type">bio</div><div class="
-        title
+    <div class="type">bio</div><div class="title
 
         
         
       ">
         <span>Kamenná kůže</span>
-      </div><div class="text shadow">Při ztrátě více než jednoho života ztrácíš o&nbsp;život méně.</div>
-          <div class="text">Při ztrátě více než jednoho života ztrácíš o&nbsp;život méně.</div>
+      </div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Kamenná kůže</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/Kamenná koža.png"
+        class="illustration" /><div class="text">Při ztrátě více než jednoho života ztrácíš o&nbsp;život méně.</div><div class="text text-shadow">Při ztrátě více než jednoho života ztrácíš o&nbsp;život méně.</div>
   </div><div
     class="card
       bio
@@ -1482,16 +1756,22 @@ html, body {
       
       
   ">
-    <div class="type">bio</div><div class="
-        title
+    <div class="type">bio</div><div class="title
 
         
         
       ">
         <span>Regenerace</span>
-      </div><div class="text shadow">Můžeš si vykládat vylepšení přidávající životy z&nbsp;odhazovacího balíčku, jakoby jsi je měl v ruce.</div>
-          <div class="text">Můžeš si vykládat vylepšení přidávající životy z&nbsp;odhazovacího balíčku, jakoby jsi je měl v ruce.</div>
-  </div><div
+      </div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Regenerace</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/regenerace.png"
+        class="illustration" /><div class="text">Můžeš si vykládat vylepšení přidávající životy z&nbsp;odhazovacího balíčku, jakoby jsi je měl v ruce.</div><div class="text text-shadow">Můžeš si vykládat vylepšení přidávající životy z&nbsp;odhazovacího balíčku, jakoby jsi je měl v ruce.</div>
+  </div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div
     class="card
       tech
       
@@ -1502,20 +1782,28 @@ html, body {
       
       
   ">
-    <div class="type">tech</div><div class="
-        title
+    <div class="type">tech</div><div class="title
 
         
         
       ">
         <span>Sekáček</span>
-      </div><div class="
-          title title-reversed
+      </div><div class="title title-reversed
+          
+          "><span>Sekáček</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Sekáček</span>
+      </div><div class="title title-shadow title-reversed
           
           "><span>Sekáček</span></div><img class="joint required single hand" src="http://localhost:8080/imgs/required-hand.png" /><div class="rerolls"><img class="test" src="http://localhost:8080/imgs/test-power.png" />
       <div class="reroll reroll-green">
         <img src="http://localhost:8080/imgs/dice1.png" />
-      </div></div>
+      </div></div><img
+        src="http://localhost:8080/imgs/ilus/png/sekacek.png"
+        class="illustration" />
   </div><div
     class="card
       tech
@@ -1527,20 +1815,28 @@ html, body {
       
       
   ">
-    <div class="type">tech</div><div class="
-        title
+    <div class="type">tech</div><div class="title
 
         
         
       ">
         <span>Kostěný kyj</span>
-      </div><div class="
-          title title-reversed
+      </div><div class="title title-reversed
+          
+          "><span>Kostěný kyj</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Kostěný kyj</span>
+      </div><div class="title title-shadow title-reversed
           
           "><span>Kostěný kyj</span></div><img class="joint required single hand" src="http://localhost:8080/imgs/required-hand.png" /><div class="rerolls"><img class="test" src="http://localhost:8080/imgs/test-power.png" />
       <div class="reroll reroll-green">
         <img src="http://localhost:8080/imgs/dice1.png" />
-      </div></div>
+      </div></div><img
+        src="http://localhost:8080/imgs/ilus/png/kyj.png"
+        class="illustration" />
   </div><div
     class="card
       tech
@@ -1552,20 +1848,28 @@ html, body {
       
       
   ">
-    <div class="type">tech</div><div class="
-        title
+    <div class="type">tech</div><div class="title
 
         
         
       ">
         <span>Lopata</span>
-      </div><div class="
-          title title-reversed
+      </div><div class="title title-reversed
+          
+          "><span>Lopata</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Lopata</span>
+      </div><div class="title title-shadow title-reversed
           
           "><span>Lopata</span></div><img class="joint required single hand" src="http://localhost:8080/imgs/required-hand.png" /><div class="rerolls"><img class="test" src="http://localhost:8080/imgs/test-power.png" />
       <div class="reroll reroll-green">
         <img src="http://localhost:8080/imgs/dice1.png" />
-      </div></div>
+      </div></div><img
+        src="http://localhost:8080/imgs/ilus/png/lopata.png"
+        class="illustration" />
   </div><div
     class="card
       tech
@@ -1577,20 +1881,28 @@ html, body {
       
       
   ">
-    <div class="type">tech</div><div class="
-        title
+    <div class="type">tech</div><div class="title
 
         
         
       ">
         <span>Motorový nůž</span>
-      </div><div class="
-          title title-reversed
+      </div><div class="title title-reversed
+          
+          "><span>Motorový nůž</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Motorový nůž</span>
+      </div><div class="title title-shadow title-reversed
           
           "><span>Motorový nůž</span></div><img class="joint required single hand" src="http://localhost:8080/imgs/required-hand.png" /><div class="rerolls"><img class="test" src="http://localhost:8080/imgs/test-power.png" />
       <div class="reroll reroll-green">
         <img src="http://localhost:8080/imgs/dice1.png" />
-      </div></div>
+      </div></div><img
+        src="http://localhost:8080/imgs/ilus/png/motorovy nuz.png"
+        class="illustration" />
   </div><div
     class="card
       tech
@@ -1602,20 +1914,28 @@ html, body {
       
       
   ">
-    <div class="type">tech</div><div class="
-        title
+    <div class="type">tech</div><div class="title
 
          title-long
         
       ">
         <span>Stříkačka kyseliny</span>
-      </div><div class="
-          title title-reversed
+      </div><div class="title title-reversed
+           title-long
+          "><span>Stříkačka kyseliny</span></div><div class="title title-shadow
+
+         title-long
+        
+      ">
+        <span>Stříkačka kyseliny</span>
+      </div><div class="title title-shadow title-reversed
            title-long
           "><span>Stříkačka kyseliny</span></div><img class="joint required single hand" src="http://localhost:8080/imgs/required-hand.png" /><div class="rerolls"><img class="test" src="http://localhost:8080/imgs/test-power.png" />
       <div class="reroll reroll-green">
         <img src="http://localhost:8080/imgs/dice1.png" />
-      </div></div>
+      </div></div><img
+        src="http://localhost:8080/imgs/ilus/png/Stříkačka kyseliny.png"
+        class="illustration" />
   </div><div
     class="card
       tech
@@ -1627,20 +1947,28 @@ html, body {
       
       
   ">
-    <div class="type">tech</div><div class="
-        title
+    <div class="type">tech</div><div class="title
 
         
         
       ">
         <span>Laserový nůž</span>
-      </div><div class="
-          title title-reversed
+      </div><div class="title title-reversed
+          
+          "><span>Laserový nůž</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Laserový nůž</span>
+      </div><div class="title title-shadow title-reversed
           
           "><span>Laserový nůž</span></div><img class="joint required single hand" src="http://localhost:8080/imgs/required-hand.png" /><div class="rerolls"><img class="test" src="http://localhost:8080/imgs/test-power.png" />
       <div class="reroll reroll-green">
         <img src="http://localhost:8080/imgs/dice1.png" />
-      </div></div>
+      </div></div><img
+        src="http://localhost:8080/imgs/ilus/png/laser nuz.png"
+        class="illustration" />
   </div><div
     class="card
       tech
@@ -1652,20 +1980,28 @@ html, body {
       
       
   ">
-    <div class="type">tech</div><div class="
-        title
+    <div class="type">tech</div><div class="title
 
          title-long
         
       ">
         <span>Kapesní plamenomet</span>
-      </div><div class="
-          title title-reversed
+      </div><div class="title title-reversed
+           title-long
+          "><span>Kapesní plamenomet</span></div><div class="title title-shadow
+
+         title-long
+        
+      ">
+        <span>Kapesní plamenomet</span>
+      </div><div class="title title-shadow title-reversed
            title-long
           "><span>Kapesní plamenomet</span></div><img class="joint required single hand" src="http://localhost:8080/imgs/required-hand.png" /><div class="rerolls"><img class="test" src="http://localhost:8080/imgs/test-speed.png" />
       <div class="reroll reroll-green">
         <img src="http://localhost:8080/imgs/dice1.png" />
-      </div></div>
+      </div></div><img
+        src="http://localhost:8080/imgs/ilus/png/kapesni zapalovac.png"
+        class="illustration" />
   </div><div
     class="card
       tech
@@ -1677,20 +2013,28 @@ html, body {
       
       
   ">
-    <div class="type">tech</div><div class="
-        title
+    <div class="type">tech</div><div class="title
 
         
         
       ">
         <span>Katana</span>
-      </div><div class="
-          title title-reversed
+      </div><div class="title title-reversed
+          
+          "><span>Katana</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Katana</span>
+      </div><div class="title title-shadow title-reversed
           
           "><span>Katana</span></div><img class="joint required single hand" src="http://localhost:8080/imgs/required-hand.png" /><div class="rerolls"><img class="test" src="http://localhost:8080/imgs/test-powerspeed.png" />
       <div class="reroll reroll-green">
         <img src="http://localhost:8080/imgs/dice1.png" />
-      </div></div>
+      </div></div><img
+        src="http://localhost:8080/imgs/ilus/png/katana.png"
+        class="illustration" />
   </div><div
     class="card
       tech
@@ -1702,20 +2046,28 @@ html, body {
       
       
   ">
-    <div class="type">tech</div><div class="
-        title
+    <div class="type">tech</div><div class="title
 
          title-long
         
       ">
         <span>Vyhrocený bumerang</span>
-      </div><div class="
-          title title-reversed
+      </div><div class="title title-reversed
+           title-long
+          "><span>Vyhrocený bumerang</span></div><div class="title title-shadow
+
+         title-long
+        
+      ">
+        <span>Vyhrocený bumerang</span>
+      </div><div class="title title-shadow title-reversed
            title-long
           "><span>Vyhrocený bumerang</span></div><img class="joint required single hand" src="http://localhost:8080/imgs/required-hand.png" /><div class="rerolls"><img class="test" src="http://localhost:8080/imgs/test-powerspeed.png" />
       <div class="reroll reroll-green">
         <img src="http://localhost:8080/imgs/dice1.png" />
-      </div></div>
+      </div></div><img
+        src="http://localhost:8080/imgs/ilus/png/Vyhrocený bumerang.png"
+        class="illustration" />
   </div><div
     class="card
       tech
@@ -1727,20 +2079,28 @@ html, body {
       
       
   ">
-    <div class="type">tech</div><div class="
-        title
+    <div class="type">tech</div><div class="title
 
         
         
       ">
         <span>Zubařská vrtačka</span>
-      </div><div class="
-          title title-reversed
+      </div><div class="title title-reversed
+          
+          "><span>Zubařská vrtačka</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Zubařská vrtačka</span>
+      </div><div class="title title-shadow title-reversed
           
           "><span>Zubařská vrtačka</span></div><img class="joint required single hand" src="http://localhost:8080/imgs/required-hand.png" /><div class="rerolls"><img class="test" src="http://localhost:8080/imgs/test-poweriq.png" />
       <div class="reroll reroll-green">
         <img src="http://localhost:8080/imgs/dice1.png" />
-      </div></div>
+      </div></div><img
+        src="http://localhost:8080/imgs/ilus/png/Zubařská vrtacka.png"
+        class="illustration" />
   </div><div
     class="card
       tech
@@ -1752,20 +2112,28 @@ html, body {
       
       
   ">
-    <div class="type">tech</div><div class="
-        title
+    <div class="type">tech</div><div class="title
 
         
         
       ">
         <span>Flusačka žvýkaček</span>
-      </div><div class="
-          title title-reversed
+      </div><div class="title title-reversed
+          
+          "><span>Flusačka žvýkaček</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Flusačka žvýkaček</span>
+      </div><div class="title title-shadow title-reversed
           
           "><span>Flusačka žvýkaček</span></div><img class="joint required single hand" src="http://localhost:8080/imgs/required-hand.png" /><div class="rerolls"><img class="test" src="http://localhost:8080/imgs/test-speed.png" />
       <div class="reroll reroll-red">
         <img src="http://localhost:8080/imgs/dice1.png" />
-      </div></div>
+      </div></div><img
+        src="http://localhost:8080/imgs/ilus/png/Flusačka žvýkaček.png"
+        class="illustration" />
   </div><div
     class="card
       tech
@@ -1777,20 +2145,28 @@ html, body {
       
       
   ">
-    <div class="type">tech</div><div class="
-        title
+    <div class="type">tech</div><div class="title
 
         
         
       ">
         <span>Pepřový sprej</span>
-      </div><div class="
-          title title-reversed
+      </div><div class="title title-reversed
+          
+          "><span>Pepřový sprej</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Pepřový sprej</span>
+      </div><div class="title title-shadow title-reversed
           
           "><span>Pepřový sprej</span></div><img class="joint required single hand" src="http://localhost:8080/imgs/required-hand.png" /><div class="rerolls"><img class="test" src="http://localhost:8080/imgs/test-power.png" />
       <div class="reroll reroll-red">
         <img src="http://localhost:8080/imgs/dice1.png" />
-      </div></div>
+      </div></div><img
+        src="http://localhost:8080/imgs/ilus/png/Pepřový sprej.png"
+        class="illustration" />
   </div><div
     class="card
       tech
@@ -1802,20 +2178,28 @@ html, body {
       
       
   ">
-    <div class="type">tech</div><div class="
-        title
+    <div class="type">tech</div><div class="title
 
         
         
       ">
         <span>Neuropad</span>
-      </div><div class="
-          title title-reversed
+      </div><div class="title title-reversed
+          
+          "><span>Neuropad</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Neuropad</span>
+      </div><div class="title title-shadow title-reversed
           
           "><span>Neuropad</span></div><img class="joint required single hand" src="http://localhost:8080/imgs/required-hand.png" /><div class="rerolls"><img class="test" src="http://localhost:8080/imgs/test-iq.png" />
       <div class="reroll reroll-red">
         <img src="http://localhost:8080/imgs/dice1.png" />
-      </div></div>
+      </div></div><img
+        src="http://localhost:8080/imgs/ilus/png/neuropad.png"
+        class="illustration" />
   </div><div
     class="card
       tech
@@ -1827,20 +2211,28 @@ html, body {
       
       
   ">
-    <div class="type">tech</div><div class="
-        title
+    <div class="type">tech</div><div class="title
 
         
         
       ">
         <span>Kouzelnická hůlka</span>
-      </div><div class="
-          title title-reversed
+      </div><div class="title title-reversed
+          
+          "><span>Kouzelnická hůlka</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Kouzelnická hůlka</span>
+      </div><div class="title title-shadow title-reversed
           
           "><span>Kouzelnická hůlka</span></div><img class="joint required single hand" src="http://localhost:8080/imgs/required-hand.png" /><div class="rerolls">
       <div class="reroll reroll-red">
         <img src="http://localhost:8080/imgs/dice1.png" />
-      </div></div>
+      </div></div><img
+        src="http://localhost:8080/imgs/ilus/png/palicka.png"
+        class="illustration" />
   </div><div
     class="card
       tech
@@ -1852,20 +2244,28 @@ html, body {
       
       
   ">
-    <div class="type">tech</div><div class="
-        title
+    <div class="type">tech</div><div class="title
 
          title-long
         
       ">
         <span>Elektrická ostruha</span>
-      </div><div class="
-          title title-reversed
+      </div><div class="title title-reversed
+           title-long
+          "><span>Elektrická ostruha</span></div><div class="title title-shadow
+
+         title-long
+        
+      ">
+        <span>Elektrická ostruha</span>
+      </div><div class="title title-shadow title-reversed
            title-long
           "><span>Elektrická ostruha</span></div><img class="joint required single leg" src="http://localhost:8080/imgs/required-leg.png" /><div class="rerolls"><img class="test" src="http://localhost:8080/imgs/test-speed.png" />
       <div class="reroll reroll-green">
         <img src="http://localhost:8080/imgs/dice2.png" />
-      </div></div>
+      </div></div><img
+        src="http://localhost:8080/imgs/ilus/png/ostruha.png"
+        class="illustration" />
   </div><div
     class="card
       tech
@@ -1877,19 +2277,27 @@ html, body {
       
       
   ">
-    <div class="type">tech</div><div class="
-        title
+    <div class="type">tech</div><div class="title
 
         
         
       ">
         <span>Čakram</span>
-      </div><div class="
-          title title-reversed
+      </div><div class="title title-reversed
+          
+          "><span>Čakram</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Čakram</span>
+      </div><div class="title title-shadow title-reversed
           
           "><span>Čakram</span></div><img class="joint required single hand" src="http://localhost:8080/imgs/required-hand.png" /><div class="rerolls"><img class="test" src="http://localhost:8080/imgs/test-iq.png" />
       <img class="test" src="http://localhost:8080/imgs/dice-cross.png" />
-    </div>
+    </div><img
+        src="http://localhost:8080/imgs/ilus/png/cakram.png"
+        class="illustration" />
   </div><div
     class="card
       tech
@@ -1901,20 +2309,28 @@ html, body {
       two-handed
       
   ">
-    <div class="type">tech</div><div class="
-        title
+    <div class="type">tech</div><div class="title
 
         
         
       ">
         <span>Kriketová pálka</span>
-      </div><div class="
-          title title-reversed
+      </div><div class="title title-reversed
+          
+          "><span>Kriketová pálka</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Kriketová pálka</span>
+      </div><div class="title title-shadow title-reversed
           
           "><span>Kriketová pálka</span></div><img class="joint required first hand" src="http://localhost:8080/imgs/required-hand.png" />
             <img class="joint required second hand" src="http://localhost:8080/imgs/required-hand.png" /><div class="rerolls">
       <img class="test" src="http://localhost:8080/imgs/dice-cross.png" />
-    </div>
+    </div><img
+        src="http://localhost:8080/imgs/ilus/png/kriketova palka-1.png"
+        class="illustration" />
   </div><div
     class="card
       tech
@@ -1926,22 +2342,30 @@ html, body {
       two-handed
       
   ">
-    <div class="type">tech</div><div class="
-        title
+    <div class="type">tech</div><div class="title
 
         
         
       ">
         <span>Řetězová pila</span>
-      </div><div class="
-          title title-reversed
+      </div><div class="title title-reversed
+          
+          "><span>Řetězová pila</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Řetězová pila</span>
+      </div><div class="title title-shadow title-reversed
           
           "><span>Řetězová pila</span></div><img class="joint required first hand" src="http://localhost:8080/imgs/required-hand.png" />
             <img class="joint required second hand" src="http://localhost:8080/imgs/required-hand.png" /><div class="rerolls"><img class="test" src="http://localhost:8080/imgs/test-powerspeed.png" />
       <div class="reroll reroll-green">
         <img src="http://localhost:8080/imgs/dice2.png" />
-      </div></div>
-  </div><div
+      </div></div><img
+        src="http://localhost:8080/imgs/ilus/png/Řetězová pila.png"
+        class="illustration" />
+  </div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div
     class="card
       tech
       
@@ -1952,21 +2376,29 @@ html, body {
       two-handed
       
   ">
-    <div class="type">tech</div><div class="
-        title
+    <div class="type">tech</div><div class="title
 
         
         
       ">
         <span>Motorová pila</span>
-      </div><div class="
-          title title-reversed
+      </div><div class="title title-reversed
+          
+          "><span>Motorová pila</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Motorová pila</span>
+      </div><div class="title title-shadow title-reversed
           
           "><span>Motorová pila</span></div><img class="joint required first hand" src="http://localhost:8080/imgs/required-hand.png" />
             <img class="joint required second hand" src="http://localhost:8080/imgs/required-hand.png" /><div class="rerolls"><img class="test" src="http://localhost:8080/imgs/test-powerspeed.png" />
       <div class="reroll reroll-green">
         <img src="http://localhost:8080/imgs/dice2.png" />
-      </div></div>
+      </div></div><img
+        src="http://localhost:8080/imgs/ilus/png/motorovka.png"
+        class="illustration" />
   </div><div
     class="card
       tech
@@ -1978,21 +2410,29 @@ html, body {
       two-handed
       
   ">
-    <div class="type">tech</div><div class="
-        title
+    <div class="type">tech</div><div class="title
 
         
         
       ">
         <span>Rotační kulomet</span>
-      </div><div class="
-          title title-reversed
+      </div><div class="title title-reversed
+          
+          "><span>Rotační kulomet</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Rotační kulomet</span>
+      </div><div class="title title-shadow title-reversed
           
           "><span>Rotační kulomet</span></div><img class="joint required first hand" src="http://localhost:8080/imgs/required-hand.png" />
             <img class="joint required second hand" src="http://localhost:8080/imgs/required-hand.png" /><div class="rerolls"><img class="test" src="http://localhost:8080/imgs/test-powerspeed.png" />
       <div class="reroll reroll-green">
         <img src="http://localhost:8080/imgs/dice2.png" />
-      </div></div>
+      </div></div><img
+        src="http://localhost:8080/imgs/ilus/png/rotacak.png"
+        class="illustration" />
   </div><div
     class="card
       tech
@@ -2004,21 +2444,29 @@ html, body {
       two-handed
       
   ">
-    <div class="type">tech</div><div class="
-        title
+    <div class="type">tech</div><div class="title
 
         
         
       ">
         <span>Granátomet</span>
-      </div><div class="
-          title title-reversed
+      </div><div class="title title-reversed
+          
+          "><span>Granátomet</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Granátomet</span>
+      </div><div class="title title-shadow title-reversed
           
           "><span>Granátomet</span></div><img class="joint required first hand" src="http://localhost:8080/imgs/required-hand.png" />
             <img class="joint required second hand" src="http://localhost:8080/imgs/required-hand.png" /><div class="rerolls"><img class="test" src="http://localhost:8080/imgs/test-powerspeed.png" />
       <div class="reroll reroll-green">
         <img src="http://localhost:8080/imgs/dice3.png" />
-      </div></div>
+      </div></div><img
+        src="http://localhost:8080/imgs/ilus/png/granatomet.png"
+        class="illustration" />
   </div><div
     class="card
       tech
@@ -2030,21 +2478,29 @@ html, body {
       two-handed
       
   ">
-    <div class="type">tech</div><div class="
-        title
+    <div class="type">tech</div><div class="title
 
         
         
       ">
         <span>Plasmomet</span>
-      </div><div class="
-          title title-reversed
+      </div><div class="title title-reversed
+          
+          "><span>Plasmomet</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Plasmomet</span>
+      </div><div class="title title-shadow title-reversed
           
           "><span>Plasmomet</span></div><img class="joint required first hand" src="http://localhost:8080/imgs/required-hand.png" />
             <img class="joint required second hand" src="http://localhost:8080/imgs/required-hand.png" /><div class="rerolls"><img class="test" src="http://localhost:8080/imgs/test-powerspeed.png" />
       <div class="reroll reroll-green">
         <img src="http://localhost:8080/imgs/dice3.png" />
-      </div></div>
+      </div></div><img
+        src="http://localhost:8080/imgs/ilus/png/plasmomet.png"
+        class="illustration" />
   </div><div
     class="card
       tech
@@ -2056,21 +2512,29 @@ html, body {
       two-handed
       
   ">
-    <div class="type">tech</div><div class="
-        title
+    <div class="type">tech</div><div class="title
 
         
         
       ">
         <span>Raketomet</span>
-      </div><div class="
-          title title-reversed
+      </div><div class="title title-reversed
+          
+          "><span>Raketomet</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Raketomet</span>
+      </div><div class="title title-shadow title-reversed
           
           "><span>Raketomet</span></div><img class="joint required first hand" src="http://localhost:8080/imgs/required-hand.png" />
             <img class="joint required second hand" src="http://localhost:8080/imgs/required-hand.png" /><div class="rerolls"><img class="test" src="http://localhost:8080/imgs/test-powerspeed.png" />
       <div class="reroll reroll-green">
         <img src="http://localhost:8080/imgs/dice3.png" />
-      </div></div>
+      </div></div><img
+        src="http://localhost:8080/imgs/ilus/png/raketomet.png"
+        class="illustration" />
   </div><div
     class="card
       tech
@@ -2082,21 +2546,29 @@ html, body {
       two-handed
       
   ">
-    <div class="type">tech</div><div class="
-        title
+    <div class="type">tech</div><div class="title
 
          title-long
         
       ">
         <span>Obouruční cirkulárka</span>
-      </div><div class="
-          title title-reversed
+      </div><div class="title title-reversed
+           title-long
+          "><span>Obouruční cirkulárka</span></div><div class="title title-shadow
+
+         title-long
+        
+      ">
+        <span>Obouruční cirkulárka</span>
+      </div><div class="title title-shadow title-reversed
            title-long
           "><span>Obouruční cirkulárka</span></div><img class="joint required first hand" src="http://localhost:8080/imgs/required-hand.png" />
             <img class="joint required second hand" src="http://localhost:8080/imgs/required-hand.png" /><div class="rerolls"><img class="test" src="http://localhost:8080/imgs/test-powerspeed.png" />
       <div class="reroll reroll-green">
         <img src="http://localhost:8080/imgs/dice3.png" />
-      </div></div>
+      </div></div><img
+        src="http://localhost:8080/imgs/ilus/png/Obouruční cirkulárka.png"
+        class="illustration" />
   </div><div
     class="card
       tech
@@ -2108,21 +2580,29 @@ html, body {
       two-handed
       
   ">
-    <div class="type">tech</div><div class="
-        title
+    <div class="type">tech</div><div class="title
 
         
         
       ">
         <span>Hoverboard</span>
-      </div><div class="
-          title title-reversed
+      </div><div class="title title-reversed
+          
+          "><span>Hoverboard</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Hoverboard</span>
+      </div><div class="title title-shadow title-reversed
           
           "><span>Hoverboard</span></div><img class="joint required first leg" src="http://localhost:8080/imgs/required-leg.png" />
             <img class="joint required second leg" src="http://localhost:8080/imgs/required-leg.png" /><div class="rerolls"><img class="test" src="http://localhost:8080/imgs/test-powerspeed.png" />
       <div class="reroll reroll-green">
         <img src="http://localhost:8080/imgs/dice2.png" />
-      </div></div>
+      </div></div><img
+        src="http://localhost:8080/imgs/ilus/png/board.png"
+        class="illustration" />
   </div><div
     class="card
       tech
@@ -2134,21 +2614,29 @@ html, body {
       two-handed
       
   ">
-    <div class="type">tech</div><div class="
-        title
+    <div class="type">tech</div><div class="title
 
         
         
       ">
         <span>Kulometný vozík</span>
-      </div><div class="
-          title title-reversed
+      </div><div class="title title-reversed
+          
+          "><span>Kulometný vozík</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Kulometný vozík</span>
+      </div><div class="title title-shadow title-reversed
           
           "><span>Kulometný vozík</span></div><img class="joint required first leg" src="http://localhost:8080/imgs/required-leg.png" />
             <img class="joint required second leg" src="http://localhost:8080/imgs/required-leg.png" /><div class="rerolls"><img class="test" src="http://localhost:8080/imgs/test-powerspeed.png" />
       <div class="reroll reroll-green">
         <img src="http://localhost:8080/imgs/dice3.png" />
-      </div></div>
+      </div></div><img
+        src="http://localhost:8080/imgs/ilus/png/kulometny vozik.png"
+        class="illustration" />
   </div><div
     class="card
       tech
@@ -2160,21 +2648,29 @@ html, body {
       two-handed
       
   ">
-    <div class="type">tech</div><div class="
-        title
+    <div class="type">tech</div><div class="title
 
         
         
       ">
         <span>Elektro tříkolka</span>
-      </div><div class="
-          title title-reversed
+      </div><div class="title title-reversed
+          
+          "><span>Elektro tříkolka</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Elektro tříkolka</span>
+      </div><div class="title title-shadow title-reversed
           
           "><span>Elektro tříkolka</span></div><img class="joint required first leg" src="http://localhost:8080/imgs/required-leg.png" />
             <img class="joint required second leg" src="http://localhost:8080/imgs/required-leg.png" /><div class="rerolls"><img class="test" src="http://localhost:8080/imgs/test-powerspeed.png" />
       <div class="reroll reroll-green">
         <img src="http://localhost:8080/imgs/dice3.png" />
-      </div></div>
+      </div></div><img
+        src="http://localhost:8080/imgs/ilus/png/Elektro tříkolka.png"
+        class="illustration" />
   </div><div
     class="card
       tech
@@ -2186,15 +2682,21 @@ html, body {
       two-handed
       
   ">
-    <div class="type">tech</div><div class="
-        title
+    <div class="type">tech</div><div class="title
 
         
         
       ">
         <span>Jízdní pásy</span>
-      </div><div class="
-          title title-reversed
+      </div><div class="title title-reversed
+          
+          "><span>Jízdní pásy</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Jízdní pásy</span>
+      </div><div class="title title-shadow title-reversed
           
           "><span>Jízdní pásy</span></div><img class="joint required first bone" src="http://localhost:8080/imgs/required-bone.png" />
             <img class="joint required second bone" src="http://localhost:8080/imgs/required-bone.png" /><div class="rerolls"><img class="test" src="http://localhost:8080/imgs/test-powerspeed.png" />
@@ -2202,7 +2704,9 @@ html, body {
         <img src="http://localhost:8080/imgs/dice2.png" />
       </div>
       <img class="life" src="http://localhost:8080/imgs/heart.png" /><img class="life" src="http://localhost:8080/imgs/heart.png" />
-    </div>
+    </div><img
+        src="http://localhost:8080/imgs/ilus/png/Jízdní pásy.png"
+        class="illustration" />
   </div><div
     class="card
       tech
@@ -2214,8 +2718,13 @@ html, body {
       
       
   ">
-    <div class="type">tech</div><div class="
-        title
+    <div class="type">tech</div><div class="title
+
+        
+        
+      ">
+        <span>Rentgenové čočky</span>
+      </div><div class="title title-shadow
 
         
         
@@ -2224,7 +2733,9 @@ html, body {
       </div><div class="rerolls"><img class="test" src="http://localhost:8080/imgs/test-iq.png" />
       <div class="reroll reroll-green">
         <img src="http://localhost:8080/imgs/dice1.png" />
-      </div></div>
+      </div></div><img
+        src="http://localhost:8080/imgs/ilus/png/rentgenove čočky.png"
+        class="illustration" />
   </div><div
     class="card
       tech
@@ -2236,8 +2747,13 @@ html, body {
       
       
   ">
-    <div class="type">tech</div><div class="
-        title
+    <div class="type">tech</div><div class="title
+
+         title-long
+        
+      ">
+        <span>Brýle nočního vidění</span>
+      </div><div class="title title-shadow
 
          title-long
         
@@ -2246,7 +2762,9 @@ html, body {
       </div><div class="rerolls"><img class="test" src="http://localhost:8080/imgs/test-iq.png" />
       <div class="reroll reroll-green">
         <img src="http://localhost:8080/imgs/dice1.png" />
-      </div></div>
+      </div></div><img
+        src="http://localhost:8080/imgs/ilus/png/nocne videnie netreba.png"
+        class="illustration" />
   </div><div
     class="card
       tech
@@ -2258,8 +2776,13 @@ html, body {
       
       
   ">
-    <div class="type">tech</div><div class="
-        title
+    <div class="type">tech</div><div class="title
+
+        
+        
+      ">
+        <span>Kapesní arsenál</span>
+      </div><div class="title title-shadow
 
         
         
@@ -2268,7 +2791,9 @@ html, body {
       </div><div class="rerolls">
       <div class="reroll reroll-red">
         <img src="http://localhost:8080/imgs/dice1.png" />
-      </div></div>
+      </div></div><img
+        src="http://localhost:8080/imgs/ilus/png/kapesni arsenal.png"
+        class="illustration" />
   </div><div
     class="card
       tech
@@ -2280,8 +2805,13 @@ html, body {
       
       
   ">
-    <div class="type">tech</div><div class="
-        title
+    <div class="type">tech</div><div class="title
+
+        
+        
+      ">
+        <span>Svářečské brýle</span>
+      </div><div class="title title-shadow
 
         
         
@@ -2290,7 +2820,9 @@ html, body {
       </div><div class="rerolls">
       <div class="reroll reroll-green">
         <img src="http://localhost:8080/imgs/dice-small-sad.png" />
-      </div></div>
+      </div></div><img
+        src="http://localhost:8080/imgs/ilus/png/svaracske bryle.png"
+        class="illustration" />
   </div><div
     class="card
       tech
@@ -2302,8 +2834,13 @@ html, body {
       
       
   ">
-    <div class="type">tech</div><div class="
-        title
+    <div class="type">tech</div><div class="title
+
+         title-long
+        
+      ">
+        <span>Neprůstřelná vesta</span>
+      </div><div class="title title-shadow
 
          title-long
         
@@ -2314,7 +2851,9 @@ html, body {
         <img src="http://localhost:8080/imgs/dice-small-tragic.png" />
       </div>
       <img class="life" src="http://localhost:8080/imgs/heart.png" />
-    </div>
+    </div><img
+        src="http://localhost:8080/imgs/ilus/png/vesta.png"
+        class="illustration" />
   </div><div
     class="card
       tech
@@ -2326,8 +2865,13 @@ html, body {
       
       
   ">
-    <div class="type">tech</div><div class="
-        title
+    <div class="type">tech</div><div class="title
+
+        
+        
+      ">
+        <span>Ocelové brnění</span>
+      </div><div class="title title-shadow
 
         
         
@@ -2338,7 +2882,9 @@ html, body {
         <img src="http://localhost:8080/imgs/dice1.png" />
       </div>
       <img class="life" src="http://localhost:8080/imgs/heart.png" />
-    </div>
+    </div><img
+        src="http://localhost:8080/imgs/ilus/png/brnenie.png"
+        class="illustration" />
   </div><div
     class="card
       tech
@@ -2350,15 +2896,21 @@ html, body {
       
       
   ">
-    <div class="type">tech</div><div class="
-        title
+    <div class="type">tech</div><div class="title
 
         
         
       ">
         <span>Granát</span>
-      </div><div class="text shadow">Odhoď tuto kartu ze hry během testu na sílu před hodem kostkami. Úkol je automaticky splněn.</div>
-          <div class="text">Odhoď tuto kartu ze hry během testu na sílu před hodem kostkami. Úkol je automaticky splněn.</div>
+      </div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Granát</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/granat.png"
+        class="illustration" /><div class="text">Odhoď tuto kartu ze hry během testu na sílu před hodem kostkami. Úkol je automaticky splněn.</div><div class="text text-shadow">Odhoď tuto kartu ze hry během testu na sílu před hodem kostkami. Úkol je automaticky splněn.</div>
   </div><div
     class="card
       tech
@@ -2370,16 +2922,22 @@ html, body {
       
       
   ">
-    <div class="type">tech</div><div class="
-        title
+    <div class="type">tech</div><div class="title
 
         
         
       ">
         <span>Jedovaté torpédo</span>
-      </div><div class="text shadow">Odhoď tuto kartu ze hry během testu na rychlost před hodem kostkami. Úkol je automaticky splněn.</div>
-          <div class="text">Odhoď tuto kartu ze hry během testu na rychlost před hodem kostkami. Úkol je automaticky splněn.</div>
-  </div>
+      </div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Jedovaté torpédo</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/torpedo.png"
+        class="illustration" /><div class="text">Odhoď tuto kartu ze hry během testu na rychlost před hodem kostkami. Úkol je automaticky splněn.</div><div class="text text-shadow">Odhoď tuto kartu ze hry během testu na rychlost před hodem kostkami. Úkol je automaticky splněn.</div>
+  </div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div>
       </div>
     </body>
   </html>
