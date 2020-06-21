@@ -92,9 +92,7 @@ const getFieldMarkup = (title, value, card) => {
       ">
         <span>${value}</span>
       </div>`;
-      if (card.type === 'quest') {
-        markup += markup.replace('"title', '"title title-shadow');
-      }
+      markup += markup.replace('"title', '"title title-shadow');
     break;
 
     case 'image':
@@ -102,54 +100,28 @@ const getFieldMarkup = (title, value, card) => {
         src="http://localhost:8080/imgs/ilus/${value}.jpg"
         class="illustration" />`;
     break;
-    case 'rerolls':
-      markup = `<div class="rerolls">${getRerollsMarkup(value)}</div>`;
-    break;
-    case 'text2':
-    case 'disjunction':
-    break;
-    case 'text':
-      if (card.text2) {
-        markup = `<div class="text texts">
-          <div class="text-part">${getTextMarkup(value)}</div>
-          ${ card.disjunction ? '<span class="white-shadow">nebo</span>' : '' }
-          <div class="text-part">${getTextMarkup(card.text2)}</div>
-        </div>`;
-      } else {
-        markup = `<div class="text${
-          card.text.includes("{") ? ' text-all' : ''
-        }${
-          card.text.length >= 85 ? ' text-long' : ''
-        }">${getTextMarkup(value)}</div>`;
-      }
-    break;
+
     case 'test':
       markup = getTestMarkup(value);
     break;
+
+    case 'reward':
+       const questLevel = parseInt(value);
+       const match = value.match(/c/g);
+       const rewardCards = match ? match.length : 0;
+       const rewardReputation = questLevel - rewardCards;
+       markup = `
+        <div class="quest__reward">
+          ${rewardReputation > 0 ? `<div class="quest__reputation${rewardReputation === 1 ? ' v1' : ''}">${rewardReputation}</div>` : ''}
+          ${rewardCards > 0 ? `<div class="quest__cards">+${rewardCards}</div>` : ''}
+        </div>
+      <div class="quest__penalty">-${questLevel}</div>`;
+    break;
+
     default:
       markup = `<div class="${title}">${value}</div>`;
   }
   return markup;
-}
-
-const getQuestMarkup = (attribute, rewards) => {
-  const questLevel = parseInt(rewards);
-  const match = rewards.match(/c/g);
-  const rewardCards = match ? match.length : 0;
-  const rewardReputation = questLevel - rewardCards;
-  return `<div class="text">
-    <div class="test">
-      Otestuj
-      ${getTestMarkup(attribute)}
-    </div>
-    <div class="quest__success">úspěch</div>
-    <div class="quest__fail">neúspěch</div>
-    <div class="quest__reward">
-      ${rewardReputation > 0 ? `<div class="quest__reputation">${rewardReputation}</div>` : ''}
-      ${rewardCards > 0 ? `<div class="quest__cards">+${rewardCards}</div>` : ''}
-    </div>
-    <div class="quest__penalty">-${questLevel}</div>
-  </div>`;
 }
 
 // except image which renders as ordinary field

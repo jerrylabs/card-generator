@@ -32,8 +32,34 @@ html, body {
   height: 118mm;
 }
 
-.type {
+.type, .text {
   display: none;
+}
+
+
+.title {
+  position: absolute;
+  z-index: 2;
+  top: 0mm;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "BadaBoom CE";
+  font-size: 6mm;
+  width: 56mm;
+  padding: 2mm 4mm;
+  line-height: 1;
+  color: yellow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 12mm;
+  letter-spacing: 0.08mm;
+}
+
+.title-shadow {
+  color: black;
+  filter: blur(2px);
+  z-index: 0;
 }
 
 /************************************************************
@@ -49,31 +75,6 @@ html, body {
 .card.quest.S { background-image: url(http://localhost:8080/imgs/bg_speed.jpg); }
 .card.quest.I { background-image: url(http://localhost:8080/imgs/bg_iq.jpg); }
 
-.quest .title {
-    position: absolute;
-    z-index: 2;
-    top: 0mm;
-    left: 50%;
-    transform: translateX(-50%);
-    font-family: "BadaBoom CE";
-    font-size: 6mm;
-    width: 56mm;
-    padding: 2mm 4mm;
-    line-height: 1;
-    color: yellow;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 12mm;
-    letter-spacing: 0.08mm;
-}
-
-.quest .title-shadow {
-  color: black;
-  filter: blur(2px);
-  z-index: 0;
-}
-
 .quest .illustration {
   width: 64mm;
   top: 15mm;
@@ -83,21 +84,22 @@ html, body {
 }
 
 .quest .text {
-    left: 4mm;
-    bottom: 4mm;
-    width: 56mm;
-    background: transparent url(http://localhost:8080/imgs/background-quest-text.png) center center no-repeat;
-    background-size: 100% 100%;
-    height: 27mm;
+  left: 4mm;
+  bottom: 4mm;
+  width: 56mm;
+  background: transparent url(http://localhost:8080/imgs/background-quest-text.png) center center no-repeat;
+  background-size: 100% 100%;
+  height: 27mm;
 }
 
 .quest .test {
-  line-height: 1;
-}
-
-.white-shadow {
-  text-shadow: 0 0 3px white, 0 0 3px white, 0 0 3px white, 0 0 3px white, 0 0 3px white;
-  margin-top: -1mm;
+  position: absolute;
+  top: 52mm;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 22mm;
+  background: radial-gradient(red 33%, transparent 66%);
 }
 
 .quest__success,
@@ -127,27 +129,30 @@ html, body {
 }
 
 .quest__reward {
-  position: absolute;
-  display: flex;
-  left: 0;
-  bottom: 0;
-  font-family: 'Impact Condensed';
+    position: absolute;
+    display: flex;
+    left: 1mm;
+    bottom: 1mm;
+    font-family: 'Impact Condensed';
+    width: 30mm;
+    height: 20mm;
+    align-items: center;
+    justify-content: center;
 }
 
 .quest__reputation {
   height: 14mm;
-  width: 13mm;
+  width: 14mm;
   background: transparent url(http://localhost:8080/imgs/quest-medal.png) center center no-repeat;
   background-size: contain;
   box-sizing: border-box;
   font-size: 7.5mm;
   text-shadow: 0 0 3px white, 0 0 3px white, 0 0 3px white;
-  padding-right: 0.3mm;
+  padding: 1mm 0 0 1mm;
+  margin-top: 1mm;
 }
 
-.quest__reputation:only-child {
-  margin-left: 1.3mm;
-}
+.quest__reputation.v1 { padding-left: 0.5mm; }
 
 .quest__cards {
   height: 11mm;
@@ -158,29 +163,22 @@ html, body {
   padding: 2.45mm 4mm 0 0;
   font-size: 5mm;
   text-shadow: 0 0 3px white, 0 0 3px white, 0 0 3px white, 0 0 3px white, 0 0 3px white;
-}
-
-.quest__cards:only-child {
-  margin: 0 0 2mm 1mm;
-}
-
-.quest__reputation + .quest__cards {
-  margin: 1mm 0 0 -1mm;
+  margin-bottom: 1mm;
 }
 
 .quest__penalty {
-  position: absolute;
-  right: 0.4mm;
+ position: absolute;
+  right: 1mm;
   bottom: 1mm;
   font-family: 'Impact Condensed';
-  height: 14mm;
-  width: 14mm;
-  background: transparent url(http://localhost:8080/imgs/heart.png) center center no-repeat;
-  background-size: contain;
+  width: 30mm;
+  height: 20mm;
+  background: transparent url(http://localhost:8080/imgs/quest-heart.png) center center no-repeat;
+  background-size: 12mm;
   box-sizing: border-box;
-  padding: 2.3mm 1mm 0mm 0;
   font-size: 7mm;
   text-shadow: 0 0 3px white, 0 0 3px white, 0 0 3px white, 0 0 3px white, 0 0 3px white;
+  line-height: 20mm;
 }
 
 /************************************************************
@@ -188,8 +186,8 @@ html, body {
  ************************************************************/
 
 .animatron .title {
-  top: -2px;
-  font-size: 6mm;
+  top: 2mm;
+  font-size: 12mm;
   width: auto;
   padding: 3mm 10mm;
   background-size: 100% 100%;
@@ -204,6 +202,8 @@ html, body {
   left: 50%;
 }
 
+.joint { position: absolute; z-index: 4; height: 1.5cm; right: 0; }
+
 .animatron .bone1,
 .animatron .bone2 {
   right: auto;
@@ -211,19 +211,9 @@ html, body {
   transform: rotate(180deg);
   top: 39mm
 }
-
-.animatron .bone2 {
-  top: auto;
-  bottom: 10mm;
-}
-
-.animatron .bone3 {
-  top: 10mm
-}
-
-.animatron .bone4 {
-  bottom: 39mm;
-}
+.animatron .bone2 { top: auto; bottom: 10mm; }
+.animatron .bone3 { top: 10mm; }
+.animatron .bone4 { bottom: 39mm; }
 
 .animatron__cards {
   height: 22mm;
@@ -243,7 +233,7 @@ html, body {
 
 .animatron .attribute {
   position: absolute;
-  top: 80mm;
+  top: 82mm;
   left: 20mm;
   z-index: 4;
   width: 20mm;
@@ -251,13 +241,13 @@ html, body {
 
 .animatron__reputation {
   height: 22mm;
-  width: 19mm;
+  width: 22mm;
   background: transparent url(http://localhost:8080/imgs/quest-medal.png) center center no-repeat;
   background-size: contain;
   box-sizing: border-box;
   font-size: 10.5mm;
   text-shadow: 0.5mm 0.5mm 2px black, -0.5mm 0.5mm 2px black, 0.5mm -0.5mm 2px black, -0.5mm -0.5mm 2px black;
-  padding: 1mm 1.5mm 0 0;
+  padding: 2mm 0 0 0;
   position: absolute;
   top: 82mm;
   left: 22mm;
