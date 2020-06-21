@@ -119,8 +119,8 @@ html, body {
   padding: 0.4mm 0;
   line-height: 7mm;
   color: yellow;
-  text-shadow: 1px 1px 0px black, -1px -1px 0px black, 1px -1px 0px black, -1px 1px 0px black, 0px 3px 3px rgba(0,0,0,0.6);
-  text-shadow: 2px 2px 2px black, -2px -2px 2px black, 2px -2px 2px black, -2px 2px 2px black, 0px 3px 3px rgba(0,0,0,0.6);
+  /* text-shadow: 1px 1px 0px black, -1px -1px 0px black, 1px -1px 0px black, -1px 1px 0px black, 0px 3px 3px rgba(0,0,0,0.6);
+  text-shadow: 2px 2px 2px black, -2px -2px 2px black, 2px -2px 2px black, -2px 2px 2px black, 0px 3px 3px rgba(0,0,0,0.6); */
   letter-spacing: 0.5px;
 }
 
@@ -220,13 +220,17 @@ html, body {
 }
 
 .life {
-  width: 10mm;
+  width: 10.5mm;
   margin: -1mm 0;
 }
 
 .rerolls .life {
-  margin: -0.5mm 1mm;
+  margin: 1.5mm 1mm 0;
+  vertical-align: top;
 }
+
+.two-handed .rerolls .life { margin: 1mm 1.5mm 0; }
+.two-handed .rerolls .life + .life { margin-top: -3.5mm ; }
 
 .test, .reroll {
   width: 13mm;
@@ -257,36 +261,6 @@ html, body {
 .reroll-green::before { background-image: url(http://localhost:8080/imgs/reroll-green.png); }
 .reroll-red::before { background-image: url(http://localhost:8080/imgs/reroll-red.png); }
 
-/* // originally just for .bio-card vertical, now applied for all
-.bio.card-vertical .attributes,
-.bio.card-vertical .lives {
-  position: static;
-}
-
-.bio.card-vertical .lives-and-attributes {
-  position: absolute;
-  z-index: 2;
-  display: flex;
-  top: 10mm;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-}
-
-.bio.card-vertical .lives, .bio.card-vertical .attributes {
-  flex: 0 1 0;
-  display: flex;
-}
-
-.card-vertical .life, .card-vertical .attribute {
-  margin: 1mm 0.5mm;
-}
-
-.card-vertical .rerolls .life {
-  margin: 2mm 0;
-}  */
-
-/* version: originally just for .bio-card vertical, now applied for all */
 .attributes,
 .lives {
   position: static;
@@ -308,10 +282,12 @@ html, body {
   padding-left: 3mm;
 }
 
-.life, .attribute { margin: 1mm 0.2mm; }
+.life, .attribute { margin: 1mm 0.5mm; }
+.attr3 .attribute,
+.attr3 .life { margin: 1mm -1mm; }
 .attr4 {margin-left: 3.5mm; }
 .attr4 .attribute { margin: 1mm -2mm; }
-.attr4 .life { margin: 1mm -1mm; }
+.attr4 .life { margin: 1mm -2mm; }
 
 .card-vertical .rerolls .life {
   margin: 2mm 0;
@@ -360,8 +336,8 @@ html, body {
 
 .bio .text, .tech .text { display: flex; align-items: center; }
 .text.shadow { color: transparent; }
-.bio .text.shadow { text-shadow: 5px 5px 10px #e9ffe9, -5px -5px 10px #e9ffe9, 5px -5px 10px #e9ffe9, -5px 5px 10px #e9ffe9; }
-.tech .text.shadow { text-shadow: 5px 5px 10px #e9e9ff, -5px -5px 10px #e9e9ff, 5px -5px 10px #e9e9ff, -5px 5px 10px #e9e9ff; }
+/* .bio .text.shadow { text-shadow: 5px 5px 10px #e9ffe9, -5px -5px 10px #e9ffe9, 5px -5px 10px #e9ffe9, -5px 5px 10px #e9ffe9; }
+.tech .text.shadow { text-shadow: 5px 5px 10px #e9e9ff, -5px -5px 10px #e9e9ff, 5px -5px 10px #e9e9ff, -5px 5px 10px #e9e9ff; } */
 
 .text
 

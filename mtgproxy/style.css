@@ -22,10 +22,10 @@ html, body {
 .card {
   page-break-inside: avoid;
   display: inline-block;
-  width: 6.3cm;
-  height: 8.8cm;
+  width: 62.4mm;
+  height: 87.1mm;
   background-color: transparent;
   background-position: center center;
-  background-size: 6.3cm 8.8cm;
+  background-size: 62.4mm 87.1mm;
   background-repeat: no-repeat;
 }
