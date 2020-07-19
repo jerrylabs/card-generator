@@ -21,13 +21,19 @@ const getAttrMarkup = (c, i) => `<img class="attribute attribute-${shortcut(c)}"
 const getTestMarkup = (value) => {
   let markup = '';
   if (value.includes('P') || value.includes('S') || value.includes('I')){
-    let testImgNamePart;
+    let testImgNamePart, testDescription = '';
     if (value.includes('PI'))      { testImgNamePart = 'poweriq'; }
     else if (value.includes('PS')) { testImgNamePart = 'powerspeed'; }
-    else if (value.includes('P'))  { testImgNamePart = 'power'; }
-    else if (value.includes('S'))  { testImgNamePart = 'speed'; }
-    else if (value.includes('I'))  { testImgNamePart = 'iq'; }
-    markup = `<img class="test" src="http://localhost:8080/imgs/test-${testImgNamePart}.png" />`;
+    else if (value.includes('P'))  { testImgNamePart = 'power'; testDescription = 'sílu'; }
+    else if (value.includes('S'))  { testImgNamePart = 'speed'; testDescription = 'rychlost'; }
+    else if (value.includes('I'))  { testImgNamePart = 'iq'; testDescription = 'inteligenci'; }
+    markup = `
+      <img class="test" src="http://localhost:8080/imgs/attr-${testImgNamePart}.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">na ${testDescription}</div>
+      <div class="quest__success">úspěch</div>
+      <div class="quest__fail">neúspěch</div>
+    `;
   }
   return markup;
 }
@@ -88,7 +94,7 @@ const getFieldMarkup = (title, value, card) => {
     /* nazev karty */
     case 'title':
       markup = `<div class="${title}
-        ${value.length > 32 || (card.type == 'quest' && value.length >= 20) ? ' title-long' : ''}
+        ${value.length > 32 || (card.type == 'quest' && value.length >= 17) ? ' title-long' : ''}
       ">
         <span>${value}</span>
       </div>`;

@@ -27,6 +27,7 @@ html, body {
   position: relative;
 }
 
+
 .card.animatron {
   width: 88mm;
   height: 118mm;
@@ -45,7 +46,7 @@ html, body {
   transform: translateX(-50%);
   font-family: "BadaBoom CE";
   font-size: 6mm;
-  width: 56mm;
+  width: 58mm;
   padding: 2mm 4mm;
   line-height: 1;
   color: yellow;
@@ -69,11 +70,16 @@ html, body {
 
 .card.quest {
   background: transparent url(http://localhost:8080/imgs/bg_power.jpg) center center;
-  background-size: 100% 100%;
+  background-size: calc(100% + 2mm) calc(100% + 1mm);
+  border-width: 1mm; border-style: solid;
+  border-color: #ad6a00;
 }
 
-.card.quest.S { background-image: url(http://localhost:8080/imgs/bg_speed.jpg); }
-.card.quest.I { background-image: url(http://localhost:8080/imgs/bg_iq.jpg); }
+.card.quest.S { background-image: url(http://localhost:8080/imgs/bg_speed.jpg); border-color: #398d1c; }
+.card.quest.I { background-image: url(http://localhost:8080/imgs/bg_iq.jpg); border-color: #0025a8; }
+
+.quest .title { font-size: 9mm; }
+.quest .title-long { font-size: 6mm; }
 
 .quest .illustration {
   width: 64mm;
@@ -94,38 +100,11 @@ html, body {
 
 .quest .test {
   position: absolute;
-  top: 52mm;
-  z-index: 1;
+  top: 54.2mm;
+  z-index: 2;
   left: 50%;
   transform: translateX(-50%);
-  width: 22mm;
-  background: radial-gradient(red 33%, transparent 66%);
-}
-
-.quest__success,
-.quest__fail
- {
-  background: transparent url(http://localhost:8080/imgs/quest-arrow-success.png) center center no-repeat;
-  background-size: 100% 100%;
-  text-shadow: 0 0 3px white, 0 0 3px white, 0 0 3px white, 0 0 3px white, 0 0 3px white;
-  position: absolute;
-  top: 1.5mm;
-  left: 1mm;
-  height: 11.5mm;
-  width: 19mm;
-  box-sizing: border-box;
-  padding-top: 1mm;
-  font-weight: normal;
-  text-align: right;
-  padding-right: 2mm;
-}
-
-.quest__fail {
-  background-image: url(http://localhost:8080/imgs/quest-arrow-fail.png);
-  left: auto;
-  right: 1mm;
-  text-align: left;
-  padding-left: 1.1mm;
+  width: 20mm;
 }
 
 .quest__reward {
@@ -135,7 +114,7 @@ html, body {
     bottom: 1mm;
     font-family: 'Impact Condensed';
     width: 30mm;
-    height: 20mm;
+    height: 15mm;
     align-items: center;
     justify-content: center;
 }
@@ -172,14 +151,30 @@ html, body {
   bottom: 1mm;
   font-family: 'Impact Condensed';
   width: 30mm;
-  height: 20mm;
+  height: 15mm;
   background: transparent url(http://localhost:8080/imgs/quest-heart.png) center center no-repeat;
   background-size: 12mm;
   box-sizing: border-box;
   font-size: 7mm;
   text-shadow: 0 0 3px white, 0 0 3px white, 0 0 3px white, 0 0 3px white, 0 0 3px white;
-  line-height: 20mm;
+  line-height: 15mm;
 }
+
+.quest__label, .quest__description, .quest__success, .quest__fail {
+  position: absolute;
+  font-family: "Bebas Neue";
+  font-weight: bold;
+  text-transform: uppercase;
+  z-index: 1;
+  white-space: nowrap;
+}
+
+.quest__label { top: 55mm; left: 4mm; font-size: 9mm; color: white; }
+.quest__description { top: 58.5mm; left: 41mm; font-size: 20px; color: #7a7979; }
+.I .quest__description { left: 38mm; }
+.quest__success, .quest__fail { top: 65mm; transform: translateX(-50%); font-size: 22px; }
+.quest__success { left: 18%; color: #fcee28; }
+.quest__fail { left: 81%; color: #b70000; }
 
 /************************************************************
  ***************** * * *  ANIMATRONS  * * * *****************

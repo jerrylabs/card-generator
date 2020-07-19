@@ -31,6 +31,7 @@ html, body {
   position: relative;
 }
 
+
 .card.animatron {
   width: 88mm;
   height: 118mm;
@@ -49,7 +50,7 @@ html, body {
   transform: translateX(-50%);
   font-family: "BadaBoom CE";
   font-size: 6mm;
-  width: 56mm;
+  width: 58mm;
   padding: 2mm 4mm;
   line-height: 1;
   color: yellow;
@@ -73,11 +74,16 @@ html, body {
 
 .card.quest {
   background: transparent url(http://localhost:8080/imgs/bg_power.jpg) center center;
-  background-size: 100% 100%;
+  background-size: calc(100% + 2mm) calc(100% + 1mm);
+  border-width: 1mm; border-style: solid;
+  border-color: #ad6a00;
 }
 
-.card.quest.S { background-image: url(http://localhost:8080/imgs/bg_speed.jpg); }
-.card.quest.I { background-image: url(http://localhost:8080/imgs/bg_iq.jpg); }
+.card.quest.S { background-image: url(http://localhost:8080/imgs/bg_speed.jpg); border-color: #398d1c; }
+.card.quest.I { background-image: url(http://localhost:8080/imgs/bg_iq.jpg); border-color: #0025a8; }
+
+.quest .title { font-size: 9mm; }
+.quest .title-long { font-size: 6mm; }
 
 .quest .illustration {
   width: 64mm;
@@ -98,38 +104,11 @@ html, body {
 
 .quest .test {
   position: absolute;
-  top: 52mm;
-  z-index: 1;
+  top: 54.2mm;
+  z-index: 2;
   left: 50%;
   transform: translateX(-50%);
-  width: 22mm;
-  background: radial-gradient(red 33%, transparent 66%);
-}
-
-.quest__success,
-.quest__fail
- {
-  background: transparent url(http://localhost:8080/imgs/quest-arrow-success.png) center center no-repeat;
-  background-size: 100% 100%;
-  text-shadow: 0 0 3px white, 0 0 3px white, 0 0 3px white, 0 0 3px white, 0 0 3px white;
-  position: absolute;
-  top: 1.5mm;
-  left: 1mm;
-  height: 11.5mm;
-  width: 19mm;
-  box-sizing: border-box;
-  padding-top: 1mm;
-  font-weight: normal;
-  text-align: right;
-  padding-right: 2mm;
-}
-
-.quest__fail {
-  background-image: url(http://localhost:8080/imgs/quest-arrow-fail.png);
-  left: auto;
-  right: 1mm;
-  text-align: left;
-  padding-left: 1.1mm;
+  width: 20mm;
 }
 
 .quest__reward {
@@ -139,7 +118,7 @@ html, body {
     bottom: 1mm;
     font-family: 'Impact Condensed';
     width: 30mm;
-    height: 20mm;
+    height: 15mm;
     align-items: center;
     justify-content: center;
 }
@@ -176,14 +155,30 @@ html, body {
   bottom: 1mm;
   font-family: 'Impact Condensed';
   width: 30mm;
-  height: 20mm;
+  height: 15mm;
   background: transparent url(http://localhost:8080/imgs/quest-heart.png) center center no-repeat;
   background-size: 12mm;
   box-sizing: border-box;
   font-size: 7mm;
   text-shadow: 0 0 3px white, 0 0 3px white, 0 0 3px white, 0 0 3px white, 0 0 3px white;
-  line-height: 20mm;
+  line-height: 15mm;
 }
+
+.quest__label, .quest__description, .quest__success, .quest__fail {
+  position: absolute;
+  font-family: "Bebas Neue";
+  font-weight: bold;
+  text-transform: uppercase;
+  z-index: 1;
+  white-space: nowrap;
+}
+
+.quest__label { top: 55mm; left: 4mm; font-size: 9mm; color: white; }
+.quest__description { top: 58.5mm; left: 41mm; font-size: 20px; color: #7a7979; }
+.I .quest__description { left: 38mm; }
+.quest__success, .quest__fail { top: 65mm; transform: translateX(-50%); font-size: 22px; }
+.quest__success { left: 18%; color: #fcee28; }
+.quest__fail { left: 81%; color: #b70000; }
 
 /************************************************************
  ***************** * * *  ANIMATRONS  * * * *****************
@@ -310,7 +305,13 @@ html, body {
          title-long
       ">
         <span>Klika namazaná lepidlem</span>
-      </div><img class="test" src="http://localhost:8080/imgs/test-power.png" />
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-power.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">na sílu</div>
+      <div class="quest__success">úspěch</div>
+      <div class="quest__fail">neúspěch</div>
+    
         <div class="quest__reward">
           <div class="quest__reputation v1">1</div>
           
@@ -330,7 +331,13 @@ html, body {
          title-long
       ">
         <span>Neotevřitelná truhlička</span>
-      </div><img class="test" src="http://localhost:8080/imgs/test-power.png" />
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-power.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">na sílu</div>
+      <div class="quest__success">úspěch</div>
+      <div class="quest__fail">neúspěch</div>
+    
         <div class="quest__reward">
           
           <div class="quest__cards">+1</div>
@@ -350,7 +357,13 @@ html, body {
         
       ">
         <span>Medvědí past</span>
-      </div><img class="test" src="http://localhost:8080/imgs/test-power.png" />
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-power.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">na sílu</div>
+      <div class="quest__success">úspěch</div>
+      <div class="quest__fail">neúspěch</div>
+    
         <div class="quest__reward">
           <div class="quest__reputation v1">1</div>
           
@@ -370,7 +383,13 @@ html, body {
         
       ">
         <span>Padající mříž</span>
-      </div><img class="test" src="http://localhost:8080/imgs/test-power.png" />
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-power.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">na sílu</div>
+      <div class="quest__success">úspěch</div>
+      <div class="quest__fail">neúspěch</div>
+    
         <div class="quest__reward">
           
           <div class="quest__cards">+1</div>
@@ -390,7 +409,13 @@ html, body {
          title-long
       ">
         <span>Drtička směšného odpadu</span>
-      </div><img class="test" src="http://localhost:8080/imgs/test-power.png" />
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-power.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">na sílu</div>
+      <div class="quest__success">úspěch</div>
+      <div class="quest__fail">neúspěch</div>
+    
         <div class="quest__reward">
           <div class="quest__reputation v1">1</div>
           
@@ -403,14 +428,20 @@ html, body {
   ">
     
     <div class="type">quest</div><div class="title
-        
+         title-long
       ">
         <span>Spolknutí vorvaněm</span>
       </div><div class="title title-shadow
-        
+         title-long
       ">
         <span>Spolknutí vorvaněm</span>
-      </div><img class="test" src="http://localhost:8080/imgs/test-power.png" />
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-power.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">na sílu</div>
+      <div class="quest__success">úspěch</div>
+      <div class="quest__fail">neúspěch</div>
+    
         <div class="quest__reward">
           <div class="quest__reputation v1">1</div>
           
@@ -430,7 +461,13 @@ html, body {
         
       ">
         <span>Lázeň s piraněmi</span>
-      </div><img class="test" src="http://localhost:8080/imgs/test-power.png" />
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-power.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">na sílu</div>
+      <div class="quest__success">úspěch</div>
+      <div class="quest__fail">neúspěch</div>
+    
         <div class="quest__reward">
           <div class="quest__reputation">2</div>
           
@@ -450,7 +487,13 @@ html, body {
         
       ">
         <span>Lisovna plechu</span>
-      </div><img class="test" src="http://localhost:8080/imgs/test-power.png" />
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-power.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">na sílu</div>
+      <div class="quest__success">úspěch</div>
+      <div class="quest__fail">neúspěch</div>
+    
         <div class="quest__reward">
           <div class="quest__reputation v1">1</div>
           <div class="quest__cards">+1</div>
@@ -470,7 +513,13 @@ html, body {
         
       ">
         <span>Rajský plyn</span>
-      </div><img class="test" src="http://localhost:8080/imgs/test-power.png" />
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-power.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">na sílu</div>
+      <div class="quest__success">úspěch</div>
+      <div class="quest__fail">neúspěch</div>
+    
         <div class="quest__reward">
           <div class="quest__reputation">2</div>
           
@@ -490,7 +539,13 @@ html, body {
          title-long
       ">
         <span>Střevaleptající plyn</span>
-      </div><img class="test" src="http://localhost:8080/imgs/test-power.png" />
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-power.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">na sílu</div>
+      <div class="quest__success">úspěch</div>
+      <div class="quest__fail">neúspěch</div>
+    
         <div class="quest__reward">
           <div class="quest__reputation">2</div>
           
@@ -503,14 +558,20 @@ html, body {
   ">
     
     <div class="type">quest</div><div class="title
-        
+         title-long
       ">
         <span>Místnost cirkulárek</span>
       </div><div class="title title-shadow
-        
+         title-long
       ">
         <span>Místnost cirkulárek</span>
-      </div><img class="test" src="http://localhost:8080/imgs/test-power.png" />
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-power.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">na sílu</div>
+      <div class="quest__success">úspěch</div>
+      <div class="quest__fail">neúspěch</div>
+    
         <div class="quest__reward">
           <div class="quest__reputation v1">1</div>
           <div class="quest__cards">+1</div>
@@ -530,7 +591,13 @@ html, body {
          title-long
       ">
         <span>Kyselinokrvý kyanidoslinný biomutant</span>
-      </div><img class="test" src="http://localhost:8080/imgs/test-power.png" />
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-power.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">na sílu</div>
+      <div class="quest__success">úspěch</div>
+      <div class="quest__fail">neúspěch</div>
+    
         <div class="quest__reward">
           <div class="quest__reputation">3</div>
           
@@ -543,14 +610,20 @@ html, body {
   ">
     
     <div class="type">quest</div><div class="title
-        
+         title-long
       ">
         <span>Motoropilozubý tygr</span>
       </div><div class="title title-shadow
-        
+         title-long
       ">
         <span>Motoropilozubý tygr</span>
-      </div><img class="test" src="http://localhost:8080/imgs/test-power.png" />
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-power.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">na sílu</div>
+      <div class="quest__success">úspěch</div>
+      <div class="quest__fail">neúspěch</div>
+    
         <div class="quest__reward">
           <div class="quest__reputation">2</div>
           <div class="quest__cards">+1</div>
@@ -570,7 +643,13 @@ html, body {
         
       ">
         <span>Tyranosaurus</span>
-      </div><img class="test" src="http://localhost:8080/imgs/test-power.png" />
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-power.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">na sílu</div>
+      <div class="quest__success">úspěch</div>
+      <div class="quest__fail">neúspěch</div>
+    
         <div class="quest__reward">
           <div class="quest__reputation">3</div>
           
@@ -590,7 +669,13 @@ html, body {
         
       ">
         <span>Kabelnice</span>
-      </div><img class="test" src="http://localhost:8080/imgs/test-power.png" />
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-power.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">na sílu</div>
+      <div class="quest__success">úspěch</div>
+      <div class="quest__fail">neúspěch</div>
+    
         <div class="quest__reward">
           <div class="quest__reputation v1">1</div>
           <div class="quest__cards">+2</div>
@@ -603,14 +688,20 @@ html, body {
   ">
     
     <div class="type">quest</div><div class="title
-        
+         title-long
       ">
         <span>Zapastěná truhlička</span>
       </div><div class="title title-shadow
-        
+         title-long
       ">
         <span>Zapastěná truhlička</span>
-      </div><img class="test" src="http://localhost:8080/imgs/test-speed.png" />
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-speed.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">na rychlost</div>
+      <div class="quest__success">úspěch</div>
+      <div class="quest__fail">neúspěch</div>
+    
         <div class="quest__reward">
           
           <div class="quest__cards">+1</div>
@@ -630,7 +721,13 @@ html, body {
         
       ">
         <span>Laserový řezák</span>
-      </div><img class="test" src="http://localhost:8080/imgs/test-speed.png" />
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-speed.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">na rychlost</div>
+      <div class="quest__success">úspěch</div>
+      <div class="quest__fail">neúspěch</div>
+    
         <div class="quest__reward">
           <div class="quest__reputation v1">1</div>
           
@@ -650,7 +747,13 @@ html, body {
         
       ">
         <span>Pramen kyseliny</span>
-      </div><img class="test" src="http://localhost:8080/imgs/test-speed.png" />
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-speed.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">na rychlost</div>
+      <div class="quest__success">úspěch</div>
+      <div class="quest__fail">neúspěch</div>
+    
         <div class="quest__reward">
           <div class="quest__reputation v1">1</div>
           
@@ -663,14 +766,20 @@ html, body {
   ">
     
     <div class="type">quest</div><div class="title
-        
+         title-long
       ">
         <span>Bortící se chodba</span>
       </div><div class="title title-shadow
-        
+         title-long
       ">
         <span>Bortící se chodba</span>
-      </div><img class="test" src="http://localhost:8080/imgs/test-speed.png" />
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-speed.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">na rychlost</div>
+      <div class="quest__success">úspěch</div>
+      <div class="quest__fail">neúspěch</div>
+    
         <div class="quest__reward">
           <div class="quest__reputation v1">1</div>
           
@@ -690,7 +799,13 @@ html, body {
         
       ">
         <span>Propadlo</span>
-      </div><img class="test" src="http://localhost:8080/imgs/test-speed.png" />
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-speed.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">na rychlost</div>
+      <div class="quest__success">úspěch</div>
+      <div class="quest__fail">neúspěch</div>
+    
         <div class="quest__reward">
           <div class="quest__reputation v1">1</div>
           
@@ -710,7 +825,13 @@ html, body {
         
       ">
         <span>Úzký můstek</span>
-      </div><img class="test" src="http://localhost:8080/imgs/test-speed.png" />
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-speed.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">na rychlost</div>
+      <div class="quest__success">úspěch</div>
+      <div class="quest__fail">neúspěch</div>
+    
         <div class="quest__reward">
           
           <div class="quest__cards">+1</div>
@@ -730,7 +851,13 @@ html, body {
         
       ">
         <span>Ohnivý kruh</span>
-      </div><img class="test" src="http://localhost:8080/imgs/test-speed.png" />
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-speed.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">na rychlost</div>
+      <div class="quest__success">úspěch</div>
+      <div class="quest__fail">neúspěch</div>
+    
         <div class="quest__reward">
           <div class="quest__reputation">2</div>
           
@@ -750,7 +877,13 @@ html, body {
         
       ">
         <span>Žhavé uhlíky</span>
-      </div><img class="test" src="http://localhost:8080/imgs/test-speed.png" />
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-speed.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">na rychlost</div>
+      <div class="quest__success">úspěch</div>
+      <div class="quest__fail">neúspěch</div>
+    
         <div class="quest__reward">
           <div class="quest__reputation">2</div>
           
@@ -770,7 +903,13 @@ html, body {
         
       ">
         <span>Bazén kyseliny</span>
-      </div><img class="test" src="http://localhost:8080/imgs/test-speed.png" />
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-speed.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">na rychlost</div>
+      <div class="quest__success">úspěch</div>
+      <div class="quest__fail">neúspěch</div>
+    
         <div class="quest__reward">
           <div class="quest__reputation v1">1</div>
           <div class="quest__cards">+1</div>
@@ -790,7 +929,13 @@ html, body {
          title-long
       ">
         <span>Naolejovaná šikmá plocha</span>
-      </div><img class="test" src="http://localhost:8080/imgs/test-speed.png" />
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-speed.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">na rychlost</div>
+      <div class="quest__success">úspěch</div>
+      <div class="quest__fail">neúspěch</div>
+    
         <div class="quest__reward">
           <div class="quest__reputation">2</div>
           
@@ -810,7 +955,13 @@ html, body {
         
       ">
         <span>Lávová místnost</span>
-      </div><img class="test" src="http://localhost:8080/imgs/test-speed.png" />
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-speed.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">na rychlost</div>
+      <div class="quest__success">úspěch</div>
+      <div class="quest__fail">neúspěch</div>
+    
         <div class="quest__reward">
           <div class="quest__reputation v1">1</div>
           <div class="quest__cards">+1</div>
@@ -830,7 +981,13 @@ html, body {
         
       ">
         <span>Padající piraně</span>
-      </div><img class="test" src="http://localhost:8080/imgs/test-speed.png" />
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-speed.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">na rychlost</div>
+      <div class="quest__success">úspěch</div>
+      <div class="quest__fail">neúspěch</div>
+    
         <div class="quest__reward">
           <div class="quest__reputation">3</div>
           
@@ -850,7 +1007,13 @@ html, body {
          title-long
       ">
         <span>Motýli s&nbsp;žiletkovými křídly</span>
-      </div><img class="test" src="http://localhost:8080/imgs/test-speed.png" />
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-speed.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">na rychlost</div>
+      <div class="quest__success">úspěch</div>
+      <div class="quest__fail">neúspěch</div>
+    
         <div class="quest__reward">
           <div class="quest__reputation">2</div>
           <div class="quest__cards">+1</div>
@@ -870,7 +1033,13 @@ html, body {
          title-long
       ">
         <span>Hejno divokých sršňů</span>
-      </div><img class="test" src="http://localhost:8080/imgs/test-speed.png" />
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-speed.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">na rychlost</div>
+      <div class="quest__success">úspěch</div>
+      <div class="quest__fail">neúspěch</div>
+    
         <div class="quest__reward">
           <div class="quest__reputation">3</div>
           
@@ -890,7 +1059,13 @@ html, body {
         
       ">
         <span>Valící se kameň</span>
-      </div><img class="test" src="http://localhost:8080/imgs/test-speed.png" />
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-speed.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">na rychlost</div>
+      <div class="quest__success">úspěch</div>
+      <div class="quest__fail">neúspěch</div>
+    
         <div class="quest__reward">
           <div class="quest__reputation v1">1</div>
           <div class="quest__cards">+2</div>
@@ -910,7 +1085,13 @@ html, body {
         
       ">
         <span>Otrávená hostina</span>
-      </div><img class="test" src="http://localhost:8080/imgs/test-iq.png" />
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-iq.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">na inteligenci</div>
+      <div class="quest__success">úspěch</div>
+      <div class="quest__fail">neúspěch</div>
+    
         <div class="quest__reward">
           <div class="quest__reputation v1">1</div>
           
@@ -930,7 +1111,13 @@ html, body {
          title-long
       ">
         <span>Lektvar podivuhodného zápachu</span>
-      </div><img class="test" src="http://localhost:8080/imgs/test-iq.png" />
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-iq.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">na inteligenci</div>
+      <div class="quest__success">úspěch</div>
+      <div class="quest__fail">neúspěch</div>
+    
         <div class="quest__reward">
           <div class="quest__reputation v1">1</div>
           
@@ -950,7 +1137,13 @@ html, body {
          title-long
       ">
         <span>Lektvar podezřele světélkující kapaliny</span>
-      </div><img class="test" src="http://localhost:8080/imgs/test-iq.png" />
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-iq.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">na inteligenci</div>
+      <div class="quest__success">úspěch</div>
+      <div class="quest__fail">neúspěch</div>
+    
         <div class="quest__reward">
           <div class="quest__reputation v1">1</div>
           
@@ -970,7 +1163,13 @@ html, body {
          title-long
       ">
         <span>Automat s&nbsp;obžerstvením</span>
-      </div><img class="test" src="http://localhost:8080/imgs/test-iq.png" />
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-iq.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">na inteligenci</div>
+      <div class="quest__success">úspěch</div>
+      <div class="quest__fail">neúspěch</div>
+    
         <div class="quest__reward">
           
           <div class="quest__cards">+1</div>
@@ -990,7 +1189,13 @@ html, body {
         
       ">
         <span>Hloupý troll</span>
-      </div><img class="test" src="http://localhost:8080/imgs/test-iq.png" />
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-iq.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">na inteligenci</div>
+      <div class="quest__success">úspěch</div>
+      <div class="quest__fail">neúspěch</div>
+    
         <div class="quest__reward">
           <div class="quest__reputation v1">1</div>
           
@@ -1010,7 +1215,13 @@ html, body {
         
       ">
         <span>Zamčené dveře</span>
-      </div><img class="test" src="http://localhost:8080/imgs/test-iq.png" />
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-iq.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">na inteligenci</div>
+      <div class="quest__success">úspěch</div>
+      <div class="quest__fail">neúspěch</div>
+    
         <div class="quest__reward">
           
           <div class="quest__cards">+1</div>
@@ -1023,14 +1234,20 @@ html, body {
   ">
     
     <div class="type">quest</div><div class="title
-        
+         title-long
       ">
         <span>Zrcadlový labyrint</span>
       </div><div class="title title-shadow
-        
+         title-long
       ">
         <span>Zrcadlový labyrint</span>
-      </div><img class="test" src="http://localhost:8080/imgs/test-iq.png" />
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-iq.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">na inteligenci</div>
+      <div class="quest__success">úspěch</div>
+      <div class="quest__fail">neúspěch</div>
+    
         <div class="quest__reward">
           <div class="quest__reputation">2</div>
           
@@ -1050,7 +1267,13 @@ html, body {
         
       ">
         <span>Šifrovaný vzkaz</span>
-      </div><img class="test" src="http://localhost:8080/imgs/test-iq.png" />
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-iq.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">na inteligenci</div>
+      <div class="quest__success">úspěch</div>
+      <div class="quest__fail">neúspěch</div>
+    
         <div class="quest__reward">
           <div class="quest__reputation v1">1</div>
           <div class="quest__cards">+1</div>
@@ -1070,7 +1293,13 @@ html, body {
          title-long
       ">
         <span>Zapastěný automat s&nbsp;obžerstvením</span>
-      </div><img class="test" src="http://localhost:8080/imgs/test-iq.png" />
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-iq.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">na inteligenci</div>
+      <div class="quest__success">úspěch</div>
+      <div class="quest__fail">neúspěch</div>
+    
         <div class="quest__reward">
           <div class="quest__reputation v1">1</div>
           <div class="quest__cards">+1</div>
@@ -1083,14 +1312,20 @@ html, body {
   ">
     
     <div class="type">quest</div><div class="title
-        
+         title-long
       ">
         <span>Laserová místnost</span>
       </div><div class="title title-shadow
-        
+         title-long
       ">
         <span>Laserová místnost</span>
-      </div><img class="test" src="http://localhost:8080/imgs/test-iq.png" />
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-iq.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">na inteligenci</div>
+      <div class="quest__success">úspěch</div>
+      <div class="quest__fail">neúspěch</div>
+    
         <div class="quest__reward">
           <div class="quest__reputation">2</div>
           
@@ -1110,7 +1345,13 @@ html, body {
         
       ">
         <span>Ozubená kola</span>
-      </div><img class="test" src="http://localhost:8080/imgs/test-iq.png" />
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-iq.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">na inteligenci</div>
+      <div class="quest__success">úspěch</div>
+      <div class="quest__fail">neúspěch</div>
+    
         <div class="quest__reward">
           <div class="quest__reputation">2</div>
           
@@ -1130,7 +1371,13 @@ html, body {
         
       ">
         <span>Nášlapné miny</span>
-      </div><img class="test" src="http://localhost:8080/imgs/test-iq.png" />
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-iq.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">na inteligenci</div>
+      <div class="quest__success">úspěch</div>
+      <div class="quest__fail">neúspěch</div>
+    
         <div class="quest__reward">
           <div class="quest__reputation">3</div>
           
@@ -1150,7 +1397,13 @@ html, body {
          title-long
       ">
         <span>Místnost bez východu</span>
-      </div><img class="test" src="http://localhost:8080/imgs/test-iq.png" />
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-iq.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">na inteligenci</div>
+      <div class="quest__success">úspěch</div>
+      <div class="quest__fail">neúspěch</div>
+    
         <div class="quest__reward">
           <div class="quest__reputation v1">1</div>
           <div class="quest__cards">+2</div>
@@ -1170,7 +1423,13 @@ html, body {
          title-long
       ">
         <span>Zámek vysokého napětí</span>
-      </div><img class="test" src="http://localhost:8080/imgs/test-iq.png" />
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-iq.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">na inteligenci</div>
+      <div class="quest__success">úspěch</div>
+      <div class="quest__fail">neúspěch</div>
+    
         <div class="quest__reward">
           <div class="quest__reputation">2</div>
           <div class="quest__cards">+1</div>
@@ -1183,14 +1442,20 @@ html, body {
   ">
     
     <div class="type">quest</div><div class="title
-        
+         title-long
       ">
         <span>Vrtačkoruký klaun</span>
       </div><div class="title title-shadow
-        
+         title-long
       ">
         <span>Vrtačkoruký klaun</span>
-      </div><img class="test" src="http://localhost:8080/imgs/test-iq.png" />
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-iq.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">na inteligenci</div>
+      <div class="quest__success">úspěch</div>
+      <div class="quest__fail">neúspěch</div>
+    
         <div class="quest__reward">
           <div class="quest__reputation">3</div>
           
