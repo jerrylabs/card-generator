@@ -102,9 +102,13 @@ const getFieldMarkup = (title, value, card) => {
     break;
 
     case 'image':
-      markup = `<img
-        src="http://localhost:8080/imgs/ilus/${value}.jpg"
-        class="illustration" />`;
+      if (card.type === 'quest') {
+        markup = `<div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/${value}.jpg');"></div>`;
+      } else {
+        markup = `<img
+          src="http://localhost:8080/imgs/ilus/${value}.jpg"
+          class="illustration" />`;
+      }
     break;
 
     case 'test':

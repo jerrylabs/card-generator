@@ -81,12 +81,23 @@ html, body {
 .quest .title { font-size: 9mm; }
 .quest .title-long { font-size: 6mm; }
 
-.quest .illustration {
-  width: 64mm;
-  top: 15mm;
+.quest__illustration {
+  width: 62mm;
+  height: 50mm;
+  background-size: cover;
+  background-position: center center;
+  position: absolute;
+  top: 14mm;
+  border: 1px solid black;
+}
+
+.quest__illustration::before {
+  content: ' ';
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(transparent 0%, transparent 75%, rgba(0, 0, 0, 0.5) 100%);
   position: absolute;
   left: 0;
-  height: 48mm;
 }
 
 .quest .text {
