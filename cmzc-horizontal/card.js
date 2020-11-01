@@ -149,7 +149,7 @@ const getFieldMarkup = (title, value, card) => {
       if (card.text2) {
         markup = `<div class="text texts">
           <div class="text-part">${getTextMarkup(value)}</div>
-          ${ card.disjunction ? '<span class="white-shadow">nebo</span>' : '' }
+          ${ card.disjunction ? '<span class="white-shadow or">nebo</span>' : '' }
           <div class="text-part">${getTextMarkup(card.text2)}</div>
         </div>`;
       } else {

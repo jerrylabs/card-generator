@@ -31,24 +31,6 @@ html, body {
   background-position: center center;
 }
 
-/* bg overlay */
-/* .bio.card::before,
-.tech.card::before, */
-.basic.card::before {
-  content: ' ';
-  position: absolute;
-  z-index: 1;
-  background:  rgba(255, 255, 255, 0.7);
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  box-sizing: border-box;
-}
-
-.card.voodoo::before {
-  display: none;
-}
 
 .card-frame {
   display: none;
@@ -107,6 +89,10 @@ html, body {
   letter-spacing: 0.5px;
 }
 
+.basic .title {
+  color: black;
+}
+
 .title-long {
   font-size: 5.3mm;
 }
@@ -127,7 +113,7 @@ html, body {
 
 .title-shadow {
   color: black;
-  filter: blur(2px);
+  filter: blur(3px);
   z-index: 0;
 }
 
@@ -137,6 +123,8 @@ html, body {
   width: 42mm;
   padding: 2.25mm 3mm 0 12mm;
   box-sizing: border-box;
+  color: black;
+  font-size: 4mm;
 }
 
 .title span {
@@ -147,6 +135,12 @@ html, body {
   top: -0.2mm;
 }
 
+.voodoo .title span {
+    line-height: 4mm;
+    top: 0.3mm;
+    vertical-align: -webkit-baseline-middle;
+}
+
 .title-reversed {
   top: auto;
   bottom: 0mm;
@@ -155,7 +149,7 @@ html, body {
 
 .joint { position: absolute; z-index: 4; height: 1.5cm; }
 .joint.required { left: 0; }
-.joint.provided { right: 0; }
+.joint.provided { right: -0.5mm; }
 .joint.single.bone { top: 1cm; }
 .joint.single.hand,
 .joint.single.leg { bottom: 1cm; }
@@ -303,7 +297,9 @@ html, body {
 }
 
 .voodoo .illustration {
-  top: 39%;
+  top: 25.5mm;
+  width: 43mm;
+  height: 25mm;
 }
 
 .text {
@@ -326,7 +322,9 @@ html, body {
   left: -10mm;
   bottom: 0mm;
   width: 64mm;
+  /*
   background: radial-gradient(ellipse farthest-side at center 50%, rgba(255, 255, 255, 0.5) 80%, transparent 100%);
+  */
   font-family: "Mirza";
   padding: 2mm 11mm;
 }
@@ -334,24 +332,25 @@ html, body {
 .bio .text-shadow, .tech .text-shadow {
   z-index: 0;
   color: white;
-  filter: blur(2px);
+  filter: blur(5px);
 }
-
+/*
 .bio .text.special, .tech .text.special {
   background: radial-gradient(ellipse farthest-side at center 55%, rgba(255, 255, 255, 0.5) 80%, transparent 100%);
 }
-
+*/
 .voodoo .text {
-  bottom: 5mm;
-  width: 38mm;
+ bottom: 0mm;
+  width: 44mm;
   background: none;
-  padding: 1mm;
-  height: 21mm;
+  padding: 1mm 3mm 2mm;
+  height: 26mm;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 3.4mm;
-  line-height: 1.2;
+  font-size: 3.7mm;
+  line-height: 1;
+  left: 0;
 }
 
 .voodoo .text-long {
@@ -429,11 +428,16 @@ html, body {
 .voodoo .test {
   position: absolute;
   top: 37.1mm;
-  left: 8mm;
+  left: 3.8mm;
   transform: translate(-50%, -50%) !important;
   z-index: 3;
   width: 16mm;
   height: 16mm;
+}
+
+.voodoo .or {
+  position: relative;
+  top: -0.5mm;
 }
 
 /************************************************************

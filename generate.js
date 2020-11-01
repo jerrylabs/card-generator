@@ -102,23 +102,23 @@ const savePdf = async (htmlData, settings ) => {
     }
 
     if (process.argv.includes('html')) {
-      fs.writeFile("myhtml.html", htmlData, function(err) {
+      fs.writeFileSync("myhtml.html", htmlData, function(err) {
         if(err) {
             return console.log(err);
         }
-        console.log("The HTML file was saved 👍");
+        console.log("The HTML file was saved");
       });
     }
 
-    await savePdf(htmlData, {
-      path: customName ? `${customName}.pdf` : 'mypdf.pdf',
-      format: 'A4',
-      printBackground: true,
-      landscape: process.argv.includes('landscape'),
-      margin: {
-          top: process.argv.includes('landscape') ? "9mm" : "16.5mm",
-      }
-    });
+    // await savePdf(htmlData, {
+    //   path: customName ? `${customName}.pdf` : 'mypdf.pdf',
+    //   format: 'A4',
+    //   printBackground: true,
+    //   landscape: process.argv.includes('landscape'),
+    //   margin: {
+    //       top: process.argv.includes('landscape') ? "9mm" : "16.5mm",
+    //   }
+    // });
 
     process.exit();
 
