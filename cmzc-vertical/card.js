@@ -122,10 +122,16 @@ const getFieldMarkup = (title, value, card) => {
        const rewardReputation = questLevel - rewardCards;
        markup = `
         <div class="quest__reward">
-          ${rewardReputation > 0 ? `<div class="quest__reputation${rewardReputation === 1 ? ' v1' : ''}">${rewardReputation}</div>` : ''}
-          ${rewardCards > 0 ? `<div class="quest__cards">+${rewardCards}</div>` : ''}
+          ${rewardReputation > 0 ? `<div class="quest__reputation v${rewardReputation}">
+            <span class="val${rewardReputation}">${rewardReputation}</span>
+          </div>` : ''}
+          ${rewardCards > 0 ? `<div class="quest__cards">
+            <span class="val${rewardCards}">+${rewardCards}</span>
+          </div>` : ''}
         </div>
-      <div class="quest__penalty">-${questLevel}</div>`;
+      <div class="quest__penalty">
+        <span class="val${questLevel}">-${questLevel}</span>
+      </div>`;
     break;
 
     default:
@@ -142,7 +148,7 @@ const getAnimatronMarkup = (card) => `
   <img class="joint provided bone bone4" src="http://localhost:8080/imgs/provided-bone.png">
   <div class="animatron__cards">4</div>
   ${card.image == 'zombie'
-    ? '<div class="animatron__reputation">-2</div>'
+    ? '<div class="animatron__reputation"><span>-2</span></div>'
     : '<img class="attribute attribute-iq" src="http://localhost:8080/imgs/attr-iq.png" />'
   }
 `

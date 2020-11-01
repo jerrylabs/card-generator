@@ -76,7 +76,7 @@ getTextMarkup = (text) => text
   .replace(/#/g, '<img class="emo" src="http://localhost:8080/imgs/dice-cross.png" />')
   .replace(/=>/g, '<img class="emo arrow" src="http://localhost:8080/imgs/arrow.png" />')
   .replace(/\?/g, '<img class="emo dice" src="http://localhost:8080/imgs/dice-any.png" />')
-  .replace(/\(2\)/g, '<div class="reroll reroll-green"><img src="http://localhost:8080/imgs/dice2.png"></div>')
+  .replace(/\(2\)/g, '<div class="reroll reroll-red"><img src="http://localhost:8080/imgs/dice2.png"></div>')
   .replace(/\{/g, '<div class="group-all"><span class="white-shadow">všechny</span><div class="group">')
   .replace(/\}/g, '</div></div>');
 
@@ -135,8 +135,9 @@ const getFieldMarkup = (title, value, card) => {
       </div>`;
     break;
     case 'image':
+	  const imageFormat = (card.type == 'voodoo') ? 'jpg' : 'png';
       markup = `<img
-        src="http://localhost:8080/imgs/ilus/png/${value}.png"
+        src="http://localhost:8080/imgs/ilus/${imageFormat}/${value}.${imageFormat}"
         class="illustration" />`;
     break;
     case 'rerolls':

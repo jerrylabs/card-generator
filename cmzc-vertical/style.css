@@ -1,3 +1,5 @@
+@page { margin: 9mm 0 0 0; }
+
 body {
   -webkit-print-color-adjust: exact;
 }
@@ -47,7 +49,7 @@ html, body {
   font-family: "BadaBoom CE";
   font-size: 6mm;
   width: 58mm;
-  padding: 2mm 4mm;
+  padding: 1mm 4mm;
   line-height: 1;
   color: yellow;
   display: flex;
@@ -59,8 +61,8 @@ html, body {
 
 .title-shadow {
   color: black;
-  filter: blur(2px);
-  z-index: 0;
+  filter: blur(3px);
+  z-index: 1;
 }
 
 /************************************************************
@@ -137,10 +139,15 @@ html, body {
   background-size: contain;
   box-sizing: border-box;
   font-size: 7.5mm;
-  text-shadow: 0 0 3px white, 0 0 3px white, 0 0 3px white;
   padding: 1mm 0 0 1mm;
   margin-top: 1mm;
 }
+
+.quest__reputation span { position: relative; z-index: 1; }
+.quest__reputation span::before { position: absolute; z-index: -1; color: white; filter: blur(1px); }
+.quest__reputation span.val1::before { content: '1'; }
+.quest__reputation span.val2::before { content: '2'; }
+.quest__reputation span.val3::before { content: '3'; }
 
 .quest__reputation.v1 { padding-left: 0.5mm; }
 
@@ -152,9 +159,13 @@ html, body {
   box-sizing: border-box;
   padding: 2.45mm 4mm 0 0;
   font-size: 5mm;
-  text-shadow: 0 0 3px white, 0 0 3px white, 0 0 3px white, 0 0 3px white, 0 0 3px white;
-  margin-bottom: 1mm;
 }
+
+.quest__cards span { position: relative; z-index: 1; }
+.quest__cards span::before { position: absolute; z-index: -1; color: white; filter: blur(1px); }
+.quest__cards span.val1::before { content: '+1'; }
+.quest__cards span.val2::before { content: '+2'; }
+.quest__cards span.val3::before { content: '+3'; }
 
 .quest__penalty {
  position: absolute;
@@ -167,9 +178,14 @@ html, body {
   background-size: 12mm;
   box-sizing: border-box;
   font-size: 7mm;
-  text-shadow: 0 0 3px white, 0 0 3px white, 0 0 3px white, 0 0 3px white, 0 0 3px white;
   line-height: 15mm;
 }
+
+.quest__penalty span { position: relative; z-index: 1; }
+.quest__penalty span::before { position: absolute; z-index: -1; color: white; filter: blur(1px); }
+.quest__penalty span.val1::before { content: '-1'; }
+.quest__penalty span.val2::before { content: '-2'; }
+.quest__penalty span.val3::before { content: '-3'; }
 
 .quest__label, .quest__description, .quest__success, .quest__fail {
   position: absolute;
@@ -181,8 +197,10 @@ html, body {
 }
 
 .quest__label { top: 55mm; left: 4mm; font-size: 9mm; color: white; }
-.quest__description { top: 58.5mm; left: 41mm; font-size: 20px; color: #7a7979; }
-.I .quest__description { left: 38mm; }
+.quest__description { top: 58.5mm; font-size: 20px; color: #ddd; }
+.P .quest__description { left: 41mm; }
+.S .quest__description { right: 1mm; }
+.I .quest__description { right: 1mm; font-size: 18px; }
 .quest__success, .quest__fail { top: 65mm; transform: translateX(-50%); font-size: 22px; }
 .quest__success { left: 18%; color: #fcee28; }
 .quest__fail { left: 81%; color: #b70000; }
@@ -206,6 +224,7 @@ html, body {
   top: 0;
   transform: translateX(-50%);
   left: 50%;
+  position: relative;
 }
 
 .joint { position: absolute; z-index: 4; height: 1.5cm; right: 0; }
@@ -229,7 +248,6 @@ html, body {
   box-sizing: border-box;
   padding: 3.5mm 5mm 0 0;
   font-size: 12mm;
-  text-shadow: 0 0 3px white, 0 0 3px white, 0 0 3px white, 0 0 3px white, 0 0 3px white;
   position: absolute;
   top: 80mm;
   left: 44mm;
@@ -252,8 +270,7 @@ html, body {
   background-size: contain;
   box-sizing: border-box;
   font-size: 10.5mm;
-  text-shadow: 0.5mm 0.5mm 2px black, -0.5mm 0.5mm 2px black, 0.5mm -0.5mm 2px black, -0.5mm -0.5mm 2px black;
-  padding: 2mm 0 0 0;
+  padding: 2.5mm 0 0 0;
   position: absolute;
   top: 82mm;
   left: 22mm;
@@ -261,6 +278,9 @@ html, body {
   font-family: 'Impact Condensed';
   color: red;
 }
+
+.animatron__reputation span { position: relative; z-index: 1; }
+.animatron__reputation span::before { position: absolute; z-index: -1; color: black; filter: blur(1px); content: '-2'; }
 
 /* Fix last empty page */
 .cards {
