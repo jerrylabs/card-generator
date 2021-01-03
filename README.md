@@ -7,33 +7,34 @@ use according your conscience
 
 requires: Node.js & NPM
 
-usage: 
+usage:
 
 ```
 npm install
-node generate {folder_name} [html | log | landscape | backgrounds {number}]
+http-server {folder_name}
+node generate {folder_name} [log | backgrounds {number} | cards {filename}]
 ```
 
-This script consumes your CSV and generate structured HTML with cards elements based on it, then renders the data by headless Chrome and exports to PDF in A4 format. The images are served by local http-server which runs automatically in your folder.
+This script consumes your CSV and generate structured HTML named as source folder with cards elements based on it. Run the http-server to serve the images in specified folder. View HTML in the browser and print/save as PDF.
 
 input: folder named {folder_name} including:
 * cards.csv - structured data with your cards
 * style.css - containing styles for .card and other fields used in your csv + optionally .background if you need that
 * card.js (optional) - for including specific logic to transform CSV data to correct HTML markup
-* illustrations or other images for your cards
+* illustrations or other images for your cards (http-server will be started here)
 
 Optional parameters:
-* html - generates also {folder_name}.html file to check your output code efficiently
 * log - throws up the HTML data directly to the console
-* landscape - generates the PDF with cards on landcape oriented A4 (portrait is default orientation)
+* cards - custom file instead of cards.csv, name must follow as next parameter
 * backgrounds {number} - if used, after {number} cards the div.card.background element will be injected into the HTML data {number} times automatically. Since the card sizes can vary, you are responsible for using the correct {number} which should exactly match the amount of cards which fits to the A4 if you want to print it double sided. Style the .background correctly in style.css - and rotate 180° when printing double sided in landscape mode
 
 See "test" folder for demonstrative example including comments with further instructions where needed. Please to not hesitate to contact me or pull request any interesting idea since this is my first Node.js server script.
 
-For the first run, try 
+For the first run, try
 
 ```
+http-server test &
 node generate test
 ```
 
-which should do the stuff and generate test.pdf in script home folder.
+which should do the stuff and generate test.html in script home folder.

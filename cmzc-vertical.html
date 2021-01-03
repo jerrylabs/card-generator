@@ -1,0 +1,1954 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <style type="text/css">
+        @page { margin: 9mm 0 0 0; }
+
+body {
+  -webkit-print-color-adjust: exact;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+}
+
+* {
+  background-repeat: no-repeat;
+}
+
+.cards {
+  text-align: center;
+}
+
+.card {
+  font-size: 12px;
+  display: inline-block;
+  overflow: hidden;
+  width: 64.0mm;
+  height: 88.0mm;
+  box-sizing: border-box;
+  page-break-inside: avoid;
+  position: relative;
+}
+
+
+.card.animatron {
+  width: 88mm;
+  height: 118mm;
+}
+
+.type, .text {
+  display: none;
+}
+
+
+.title {
+  position: absolute;
+  z-index: 2;
+  top: 0mm;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "BadaBoom CE";
+  font-size: 6mm;
+  width: 58mm;
+  padding: 1mm 4mm;
+  line-height: 1;
+  color: yellow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 12mm;
+  letter-spacing: 0.08mm;
+}
+
+.title-shadow {
+  color: black;
+  filter: blur(3px);
+  z-index: 1;
+}
+
+/************************************************************
+ ***************** * * *    QUESTS    * * * *****************
+ ************************************************************/
+
+
+.card.quest {
+  background: transparent url(http://localhost:8080/imgs/bg_power.jpg) center center;
+  background-size: calc(100% + 2mm) calc(100% + 1mm);
+  border-width: 1mm; border-style: solid;
+  border-color: #ad6a00;
+}
+
+.card.quest.S { background-image: url(http://localhost:8080/imgs/bg_speed.jpg); border-color: #398d1c; }
+.card.quest.I { background-image: url(http://localhost:8080/imgs/bg_iq.jpg); border-color: #0025a8; }
+
+.quest .title { font-size: 9mm; }
+.quest .title-long { font-size: 6mm; }
+
+.quest__illustration {
+  width: 62mm;
+  height: 50mm;
+  background-size: cover;
+  background-position: center center;
+  position: absolute;
+  top: 14mm;
+  border: 1px solid black;
+}
+
+.quest__illustration::before {
+  content: ' ';
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(transparent 0%, transparent 75%, rgba(0, 0, 0, 0.5) 100%);
+  position: absolute;
+  left: 0;
+}
+
+.quest .text {
+  left: 4mm;
+  bottom: 4mm;
+  width: 56mm;
+  background: transparent url(http://localhost:8080/imgs/background-quest-text.png) center center no-repeat;
+  background-size: 100% 100%;
+  height: 27mm;
+}
+
+.quest .test {
+  position: absolute;
+  top: 54.2mm;
+  z-index: 2;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20mm;
+}
+
+.quest__reward {
+    position: absolute;
+    display: flex;
+    left: 1mm;
+    bottom: 1mm;
+    font-family: 'Impact Condensed';
+    width: 30mm;
+    height: 15mm;
+    align-items: center;
+    justify-content: center;
+}
+
+.quest__reputation {
+  height: 14mm;
+  width: 14mm;
+  background: transparent url(http://localhost:8080/imgs/quest-medal.png) center center no-repeat;
+  background-size: contain;
+  box-sizing: border-box;
+  font-size: 7.5mm;
+  padding: 1mm 0 0 1mm;
+  margin-top: 1mm;
+}
+
+.quest__reputation span { position: relative; z-index: 1; }
+.quest__reputation span::before { position: absolute; z-index: -1; color: white; filter: blur(1px); }
+.quest__reputation span.val1::before { content: '1'; }
+.quest__reputation span.val2::before { content: '2'; }
+.quest__reputation span.val3::before { content: '3'; }
+
+.quest__reputation.v1 { padding-left: 0.5mm; }
+
+.quest__cards {
+  height: 11mm;
+  width: 13mm;
+  background: transparent url(http://localhost:8080/imgs/quest-cards.png) center center no-repeat;
+  background-size: contain;
+  box-sizing: border-box;
+  padding: 2.45mm 4mm 0 0;
+  font-size: 5mm;
+}
+
+.quest__cards span { position: relative; z-index: 1; }
+.quest__cards span::before { position: absolute; z-index: -1; color: white; filter: blur(1px); }
+.quest__cards span.val1::before { content: '+1'; }
+.quest__cards span.val2::before { content: '+2'; }
+.quest__cards span.val3::before { content: '+3'; }
+
+.quest__penalty {
+ position: absolute;
+  right: 1mm;
+  bottom: 1mm;
+  font-family: 'Impact Condensed';
+  width: 30mm;
+  height: 15mm;
+  background: transparent url(http://localhost:8080/imgs/quest-heart.png) center center no-repeat;
+  background-size: 12mm;
+  box-sizing: border-box;
+  font-size: 7mm;
+  line-height: 15mm;
+}
+
+.quest__penalty span { position: relative; z-index: 1; }
+.quest__penalty span::before { position: absolute; z-index: -1; color: white; filter: blur(1px); }
+.quest__penalty span.val1::before { content: '-1'; }
+.quest__penalty span.val2::before { content: '-2'; }
+.quest__penalty span.val3::before { content: '-3'; }
+
+.quest__label, .quest__description, .quest__success, .quest__fail {
+  position: absolute;
+  font-family: "Bebas Neue";
+  font-weight: bold;
+  text-transform: uppercase;
+  z-index: 1;
+  white-space: nowrap;
+}
+
+.quest__label { top: 55mm; left: 4mm; font-size: 9mm; color: white; }
+.quest__description { top: 58.5mm; font-size: 20px; color: #ddd; }
+.P .quest__description { left: 41mm; }
+.S .quest__description { right: 1mm; }
+.I .quest__description { right: 1mm; font-size: 18px; }
+.quest__success, .quest__fail { top: 65mm; transform: translateX(-50%); font-size: 22px; }
+.quest__success { left: 18%; color: #fcee28; }
+.quest__fail { left: 81%; color: #b70000; }
+
+/************************************************************
+ ***************** * * *  ANIMATRONS  * * * *****************
+ ************************************************************/
+
+.animatron .title {
+  top: 2mm;
+  font-size: 12mm;
+  width: auto;
+  padding: 3mm 10mm;
+  background-size: 100% 100%;
+  white-space: nowrap;
+}
+
+.animatron .illustration {
+  height: 100%;
+  width: auto;
+  top: 0;
+  transform: translateX(-50%);
+  left: 50%;
+  position: relative;
+}
+
+.joint { position: absolute; z-index: 4; height: 1.5cm; right: 0; }
+
+.animatron .bone1,
+.animatron .bone2 {
+  right: auto;
+  left: 0;
+  transform: rotate(180deg);
+  top: 39mm
+}
+.animatron .bone2 { top: auto; bottom: 10mm; }
+.animatron .bone3 { top: 10mm; }
+.animatron .bone4 { bottom: 39mm; }
+
+.animatron__cards {
+  height: 22mm;
+  width: 25mm;
+  background: transparent url(http://localhost:8080/imgs/quest-cards.png) center center no-repeat;
+  background-size: contain;
+  box-sizing: border-box;
+  padding: 3.5mm 5mm 0 0;
+  font-size: 12mm;
+  position: absolute;
+  top: 80mm;
+  left: 44mm;
+  z-index: 4;
+  font-family: 'Impact Condensed';
+}
+
+.animatron .attribute {
+  position: absolute;
+  top: 82mm;
+  left: 20mm;
+  z-index: 4;
+  width: 20mm;
+}
+
+.animatron__reputation {
+  height: 22mm;
+  width: 22mm;
+  background: transparent url(http://localhost:8080/imgs/quest-medal.png) center center no-repeat;
+  background-size: contain;
+  box-sizing: border-box;
+  font-size: 10.5mm;
+  padding: 2.5mm 0 0 0;
+  position: absolute;
+  top: 82mm;
+  left: 22mm;
+  z-index: 4;
+  font-family: 'Impact Condensed';
+  color: red;
+}
+
+.animatron__reputation span { position: relative; z-index: 1; }
+.animatron__reputation span::before { position: absolute; z-index: -1; color: black; filter: blur(1px); content: '-2'; }
+
+/* Fix last empty page */
+.cards {
+  margin-bottom: -10mm;
+}
+
+.cards {
+  overflow: hidden;
+}
+
+
+/************************************************************
+ ***************** * * *  BACK SIDES  * * * *****************
+ ************************************************************/
+
+ .background {
+  background: white url(http://localhost:8080/imgs/cmzc-logo.png) center center no-repeat;
+  background-size: 4.5cm;
+}
+
+.background:nth-child(n+91) {
+  display: none;
+}
+      </style>
+    </head>
+    <body>
+      <div class="cards">
+        <div
+    class="card quest P
+  ">
+    
+    <div class="type">quest</div><div class="title
+        
+      ">
+        <span>Glued handle</span>
+      </div><div class="title title-shadow
+        
+      ">
+        <span>Glued handle</span>
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-power.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">your power</div>
+      <div class="quest__success">success</div>
+      <div class="quest__fail">fail</div>
+    
+        <div class="quest__reward">
+          <div class="quest__reputation v1">
+            <span class="val1">1</span>
+          </div>
+          
+        </div>
+      <div class="quest__penalty">
+        <span class="val1">-1</span>
+      </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/01-klika_namazana_lepidlem.jpg');"></div>
+  </div><div
+    class="card quest P
+  ">
+    
+    <div class="type">quest</div><div class="title
+        
+      ">
+        <span>Unopenable chest</span>
+      </div><div class="title title-shadow
+        
+      ">
+        <span>Unopenable chest</span>
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-power.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">your power</div>
+      <div class="quest__success">success</div>
+      <div class="quest__fail">fail</div>
+    
+        <div class="quest__reward">
+          
+          <div class="quest__cards">
+            <span class="val1">+1</span>
+          </div>
+        </div>
+      <div class="quest__penalty">
+        <span class="val1">-1</span>
+      </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/neotevritelna_truhlicka.jpg');"></div>
+  </div><div
+    class="card quest P
+  ">
+    
+    <div class="type">quest</div><div class="title
+        
+      ">
+        <span>Bear trap</span>
+      </div><div class="title title-shadow
+        
+      ">
+        <span>Bear trap</span>
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-power.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">your power</div>
+      <div class="quest__success">success</div>
+      <div class="quest__fail">fail</div>
+    
+        <div class="quest__reward">
+          <div class="quest__reputation v1">
+            <span class="val1">1</span>
+          </div>
+          
+        </div>
+      <div class="quest__penalty">
+        <span class="val1">-1</span>
+      </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/03-medvedi_past.jpg');"></div>
+  </div><div
+    class="card quest P
+  ">
+    
+    <div class="type">quest</div><div class="title
+        
+      ">
+        <span>Falling grille</span>
+      </div><div class="title title-shadow
+        
+      ">
+        <span>Falling grille</span>
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-power.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">your power</div>
+      <div class="quest__success">success</div>
+      <div class="quest__fail">fail</div>
+    
+        <div class="quest__reward">
+          
+          <div class="quest__cards">
+            <span class="val1">+1</span>
+          </div>
+        </div>
+      <div class="quest__penalty">
+        <span class="val1">-1</span>
+      </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/04-padajici_mriz.jpg');"></div>
+  </div><div
+    class="card quest P
+  ">
+    
+    <div class="type">quest</div><div class="title
+        
+      ">
+        <span>Waste crusher</span>
+      </div><div class="title title-shadow
+        
+      ">
+        <span>Waste crusher</span>
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-power.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">your power</div>
+      <div class="quest__success">success</div>
+      <div class="quest__fail">fail</div>
+    
+        <div class="quest__reward">
+          <div class="quest__reputation v1">
+            <span class="val1">1</span>
+          </div>
+          
+        </div>
+      <div class="quest__penalty">
+        <span class="val1">-1</span>
+      </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/05-drticka_smesneho_odpadu.jpg');"></div>
+  </div><div
+    class="card quest P
+  ">
+    
+    <div class="type">quest</div><div class="title
+         title-long
+      ">
+        <span>Swallowed by whale</span>
+      </div><div class="title title-shadow
+         title-long
+      ">
+        <span>Swallowed by whale</span>
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-power.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">your power</div>
+      <div class="quest__success">success</div>
+      <div class="quest__fail">fail</div>
+    
+        <div class="quest__reward">
+          <div class="quest__reputation v1">
+            <span class="val1">1</span>
+          </div>
+          
+        </div>
+      <div class="quest__penalty">
+        <span class="val1">-1</span>
+      </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/06-spolknuti_vorvanem.jpg');"></div><div class="text">Ham!</div>
+  </div><div
+    class="card quest P
+  ">
+    
+    <div class="type">quest</div><div class="title
+        
+      ">
+        <span>Piranha bath</span>
+      </div><div class="title title-shadow
+        
+      ">
+        <span>Piranha bath</span>
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-power.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">your power</div>
+      <div class="quest__success">success</div>
+      <div class="quest__fail">fail</div>
+    
+        <div class="quest__reward">
+          <div class="quest__reputation v2">
+            <span class="val2">2</span>
+          </div>
+          
+        </div>
+      <div class="quest__penalty">
+        <span class="val2">-2</span>
+      </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/07-lazen_s_piranemi.jpg');"></div>
+  </div><div
+    class="card quest P
+  ">
+    
+    <div class="type">quest</div><div class="title
+         title-long
+      ">
+        <span>Metal sheet press</span>
+      </div><div class="title title-shadow
+         title-long
+      ">
+        <span>Metal sheet press</span>
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-power.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">your power</div>
+      <div class="quest__success">success</div>
+      <div class="quest__fail">fail</div>
+    
+        <div class="quest__reward">
+          <div class="quest__reputation v1">
+            <span class="val1">1</span>
+          </div>
+          <div class="quest__cards">
+            <span class="val1">+1</span>
+          </div>
+        </div>
+      <div class="quest__penalty">
+        <span class="val2">-2</span>
+      </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/08-lisovna_plechu.jpg');"></div>
+  </div><div
+    class="card quest P
+  ">
+    
+    <div class="type">quest</div><div class="title
+        
+      ">
+        <span>Laughing gas</span>
+      </div><div class="title title-shadow
+        
+      ">
+        <span>Laughing gas</span>
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-power.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">your power</div>
+      <div class="quest__success">success</div>
+      <div class="quest__fail">fail</div>
+    
+        <div class="quest__reward">
+          <div class="quest__reputation v2">
+            <span class="val2">2</span>
+          </div>
+          
+        </div>
+      <div class="quest__penalty">
+        <span class="val2">-2</span>
+      </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/09-rajsky_plyn.jpg');"></div><div class="text">Och, ta vůně!</div>
+  </div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div
+    class="card quest P
+  ">
+    
+    <div class="type">quest</div><div class="title
+         title-long
+      ">
+        <span>Intestines-etching gas</span>
+      </div><div class="title title-shadow
+         title-long
+      ">
+        <span>Intestines-etching gas</span>
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-power.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">your power</div>
+      <div class="quest__success">success</div>
+      <div class="quest__fail">fail</div>
+    
+        <div class="quest__reward">
+          <div class="quest__reputation v2">
+            <span class="val2">2</span>
+          </div>
+          
+        </div>
+      <div class="quest__penalty">
+        <span class="val2">-2</span>
+      </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/10-strevaleptajici_plyn.jpg');"></div>
+  </div><div
+    class="card quest P
+  ">
+    
+    <div class="type">quest</div><div class="title
+         title-long
+      ">
+        <span>Circular saw room</span>
+      </div><div class="title title-shadow
+         title-long
+      ">
+        <span>Circular saw room</span>
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-power.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">your power</div>
+      <div class="quest__success">success</div>
+      <div class="quest__fail">fail</div>
+    
+        <div class="quest__reward">
+          <div class="quest__reputation v1">
+            <span class="val1">1</span>
+          </div>
+          <div class="quest__cards">
+            <span class="val1">+1</span>
+          </div>
+        </div>
+      <div class="quest__penalty">
+        <span class="val2">-2</span>
+      </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/11-mistnost_cirkularek.jpg');"></div>
+  </div><div
+    class="card quest P
+  ">
+    
+    <div class="type">quest</div><div class="title
+         title-long
+      ">
+        <span>Acid-blooded cyanide-spitting biomutant</span>
+      </div><div class="title title-shadow
+         title-long
+      ">
+        <span>Acid-blooded cyanide-spitting biomutant</span>
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-power.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">your power</div>
+      <div class="quest__success">success</div>
+      <div class="quest__fail">fail</div>
+    
+        <div class="quest__reward">
+          <div class="quest__reputation v3">
+            <span class="val3">3</span>
+          </div>
+          
+        </div>
+      <div class="quest__penalty">
+        <span class="val3">-3</span>
+      </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/12-kyselinokrvykyanidoslinny_biomutant.jpg');"></div>
+  </div><div
+    class="card quest P
+  ">
+    
+    <div class="type">quest</div><div class="title
+         title-long
+      ">
+        <span>Chainsawtooth tiger</span>
+      </div><div class="title title-shadow
+         title-long
+      ">
+        <span>Chainsawtooth tiger</span>
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-power.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">your power</div>
+      <div class="quest__success">success</div>
+      <div class="quest__fail">fail</div>
+    
+        <div class="quest__reward">
+          <div class="quest__reputation v2">
+            <span class="val2">2</span>
+          </div>
+          <div class="quest__cards">
+            <span class="val1">+1</span>
+          </div>
+        </div>
+      <div class="quest__penalty">
+        <span class="val3">-3</span>
+      </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/13-motoropilozuby_tygr.jpg');"></div>
+  </div><div
+    class="card quest P
+  ">
+    
+    <div class="type">quest</div><div class="title
+        
+      ">
+        <span>Tyrannosaurus</span>
+      </div><div class="title title-shadow
+        
+      ">
+        <span>Tyrannosaurus</span>
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-power.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">your power</div>
+      <div class="quest__success">success</div>
+      <div class="quest__fail">fail</div>
+    
+        <div class="quest__reward">
+          <div class="quest__reputation v3">
+            <span class="val3">3</span>
+          </div>
+          
+        </div>
+      <div class="quest__penalty">
+        <span class="val3">-3</span>
+      </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/14-tyranosaurus.jpg');"></div><div class="text">Je to samice.</div>
+  </div><div
+    class="card quest P
+  ">
+    
+    <div class="type">quest</div><div class="title
+        
+      ">
+        <span>Cablectopus</span>
+      </div><div class="title title-shadow
+        
+      ">
+        <span>Cablectopus</span>
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-power.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">your power</div>
+      <div class="quest__success">success</div>
+      <div class="quest__fail">fail</div>
+    
+        <div class="quest__reward">
+          <div class="quest__reputation v1">
+            <span class="val1">1</span>
+          </div>
+          <div class="quest__cards">
+            <span class="val2">+2</span>
+          </div>
+        </div>
+      <div class="quest__penalty">
+        <span class="val3">-3</span>
+      </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/15-kabelnice.jpg');"></div>
+  </div><div
+    class="card quest S
+  ">
+    
+    <div class="type">quest</div><div class="title
+        
+      ">
+        <span>Trapped chest</span>
+      </div><div class="title title-shadow
+        
+      ">
+        <span>Trapped chest</span>
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-speed.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">your speed</div>
+      <div class="quest__success">success</div>
+      <div class="quest__fail">fail</div>
+    
+        <div class="quest__reward">
+          
+          <div class="quest__cards">
+            <span class="val1">+1</span>
+          </div>
+        </div>
+      <div class="quest__penalty">
+        <span class="val1">-1</span>
+      </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/16-zapastena_truhlicka.jpg');"></div>
+  </div><div
+    class="card quest S
+  ">
+    
+    <div class="type">quest</div><div class="title
+        
+      ">
+        <span>Laser cutter</span>
+      </div><div class="title title-shadow
+        
+      ">
+        <span>Laser cutter</span>
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-speed.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">your speed</div>
+      <div class="quest__success">success</div>
+      <div class="quest__fail">fail</div>
+    
+        <div class="quest__reward">
+          <div class="quest__reputation v1">
+            <span class="val1">1</span>
+          </div>
+          
+        </div>
+      <div class="quest__penalty">
+        <span class="val1">-1</span>
+      </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/17-laserovy_rezak.jpg');"></div>
+  </div><div
+    class="card quest S
+  ">
+    
+    <div class="type">quest</div><div class="title
+        
+      ">
+        <span>Acid spring</span>
+      </div><div class="title title-shadow
+        
+      ">
+        <span>Acid spring</span>
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-speed.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">your speed</div>
+      <div class="quest__success">success</div>
+      <div class="quest__fail">fail</div>
+    
+        <div class="quest__reward">
+          <div class="quest__reputation v1">
+            <span class="val1">1</span>
+          </div>
+          
+        </div>
+      <div class="quest__penalty">
+        <span class="val1">-1</span>
+      </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/18-pramen_kyseliny.jpg');"></div>
+  </div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div
+    class="card quest S
+  ">
+    
+    <div class="type">quest</div><div class="title
+        
+      ">
+        <span>Falling portal</span>
+      </div><div class="title title-shadow
+        
+      ">
+        <span>Falling portal</span>
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-speed.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">your speed</div>
+      <div class="quest__success">success</div>
+      <div class="quest__fail">fail</div>
+    
+        <div class="quest__reward">
+          <div class="quest__reputation v1">
+            <span class="val1">1</span>
+          </div>
+          
+        </div>
+      <div class="quest__penalty">
+        <span class="val1">-1</span>
+      </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/19-bortici_se_chodba.jpg');"></div>
+  </div><div
+    class="card quest S
+  ">
+    
+    <div class="type">quest</div><div class="title
+        
+      ">
+        <span>Trapdoor</span>
+      </div><div class="title title-shadow
+        
+      ">
+        <span>Trapdoor</span>
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-speed.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">your speed</div>
+      <div class="quest__success">success</div>
+      <div class="quest__fail">fail</div>
+    
+        <div class="quest__reward">
+          <div class="quest__reputation v1">
+            <span class="val1">1</span>
+          </div>
+          
+        </div>
+      <div class="quest__penalty">
+        <span class="val1">-1</span>
+      </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/20-propadlo.jpg');"></div>
+  </div><div
+    class="card quest S
+  ">
+    
+    <div class="type">quest</div><div class="title
+        
+      ">
+        <span>Narrow bridge</span>
+      </div><div class="title title-shadow
+        
+      ">
+        <span>Narrow bridge</span>
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-speed.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">your speed</div>
+      <div class="quest__success">success</div>
+      <div class="quest__fail">fail</div>
+    
+        <div class="quest__reward">
+          
+          <div class="quest__cards">
+            <span class="val1">+1</span>
+          </div>
+        </div>
+      <div class="quest__penalty">
+        <span class="val1">-1</span>
+      </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/uzky_mustek.jpg');"></div>
+  </div><div
+    class="card quest S
+  ">
+    
+    <div class="type">quest</div><div class="title
+        
+      ">
+        <span>Fire circle</span>
+      </div><div class="title title-shadow
+        
+      ">
+        <span>Fire circle</span>
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-speed.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">your speed</div>
+      <div class="quest__success">success</div>
+      <div class="quest__fail">fail</div>
+    
+        <div class="quest__reward">
+          <div class="quest__reputation v2">
+            <span class="val2">2</span>
+          </div>
+          
+        </div>
+      <div class="quest__penalty">
+        <span class="val2">-2</span>
+      </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/ohnivy_kruh.jpg');"></div><div class="text">Skok nebo smrt!</div>
+  </div><div
+    class="card quest S
+  ">
+    
+    <div class="type">quest</div><div class="title
+        
+      ">
+        <span>Embers</span>
+      </div><div class="title title-shadow
+        
+      ">
+        <span>Embers</span>
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-speed.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">your speed</div>
+      <div class="quest__success">success</div>
+      <div class="quest__fail">fail</div>
+    
+        <div class="quest__reward">
+          <div class="quest__reputation v2">
+            <span class="val2">2</span>
+          </div>
+          
+        </div>
+      <div class="quest__penalty">
+        <span class="val2">-2</span>
+      </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/23-zhave_uhliky.jpg');"></div>
+  </div><div
+    class="card quest S
+  ">
+    
+    <div class="type">quest</div><div class="title
+        
+      ">
+        <span>Acid pool</span>
+      </div><div class="title title-shadow
+        
+      ">
+        <span>Acid pool</span>
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-speed.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">your speed</div>
+      <div class="quest__success">success</div>
+      <div class="quest__fail">fail</div>
+    
+        <div class="quest__reward">
+          <div class="quest__reputation v1">
+            <span class="val1">1</span>
+          </div>
+          <div class="quest__cards">
+            <span class="val1">+1</span>
+          </div>
+        </div>
+      <div class="quest__penalty">
+        <span class="val2">-2</span>
+      </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/24-bazen_kyseliny.jpg');"></div><div class="text">Běž rychle, ale opatrně!</div>
+  </div><div
+    class="card quest S
+  ">
+    
+    <div class="type">quest</div><div class="title
+        
+      ">
+        <span>Oiled slope</span>
+      </div><div class="title title-shadow
+        
+      ">
+        <span>Oiled slope</span>
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-speed.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">your speed</div>
+      <div class="quest__success">success</div>
+      <div class="quest__fail">fail</div>
+    
+        <div class="quest__reward">
+          <div class="quest__reputation v2">
+            <span class="val2">2</span>
+          </div>
+          
+        </div>
+      <div class="quest__penalty">
+        <span class="val2">-2</span>
+      </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/naolejovana_sikma_plocha.jpg');"></div>
+  </div><div
+    class="card quest S
+  ">
+    
+    <div class="type">quest</div><div class="title
+        
+      ">
+        <span>Lava room</span>
+      </div><div class="title title-shadow
+        
+      ">
+        <span>Lava room</span>
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-speed.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">your speed</div>
+      <div class="quest__success">success</div>
+      <div class="quest__fail">fail</div>
+    
+        <div class="quest__reward">
+          <div class="quest__reputation v1">
+            <span class="val1">1</span>
+          </div>
+          <div class="quest__cards">
+            <span class="val1">+1</span>
+          </div>
+        </div>
+      <div class="quest__penalty">
+        <span class="val2">-2</span>
+      </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/26-lavova_mistnost.jpg');"></div><div class="text">Běž opatrně, ale rychle!</div>
+  </div><div
+    class="card quest S
+  ">
+    
+    <div class="type">quest</div><div class="title
+        
+      ">
+        <span>Falling piranhas</span>
+      </div><div class="title title-shadow
+        
+      ">
+        <span>Falling piranhas</span>
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-speed.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">your speed</div>
+      <div class="quest__success">success</div>
+      <div class="quest__fail">fail</div>
+    
+        <div class="quest__reward">
+          <div class="quest__reputation v3">
+            <span class="val3">3</span>
+          </div>
+          
+        </div>
+      <div class="quest__penalty">
+        <span class="val3">-3</span>
+      </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/27-padajici_pirane.jpg');"></div><div class="text">Piraně, všude piraně!</div>
+  </div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div
+    class="card quest S
+  ">
+    
+    <div class="type">quest</div><div class="title
+         title-long
+      ">
+        <span>Blade-winged butterflies</span>
+      </div><div class="title title-shadow
+         title-long
+      ">
+        <span>Blade-winged butterflies</span>
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-speed.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">your speed</div>
+      <div class="quest__success">success</div>
+      <div class="quest__fail">fail</div>
+    
+        <div class="quest__reward">
+          <div class="quest__reputation v2">
+            <span class="val2">2</span>
+          </div>
+          <div class="quest__cards">
+            <span class="val1">+1</span>
+          </div>
+        </div>
+      <div class="quest__penalty">
+        <span class="val3">-3</span>
+      </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/motyli_s_ziletkovymi_kridly.jpg');"></div><div class="text">Ostré jako laser.</div>
+  </div><div
+    class="card quest S
+  ">
+    
+    <div class="type">quest</div><div class="title
+        
+      ">
+        <span>Wild hornets</span>
+      </div><div class="title title-shadow
+        
+      ">
+        <span>Wild hornets</span>
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-speed.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">your speed</div>
+      <div class="quest__success">success</div>
+      <div class="quest__fail">fail</div>
+    
+        <div class="quest__reward">
+          <div class="quest__reputation v3">
+            <span class="val3">3</span>
+          </div>
+          
+        </div>
+      <div class="quest__penalty">
+        <span class="val3">-3</span>
+      </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/29-hejno_divokych_srsnu.jpg');"></div><div class="text">Dorůstají až 80 cm.</div>
+  </div><div
+    class="card quest S
+  ">
+    
+    <div class="type">quest</div><div class="title
+        
+      ">
+        <span>Rolling stone</span>
+      </div><div class="title title-shadow
+        
+      ">
+        <span>Rolling stone</span>
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-speed.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">your speed</div>
+      <div class="quest__success">success</div>
+      <div class="quest__fail">fail</div>
+    
+        <div class="quest__reward">
+          <div class="quest__reputation v1">
+            <span class="val1">1</span>
+          </div>
+          <div class="quest__cards">
+            <span class="val2">+2</span>
+          </div>
+        </div>
+      <div class="quest__penalty">
+        <span class="val3">-3</span>
+      </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/30-valici_se_kamen.jpg');"></div>
+  </div><div
+    class="card quest I
+  ">
+    
+    <div class="type">quest</div><div class="title
+        
+      ">
+        <span>Poisoned feast</span>
+      </div><div class="title title-shadow
+        
+      ">
+        <span>Poisoned feast</span>
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-iq.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">your iq</div>
+      <div class="quest__success">success</div>
+      <div class="quest__fail">fail</div>
+    
+        <div class="quest__reward">
+          <div class="quest__reputation v1">
+            <span class="val1">1</span>
+          </div>
+          
+        </div>
+      <div class="quest__penalty">
+        <span class="val1">-1</span>
+      </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/31-otravena_hostina.jpg');"></div><div class="text">Za 30 stříbrných Jidáš zakoupil slevněné koření.</div>
+  </div><div
+    class="card quest I
+  ">
+    
+    <div class="type">quest</div><div class="title
+         title-long
+      ">
+        <span>Weird smelly potion</span>
+      </div><div class="title title-shadow
+         title-long
+      ">
+        <span>Weird smelly potion</span>
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-iq.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">your iq</div>
+      <div class="quest__success">success</div>
+      <div class="quest__fail">fail</div>
+    
+        <div class="quest__reward">
+          <div class="quest__reputation v1">
+            <span class="val1">1</span>
+          </div>
+          
+        </div>
+      <div class="quest__penalty">
+        <span class="val1">-1</span>
+      </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/32-lektvar_podivuhodneho_zapachu.jpg');"></div><div class="text">Jedo čuchnutí porazí slona.</div>
+  </div><div
+    class="card quest I
+  ">
+    
+    <div class="type">quest</div><div class="title
+         title-long
+      ">
+        <span>Suspiciously luminiscenting potion</span>
+      </div><div class="title title-shadow
+         title-long
+      ">
+        <span>Suspiciously luminiscenting potion</span>
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-iq.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">your iq</div>
+      <div class="quest__success">success</div>
+      <div class="quest__fail">fail</div>
+    
+        <div class="quest__reward">
+          <div class="quest__reputation v1">
+            <span class="val1">1</span>
+          </div>
+          
+        </div>
+      <div class="quest__penalty">
+        <span class="val1">-1</span>
+      </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/33-lektvar_podezrele_svetelkujici_kapaliny.jpg');"></div><div class="text">Světélkuje v divném rytmu.</div>
+  </div><div
+    class="card quest I
+  ">
+    
+    <div class="type">quest</div><div class="title
+        
+      ">
+        <span>Vending machine</span>
+      </div><div class="title title-shadow
+        
+      ">
+        <span>Vending machine</span>
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-iq.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">your iq</div>
+      <div class="quest__success">success</div>
+      <div class="quest__fail">fail</div>
+    
+        <div class="quest__reward">
+          
+          <div class="quest__cards">
+            <span class="val1">+1</span>
+          </div>
+        </div>
+      <div class="quest__penalty">
+        <span class="val1">-1</span>
+      </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/automat_s_obzerstvenim.jpg');"></div>
+  </div><div
+    class="card quest I
+  ">
+    
+    <div class="type">quest</div><div class="title
+        
+      ">
+        <span>Dummy troll</span>
+      </div><div class="title title-shadow
+        
+      ">
+        <span>Dummy troll</span>
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-iq.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">your iq</div>
+      <div class="quest__success">success</div>
+      <div class="quest__fail">fail</div>
+    
+        <div class="quest__reward">
+          <div class="quest__reputation v1">
+            <span class="val1">1</span>
+          </div>
+          
+        </div>
+      <div class="quest__penalty">
+        <span class="val1">-1</span>
+      </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/hloupy_troll.jpg');"></div>
+  </div><div
+    class="card quest I
+  ">
+    
+    <div class="type">quest</div><div class="title
+        
+      ">
+        <span>Locked door</span>
+      </div><div class="title title-shadow
+        
+      ">
+        <span>Locked door</span>
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-iq.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">your iq</div>
+      <div class="quest__success">success</div>
+      <div class="quest__fail">fail</div>
+    
+        <div class="quest__reward">
+          
+          <div class="quest__cards">
+            <span class="val1">+1</span>
+          </div>
+        </div>
+      <div class="quest__penalty">
+        <span class="val1">-1</span>
+      </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/36-zamcene_dvere.jpg');"></div>
+  </div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div
+    class="card quest I
+  ">
+    
+    <div class="type">quest</div><div class="title
+        
+      ">
+        <span>Mirror labyrinth</span>
+      </div><div class="title title-shadow
+        
+      ">
+        <span>Mirror labyrinth</span>
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-iq.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">your iq</div>
+      <div class="quest__success">success</div>
+      <div class="quest__fail">fail</div>
+    
+        <div class="quest__reward">
+          <div class="quest__reputation v2">
+            <span class="val2">2</span>
+          </div>
+          
+        </div>
+      <div class="quest__penalty">
+        <span class="val2">-2</span>
+      </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/zrcadlovy_labyrint.jpg');"></div>
+  </div><div
+    class="card quest I
+  ">
+    
+    <div class="type">quest</div><div class="title
+        
+      ">
+        <span>Ciphered note</span>
+      </div><div class="title title-shadow
+        
+      ">
+        <span>Ciphered note</span>
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-iq.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">your iq</div>
+      <div class="quest__success">success</div>
+      <div class="quest__fail">fail</div>
+    
+        <div class="quest__reward">
+          <div class="quest__reputation v1">
+            <span class="val1">1</span>
+          </div>
+          <div class="quest__cards">
+            <span class="val1">+1</span>
+          </div>
+        </div>
+      <div class="quest__penalty">
+        <span class="val2">-2</span>
+      </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/sifrovany_vzkaz.jpg');"></div><div class="text">Čitelný pouze za měsíčního svitu.</div>
+  </div><div
+    class="card quest I
+  ">
+    
+    <div class="type">quest</div><div class="title
+         title-long
+      ">
+        <span>Trapped vending machine</span>
+      </div><div class="title title-shadow
+         title-long
+      ">
+        <span>Trapped vending machine</span>
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-iq.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">your iq</div>
+      <div class="quest__success">success</div>
+      <div class="quest__fail">fail</div>
+    
+        <div class="quest__reward">
+          <div class="quest__reputation v1">
+            <span class="val1">1</span>
+          </div>
+          <div class="quest__cards">
+            <span class="val1">+1</span>
+          </div>
+        </div>
+      <div class="quest__penalty">
+        <span class="val2">-2</span>
+      </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/zapasteny_automat_s_obzerstvenim.jpg');"></div>
+  </div><div
+    class="card quest I
+  ">
+    
+    <div class="type">quest</div><div class="title
+        
+      ">
+        <span>Laser room</span>
+      </div><div class="title title-shadow
+        
+      ">
+        <span>Laser room</span>
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-iq.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">your iq</div>
+      <div class="quest__success">success</div>
+      <div class="quest__fail">fail</div>
+    
+        <div class="quest__reward">
+          <div class="quest__reputation v2">
+            <span class="val2">2</span>
+          </div>
+          
+        </div>
+      <div class="quest__penalty">
+        <span class="val2">-2</span>
+      </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/40-laserova_mistnost.jpg');"></div>
+  </div><div
+    class="card quest I
+  ">
+    
+    <div class="type">quest</div><div class="title
+        
+      ">
+        <span>Giant cogs</span>
+      </div><div class="title title-shadow
+        
+      ">
+        <span>Giant cogs</span>
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-iq.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">your iq</div>
+      <div class="quest__success">success</div>
+      <div class="quest__fail">fail</div>
+    
+        <div class="quest__reward">
+          <div class="quest__reputation v2">
+            <span class="val2">2</span>
+          </div>
+          
+        </div>
+      <div class="quest__penalty">
+        <span class="val2">-2</span>
+      </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/ozubena_kola.jpg');"></div>
+  </div><div
+    class="card quest I
+  ">
+    
+    <div class="type">quest</div><div class="title
+        
+      ">
+        <span>Landmines</span>
+      </div><div class="title title-shadow
+        
+      ">
+        <span>Landmines</span>
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-iq.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">your iq</div>
+      <div class="quest__success">success</div>
+      <div class="quest__fail">fail</div>
+    
+        <div class="quest__reward">
+          <div class="quest__reputation v3">
+            <span class="val3">3</span>
+          </div>
+          
+        </div>
+      <div class="quest__penalty">
+        <span class="val3">-3</span>
+      </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/naslapne_miny.jpg');"></div>
+  </div><div
+    class="card quest I
+  ">
+    
+    <div class="type">quest</div><div class="title
+         title-long
+      ">
+        <span>Room with no exit</span>
+      </div><div class="title title-shadow
+         title-long
+      ">
+        <span>Room with no exit</span>
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-iq.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">your iq</div>
+      <div class="quest__success">success</div>
+      <div class="quest__fail">fail</div>
+    
+        <div class="quest__reward">
+          <div class="quest__reputation v1">
+            <span class="val1">1</span>
+          </div>
+          <div class="quest__cards">
+            <span class="val2">+2</span>
+          </div>
+        </div>
+      <div class="quest__penalty">
+        <span class="val3">-3</span>
+      </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/mistnost_bez_vychodu.jpg');"></div>
+  </div><div
+    class="card quest I
+  ">
+    
+    <div class="type">quest</div><div class="title
+         title-long
+      ">
+        <span>High voltage lock</span>
+      </div><div class="title title-shadow
+         title-long
+      ">
+        <span>High voltage lock</span>
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-iq.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">your iq</div>
+      <div class="quest__success">success</div>
+      <div class="quest__fail">fail</div>
+    
+        <div class="quest__reward">
+          <div class="quest__reputation v2">
+            <span class="val2">2</span>
+          </div>
+          <div class="quest__cards">
+            <span class="val1">+1</span>
+          </div>
+        </div>
+      <div class="quest__penalty">
+        <span class="val3">-3</span>
+      </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/zamek_vysokeho_napeti.jpg');"></div>
+  </div><div
+    class="card quest I
+  ">
+    
+    <div class="type">quest</div><div class="title
+        
+      ">
+        <span>Drill-hand clown</span>
+      </div><div class="title title-shadow
+        
+      ">
+        <span>Drill-hand clown</span>
+      </div>
+      <img class="test" src="http://localhost:8080/imgs/attr-iq.png" />
+      <div class="quest__label">test</div>
+      <div class="quest__description">your iq</div>
+      <div class="quest__success">success</div>
+      <div class="quest__fail">fail</div>
+    
+        <div class="quest__reward">
+          <div class="quest__reputation v3">
+            <span class="val3">3</span>
+          </div>
+          
+        </div>
+      <div class="quest__penalty">
+        <span class="val3">-3</span>
+      </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/vrtackoruky_klaun.jpg');"></div><div class="text">Vrrrr!</div>
+  </div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div
+    class="card animatron 
+  ">
+    
+  <img class="joint provided bone bone1" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone2" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone3" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone4" src="http://localhost:8080/imgs/provided-bone.png">
+  <div class="animatron__cards">4</div>
+  <img class="attribute attribute-iq" src="http://localhost:8080/imgs/attr-iq.png" />
+
+    <div class="type">animatron</div><div class="title
+        
+      ">
+        <span>Chuckie</span>
+      </div><div class="title title-shadow
+        
+      ">
+        <span>Chuckie</span>
+      </div><img
+          src="http://localhost:8080/imgs/ilus/chuckie.jpg"
+          class="illustration" />
+  </div><div
+    class="card animatron 
+  ">
+    
+  <img class="joint provided bone bone1" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone2" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone3" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone4" src="http://localhost:8080/imgs/provided-bone.png">
+  <div class="animatron__cards">4</div>
+  <img class="attribute attribute-iq" src="http://localhost:8080/imgs/attr-iq.png" />
+
+    <div class="type">animatron</div><div class="title
+        
+      ">
+        <span>Hentai Barbie</span>
+      </div><div class="title title-shadow
+        
+      ">
+        <span>Hentai Barbie</span>
+      </div><img
+          src="http://localhost:8080/imgs/ilus/hentaibarbie.jpg"
+          class="illustration" />
+  </div><div
+    class="card animatron 
+  ">
+    
+  <img class="joint provided bone bone1" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone2" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone3" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone4" src="http://localhost:8080/imgs/provided-bone.png">
+  <div class="animatron__cards">4</div>
+  <img class="attribute attribute-iq" src="http://localhost:8080/imgs/attr-iq.png" />
+
+    <div class="type">animatron</div><div class="title
+        
+      ">
+        <span>Number 5</span>
+      </div><div class="title title-shadow
+        
+      ">
+        <span>Number 5</span>
+      </div><img
+          src="http://localhost:8080/imgs/ilus/cislo5.jpg"
+          class="illustration" />
+  </div><div
+    class="card animatron 
+  ">
+    
+  <img class="joint provided bone bone1" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone2" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone3" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone4" src="http://localhost:8080/imgs/provided-bone.png">
+  <div class="animatron__cards">4</div>
+  <img class="attribute attribute-iq" src="http://localhost:8080/imgs/attr-iq.png" />
+
+    <div class="type">animatron</div><div class="title
+        
+      ">
+        <span>Humunculus</span>
+      </div><div class="title title-shadow
+        
+      ">
+        <span>Humunculus</span>
+      </div><img
+          src="http://localhost:8080/imgs/ilus/humunculus.jpg"
+          class="illustration" />
+  </div><div
+    class="card animatron 
+  ">
+    
+  <img class="joint provided bone bone1" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone2" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone3" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone4" src="http://localhost:8080/imgs/provided-bone.png">
+  <div class="animatron__cards">4</div>
+  <div class="animatron__reputation"><span>-2</span></div>
+
+    <div class="type">animatron</div><div class="title
+        
+      ">
+        <span>Zombie</span>
+      </div><div class="title title-shadow
+        
+      ">
+        <span>Zombie</span>
+      </div><img
+          src="http://localhost:8080/imgs/ilus/zombie.jpg"
+          class="illustration" />
+  </div><div
+    class="card animatron 
+  ">
+    
+  <img class="joint provided bone bone1" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone2" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone3" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone4" src="http://localhost:8080/imgs/provided-bone.png">
+  <div class="animatron__cards">4</div>
+  <div class="animatron__reputation"><span>-2</span></div>
+
+    <div class="type">animatron</div><div class="title
+        
+      ">
+        <span>Zombie</span>
+      </div><div class="title title-shadow
+        
+      ">
+        <span>Zombie</span>
+      </div><img
+          src="http://localhost:8080/imgs/ilus/zombie.jpg"
+          class="illustration" />
+  </div><div
+    class="card animatron 
+  ">
+    
+  <img class="joint provided bone bone1" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone2" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone3" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone4" src="http://localhost:8080/imgs/provided-bone.png">
+  <div class="animatron__cards">4</div>
+  <div class="animatron__reputation"><span>-2</span></div>
+
+    <div class="type">animatron</div><div class="title
+        
+      ">
+        <span>Zombie</span>
+      </div><div class="title title-shadow
+        
+      ">
+        <span>Zombie</span>
+      </div><img
+          src="http://localhost:8080/imgs/ilus/zombie.jpg"
+          class="illustration" />
+  </div><div
+    class="card animatron 
+  ">
+    
+  <img class="joint provided bone bone1" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone2" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone3" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone4" src="http://localhost:8080/imgs/provided-bone.png">
+  <div class="animatron__cards">4</div>
+  <div class="animatron__reputation"><span>-2</span></div>
+
+    <div class="type">animatron</div><div class="title
+        
+      ">
+        <span>Zombie</span>
+      </div><div class="title title-shadow
+        
+      ">
+        <span>Zombie</span>
+      </div><img
+          src="http://localhost:8080/imgs/ilus/zombie.jpg"
+          class="illustration" />
+  </div><div
+    class="card animatron 
+  ">
+    
+  <img class="joint provided bone bone1" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone2" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone3" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone4" src="http://localhost:8080/imgs/provided-bone.png">
+  <div class="animatron__cards">4</div>
+  <img class="attribute attribute-iq" src="http://localhost:8080/imgs/attr-iq.png" />
+
+    <div class="type">animatron</div><div class="title
+        
+      ">
+        <span>Gaybot</span>
+      </div><div class="title title-shadow
+        
+      ">
+        <span>Gaybot</span>
+      </div><img
+          src="http://localhost:8080/imgs/ilus/gaybot.jpg"
+          class="illustration" />
+  </div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div
+    class="card animatron 
+  ">
+    
+  <img class="joint provided bone bone1" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone2" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone3" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone4" src="http://localhost:8080/imgs/provided-bone.png">
+  <div class="animatron__cards">4</div>
+  <img class="attribute attribute-iq" src="http://localhost:8080/imgs/attr-iq.png" />
+
+    <div class="type">animatron</div><div class="title
+        
+      ">
+        <span>Replicant</span>
+      </div><div class="title title-shadow
+        
+      ">
+        <span>Replicant</span>
+      </div><img
+          src="http://localhost:8080/imgs/ilus/replikant.jpg"
+          class="illustration" />
+  </div><div
+    class="card animatron 
+  ">
+    
+  <img class="joint provided bone bone1" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone2" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone3" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone4" src="http://localhost:8080/imgs/provided-bone.png">
+  <div class="animatron__cards">4</div>
+  <img class="attribute attribute-iq" src="http://localhost:8080/imgs/attr-iq.png" />
+
+    <div class="type">animatron</div><div class="title
+        
+      ">
+        <span>Organoid</span>
+      </div><div class="title title-shadow
+        
+      ">
+        <span>Organoid</span>
+      </div><img
+          src="http://localhost:8080/imgs/ilus/organoid.jpg"
+          class="illustration" />
+  </div><div
+    class="card animatron 
+  ">
+    
+  <img class="joint provided bone bone1" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone2" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone3" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone4" src="http://localhost:8080/imgs/provided-bone.png">
+  <div class="animatron__cards">4</div>
+  <img class="attribute attribute-iq" src="http://localhost:8080/imgs/attr-iq.png" />
+
+    <div class="type">animatron</div><div class="title
+        
+      ">
+        <span>Illegal clone</span>
+      </div><div class="title title-shadow
+        
+      ">
+        <span>Illegal clone</span>
+      </div><img
+          src="http://localhost:8080/imgs/ilus/klon.jpg"
+          class="illustration" />
+  </div><div
+    class="card animatron 
+  ">
+    
+  <img class="joint provided bone bone1" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone2" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone3" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone4" src="http://localhost:8080/imgs/provided-bone.png">
+  <div class="animatron__cards">4</div>
+  <div class="animatron__reputation"><span>-2</span></div>
+
+    <div class="type">animatron</div><div class="title
+        
+      ">
+        <span>Zombie</span>
+      </div><div class="title title-shadow
+        
+      ">
+        <span>Zombie</span>
+      </div><img
+          src="http://localhost:8080/imgs/ilus/zombie.jpg"
+          class="illustration" />
+  </div><div
+    class="card animatron 
+  ">
+    
+  <img class="joint provided bone bone1" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone2" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone3" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone4" src="http://localhost:8080/imgs/provided-bone.png">
+  <div class="animatron__cards">4</div>
+  <div class="animatron__reputation"><span>-2</span></div>
+
+    <div class="type">animatron</div><div class="title
+        
+      ">
+        <span>Zombie</span>
+      </div><div class="title title-shadow
+        
+      ">
+        <span>Zombie</span>
+      </div><img
+          src="http://localhost:8080/imgs/ilus/zombie.jpg"
+          class="illustration" />
+  </div><div
+    class="card animatron 
+  ">
+    
+  <img class="joint provided bone bone1" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone2" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone3" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone4" src="http://localhost:8080/imgs/provided-bone.png">
+  <div class="animatron__cards">4</div>
+  <div class="animatron__reputation"><span>-2</span></div>
+
+    <div class="type">animatron</div><div class="title
+        
+      ">
+        <span>Zombie</span>
+      </div><div class="title title-shadow
+        
+      ">
+        <span>Zombie</span>
+      </div><img
+          src="http://localhost:8080/imgs/ilus/zombie.jpg"
+          class="illustration" />
+  </div><div
+    class="card animatron 
+  ">
+    
+  <img class="joint provided bone bone1" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone2" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone3" src="http://localhost:8080/imgs/provided-bone.png">
+  <img class="joint provided bone bone4" src="http://localhost:8080/imgs/provided-bone.png">
+  <div class="animatron__cards">4</div>
+  <div class="animatron__reputation"><span>-2</span></div>
+
+    <div class="type">animatron</div><div class="title
+        
+      ">
+        <span>Zombie</span>
+      </div><div class="title title-shadow
+        
+      ">
+        <span>Zombie</span>
+      </div><img
+          src="http://localhost:8080/imgs/ilus/zombie.jpg"
+          class="illustration" />
+  </div>
+      </div>
+    </body>
+  </html>

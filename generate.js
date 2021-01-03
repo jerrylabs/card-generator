@@ -64,30 +64,31 @@ const generateHtml = (cardsData, backgrounds, css, generateCardMarkup) => {
   </html>`;
 }
 
-const savePdf = async (htmlData, settings ) => {
-    const browser = await puppeteer.launch();
-    const page = await browser.newPage();
-    await page.setContent(htmlData);
-    // await page.evaluateHandle('document.fonts.ready');
-    // await page.emulateMedia('screen');
-    await page.emulateMedia('screen');
-    await page.content();
-    await page.pdf(settings);
-    await browser.close();
-    console.log('PDF generated 👍');
-}
-
 /* Beginning of the Card Generator script */
 (async function() {
   try {
+
+    // missing required parameter => display help
     if (!process.argv[2]) {
       printInstructions();
       return;
     }
-    const csvFile = `${process.argv[2]}/cards.csv`;
+
+    // default input file
+    let csvFile = `${process.argv[2]}/cards.csv`;
+
+    // check for custom input file name
+    if (process.argv.includes('cards')) {
+      const cardsIndex = process.argv.indexOf('cards');
+      if (process.argv.length < cardsIndex + 1) {
+        printInstructions();
+        return;
+      } else {
+        csvFile = `${process.argv[2]}/${process.argv[cardsIndex + 1]}`;
+      }
+    }
     const cssFile = `${process.argv[2]}/style.css`;
     const backgrounds = parseInt(process.argv[process.argv.indexOf('backgrounds') + 1]);
-    const customName = process.argv.includes('output') ? process.argv[process.argv.indexOf('output') + 1] : false;
     const csvData = fs.readFileSync(csvFile, 'utf8');
     const cssData = fs.readFileSync(cssFile, 'utf8');
     const cardsData = csvToObject(csvData);
@@ -97,28 +98,18 @@ const savePdf = async (htmlData, settings ) => {
 
     const htmlData = generateHtml(cardsData, backgrounds, cssData, generateCardMarkup);
 
+    // Checking output HTML in console
     if (process.argv.includes('log')) {
-      console.log(htmlData); // Checking HTML in console
+      console.log(htmlData);
     }
 
-    if (process.argv.includes('html')) {
-      fs.writeFileSync("myhtml.html", htmlData, function(err) {
-        if(err) {
-            return console.log(err);
-        }
-        console.log("The HTML file was saved");
-      });
-    }
-
-    // await savePdf(htmlData, {
-    //   path: customName ? `${customName}.pdf` : 'mypdf.pdf',
-    //   format: 'A4',
-    //   printBackground: true,
-    //   landscape: process.argv.includes('landscape'),
-    //   margin: {
-    //       top: process.argv.includes('landscape') ? "9mm" : "16.5mm",
-    //   }
-    // });
+    // Create HTML file
+    fs.writeFileSync(`${process.argv[2]}.html`, htmlData, function(err) {
+      if(err) {
+          return console.log(err);
+      }
+      console.log("The HTML file was saved");
+    });
 
     process.exit();
 

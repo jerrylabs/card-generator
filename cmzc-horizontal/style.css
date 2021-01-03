@@ -332,7 +332,7 @@ html, body {
 .bio .text-shadow, .tech .text-shadow {
   z-index: 0;
   color: white;
-  filter: blur(5px);
+  filter: blur(2px);
 }
 /*
 .bio .text.special, .tech .text.special {
@@ -428,7 +428,7 @@ html, body {
 .voodoo .test {
   position: absolute;
   top: 37.1mm;
-  left: 3.8mm;
+  left: 4.8mm;
   transform: translate(-50%, -50%) !important;
   z-index: 3;
   width: 16mm;
@@ -482,6 +482,18 @@ html, body {
 
 .background {
   background: white url(http://localhost:8080/imgs/cmzc-logo.png) center center no-repeat;
+  background-size: 3.5cm;
+  transform: rotate(180deg);
+}
+
+.background:nth-child(n+289) {
+  background: white url(http://localhost:8080/imgs/back-ruka.jpg) center center no-repeat;
+  background-size: 3.5cm;
+  transform: rotate(180deg);
+}
+
+.background:nth-child(n+327 ) {
+  background: white url(http://localhost:8080/imgs/back-noha.jpg) center center no-repeat;
   background-size: 3.5cm;
   transform: rotate(180deg);
 }

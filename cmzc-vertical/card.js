@@ -24,15 +24,15 @@ const getTestMarkup = (value) => {
     let testImgNamePart, testDescription = '';
     if (value.includes('PI'))      { testImgNamePart = 'poweriq'; }
     else if (value.includes('PS')) { testImgNamePart = 'powerspeed'; }
-    else if (value.includes('P'))  { testImgNamePart = 'power'; testDescription = 'sílu'; }
-    else if (value.includes('S'))  { testImgNamePart = 'speed'; testDescription = 'rychlost'; }
-    else if (value.includes('I'))  { testImgNamePart = 'iq'; testDescription = 'inteligenci'; }
+    else if (value.includes('P'))  { testImgNamePart = 'power'; testDescription = 'power'; }
+    else if (value.includes('S'))  { testImgNamePart = 'speed'; testDescription = 'speed'; }
+    else if (value.includes('I'))  { testImgNamePart = 'iq'; testDescription = 'iq'; }
     markup = `
       <img class="test" src="http://localhost:8080/imgs/attr-${testImgNamePart}.png" />
       <div class="quest__label">test</div>
-      <div class="quest__description">na ${testDescription}</div>
-      <div class="quest__success">úspěch</div>
-      <div class="quest__fail">neúspěch</div>
+      <div class="quest__description">your ${testDescription}</div>
+      <div class="quest__success">success</div>
+      <div class="quest__fail">fail</div>
     `;
   }
   return markup;
