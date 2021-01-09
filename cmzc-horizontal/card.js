@@ -57,7 +57,7 @@ const getRerollsMarkup = (value) => {
   return markup;
 }
 
-getTextMarkup = (text) => text
+getTextMarkup = (text, lang) => text
   .replace(/\[😀\]/g, '<img class="emo dice" src="http://localhost:8080/imgs/dice-epic.png" />')
   .replace(/\[😬\]/g, '<img class="emo dice" src="http://localhost:8080/imgs/dice-tragic.png" />')
   .replace(/\[🙂\]/g, '<img class="emo dice" src="http://localhost:8080/imgs/dice-happy.png" />')
@@ -77,7 +77,7 @@ getTextMarkup = (text) => text
   .replace(/=>/g, '<img class="emo arrow" src="http://localhost:8080/imgs/arrow.png" />')
   .replace(/\?/g, '<img class="emo dice" src="http://localhost:8080/imgs/dice-any.png" />')
   .replace(/\(2\)/g, '<div class="reroll reroll-red"><img src="http://localhost:8080/imgs/dice2.png"></div>')
-  .replace(/\{/g, '<div class="group-all"><span class="white-shadow">all</span><div class="group">')
+  .replace(/\{/g, `<div class="group-all"><span class="white-shadow">${lang === 'english' ? 'all' : 'všechny'}</span><div class="group">`)
   .replace(/\}/g, '</div></div>');
 
 // Field = any column in source CSV
@@ -145,18 +145,19 @@ const getFieldMarkup = (title, value, card) => {
     break;
     case 'text2':
     case 'disjunction':
+    case 'lang':
     break;
     case 'text':
       if (card.text2) {
         markup = `<div class="text texts">
-          <div class="text-part">${getTextMarkup(value)}</div>
-          ${ card.disjunction ? '<span class="white-shadow or">or</span>' : '' }
-          <div class="text-part">${getTextMarkup(card.text2)}</div>
+          <div class="text-part">${getTextMarkup(value, card.lang)}</div>
+          ${card.disjunction ? `<span class="white-shadow or">${card.lang === 'english' ? 'or' : 'nebo'}</span>` : '' }
+          <div class="text-part">${getTextMarkup(card.text2, card.lang)}</div>
         </div>`;
       } else {
-          markup =  `<div class="text${value.includes('<br>') ? ' special' : ''}">${getTextMarkup(value)}</div>`;
+          markup =  `<div class="text${value.includes('<br>') ? ' special' : ''}">${getTextMarkup(value, card.lang)}</div>`;
           if (card.type === 'bio' || card.type === 'tech') {
-            markup += `<div class="text text-shadow">${getTextMarkup(value)}</div>`;
+            markup += `<div class="text text-shadow">${getTextMarkup(value, card.lang)}</div>`;
           }
       }
     break;

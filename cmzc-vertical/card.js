@@ -18,21 +18,21 @@ const getLifeMarkup = (c, i) => `<img class="life" src="http://localhost:8080/im
 
 const getAttrMarkup = (c, i) => `<img class="attribute attribute-${shortcut(c)}" src="http://localhost:8080/imgs/attr-${shortcut(c)}.png" />`;
 
-const getTestMarkup = (value) => {
+const getTestMarkup = (value, lang) => {
   let markup = '';
   if (value.includes('P') || value.includes('S') || value.includes('I')){
     let testImgNamePart, testDescription = '';
     if (value.includes('PI'))      { testImgNamePart = 'poweriq'; }
     else if (value.includes('PS')) { testImgNamePart = 'powerspeed'; }
-    else if (value.includes('P'))  { testImgNamePart = 'power'; testDescription = 'power'; }
-    else if (value.includes('S'))  { testImgNamePart = 'speed'; testDescription = 'speed'; }
-    else if (value.includes('I'))  { testImgNamePart = 'iq'; testDescription = 'iq'; }
+    else if (value.includes('P'))  { testImgNamePart = 'power'; testDescription = lang === 'english' ? 'power' : 'sílu'; }
+    else if (value.includes('S'))  { testImgNamePart = 'speed'; testDescription = lang === 'english' ? 'speed' : 'rychlost'; }
+    else if (value.includes('I'))  { testImgNamePart = 'iq'; testDescription = lang === 'english' ? 'iq' : 'inteligenci'; }
     markup = `
       <img class="test" src="http://localhost:8080/imgs/attr-${testImgNamePart}.png" />
       <div class="quest__label">test</div>
-      <div class="quest__description">your ${testDescription}</div>
-      <div class="quest__success">success</div>
-      <div class="quest__fail">fail</div>
+      <div class="quest__description">${lang === 'english' ? 'your' : 'na'} ${testDescription}</div>
+      <div class="quest__success">${lang === 'english' ? 'success' : 'úspěch'}</div>
+      <div class="quest__fail">${lang === 'english' ? 'fail' : 'neúspěch'}</div>
     `;
   }
   return markup;
@@ -112,7 +112,10 @@ const getFieldMarkup = (title, value, card) => {
     break;
 
     case 'test':
-      markup = getTestMarkup(value);
+      markup = getTestMarkup(value, card.lang);
+    break;
+
+    case 'lang':
     break;
 
     case 'reward':

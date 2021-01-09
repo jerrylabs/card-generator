@@ -91,10 +91,15 @@ const generateHtml = (cardsData, backgrounds, css, generateCardMarkup) => {
     const backgrounds = parseInt(process.argv[process.argv.indexOf('backgrounds') + 1]);
     const csvData = fs.readFileSync(csvFile, 'utf8');
     const cssData = fs.readFileSync(cssFile, 'utf8');
-    const cardsData = csvToObject(csvData);
+    let cardsData = csvToObject(csvData);
 
     const customCardPath = `./${process.argv[2]}/card.js`;
     const generateCardMarkup = fs.existsSync(customCardPath) ? require(customCardPath) : generateDefaultCardMarkup;
+
+    // English variant
+    if (process.argv.includes('english')) {
+      cardsData = cardsData.map(cardData => ({...cardData, lang: 'english'}));
+    }
 
     const htmlData = generateHtml(cardsData, backgrounds, cssData, generateCardMarkup);
 
@@ -102,6 +107,7 @@ const generateHtml = (cardsData, backgrounds, css, generateCardMarkup) => {
     if (process.argv.includes('log')) {
       console.log(htmlData);
     }
+
 
     // Create HTML file
     fs.writeFileSync(`${process.argv[2]}.html`, htmlData, function(err) {

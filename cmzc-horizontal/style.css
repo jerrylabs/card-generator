@@ -481,9 +481,13 @@ html, body {
 } */
 
 .background {
-  background: white url(http://localhost:8080/imgs/cmzc-logo.png) center center no-repeat;
+  background: white url(http://localhost:8080/imgs/cmzc-logo-upgrades.png) center center no-repeat;
   background-size: 3.5cm;
   transform: rotate(180deg);
+}
+
+.background:nth-child(n+145) {
+  background-image: url(http://localhost:8080/imgs/cmzc-logo-voodoo.png);
 }
 
 .background:nth-child(n+289) {
