@@ -1,6 +1,6 @@
 type,title,test,reward,image,text
 quest,Glued handle,P,1,01-klika_namazana_lepidlem,
-quest,Unopenable chest,P,1c,neotevritelna_truhlicka,
+quest,Unopenable chest,P,1c,02-neotevritelna_truhlicka,
 quest,Bear trap,P,1,03-medvedi_past,
 quest,Falling grille,P,1c,04-padajici_mriz,
 quest,Waste crusher,P,1,05-drticka_smesneho_odpadu,
@@ -19,31 +19,31 @@ quest,Laser cutter,S,1,17-laserovy_rezak,
 quest,Acid spring,S,1,18-pramen_kyseliny,
 quest,Falling portal,S,1,19-bortici_se_chodba,
 quest,Trapdoor,S,1,20-propadlo,
-quest,Narrow bridge,S,1c,uzky_mustek,
-quest,Fire circle,S,2,ohnivy_kruh,Skok nebo smrt!
+quest,Narrow bridge,S,1c,21-uzky_mustek,
+quest,Fire circle,S,2,22-ohnivy_kruh,Skok nebo smrt!
 quest,Embers,S,2,23-zhave_uhliky,
 quest,Acid pool,S,2c,24-bazen_kyseliny,"Běž rychle, ale opatrně!"
-quest,Oiled slope,S,2,naolejovana_sikma_plocha,
+quest,Oiled slope,S,2,25-naolejovana_sikma_plocha,
 quest,Lava room,S,2c,26-lavova_mistnost,"Běž opatrně, ale rychle!"
 quest,Falling piranhas,S,3,27-padajici_pirane,"Piraně, všude piraně!"
-quest,Blade-winged butterflies,S,3c,motyli_s_ziletkovymi_kridly,Ostré jako laser.
+quest,Blade-winged butterflies,S,3c,28-motyli_s_ziletkovymi_kridly,Ostré jako laser.
 quest,Wild hornets,S,3,29-hejno_divokych_srsnu,Dorůstají až 80 cm.
 quest,Rolling stone,S,3cc,30-valici_se_kamen,
 quest,Poisoned feast,I,1,31-otravena_hostina,Za 30 stříbrných Jidáš zakoupil slevněné koření.
 quest,Weird smelly potion,I,1,32-lektvar_podivuhodneho_zapachu,Jedo čuchnutí porazí slona.
 quest,Suspiciously luminiscenting potion,I,1,33-lektvar_podezrele_svetelkujici_kapaliny,Světélkuje v divném rytmu.
-quest,Vending machine,I,1c,automat_s_obzerstvenim,
-quest,Dummy troll,I,1,hloupy_troll,
+quest,Vending machine,I,1c,34-automat_s_obzerstvenim,
+quest,Dummy troll,I,1,35-hloupy_troll,
 quest,Locked door,I,1c,36-zamcene_dvere,
-quest,Mirror labyrinth,I,2,zrcadlovy_labyrint,
-quest,Ciphered note,I,2c,sifrovany_vzkaz,Čitelný pouze za měsíčního svitu.
-quest,Trapped vending machine,I,2c,zapasteny_automat_s_obzerstvenim,
+quest,Mirror labyrinth,I,2,37-zrcadlovy_labyrint,
+quest,Ciphered note,I,2c,38-sifrovany_vzkaz,Čitelný pouze za měsíčního svitu.
+quest,Trapped vending machine,I,2c,39-zapasteny_automat_s_obzerstvenim,
 quest,Laser room,I,2,40-laserova_mistnost,
-quest,Giant cogs,I,2,ozubena_kola,
-quest,Landmines,I,3,naslapne_miny,
-quest,Room with no exit,I,3cc,mistnost_bez_vychodu,
-quest,High voltage lock,I,3c,zamek_vysokeho_napeti,
-quest,Drill-hand clown,I,3,vrtackoruky_klaun,Vrrrr!
+quest,Giant cogs,I,2,41-ozubena_kola,
+quest,Landmines,I,3,42-naslapne_miny,
+quest,Room with no exit,I,3cc,43-mistnost_bez_vychodu,
+quest,High voltage lock,I,3c,44-zamek_vysokeho_napeti,
+quest,Drill-hand clown,I,3,45-vrtackoruky_klaun,Vrrrr!
 animatron,Chuckie,,,chuckie,
 animatron,Hentai Barbie,,,hentaibarbie,
 animatron,Number 5,,,cislo5,

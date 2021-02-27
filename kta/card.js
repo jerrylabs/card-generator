@@ -52,7 +52,7 @@ module.exports = (cardData) => {
     }
   }
 
-  return `<div class="card ${cardData.type} ${cardData.level}">
+  return `<div class="card ${cardData.type} ${cardData.type == 'mission' ? 'm': ''}${cardData.level}">
     ${cardData.type == 'car'
       ? `
         <div class="title"><span>${cardData.title}</span></div>
@@ -61,7 +61,6 @@ module.exports = (cardData) => {
         <div class="stats">
           <div class="stat">Zrychlení: ${cardData.acc}</div>
           <div class="stat">Max. rychlost: ${cardData.speed}</div>
-          <div class="stat">Manévrování: ${cardData.agility}</div>
           <div class="stat">Odolnost: ${cardData.endurance}</div>
         </div>
         ${getPolice(cardData.level  )}
@@ -70,7 +69,14 @@ module.exports = (cardData) => {
     ${cardData.type == 'mission'
       ? `
       <div class="title">Mise</div>
-      <div class="text">${cardData.text}</div>
+      <div class="reqs reqs${cardData.requirements.length}">${cardData.requirements.split('').map((r) => {
+        switch (r) {
+          case 'S': return '<div class="req speed"></div>';
+          case 'P': return '<div class="req pistol"></div>';
+          case 'G': return '<div class="req police"></div>';
+          case 'D': return '<div class="req explosion"></div>';
+        }
+      }).join('')}</div>
       <div class="level">${cardData.level} $</div>
     `: ``
     }

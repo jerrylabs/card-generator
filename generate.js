@@ -97,7 +97,7 @@ const generateHtml = (cardsData, backgrounds, css, generateCardMarkup) => {
     const generateCardMarkup = fs.existsSync(customCardPath) ? require(customCardPath) : generateDefaultCardMarkup;
 
     // English variant
-    if (process.argv.includes('english')) {
+    if (process.argv.includes('cards-en.csv')) {
       cardsData = cardsData.map(cardData => ({...cardData, lang: 'english'}));
     }
 

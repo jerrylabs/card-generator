@@ -38,31 +38,6 @@ const getTestMarkup = (value, lang) => {
   return markup;
 }
 
-const getRerollsMarkup = (value) => {
-  let markup = getTestMarkup(value); /* pozadavek na test, je-li nejaky */
-  let diceAmount;
-  diceAmount = value.match(/[1-3]/g);
-  if (value.includes('🙁')) { diceAmount = '-small-sad'; }
-  else if (value.includes('😬')) { diceAmount = '-small-tragic'; }
-  if (diceAmount) {
-    markup = `${markup}
-      <div class="reroll reroll${value.includes('X') ? '-red' : '-green'}">
-        <img src="http://localhost:8080/imgs/dice${diceAmount}.png" />
-      </div>`;
-  }
-  if (value.includes('Z')) {
-    markup = `${markup}
-      ${value.split('').filter(v => v == 'Z').map(getLifeMarkup).join('')}
-    `;
-  }
-  if (value.includes('D')) {
-    markup = `${markup}
-      <img class="test" src="http://localhost:8080/imgs/dice-cross.png" />
-    `;
-  }
-  return markup;
-}
-
 getTextMarkup = (text) => text
   .replace(/\[😀\]/g, '<img class="emo dice" src="http://localhost:8080/imgs/dice-epic.png" />')
   .replace(/\[😬\]/g, '<img class="emo dice" src="http://localhost:8080/imgs/dice-tragic.png" />')
@@ -103,10 +78,10 @@ const getFieldMarkup = (title, value, card) => {
 
     case 'image':
       if (card.type === 'quest') {
-        markup = `<div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/${value}.jpg');"></div>`;
+        markup = `<div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/png/${value}.png');"></div>`;
       } else {
         markup = `<img
-          src="http://localhost:8080/imgs/ilus/${value}.jpg"
+          src="http://localhost:8080/imgs/ilus/jpg/${value}.jpg"
           class="illustration" />`;
       }
     break;

@@ -59,8 +59,36 @@ html, body {
 
 .policehead { display: inline-block; height: 20px; width: 16px; background: transparent url(http://localhost:8080/img/policehead.png) center center no-repeat; background-size: contain; }
 
+.mission { background: transparent url(http://localhost:8080/ilus/mission.png) center center no-repeat; background-size: contain; }
 .mission .title { font-size: 30px; font-weight: bold; }
 .mission .level { position: absolute; bottom: 0; font-size: 30px; font-weight: bold; text-align: center; width: 100%; }
+.mission.m5000, .mission.m6000, .mission.m7000 { background-position: center 1cm; }
+
+.reqs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: absolute;
+  bottom: 1cm;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+.reqs4 { width: 80%; }
+.req {
+  width: 1cm;
+  height: 1cm;
+  border-radius: 0.5cm;
+  background: transparent none center center no-repeat;
+  background-size: 0.8cm;
+  border: 0.5mm solid black;
+  margin: 1mm;
+}
+.req.pistol    { background-color: #fff8c5; background-image: url(http://localhost:8080/img/pistol.png); }
+.req.speed     { background-color: #b3ffb4; background-image: url(http://localhost:8080/img/tire.png); }
+.req.police    { background-color: #adf6ff; background-image: url(http://localhost:8080/img/policehead.png); background-size: 0.66cm; }
+.req.explosion { background-color: #ffc0c0; background-image: url(http://localhost:8080/img/explosion.png); }
+
 /*
 .background {
   background: white url(http://localhost:8080/imgs/cmzc-logo-upgrades.png) center center no-repeat;

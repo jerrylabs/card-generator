@@ -38,3 +38,9 @@ node generate test
 ```
 
 which should do the stuff and generate test.html in script home folder.
+
+Generate english CMZC cards with backgrounds:
+
+```
+node generate cmzc-horizontal cards cards-en.csv backgrounds 18
+```
