@@ -80,5 +80,12 @@ module.exports = (cardData) => {
       <div class="level">${cardData.level} $</div>
     `: ``
     }
+    ${cardData.type == 'action'
+      ? `
+      <div class="title">${cardData.title}</div>
+      <div class="ilus" style="background-image: url('http://localhost:8080/actions/${cardData.ilus}.png');" /></div>
+      <div class="text ${cardData.ilus}">${cardData.requirements}</div>
+    `: ``
+    }
   </div>`;
 };

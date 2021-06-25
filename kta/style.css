@@ -20,7 +20,6 @@ html, body {
 }
 
 .card {
-  font-size: 12px;
   display: inline-block;
   overflow: hidden;
   width: 44.0mm;
@@ -120,3 +119,8 @@ html, body {
 .token.speed     { background-color: #b3ffb4; background-image: url(http://localhost:8080/img/tire.png); }
 .token.police    { background-color: #adf6ff; background-image: url(http://localhost:8080/img/policehead.png); background-size: 1cm; }
 .token.explosion { background-color: #ffc0c0; background-image: url(http://localhost:8080/img/explosion.png); }
+
+.action .title { font-size: 30px; font-weight: bold; }
+.action .ilus { opacity: 1; }
+.action .text.go { font-size: 3.3mm; }
+.action .text.steal { font-size: 3.8mm; }
