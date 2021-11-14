@@ -29,34 +29,75 @@ html, body {
   position: relative;
   background-size: 100% 100%;
   background-position: center center;
-  border: 0.5px dashed black;
+  background: black;
   font-size: 5mm;
+  background: white;
+  border-radius: 2mm;
+  overflow: visible;
 }
 
-.title {
+.card::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  background: black;
+  height: 100%;
+  width: 100%;
+}
+
+.card.car .title {
   text-transform: uppercase;
-  height: 1.1cm;
+  height: 1.2cm;
   line-height: 1;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: "GTA2 Mission";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: black;
+  z-index: 3;
 }
 
-.standard .type { background: #e5d7d3; }
-.premium .type { background: #86cce6}
-.deluxe .type { background: #ecff00; }
-.ilus { height: 2cm; background-position: center center; background-size: 4cm; opacity: 0.3; }
+.card.car .title.long { font-size: 4.5mm; }
+.card.car .title.extralong { font-size: 3.8mm; }
 
-.stat { text-align: left; margin-left: 4mm; font-size: 4.5mm; }
+.card.car .title.shadow {
+  z-index: 2;
+  color: white;
+  filter: blur(1mm);
+}
 
-.policeboxes { position: absolute; bottom: 1mm; width: 100%; display: flex; justify-content: space-around; }
-.nopolice { font-size: 20px; font-weight: bold; }
-.policebox { height: 5mm; line-height: 5mm; width: 13mm; font-size: 0; }
-.police-standard { background: #e5d7d3; }
-.police-premium { background: #86cce6; }
-.police-deluxe { background: #ecff00; }
 
-.policehead { display: inline-block; height: 20px; width: 16px; background: transparent url(http://localhost:8080/img/policehead.png) center center no-repeat; background-size: contain; }
+.card.car .frame {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;
+  background: transparent url(http://localhost:8080/bg/standard.png) center center / contain no-repeat;
+}
+.card.car.premium .frame { background-image: url(http://localhost:8080/bg/premium.png); }
+.card.car.deluxe .frame { background-image: url(http://localhost:8080/bg/deluxe.png); }
+
+.ilus { height: 26mm; width: 36mm; position: absolute; z-index: 1; top: 9mm; left: 6mm; background-size: cover; background-position: center center; }
+.logo { position: absolute; z-index: 3; top: 28mm; left: 11mm; height: 20mm; width: 20mm; }
+
+.stat {
+  position: absolute;
+  color: white;
+  font-size: 7mm;
+  font-family: "GTA2 Mission";
+  width: 5mm;
+  text-align: center;
+  z-index: 3;
+}
+
+.stat.acc { top: 43mm; left: 6mm; }
+.stat.grip { top: 46mm; left: 19mm; color: black; }
+.stat.grip.shadow { color: white; z-index: 2; filter: blur(1mm); }
+.stat.max { top: 43.5mm; right: 7mm; }
 
 .mission { background: transparent url(http://localhost:8080/ilus/mission.png) center center no-repeat; background-size: contain; }
 .mission .title { font-size: 30px; font-weight: bold; }
@@ -88,29 +129,6 @@ html, body {
 .req.police    { background-color: #adf6ff; background-image: url(http://localhost:8080/img/policehead.png); background-size: 0.66cm; }
 .req.explosion { background-color: #ffc0c0; background-image: url(http://localhost:8080/img/explosion.png); }
 
-/*
-.background {
-  background: white url(http://localhost:8080/imgs/cmzc-logo-upgrades.png) center center no-repeat;
-  background-size: 3.5cm;
-  transform: rotate(180deg);
-}
-
-.background:nth-child(n+145) {
-  background-image: url(http://localhost:8080/imgs/cmzc-logo-voodoo.png);
-}
-
-.background:nth-child(n+289) {
-  background: white url(http://localhost:8080/imgs/back-ruka.jpg) center center no-repeat;
-  background-size: 3.5cm;
-  transform: rotate(180deg);
-}
-
-.background:nth-child(n+327 ) {
-  background: white url(http://localhost:8080/imgs/back-noha.jpg) center center no-repeat;
-  background-size: 3.5cm;
-  transform: rotate(180deg);
-}
-*/
 
 .pagebreak { width: 100%; height: 0; page-break-after: always; display: block; float: none; }
 

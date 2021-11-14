@@ -1,69 +1,25 @@
 module.exports = (cardData) => {
-  const getPolice = (level) => {
-    switch (level) {
-      case 'standard':
-      return `
-        <div class="policeboxes">
-          <div class="policebox police-standard">
-            <span class="nopolice">-</span>
-          </div>
-          <div class="policebox police-premium">
-          <span class="nopolice">-</span>
-          </div>
-          <div class="policebox police-deluxe">
-            <span class="policehead"></span>
-          </div>
-        </div>
-      `;
-      case 'premium':
-        return `
-        <div class="policeboxes">
-          <div class="policebox police-standard">
-            <span class="nopolice">-</span>
-          </div>
-          <div class="policebox police-premium">
-            <span class="policehead"></span>
-          </div>
-          <div class="policebox police-deluxe">
-            <span class="policehead"></span>
-            <span class="policehead"></span>
-          </div>
-        </div>
-      `;
-      case 'deluxe':
-        return `
-        <div class="policeboxes">
-          <div class="policebox police-standard">
-            <span class="policehead"></span>
-          </div>
-          <div class="policebox police-premium">
-            <span class="policehead"></span>
-            <span class="policehead"></span>
-          </div>
-          <div class="policebox police-deluxe">
-            <span class="policehead"></span>
-            <span class="policehead"></span>
-            <span class="policehead"></span>
-          </div>
-        </div>
-      `;
-      default:
-      return;
-    }
+  let titleLong = '';
+  if (cardData.title.length > 16) {
+    titleLong = ' long';
   }
-
+  if (cardData.title.length >= 20) {
+    titleLong = ' extralong';
+  }
   return `<div class="card ${cardData.type} ${cardData.type == 'mission' ? 'm': ''}${cardData.level}">
     ${cardData.type == 'car'
       ? `
-        <div class="title"><span>${cardData.title}</span></div>
-        <div class="type">${cardData.level}</div>
-        <div class="ilus" style="background-image: url('http://localhost:8080/ilus/${cardData.ilus}.png');" /></div>
+      <div class="frame"></div>
+      <div class="title${titleLong}"><span>${cardData.title}</span></div>
+      <div class="title${titleLong} shadow"><span>${cardData.title}</span></div>
+        <img class="logo" src="http://localhost:8080/logos/${cardData.logo}.png" />
+        <div class="ilus" style="background-image: url('http://localhost:8080/ilus/${cardData.pic}');" /></div>
         <div class="stats">
-          <div class="stat">Zrychlení: ${cardData.acc}</div>
-          <div class="stat">Max. rychlost: ${cardData.speed}</div>
-          <div class="stat">Odolnost: ${cardData.endurance}</div>
+          <div class="stat acc">${cardData.acc}</div>
+          <div class="stat grip">${cardData.endurance}</div>
+          <div class="stat grip shadow">${cardData.endurance}</div>
+          <div class="stat max">${cardData.speed}</div>
         </div>
-        ${getPolice(cardData.level  )}
       ` : ``
     }
     ${cardData.type == 'mission'
