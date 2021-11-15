@@ -34,6 +34,7 @@ html, body {
   background: white;
   border-radius: 2mm;
   overflow: visible;
+  vertical-align: bottom;
 }
 
 .card::before {
@@ -48,7 +49,7 @@ html, body {
   width: 100%;
 }
 
-.card.car .title {
+.card .title {
   text-transform: uppercase;
   height: 1.2cm;
   line-height: 1;
@@ -73,7 +74,7 @@ html, body {
   filter: blur(1mm);
 }
 
-.card.car .level {
+.card .subtitle {
   text-transform: uppercase;
   height: 1.2cm;
   line-height: 1;
@@ -89,13 +90,13 @@ html, body {
   font-size: 3.5mm;
 }
 
-.card.car .level.shadow {
+.card .subtitle.shadow {
   z-index: 2;
   color: white;
   filter: blur(1mm);
 }
 
-.card.car .frame {
+.card .frame {
   position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;
   background: transparent url(http://localhost:8080/bg/standard.png) center center / contain no-repeat;
 }
@@ -120,21 +121,29 @@ html, body {
 .stat.grip.shadow { color: white; z-index: 2; filter: blur(1mm); }
 .stat.max { top: 43.5mm; right: 7mm; }
 
-.mission { background: transparent url(http://localhost:8080/ilus/mission.png) center center no-repeat; background-size: contain; }
-.mission .title { font-size: 30px; font-weight: bold; }
-.mission .level { position: absolute; bottom: 0; font-size: 30px; font-weight: bold; text-align: center; width: 100%; }
-.mission.m5000, .mission.m6000, .mission.m7000 { background-position: center 1cm; }
+.mission .frame { background-image: url(http://localhost:8080/bg/mission.png); }
+.action .frame { background-image: url(http://localhost:8080/bg/action.png); }
+.mission .title {
+  height: auto; text-align: center; padding: 3mm 2mm 0; box-sizing: border-box; position: relative;
+}
+.mission .subtitle { position: relative; padding-top: 1mm; top: 0; height: auto;}
+.mission .ilus { padding-left: 4mm; top: 18mm; z-index:2; height: auto; left: 0; }
+.m1000 .ilus { top: 24mm; }
+.m5000 .ilus, .m6000 .ilus, .m7000 .ilus { top: 15mm; }
 
 .reqs {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   position: absolute;
-  bottom: 1cm;
+  z-index: 3;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
+  top: 36mm;
 }
+
+.m5000 .reqs, .m6000 .reqs, .m7000 .reqs { top: 29mm; }
 .reqs4 { width: 80%; }
 .req {
   width: 1cm;
@@ -143,13 +152,17 @@ html, body {
   background: transparent none center center no-repeat;
   background-size: 0.8cm;
   border: 0.5mm solid black;
-  margin: 1mm;
+  margin: 0.5mm;
 }
-.req.pistol    { background-color: #fff8c5; background-image: url(http://localhost:8080/img/pistol.png); }
-.req.speed     { background-color: #b3ffb4; background-image: url(http://localhost:8080/img/tire.png); }
-.req.police    { background-color: #adf6ff; background-image: url(http://localhost:8080/img/policehead.png); background-size: 0.66cm; }
-.req.explosion { background-color: #ffc0c0; background-image: url(http://localhost:8080/img/explosion.png); }
+.req.pistol    { background-color: #fff8c5; background-image: url(http://localhost:8080/symbols/pistol.png); }
+.req.speed     { background-color: #b3ffb4; background-image: url(http://localhost:8080/symbols/tire.png); }
+.req.police    { background-color: #adf6ff; background-image: url(http://localhost:8080/symbols/policehead.png); background-size: 0.66cm; }
+.req.explosion { background-color: #ffc0c0; background-image: url(http://localhost:8080/symbols/explosion.png); }
 
+.mission .reward {
+  position: absolute; width: 100%; bottom: 2mm; z-index: 3; font-size: 7mm; text-align: center;
+  font-family: "GTA2 Mission";
+}
 
 .pagebreak { width: 100%; height: 0; page-break-after: always; display: block; float: none; }
 
