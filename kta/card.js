@@ -33,7 +33,6 @@ module.exports = (cardData) => {
         <div class="title">${cardData.title}</div>
         <div class="subtitle">Mise</div>
         <img class="ilus" src="http://localhost:8080/ilus/placeholders/mission2.png" />
-
         <div class="reqs reqs${cardData.requirements.length}">${cardData.requirements.split('').map((r) => {
           switch (r) {
             case 'S': return '<div class="req speed"></div>';
@@ -49,11 +48,36 @@ module.exports = (cardData) => {
     ${cardData.type == 'action'
       ? `
 
-      <div class="card ${cardData.type} action">
+      <div class="card ${cardData.type} mission">
         <div class="frame"></div>
         <div class="title">${cardData.title}</div>
-        <div class="ilus" style="background-image: url('http://localhost:8080/actions/${cardData.ilus}.png');" /></div>
+        <div class="subtitle">akce</div>
+        <img class="ilus ${cardData.ilus}" src="http://localhost:8080/actions/${cardData.ilus}.png" />
         <div class="text ${cardData.ilus}">${cardData.requirements}</div>
+      </div>
+    `: ``
+    }
+    ${cardData.type == 'special'
+      ? `
+      <div class="card mission special">
+        <div class="frame"></div>
+        ${cardData.ilus === 'christmas' ? '<div class="xmasbg"></div>' : ''}
+        <div class="title">${cardData.title}</div>
+        <div class="subtitle">speciální akce</div>
+        <img class="ilus ${cardData.ilus}" src="http://localhost:8080/actions/${cardData.ilus}.png" />
+        <div class="text ${cardData.ilus}">${cardData.requirements}</div>
+      </div>
+    `: ``
+    }
+    ${cardData.type == 'token'
+      ? `
+      <div class="token ${cardData.level}">
+      </div>
+    `: ``
+    }
+    ${cardData.type == 'pagebreak'
+      ? `
+      <div class="pagebreak">
       </div>
     `: ``
     }

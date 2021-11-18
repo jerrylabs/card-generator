@@ -107,7 +107,7 @@ html, body {
 .card.car.premium .frame { background-image: url(http://localhost:8080/bg/premium.png); }
 .card.car.deluxe .frame { background-image: url(http://localhost:8080/bg/deluxe.png); }
 
-.ilus { height: 26mm; width: 36mm; position: absolute; z-index: 1; top: 9mm; left: 6mm; background-size: cover; background-position: center center; }
+.ilus { height: 26mm; width: 35mm; position: absolute; z-index: 1; top: 9mm; left: 6mm; background-size: cover; background-position: center center; }
 .logo { position: absolute; z-index: 3; top: 28mm; left: 11mm; height: 20mm; width: 20mm; }
 
 .stat {
@@ -131,7 +131,7 @@ html, body {
   height: auto; text-align: center; padding: 3mm 2mm 0; box-sizing: border-box; position: relative;
 }
 .mission .subtitle { position: relative; padding-top: 1mm; top: 0; height: auto;}
-.mission .ilus { padding-left: 4mm; top: 18mm; z-index:2; height: auto; left: 0; }
+.mission .ilus { padding-left: 4mm; width: 36mm; top: 18mm; z-index:2; height: auto; left: 0; }
 .m1000 .ilus { top: 24mm; }
 .m5000 .ilus, .m6000 .ilus, .m7000 .ilus { top: 15mm; }
 
@@ -170,16 +170,42 @@ html, body {
 
 .pagebreak { width: 100%; height: 0; page-break-after: always; display: block; float: none; }
 
-.token { height: 20mm; width: 20mm; background: transparent none center center no-repeat; background-size: 1.5cm; }
-.token.pistol    { background-color: #fff8c5; background-image: url(http://localhost:8080/img/pistol.png); }
-.token.speed     { background-color: #b3ffb4; background-image: url(http://localhost:8080/img/tire.png); }
-.token.police    { background-color: #adf6ff; background-image: url(http://localhost:8080/img/policehead.png); background-size: 1cm; }
-.token.explosion { background-color: #ffc0c0; background-image: url(http://localhost:8080/img/explosion.png); }
+.token { height: 20mm; width: 20mm; background: transparent none center center no-repeat; background-size: 1.5cm; display: inline-block; }
+.token.pistol    { background-color: #fff8c5; background-image: url(http://localhost:8080/symbols/pistol.png); }
+.token.speed     { background-color: #b3ffb4; background-image: url(http://localhost:8080/symbols/tire.png); }
+.token.police    { background-color: #adf6ff; background-image: url(http://localhost:8080/symbols/policehead.png); background-size: 1cm; }
+.token.explosion { background-color: #ffc0c0; background-image: url(http://localhost:8080/symbols/explosion.png); }
 
 .action .title { font-size: 30px; font-weight: bold; }
-.action .ilus { opacity: 1; }
-.action .text.go { font-size: 3.3mm; }
-.action .text.steal { font-size: 3.8mm; }
+.action .subtitle { padding: 0; }
+.action .ilus { opacity: 1; top: 12mm; }
+.action .text, .special .text { position: absolute; z-index: 2; font-family: "Bahnschrift SemiCondensed"; top: 30mm; padding: 0 3mm; font-size: 4.5mm; }
+.action .ilus.scout { top: 18mm; }
+.action .text.scout { top: 38mm; }
+.action .ilus.steal { top: 10mm; }
+.action .text.steal { font-size: 4mm; top: 23mm; }
+.action .ilus.arm {  top: 15mm; }
+.action .text.arm { top: 33mm; }
+.action .ilus.go { top: 8.5mm; left: 0.5mm; }
+.action .text.go { font-size: 4mm; top: 22mm; }
+.action .ilus.shoot {  top: 16mm; }
+.action .text.shoot { top: 34mm; }
+
+.special .text { top: 33mm; }
+.special .ilus.outtajail { top: 14mm; }
+.special .ilus.fullarm { top: 19mm; }
+.special .text.fullarm { top: 43mm; }
+.special .ilus.christmas { top: 13mm; width: 35mm;}
+.special .text.christmas { top: 42mm; font-size: 4mm;}
+.special .text.mech  { padding: 7mm 4mm; }
+.special .ilus.fakeid { top: 16mm; }
+.special .text.fakeid { top: 43mm; }
+
+.xmasbg {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;
+  background: transparent url(http://localhost:8080/bg/christmas.png) center center / contain no-repeat;
+}
+
       </style>
     </head>
     <body>
@@ -204,6 +230,9 @@ html, body {
       
     
     
+    
+    
+    
   
     
       <div class="card car standard">
@@ -222,6 +251,9 @@ html, body {
           </div>
         </div>
       
+    
+    
+    
     
     
   
@@ -244,6 +276,9 @@ html, body {
       
     
     
+    
+    
+    
   
     
       <div class="card car standard">
@@ -262,6 +297,9 @@ html, body {
           </div>
         </div>
       
+    
+    
+    
     
     
   
@@ -284,6 +322,9 @@ html, body {
       
     
     
+    
+    
+    
   
     
       <div class="card car standard">
@@ -302,6 +343,9 @@ html, body {
           </div>
         </div>
       
+    
+    
+    
     
     
   
@@ -324,6 +368,9 @@ html, body {
       
     
     
+    
+    
+    
   
     
       <div class="card car standard">
@@ -342,6 +389,9 @@ html, body {
           </div>
         </div>
       
+    
+    
+    
     
     
   
@@ -364,6 +414,9 @@ html, body {
       
     
     
+    
+    
+    
   
     
       <div class="card car standard">
@@ -382,6 +435,9 @@ html, body {
           </div>
         </div>
       
+    
+    
+    
     
     
   
@@ -404,6 +460,9 @@ html, body {
       
     
     
+    
+    
+    
   
     
       <div class="card car standard">
@@ -422,6 +481,9 @@ html, body {
           </div>
         </div>
       
+    
+    
+    
     
     
   
@@ -444,6 +506,9 @@ html, body {
       
     
     
+    
+    
+    
   
     
       <div class="card car standard">
@@ -462,6 +527,9 @@ html, body {
           </div>
         </div>
       
+    
+    
+    
     
     
   
@@ -484,6 +552,9 @@ html, body {
       
     
     
+    
+    
+    
   
     
       <div class="card car standard">
@@ -504,12 +575,15 @@ html, body {
       
     
     
+    
+    
+    
   
     
       <div class="card car standard">
         <div class="frame"></div>
-        <div class="title long"><span>Pshouda Okhtzavia</span></div>
-        <div class="title long shadow"><span>Pshouda Okhtzavia</span></div>
+        <div class="title"><span>Pshouda Coctavia</span></div>
+        <div class="title shadow"><span>Pshouda Coctavia</span></div>
         <div class="subtitle"><span>standard</span></div>
         <div class="subtitle shadow"><span>standard</span></div>
         <img class="logo" src="http://localhost:8080/logos/pshouda.png" />
@@ -522,6 +596,9 @@ html, body {
           </div>
         </div>
       
+    
+    
+    
     
     
   
@@ -544,6 +621,9 @@ html, body {
       
     
     
+    
+    
+    
   
     
       <div class="card car standard">
@@ -562,6 +642,9 @@ html, body {
           </div>
         </div>
       
+    
+    
+    
     
     
   
@@ -584,6 +667,9 @@ html, body {
       
     
     
+    
+    
+    
   
     
       <div class="card car standard">
@@ -602,6 +688,9 @@ html, body {
           </div>
         </div>
       
+    
+    
+    
     
     
   
@@ -624,6 +713,9 @@ html, body {
       
     
     
+    
+    
+    
   
     
       <div class="card car standard">
@@ -642,6 +734,9 @@ html, body {
           </div>
         </div>
       
+    
+    
+    
     
     
   
@@ -664,6 +759,9 @@ html, body {
       
     
     
+    
+    
+    
   
     
       <div class="card car premium">
@@ -682,6 +780,9 @@ html, body {
           </div>
         </div>
       
+    
+    
+    
     
     
   
@@ -704,6 +805,9 @@ html, body {
       
     
     
+    
+    
+    
   
     
       <div class="card car premium">
@@ -722,6 +826,9 @@ html, body {
           </div>
         </div>
       
+    
+    
+    
     
     
   
@@ -744,6 +851,9 @@ html, body {
       
     
     
+    
+    
+    
   
     
       <div class="card car premium">
@@ -762,6 +872,9 @@ html, body {
           </div>
         </div>
       
+    
+    
+    
     
     
   
@@ -784,6 +897,9 @@ html, body {
       
     
     
+    
+    
+    
   
     
       <div class="card car premium">
@@ -802,6 +918,9 @@ html, body {
           </div>
         </div>
       
+    
+    
+    
     
     
   
@@ -824,6 +943,9 @@ html, body {
       
     
     
+    
+    
+    
   
     
       <div class="card car premium">
@@ -842,6 +964,9 @@ html, body {
           </div>
         </div>
       
+    
+    
+    
     
     
   
@@ -864,6 +989,9 @@ html, body {
       
     
     
+    
+    
+    
   
     
       <div class="card car premium">
@@ -882,6 +1010,9 @@ html, body {
           </div>
         </div>
       
+    
+    
+    
     
     
   
@@ -904,6 +1035,9 @@ html, body {
       
     
     
+    
+    
+    
   
     
       <div class="card car premium">
@@ -922,6 +1056,9 @@ html, body {
           </div>
         </div>
       
+    
+    
+    
     
     
   
@@ -944,6 +1081,9 @@ html, body {
       
     
     
+    
+    
+    
   
     
       <div class="card car premium">
@@ -962,6 +1102,9 @@ html, body {
           </div>
         </div>
       
+    
+    
+    
     
     
   
@@ -984,6 +1127,9 @@ html, body {
       
     
     
+    
+    
+    
   
     
       <div class="card car premium">
@@ -1002,6 +1148,9 @@ html, body {
           </div>
         </div>
       
+    
+    
+    
     
     
   
@@ -1024,6 +1173,9 @@ html, body {
       
     
     
+    
+    
+    
   
     
       <div class="card car deluxe">
@@ -1042,6 +1194,9 @@ html, body {
           </div>
         </div>
       
+    
+    
+    
     
     
   
@@ -1064,6 +1219,9 @@ html, body {
       
     
     
+    
+    
+    
   
     
       <div class="card car deluxe">
@@ -1082,6 +1240,9 @@ html, body {
           </div>
         </div>
       
+    
+    
+    
     
     
   
@@ -1104,6 +1265,9 @@ html, body {
       
     
     
+    
+    
+    
   
     
       <div class="card car deluxe">
@@ -1122,6 +1286,9 @@ html, body {
           </div>
         </div>
       
+    
+    
+    
     
     
   
@@ -1144,6 +1311,9 @@ html, body {
       
     
     
+    
+    
+    
   
     
       <div class="card car deluxe">
@@ -1162,6 +1332,9 @@ html, body {
           </div>
         </div>
       
+    
+    
+    
     
     
   
@@ -1184,6 +1357,9 @@ html, body {
       
     
     
+    
+    
+    
   
     
       <div class="card car deluxe">
@@ -1202,6 +1378,9 @@ html, body {
           </div>
         </div>
       
+    
+    
+    
     
     
   
@@ -1224,6 +1403,9 @@ html, body {
       
     
     
+    
+    
+    
   
     
       <div class="card car deluxe">
@@ -1242,6 +1424,9 @@ html, body {
           </div>
         </div>
       
+    
+    
+    
     
     
   
@@ -1264,6 +1449,9 @@ html, body {
       
     
     
+    
+    
+    
   
     
     
@@ -1272,10 +1460,12 @@ html, body {
         <div class="title">Dárek pro milenku</div>
         <div class="subtitle">Mise</div>
         <img class="ilus" src="http://localhost:8080/ilus/placeholders/mission2.png" />
-
         <div class="reqs reqs0"></div>
         <div class="reward">1000 $</div>
       </div>
+    
+    
+    
     
     
   
@@ -1286,10 +1476,12 @@ html, body {
         <div class="title">Barva vyšlá z módy</div>
         <div class="subtitle">Mise</div>
         <img class="ilus" src="http://localhost:8080/ilus/placeholders/mission2.png" />
-
         <div class="reqs reqs0"></div>
         <div class="reward">1000 $</div>
       </div>
+    
+    
+    
     
     
   
@@ -1300,10 +1492,12 @@ html, body {
         <div class="title">Odměna za vysvědčení</div>
         <div class="subtitle">Mise</div>
         <img class="ilus" src="http://localhost:8080/ilus/placeholders/mission2.png" />
-
         <div class="reqs reqs0"></div>
         <div class="reward">1000 $</div>
       </div>
+    
+    
+    
     
     
   
@@ -1314,10 +1508,12 @@ html, body {
         <div class="title">Rekonstrukce zahrady</div>
         <div class="subtitle">Mise</div>
         <img class="ilus" src="http://localhost:8080/ilus/placeholders/mission2.png" />
-
         <div class="reqs reqs0"></div>
         <div class="reward">1000 $</div>
       </div>
+    
+    
+    
     
     
   
@@ -1328,10 +1524,12 @@ html, body {
         <div class="title">Manželka se učí řídit</div>
         <div class="subtitle">Mise</div>
         <img class="ilus" src="http://localhost:8080/ilus/placeholders/mission2.png" />
-
         <div class="reqs reqs0"></div>
         <div class="reward">1000 $</div>
       </div>
+    
+    
+    
     
     
   
@@ -1342,10 +1540,12 @@ html, body {
         <div class="title">Zadřený motor</div>
         <div class="subtitle">Mise</div>
         <img class="ilus" src="http://localhost:8080/ilus/placeholders/mission2.png" />
-
         <div class="reqs reqs0"></div>
         <div class="reward">1000 $</div>
       </div>
+    
+    
+    
     
     
   
@@ -1356,10 +1556,12 @@ html, body {
         <div class="title">Načichlé potahy</div>
         <div class="subtitle">Mise</div>
         <img class="ilus" src="http://localhost:8080/ilus/placeholders/mission2.png" />
-
         <div class="reqs reqs0"></div>
         <div class="reward">1000 $</div>
       </div>
+    
+    
+    
     
     
   
@@ -1370,10 +1572,12 @@ html, body {
         <div class="title">Krumpáč v kapotě</div>
         <div class="subtitle">Mise</div>
         <img class="ilus" src="http://localhost:8080/ilus/placeholders/mission2.png" />
-
         <div class="reqs reqs0"></div>
         <div class="reward">1000 $</div>
       </div>
+    
+    
+    
     
     
   
@@ -1384,10 +1588,12 @@ html, body {
         <div class="title">Oprýskaný lak</div>
         <div class="subtitle">Mise</div>
         <img class="ilus" src="http://localhost:8080/ilus/placeholders/mission2.png" />
-
         <div class="reqs reqs0"></div>
         <div class="reward">1000 $</div>
       </div>
+    
+    
+    
     
     
   
@@ -1398,10 +1604,12 @@ html, body {
         <div class="title">Svoz odpadu</div>
         <div class="subtitle">Mise</div>
         <img class="ilus" src="http://localhost:8080/ilus/placeholders/mission2.png" />
-
         <div class="reqs reqs0"></div>
         <div class="reward">1000 $</div>
       </div>
+    
+    
+    
     
     
   
@@ -1412,10 +1620,12 @@ html, body {
         <div class="title">Taxi pro padělatele</div>
         <div class="subtitle">Mise</div>
         <img class="ilus" src="http://localhost:8080/ilus/placeholders/mission2.png" />
-
         <div class="reqs reqs1"><div class="req speed"></div></div>
         <div class="reward">2000 $</div>
       </div>
+    
+    
+    
     
     
   
@@ -1426,10 +1636,12 @@ html, body {
         <div class="title">Převoz kufříku</div>
         <div class="subtitle">Mise</div>
         <img class="ilus" src="http://localhost:8080/ilus/placeholders/mission2.png" />
-
         <div class="reqs reqs1"><div class="req speed"></div></div>
         <div class="reward">2000 $</div>
       </div>
+    
+    
+    
     
     
   
@@ -1440,10 +1652,12 @@ html, body {
         <div class="title">Usychající fíkus</div>
         <div class="subtitle">Mise</div>
         <img class="ilus" src="http://localhost:8080/ilus/placeholders/mission2.png" />
-
         <div class="reqs reqs1"><div class="req speed"></div></div>
         <div class="reward">2000 $</div>
       </div>
+    
+    
+    
     
     
   
@@ -1454,10 +1668,12 @@ html, body {
         <div class="title">Získej informátora</div>
         <div class="subtitle">Mise</div>
         <img class="ilus" src="http://localhost:8080/ilus/placeholders/mission2.png" />
-
         <div class="reqs reqs1"><div class="req police"></div></div>
         <div class="reward">2000 $</div>
       </div>
+    
+    
+    
     
     
   
@@ -1468,10 +1684,12 @@ html, body {
         <div class="title">Uspokoj gamblera</div>
         <div class="subtitle">Mise</div>
         <img class="ilus" src="http://localhost:8080/ilus/placeholders/mission2.png" />
-
         <div class="reqs reqs1"><div class="req police"></div></div>
         <div class="reward">2000 $</div>
       </div>
+    
+    
+    
     
     
   
@@ -1482,10 +1700,12 @@ html, body {
         <div class="title">Uklidni závisláka</div>
         <div class="subtitle">Mise</div>
         <img class="ilus" src="http://localhost:8080/ilus/placeholders/mission2.png" />
-
         <div class="reqs reqs1"><div class="req police"></div></div>
         <div class="reward">2000 $</div>
       </div>
+    
+    
+    
     
     
   
@@ -1496,10 +1716,12 @@ html, body {
         <div class="title">Vybílení trafiky</div>
         <div class="subtitle">Mise</div>
         <img class="ilus" src="http://localhost:8080/ilus/placeholders/mission2.png" />
-
         <div class="reqs reqs1"><div class="req pistol"></div></div>
         <div class="reward">2000 $</div>
       </div>
+    
+    
+    
     
     
   
@@ -1510,10 +1732,12 @@ html, body {
         <div class="title">Výpalné z DVD půjčovny</div>
         <div class="subtitle">Mise</div>
         <img class="ilus" src="http://localhost:8080/ilus/placeholders/mission2.png" />
-
         <div class="reqs reqs1"><div class="req pistol"></div></div>
         <div class="reward">2000 $</div>
       </div>
+    
+    
+    
     
     
   
@@ -1524,10 +1748,12 @@ html, body {
         <div class="title">Holubi k večeři</div>
         <div class="subtitle">Mise</div>
         <img class="ilus" src="http://localhost:8080/ilus/placeholders/mission2.png" />
-
         <div class="reqs reqs1"><div class="req pistol"></div></div>
         <div class="reward">2000 $</div>
       </div>
+    
+    
+    
     
     
   
@@ -1538,10 +1764,12 @@ html, body {
         <div class="title">Postraš zlobivce</div>
         <div class="subtitle">Mise</div>
         <img class="ilus" src="http://localhost:8080/ilus/placeholders/mission2.png" />
-
         <div class="reqs reqs1"><div class="req explosion"></div></div>
         <div class="reward">2000 $</div>
       </div>
+    
+    
+    
     
     
   
@@ -1552,10 +1780,12 @@ html, body {
         <div class="title">Boss chce pizzu</div>
         <div class="subtitle">Mise</div>
         <img class="ilus" src="http://localhost:8080/ilus/placeholders/mission2.png" />
-
         <div class="reqs reqs2"><div class="req speed"></div><div class="req speed"></div></div>
         <div class="reward">3000 $</div>
       </div>
+    
+    
+    
     
     
   
@@ -1566,10 +1796,12 @@ html, body {
         <div class="title">Policejní spiknutí</div>
         <div class="subtitle">Mise</div>
         <img class="ilus" src="http://localhost:8080/ilus/placeholders/mission2.png" />
-
         <div class="reqs reqs2"><div class="req police"></div><div class="req police"></div></div>
         <div class="reward">3000 $</div>
       </div>
+    
+    
+    
     
     
   
@@ -1580,10 +1812,12 @@ html, body {
         <div class="title">Zásoby na párty</div>
         <div class="subtitle">Mise</div>
         <img class="ilus" src="http://localhost:8080/ilus/placeholders/mission2.png" />
-
         <div class="reqs reqs2"><div class="req pistol"></div><div class="req pistol"></div></div>
         <div class="reward">3000 $</div>
       </div>
+    
+    
+    
     
     
   
@@ -1594,10 +1828,12 @@ html, body {
         <div class="title">Zlikviduj důkazy</div>
         <div class="subtitle">Mise</div>
         <img class="ilus" src="http://localhost:8080/ilus/placeholders/mission2.png" />
-
         <div class="reqs reqs2"><div class="req speed"></div><div class="req police"></div></div>
         <div class="reward">3000 $</div>
       </div>
+    
+    
+    
     
     
   
@@ -1608,10 +1844,12 @@ html, body {
         <div class="title">Lehké varování</div>
         <div class="subtitle">Mise</div>
         <img class="ilus" src="http://localhost:8080/ilus/placeholders/mission2.png" />
-
         <div class="reqs reqs2"><div class="req speed"></div><div class="req pistol"></div></div>
         <div class="reward">3000 $</div>
       </div>
+    
+    
+    
     
     
   
@@ -1622,10 +1860,12 @@ html, body {
         <div class="title">Falešné otisky</div>
         <div class="subtitle">Mise</div>
         <img class="ilus" src="http://localhost:8080/ilus/placeholders/mission2.png" />
-
         <div class="reqs reqs2"><div class="req police"></div><div class="req pistol"></div></div>
         <div class="reward">3000 $</div>
       </div>
+    
+    
+    
     
     
   
@@ -1636,10 +1876,12 @@ html, body {
         <div class="title">Na šéfa se netroubí!</div>
         <div class="subtitle">Mise</div>
         <img class="ilus" src="http://localhost:8080/ilus/placeholders/mission2.png" />
-
         <div class="reqs reqs2"><div class="req speed"></div><div class="req explosion"></div></div>
         <div class="reward">3000 $</div>
       </div>
+    
+    
+    
     
     
   
@@ -1650,10 +1892,12 @@ html, body {
         <div class="title">Drzý policajt</div>
         <div class="subtitle">Mise</div>
         <img class="ilus" src="http://localhost:8080/ilus/placeholders/mission2.png" />
-
         <div class="reqs reqs2"><div class="req police"></div><div class="req explosion"></div></div>
         <div class="reward">3000 $</div>
       </div>
+    
+    
+    
     
     
   
@@ -1664,10 +1908,12 @@ html, body {
         <div class="title">Pořádná blyštivá bouchačka</div>
         <div class="subtitle">Mise</div>
         <img class="ilus" src="http://localhost:8080/ilus/placeholders/mission2.png" />
-
         <div class="reqs reqs2"><div class="req pistol"></div><div class="req explosion"></div></div>
         <div class="reward">3000 $</div>
       </div>
+    
+    
+    
     
     
   
@@ -1678,10 +1924,12 @@ html, body {
         <div class="title">Boss chce víc pizzy</div>
         <div class="subtitle">Mise</div>
         <img class="ilus" src="http://localhost:8080/ilus/placeholders/mission2.png" />
-
         <div class="reqs reqs3"><div class="req speed"></div><div class="req speed"></div><div class="req speed"></div></div>
         <div class="reward">4000 $</div>
       </div>
+    
+    
+    
     
     
   
@@ -1692,10 +1940,12 @@ html, body {
         <div class="title">Policejní gang</div>
         <div class="subtitle">Mise</div>
         <img class="ilus" src="http://localhost:8080/ilus/placeholders/mission2.png" />
-
         <div class="reqs reqs3"><div class="req police"></div><div class="req police"></div><div class="req police"></div></div>
         <div class="reward">4000 $</div>
       </div>
+    
+    
+    
     
     
   
@@ -1706,10 +1956,12 @@ html, body {
         <div class="title">Zásoby na pořádnou párty</div>
         <div class="subtitle">Mise</div>
         <img class="ilus" src="http://localhost:8080/ilus/placeholders/mission2.png" />
-
         <div class="reqs reqs3"><div class="req pistol"></div><div class="req pistol"></div><div class="req pistol"></div></div>
         <div class="reward">4000 $</div>
       </div>
+    
+    
+    
     
     
   
@@ -1720,10 +1972,12 @@ html, body {
         <div class="title">Ukradni důkazy</div>
         <div class="subtitle">Mise</div>
         <img class="ilus" src="http://localhost:8080/ilus/placeholders/mission2.png" />
-
         <div class="reqs reqs3"><div class="req speed"></div><div class="req speed"></div><div class="req police"></div></div>
         <div class="reward">4000 $</div>
       </div>
+    
+    
+    
     
     
   
@@ -1734,10 +1988,12 @@ html, body {
         <div class="title">Eskort zabijáka</div>
         <div class="subtitle">Mise</div>
         <img class="ilus" src="http://localhost:8080/ilus/placeholders/mission2.png" />
-
         <div class="reqs reqs3"><div class="req speed"></div><div class="req speed"></div><div class="req pistol"></div></div>
         <div class="reward">4000 $</div>
       </div>
+    
+    
+    
     
     
   
@@ -1748,10 +2004,12 @@ html, body {
         <div class="title">Nečekaná odplata</div>
         <div class="subtitle">Mise</div>
         <img class="ilus" src="http://localhost:8080/ilus/placeholders/mission2.png" />
-
         <div class="reqs reqs3"><div class="req speed"></div><div class="req speed"></div><div class="req explosion"></div></div>
         <div class="reward">4000 $</div>
       </div>
+    
+    
+    
     
     
   
@@ -1762,10 +2020,12 @@ html, body {
         <div class="title">Zabavení střeliva</div>
         <div class="subtitle">Mise</div>
         <img class="ilus" src="http://localhost:8080/ilus/placeholders/mission2.png" />
-
         <div class="reqs reqs3"><div class="req police"></div><div class="req police"></div><div class="req pistol"></div></div>
         <div class="reward">4000 $</div>
       </div>
+    
+    
+    
     
     
   
@@ -1776,10 +2036,12 @@ html, body {
         <div class="title">Potřebujem do novin</div>
         <div class="subtitle">Mise</div>
         <img class="ilus" src="http://localhost:8080/ilus/placeholders/mission2.png" />
-
         <div class="reqs reqs3"><div class="req police"></div><div class="req police"></div><div class="req explosion"></div></div>
         <div class="reward">4000 $</div>
       </div>
+    
+    
+    
     
     
   
@@ -1790,10 +2052,12 @@ html, body {
         <div class="title">Pizza byla otrávena!</div>
         <div class="subtitle">Mise</div>
         <img class="ilus" src="http://localhost:8080/ilus/placeholders/mission2.png" />
-
         <div class="reqs reqs4"><div class="req speed"></div><div class="req speed"></div><div class="req speed"></div><div class="req speed"></div></div>
         <div class="reward">5000 $</div>
       </div>
+    
+    
+    
     
     
   
@@ -1804,10 +2068,12 @@ html, body {
         <div class="title">Nejlepší honička</div>
         <div class="subtitle">Mise</div>
         <img class="ilus" src="http://localhost:8080/ilus/placeholders/mission2.png" />
-
         <div class="reqs reqs4"><div class="req police"></div><div class="req police"></div><div class="req police"></div><div class="req police"></div></div>
         <div class="reward">5000 $</div>
       </div>
+    
+    
+    
     
     
   
@@ -1818,10 +2084,12 @@ html, body {
         <div class="title">Brutální přestřelka</div>
         <div class="subtitle">Mise</div>
         <img class="ilus" src="http://localhost:8080/ilus/placeholders/mission2.png" />
-
         <div class="reqs reqs4"><div class="req pistol"></div><div class="req pistol"></div><div class="req pistol"></div><div class="req pistol"></div></div>
         <div class="reward">5000 $</div>
       </div>
+    
+    
+    
     
     
   
@@ -1832,10 +2100,12 @@ html, body {
         <div class="title">Vyřizování účtů</div>
         <div class="subtitle">Mise</div>
         <img class="ilus" src="http://localhost:8080/ilus/placeholders/mission2.png" />
-
         <div class="reqs reqs4"><div class="req speed"></div><div class="req speed"></div><div class="req police"></div><div class="req police"></div></div>
         <div class="reward">5000 $</div>
       </div>
+    
+    
+    
     
     
   
@@ -1846,10 +2116,12 @@ html, body {
         <div class="title">Žhavé zboží</div>
         <div class="subtitle">Mise</div>
         <img class="ilus" src="http://localhost:8080/ilus/placeholders/mission2.png" />
-
         <div class="reqs reqs4"><div class="req speed"></div><div class="req speed"></div><div class="req pistol"></div><div class="req pistol"></div></div>
         <div class="reward">5000 $</div>
       </div>
+    
+    
+    
     
     
   
@@ -1860,10 +2132,12 @@ html, body {
         <div class="title">Žhavé výstřely</div>
         <div class="subtitle">Mise</div>
         <img class="ilus" src="http://localhost:8080/ilus/placeholders/mission2.png" />
-
         <div class="reqs reqs4"><div class="req police"></div><div class="req police"></div><div class="req pistol"></div><div class="req pistol"></div></div>
         <div class="reward">5000 $</div>
       </div>
+    
+    
+    
     
     
   
@@ -1874,10 +2148,12 @@ html, body {
         <div class="title">Poselství ze záhrobí</div>
         <div class="subtitle">Mise</div>
         <img class="ilus" src="http://localhost:8080/ilus/placeholders/mission2.png" />
-
         <div class="reqs reqs4"><div class="req speed"></div><div class="req speed"></div><div class="req explosion"></div><div class="req explosion"></div></div>
         <div class="reward">5000 $</div>
       </div>
+    
+    
+    
     
     
   
@@ -1888,10 +2164,12 @@ html, body {
         <div class="title">Bankovní prácička</div>
         <div class="subtitle">Mise</div>
         <img class="ilus" src="http://localhost:8080/ilus/placeholders/mission2.png" />
-
         <div class="reqs reqs5"><div class="req speed"></div><div class="req speed"></div><div class="req police"></div><div class="req police"></div><div class="req pistol"></div></div>
         <div class="reward">6000 $</div>
       </div>
+    
+    
+    
     
     
   
@@ -1902,10 +2180,12 @@ html, body {
         <div class="title">Vyčištění rajónu</div>
         <div class="subtitle">Mise</div>
         <img class="ilus" src="http://localhost:8080/ilus/placeholders/mission2.png" />
-
         <div class="reqs reqs5"><div class="req police"></div><div class="req police"></div><div class="req pistol"></div><div class="req pistol"></div><div class="req explosion"></div></div>
         <div class="reward">6000 $</div>
       </div>
+    
+    
+    
     
     
   
@@ -1916,10 +2196,12 @@ html, body {
         <div class="title">Dej mu za vyučenou</div>
         <div class="subtitle">Mise</div>
         <img class="ilus" src="http://localhost:8080/ilus/placeholders/mission2.png" />
-
         <div class="reqs reqs5"><div class="req speed"></div><div class="req speed"></div><div class="req pistol"></div><div class="req pistol"></div><div class="req explosion"></div></div>
         <div class="reward">6000 $</div>
       </div>
+    
+    
+    
     
     
   
@@ -1930,10 +2212,12 @@ html, body {
         <div class="title">Šéf byl uražen!</div>
         <div class="subtitle">Mise</div>
         <img class="ilus" src="http://localhost:8080/ilus/placeholders/mission2.png" />
-
         <div class="reqs reqs5"><div class="req speed"></div><div class="req police"></div><div class="req pistol"></div><div class="req explosion"></div><div class="req explosion"></div></div>
         <div class="reward">6000 $</div>
       </div>
+    
+    
+    
     
     
   
@@ -1944,10 +2228,12 @@ html, body {
         <div class="title">Šéf se zlobí!</div>
         <div class="subtitle">Mise</div>
         <img class="ilus" src="http://localhost:8080/ilus/placeholders/mission2.png" />
-
         <div class="reqs reqs5"><div class="req speed"></div><div class="req police"></div><div class="req pistol"></div><div class="req explosion"></div><div class="req explosion"></div></div>
         <div class="reward">6000 $</div>
       </div>
+    
+    
+    
     
     
   
@@ -1958,10 +2244,12 @@ html, body {
         <div class="title">Královský diamant</div>
         <div class="subtitle">Mise</div>
         <img class="ilus" src="http://localhost:8080/ilus/placeholders/mission2.png" />
-
         <div class="reqs reqs6"><div class="req speed"></div><div class="req speed"></div><div class="req police"></div><div class="req police"></div><div class="req pistol"></div><div class="req pistol"></div></div>
         <div class="reward">7000 $</div>
       </div>
+    
+    
+    
     
     
   
@@ -1972,10 +2260,12 @@ html, body {
         <div class="title">Velká vlaková loupež</div>
         <div class="subtitle">Mise</div>
         <img class="ilus" src="http://localhost:8080/ilus/placeholders/mission2.png" />
-
         <div class="reqs reqs6"><div class="req speed"></div><div class="req speed"></div><div class="req police"></div><div class="req police"></div><div class="req explosion"></div><div class="req explosion"></div></div>
         <div class="reward">7000 $</div>
       </div>
+    
+    
+    
     
     
   
@@ -1986,10 +2276,12 @@ html, body {
         <div class="title">Poklad velkého šéfa</div>
         <div class="subtitle">Mise</div>
         <img class="ilus" src="http://localhost:8080/ilus/placeholders/mission2.png" />
-
         <div class="reqs reqs6"><div class="req speed"></div><div class="req speed"></div><div class="req pistol"></div><div class="req pistol"></div><div class="req explosion"></div><div class="req explosion"></div></div>
         <div class="reward">7000 $</div>
       </div>
+    
+    
+    
     
     
   
@@ -2000,10 +2292,12 @@ html, body {
         <div class="title">Šperky starostovy manželky</div>
         <div class="subtitle">Mise</div>
         <img class="ilus" src="http://localhost:8080/ilus/placeholders/mission2.png" />
-
         <div class="reqs reqs6"><div class="req police"></div><div class="req police"></div><div class="req pistol"></div><div class="req pistol"></div><div class="req explosion"></div><div class="req explosion"></div></div>
         <div class="reward">7000 $</div>
       </div>
+    
+    
+    
     
     
   
@@ -2014,218 +2308,320 @@ html, body {
         <div class="title">Policejní trezor</div>
         <div class="subtitle">Mise</div>
         <img class="ilus" src="http://localhost:8080/ilus/placeholders/mission2.png" />
-
         <div class="reqs reqs6"><div class="req speed"></div><div class="req police"></div><div class="req police"></div><div class="req police"></div><div class="req pistol"></div><div class="req explosion"></div></div>
         <div class="reward">7000 $</div>
       </div>
     
     
+    
+    
+    
   
     
     
+    
+    
+    
+    
+      <div class="pagebreak">
+      </div>
     
   
     
     
     
 
-      <div class="card action action">
+      <div class="card action mission">
         <div class="frame"></div>
         <div class="title">Skautuj</div>
-        <div class="ilus" style="background-image: url('http://localhost:8080/actions/scout.png');" /></div>
-        <div class="text scout">Vylož před sebe auto z vrchu balíčku.</div>
+        <div class="subtitle">akce</div>
+        <img class="ilus scout" src="http://localhost:8080/actions/scout.png" />
+        <div class="text scout">Do svého rajónu před sebe vylož auto z vrchu balíčku.</div>
       </div>
+    
+    
+    
     
   
     
     
     
 
-      <div class="card action action">
+      <div class="card action mission">
         <div class="frame"></div>
         <div class="title">Kraď!</div>
-        <div class="ilus" style="background-image: url('http://localhost:8080/actions/steal.png');" /></div>
-        <div class="text steal">Nasedni do jakéhokoliv volného auta. Otoč vrchní auto z balíčku pro určení počtu pronásledujících policajtů. U auta před soupeřem přičti jednoho navíc.</div>
+        <div class="subtitle">akce</div>
+        <img class="ilus steal" src="http://localhost:8080/actions/steal.png" />
+        <div class="text steal">Nasedni do jakéhokoliv volného auta. Podle vrchního auta z balíčku urči, kolik tě začne pronásledovat policajtů. U auta ze soupeřova rajónu přičti jednoho navíc.</div>
       </div>
+    
+    
+    
     
   
     
     
     
 
-      <div class="card action action">
+      <div class="card action mission">
         <div class="frame"></div>
         <div class="title">Zbroj</div>
-        <div class="ilus" style="background-image: url('http://localhost:8080/actions/arm.png');" /></div>
-        <div class="text arm">Získáváš zbraň. Pokud tě nikdo nepronásleduje, získáváš jednu navíc (max. 5).</div>
+        <div class="subtitle">akce</div>
+        <img class="ilus arm" src="http://localhost:8080/actions/arm.png" />
+        <div class="text arm">Získáváš zbraň. Pokud tě nepronásledují žádní policajti, získáváš druhou navíc (max. 5).</div>
       </div>
+    
+    
+    
     
   
     
     
     
 
-      <div class="card action action">
+      <div class="card action mission">
         <div class="frame"></div>
         <div class="title">Jeď!</div>
-        <div class="ilus" style="background-image: url('http://localhost:8080/actions/go.png');" /></div>
-        <div class="text go">Získáváš tolik rychlosti, kolik je zrychlení auta (max. podle auta). Můžeš bourat – hoď kostkami dle rychlosti. Za každé přehození odolnosti bouraného obdrží poškození. Za každé 2 jedno ty. Při poškození obdržíš policajta.</div>
+        <div class="subtitle">akce</div>
+        <img class="ilus go" src="http://localhost:8080/actions/go.png" />
+        <div class="text go">V autě: Získáváš rychlost dle zrychlení. Poté můžeš bourat – hoď kostkami dle rychlosti. Za každé přehození odolnosti bouraného obdrží poškození, pokud neujede.</div>
       </div>
+    
+    
+    
     
   
     
     
     
 
-      <div class="card action action">
+      <div class="card action mission">
         <div class="frame"></div>
         <div class="title">Střílej!</div>
-        <div class="ilus" style="background-image: url('http://localhost:8080/actions/shoot.png');" /></div>
-        <div class="text shoot">Vyber auto. Za každou použitou zbraň obdrží poškození a ty policajta.</div>
+        <div class="subtitle">akce</div>
+        <img class="ilus shoot" src="http://localhost:8080/actions/shoot.png" />
+        <div class="text shoot">Vyber auto. Za každou použitou zbraň obdrží poškození a ty policajta, pokud neujede.</div>
       </div>
+    
+    
+    
     
   
     
     
     
-
-      <div class="card action action">
+    
+      <div class="card mission special">
         <div class="frame"></div>
-        <div class="title"></div>
-        <div class="ilus" style="background-image: url('http://localhost:8080/actions/.png');" /></div>
-        <div class="text "></div>
+        <div class="xmasbg"></div>
+        <div class="title">Veselé Vánoce!</div>
+        <div class="subtitle">speciální akce</div>
+        <img class="ilus christmas" src="http://localhost:8080/actions/christmas.png" />
+        <div class="text christmas">Do svého rajónu před sebe vylož auto z vrchu balíčku a rovnou do něj nasedni (bez policajtů).</div>
       </div>
+    
+    
     
   
     
     
     
 
-      <div class="card action action">
+      <div class="card action mission">
         <div class="frame"></div>
         <div class="title">Skautuj</div>
-        <div class="ilus" style="background-image: url('http://localhost:8080/actions/scout.png');" /></div>
-        <div class="text scout">Vylož před sebe auto z vrchu balíčku.</div>
+        <div class="subtitle">akce</div>
+        <img class="ilus scout" src="http://localhost:8080/actions/scout.png" />
+        <div class="text scout">Do svého rajónu před sebe vylož auto z vrchu balíčku.</div>
       </div>
+    
+    
+    
     
   
     
     
     
 
-      <div class="card action action">
+      <div class="card action mission">
         <div class="frame"></div>
         <div class="title">Kraď!</div>
-        <div class="ilus" style="background-image: url('http://localhost:8080/actions/steal.png');" /></div>
-        <div class="text steal">Nasedni do jakéhokoliv volného auta. Otoč vrchní auto z balíčku pro určení počtu pronásledujících policajtů. U auta před soupeřem přičti jednoho navíc.</div>
+        <div class="subtitle">akce</div>
+        <img class="ilus steal" src="http://localhost:8080/actions/steal.png" />
+        <div class="text steal">Nasedni do jakéhokoliv volného auta. Podle vrchního auta z balíčku urči, kolik tě začne pronásledovat policajtů. U auta ze soupeřova rajónu přičti jednoho navíc.</div>
       </div>
+    
+    
+    
     
   
     
     
     
 
-      <div class="card action action">
+      <div class="card action mission">
         <div class="frame"></div>
         <div class="title">Zbroj</div>
-        <div class="ilus" style="background-image: url('http://localhost:8080/actions/arm.png');" /></div>
-        <div class="text arm">Získáváš zbraň. Pokud tě nikdo nepronásleduje, získáváš jednu navíc (max. 5).</div>
+        <div class="subtitle">akce</div>
+        <img class="ilus arm" src="http://localhost:8080/actions/arm.png" />
+        <div class="text arm">Získáváš zbraň. Pokud tě nepronásledují žádní policajti, získáváš druhou navíc (max. 5).</div>
       </div>
+    
+    
+    
     
   
     
     
     
 
-      <div class="card action action">
+      <div class="card action mission">
         <div class="frame"></div>
         <div class="title">Jeď!</div>
-        <div class="ilus" style="background-image: url('http://localhost:8080/actions/go.png');" /></div>
-        <div class="text go">Získáváš tolik rychlosti, kolik je zrychlení auta (max. podle auta). Můžeš bourat – hoď kostkami dle rychlosti. Za každé přehození odolnosti bouraného obdrží poškození. Za každé 2 jedno ty. Při poškození obdržíš policajta.</div>
+        <div class="subtitle">akce</div>
+        <img class="ilus go" src="http://localhost:8080/actions/go.png" />
+        <div class="text go">V autě: Získáváš rychlost dle zrychlení. Poté můžeš bourat – hoď kostkami dle rychlosti. Za každé přehození odolnosti bouraného obdrží poškození, pokud neujede.</div>
       </div>
+    
+    
+    
     
   
     
     
     
 
-      <div class="card action action">
+      <div class="card action mission">
         <div class="frame"></div>
         <div class="title">Střílej!</div>
-        <div class="ilus" style="background-image: url('http://localhost:8080/actions/shoot.png');" /></div>
-        <div class="text shoot">Vyber auto. Za každou použitou zbraň obdrží poškození a ty policajta.</div>
+        <div class="subtitle">akce</div>
+        <img class="ilus shoot" src="http://localhost:8080/actions/shoot.png" />
+        <div class="text shoot">Vyber auto. Za každou použitou zbraň obdrží poškození a ty policajta, pokud neujede.</div>
       </div>
+    
+    
+    
     
   
     
     
     
-
-      <div class="card action action">
+    
+      <div class="card mission special">
         <div class="frame"></div>
-        <div class="title"></div>
-        <div class="ilus" style="background-image: url('http://localhost:8080/actions/.png');" /></div>
-        <div class="text "></div>
+        
+        <div class="title">Propustka z vězení</div>
+        <div class="subtitle">speciální akce</div>
+        <img class="ilus outtajail" src="http://localhost:8080/actions/outtajail.png" />
+        <div class="text outtajail">Kartu ponech vyloženou. Pokud tě chytnou policajti, místo vězení pouze odhoď tuto kartu.</div>
       </div>
+    
+    
     
   
     
     
     
 
-      <div class="card action action">
+      <div class="card action mission">
         <div class="frame"></div>
         <div class="title">Skautuj</div>
-        <div class="ilus" style="background-image: url('http://localhost:8080/actions/scout.png');" /></div>
-        <div class="text scout">Vylož před sebe auto z vrchu balíčku.</div>
+        <div class="subtitle">akce</div>
+        <img class="ilus scout" src="http://localhost:8080/actions/scout.png" />
+        <div class="text scout">Do svého rajónu před sebe vylož auto z vrchu balíčku.</div>
       </div>
+    
+    
+    
     
   
     
     
     
 
-      <div class="card action action">
+      <div class="card action mission">
         <div class="frame"></div>
         <div class="title">Kraď!</div>
-        <div class="ilus" style="background-image: url('http://localhost:8080/actions/steal.png');" /></div>
-        <div class="text steal">Nasedni do jakéhokoliv volného auta. Otoč vrchní auto z balíčku pro určení počtu pronásledujících policajtů. U auta před soupeřem přičti jednoho navíc.</div>
+        <div class="subtitle">akce</div>
+        <img class="ilus steal" src="http://localhost:8080/actions/steal.png" />
+        <div class="text steal">Nasedni do jakéhokoliv volného auta. Podle vrchního auta z balíčku urči, kolik tě začne pronásledovat policajtů. U auta ze soupeřova rajónu přičti jednoho navíc.</div>
       </div>
+    
+    
+    
     
   
     
     
     
 
-      <div class="card action action">
+      <div class="card action mission">
         <div class="frame"></div>
         <div class="title">Zbroj</div>
-        <div class="ilus" style="background-image: url('http://localhost:8080/actions/arm.png');" /></div>
-        <div class="text arm">Získáváš zbraň. Pokud tě nikdo nepronásleduje, získáváš jednu navíc (max. 5).</div>
+        <div class="subtitle">akce</div>
+        <img class="ilus arm" src="http://localhost:8080/actions/arm.png" />
+        <div class="text arm">Získáváš zbraň. Pokud tě nepronásledují žádní policajti, získáváš druhou navíc (max. 5).</div>
       </div>
+    
+    
+    
     
   
     
     
     
 
-      <div class="card action action">
+      <div class="card action mission">
         <div class="frame"></div>
         <div class="title">Jeď!</div>
-        <div class="ilus" style="background-image: url('http://localhost:8080/actions/go.png');" /></div>
-        <div class="text go">Získáváš tolik rychlosti, kolik je zrychlení auta (max. podle auta). Můžeš bourat – hoď kostkami dle rychlosti. Za každé přehození odolnosti bouraného obdrží poškození. Za každé 2 jedno ty. Při poškození obdržíš policajta.</div>
+        <div class="subtitle">akce</div>
+        <img class="ilus go" src="http://localhost:8080/actions/go.png" />
+        <div class="text go">V autě: Získáváš rychlost dle zrychlení. Poté můžeš bourat – hoď kostkami dle rychlosti. Za každé přehození odolnosti bouraného obdrží poškození, pokud neujede.</div>
       </div>
+    
+    
+    
     
   
     
     
     
 
-      <div class="card action action">
+      <div class="card action mission">
         <div class="frame"></div>
         <div class="title">Střílej!</div>
-        <div class="ilus" style="background-image: url('http://localhost:8080/actions/shoot.png');" /></div>
-        <div class="text shoot">Vyber auto. Za každou použitou zbraň obdrží poškození a ty policajta.</div>
+        <div class="subtitle">akce</div>
+        <img class="ilus shoot" src="http://localhost:8080/actions/shoot.png" />
+        <div class="text shoot">Vyber auto. Za každou použitou zbraň obdrží poškození a ty policajta, pokud neujede.</div>
+      </div>
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      <div class="card mission special">
+        <div class="frame"></div>
+        
+        <div class="title">Tajný sklad</div>
+        <div class="subtitle">speciální akce</div>
+        <img class="ilus fullarm" src="http://localhost:8080/actions/fullarm.png" />
+        <div class="text fullarm">Získáváš plný počet zbraní.</div>
+      </div>
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+      <div class="pagebreak">
       </div>
     
   
@@ -2233,1027 +2629,2827 @@ html, body {
     
     
 
-      <div class="card action action">
+      <div class="card action mission">
         <div class="frame"></div>
-        <div class="title"></div>
-        <div class="ilus" style="background-image: url('http://localhost:8080/actions/.png');" /></div>
-        <div class="text "></div>
+        <div class="title">Skautuj</div>
+        <div class="subtitle">akce</div>
+        <img class="ilus scout" src="http://localhost:8080/actions/scout.png" />
+        <div class="text scout">Do svého rajónu před sebe vylož auto z vrchu balíčku.</div>
+      </div>
+    
+    
+    
+    
+  
+    
+    
+    
+
+      <div class="card action mission">
+        <div class="frame"></div>
+        <div class="title">Kraď!</div>
+        <div class="subtitle">akce</div>
+        <img class="ilus steal" src="http://localhost:8080/actions/steal.png" />
+        <div class="text steal">Nasedni do jakéhokoliv volného auta. Podle vrchního auta z balíčku urči, kolik tě začne pronásledovat policajtů. U auta ze soupeřova rajónu přičti jednoho navíc.</div>
+      </div>
+    
+    
+    
+    
+  
+    
+    
+    
+
+      <div class="card action mission">
+        <div class="frame"></div>
+        <div class="title">Zbroj</div>
+        <div class="subtitle">akce</div>
+        <img class="ilus arm" src="http://localhost:8080/actions/arm.png" />
+        <div class="text arm">Získáváš zbraň. Pokud tě nepronásledují žádní policajti, získáváš druhou navíc (max. 5).</div>
+      </div>
+    
+    
+    
+    
+  
+    
+    
+    
+
+      <div class="card action mission">
+        <div class="frame"></div>
+        <div class="title">Jeď!</div>
+        <div class="subtitle">akce</div>
+        <img class="ilus go" src="http://localhost:8080/actions/go.png" />
+        <div class="text go">V autě: Získáváš rychlost dle zrychlení. Poté můžeš bourat – hoď kostkami dle rychlosti. Za každé přehození odolnosti bouraného obdrží poškození, pokud neujede.</div>
+      </div>
+    
+    
+    
+    
+  
+    
+    
+    
+
+      <div class="card action mission">
+        <div class="frame"></div>
+        <div class="title">Střílej!</div>
+        <div class="subtitle">akce</div>
+        <img class="ilus shoot" src="http://localhost:8080/actions/shoot.png" />
+        <div class="text shoot">Vyber auto. Za každou použitou zbraň obdrží poškození a ty policajta, pokud neujede.</div>
+      </div>
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      <div class="card mission special">
+        <div class="frame"></div>
+        
+        <div class="title">Falešné papíry</div>
+        <div class="subtitle">speciální akce</div>
+        <img class="ilus fakeid" src="http://localhost:8080/actions/fakeid.png" />
+        <div class="text fakeid">Odstraň všechny policajty, kteří tě pronásledují.</div>
+      </div>
+    
+    
+    
+  
+    
+    
+    
+
+      <div class="card action mission">
+        <div class="frame"></div>
+        <div class="title">Skautuj</div>
+        <div class="subtitle">akce</div>
+        <img class="ilus scout" src="http://localhost:8080/actions/scout.png" />
+        <div class="text scout">Do svého rajónu před sebe vylož auto z vrchu balíčku.</div>
+      </div>
+    
+    
+    
+    
+  
+    
+    
+    
+
+      <div class="card action mission">
+        <div class="frame"></div>
+        <div class="title">Kraď!</div>
+        <div class="subtitle">akce</div>
+        <img class="ilus steal" src="http://localhost:8080/actions/steal.png" />
+        <div class="text steal">Nasedni do jakéhokoliv volného auta. Podle vrchního auta z balíčku urči, kolik tě začne pronásledovat policajtů. U auta ze soupeřova rajónu přičti jednoho navíc.</div>
+      </div>
+    
+    
+    
+    
+  
+    
+    
+    
+
+      <div class="card action mission">
+        <div class="frame"></div>
+        <div class="title">Zbroj</div>
+        <div class="subtitle">akce</div>
+        <img class="ilus arm" src="http://localhost:8080/actions/arm.png" />
+        <div class="text arm">Získáváš zbraň. Pokud tě nepronásledují žádní policajti, získáváš druhou navíc (max. 5).</div>
+      </div>
+    
+    
+    
+    
+  
+    
+    
+    
+
+      <div class="card action mission">
+        <div class="frame"></div>
+        <div class="title">Jeď!</div>
+        <div class="subtitle">akce</div>
+        <img class="ilus go" src="http://localhost:8080/actions/go.png" />
+        <div class="text go">V autě: Získáváš rychlost dle zrychlení. Poté můžeš bourat – hoď kostkami dle rychlosti. Za každé přehození odolnosti bouraného obdrží poškození, pokud neujede.</div>
+      </div>
+    
+    
+    
+    
+  
+    
+    
+    
+
+      <div class="card action mission">
+        <div class="frame"></div>
+        <div class="title">Střílej!</div>
+        <div class="subtitle">akce</div>
+        <img class="ilus shoot" src="http://localhost:8080/actions/shoot.png" />
+        <div class="text shoot">Vyber auto. Za každou použitou zbraň obdrží poškození a ty policajta, pokud neujede.</div>
+      </div>
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      <div class="card mission special">
+        <div class="frame"></div>
+        
+        <div class="title">Propustka z vězení</div>
+        <div class="subtitle">speciální akce</div>
+        <img class="ilus outtajail" src="http://localhost:8080/actions/outtajail.png" />
+        <div class="text outtajail">Kartu ponech vyloženou. Pokud tě chytnou policajti, místo vězení pouze odhoď tuto kartu.</div>
+      </div>
+    
+    
+    
+  
+    
+    
+    
+
+      <div class="card action mission">
+        <div class="frame"></div>
+        <div class="title">Skautuj</div>
+        <div class="subtitle">akce</div>
+        <img class="ilus scout" src="http://localhost:8080/actions/scout.png" />
+        <div class="text scout">Do svého rajónu před sebe vylož auto z vrchu balíčku.</div>
+      </div>
+    
+    
+    
+    
+  
+    
+    
+    
+
+      <div class="card action mission">
+        <div class="frame"></div>
+        <div class="title">Kraď!</div>
+        <div class="subtitle">akce</div>
+        <img class="ilus steal" src="http://localhost:8080/actions/steal.png" />
+        <div class="text steal">Nasedni do jakéhokoliv volného auta. Podle vrchního auta z balíčku urči, kolik tě začne pronásledovat policajtů. U auta ze soupeřova rajónu přičti jednoho navíc.</div>
+      </div>
+    
+    
+    
+    
+  
+    
+    
+    
+
+      <div class="card action mission">
+        <div class="frame"></div>
+        <div class="title">Zbroj</div>
+        <div class="subtitle">akce</div>
+        <img class="ilus arm" src="http://localhost:8080/actions/arm.png" />
+        <div class="text arm">Získáváš zbraň. Pokud tě nepronásledují žádní policajti, získáváš druhou navíc (max. 5).</div>
+      </div>
+    
+    
+    
+    
+  
+    
+    
+    
+
+      <div class="card action mission">
+        <div class="frame"></div>
+        <div class="title">Jeď!</div>
+        <div class="subtitle">akce</div>
+        <img class="ilus go" src="http://localhost:8080/actions/go.png" />
+        <div class="text go">V autě: Získáváš rychlost dle zrychlení. Poté můžeš bourat – hoď kostkami dle rychlosti. Za každé přehození odolnosti bouraného obdrží poškození, pokud neujede.</div>
+      </div>
+    
+    
+    
+    
+  
+    
+    
+    
+
+      <div class="card action mission">
+        <div class="frame"></div>
+        <div class="title">Střílej!</div>
+        <div class="subtitle">akce</div>
+        <img class="ilus shoot" src="http://localhost:8080/actions/shoot.png" />
+        <div class="text shoot">Vyber auto. Za každou použitou zbraň obdrží poškození a ty policajta, pokud neujede.</div>
+      </div>
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      <div class="card mission special">
+        <div class="frame"></div>
+        
+        <div class="title">Tajný sklad</div>
+        <div class="subtitle">speciální akce</div>
+        <img class="ilus fullarm" src="http://localhost:8080/actions/fullarm.png" />
+        <div class="text fullarm">Získáváš plný počet zbraní.</div>
+      </div>
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+      <div class="pagebreak">
       </div>
     
   
     
     
     
+    
+    
+      <div class="token pistol">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token pistol">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token pistol">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token pistol">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token pistol">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token pistol">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token pistol">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token pistol">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token pistol">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token pistol">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token pistol">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token pistol">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token pistol">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token pistol">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token pistol">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token pistol">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token pistol">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token pistol">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token pistol">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token pistol">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token pistol">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token pistol">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token pistol">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token pistol">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token pistol">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token speed">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token speed">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token speed">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token speed">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token speed">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token speed">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token speed">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token speed">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token speed">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token speed">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token speed">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token speed">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token speed">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token speed">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token speed">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token speed">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token speed">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token speed">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token speed">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token speed">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token speed">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token speed">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token speed">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token speed">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token speed">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token police">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token police">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token police">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token police">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token police">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token police">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token police">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token police">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token police">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token police">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token police">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token police">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token police">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token police">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token police">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token police">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token police">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token police">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token police">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token police">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token police">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token police">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token police">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token police">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token police">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token explosion">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token explosion">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token explosion">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token explosion">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token explosion">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token explosion">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token explosion">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token explosion">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token explosion">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token explosion">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token explosion">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token explosion">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token explosion">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token explosion">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token explosion">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token explosion">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token explosion">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token explosion">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token explosion">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token explosion">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token explosion">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token explosion">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token explosion">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token explosion">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token explosion">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token explosion">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token explosion">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token explosion">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token explosion">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token explosion">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token explosion">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token explosion">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token explosion">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token explosion">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token explosion">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token explosion">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token explosion">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token explosion">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token explosion">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token explosion">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token explosion">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token explosion">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token explosion">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token explosion">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token explosion">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token explosion">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token explosion">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token explosion">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token explosion">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token explosion">
+      </div>
+    
+    
+  
+    
+    
+    
+    
+    
+      <div class="token explosion">
+      </div>
+    
+    
   
     
     
     
-  
     
     
     
+      <div class="pagebreak">
+      </div>
+    
   
     
     
     
-  
     
     
+      <div class="token pistol">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token pistol">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token pistol">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token pistol">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token pistol">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token pistol">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token pistol">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token pistol">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token pistol">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token pistol">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token pistol">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token pistol">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token pistol">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token pistol">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token speed">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token speed">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token speed">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token pistol">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token pistol">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token pistol">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token pistol">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token pistol">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token pistol">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token pistol">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token pistol">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token pistol">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token pistol">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token pistol">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token speed">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token speed">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token speed">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token speed">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token speed">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token speed">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token speed">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token speed">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token speed">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token speed">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token speed">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token speed">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token speed">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token speed">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token police">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token police">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token police">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token police">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token police">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token police">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token speed">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token speed">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token speed">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token speed">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token speed">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token speed">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token speed">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token speed">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token police">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token police">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token police">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token police">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token police">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token police">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token police">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token police">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token police">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token police">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token police">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token police">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token police">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token police">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token explosion">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token explosion">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token explosion">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token explosion">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token explosion">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token explosion">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token explosion">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token explosion">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token explosion">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token police">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token police">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token police">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token police">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token police">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token explosion">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token explosion">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token explosion">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token explosion">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token explosion">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token explosion">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token explosion">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token explosion">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token explosion">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token explosion">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token explosion">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token explosion">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token explosion">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token explosion">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token explosion">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token explosion">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token explosion">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token explosion">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token explosion">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token explosion">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token explosion">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token explosion">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token explosion">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token explosion">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token explosion">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token explosion">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token explosion">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token explosion">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token explosion">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token explosion">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token explosion">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token explosion">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token explosion">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token explosion">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token explosion">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token explosion">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token explosion">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token explosion">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token explosion">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token explosion">
+      </div>
     
+    
   
     
     
     
-  
     
     
+      <div class="token explosion">
+      </div>
     
+    
   
+    
+    
+    
+    
     
+      <div class="token explosion">
+      </div>
     
     
   
