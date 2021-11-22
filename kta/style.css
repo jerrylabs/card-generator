@@ -150,7 +150,7 @@ html, body {
   height: 1cm;
   border-radius: 0.5cm;
   background: transparent none center center no-repeat;
-  background-size: 0.8cm;
+  background-size: 0.75cm;
   border: 0.5mm solid black;
   margin: 0.5mm;
 }
@@ -171,6 +171,11 @@ html, body {
 .token.speed     { background-color: #b3ffb4; background-image: url(http://localhost:8080/symbols/tire.png); }
 .token.police    { background-color: #adf6ff; background-image: url(http://localhost:8080/symbols/policehead.png); background-size: 1cm; }
 .token.explosion { background-color: #ffc0c0; background-image: url(http://localhost:8080/symbols/explosion.png); }
+
+/* special rule for profi round tokens */
+/* .token:nth-of-type(28n+12) { margin-left: 1cm; }
+.token:nth-of-type(28n-30) { margin-left: -1cm; }
+.token { margin-right: 1mm; } */
 
 .action .title { font-size: 30px; font-weight: bold; }
 .action .subtitle { padding: 0; }

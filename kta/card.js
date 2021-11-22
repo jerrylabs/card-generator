@@ -6,9 +6,8 @@ module.exports = (cardData) => {
   if (cardData.title.length >= 20) {
     titleLong = ' extralong';
   }
-  return `
-    ${cardData.type == 'car'
-      ? `
+  if (cardData.type == 'car') {
+    return `
       <div class="card ${cardData.type} ${cardData.level}">
         <div class="frame"></div>
         <div class="title${titleLong}"><span>${cardData.title}</span></div>
@@ -22,12 +21,12 @@ module.exports = (cardData) => {
           <div class="stat grip">${cardData.endurance}</div>
           <div class="stat grip shadow">${cardData.endurance}</div>
           <div class="stat max">${cardData.speed}</div>
-          </div>
         </div>
-      ` : ``
-    }
-    ${cardData.type == 'mission'
-      ? `
+      </div>
+    `;
+  }
+  if (cardData.type == 'mission') {
+    return `
       <div class="card ${cardData.type} m${cardData.level}">
         <div class="frame"></div>
         <div class="title">${cardData.title}</div>
@@ -43,43 +42,41 @@ module.exports = (cardData) => {
         }).join('')}</div>
         <div class="reward">${cardData.level} $</div>
       </div>
-    `: ``
-    }
-    ${cardData.type == 'action'
-      ? `
-
-      <div class="card ${cardData.type} mission">
-        <div class="frame"></div>
-        <div class="title">${cardData.title}</div>
-        <div class="subtitle">akce</div>
-        <img class="ilus ${cardData.ilus}" src="http://localhost:8080/actions/${cardData.ilus}.png" />
-        <div class="text ${cardData.ilus}">${cardData.requirements}</div>
-      </div>
-    `: ``
-    }
-    ${cardData.type == 'special'
-      ? `
-      <div class="card mission special">
-        <div class="frame"></div>
-        ${cardData.ilus === 'christmas' ? '<div class="xmasbg"></div>' : ''}
-        <div class="title">${cardData.title}</div>
-        <div class="subtitle">speciální akce</div>
-        <img class="ilus ${cardData.ilus}" src="http://localhost:8080/actions/${cardData.ilus}.png" />
-        <div class="text ${cardData.ilus}">${cardData.requirements}</div>
-      </div>
-    `: ``
-    }
-    ${cardData.type == 'token'
-      ? `
+    `;
+  }
+  // if (cardData.type == 'action') {
+  //   return `
+  //     <div class="card ${cardData.type} mission">
+  //       <div class="frame"></div>
+  //       <div class="title">${cardData.title}</div>
+  //       <div class="subtitle">akce</div>
+  //       <img class="ilus ${cardData.ilus}" src="http://localhost:8080/actions/${cardData.ilus}.png" />
+  //       <div class="text ${cardData.ilus}">${cardData.requirements.replace('~', '&nbsp;')}</div>
+  //     </div>
+  //   `;
+  // }
+  // if (cardData.type == 'special') {
+  //   return `
+  //     <div class="card mission special">
+  //       <div class="frame"></div>
+  //       ${cardData.ilus === 'christmas' ? '<div class="xmasbg"></div>' : ''}
+  //       <div class="title">${cardData.title}</div>
+  //       <div class="subtitle">speciální akce</div>
+  //       <img class="ilus ${cardData.ilus}" src="http://localhost:8080/actions/${cardData.ilus}.png" />
+  //       <div class="text ${cardData.ilus}">${cardData.requirements.replace('~', '&nbsp;')}</div>
+  //     </div>
+  //   `;
+  // }
+  if (cardData.type == 'token') {
+    return `
       <div class="token ${cardData.level}">
       </div>
-    `: ``
-    }
-    ${cardData.type == 'pagebreak'
-      ? `
+    `;
+  }
+  if (cardData.type == 'pagebreak') {
+    return `
       <div class="pagebreak">
       </div>
-    `: ``
-    }
-  `;
+    `;
+  }
 };

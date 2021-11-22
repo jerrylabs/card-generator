@@ -110,7 +110,7 @@ const generateHtml = (cardsData, backgrounds, css, generateCardMarkup) => {
 
 
     // Create HTML file
-    fs.writeFileSync(`${process.argv[2]}.html`, htmlData, function(err) {
+    fs.writeFileSync(`${process.argv[2]}/${process.argv[2]}.html`, htmlData, function(err) {
       if(err) {
           return console.log(err);
       }
