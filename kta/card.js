@@ -44,29 +44,29 @@ module.exports = (cardData) => {
       </div>
     `;
   }
-  // if (cardData.type == 'action') {
-  //   return `
-  //     <div class="card ${cardData.type} mission">
-  //       <div class="frame"></div>
-  //       <div class="title">${cardData.title}</div>
-  //       <div class="subtitle">akce</div>
-  //       <img class="ilus ${cardData.ilus}" src="http://localhost:8080/actions/${cardData.ilus}.png" />
-  //       <div class="text ${cardData.ilus}">${cardData.requirements.replace('~', '&nbsp;')}</div>
-  //     </div>
-  //   `;
-  // }
-  // if (cardData.type == 'special') {
-  //   return `
-  //     <div class="card mission special">
-  //       <div class="frame"></div>
-  //       ${cardData.ilus === 'christmas' ? '<div class="xmasbg"></div>' : ''}
-  //       <div class="title">${cardData.title}</div>
-  //       <div class="subtitle">speciální akce</div>
-  //       <img class="ilus ${cardData.ilus}" src="http://localhost:8080/actions/${cardData.ilus}.png" />
-  //       <div class="text ${cardData.ilus}">${cardData.requirements.replace('~', '&nbsp;')}</div>
-  //     </div>
-  //   `;
-  // }
+  if (cardData.type == 'action') {
+    return `
+      <div class="card ${cardData.type} mission">
+        <div class="frame"></div>
+        <div class="title">${cardData.title}</div>
+        <div class="subtitle">akce</div>
+        <img class="ilus ${cardData.ilus}" src="http://localhost:8080/actions/${cardData.ilus}.png" />
+        <div class="text ${cardData.ilus}">${cardData.requirements.replace('~', '&nbsp;')}</div>
+      </div>
+    `;
+  }
+  if (cardData.type == 'special') {
+    return `
+      <div class="card mission special">
+        <div class="frame"></div>
+        ${cardData.ilus === 'christmas' ? '<div class="xmasbg"></div>' : ''}
+        <div class="title">${cardData.title}</div>
+        <div class="subtitle">speciální akce</div>
+        <img class="ilus ${cardData.ilus}" src="http://localhost:8080/actions/${cardData.ilus}.png" />
+        <div class="text ${cardData.ilus}">${cardData.requirements.replace('~', '&nbsp;')}</div>
+      </div>
+    `;
+  }
   if (cardData.type == 'token') {
     return `
       <div class="token ${cardData.level}">

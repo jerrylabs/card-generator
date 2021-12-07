@@ -113,7 +113,7 @@ action,Kraď!,,"Nasedni do jakéhokoliv volného auta. Podle vrchního auta z ba
 action,Zbroj,,"Získáváš zbraň. Pokud tě nepronásledují žádní policajti, získáváš druhou navíc (max. 5).",,,,arm,,
 action,Jeď!,,"V autě: Získáváš rychlost dle zrychlení. Poté můžeš bourat – hoď kostkami dle rychlosti. Za každé přehození odolnosti bouraného obdrží poškození, pokud neujede.",,,,go,,
 action,Střílej!,,"Vyber auto. Za každou použitou zbraň obdrží poškození a ty policajta, pokud neujede.",,,,shoot,,
-special,Veselé Vánoce!,,Do svého rajónu před sebe vylož auto z vrchu balíčku a rovnou do něj nasedni (bez policajtů).,,,,christmas,,
+special,Veselé Vánoce!,,Vylož místo běžné akce. Do~svého rajónu před sebe vylož auto z vrchu balíčku a rovnou do něj nasedni (bez policajtů). Přiber si 1 misi.,,,,christmas,,
 action,Skautuj,,Do svého rajónu před sebe vylož auto z~vrchu balíčku. ,,,,scout,,
 action,Kraď!,,"Nasedni do jakéhokoliv volného auta. Podle vrchního auta z balíčku urči, kolik tě začne pronásledovat policajtů. U auta ze soupeřova rajónu přičti jednoho navíc.",,,,steal,,
 action,Zbroj,,"Získáváš zbraň. Pokud tě nepronásledují žádní policajti, získáváš druhou navíc (max. 5).",,,,arm,,
