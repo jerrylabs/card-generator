@@ -11,13 +11,6 @@ shortcut = (c) => {
   }
 }
 
-const getJointMarkup = (order, rel, type) =>
-  `<img class="joint ${rel} ${order} ${type}" src="http://localhost:8080/imgs/${rel}-${type}.png" />`;
-
-const getLifeMarkup = (c, i) => `<img class="life" src="http://localhost:8080/imgs/${shortcut(c)}.png" />`;
-
-const getAttrMarkup = (c, i) => `<img class="attribute attribute-${shortcut(c)}" src="http://localhost:8080/imgs/attr-${shortcut(c)}.png" />`;
-
 const getTestMarkup = (value, lang) => {
   let markup = '';
   if (value.includes('P') || value.includes('S') || value.includes('I')){
@@ -68,6 +61,10 @@ const getFieldMarkup = (title, value, card) => {
 
     /* nazev karty */
     case 'title':
+      // animatroni maji title hardcoded, kromě gaybota - TEMP
+      if (card.type === 'animatron' && title !== 'Gaybot') {
+        break;
+      }
       markup = `<div class="${title}
         ${value.length > 32 || (card.type == 'quest' && value.length >= 17) ? ' title-long' : ''}
       ">
@@ -81,7 +78,7 @@ const getFieldMarkup = (title, value, card) => {
         markup = `<div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/png/${value}.png');"></div>`;
       } else {
         markup = `<img
-          src="http://localhost:8080/imgs/ilus/jpg/${value}.jpg"
+          src="http://localhost:8080/imgs/ilus/characters/${value}.jpg"
           class="illustration" />`;
       }
     break;
@@ -125,13 +122,16 @@ const getAnimatronMarkup = (card) => `
   <img class="joint provided bone bone3" src="http://localhost:8080/imgs/provided-bone.png">
   <img class="joint provided bone bone4" src="http://localhost:8080/imgs/provided-bone.png">
   <div class="animatron__cards">4</div>
-  ${card.image == 'zombie'
+  ${card.image == 'zombik'
     ? '<div class="animatron__reputation"><span>-2</span></div>'
     : '<img class="attribute attribute-iq" src="http://localhost:8080/imgs/attr-iq.png" />'
   }
 `
 
 module.exports = (cardData) => {
+  if (cardData.type === 'background') {
+    return '<div class="card background"></div>';
+  }
   return `<div
     class="card ${cardData.type || ''} ${cardData.type === 'quest' ? cardData.test : ''}
   ">

@@ -28,27 +28,8 @@ const generateDefaultCardMarkup = cardData => (
   }</div>`
 );
 
-const addBackSides = (cardsMarkups, bgInterval) => {
-  let cardsMarkupsWithBacks = [];
-  let count = 0;
-  cardsMarkups.map((item, i) => {
-    cardsMarkupsWithBacks.push(item);
-    count++;
-    if (count === bgInterval) {
-      for (i = 0; i < bgInterval; i++) {
-        cardsMarkupsWithBacks.push(`<div class="card background"></div>`);
-      }
-      count = 0;
-    }
-  });
-  return cardsMarkupsWithBacks;
-}
-
-const generateHtml = (cardsData, backgrounds, css, generateCardMarkup) => {
+const generateHtml = (cardsData, css, generateCardMarkup) => {
   let cardsMarkups = cardsData.map(generateCardMarkup);
-  if (backgrounds) {
-    cardsMarkups = addBackSides(cardsMarkups, backgrounds);
-  }
   return `<!DOCTYPE html>
   <html>
     <head>
@@ -88,7 +69,6 @@ const generateHtml = (cardsData, backgrounds, css, generateCardMarkup) => {
       }
     }
     const cssFile = `${process.argv[2]}/style.css`;
-    const backgrounds = parseInt(process.argv[process.argv.indexOf('backgrounds') + 1]);
     const csvData = fs.readFileSync(csvFile, 'utf8');
     const cssData = fs.readFileSync(cssFile, 'utf8');
     let cardsData = csvToObject(csvData);
@@ -101,7 +81,7 @@ const generateHtml = (cardsData, backgrounds, css, generateCardMarkup) => {
       cardsData = cardsData.map(cardData => ({...cardData, lang: 'english'}));
     }
 
-    const htmlData = generateHtml(cardsData, backgrounds, cssData, generateCardMarkup);
+    const htmlData = generateHtml(cardsData, cssData, generateCardMarkup);
 
     // Checking output HTML in console
     if (process.argv.includes('log')) {

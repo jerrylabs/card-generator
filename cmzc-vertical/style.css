@@ -75,6 +75,7 @@ html, body {
   background-size: calc(100% + 2mm) calc(100% + 1mm);
   border-width: 1mm; border-style: solid;
   border-color: #ad6a00;
+  border-radius: 3mm;
 }
 
 .card.quest.S { background-image: url(http://localhost:8080/imgs/bg_speed.jpg); border-color: #398d1c; }
@@ -249,7 +250,7 @@ html, body {
   padding: 3.5mm 5mm 0 0;
   font-size: 12mm;
   position: absolute;
-  top: 80mm;
+  top: 89mm;
   left: 44mm;
   z-index: 4;
   font-family: 'Impact Condensed';
@@ -257,7 +258,7 @@ html, body {
 
 .animatron .attribute {
   position: absolute;
-  top: 82mm;
+  top: 90mm;
   left: 20mm;
   z-index: 4;
   width: 20mm;
@@ -272,8 +273,8 @@ html, body {
   font-size: 10.5mm;
   padding: 2.5mm 0 0 0;
   position: absolute;
-  top: 82mm;
-  left: 22mm;
+  top: 91mm;
+  left: 21mm;
   z-index: 4;
   font-family: 'Impact Condensed';
   color: red;
