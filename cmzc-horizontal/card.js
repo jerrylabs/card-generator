@@ -151,7 +151,7 @@ const getFieldMarkup = (title, value, card) => {
       if (card.text2) {
         markup = `<div class="text texts">
           <div class="text-part">${getTextMarkup(value, card.lang)}</div>
-          ${card.disjunction ? `<span class="white-shadow or">${card.lang === 'english' ? 'or' : 'nebo'}</span>` : '' }
+          ${card.disjunction ? `<span class="white-shadow or">${card.lang === 'english' ? 'or' : 'nebo'}</span>` : '<span class="texts-between"></span>' }
           <div class="text-part">${getTextMarkup(card.text2, card.lang)}</div>
         </div>`;
       } else {
@@ -171,6 +171,9 @@ const getFieldMarkup = (title, value, card) => {
 }
 
 module.exports = (cardData) => {
+  if (cardData.type === 'background') {
+    return `<div class="card background ${cardData.title}"></div>`;
+  }
   return `<div
     class="card
       ${cardData.type || ''}
