@@ -148,6 +148,11 @@ html, body {
   margin-top: 1mm;
 }
 
+.quest__reputation:only-child {
+  position: relative;
+  left: -2mm;
+}
+
 .quest__reputation span { position: relative; z-index: 1; }
 .quest__reputation span::before { position: absolute; z-index: -1; color: white; filter: blur(1px); }
 .quest__reputation span.val1::before { content: '1'; }
@@ -206,9 +211,9 @@ html, body {
 .P .quest__description { left: 41mm; }
 .S .quest__description { right: 1mm; }
 .I .quest__description { right: 1mm; font-size: 18px; }
-.quest__success, .quest__fail { top: 65mm; transform: translateX(-50%); font-size: 22px; }
-.quest__success { left: 18%; color: #fcee28; }
-.quest__fail { left: 81%; color: #b70000; }
+.quest__success, .quest__fail { top: 64.3mm; font-size: 22px; }
+.quest__success { left: 7mm; color: #fcee28; }
+.quest__fail { left: 41mm; color: #b70000; }
 
 /************************************************************
  ***************** * * *  ANIMATRONS  * * * *****************
@@ -277,8 +282,8 @@ html, body {
   font-size: 10.5mm;
   padding: 2.5mm 0 0 0;
   position: absolute;
-  top: 82mm;
-  left: 22mm;
+  top: 91mm;
+  left: 21mm;
   z-index: 4;
   font-family: 'Impact Condensed';
   color: red;

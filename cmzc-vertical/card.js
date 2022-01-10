@@ -17,15 +17,15 @@ const getTestMarkup = (value, lang) => {
     let testImgNamePart, testDescription = '';
     if (value.includes('PI'))      { testImgNamePart = 'poweriq'; }
     else if (value.includes('PS')) { testImgNamePart = 'powerspeed'; }
-    else if (value.includes('P'))  { testImgNamePart = 'power'; testDescription = lang === 'english' ? 'power' : 'sílu'; }
-    else if (value.includes('S'))  { testImgNamePart = 'speed'; testDescription = lang === 'english' ? 'speed' : 'rychlost'; }
-    else if (value.includes('I'))  { testImgNamePart = 'iq'; testDescription = lang === 'english' ? 'iq' : 'inteligenci'; }
+    else if (value.includes('P'))  { testImgNamePart = 'power'; testDescription = lang === 'english' ? 'your power' : 'na sílu'; }
+    else if (value.includes('S'))  { testImgNamePart = 'speed'; testDescription = lang === 'english' ? 'your speed' : 'na rychlost'; }
+    else if (value.includes('I'))  { testImgNamePart = 'iq'; testDescription = lang === 'english' ? 'intelligence' : 'na inteligenci'; }
     markup = `
       <img class="test" src="http://localhost:8080/imgs/attr-${testImgNamePart}.png" />
       <div class="quest__label">test</div>
-      <div class="quest__description">${lang === 'english' ? 'your' : 'na'} ${testDescription}</div>
+      <div class="quest__description">${testDescription}</div>
       <div class="quest__success">${lang === 'english' ? 'success' : 'úspěch'}</div>
-      <div class="quest__fail">${lang === 'english' ? 'fail' : 'neúspěch'}</div>
+      <div class="quest__fail">${lang === 'english' ? '&nbsp;&nbsp;fail' : 'neúspěch'}</div>
     `;
   }
   return markup;
@@ -61,8 +61,8 @@ const getFieldMarkup = (title, value, card) => {
 
     /* nazev karty */
     case 'title':
-      // animatroni maji title hardcoded, kromě gaybota - TEMP
-      if (card.type === 'animatron' && title !== 'Gaybot') {
+      // animatroni maji title hardcoded
+      if (card.type === 'animatron') {
         break;
       }
       markup = `<div class="${title}
