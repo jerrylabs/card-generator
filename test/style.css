@@ -20,10 +20,10 @@ html, body {
   padding: 1cm;
 }
 
-.card.bojovnik {
-  border-color: red;
-}
+.card.bojovnik { border-color: red; }
+.card.rostlina { border-color: green; }
 
-.card.rostlina {
-  border-color: green;
-}
+.type { color: gray;}
+.title { font-weight: bold; }
+.text { font-style: italic;}
+.image { height: 170px; }

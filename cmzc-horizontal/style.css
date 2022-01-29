@@ -1,4 +1,6 @@
-@page { margin: 9mm 0 0 0; }
+@page {
+  margin: 9mm 0 0 0;
+}
 
 body {
   -webkit-print-color-adjust: exact;
@@ -496,23 +498,21 @@ html, body {
 } */
 
 .background {
-  background: white url(http://localhost:8080/imgs/cmzc-logo-upgrades.png) center center no-repeat;
-  background-size: 3.5cm;
+  background: #c8cdcb url(http://localhost:8080/imgs/backside-gear.png) center center no-repeat;
+  background-size: cover;
   transform: rotate(180deg);
+  border-radius: 0;
+  box-shadow: 0 0 5mm #c8cdcb, 0 0 5mm #c8cdcb, 0 0 5mm #c8cdcb;
 }
 
 .background.voodoo {
-  background-image: url(http://localhost:8080/imgs/cmzc-logo-voodoo.png);
+  background-image: url(http://localhost:8080/imgs/backside-voodoo.png);
 }
 
 .background.ruka {
-  background: white url(http://localhost:8080/imgs/back-ruka.jpg) center center no-repeat;
-  background-size: 3.5cm;
-  transform: rotate(180deg);
+  background-image: url(http://localhost:8080/imgs/backside-ruka.png);
 }
 
 .background.noha {
-  background: white url(http://localhost:8080/imgs/back-noha.jpg) center center no-repeat;
-  background-size: 3.5cm;
-  transform: rotate(180deg);
+  background-image: url(http://localhost:8080/imgs/backside-noha.png);
 }
