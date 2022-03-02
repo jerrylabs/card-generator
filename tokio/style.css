@@ -1,0 +1,145 @@
+@page {
+  margin: 9mm 0 0 0;
+}
+
+body {
+  -webkit-print-color-adjust: exact;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.cards {
+  text-align: center;
+  width: auto;
+  margin: 0 auto;
+  font-size: 0;
+}
+
+.card {
+  display: inline-block;
+  width: 6.35cm;
+  height: 8.89cm;
+  border-radius: 3mm;
+  position: relative;
+  overflow: hidden;
+}
+
+.card.back {
+  background: transparent url(http://localhost:8080/img/back.jpg) no-repeat;
+  background-size: cover;
+  border-radius: 0;
+}
+
+.card.keep {
+  background: transparent url(http://localhost:8080/img/keep-cards.jpg) no-repeat;
+  background-size: 63.5cm 44.45cm;
+}
+
+.card.discard {
+  background: transparent url(http://localhost:8080/img/discard-cards.jpg) no-repeat;
+  background-size: 63.5cm 17.78cm;
+}
+
+.card.monster, .card.monsterback {
+  width: 12.7cm;
+}
+
+.card.monsterback {
+  background: transparent url(http://localhost:8080/img/back-rotated.jpg) no-repeat;
+  background-size: contain;
+  border-radius: 0;
+}
+
+.title, .titleStroke {
+  position: absolute;
+  top: 3mm;
+  left: 15mm;
+  width: 4.5cm;
+  font-family: "GoodGirl";
+  color: white;
+  font-size: 6mm;
+  text-align: center;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+.title { text-shadow: 0 0 5px black; }
+
+.titleStroke {
+  z-index: 2;
+  font-family: "GoodGirlStroke";
+  color: black;
+}
+
+.text {
+  position: absolute;
+  color: black;
+  font-size: 4mm;
+  text-align: center;
+  height: auto;
+  bottom: 2mm;
+  width: auto;
+  font-family: "Microsoft PhagsPa";
+  left: 50%;
+  transform: translateX(-50%) rotate(-3deg);
+  right: -45%;
+  font-weight: bold;
+}
+
+.text.short { right: -23%; }
+.text.supershort { right: 0; }
+
+.text::before {
+  content: ' ';
+  background: white;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: scale(1.4);
+}
+
+.cardType, .cardTypeStroke {
+  position: absolute;
+  top: -5mm;
+  left: 50%;
+  transform:translateX(-50%);
+  font-family: "GoodGirl";
+  color: white;
+  font-size: 4mm;
+  text-align: center;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+.cardType { text-shadow: 0 0 5px green; }
+.discard .cardType { text-shadow: 0 0 5px crimson; }
+
+.cardTypeStroke {
+  z-index: 2;
+  font-family: "GoodGirlStroke";
+  color: green;
+}
+
+.discard .cardTypeStroke { color: crimson; }
+
+.card.monster {
+  background-size: cover;
+}
+
+.card.monster .title, .card.monster .titleStroke {
+  top: auto;
+  bottom: 2mm;
+  font-size: 8mm;
+  left: 0;
+  width: 100%;
+}
+
+.energy { filter: hue-rotate(70deg) brightness(80%) saturate(150%); }
+.hand { filter: hue-rotate(130deg) brightness(60%) saturate(150%) }

@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <style type="text/css">
+        @page {
+  margin: 9mm 0 0 0;
+}
+
+body {
+  -webkit-print-color-adjust: exact;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.cards {
+  text-align: center;
+  width: auto;
+  margin: 0 auto;
+  font-size: 0;
+}
+
+.card {
+  display: inline-block;
+  width: 6.35cm;
+  height: 8.89cm;
+  border-radius: 3mm;
+  position: relative;
+  overflow: hidden;
+}
+
+.card.back {
+  background: transparent url(http://localhost:8080/img/back.jpg) no-repeat;
+  background-size: cover;
+  border-radius: 0;
+}
+
+.card.keep {
+  background: transparent url(http://localhost:8080/img/keep-cards.jpg) no-repeat;
+  background-size: 63.5cm 44.45cm;
+}
+
+.card.discard {
+  background: transparent url(http://localhost:8080/img/discard-cards.jpg) no-repeat;
+  background-size: 63.5cm 17.78cm;
+}
+
+.card.monster, .card.monsterback {
+  width: 12.7cm;
+}
+
+.card.monsterback {
+  background: transparent url(http://localhost:8080/img/back-rotated.jpg) no-repeat;
+  background-size: contain;
+  border-radius: 0;
+}
+
+.title, .titleStroke {
+  position: absolute;
+  top: 3mm;
+  left: 15mm;
+  width: 4.5cm;
+  font-family: "GoodGirl";
+  color: white;
+  font-size: 6mm;
+  text-align: center;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+.title { text-shadow: 0 0 5px black; }
+
+.titleStroke {
+  z-index: 2;
+  font-family: "GoodGirlStroke";
+  color: black;
+}
+
+.text {
+  position: absolute;
+  color: black;
+  font-size: 4mm;
+  text-align: center;
+  height: auto;
+  bottom: 2mm;
+  width: auto;
+  font-family: "Microsoft PhagsPa";
+  left: 50%;
+  transform: translateX(-50%) rotate(-3deg);
+  right: -45%;
+  font-weight: bold;
+}
+
+.text.short { right: -23%; }
+.text.supershort { right: 0; }
+
+.text::before {
+  content: ' ';
+  background: white;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: scale(1.4);
+}
+
+.cardType, .cardTypeStroke {
+  position: absolute;
+  top: -5mm;
+  left: 50%;
+  transform:translateX(-50%);
+  font-family: "GoodGirl";
+  color: white;
+  font-size: 4mm;
+  text-align: center;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+.cardType { text-shadow: 0 0 5px green; }
+.discard .cardType { text-shadow: 0 0 5px crimson; }
+
+.cardTypeStroke {
+  z-index: 2;
+  font-family: "GoodGirlStroke";
+  color: green;
+}
+
+.discard .cardTypeStroke { color: crimson; }
+
+.card.monster {
+  background-size: cover;
+}
+
+.card.monster .title, .card.monster .titleStroke {
+  top: auto;
+  bottom: 2mm;
+  font-size: 8mm;
+  left: 0;
+  width: 100%;
+}
+
+.energy { filter: hue-rotate(70deg) brightness(80%) saturate(150%); }
+.hand { filter: hue-rotate(130deg) brightness(60%) saturate(150%) }
+
+      </style>
+    </head>
+    <body>
+      <div class="cards">
+        <div class="card keep" style="background-position: -0cm -0cm;">
+      <div class="title" style="text-shadow: 0 0 5px #3ab069;">Kyselinový útok</div>
+      <div class="titleStroke" style="color: #3ab069;">Kyselinový útok</div>
+      <div class="text short">
+        V každém tahu způsobíš 1 zranění navíc (i když neútočíš).
+        <div class="cardType">vylož</div><div class="cardTypeStroke">vylož</div>
+      </div>
+    </div><div class="card keep" style="background-position: -6.35cm -0cm;">
+      <div class="title" style="text-shadow: 0 0 5px #1c65ab;">Mimozemský metabolismus</div>
+      <div class="titleStroke" style="color: #1c65ab;">Mimozemský metabolismus</div>
+      <div class="text short">
+        Nákup karet tě stojí o&nbsp;<span class="energy">⚡</span>&nbsp;méně.
+        <div class="cardType">vylož</div><div class="cardTypeStroke">vylož</div>
+      </div>
+    </div><div class="card keep" style="background-position: -12.7cm -0cm;">
+      <div class="title" style="text-shadow: 0 0 5px #65529e;">Alfa nestvůra</div>
+      <div class="titleStroke" style="color: #65529e;">Alfa nestvůra</div>
+      <div class="text short">
+        Získáváš ⭐, když zaútočíš.
+        <div class="cardType">vylož</div><div class="cardTypeStroke">vylož</div>
+      </div>
+    </div><div class="card keep" style="background-position: -19.049999999999997cm -0cm;">
+      <div class="title" style="text-shadow: 0 0 5px #df2c41;">Plátová zbroj</div>
+      <div class="titleStroke" style="color: #df2c41;">Plátová zbroj</div>
+      <div class="text supershort">
+        Ignoruj 1 zranění.
+        <div class="cardType">vylož</div><div class="cardTypeStroke">vylož</div>
+      </div>
+    </div><div class="card keep" style="background-position: -25.4cm -0cm;">
+      <div class="title" style="text-shadow: 0 0 5px #836395;">Ten vzadu</div>
+      <div class="titleStroke" style="color: #836395;">Ten vzadu</div>
+      <div class="text short">
+        Vždy můžeš přehodit jakoukoliv [3].
+        <div class="cardType">vylož</div><div class="cardTypeStroke">vylož</div>
+      </div>
+    </div><div class="card keep" style="background-position: -31.75cm -0cm;">
+      <div class="title" style="text-shadow: 0 0 5px #a0612f;">Závrt</div>
+      <div class="titleStroke" style="color: #a0612f;">Závrt</div>
+      <div class="text ">
+        Pří útoku do Tokia udělíš 1&nbsp;zranění navíc. Při opuštění Tokia udělíš 1 zranění příšeře, která ho přebírá.
+        <div class="cardType">vylož</div><div class="cardTypeStroke">vylož</div>
+      </div>
+    </div><div class="card keep" style="background-position: -38.099999999999994cm -0cm;">
+      <div class="title" style="text-shadow: 0 0 5px #478f6c;">Maskování</div>
+      <div class="titleStroke" style="color: #478f6c;">Maskování</div>
+      <div class="text ">
+        Za každé utrpěné zranění hoď kostkou. Padne-li [❤️], zranění nedostaneš.
+        <div class="cardType">vylož</div><div class="cardTypeStroke">vylož</div>
+      </div>
+    </div><div class="card keep" style="background-position: -44.449999999999996cm -0cm;">
+      <div class="title" style="text-shadow: 0 0 5px #a0612f;">Totální destrukce</div>
+      <div class="titleStroke" style="color: #a0612f;">Totální destrukce</div>
+      <div class="text ">
+        Pokud hodíš <span style='white-space: nowrap'>[1][2][3][❤️][<span class="hand">🖐</span>][<span class="energy">⚡</span>]</span>, tak k&nbsp;běžným účinkům hodu získáš 9&nbsp;⭐.
+        <div class="cardType">vylož</div><div class="cardTypeStroke">vylož</div>
+      </div>
+    </div><div class="card keep" style="background-position: -50.8cm -0cm;">
+      <div class="title" style="text-shadow: 0 0 5px #761249;">Nadšení zpravodajci</div>
+      <div class="titleStroke" style="color: #761249;">Nadšení zpravodajci</div>
+      <div class="text short">
+        Kdykoliv koupíš kartu, získáváš ⭐.
+        <div class="cardType">vylož</div><div class="cardTypeStroke">vylož</div>
+      </div>
+    </div><div class="card back"></div><div class="card back"></div><div class="card back"></div><div class="card back"></div><div class="card back"></div><div class="card back"></div><div class="card back"></div><div class="card back"></div><div class="card back"></div><div class="card keep" style="background-position: -57.15cm -0cm;">
+      <div class="title" style="text-shadow: 0 0 5px #253517;">Požírač mrtvých</div>
+      <div class="titleStroke" style="color: #253517;">Požírač mrtvých</div>
+      <div class="text short">
+        Získej 3 ⭐ pokaždé, když se nějaká příšera dostane na 0 ❤️.
+        <div class="cardType">vylož</div><div class="cardTypeStroke">vylož</div>
+      </div>
+    </div><div class="card keep" style="background-position: -0cm -8.89cm;">
+      <div class="title" style="text-shadow: 0 0 5px #31809c;">Nabíječ</div>
+      <div class="titleStroke" style="color: #31809c;">Nabíječ</div>
+      <div class="text short">
+        Za každých 6 <span class="energy">⚡</span> získáváš na konci svého tahu 1 ⭐.
+        <div class="cardType">vylož</div><div class="cardTypeStroke">vylož</div>
+      </div>
+    </div><div class="card keep" style="background-position: -6.35cm -8.89cm;">
+      <div class="title" style="text-shadow: 0 0 5px #a13443;">Ještě větší</div>
+      <div class="titleStroke" style="color: #a13443;">Ještě větší</div>
+      <div class="text ">
+        Tvé max. ❤️ jsou zvětšeny o 2. Když dostaneš tuto kartu, získáváš 2 ❤️. Když o ni přijdeš, ztratíš 2 ❤️.
+        <div class="cardType">vylož</div><div class="cardTypeStroke">vylož</div>
+      </div>
+    </div><div class="card keep" style="background-position: -12.7cm -8.89cm;">
+      <div class="title" style="text-shadow: 0 0 5px #00013f;">Hlava navíc</div>
+      <div class="titleStroke" style="color: #00013f;">Hlava navíc</div>
+      <div class="text short">
+        Máš k dispozici 1 kostku navíc.
+        <div class="cardType">vylož</div><div class="cardTypeStroke">vylož</div>
+      </div>
+    </div><div class="card keep" style="background-position: -19.049999999999997cm -8.89cm;">
+      <div class="title" style="text-shadow: 0 0 5px #00013f;">Hlava navíc</div>
+      <div class="titleStroke" style="color: #00013f;">Hlava navíc</div>
+      <div class="text short">
+        Máš k dispozici 1 kostku navíc.
+        <div class="cardType">vylož</div><div class="cardTypeStroke">vylož</div>
+      </div>
+    </div><div class="card keep" style="background-position: -25.4cm -8.89cm;">
+      <div class="title" style="text-shadow: 0 0 5px #914424;">Ohnivý dech</div>
+      <div class="titleStroke" style="color: #914424;">Ohnivý dech</div>
+      <div class="text ">
+        Vždy když způsobíš zranění, dostanou tví sousedé 1 zranění navíc.
+        <div class="cardType">vylož</div><div class="cardTypeStroke">vylož</div>
+      </div>
+    </div><div class="card keep" style="background-position: -31.75cm -8.89cm;">
+      <div class="title" style="text-shadow: 0 0 5px #6e9550;">Zmrazení času</div>
+      <div class="titleStroke" style="color: #6e9550;">Zmrazení času</div>
+      <div class="text ">
+        Pokud vyhodnotíš [1][1][1], získáváš další kolo navíc s o 1 kostkou méně.
+        <div class="cardType">vylož</div><div class="cardTypeStroke">vylož</div>
+      </div>
+    </div><div class="card keep" style="background-position: -38.099999999999994cm -8.89cm;">
+      <div class="title" style="text-shadow: 0 0 5px #af6185;">Milovník dětí</div>
+      <div class="titleStroke" style="color: #af6185;">Milovník dětí</div>
+      <div class="text short">
+        Pokud získáš nějakou <span class="energy">⚡</span>, získáváš 1 <span class="energy">⚡</span> navíc.
+        <div class="cardType">vylož</div><div class="cardTypeStroke">vylož</div>
+      </div>
+    </div><div class="card keep" style="background-position: -44.449999999999996cm -8.89cm;">
+      <div class="title" style="text-shadow: 0 0 5px #ac7608;">Obří mozek</div>
+      <div class="titleStroke" style="color: #ac7608;">Obří mozek</div>
+      <div class="text short">
+        V každém tahu máš 1&nbsp;přehození navíc.
+        <div class="cardType">vylož</div><div class="cardTypeStroke">vylož</div>
+      </div>
+    </div><div class="card back"></div><div class="card back"></div><div class="card back"></div><div class="card back"></div><div class="card back"></div><div class="card back"></div><div class="card back"></div><div class="card back"></div><div class="card back"></div><div class="card keep" style="background-position: -50.8cm -8.89cm;">
+      <div class="title" style="text-shadow: 0 0 5px #948679;">Gurmán</div>
+      <div class="titleStroke" style="color: #948679;">Gurmán</div>
+      <div class="text ">
+        Pokud vyhodnotíš <span style='white-space: nowrap'>[1][1][1]</span>, získáváš navíc 2 ⭐.
+        <div class="cardType">vylož</div><div class="cardTypeStroke">vylož</div>
+      </div>
+    </div><div class="card keep" style="background-position: -57.15cm -8.89cm;">
+      <div class="title" style="text-shadow: 0 0 5px #c98f8e;">Léčivé paprsky</div>
+      <div class="titleStroke" style="color: #c98f8e;">Léčivé paprsky</div>
+      <div class="text ">
+        Svými [❤️] můžeš léčit ostatní příšery. Za každé vyléčené zranění ti musí zaplatit 2 <span class="energy">⚡</span> (nebo co jim zbývá).
+        <div class="cardType">vylož</div><div class="cardTypeStroke">vylož</div>
+      </div>
+    </div><div class="card keep" style="background-position: -0cm -17.78cm;">
+      <div class="title" style="text-shadow: 0 0 5px #4f7543;">Býložravec</div>
+      <div class="titleStroke" style="color: #4f7543;">Býložravec</div>
+      <div class="text short">
+        V každém tahu, kdy nikomu nezpůsobíš zranění, získáváš 1 ⭐.
+        <div class="cardType">vylož</div><div class="cardTypeStroke">vylož</div>
+      </div>
+    </div><div class="card keep" style="background-position: -6.35cm -17.78cm;">
+      <div class="title" style="text-shadow: 0 0 5px #707d74;">Sklízeč stáda</div>
+      <div class="titleStroke" style="color: #707d74;">Sklízeč stáda</div>
+      <div class="text short">
+        V každém tahu můžeš změnit jednu ze svých kostek na [1].
+        <div class="cardType">vylož</div><div class="cardTypeStroke">vylož</div>
+      </div>
+    </div><div class="card keep" style="background-position: -12.7cm -17.78cm;">
+      <div class="title" style="text-shadow: 0 0 5px #c5417a;">Má to potomka!</div>
+      <div class="titleStroke" style="color: #c5417a;">Má to potomka!</div>
+      <div class="text ">
+        Pokud jsi vyřazen, odhoď všechny své karty, ztrácíš všechny ⭐, vyléč se na 10 ❤️ a&nbsp;začni znova.
+        <div class="cardType">vylož</div><div class="cardTypeStroke">vylož</div>
+      </div>
+    </div><div class="card keep" style="background-position: -19.049999999999997cm -17.78cm;">
+      <div class="title" style="text-shadow: 0 0 5px #5779b6;">Trysky</div>
+      <div class="titleStroke" style="color: #5779b6;">Trysky</div>
+      <div class="text short">
+        Neutrpíš žádné zranění, když opouštíš Tokio.
+        <div class="cardType">vylož</div><div class="cardTypeStroke">vylož</div>
+      </div>
+    </div><div class="card keep" style="background-position: -25.4cm -17.78cm;">
+      <div class="title" style="text-shadow: 0 0 5px #353b45;">Vyroben v&nbsp;laboratoři</div>
+      <div class="titleStroke" style="color: #353b45;">Vyroben v&nbsp;laboratoři</div>
+      <div class="text ">
+        Během svého nákupu karet se můžeš podívat na horní kartu balíčku a koupit ji.
+        <div class="cardType">vylož</div><div class="cardTypeStroke">vylož</div>
+      </div>
+    </div><div class="card keep" style="background-position: -31.75cm -17.78cm;">
+      <div class="title" style="text-shadow: 0 0 5px #427139;">Metamorf</div>
+      <div class="titleStroke" style="color: #427139;">Metamorf</div>
+      <div class="text ">
+        Na konci svého tahu můžeš odhodit jakékoliv své vyložené karty a získat za ně zpět <span class="energy">⚡</span>.
+        <div class="cardType">vylož</div><div class="cardTypeStroke">vylož</div>
+      </div>
+    </div><div class="card keep" style="background-position: -38.099999999999994cm -17.78cm;">
+      <div class="title" style="text-shadow: 0 0 5px #273c42;">Imitace</div>
+      <div class="titleStroke" style="color: #273c42;">Imitace</div>
+      <div class="text ">
+        Tato karta zkopíruje jakoukoliv jinou vyloženou kartu. Na začátku tahu můžeš za 1 <span class="energy">⚡</span> změnit imitovanou kartu.
+        <div class="cardType">vylož</div><div class="cardTypeStroke">vylož</div>
+      </div>
+    </div><div class="card back"></div><div class="card back"></div><div class="card back"></div><div class="card back"></div><div class="card back"></div><div class="card back"></div><div class="card back"></div><div class="card back"></div><div class="card back"></div><div class="card keep" style="background-position: -44.449999999999996cm -17.78cm;">
+      <div class="title" style="text-shadow: 0 0 5px #aa9846;">Baterková příšera</div>
+      <div class="titleStroke" style="color: #aa9846;">Baterková příšera</div>
+      <div class="text ">
+        Když získáš tuto kartu, polož na ni 6 <span class="energy">⚡</span>. Na začátku každého tahu si vezmi 2 <span class="energy">⚡</span> z této karty. Když žádná nezbývá, znič tuto kartu.
+        <div class="cardType">vylož</div><div class="cardTypeStroke">vylož</div>
+      </div>
+    </div><div class="card keep" style="background-position: -50.8cm -17.78cm;">
+      <div class="title" style="text-shadow: 0 0 5px #9ca8ab;">Dech novy</div>
+      <div class="titleStroke" style="color: #9ca8ab;">Dech novy</div>
+      <div class="text short">
+        Tvé útoky způsobují zranění všem ostatním příšerám.
+        <div class="cardType">vylož</div><div class="cardTypeStroke">vylož</div>
+      </div>
+    </div><div class="card keep" style="background-position: -57.15cm -17.78cm;">
+      <div class="title" style="text-shadow: 0 0 5px #a6530b;">Všežravec</div>
+      <div class="titleStroke" style="color: #a6530b;">Všežravec</div>
+      <div class="text ">
+        Jednou za tah můžeš obodovat [1][2][3] za 2 ⭐. Tyto kostky můžeš použít i v jiných kombinacích.
+        <div class="cardType">vylož</div><div class="cardTypeStroke">vylož</div>
+      </div>
+    </div><div class="card keep" style="background-position: -0cm -26.67cm;">
+      <div class="title" style="text-shadow: 0 0 5px #85324f;">Oportunista</div>
+      <div class="titleStroke" style="color: #85324f;">Oportunista</div>
+      <div class="text ">
+        Kdykoliv je otočena nová karta, máš možnost ji ihned koupit.
+        <div class="cardType">vylož</div><div class="cardTypeStroke">vylož</div>
+      </div>
+    </div><div class="card keep" style="background-position: -6.35cm -26.67cm;">
+      <div class="title" style="text-shadow: 0 0 5px #1e6766;">Parazitická chapadla</div>
+      <div class="titleStroke" style="color: #1e6766;">Parazitická chapadla</div>
+      <div class="text short">
+        Můžeš nakupovat od jiných příšer. Zaplať jim cenu v <span class="energy">⚡</span>.
+        <div class="cardType">vylož</div><div class="cardTypeStroke">vylož</div>
+      </div>
+    </div><div class="card keep" style="background-position: -12.7cm -26.67cm;">
+      <div class="title" style="text-shadow: 0 0 5px #65396e;">Super finta</div>
+      <div class="titleStroke" style="color: #65396e;">Super finta</div>
+      <div class="text ">
+        Změň jednu kostku na libovolný výsledek. Po použití tuto kartu odhoď.
+        <div class="cardType">vylož</div><div class="cardTypeStroke">vylož</div>
+      </div>
+    </div><div class="card keep" style="background-position: -19.049999999999997cm -26.67cm;">
+      <div class="title" style="text-shadow: 0 0 5px #1b8253;">Jedovaté bodliny</div>
+      <div class="titleStroke" style="color: #1b8253;">Jedovaté bodliny</div>
+      <div class="text ">
+        Kdykoliv vyhodnotíš <span style='white-space: nowrap'>[2][2][2]</span>, udělíš také 2 zranění.
+        <div class="cardType">vylož</div><div class="cardTypeStroke">vylož</div>
+      </div>
+    </div><div class="card keep" style="background-position: -25.4cm -26.67cm;">
+      <div class="title" style="text-shadow: 0 0 5px #1b8253;">Jedovaté flusance</div>
+      <div class="titleStroke" style="color: #1b8253;">Jedovaté flusance</div>
+      <div class="text ">
+        Když způsobíš příšeře nějaké zranění, dej ji žeton jedu. Za každý žeton jedu utrpí příšera 1&nbsp;poškození na konci svého tahu. Zbavit se ho lze použitím hodu [❤️] místo léčení.
+        <div class="cardType">vylož</div><div class="cardTypeStroke">vylož</div>
+      </div>
+    </div><div class="card keep" style="background-position: -31.75cm -26.67cm;">
+      <div class="title" style="text-shadow: 0 0 5px #4bcce1;">Psychosonda</div>
+      <div class="titleStroke" style="color: #4bcce1;">Psychosonda</div>
+      <div class="text ">
+        V každém tahu každé jiné příšery můžeš přehodit jednu její kostku. Pokud takto padne [❤️], tuto kartu odhoď.
+        <div class="cardType">vylož</div><div class="cardTypeStroke">vylož</div>
+      </div>
+    </div><div class="card back"></div><div class="card back"></div><div class="card back"></div><div class="card back"></div><div class="card back"></div><div class="card back"></div><div class="card back"></div><div class="card back"></div><div class="card back"></div><div class="card keep" style="background-position: -38.099999999999994cm -26.67cm;">
+      <div class="title" style="text-shadow: 0 0 5px #b6514a;">Jenom to posilujeme!</div>
+      <div class="titleStroke" style="color: #b6514a;">Jenom to posilujeme!</div>
+      <div class="text short">
+        Když ztratíš 2 ❤️ nebo více, získáváš 1 <span class="energy">⚡</span>.
+        <div class="cardType">vylož</div><div class="cardTypeStroke">vylož</div>
+      </div>
+    </div><div class="card keep" style="background-position: -44.449999999999996cm -26.67cm;">
+      <div class="title" style="text-shadow: 0 0 5px #8a1f17;">Regenerace</div>
+      <div class="titleStroke" style="color: #8a1f17;">Regenerace</div>
+      <div class="text short">
+        Když se léčíš, vyléč si 1&nbsp;zranění navíc.
+        <div class="cardType">vylož</div><div class="cardTypeStroke">vylož</div>
+      </div>
+    </div><div class="card keep" style="background-position: -50.8cm -26.67cm;">
+      <div class="title" style="text-shadow: 0 0 5px #4c2777;">Fandění břídilovi</div>
+      <div class="titleStroke" style="color: #4c2777;">Fandění břídilovi</div>
+      <div class="text short">
+        Pokud máš na konci tahu nejméně ⭐, získáváš 1&nbsp;⭐.
+        <div class="cardType">vylož</div><div class="cardTypeStroke">vylož</div>
+      </div>
+    </div><div class="card keep" style="background-position: -57.15cm -26.67cm;">
+      <div class="title" style="text-shadow: 0 0 5px #7a9359;">Zmenšovací paprsek</div>
+      <div class="titleStroke" style="color: #7a9359;">Zmenšovací paprsek</div>
+      <div class="text ">
+        Když způsobíš příšeře nějaké zranění, dej ji žeton zmenšení. Za každý žeton zmenšení používá tato příšera o kostku méně. Zbavit se ho lze použitím hodu [❤️] místo léčení.
+        <div class="cardType">vylož</div><div class="cardTypeStroke">vylož</div>
+      </div>
+    </div><div class="card keep" style="background-position: -0cm -35.56cm;">
+      <div class="title" style="text-shadow: 0 0 5px #49476e;">Oblak dýmu</div>
+      <div class="titleStroke" style="color: #49476e;">Oblak dýmu</div>
+      <div class="text ">
+        Tato karta má 3 nabití. Za 1 nabití získáváš přehození navíc. Po 3 použitích kartu odhoď.
+        <div class="cardType">vylož</div><div class="cardTypeStroke">vylož</div>
+      </div>
+    </div><div class="card keep" style="background-position: -6.35cm -35.56cm;">
+      <div class="title" style="text-shadow: 0 0 5px #bba820;">Solární pohon</div>
+      <div class="titleStroke" style="color: #bba820;">Solární pohon</div>
+      <div class="text short">
+        Pokud na konci tahu nemáš žádné <span class="energy">⚡</span>, získáváš 1 <span class="energy">⚡</span>.
+        <div class="cardType">vylož</div><div class="cardTypeStroke">vylož</div>
+      </div>
+    </div><div class="card keep" style="background-position: -12.7cm -35.56cm;">
+      <div class="title" style="text-shadow: 0 0 5px #5b7470;">Ostnatý ocas</div>
+      <div class="titleStroke" style="color: #5b7470;">Ostnatý ocas</div>
+      <div class="text short">
+        Při útoku způsobíš 1 zranění navíc.
+        <div class="cardType">vylož</div><div class="cardTypeStroke">vylož</div>
+      </div>
+    </div><div class="card keep" style="background-position: -19.049999999999997cm -35.56cm;">
+      <div class="title" style="text-shadow: 0 0 5px #921a62;">Natahovací</div>
+      <div class="titleStroke" style="color: #921a62;">Natahovací</div>
+      <div class="text ">
+        Můžeš utratit 2 <span class="energy">⚡</span> a libovolně změnit výsledek jedné ze svých kostek.
+        <div class="cardType">vylož</div><div class="cardTypeStroke">vylož</div>
+      </div>
+    </div><div class="card keep" style="background-position: -25.4cm -35.56cm;">
+      <div class="title" style="text-shadow: 0 0 5px #ef6d7a;">Energetický nápoj</div>
+      <div class="titleStroke" style="color: #ef6d7a;">Energetický nápoj</div>
+      <div class="text short">
+        Utrať 1 <span class="energy">⚡</span> a získáš 1 přehození navíc.
+        <div class="cardType">vylož</div><div class="cardTypeStroke">vylož</div>
+      </div>
+    </div><div class="card back"></div><div class="card back"></div><div class="card back"></div><div class="card back"></div><div class="card back"></div><div class="card back"></div><div class="card back"></div><div class="card back"></div><div class="card back"></div><div class="card keep" style="background-position: -31.75cm -35.56cm;">
+      <div class="title" style="text-shadow: 0 0 5px #1d6254;">Městožravec</div>
+      <div class="titleStroke" style="color: #1d6254;">Městožravec</div>
+      <div class="text ">
+        Když začínáš svůj tah v Tokiu, získáváš ⭐ navíc. Když způsobíš jakékoliv zranění z&nbsp;Tokia, způsobíš 1&nbsp;zranění navíc.
+        <div class="cardType">vylož</div><div class="cardTypeStroke">vylož</div>
+      </div>
+    </div><div class="card keep" style="background-position: -38.099999999999994cm -35.56cm;">
+      <div class="title" style="text-shadow: 0 0 5px #a68b60;">Rychlé léčení</div>
+      <div class="titleStroke" style="color: #a68b60;">Rychlé léčení</div>
+      <div class="text short">
+        Kdykoliv utrať 2 <span class="energy">⚡</span> aby sis vyléčil 1&nbsp;zranění.
+        <div class="cardType">vylož</div><div class="cardTypeStroke">vylož</div>
+      </div>
+    </div><div class="card keep" style="background-position: -44.449999999999996cm -35.56cm;">
+      <div class="title" style="text-shadow: 0 0 5px #a2763f;">Křídla</div>
+      <div class="titleStroke" style="color: #a2763f;">Křídla</div>
+      <div class="text ">
+        Utrať 2 <span class="energy">⚡</span>, abys zrušil zranění, která jsi utrpěl během tohoto tahu.
+        <div class="cardType">vylož</div><div class="cardTypeStroke">vylož</div>
+      </div>
+    </div><div class="card discard" style="background-position: -0cm -0cm;">
+      <div class="title">Věžák</div>
+      <div class="titleStroke">Věžák</div>
+      <div class="text supershort">
+        +3 ⭐
+        <div class="cardType">odhoď</div><div class="cardTypeStroke">odhoď</div>
+      </div>
+    </div><div class="card discard" style="background-position: -6.35cm -0cm;">
+      <div class="title">Lokálka</div>
+      <div class="titleStroke">Lokálka</div>
+      <div class="text supershort">
+        +2 ⭐
+        <div class="cardType">odhoď</div><div class="cardTypeStroke">odhoď</div>
+      </div>
+    </div><div class="card discard" style="background-position: -12.7cm -0cm;">
+      <div class="title">Krámek na rohu</div>
+      <div class="titleStroke">Krámek na rohu</div>
+      <div class="text supershort">
+        +1 ⭐
+        <div class="cardType">odhoď</div><div class="cardTypeStroke">odhoď</div>
+      </div>
+    </div><div class="card discard" style="background-position: -19.049999999999997cm -0cm;">
+      <div class="title">Útok z výšky</div>
+      <div class="titleStroke">Útok z výšky</div>
+      <div class="text short">
+        +2 ⭐ a získáváš kontrolu nad Tokiem, pokud ji už nemáš.
+        <div class="cardType">odhoď</div><div class="cardTypeStroke">odhoď</div>
+      </div>
+    </div><div class="card discard" style="background-position: -25.4cm -0cm;">
+      <div class="title">Energizace</div>
+      <div class="titleStroke">Energizace</div>
+      <div class="text supershort">
+        +9 <span class="energy">⚡</span>
+        <div class="cardType">odhoď</div><div class="cardTypeStroke">odhoď</div>
+      </div>
+    </div><div class="card discard" style="background-position: -31.75cm -0cm;">
+      <div class="title">Evakuace</div>
+      <div class="titleStroke">Evakuace</div>
+      <div class="text short">
+        Všechny ostatní příšery ztrácejí 5&nbsp;⭐.
+        <div class="cardType">odhoď</div><div class="cardTypeStroke">odhoď</div>
+      </div>
+    </div><div class="card back"></div><div class="card back"></div><div class="card back"></div><div class="card back"></div><div class="card back"></div><div class="card back"></div><div class="card back"></div><div class="card back"></div><div class="card back"></div><div class="card discard" style="background-position: -38.099999999999994cm -0cm;">
+      <div class="title">Evakuace</div>
+      <div class="titleStroke">Evakuace</div>
+      <div class="text short">
+        Všechny ostatní příšery ztrácejí 5&nbsp;⭐.
+        <div class="cardType">odhoď</div><div class="cardTypeStroke">odhoď</div>
+      </div>
+    </div><div class="card discard" style="background-position: -44.449999999999996cm -0cm;">
+      <div class="title">Ohnivá šleha</div>
+      <div class="titleStroke">Ohnivá šleha</div>
+      <div class="text short">
+        Všem ostatním příšerám způsobíš 2&nbsp;zranění.
+        <div class="cardType">odhoď</div><div class="cardTypeStroke">odhoď</div>
+      </div>
+    </div><div class="card discard" style="background-position: -50.8cm -0cm;">
+      <div class="title">Zuřivost</div>
+      <div class="titleStroke">Zuřivost</div>
+      <div class="text short">
+        Po nákupu této karty získáváš ihned další tah.
+        <div class="cardType">odhoď</div><div class="cardTypeStroke">odhoď</div>
+      </div>
+    </div><div class="card discard" style="background-position: -57.15cm -0cm;">
+      <div class="title">Ropná rafinérie</div>
+      <div class="titleStroke">Ropná rafinérie</div>
+      <div class="text short">
+        +2 ⭐ a způsobíš 3 zranění všem ostatním příšerám.
+        <div class="cardType">odhoď</div><div class="cardTypeStroke">odhoď</div>
+      </div>
+    </div><div class="card discard" style="background-position: -0cm -8.89cm;">
+      <div class="title">Uzdravení</div>
+      <div class="titleStroke">Uzdravení</div>
+      <div class="text short">
+        Vyléč si 2 zranění.&nbsp;
+        <div class="cardType">odhoď</div><div class="cardTypeStroke">odhoď</div>
+      </div>
+    </div><div class="card discard" style="background-position: -6.35cm -8.89cm;">
+      <div class="title">Bombardování</div>
+      <div class="titleStroke">Bombardování</div>
+      <div class="text short">
+        Všechny příšery (včetně tebe) utrpí 3&nbsp;zranění.
+        <div class="cardType">odhoď</div><div class="cardTypeStroke">odhoď</div>
+      </div>
+    </div><div class="card discard" style="background-position: -12.7cm -8.89cm;">
+      <div class="title">Stíhačky</div>
+      <div class="titleStroke">Stíhačky</div>
+      <div class="text short">
+        +5 ⭐ a utrpíš 4&nbsp;zranění.
+        <div class="cardType">odhoď</div><div class="cardTypeStroke">odhoď</div>
+      </div>
+    </div><div class="card discard" style="background-position: -19.049999999999997cm -8.89cm;">
+      <div class="title">Národní garda</div>
+      <div class="titleStroke">Národní garda</div>
+      <div class="text short">
+        +2 ⭐ a utrpíš 2&nbsp;zranění.
+        <div class="cardType">odhoď</div><div class="cardTypeStroke">odhoď</div>
+      </div>
+    </div><div class="card discard" style="background-position: -25.4cm -8.89cm;">
+      <div class="title">Jaderná elektrárna</div>
+      <div class="titleStroke">Jaderná elektrárna</div>
+      <div class="text short">
+        +2 ⭐ a vyléč si 3&nbsp;zranění.
+        <div class="cardType">odhoď</div><div class="cardTypeStroke">odhoď</div>
+      </div>
+    </div><div class="card back"></div><div class="card back"></div><div class="card back"></div><div class="card back"></div><div class="card back"></div><div class="card back"></div><div class="card back"></div><div class="card back"></div><div class="card back"></div><div class="card discard" style="background-position: -31.75cm -8.89cm;">
+      <div class="title">Mrakodrap</div>
+      <div class="titleStroke">Mrakodrap</div>
+      <div class="text supershort">
+        +4 ⭐
+        <div class="cardType">odhoď</div><div class="cardTypeStroke">odhoď</div>
+      </div>
+    </div><div class="card monster" style="background-image: url(http://localhost:8080/img/monster-alienoid.jpg)">
+      <div class="title" style="text-shadow: 0 0 5px #a8d513;">alienoid</div>
+      <div class="titleStroke" style="color: #a8d513;">alienoid</div>
+    </div><div class="card discard" style="background-position: -38.099999999999994cm -8.89cm;">
+      <div class="title">Tanky</div>
+      <div class="titleStroke">Tanky</div>
+      <div class="text short">
+        +4 ⭐ a utrpíš 3&nbsp;zranění.
+        <div class="cardType">odhoď</div><div class="cardTypeStroke">odhoď</div>
+      </div>
+    </div><div class="card monster" style="background-image: url(http://localhost:8080/img/monster-cyberbunny.jpg)">
+      <div class="title" style="text-shadow: 0 0 5px #ea70fc;">cyber bunny</div>
+      <div class="titleStroke" style="color: #ea70fc;">cyber bunny</div>
+    </div><div class="card discard" style="background-position: -44.449999999999996cm -8.89cm;">
+      <div class="title">Masivní bouře</div>
+      <div class="titleStroke">Masivní bouře</div>
+      <div class="text ">
+        +2 ⭐. Všechny ostatní příšery ztratí 1&nbsp;<span class="energy">⚡</span> za každé 2&nbsp;<span class="energy">⚡</span>, které mají.
+        <div class="cardType">odhoď</div><div class="cardTypeStroke">odhoď</div>
+      </div>
+    </div><div class="card monster" style="background-image: url(http://localhost:8080/img/monster-gigazaur.jpg)">
+      <div class="title" style="text-shadow: 0 0 5px #efdd33;">gigazaur</div>
+      <div class="titleStroke" style="color: #efdd33;">gigazaur</div>
+    </div><div class="card monsterback"></div><div class="card back"></div><div class="card monsterback"></div><div class="card back"></div><div class="card monsterback"></div><div class="card back"></div><div class="card monster" style="background-image: url(http://localhost:8080/img/monster-theking.jpg)">
+      <div class="title" style="text-shadow: 0 0 5px #febd3c;">the king</div>
+      <div class="titleStroke" style="color: #febd3c;">the king</div>
+    </div><div class="card blank" style="background-position: --6.35cm --8.89cm;">
+      <div class="title"></div>
+      <div class="titleStroke"></div>
+      <div class="text supershort">
+        
+        
+      </div>
+    </div><div class="card monster" style="background-image: url(http://localhost:8080/img/monster-kraken.jpg)">
+      <div class="title" style="text-shadow: 0 0 5px #00af80;">kraken</div>
+      <div class="titleStroke" style="color: #00af80;">kraken</div>
+    </div><div class="card blank" style="background-position: --6.35cm --8.89cm;">
+      <div class="title"></div>
+      <div class="titleStroke"></div>
+      <div class="text supershort">
+        
+        
+      </div>
+    </div><div class="card monster" style="background-image: url(http://localhost:8080/img/monster-mekadragon.jpg)">
+      <div class="title" style="text-shadow: 0 0 5px #fd4851;">meka dragon</div>
+      <div class="titleStroke" style="color: #fd4851;">meka dragon</div>
+    </div><div class="card blank" style="background-position: --6.35cm --8.89cm;">
+      <div class="title"></div>
+      <div class="titleStroke"></div>
+      <div class="text supershort">
+        
+        
+      </div>
+    </div><div class="card blank" style="background-position: --6.35cm --8.89cm;">
+      <div class="title"></div>
+      <div class="titleStroke"></div>
+      <div class="text supershort">
+        
+        
+      </div>
+    </div><div class="card monsterback"></div><div class="card blank" style="background-position: --6.35cm --8.89cm;">
+      <div class="title"></div>
+      <div class="titleStroke"></div>
+      <div class="text supershort">
+        
+        
+      </div>
+    </div><div class="card monsterback"></div><div class="card blank" style="background-position: --6.35cm --8.89cm;">
+      <div class="title"></div>
+      <div class="titleStroke"></div>
+      <div class="text supershort">
+        
+        
+      </div>
+    </div><div class="card monsterback"></div>
+      </div>
+    </body>
+  </html>

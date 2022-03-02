@@ -1,23 +1,28 @@
+@page {
+  margin: 9mm 0 0 0;
+}
 
 body {
   -webkit-print-color-adjust: exact;
 }
+
 html, body {
   margin: 0;
   padding: 0;
 }
 
 .cards {
-  display: flex;
-  flex-wrap: wrap;
+  text-align: center;
+  font-size: 0;
 }
 
 .card {
-  flex: 0 0 4.4cm;
+  display: inline-block;
   width: 4.4cm;
   height: 6.7cm;
   border: 0.2mm solid yellow;
   padding: 1cm;
+  font-size: 5mm;
 }
 
 .card.bojovnik { border-color: red; }
