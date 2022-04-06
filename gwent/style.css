@@ -1,0 +1,30 @@
+@page {
+  margin: 9mm 0 0 0;
+}
+
+body {
+  -webkit-print-color-adjust: exact;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.cards {
+  text-align: center;
+  width: auto;
+  margin: 0 auto;
+  font-size: 0;
+}
+
+.card {
+  display: inline-block;
+  width: 6cm;
+  height: 11.3cm;
+  border-radius: 2mm;
+  position: relative;
+  overflow: hidden;
+  background: transparent top left no-repeat;
+  background-size: 74.8cm 50.8cm;
+}

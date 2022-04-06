@@ -1,0 +1,151 @@
+i,type,title,color,text
+1,keep,Kyselinový útok,#3ab069,V každém tahu způsobíš 1 zranění navíc (i když neútočíš).
+2,keep,Mimozemský metabolismus,#1c65ab,Nákup karet tě stojí o&nbsp;⚡&nbsp;méně.
+3,keep,Alfa nestvůra,#65529e,"Získáváš ⭐, když zaútočíš."
+4,keep,Plátová zbroj,#df2c41,Ignoruj 1 zranění.
+5,keep,Ten vzadu,#836395,Vždy můžeš přehodit jakoukoliv [3].
+6,keep,Závrt,#a0612f,"Pří útoku do Tokia udělíš 1&nbsp;zranění navíc. Při opuštění Tokia udělíš 1 zranění příšeře, která ho přebírá."
+7,keep,Maskování,#478f6c,"Za každé utrpěné zranění hoď kostkou. Padne-li [❤️], zranění nedostaneš."
+8,keep,Totální destrukce,#a0612f,"Pokud hodíš <span style='white-space: nowrap'>[1][2][3][❤️][🖐][⚡]</span>, tak k&nbsp;běžným účinkům hodu získáš 9&nbsp;⭐."
+9,keep,Nadšení zpravodajci,#761249,"Kdykoliv koupíš kartu, získáváš ⭐."
+,back,,,
+,back,,,
+,back,,,
+,back,,,
+,back,,,
+,back,,,
+,back,,,
+,back,,,
+,back,,,
+10,keep,Požírač mrtvých,#253517,"Získej 3 ⭐ pokaždé, když se nějaká příšera dostane na 0 ❤️."
+11,keep,Nabíječ,#31809c,Za každých 6 ⚡ získáváš na konci svého tahu 1 ⭐.
+12,keep,Ještě větší,#a13443,"Tvé max. ❤️ jsou zvětšeny o 2. Když dostaneš tuto kartu, získáváš 2 ❤️. Když o ni přijdeš, ztratíš 2 ❤️."
+13,keep,Hlava navíc,#00013f,Máš k dispozici 1 kostku navíc.
+14,keep,Hlava navíc,#00013f,Máš k dispozici 1 kostku navíc.
+15,keep,Ohnivý dech,#914424,"Vždy když způsobíš zranění, dostanou tví sousedé 1 zranění navíc."
+16,keep,Zmrazení času,#6e9550,"Pokud vyhodnotíš [1][1][1], získáváš další kolo navíc s o 1 kostkou méně."
+17,keep,Milovník dětí,#af6185,"Pokud získáš nějakou ⚡, získáváš 1 ⚡ navíc."
+18,keep,Obří mozek,#ac7608,V každém tahu máš 1&nbsp;přehození navíc.
+,back,,,
+,back,,,
+,back,,,
+,back,,,
+,back,,,
+,back,,,
+,back,,,
+,back,,,
+,back,,,
+19,keep,Gurmán,#948679,"Pokud vyhodnotíš <span style='white-space: nowrap'>[1][1][1]</span>, získáváš navíc 2 ⭐."
+20,keep,Léčivé paprsky,#c98f8e,Svými [❤️] můžeš léčit ostatní příšery. Za každé vyléčené zranění ti musí zaplatit 2 ⚡ (nebo co jim zbývá).
+21,keep,Býložravec,#4f7543,"V každém tahu, kdy nikomu nezpůsobíš zranění, získáváš 1 ⭐."
+22,keep,Sklízeč stáda,#707d74,V každém tahu můžeš změnit jednu ze svých kostek na [1].
+23,keep,Má to potomka!,#c5417a,"Pokud jsi vyřazen, odhoď všechny své karty, ztrácíš všechny ⭐, vyléč se na 10 ❤️ a&nbsp;začni znova."
+24,keep,Trysky,#5779b6,"Neutrpíš žádné zranění, když opouštíš Tokio."
+25,keep,Vyroben v&nbsp;laboratoři,#353b45,Během svého nákupu karet se můžeš podívat na horní kartu balíčku a koupit ji.
+26,keep,Metamorf,#427139,Na konci svého tahu můžeš odhodit jakékoliv své vyložené karty a získat za ně zpět ⚡.
+27,keep,Imitace,#273c42,Tato karta zkopíruje jakoukoliv jinou vyloženou kartu. Na začátku tahu můžeš za 1 ⚡ změnit imitovanou kartu.
+,back,,,
+,back,,,
+,back,,,
+,back,,,
+,back,,,
+,back,,,
+,back,,,
+,back,,,
+,back,,,
+28,keep,Baterková příšera,#aa9846,"Když získáš tuto kartu, polož na ni 6 ⚡. Na začátku každého tahu si vezmi 2 ⚡ z této karty. Když žádná nezbývá, znič tuto kartu."
+29,keep,Dech novy,#9ca8ab,Tvé útoky způsobují zranění všem ostatním příšerám.
+30,keep,Všežravec,#a6530b,Jednou za tah můžeš obodovat [1][2][3] za 2 ⭐. Tyto kostky můžeš použít i v jiných kombinacích.
+31,keep,Oportunista,#85324f,"Kdykoliv je otočena nová karta, máš možnost ji ihned koupit."
+32,keep,Parazitická chapadla,#1e6766,Můžeš nakupovat od jiných příšer. Zaplať jim cenu v ⚡.
+33,keep,Super finta,#65396e,Změň jednu kostku na libovolný výsledek. Po použití tuto kartu odhoď.
+34,keep,Jedovaté bodliny,#1b8253,"Kdykoliv vyhodnotíš <span style='white-space: nowrap'>[2][2][2]</span>, udělíš také 2 zranění."
+35,keep,Jedovaté flusance,#1b8253,"Když způsobíš příšeře nějaké zranění, dej ji žeton jedu. Za každý žeton jedu utrpí příšera 1&nbsp;poškození na konci svého tahu. Zbavit se ho lze použitím hodu [❤️] místo léčení."
+36,keep,Psychosonda,#4bcce1,"V každém tahu každé jiné příšery můžeš přehodit jednu její kostku. Pokud takto padne [❤️], tuto kartu odhoď."
+,back,,,
+,back,,,
+,back,,,
+,back,,,
+,back,,,
+,back,,,
+,back,,,
+,back,,,
+,back,,,
+37,keep,Jenom to posilujeme!,#b6514a,"Když ztratíš 2 ❤️ nebo více, získáváš 1 ⚡."
+38,keep,Regenerace,#8a1f17,"Když se léčíš, vyléč si 1&nbsp;zranění navíc."
+39,keep,Fandění břídilovi,#4c2777,"Pokud máš na konci tahu nejméně ⭐, získáváš 1&nbsp;⭐."
+40,keep,Zmenšovací paprsek,#7a9359,"Když způsobíš příšeře nějaké zranění, dej ji žeton zmenšení. Za každý žeton zmenšení používá tato příšera o kostku méně. Zbavit se ho lze použitím hodu [❤️] místo léčení."
+41,keep,Oblak dýmu,#49476e,Tato karta má 3 nabití. Za 1 nabití získáváš přehození navíc. Po 3 použitích kartu odhoď.
+42,keep,Solární pohon,#bba820,"Pokud na konci tahu nemáš žádné ⚡, získáváš 1 ⚡."
+43,keep,Ostnatý ocas,#5b7470,Při útoku způsobíš 1 zranění navíc.
+44,keep,Natahovací,#921a62,Můžeš utratit 2 ⚡ a libovolně změnit výsledek jedné ze svých kostek.
+45,keep,Energetický nápoj,#ef6d7a,Utrať 1 ⚡ a získáš 1 přehození navíc.
+,back,,,
+,back,,,
+,back,,,
+,back,,,
+,back,,,
+,back,,,
+,back,,,
+,back,,,
+,back,,,
+46,keep,Městožravec,#1d6254,"Když začínáš svůj tah v Tokiu, získáváš ⭐ navíc. Když způsobíš jakékoliv zranění z&nbsp;Tokia, způsobíš 1&nbsp;zranění navíc."
+47,keep,Rychlé léčení,#a68b60,Kdykoliv utrať 2 ⚡ aby sis vyléčil 1&nbsp;zranění.
+48,keep,Křídla,#a2763f,"Utrať 2 ⚡, abys zrušil zranění, která jsi utrpěl během tohoto tahu."
+1,discard,Věžák,,+3 ⭐
+2,discard,Lokálka,,+2 ⭐
+3,discard,Krámek na rohu,,+1 ⭐
+4,discard,Útok z výšky,,"+2 ⭐ a získáváš kontrolu nad Tokiem, pokud ji už nemáš."
+5,discard,Energizace,,+9 ⚡
+6,discard,Evakuace,,Všechny ostatní příšery ztrácejí 5&nbsp;⭐.
+,back,,,
+,back,,,
+,back,,,
+,back,,,
+,back,,,
+,back,,,
+,back,,,
+,back,,,
+,back,,,
+7,discard,Evakuace,,Všechny ostatní příšery ztrácejí 5&nbsp;⭐.
+8,discard,Ohnivá šleha,,Všem ostatním příšerám způsobíš 2&nbsp;zranění.
+9,discard,Zuřivost,,Po nákupu této karty získáváš ihned další tah.
+10,discard,Ropná rafinérie,,+2 ⭐ a způsobíš 3 zranění všem ostatním příšerám.
+11,discard,Uzdravení,,Vyléč si 2 zranění.&nbsp;
+12,discard,Bombardování,,Všechny příšery (včetně tebe) utrpí 3&nbsp;zranění.
+13,discard,Stíhačky,,+5 ⭐ a utrpíš 4&nbsp;zranění.
+14,discard,Národní garda,,+2 ⭐ a utrpíš 2&nbsp;zranění.
+15,discard,Jaderná elektrárna,,+2 ⭐ a vyléč si 3&nbsp;zranění.
+,back,,,
+,back,,,
+,back,,,
+,back,,,
+,back,,,
+,back,,,
+,back,,,
+,back,,,
+,back,,,
+16,discard,Mrakodrap,,+4 ⭐
+,monster,alienoid,#a8d513,
+17,discard,Tanky,,+4 ⭐ a utrpíš 3&nbsp;zranění.
+,monster,cyber bunny,#ea70fc,
+18,discard,Masivní bouře,,"+2 ⭐. Všechny ostatní příšery ztratí 1&nbsp;⚡ za každé 2&nbsp;⚡, které mají."
+,monster,gigazaur,#efdd33,
+,monsterback,,,
+,back,,,
+,monsterback,,,
+,back,,,
+,monsterback,,,
+,back,,,
+,monster,the king,#febd3c,
+,blank,,,
+,monster,kraken,#00af80,
+,blank,,,
+,monster,meka dragon,#fd4851,
+,blank,,,
+,blank,,,
+,monsterback,,,
+,blank,,,
+,monsterback,,,
+,blank,,,
+,monsterback,,,
