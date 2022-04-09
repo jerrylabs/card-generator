@@ -1,34 +1,34 @@
-title,power,faction,type,effect,flavor
-Foltest -- Ocelová pěst,temeria,,,"Zničí nejsilnější kartu (karty) [catapult] nepřítele, pokud se celková síla jeho karet [catapult] rovná alespoň 10.",Krásný den na bitvu.
-Foltest -- Mistr obléhání,temeria,,,Zdvojnásobí sílu všem [catapult] (pokud v dané řadě není také [horn]).,"Dobře mířená balista zničí nejen nepřátelské hradby, ale také jejich morálku."
-Foltest -- Lord velitel Severu,temeria,,,"Odebere ze hry všechny aktivní účinky počasí (způsobené kartami [freeze], [rain] či [fog]).",K čertu s vládci a jejich pletichami.<br>Já věřím zbraním svých pěšáků.
-Foltest -- Král Temerie,temeria,,,Vytáhneš z balíčku kartu [fog] a hned ji vyneseš.,"Je přirozené a krásné, když muž miluje svou sestru."
-Emiel Regis Rohellec Terzieff,5,north,close,,
-Hovězí obranná jednotka,8,north,,cow,Grrrrr!
-Návnada,decoy,north,,,"Když ti dojdou sedláci, dají se šípy střílet docela dobře i do atrap."
-Návnada,decoy,north,,,"Když ti dojdou sedláci, dají se šípy střílet docela dobře i do atrap."
-Návnada,decoy,north,,,"Když ti dojdou sedláci, dají se šípy střílet docela dobře i do atrap."
-Velitelský roh,horn,north,,,"Plus jedna k morálce, mínus tři ke sluchu."
-Velitelský roh,horn,north,,,"Plus jedna k morálce, mínus tři ke sluchu."
-Velitelský roh,horn,north,,,"Plus jedna k morálce, mínus tři ke sluchu."
-Sežehnutí,skull,north,,,Ohnivé sloupy promění i ty nejsilnější v popel. Všichni ostatní se třesou úžasem.
-Sežehnutí,skull,north,,,Ohnivé sloupy promění i ty nejsilnější v popel. Všichni ostatní se třesou úžasem.
-Sežehnutí,skull,north,,,Ohnivé sloupy promění i ty nejsilnější v popel. Všichni ostatní se třesou úžasem.
-Jasná obloha,sun,north,,,"Slunce svítí, Dromle! Slunce svítí! Třeba nám ještě zbývá nějaká naděje…"
-Jasná obloha,sun,north,,,"Slunce svítí, Dromle! Slunce svítí! Třeba nám ještě zbývá nějaká naděje…"
-Jasná obloha,sun,north,,,"Slunce svítí, Dromle! Slunce svítí! Třeba nám ještě zbývá nějaká naděje…"
-Trebuchet,6,north,siege,,"Ten hrad se sám nezboří, že ne? Tak sem dovalte trebuchety!"
-Trebuchet 2,6,north,siege,,"Ten hrad se sám nezboří, že ne? Tak sem dovalte trebuchety!"
-Prudký déšť,rain,north,range,,I déšť v týhle zemi smrdí jak chcanky.
-Talar,1,north,siege,spy,Naser si! My nejsme všichni zkurvení sukničkáři. Někteří z nás mají hloubku…
-Léčitelka šedé korouhve,5,north,siege,heal,"Přišij červené k červenému, bílé k bílému a všechno bude v pořádku."
-Katapult,8,north,siege,coop,"Bohové pomáhají těm,<br>kdo mají lepší katapulty."
-Katapult 2,9,north,siege,coop,"Bohové pomáhají těm,<br>kdo mají lepší katapulty."
-Balista,6,north,siege,,„Většinou jim dáváme ženské jméno.“<br>„Třeba Jana?“ „Spíš třeba Berta.“
-Balista 2,7,north,siege,,„Většinou jim dáváme ženské jméno.“<br>„Třeba Jana?“ „Spíš třeba Berta.“
-Obléhací věž,6,north,siege,,Mám rád hluk obléhacích věží po ránu.<br>Zní jako vítězství.
-Kaedwenský mistr ženista,1,north,siege,reinforce,„Musíš překalibrovat rameno o pět stupňů.“<br>„Co musím kohože o co?“
-Kaedwenský mistr ženista 2,2,north,siege,reinforce,„Musíš překalibrovat rameno o pět stupňů.“<br>„Co musím kohože o co?“
-Kaedwenský mistr ženista 3,3,north,siege,reinforce,„Musíš překalibrovat rameno o pět stupňů.“<br>„Co musím kohože o co?“
-Dethmold,6,north,range,,Jednou jsem donutil vězně vyzvrátit vlastní vnitřnosti… To byly časy…
-Drakobijec crinfridských sekáčů,5,north,range,coop,Poslední dobou jsem s příšerami neměl moc štěstí. Tak jsem narukoval.
+title,power,faction,type,effect,flavor,className
+Foltest -- Ocelová pěst,temeria,north,,"Zničí nejsilnější kartu (karty) [catapult] nepřítele, pokud se celková síla jeho karet [catapult] rovná alespoň 10.",Krásný den na bitvu.,
+Foltest -- Mistr obléhání,temeria,north,,Zdvojnásobí sílu všem [catapult] (pokud v dané řadě není také [horn]).,"Dobře mířená balista zničí nejen nepřátelské hradby, ale také jejich morálku.",
+Foltest -- Lord velitel Severu,temeria,north,,"Odebere ze hry všechny aktivní účinky počasí (způsobené kartami [freeze], [rain] či [fog]).",K čertu s vládci a jejich pletichami.<br>Já věřím zbraním svých pěšáků.,
+Foltest -- Král Temerie,temeria,north,,Vytáhneš z balíčku kartu [fog] a hned ji vyneseš.,"Je přirozené a krásné, když muž miluje svou sestru.",
+Emiel Regis Rohellec Terzieff,5,north,close,,"Lidé, alespoň ti slušní, by mi říkali příšera. Krev sající zrůda.",
+Hovězí obranná jednotka,8,north,,cow,Grrrrr!,
+Návnada,decoy,north,,,"Když ti dojdou sedláci, dají se šípy střílet docela dobře i do atrap.",
+Návnada,decoy,north,,,"Když ti dojdou sedláci, dají se šípy střílet docela dobře i do atrap.",
+Návnada,decoy,north,,,"Když ti dojdou sedláci, dají se šípy střílet docela dobře i do atrap.",
+Velitelský roh,horn,north,,,"Plus jedna k morálce, mínus tři ke sluchu.",
+Velitelský roh,horn,north,,,"Plus jedna k morálce, mínus tři ke sluchu.",
+Velitelský roh,horn,north,,,"Plus jedna k morálce, mínus tři ke sluchu.",
+Sežehnutí,skull,north,,,Ohnivé sloupy promění i ty nejsilnější v popel. Všichni ostatní se třesou úžasem.,
+Sežehnutí,skull,north,,,Ohnivé sloupy promění i ty nejsilnější v popel. Všichni ostatní se třesou úžasem.,
+Sežehnutí,skull,north,,,Ohnivé sloupy promění i ty nejsilnější v popel. Všichni ostatní se třesou úžasem.,
+Jasná obloha,sun,north,,,"Slunce svítí, Dromle! Slunce svítí! Třeba nám ještě zbývá nějaká naděje…",
+Jasná obloha,sun,north,,,"Slunce svítí, Dromle! Slunce svítí! Třeba nám ještě zbývá nějaká naděje…",
+Jasná obloha,sun,north,,,"Slunce svítí, Dromle! Slunce svítí! Třeba nám ještě zbývá nějaká naděje…",
+Trebuchet,6,north,siege,,"Ten hrad se sám nezboří, že ne? Tak sem dovalte trebuchety!",
+Trebuchet 2,6,north,siege,,"Ten hrad se sám nezboří, že ne? Tak sem dovalte trebuchety!",
+Prudký déšť,rain,north,range,,I déšť v týhle zemi smrdí jak chcanky.,
+Talar,1,north,siege,spy,Naser si! My nejsme všichni zkurvení sukničkáři. Někteří z nás mají hloubku…,
+Léčitelka šedé korouhve,5,north,siege,heal,"Přišij červené k červenému, bílé k bílému a všechno bude v pořádku.",
+Katapult,8,north,siege,coop,"Bohové pomáhají těm,<br>kdo mají lepší katapulty.",
+Katapult 2,9,north,siege,coop,"Bohové pomáhají těm,<br>kdo mají lepší katapulty.",
+Balista,6,north,siege,,„Většinou jim dáváme ženské jméno.“<br>„Třeba Jana?“ „Spíš třeba Berta.“,
+Balista 2,7,north,siege,,„Většinou jim dáváme ženské jméno.“<br>„Třeba Jana?“ „Spíš třeba Berta.“,
+Obléhací věž,6,north,siege,,Mám rád hluk obléhacích věží po ránu.<br>Zní jako vítězství.,
+Kaedwenský mistr ženista,1,north,siege,reinforce,„Musíš překalibrovat rameno o pět stupňů.“<br>„Co musím kohože o co?“,
+Kaedwenský mistr ženista 2,2,north,siege,reinforce,„Musíš překalibrovat rameno o pět stupňů.“<br>„Co musím kohože o co?“,
+Kaedwenský mistr ženista 3,3,north,siege,reinforce,„Musíš překalibrovat rameno o pět stupňů.“<br>„Co musím kohože o co?“,
+Dethmold,6,north,range,,Jednou jsem donutil vězně vyzvrátit vlastní vnitřnosti… To byly časy…,
+Drakobijec crinfridských sekáčů,5,north,range,coop,Poslední dobou jsem s příšerami neměl moc štěstí. Tak jsem narukoval.,titleSmall

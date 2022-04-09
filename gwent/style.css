@@ -26,7 +26,7 @@ html, body {
   border: 3mm solid black;
   position: relative;
   background: transparent top left no-repeat;
-  background-size: 6.45cm auto;
+  background-size: 64mm auto;
 }
 
 .card::before {
@@ -40,5 +40,132 @@ html, body {
   content: ' ';
 }
 
-/* TEMP */
-hr { display: none; }
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 4mm;
+  background-size: 63mm;
+}
+.north .background { background-image: url('http://localhost:8080/img/bg-blue.png'); }
+
+/* separator for better cutting */
+.card::after {
+  position: absolute;
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: -3.8mm;
+  border-right: 1mm solid rgba(255, 255, 255, 0.1);
+  content: ' ';
+}
+
+.power {
+  font-family: "Linux Libertine G";
+  font-weight: bold;
+  position: absolute;
+  top: 0mm;
+  left: 0mm;
+  width: 18.5mm;
+  height: 18.5mm;
+  font-size: 12mm;
+  line-height: 18mm;
+}
+
+.title {
+  font-family: "Alegreya";
+  font-weight: bold;
+  position: absolute;
+  top: 92mm;
+  left: 14mm;
+  width: 46mm;
+  font-variant: small-caps;
+  line-height: 5mm;
+  font-size: 5.3mm;
+  height: 10mm;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.titleSmall .title { font-size: 4.6mm; }
+
+hr {
+  position: absolute;
+  top: 103mm;
+  width: 41mm;
+  left: 16mm;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  border: none;
+  height: 0.5mm;
+}
+
+
+.flavor {
+  font-family: "Adobe Garamond Pro";
+  font-style: italic;
+  position: absolute;
+  top: 105mm;
+  left: 14mm;
+  width: 46mm;
+  line-height: 3mm;
+  font-size: 2.8mm;
+  height: 7mm;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.commander {
+  background-size: 61mm;
+}
+
+.commander .background {
+  position: absolute;
+  left: 0;
+  top: auto;
+  bottom: 0;
+  background-size: 61mm;
+  width: 100%;
+  height: 30mm;
+  border-radius: 0 0 7mm 7mm;
+}
+
+.commander.north .background { background-image: url('http://localhost:8080/img/bg-cmd-silver.png'); }
+
+.commander .title, .commander .flavor, .commander .effect { left: 0; width: 60mm; }
+.commander .title { top: 85mm; }
+
+.commander .subtitle {
+  font-weight: normal;
+  font-size: 4mm;
+  line-height: 2.8mm;
+}
+
+.commander .effect {
+  font-family: "Adobe Garamond Pro";
+  font-weight: bold;
+  position: absolute;
+  top: 96.5mm;
+  line-height: 3mm;
+  font-size: 2.8mm;
+  height: 7mm;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.commander hr {
+  top: 95mm;
+  width: 42mm;
+  left: 9mm;
+}
+
+.commander hr.second {
+  top: 104mm;
+}
+
+
