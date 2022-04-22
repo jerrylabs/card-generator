@@ -12,6 +12,7 @@ module.exports = (cardData) => {
     const [commanderTitle, commanderSubtitle] = displayTitle.split('--');
     return (
       `<div class="card ${faction} commander" style="background-image: url('http://localhost:8080/cards/${title}.${imageType}');">
+        <div class="hero"></div>
         <div class="power temeria"></div>
         <div class="background"></div>
         <div class="title">${commanderTitle}
@@ -26,7 +27,8 @@ module.exports = (cardData) => {
   }
 
   return (
-    `<div class="card ${faction} ${isCommander ? 'commander' : ''} ${className}" style="background-image: url('http://localhost:8080/cards/${title}.${imageType}');">
+    `<div class="card ${faction} ${className}" style="background-image: url('http://localhost:8080/cards/${title}.${imageType}');">
+      ${className.includes('hero') ? '<div class="hero"></div>' : ''}
       <div class="background"></div>
       ${parseInt(power) == power
         ? `<div class="power">${power}</div>`
