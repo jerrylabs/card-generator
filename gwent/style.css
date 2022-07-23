@@ -78,7 +78,7 @@ html, body {
   font-family: "Alegreya";
   font-weight: bold;
   position: absolute;
-  top: 92mm;
+  top: 91mm;
   left: 14mm;
   width: 46mm;
   font-variant: small-caps;
@@ -137,7 +137,7 @@ hr {
 .commander.north .background { background-image: url('http://localhost:8080/img/bg-cmd-silver.png'); }
 
 .commander .title, .commander .flavor, .commander .effect { left: 0; width: 60mm; }
-.commander .title { top: 85mm; }
+.commander .title { top: 84mm; }
 
 .commander .subtitle {
   font-weight: normal;
@@ -157,6 +157,8 @@ hr {
   align-items: center;
   justify-content: center;
 }
+
+.commander .effect span { display: inline; }
 
 .commander hr {
   top: 95mm;
@@ -179,3 +181,4 @@ hr {
 }
 
 .north .hero { background-image: url('http://localhost:8080/img/hero-silver.png'); }
+.commander.north .hero { background-image: url('http://localhost:8080/img/commander-north.png'); }
