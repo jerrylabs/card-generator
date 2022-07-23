@@ -4,9 +4,7 @@
  */
 
 const parse = require('csv-parse/lib/sync');
-const puppeteer = require('puppeteer');
 const fs = require('fs');
-const httpServer = require('http-server');
 
 const printInstructions = () => {
    const instructions = fs.readFileSync('README.md', 'utf8');

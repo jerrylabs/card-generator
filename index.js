@@ -1,5 +1,4 @@
 const parse = require('csv-parse/lib/sync');
-const puppeteer = require('puppeteer');
 const fs = require('fs');
 const generateCmzcCard = require('./cmzc/card');
 
@@ -66,19 +65,6 @@ const generateHtml = (cardsData, includeBackSides, css) => {
   </html>`;
 }
 
-const savePdf = async (htmlData, settings ) => {
-    const browser = await puppeteer.launch();
-    const page = await browser.newPage();
-    await page.setContent(htmlData);
-    // await page.evaluateHandle('document.fonts.ready');
-    // await page.emulateMedia('screen');
-    await page.emulateMedia('screen');
-    await page.content();
-    await page.pdf(settings);
-    await browser.close();
-    console.log('PDF generated 👍');
-}
-
 (async function() {
   try {
     let csvFile = 'cards.csv';
@@ -107,49 +93,6 @@ const savePdf = async (htmlData, settings ) => {
             return console.log(err);
         }
         console.log("The HTML file was saved 👍");
-      });
-    }
-
-    if (process.argv.includes('cmzc')) {
-      const horizontalHtmlData = generateHtml(
-        cardsData.filter(c => ['basic', 'bio', 'tech', 'voodoo'].includes(c.type)),
-        includeBackSides,
-        cssData
-      );
-      const verticalHtmlData = generateHtml(
-        cardsData.filter(c => ['quest', 'animatron'].includes(c.type)),
-        includeBackSides,
-        cssData
-      );
-      await savePdf(horizontalHtmlData, {
-        path: 'cmzc-horizontal.pdf',
-        format: 'A4',
-        printBackground: true,
-        landscape: true,
-        margin: {
-            top: "9mm",
-            right: "16.5mm",
-            bottom: "9mm",
-            left: "16.5mm"
-        }
-      });
-      await savePdf(verticalHtmlData, {
-        path: 'cmzc-vertical.pdf',
-        format: 'A4',
-        printBackground: true,
-        landscape: false,
-        margin: {
-            right: "9mm",
-            top: "16.5mm",
-            left: "9mm",
-            bottom: "16.5mm"
-        }
-      });
-    } else {
-      savePdf(htmlData, {
-        path: 'mypdf.pdf',
-        format: 'A4',
-        printBackground: true
       });
     }
 

@@ -140,6 +140,9 @@ html, body {
   box-sizing: border-box;
   color: black;
   font-size: 4mm;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .title span {
@@ -152,8 +155,6 @@ html, body {
 
 .voodoo .title span {
     line-height: 4mm;
-    top: 0.3mm;
-    vertical-align: -webkit-baseline-middle;
 }
 
 .title-reversed {
