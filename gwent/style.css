@@ -158,7 +158,20 @@ hr {
   justify-content: center;
 }
 
-.commander .effect span { display: inline; }
+.effect__icon {
+  display: inline-block;
+  height: 3mm;
+  width: 3.5mm;
+  vertical-align: bottom;
+  background-size: 4.5mm 4.5mm;
+  background-position: center center;
+}
+.effect__icon.catapult { background-image: url('http://localhost:8080/img/icon-catapult.png'); }
+.effect__icon.horn { background-image: url('http://localhost:8080/img/icon-horn.png'); }
+.effect__icon.freeze { background-image: url('http://localhost:8080/img/icon-freeze.png'); }
+.effect__icon.rain { background-image: url('http://localhost:8080/img/icon-rain.png'); }
+.effect__icon.fog { background-image: url('http://localhost:8080/img/icon-fog.png'); }
+
 
 .commander hr {
   top: 95mm;

@@ -162,7 +162,20 @@ hr {
   justify-content: center;
 }
 
-.commander .effect span { display: inline; }
+.effect__icon {
+  display: inline-block;
+  height: 3mm;
+  width: 3.5mm;
+  vertical-align: bottom;
+  background-size: 4.5mm 4.5mm;
+  background-position: center center;
+}
+.effect__icon.catapult { background-image: url('http://localhost:8080/img/icon-catapult.png'); }
+.effect__icon.horn { background-image: url('http://localhost:8080/img/icon-horn.png'); }
+.effect__icon.freeze { background-image: url('http://localhost:8080/img/icon-freeze.png'); }
+.effect__icon.rain { background-image: url('http://localhost:8080/img/icon-rain.png'); }
+.effect__icon.fog { background-image: url('http://localhost:8080/img/icon-fog.png'); }
+
 
 .commander hr {
   top: 95mm;
@@ -199,7 +212,7 @@ hr {
 
         <div class="subtitle"> Ocelová pěst</div></div>
         <hr>
-        <div class="effect">Zničí nejsilnější kartu (karty) <span class="catapult">xxx</span> nepřítele, pokud se celková síla jeho karet <span class="catapult">xxx</span> rovná alespoň 10.</div>
+        <div class="effect"><div>Zničí nejsilnější kartu (karty) <span class="effect__icon catapult"></span> nepřítele, pokud se celková síla jeho karet <span class="effect__icon catapult"></span> rovná alespoň 10.</div></div>
         <hr class="second">
         <div class="flavor">Krásný den na bitvu.</div>
       </div><div class="card north commander" style="background-image: url('http://localhost:8080/cards/Foltest -- Mistr obléhání.jpg');">
@@ -210,7 +223,7 @@ hr {
 
         <div class="subtitle"> Mistr obléhání</div></div>
         <hr>
-        <div class="effect">Zdvojnásobí sílu všem <span class="catapult">xxx</span> (pokud v dané řadě není také <span class="horn">xxx</span>).</div>
+        <div class="effect"><div>Zdvojnásobí sílu všem <span class="effect__icon catapult"></span> (pokud v dané řadě není také <span class="effect__icon horn"></span>).</div></div>
         <hr class="second">
         <div class="flavor">Dobře mířená balista zničí nejen nepřátelské hradby, ale také jejich morálku.</div>
       </div><div class="card north commander" style="background-image: url('http://localhost:8080/cards/Foltest -- Lord velitel Severu.jpg');">
@@ -221,7 +234,7 @@ hr {
 
         <div class="subtitle"> Lord velitel Severu</div></div>
         <hr>
-        <div class="effect">Odebere ze hry všechny aktivní účinky počasí (způsobené kartami <span class="freeze">xxx</span>, <span class="rain">xxx</span> či <span class="fog">xxx</span>).</div>
+        <div class="effect"><div>Odebere ze hry všechny aktivní účinky počasí (způsobené kartami <span class="effect__icon freeze"></span>, <span class="effect__icon rain"></span> či <span class="effect__icon fog"></span>).</div></div>
         <hr class="second">
         <div class="flavor">K čertu s vládci a jejich pletichami.<br>Já věřím zbraním svých pěšáků.</div>
       </div><div class="card north commander" style="background-image: url('http://localhost:8080/cards/Foltest -- Král Temerie.jpg');">
@@ -232,7 +245,7 @@ hr {
 
         <div class="subtitle"> Král Temerie</div></div>
         <hr>
-        <div class="effect">Vytáhneš z balíčku kartu <span class="fog">xxx</span> a hned ji vyneseš.</div>
+        <div class="effect"><div>Vytáhneš z balíčku kartu <span class="effect__icon fog"></span> a hned ji vyneseš.</div></div>
         <hr class="second">
         <div class="flavor">Je přirozené a krásné, když muž miluje svou sestru.</div>
       </div><div class="card north " style="background-image: url('http://localhost:8080/cards/Emiel Regis Rohellec Terzieff.jpg');">

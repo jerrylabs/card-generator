@@ -19,7 +19,7 @@ module.exports = (cardData) => {
 
         <div class="subtitle">${commanderSubtitle}</div></div>
         <hr>
-        <div class="effect">${effect.replace(/\[/g, '<span class="').replace(/\]/g, '">xxx</span>')}</div>
+        <div class="effect"><div>${effect.replace(/\[/g, '<span class="effect__icon ').replace(/\]/g, '"></span>')}</div></div>
         <hr class="second">
         <div class="flavor">${flavor}</div>
       </div>`
