@@ -27,7 +27,7 @@ module.exports = (cardData) => {
   }
 
   return (
-    `<div class="card ${faction} ${className}" style="background-image: url('http://localhost:8080/cards/${title}.${imageType}');">
+    `<div class="card ${faction} ${className.replace('hero', '')}" style="background-image: url('http://localhost:8080/cards/${title}.${imageType}');">
       ${className.includes('hero') ? '<div class="hero"></div>' : ''}
       <div class="background"></div>
       ${!!type ? `<div class="type">

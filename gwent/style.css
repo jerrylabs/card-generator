@@ -50,6 +50,9 @@ html, body {
   background-size: 63mm;
 }
 .north .background { background-image: url('http://localhost:8080/img/bg-blue.png'); }
+.nilfgaard .background { background-image: url('http://localhost:8080/img/bg-black.png'); }
+.scoiatael .background { background-image: url('http://localhost:8080/img/bg-green.png'); }
+.monsters .background { background-image: url('http://localhost:8080/img/bg-red.png'); }
 
 /* separator for better cutting */
 .card::after {

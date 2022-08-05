@@ -52,8 +52,12 @@ html, body {
   left: 0;
   border-radius: 4mm;
   background-size: 63mm;
+  z-index: 0;
 }
 .north .background { background-image: url('http://localhost:8080/img/bg-blue.png'); }
+.nilfgaard .background { background-image: url('http://localhost:8080/img/bg-black.png'); }
+.scoiatael .background { background-image: url('http://localhost:8080/img/bg-green.png'); }
+.monsters .background { background-image: url('http://localhost:8080/img/bg-red.png'); }
 
 /* separator for better cutting */
 .card::after {
@@ -228,6 +232,7 @@ hr {
   background-size: auto 100%;
   left: -1px;
   border-radius: 4mm;
+  z-index: -10;
 }
 
 .north .hero { background-image: url('http://localhost:8080/img/hero-silver.png'); }
@@ -237,127 +242,7 @@ hr {
     </head>
     <body>
       <div class="cards">
-        <div class="card north commander" style="background-image: url('http://localhost:8080/cards/Foltest -- Ocelová pěst.jpg');">
-        <div class="hero"></div>
-        <div class="power temeria"></div>
-        <div class="background"></div>
-        <div class="title">Foltest 
-
-        <div class="subtitle"> Ocelová pěst</div></div>
-        <hr>
-        <div class="effect"><div>Zničí nejsilnější kartu (karty) <span class="effect__icon catapult"></span> nepřítele, pokud se celková síla jeho karet <span class="effect__icon catapult"></span> rovná alespoň 10.</div></div>
-        <hr class="second">
-        <div class="flavor">Krásný den na bitvu.</div>
-      </div><div class="card north commander" style="background-image: url('http://localhost:8080/cards/Foltest -- Mistr obléhání.jpg');">
-        <div class="hero"></div>
-        <div class="power temeria"></div>
-        <div class="background"></div>
-        <div class="title">Foltest 
-
-        <div class="subtitle"> Mistr obléhání</div></div>
-        <hr>
-        <div class="effect"><div>Zdvojnásobí sílu všem <span class="effect__icon catapult"></span> (pokud v dané řadě není také <span class="effect__icon horn"></span>).</div></div>
-        <hr class="second">
-        <div class="flavor">Dobře mířená balista zničí nejen nepřátelské hradby, ale také jejich morálku.</div>
-      </div><div class="card north commander" style="background-image: url('http://localhost:8080/cards/Foltest -- Lord velitel Severu.jpg');">
-        <div class="hero"></div>
-        <div class="power temeria"></div>
-        <div class="background"></div>
-        <div class="title">Foltest 
-
-        <div class="subtitle"> Lord velitel Severu</div></div>
-        <hr>
-        <div class="effect"><div>Odebere ze hry všechny aktivní účinky počasí (způsobené kartami <span class="effect__icon freeze"></span>, <span class="effect__icon rain"></span> či <span class="effect__icon fog"></span>).</div></div>
-        <hr class="second">
-        <div class="flavor">K čertu s vládci a jejich pletichami.<br>Já věřím zbraním svých pěšáků.</div>
-      </div><div class="card north commander" style="background-image: url('http://localhost:8080/cards/Foltest -- Král Temerie.jpg');">
-        <div class="hero"></div>
-        <div class="power temeria"></div>
-        <div class="background"></div>
-        <div class="title">Foltest 
-
-        <div class="subtitle"> Král Temerie</div></div>
-        <hr>
-        <div class="effect"><div>Vytáhneš z balíčku kartu <span class="effect__icon fog"></span> a hned ji vyneseš.</div></div>
-        <hr class="second">
-        <div class="flavor">Je přirozené a krásné, když muž miluje svou sestru.</div>
-      </div><div class="card north " style="background-image: url('http://localhost:8080/cards/Emiel Regis Rohellec Terzieff.jpg');">
-      
-      <div class="background"></div>
-      <div class="type">
-        <img src="http://localhost:8080/img/icon-sword.png" />
-      </div>
-      
-      <div class="power">5</div>
-      <div class="title">Emiel Regis Rohellec Terzieff</div>
-      <hr>
-      <div class="flavor">Lidé, alespoň ti slušní, by mi říkali příšera. Krev sající zrůda.</div>
-    </div><div class="card north " style="background-image: url('http://localhost:8080/cards/Hovězí obranná jednotka.webp');">
-      
-      <div class="background"></div>
-      <div class="type">
-        <img src="http://localhost:8080/img/icon-cow.png" />
-      </div>
-      
-      <div class="power">8</div>
-      <div class="title">Hovězí obranná jednotka</div>
-      <hr>
-      <div class="flavor">Grrrrr!</div>
-    </div><div class="card north " style="background-image: url('http://localhost:8080/cards/Návnada.jpg');">
-      
-      <div class="background"></div>
-      
-      
-      <div class="power decoy"></div>
-      <div class="title">Návnada</div>
-      <hr>
-      <div class="flavor">Když ti dojdou sedláci, dají se šípy střílet docela dobře i do atrap.</div>
-    </div><div class="card north " style="background-image: url('http://localhost:8080/cards/Návnada.jpg');">
-      
-      <div class="background"></div>
-      
-      
-      <div class="power decoy"></div>
-      <div class="title">Návnada</div>
-      <hr>
-      <div class="flavor">Když ti dojdou sedláci, dají se šípy střílet docela dobře i do atrap.</div>
-    </div><div class="card north " style="background-image: url('http://localhost:8080/cards/Návnada.jpg');">
-      
-      <div class="background"></div>
-      
-      
-      <div class="power decoy"></div>
-      <div class="title">Návnada</div>
-      <hr>
-      <div class="flavor">Když ti dojdou sedláci, dají se šípy střílet docela dobře i do atrap.</div>
-    </div><div class="card north " style="background-image: url('http://localhost:8080/cards/Velitelský roh.jpg');">
-      
-      <div class="background"></div>
-      
-      
-      <div class="power horn"></div>
-      <div class="title">Velitelský roh</div>
-      <hr>
-      <div class="flavor">Plus jedna k morálce, mínus tři ke sluchu.</div>
-    </div><div class="card north " style="background-image: url('http://localhost:8080/cards/Velitelský roh.jpg');">
-      
-      <div class="background"></div>
-      
-      
-      <div class="power horn"></div>
-      <div class="title">Velitelský roh</div>
-      <hr>
-      <div class="flavor">Plus jedna k morálce, mínus tři ke sluchu.</div>
-    </div><div class="card north " style="background-image: url('http://localhost:8080/cards/Velitelský roh.jpg');">
-      
-      <div class="background"></div>
-      
-      
-      <div class="power horn"></div>
-      <div class="title">Velitelský roh</div>
-      <hr>
-      <div class="flavor">Plus jedna k morálce, mínus tři ke sluchu.</div>
-    </div><div class="card north " style="background-image: url('http://localhost:8080/cards/Sežehnutí.jpg');">
+        <div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Sežehnutí.jpg');">
       
       <div class="background"></div>
       
@@ -366,7 +251,7 @@ hr {
       <div class="title">Sežehnutí</div>
       <hr>
       <div class="flavor">Ohnivé sloupy promění i ty nejsilnější v popel. Všichni ostatní se třesou úžasem.</div>
-    </div><div class="card north " style="background-image: url('http://localhost:8080/cards/Sežehnutí.jpg');">
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Sežehnutí.jpg');">
       
       <div class="background"></div>
       
@@ -375,7 +260,7 @@ hr {
       <div class="title">Sežehnutí</div>
       <hr>
       <div class="flavor">Ohnivé sloupy promění i ty nejsilnější v popel. Všichni ostatní se třesou úžasem.</div>
-    </div><div class="card north " style="background-image: url('http://localhost:8080/cards/Sežehnutí.jpg');">
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Sežehnutí.jpg');">
       
       <div class="background"></div>
       
@@ -384,7 +269,7 @@ hr {
       <div class="title">Sežehnutí</div>
       <hr>
       <div class="flavor">Ohnivé sloupy promění i ty nejsilnější v popel. Všichni ostatní se třesou úžasem.</div>
-    </div><div class="card north " style="background-image: url('http://localhost:8080/cards/Jasná obloha.jpg');">
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Jasná obloha.jpg');">
       
       <div class="background"></div>
       
@@ -393,7 +278,7 @@ hr {
       <div class="title">Jasná obloha</div>
       <hr>
       <div class="flavor">Slunce svítí, Dromle! Slunce svítí! Třeba nám ještě zbývá nějaká naděje…</div>
-    </div><div class="card north " style="background-image: url('http://localhost:8080/cards/Jasná obloha.jpg');">
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Jasná obloha.jpg');">
       
       <div class="background"></div>
       
@@ -402,7 +287,7 @@ hr {
       <div class="title">Jasná obloha</div>
       <hr>
       <div class="flavor">Slunce svítí, Dromle! Slunce svítí! Třeba nám ještě zbývá nějaká naděje…</div>
-    </div><div class="card north " style="background-image: url('http://localhost:8080/cards/Jasná obloha.jpg');">
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Jasná obloha.jpg');">
       
       <div class="background"></div>
       
@@ -411,29 +296,61 @@ hr {
       <div class="title">Jasná obloha</div>
       <hr>
       <div class="flavor">Slunce svítí, Dromle! Slunce svítí! Třeba nám ještě zbývá nějaká naděje…</div>
-    </div><div class="card north " style="background-image: url('http://localhost:8080/cards/Trebuchet.jpg');">
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Velitelský roh.jpg');">
       
       <div class="background"></div>
-      <div class="type">
-        <img src="http://localhost:8080/img/icon-catapult.png" />
-      </div>
       
-      <div class="power">6</div>
-      <div class="title">Trebuchet</div>
+      
+      <div class="power horn"></div>
+      <div class="title">Velitelský roh</div>
       <hr>
-      <div class="flavor">Ten hrad se sám nezboří, že ne? Tak sem dovalte trebuchety!</div>
-    </div><div class="card north " style="background-image: url('http://localhost:8080/cards/Trebuchet 2.jpg');">
+      <div class="flavor">Plus jedna k morálce, mínus tři ke sluchu.</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Velitelský roh.jpg');">
       
       <div class="background"></div>
-      <div class="type">
-        <img src="http://localhost:8080/img/icon-catapult.png" />
-      </div>
       
-      <div class="power">6</div>
-      <div class="title">Trebuchet</div>
+      
+      <div class="power horn"></div>
+      <div class="title">Velitelský roh</div>
       <hr>
-      <div class="flavor">Ten hrad se sám nezboří, že ne? Tak sem dovalte trebuchety!</div>
-    </div><div class="card north " style="background-image: url('http://localhost:8080/cards/Prudký déšť.jpg');">
+      <div class="flavor">Plus jedna k morálce, mínus tři ke sluchu.</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Velitelský roh.jpg');">
+      
+      <div class="background"></div>
+      
+      
+      <div class="power horn"></div>
+      <div class="title">Velitelský roh</div>
+      <hr>
+      <div class="flavor">Plus jedna k morálce, mínus tři ke sluchu.</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Návnada.jpg');">
+      
+      <div class="background"></div>
+      
+      
+      <div class="power decoy"></div>
+      <div class="title">Návnada</div>
+      <hr>
+      <div class="flavor">Když ti dojdou sedláci, dají se šípy střílet docela dobře i do atrap.</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Návnada.jpg');">
+      
+      <div class="background"></div>
+      
+      
+      <div class="power decoy"></div>
+      <div class="title">Návnada</div>
+      <hr>
+      <div class="flavor">Když ti dojdou sedláci, dají se šípy střílet docela dobře i do atrap.</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Návnada.jpg');">
+      
+      <div class="background"></div>
+      
+      
+      <div class="power decoy"></div>
+      <div class="title">Návnada</div>
+      <hr>
+      <div class="flavor">Když ti dojdou sedláci, dají se šípy střílet docela dobře i do atrap.</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Prudký déšť.jpg');">
       
       <div class="background"></div>
       <div class="type">
@@ -444,154 +361,1656 @@ hr {
       <div class="title">Prudký déšť</div>
       <hr>
       <div class="flavor">I déšť v týhle zemi smrdí jak chcanky.</div>
-    </div><div class="card north " style="background-image: url('http://localhost:8080/cards/Talar.jpg');">
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Prudký déšť.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-catapult.png" />
+      </div>
+      
+      <div class="power rain"></div>
+      <div class="title">Prudký déšť</div>
+      <hr>
+      <div class="flavor">I déšť v týhle zemi smrdí jak chcanky.</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Prudký déšť.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-catapult.png" />
+      </div>
+      
+      <div class="power rain"></div>
+      <div class="title">Prudký déšť</div>
+      <hr>
+      <div class="flavor">I déšť v týhle zemi smrdí jak chcanky.</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Neproniknutelná mlha.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-arrow.png" />
+      </div>
+      
+      <div class="power fog"></div>
+      <div class="title">Neproniknutelná mlha</div>
+      <hr>
+      <div class="flavor">Sen každého dobrého velitele... a noční můra každého špatného.</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Neproniknutelná mlha.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-arrow.png" />
+      </div>
+      
+      <div class="power fog"></div>
+      <div class="title">Neproniknutelná mlha</div>
+      <hr>
+      <div class="flavor">Sen každého dobrého velitele... a noční můra každého špatného.</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Neproniknutelná mlha.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-arrow.png" />
+      </div>
+      
+      <div class="power fog"></div>
+      <div class="title">Neproniknutelná mlha</div>
+      <hr>
+      <div class="flavor">Sen každého dobrého velitele... a noční můra každého špatného.</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Štiplavý mráz.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-sword.png" />
+      </div>
+      
+      <div class="power freeze"></div>
+      <div class="title">Štiplavý mráz</div>
+      <hr>
+      <div class="flavor">Nejlepší na mrazu je, že mrtvoly nehnijí tak rychle.</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Štiplavý mráz.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-sword.png" />
+      </div>
+      
+      <div class="power freeze"></div>
+      <div class="title">Štiplavý mráz</div>
+      <hr>
+      <div class="flavor">Nejlepší na mrazu je, že mrtvoly nehnijí tak rychle.</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Štiplavý mráz.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-sword.png" />
+      </div>
+      
+      <div class="power freeze"></div>
+      <div class="title">Štiplavý mráz</div>
+      <hr>
+      <div class="flavor">Nejlepší na mrazu je, že mrtvoly nehnijí tak rychle.</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Schirrú.webp');">
       
       <div class="background"></div>
       <div class="type">
         <img src="http://localhost:8080/img/icon-catapult.png" />
       </div>
       <div class="effect">
-        <img src="http://localhost:8080/img/icon-eye.png" />
+        <img src="http://localhost:8080/img/icon-devil.png" />
       </div>
-      <div class="power">1</div>
-      <div class="title">Talar</div>
+      <div class="power">6</div>
+      <div class="title">Schirrú</div>
       <hr>
-      <div class="flavor">Naser si! My nejsme všichni zkurvení sukničkáři. Někteří z nás mají hloubku…</div>
-    </div><div class="card north " style="background-image: url('http://localhost:8080/cards/Léčitelka šedé korouhve.jpg');">
-      
+      <div class="flavor">Je čas podívat se smrti do tváře.</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Yennefer z Vengerbergu.jpg');">
+      <div class="hero"></div>
       <div class="background"></div>
       <div class="type">
-        <img src="http://localhost:8080/img/icon-catapult.png" />
+        <img src="http://localhost:8080/img/icon-arrow.png" />
       </div>
       <div class="effect">
         <img src="http://localhost:8080/img/icon-heart.png" />
       </div>
-      <div class="power">5</div>
-      <div class="title">Léčitelka šedé korouhve</div>
+      <div class="power">7</div>
+      <div class="title">Yennefer z Vengerbergu</div>
       <hr>
-      <div class="flavor">Přišij červené k červenému, bílé k bílému a všechno bude v pořádku.</div>
-    </div><div class="card north " style="background-image: url('http://localhost:8080/cards/Katapult.jpg');">
+      <div class="flavor">Oděná v černé a bílé, připomínala časné ráno v půli prosince.</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Vriheddský kadet.jpg');">
       
       <div class="background"></div>
       <div class="type">
-        <img src="http://localhost:8080/img/icon-catapult.png" />
+        <img src="http://localhost:8080/img/icon-arrow.png" />
+      </div>
+      
+      <div class="power">4</div>
+      <div class="title">Vriheddský kadet</div>
+      <hr>
+      <div class="flavor">Zášť hoří jasněji než jakýkoliv oheň a tne hlouběji než jakákoliv zbraň.</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Toruviel.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-arrow.png" />
+      </div>
+      
+      <div class="power">2</div>
+      <div class="title">Toruviel</div>
+      <hr>
+      <div class="flavor">Ráda bych tě zabila zblízka a koukala ti do očí... ale smrdíš mi, člověče.</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Milwa.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-arrow.png" />
       </div>
       <div class="effect">
-        <img src="http://localhost:8080/img/icon-hands.png" />
+        <img src="http://localhost:8080/img/icon-cross.png" />
       </div>
-      <div class="power">8</div>
-      <div class="title">Katapult</div>
+      <div class="power">10</div>
+      <div class="title">Milwa</div>
       <hr>
-      <div class="flavor">Bohové pomáhají těm,<br>kdo mají lepší katapulty.</div>
-    </div><div class="card north " style="background-image: url('http://localhost:8080/cards/Katapult 2.jpg');">
+      <div class="flavor">S každým šípem myslím na tátu. Byl by pyšnej. Myslím.</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Riordain.jpg');">
       
       <div class="background"></div>
       <div class="type">
-        <img src="http://localhost:8080/img/icon-catapult.png" />
+        <img src="http://localhost:8080/img/icon-arrow.png" />
       </div>
-      <div class="effect">
-        <img src="http://localhost:8080/img/icon-hands.png" />
-      </div>
-      <div class="power">9</div>
-      <div class="title">Katapult</div>
+      
+      <div class="power">1</div>
+      <div class="title">Riordain</div>
       <hr>
-      <div class="flavor">Bohové pomáhají těm,<br>kdo mají lepší katapulty.</div>
-    </div><div class="card north " style="background-image: url('http://localhost:8080/cards/Balista.jpg');">
+      <div class="flavor">Pohleď jim do očí, pas se na jejich hrůze. Pak zaútoč a zabij.</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Saesenthessis.jpg');">
+      <div class="hero"></div>
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-arrow.png" />
+      </div>
+      
+      <div class="power">10</div>
+      <div class="title">Saesenthessis</div>
+      <hr>
+      <div class="flavor">Krásná, čistá, zarputilá – dokonalá tvář povstání.</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Ida Amean aep Sivney.webp');">
       
       <div class="background"></div>
       <div class="type">
-        <img src="http://localhost:8080/img/icon-catapult.png" />
+        <img src="http://localhost:8080/img/icon-arrow.png" />
       </div>
       
       <div class="power">6</div>
-      <div class="title">Balista</div>
+      <div class="title">Ida Amean aep Sivney</div>
       <hr>
-      <div class="flavor">„Většinou jim dáváme ženské jméno.“<br>„Třeba Jana?“ „Spíš třeba Berta.“</div>
-    </div><div class="card north " style="background-image: url('http://localhost:8080/cards/Balista 2.jpg');">
+      <div class="flavor">Jsem Vědoucí. Má moc spočívá v tom, že mám znalosti. Ne v tom, že je sdílím.</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Iorweth.webp');">
+      <div class="hero"></div>
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-arrow.png" />
+      </div>
+      
+      <div class="power">10</div>
+      <div class="title">Iorweth</div>
+      <hr>
+      <div class="flavor">Má zatrceně dobrou mušku. Na někoho, kdo má jen nedno oko.</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Havekarská léčitelka.jpg');">
       
       <div class="background"></div>
       <div class="type">
-        <img src="http://localhost:8080/img/icon-catapult.png" />
+        <img src="http://localhost:8080/img/icon-arrow.png" />
+      </div>
+      <div class="effect">
+        <img src="http://localhost:8080/img/icon-heart.png" />
+      </div>
+      <div class="power">0</div>
+      <div class="title">Havekarská léčitelka</div>
+      <hr>
+      <div class="flavor">Jasně, že ti to zašiju. Ale zadarmo to nebude.</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Havekarská léčitelka.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-arrow.png" />
+      </div>
+      <div class="effect">
+        <img src="http://localhost:8080/img/icon-heart.png" />
+      </div>
+      <div class="power">0</div>
+      <div class="title">Havekarská léčitelka</div>
+      <hr>
+      <div class="flavor">Jasně, že ti to zašiju. Ale zadarmo to nebude.</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Havekarská léčitelka.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-arrow.png" />
+      </div>
+      <div class="effect">
+        <img src="http://localhost:8080/img/icon-heart.png" />
+      </div>
+      <div class="power">0</div>
+      <div class="title">Havekarská léčitelka</div>
+      <hr>
+      <div class="flavor">Jasně, že ti to zašiju. Ale zadarmo to nebude.</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Eithné.jpg');">
+      <div class="hero"></div>
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-arrow.png" />
+      </div>
+      
+      <div class="power">10</div>
+      <div class="title">Eithné</div>
+      <hr>
+      <div class="flavor">Královna dryád má oči z taveného stříbra a srdce ze za studena kované oceli.</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Elfský harcovník.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-arrow.png" />
+      </div>
+      <div class="effect">
+        <img src="http://localhost:8080/img/icon-helms.png" />
+      </div>
+      <div class="power">2</div>
+      <div class="title">Elfský harcovník</div>
+      <hr>
+      <div class="flavor">Přestaň sebou mlít, ty posranej ušáku – nemůžu na tebe pořádně zamířit!</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Elfský harcovník.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-arrow.png" />
+      </div>
+      <div class="effect">
+        <img src="http://localhost:8080/img/icon-helms.png" />
+      </div>
+      <div class="power">2</div>
+      <div class="title">Elfský harcovník</div>
+      <hr>
+      <div class="flavor">Přestaň sebou mlít, ty posranej ušáku – nemůžu na tebe pořádně zamířit!</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Elfský harcovník.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-arrow.png" />
+      </div>
+      <div class="effect">
+        <img src="http://localhost:8080/img/icon-helms.png" />
+      </div>
+      <div class="power">2</div>
+      <div class="title">Elfský harcovník</div>
+      <hr>
+      <div class="flavor">Přestaň sebou mlít, ty posranej ušáku – nemůžu na tebe pořádně zamířit!</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Střelec z Dol Blathanna.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-arrow.png" />
+      </div>
+      
+      <div class="power">4</div>
+      <div class="title">Střelec z Dol Blathanna</div>
+      <hr>
+      <div class="flavor">Ještě jeden krok, d'hoine. Šíp mezi očima ti bude slušet.</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Vriheddská brigáda.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-bow-and-sword.png" />
+      </div>
+      <div class="effect">
+        <img src="http://localhost:8080/img/icon-recycle.png" />
+      </div>
+      <div class="power">5</div>
+      <div class="title">Vriheddská brigáda</div>
+      <hr>
+      <div class="flavor">Vrihedd? Co to znamená?' 'Potíže.'</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Vriheddská brigáda.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-bow-and-sword.png" />
+      </div>
+      <div class="effect">
+        <img src="http://localhost:8080/img/icon-recycle.png" />
+      </div>
+      <div class="power">5</div>
+      <div class="title">Vriheddská brigáda</div>
+      <hr>
+      <div class="flavor">Vrihedd? Co to znamená?' 'Potíže.'</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Yaevinn.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-bow-and-sword.png" />
+      </div>
+      <div class="effect">
+        <img src="http://localhost:8080/img/icon-recycle.png" />
+      </div>
+      <div class="power">6</div>
+      <div class="title">Yaevinn</div>
+      <hr>
+      <div class="flavor">Jsme kapky deště, které se spojují v silnou bouři.</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Ciaran aep Easnillien.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-bow-and-sword.png" />
+      </div>
+      <div class="effect">
+        <img src="http://localhost:8080/img/icon-recycle.png" />
+      </div>
+      <div class="power">3</div>
+      <div class="title">Ciaran aep Easnillien</div>
+      <hr>
+      <div class="flavor">Naši cestou ke svobodě nebude diplomacie, ale krveprolití.</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Barclay Els.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-bow-and-sword.png" />
+      </div>
+      <div class="effect">
+        <img src="http://localhost:8080/img/icon-recycle.png" />
+      </div>
+      <div class="power">6</div>
+      <div class="title">Barclay Els</div>
+      <hr>
+      <div class="flavor">Že naša medovina jak chcanky smrdí? Snadná rada – fláknu ti jednu do rypáku!</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Filavandrel aén Fidháil.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-bow-and-sword.png" />
+      </div>
+      <div class="effect">
+        <img src="http://localhost:8080/img/icon-recycle.png" />
+      </div>
+      <div class="power">6</div>
+      <div class="title">Filavandrel aén Fidháil</div>
+      <hr>
+      <div class="flavor">Ačkoliv je nás teď zoufale málo, naše srdce planou jasněji než kdy dřív.</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Zvěd z Dol Blathanna.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-bow-and-sword.png" />
+      </div>
+      <div class="effect">
+        <img src="http://localhost:8080/img/icon-recycle.png" />
+      </div>
+      <div class="power">6</div>
+      <div class="title">Zvěd z Dol Blathanna</div>
+      <hr>
+      <div class="flavor">Stopují jako ohaři, běhají jako srny a zabíjejí jako chladnokrevní parchanti.</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Zvěd z Dol Blathanna.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-bow-and-sword.png" />
+      </div>
+      <div class="effect">
+        <img src="http://localhost:8080/img/icon-recycle.png" />
+      </div>
+      <div class="power">6</div>
+      <div class="title">Zvěd z Dol Blathanna</div>
+      <hr>
+      <div class="flavor">Stopují jako ohaři, běhají jako srny a zabíjejí jako chladnokrevní parchanti.</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Zvěd z Dol Blathanna.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-bow-and-sword.png" />
+      </div>
+      <div class="effect">
+        <img src="http://localhost:8080/img/icon-recycle.png" />
+      </div>
+      <div class="power">6</div>
+      <div class="title">Zvěd z Dol Blathanna</div>
+      <hr>
+      <div class="flavor">Stopují jako ohaři, běhají jako srny a zabíjejí jako chladnokrevní parchanti.</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Zoltan Chivay.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-sword.png" />
+      </div>
+      
+      <div class="power">5</div>
+      <div class="title">Zoltan Chivay</div>
+      <hr>
+      <div class="flavor">Trpaslík by prý kvůli kamarádovi i visel. A Zoltan není žádnou výjimkou.</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Triss Ranuncul.jpg');">
+      <div class="hero"></div>
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-sword.png" />
       </div>
       
       <div class="power">7</div>
-      <div class="title">Balista</div>
+      <div class="title">Triss Ranuncul</div>
       <hr>
-      <div class="flavor">„Většinou jim dáváme ženské jméno.“<br>„Třeba Jana?“ „Spíš třeba Berta.“</div>
-    </div><div class="card north " style="background-image: url('http://localhost:8080/cards/Obléhací věž.jpg');">
+      <div class="flavor">Dokážu se o sebe postarat. Věř mi.</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Vesemir.jpg');">
       
       <div class="background"></div>
       <div class="type">
-        <img src="http://localhost:8080/img/icon-catapult.png" />
+        <img src="http://localhost:8080/img/icon-sword.png" />
       </div>
       
       <div class="power">6</div>
-      <div class="title">Obléhací věž</div>
+      <div class="title">Vesemir</div>
       <hr>
-      <div class="flavor">Mám rád hluk obléhacích věží po ránu.<br>Zní jako vítězství.</div>
-    </div><div class="card north " style="background-image: url('http://localhost:8080/cards/Kaedwenský mistr ženista.jpg');">
+      <div class="flavor">Jestli tě mají pověsit, požádej o vodu. Než ji donesou, může se stát cokoliv.</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Villentretenmerth.jpg');">
       
       <div class="background"></div>
       <div class="type">
-        <img src="http://localhost:8080/img/icon-catapult.png" />
+        <img src="http://localhost:8080/img/icon-sword.png" />
+      </div>
+      <div class="effect">
+        <img src="http://localhost:8080/img/icon-devil.png" />
+      </div>
+      <div class="power">7</div>
+      <div class="title">Villentretenmerth</div>
+      <hr>
+      <div class="flavor">Taky si říká Borch Tři Kavky... jména mu moc nejdou.</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Isengrim Faoiltiarna.webp');">
+      <div class="hero"></div>
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-sword.png" />
       </div>
       <div class="effect">
         <img src="http://localhost:8080/img/icon-cross.png" />
       </div>
-      <div class="power">1</div>
-      <div class="title">Kaedwenský mistr ženista</div>
+      <div class="power">10</div>
+      <div class="title">Isengrim Faoiltiarna</div>
       <hr>
-      <div class="flavor">„Musíš překalibrovat rameno o pět stupňů.“<br>„Co musím kohože o co?“</div>
-    </div><div class="card north " style="background-image: url('http://localhost:8080/cards/Kaedwenský mistr ženista 2.jpg');">
+      <div class="flavor">Dojde jim to, jakmile spatří mou jizvu: uvědomění si okamžité smrti.</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Makamští obránci.webp');">
       
       <div class="background"></div>
       <div class="type">
-        <img src="http://localhost:8080/img/icon-catapult.png" />
+        <img src="http://localhost:8080/img/icon-sword.png" />
+      </div>
+      
+      <div class="power">5</div>
+      <div class="title">Makamští obránci</div>
+      <hr>
+      <div class="flavor">Řikam ti, my sa rodíme pro boj – sekáme ich rychtyk v kolenech!</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Makamští obránci.webp');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-sword.png" />
+      </div>
+      
+      <div class="power">5</div>
+      <div class="title">Makamští obránci</div>
+      <hr>
+      <div class="flavor">Řikam ti, my sa rodíme pro boj – sekáme ich rychtyk v kolenech!</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Makamští obránci.webp');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-sword.png" />
+      </div>
+      
+      <div class="power">5</div>
+      <div class="title">Makamští obránci</div>
+      <hr>
+      <div class="flavor">Řikam ti, my sa rodíme pro boj – sekáme ich rychtyk v kolenech!</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Makamští obránci.webp');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-sword.png" />
+      </div>
+      
+      <div class="power">5</div>
+      <div class="title">Makamští obránci</div>
+      <hr>
+      <div class="flavor">Řikam ti, my sa rodíme pro boj – sekáme ich rychtyk v kolenech!</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Makamští obránci.webp');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-sword.png" />
+      </div>
+      
+      <div class="power">5</div>
+      <div class="title">Makamští obránci</div>
+      <hr>
+      <div class="flavor">Řikam ti, my sa rodíme pro boj – sekáme ich rychtyk v kolenech!</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Havekarská podpora.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-sword.png" />
       </div>
       <div class="effect">
-        <img src="http://localhost:8080/img/icon-cross.png" />
-      </div>
-      <div class="power">2</div>
-      <div class="title">Kaedwenský mistr ženista</div>
-      <hr>
-      <div class="flavor">„Musíš překalibrovat rameno o pět stupňů.“<br>„Co musím kohože o co?“</div>
-    </div><div class="card north " style="background-image: url('http://localhost:8080/cards/Kaedwenský mistr ženista 3.jpg');">
-      
-      <div class="background"></div>
-      <div class="type">
-        <img src="http://localhost:8080/img/icon-catapult.png" />
-      </div>
-      <div class="effect">
-        <img src="http://localhost:8080/img/icon-cross.png" />
-      </div>
-      <div class="power">3</div>
-      <div class="title">Kaedwenský mistr ženista</div>
-      <hr>
-      <div class="flavor">„Musíš překalibrovat rameno o pět stupňů.“<br>„Co musím kohože o co?“</div>
-    </div><div class="card north " style="background-image: url('http://localhost:8080/cards/Dethmold.jpg');">
-      
-      <div class="background"></div>
-      <div class="type">
-        <img src="http://localhost:8080/img/icon-arrow.png" />
-      </div>
-      
-      <div class="power">6</div>
-      <div class="title">Dethmold</div>
-      <hr>
-      <div class="flavor">Jednou jsem donutil vězně vyzvrátit vlastní vnitřnosti… To byly časy…</div>
-    </div><div class="card north titleSmall" style="background-image: url('http://localhost:8080/cards/Drakobijec crinfridských sekáčů.jpg');">
-      
-      <div class="background"></div>
-      <div class="type">
-        <img src="http://localhost:8080/img/icon-arrow.png" />
-      </div>
-      <div class="effect">
-        <img src="http://localhost:8080/img/icon-hands.png" />
+        <img src="http://localhost:8080/img/icon-helms.png" />
       </div>
       <div class="power">5</div>
-      <div class="title">Drakobijec crinfridských sekáčů</div>
+      <div class="title">Havekarská podpora</div>
       <hr>
-      <div class="flavor">Poslední dobou jsem s příšerami neměl moc štěstí. Tak jsem narukoval.</div>
+      <div class="flavor">Bojuju za kohokoliv, kdo platí. Nebo za toho, koho je snadnější okrást.</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Havekarská podpora.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-sword.png" />
+      </div>
+      <div class="effect">
+        <img src="http://localhost:8080/img/icon-helms.png" />
+      </div>
+      <div class="power">5</div>
+      <div class="title">Havekarská podpora</div>
+      <hr>
+      <div class="flavor">Bojuju za kohokoliv, kdo platí. Nebo za toho, koho je snadnější okrást.</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Havekarská podpora.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-sword.png" />
+      </div>
+      <div class="effect">
+        <img src="http://localhost:8080/img/icon-helms.png" />
+      </div>
+      <div class="power">5</div>
+      <div class="title">Havekarská podpora</div>
+      <hr>
+      <div class="flavor">Bojuju za kohokoliv, kdo platí. Nebo za toho, koho je snadnější okrást.</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Marigold.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-sword.png" />
+      </div>
+      <div class="effect">
+        <img src="http://localhost:8080/img/icon-music.png" />
+      </div>
+      <div class="power">2</div>
+      <div class="title">Marigold</div>
+      <hr>
+      <div class="flavor">Marigolde, jsi cynik, proutník, kurevník, lhář – a můj nejlepší přítel.</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Cirilla.webp');">
+      <div class="hero"></div>
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-sword.png" />
+      </div>
+      
+      <div class="power">15</div>
+      <div class="title">Cirilla</div>
+      <hr>
+      <div class="flavor">Víš, kdy pohádky přestávají být pohádkami? Když jim lidé začnou věřit.</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Emiel Regis Rohellec Terzieff.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-sword.png" />
+      </div>
+      
+      <div class="power">5</div>
+      <div class="title">Emiel Regis Rohellec Terzieff</div>
+      <hr>
+      <div class="flavor">Lidé, alespoň ti slušní, by mi říkali příšera. Krev sající zrůda.</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Geralt z Rivie.jpg');">
+      <div class="hero"></div>
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-sword.png" />
+      </div>
+      
+      <div class="power">15</div>
+      <div class="title">Geralt z Rivie</div>
+      <hr>
+      <div class="flavor">Jestli má svět zachránit tohle, bude lepší nechat svět zemřít.</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Avallac'h.jpg');">
+      <div class="hero"></div>
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-sword.png" />
+      </div>
+      <div class="effect">
+        <img src="http://localhost:8080/img/icon-eye.png" />
+      </div>
+      <div class="power">0</div>
+      <div class="title">Avallac'h</div>
+      <hr>
+      <div class="flavor">Věštit budoucnost není žádná věda. Věda je věštit přesně.</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Trpasličí harcovník.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-sword.png" />
+      </div>
+      <div class="effect">
+        <img src="http://localhost:8080/img/icon-helms.png" />
+      </div>
+      <div class="power">3</div>
+      <div class="title">Trpasličí harcovník</div>
+      <hr>
+      <div class="flavor">Celičký život s krumpáčem dřu. Válečný topor bude snazší.</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Trpasličí harcovník.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-sword.png" />
+      </div>
+      <div class="effect">
+        <img src="http://localhost:8080/img/icon-helms.png" />
+      </div>
+      <div class="power">3</div>
+      <div class="title">Trpasličí harcovník</div>
+      <hr>
+      <div class="flavor">Celičký život s krumpáčem dřu. Válečný topor bude snazší.</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Trpasličí harcovník.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-sword.png" />
+      </div>
+      <div class="effect">
+        <img src="http://localhost:8080/img/icon-helms.png" />
+      </div>
+      <div class="power">3</div>
+      <div class="title">Trpasličí harcovník</div>
+      <hr>
+      <div class="flavor">Celičký život s krumpáčem dřu. Válečný topor bude snazší.</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Kráva.webp');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-arrow.png" />
+      </div>
+      <div class="effect">
+        <img src="http://localhost:8080/img/icon-cow.png" />
+      </div>
+      <div class="power">0</div>
+      <div class="title">Kráva</div>
+      <hr>
+      <div class="flavor">Bůůů!</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Dennic Cranmer.webp');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-sword.png" />
+      </div>
+      
+      <div class="power">6</div>
+      <div class="title">Dennic Cranmer</div>
+      <hr>
+      <div class="flavor">Vím, jak plnit rozkazy, takže si ty rady nech pro sebe.</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Hovězí obranná jednotka.webp');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-cow.png" />
+      </div>
+      
+      <div class="power">8</div>
+      <div class="title">Hovězí obranná jednotka</div>
+      <hr>
+      <div class="flavor">Grrrrr!</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Francesca Findabair – Královna Dol Blathanna.webp');">
+      
+      <div class="background"></div>
+      
+      <div class="effect">
+        <img src="http://localhost:8080/img/icon-Zničí nepříteli [sword] kartu s nejvyšší hodnotou, pokud je celková síla jeho [sword] karet vyšší než 10..png" />
+      </div>
+      <div class="power "></div>
+      <div class="title">Francesca Findabair – Královna Dol Blathanna</div>
+      <hr>
+      <div class="flavor">Abychom mohli žít v míru, musíme zabíjet. To je kruté finále lidského útlaku.</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Francesca Findabair – Sedmikráska z Dolin.webp');">
+      
+      <div class="background"></div>
+      
+      <div class="effect">
+        <img src="http://localhost:8080/img/icon-Na začátku bitvy si lízneš jednu kartu navíc..png" />
+      </div>
+      <div class="power "></div>
+      <div class="title">Francesca Findabair – Sedmikráska z Dolin</div>
+      <hr>
+      <div class="flavor">Starší rasy už zapomněly víc,<br>než by kdy lidé mohli vědět.</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Francesca Findabair – Čistokrevná elfka.webp');">
+      
+      <div class="background"></div>
+      
+      <div class="effect">
+        <img src="http://localhost:8080/img/icon-Vytáhneš z balíčku kartu [freeze] a hned ji vyneseš..png" />
+      </div>
+      <div class="power "></div>
+      <div class="title">Francesca Findabair – Čistokrevná elfka</div>
+      <hr>
+      <div class="flavor">Dol Blathanna může a musí zůstat nezávislým útočištěm pro Aen Seidhe.</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Francesca Findabair – Nádherná.webp');">
+      
+      <div class="background"></div>
+      
+      <div class="effect">
+        <img src="http://localhost:8080/img/icon-Zdvojnásobí sílu všem [arrow] (pokud v dané řadě není také [horn])..png" />
+      </div>
+      <div class="power "></div>
+      <div class="title">Francesca Findabair – Nádherná</div>
+      <hr>
+      <div class="flavor">Nenech svou mušku rozptýlit mou krásou.</div>
+    </div><div class="card scoiatael " style="background-image: url('http://localhost:8080/cards/Francesca Findabair – Kaděje Aen Seidheanna.webp');">
+      
+      <div class="background"></div>
+      
+      <div class="effect">
+        <img src="http://localhost:8080/img/icon-Přesune [recycle] do řady, kde budou mít největší možnou sílu (jednotky, které již jsou v optimální řadě, přesunovat nebude)..png" />
+      </div>
+      <div class="power "></div>
+      <div class="title">Francesca Findabair – Kaděje Aen Seidheanna</div>
+      <hr>
+      <div class="flavor"></div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Sežehnutí.jpg');">
+      
+      <div class="background"></div>
+      
+      
+      <div class="power skull"></div>
+      <div class="title">Sežehnutí</div>
+      <hr>
+      <div class="flavor">Ohnivé sloupy promění i ty nejsilnější v popel. Všichni ostatní se třesou úžasem.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Sežehnutí.jpg');">
+      
+      <div class="background"></div>
+      
+      
+      <div class="power skull"></div>
+      <div class="title">Sežehnutí</div>
+      <hr>
+      <div class="flavor">Ohnivé sloupy promění i ty nejsilnější v popel. Všichni ostatní se třesou úžasem.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Sežehnutí.jpg');">
+      
+      <div class="background"></div>
+      
+      
+      <div class="power skull"></div>
+      <div class="title">Sežehnutí</div>
+      <hr>
+      <div class="flavor">Ohnivé sloupy promění i ty nejsilnější v popel. Všichni ostatní se třesou úžasem.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Jasná obloha.jpg');">
+      
+      <div class="background"></div>
+      
+      
+      <div class="power sun"></div>
+      <div class="title">Jasná obloha</div>
+      <hr>
+      <div class="flavor">Slunce svítí, Dromle! Slunce svítí! Třeba nám ještě zbývá nějaká naděje…</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Jasná obloha.jpg');">
+      
+      <div class="background"></div>
+      
+      
+      <div class="power sun"></div>
+      <div class="title">Jasná obloha</div>
+      <hr>
+      <div class="flavor">Slunce svítí, Dromle! Slunce svítí! Třeba nám ještě zbývá nějaká naděje…</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Jasná obloha.jpg');">
+      
+      <div class="background"></div>
+      
+      
+      <div class="power sun"></div>
+      <div class="title">Jasná obloha</div>
+      <hr>
+      <div class="flavor">Slunce svítí, Dromle! Slunce svítí! Třeba nám ještě zbývá nějaká naděje…</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Velitelský roh.jpg');">
+      
+      <div class="background"></div>
+      
+      
+      <div class="power horn"></div>
+      <div class="title">Velitelský roh</div>
+      <hr>
+      <div class="flavor">Plus jedna k morálce, mínus tři ke sluchu.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Velitelský roh.jpg');">
+      
+      <div class="background"></div>
+      
+      
+      <div class="power horn"></div>
+      <div class="title">Velitelský roh</div>
+      <hr>
+      <div class="flavor">Plus jedna k morálce, mínus tři ke sluchu.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Velitelský roh.jpg');">
+      
+      <div class="background"></div>
+      
+      
+      <div class="power horn"></div>
+      <div class="title">Velitelský roh</div>
+      <hr>
+      <div class="flavor">Plus jedna k morálce, mínus tři ke sluchu.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Návnada.jpg');">
+      
+      <div class="background"></div>
+      
+      
+      <div class="power decoy"></div>
+      <div class="title">Návnada</div>
+      <hr>
+      <div class="flavor">Když ti dojdou sedláci, dají se šípy střílet docela dobře i do atrap.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Návnada.jpg');">
+      
+      <div class="background"></div>
+      
+      
+      <div class="power decoy"></div>
+      <div class="title">Návnada</div>
+      <hr>
+      <div class="flavor">Když ti dojdou sedláci, dají se šípy střílet docela dobře i do atrap.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Návnada.jpg');">
+      
+      <div class="background"></div>
+      
+      
+      <div class="power decoy"></div>
+      <div class="title">Návnada</div>
+      <hr>
+      <div class="flavor">Když ti dojdou sedláci, dají se šípy střílet docela dobře i do atrap.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Prudký déšť.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-catapult.png" />
+      </div>
+      
+      <div class="power rain"></div>
+      <div class="title">Prudký déšť</div>
+      <hr>
+      <div class="flavor">I déšť v týhle zemi smrdí jak chcanky.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Prudký déšť.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-catapult.png" />
+      </div>
+      
+      <div class="power rain"></div>
+      <div class="title">Prudký déšť</div>
+      <hr>
+      <div class="flavor">I déšť v týhle zemi smrdí jak chcanky.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Prudký déšť.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-catapult.png" />
+      </div>
+      
+      <div class="power rain"></div>
+      <div class="title">Prudký déšť</div>
+      <hr>
+      <div class="flavor">I déšť v týhle zemi smrdí jak chcanky.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Neproniknutelná mlha.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-arrow.png" />
+      </div>
+      
+      <div class="power fog"></div>
+      <div class="title">Neproniknutelná mlha</div>
+      <hr>
+      <div class="flavor">Sen každého dobrého velitele... a noční můra každého špatného.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Neproniknutelná mlha.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-arrow.png" />
+      </div>
+      
+      <div class="power fog"></div>
+      <div class="title">Neproniknutelná mlha</div>
+      <hr>
+      <div class="flavor">Sen každého dobrého velitele... a noční můra každého špatného.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Neproniknutelná mlha.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-arrow.png" />
+      </div>
+      
+      <div class="power fog"></div>
+      <div class="title">Neproniknutelná mlha</div>
+      <hr>
+      <div class="flavor">Sen každého dobrého velitele... a noční můra každého špatného.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Štiplavý mráz.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-sword.png" />
+      </div>
+      
+      <div class="power freeze"></div>
+      <div class="title">Štiplavý mráz</div>
+      <hr>
+      <div class="flavor">Nejlepší na mrazu je, že mrtvoly nehnijí tak rychle.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Štiplavý mráz.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-sword.png" />
+      </div>
+      
+      <div class="power freeze"></div>
+      <div class="title">Štiplavý mráz</div>
+      <hr>
+      <div class="flavor">Nejlepší na mrazu je, že mrtvoly nehnijí tak rychle.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Štiplavý mráz.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-sword.png" />
+      </div>
+      
+      <div class="power freeze"></div>
+      <div class="title">Štiplavý mráz</div>
+      <hr>
+      <div class="flavor">Nejlepší na mrazu je, že mrtvoly nehnijí tak rychle.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Kráva.webp');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-arrow.png" />
+      </div>
+      <div class="effect">
+        <img src="http://localhost:8080/img/icon-cow.png" />
+      </div>
+      <div class="power">0</div>
+      <div class="title">Kráva</div>
+      <hr>
+      <div class="flavor">Bůůů!</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Ohnivý elementál.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-catapult.png" />
+      </div>
+      
+      <div class="power">6</div>
+      <div class="title">Ohnivý elementál</div>
+      <hr>
+      <div class="flavor">Oheň je tak rozkošný.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Ledový obr.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-catapult.png" />
+      </div>
+      
+      <div class="power">5</div>
+      <div class="title">Ledový obr</div>
+      <hr>
+      <div class="flavor">Uprchl jsem jednou v životě. Před ledovým obrem. A vůbec se za to nestydím.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Zemní elementál.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-catapult.png" />
+      </div>
+      
+      <div class="power">6</div>
+      <div class="title">Zemní elementál</div>
+      <hr>
+      <div class="flavor">Jak bojovat se zemním elementálem? Nijak. Uteč. Co nejrychleji.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Krabopavoučí kolos.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-catapult.png" />
+      </div>
+      <div class="effect">
+        <img src="http://localhost:8080/img/icon-helms.png" />
+      </div>
+      <div class="power">6</div>
+      <div class="title">Krabopavoučí kolos</div>
+      <hr>
+      <div class="flavor">Vzácný poddruh krabopavouka. Velký jako slon, ale mnohem tužší.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Wyverna.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-arrow.png" />
+      </div>
+      
+      <div class="power">2</div>
+      <div class="title">Wyverna</div>
+      <hr>
+      <div class="flavor">Představ si křížence okřídleného hada a noční můry. Wyverny jsou horší.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Yennefer z Vengerbergu.jpg');">
+      <div class="hero"></div>
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-arrow.png" />
+      </div>
+      <div class="effect">
+        <img src="http://localhost:8080/img/icon-heart.png" />
+      </div>
+      <div class="power">7</div>
+      <div class="title">Yennefer z Vengerbergu</div>
+      <hr>
+      <div class="flavor">Oděná v černé a bílé, připomínala časné ráno v půli prosince.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Lešij.jpg');">
+      <div class="hero"></div>
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-arrow.png" />
+      </div>
+      
+      <div class="power">10</div>
+      <div class="title">Lešij</div>
+      <hr>
+      <div class="flavor">V těchto lesích nikdy nelovíme.<br>Ani kdyby měla celá vesnice umřít hladem.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Hrobice.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-arrow.png" />
+      </div>
+      
+      <div class="power">5</div>
+      <div class="title">Hrobice</div>
+      <hr>
+      <div class="flavor">Jejich dlouhé jazyky slouží k srkání morku – a bičování obětí.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Chrlič.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-arrow.png" />
+      </div>
+      
+      <div class="power">2</div>
+      <div class="title">Chrlič</div>
+      <hr>
+      <div class="flavor">Noční můra prastarých sochařů oživlá díky mágům.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Endriaga.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-arrow.png" />
+      </div>
+      
+      <div class="power">2</div>
+      <div class="title">Endriaga</div>
+      <hr>
+      <div class="flavor">Hnízdo! Znič to hnízdo, nebo sem ty hajzlové pořád polezou!</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Kurolišek.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-arrow.png" />
+      </div>
+      
+      <div class="power">2</div>
+      <div class="title">Kurolišek</div>
+      <hr>
+      <div class="flavor">Rodí se z vejce, jež snesl kohout...<br>pokud věříte těm vidláckým žvástům.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Obří ropucha.webp');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-arrow.png" />
+      </div>
+      <div class="effect">
+        <img src="http://localhost:8080/img/icon-devil.png" />
+      </div>
+      <div class="power">6</div>
+      <div class="title">Obří ropucha</div>
+      <hr>
+      <div class="flavor">Velká. Zlá. Hnusná.<br>Dřepí ve stokách.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Kajran.jpg');">
+      <div class="hero"></div>
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-bow-and-sword.png" />
+      </div>
+      <div class="effect">
+        <img src="http://localhost:8080/img/icon-recycle cross.png" />
+      </div>
+      <div class="power">8</div>
+      <div class="title">Kajran</div>
+      <hr>
+      <div class="flavor">Zabít kajrana? Prosté. Vem nejlepší meč... prodej ho a najmi si zaklínače.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Harpyje.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-bow-and-sword.png" />
+      </div>
+      <div class="effect">
+        <img src="http://localhost:8080/img/icon-recycle.png" />
+      </div>
+      <div class="power">2</div>
+      <div class="title">Harpyje</div>
+      <hr>
+      <div class="flavor">Existuje mnoho druhů harpyjí a všechny kradou jako straky.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Harpyje celaeno.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-bow-and-sword.png" />
+      </div>
+      <div class="effect">
+        <img src="http://localhost:8080/img/icon-recycle.png" />
+      </div>
+      <div class="power">2</div>
+      <div class="title">Harpyje celaeno</div>
+      <hr>
+      <div class="flavor">Obyčejné harpyje se živí mršinami. Harpyje celaeno... se živí sny.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Triss Ranuncul.jpg');">
+      <div class="hero"></div>
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-sword.png" />
+      </div>
+      
+      <div class="power">7</div>
+      <div class="title">Triss Ranuncul</div>
+      <hr>
+      <div class="flavor">Dokážu se o sebe postarat. Věř mi.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Upír: Bruxa.webp');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-sword.png" />
+      </div>
+      <div class="effect">
+        <img src="http://localhost:8080/img/icon-recycle.png" />
+      </div>
+      <div class="power">4</div>
+      <div class="title">Upír: Bruxa</div>
+      <hr>
+      <div class="flavor">Bruxu můžeš zabít i kolíkem – tedy pokud je dlouhý jako bidlo.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Upír: Ekimara.webp');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-sword.png" />
+      </div>
+      <div class="effect">
+        <img src="http://localhost:8080/img/icon-recycle.png" />
+      </div>
+      <div class="power">4</div>
+      <div class="title">Upír: Ekimara</div>
+      <hr>
+      <div class="flavor">Kdo by pomyslel, že přerostlí netopýři budou prahnout po křiklavých špercích?</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Upír: Fleder.webp');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-sword.png" />
+      </div>
+      <div class="effect">
+        <img src="http://localhost:8080/img/icon-recycle.png" />
+      </div>
+      <div class="power">4</div>
+      <div class="title">Upír: Fleder</div>
+      <hr>
+      <div class="flavor">Vyšší upíři své oběti obejmou. Fledeři je roztrhají na kousky.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Upír: Garkain.webp');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-sword.png" />
+      </div>
+      <div class="effect">
+        <img src="http://localhost:8080/img/icon-recycle.png" />
+      </div>
+      <div class="power">4</div>
+      <div class="title">Upír: Garkain</div>
+      <hr>
+      <div class="flavor">Krvesajové a mrchožrouti tak odporní, že nepřátelé zmrazí už svou ošklivostí.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Upír: Katakan.webp');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-sword.png" />
+      </div>
+      <div class="effect">
+        <img src="http://localhost:8080/img/icon-recycle.png" />
+      </div>
+      <div class="power">4</div>
+      <div class="title">Upír: Katakan</div>
+      <hr>
+      <div class="flavor">Pijí krev pevniny už od Konjunkce.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Vesemir.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-sword.png" />
+      </div>
+      
+      <div class="power">6</div>
+      <div class="title">Vesemir</div>
+      <hr>
+      <div class="flavor">Jestli tě mají pověsit, požádej o vodu. Než ji donesou, může se stát cokoliv.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Villentretenmerth.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-sword.png" />
+      </div>
+      <div class="effect">
+        <img src="http://localhost:8080/img/icon-devil.png" />
+      </div>
+      <div class="power">7</div>
+      <div class="title">Villentretenmerth</div>
+      <hr>
+      <div class="flavor">Taky si říká Borch Tři Kavky... jména mu moc nejdou.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Vlkodlak.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-sword.png" />
+      </div>
+      
+      <div class="power">5</div>
+      <div class="title">Vlkodlak</div>
+      <hr>
+      <div class="flavor">Vlci nejsou tak špatní, jak se říká. Vlkodlaci jsou však ještě horší.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Nekker.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-sword.png" />
+      </div>
+      <div class="effect">
+        <img src="http://localhost:8080/img/icon-helms.png" />
+      </div>
+      <div class="power">2</div>
+      <div class="title">Nekker</div>
+      <hr>
+      <div class="flavor">Ti parchanti jsou skoro až roztomilí, když pominete to zabíjení a tak.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Nekker.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-sword.png" />
+      </div>
+      <div class="effect">
+        <img src="http://localhost:8080/img/icon-helms.png" />
+      </div>
+      <div class="power">2</div>
+      <div class="title">Nekker</div>
+      <hr>
+      <div class="flavor">Ti parchanti jsou skoro až roztomilí, když pominete to zabíjení a tak.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Nekker.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-sword.png" />
+      </div>
+      <div class="effect">
+        <img src="http://localhost:8080/img/icon-helms.png" />
+      </div>
+      <div class="power">2</div>
+      <div class="title">Nekker</div>
+      <hr>
+      <div class="flavor">Ti parchanti jsou skoro až roztomilí, když pominete to zabíjení a tak.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Morová panna.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-sword.png" />
+      </div>
+      
+      <div class="power">5</div>
+      <div class="title">Morová panna</div>
+      <hr>
+      <div class="flavor">Nemocní se srocují kolem vředaté ženy obklopené hejnem vzteklých krys...</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Imlerith.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-sword.png" />
+      </div>
+      
+      <div class="power">10</div>
+      <div class="title">Imlerith</div>
+      <hr>
+      <div class="flavor">Ladd nawh! Zabte je!<br>Pokryjte zemi jejich vnitřnostmi!</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Gryf.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-sword.png" />
+      </div>
+      
+      <div class="power">5</div>
+      <div class="title">Gryf</div>
+      <hr>
+      <div class="flavor">Gryfové si s obětmi rádi hrají. Požírají je zaživa, kus po kusu.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Geralt z Rivie.jpg');">
+      <div class="hero"></div>
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-sword.png" />
+      </div>
+      
+      <div class="power">15</div>
+      <div class="title">Geralt z Rivie</div>
+      <hr>
+      <div class="flavor">Jestli má svět zachránit tohle, bude lepší nechat svět zemřít.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Ghúl.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-sword.png" />
+      </div>
+      <div class="effect">
+        <img src="http://localhost:8080/img/icon-helms.png" />
+      </div>
+      <div class="power">1</div>
+      <div class="title">Ghúl</div>
+      <hr>
+      <div class="flavor">Pokud jsou ghúlové součástí koloběhu života... pak je to zvrácený koloběh.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Ghúl.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-sword.png" />
+      </div>
+      <div class="effect">
+        <img src="http://localhost:8080/img/icon-helms.png" />
+      </div>
+      <div class="power">1</div>
+      <div class="title">Ghúl</div>
+      <hr>
+      <div class="flavor">Pokud jsou ghúlové součástí koloběhu života... pak je to zvrácený koloběh.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Ghúl.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-sword.png" />
+      </div>
+      <div class="effect">
+        <img src="http://localhost:8080/img/icon-helms.png" />
+      </div>
+      <div class="power">1</div>
+      <div class="title">Ghúl</div>
+      <hr>
+      <div class="flavor">Pokud jsou ghúlové součástí koloběhu života... pak je to zvrácený koloběh.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Mlhavec.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-sword.png" />
+      </div>
+      
+      <div class="power">2</div>
+      <div class="title">Mlhavec</div>
+      <hr>
+      <div class="flavor">Mlha se plíží na kočičích nohách.<br>Mlhavci se plíží na tělech svých obětí.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Vidlohon.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-sword.png" />
+      </div>
+      
+      <div class="power">5</div>
+      <div class="title">Vidlohon</div>
+      <hr>
+      <div class="flavor">Vidlo-ohon...? Pche! Jejich ohony jsou spíš jak sekáčky.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Chiméra.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-sword.png" />
+      </div>
+      
+      <div class="power">5</div>
+      <div class="title">Chiméra</div>
+      <hr>
+      <div class="flavor">„Co jsem to provedl?“ vykřikl mág, kterého vyděsil vlastní výtvor.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Běs.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-sword.png" />
+      </div>
+      
+      <div class="power">6</div>
+      <div class="title">Běs</div>
+      <hr>
+      <div class="flavor">Běs vypadá tak trochu jako jelen.<br>Obrovský, zlý jelen.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Emiel Regis Rohellec Terzieff.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-sword.png" />
+      </div>
+      
+      <div class="power">5</div>
+      <div class="title">Emiel Regis Rohellec Terzieff</div>
+      <hr>
+      <div class="flavor">Lidé, alespoň ti slušní, by mi říkali příšera. Krev sající zrůda.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Draug.jpg');">
+      <div class="hero"></div>
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-sword.png" />
+      </div>
+      
+      <div class="power">10</div>
+      <div class="title">Draug</div>
+      <hr>
+      <div class="flavor">Někteří muži si neumí připustit porážku. Někteří bojují i ze záhrobí.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Ježibaba: Vařena.webp');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-sword.png" />
+      </div>
+      <div class="effect">
+        <img src="http://localhost:8080/img/icon-helms.png" />
+      </div>
+      <div class="power">6</div>
+      <div class="title">Ježibaba: Vařena</div>
+      <hr>
+      <div class="flavor">My tě vykucháme, chlapče.<br>Bude z tebe dobrý vývar.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Ježibaba: Pletana.webp');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-sword.png" />
+      </div>
+      <div class="effect">
+        <img src="http://localhost:8080/img/icon-helms.png" />
+      </div>
+      <div class="power">6</div>
+      <div class="title">Ježibaba: Pletana</div>
+      <hr>
+      <div class="flavor">Cítím tvou bolest. Vidím tvůj strach...</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Ježibaba: Šeptana.webp');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-sword.png" />
+      </div>
+      <div class="effect">
+        <img src="http://localhost:8080/img/icon-helms.png" />
+      </div>
+      <div class="power">6</div>
+      <div class="title">Ježibaba: Šeptana</div>
+      <hr>
+      <div class="flavor">Budu tvou nejlepší – i tvou poslední.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Marigold.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-sword.png" />
+      </div>
+      <div class="effect">
+        <img src="http://localhost:8080/img/icon-music.png" />
+      </div>
+      <div class="power">2</div>
+      <div class="title">Marigold</div>
+      <hr>
+      <div class="flavor">Marigolde, jsi cynik, proutník, kurevník, lhář – a můj nejlepší přítel.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Cirilla.webp');">
+      <div class="hero"></div>
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-sword.png" />
+      </div>
+      
+      <div class="power">15</div>
+      <div class="title">Cirilla</div>
+      <hr>
+      <div class="flavor">Víš, kdy pohádky přestávají být pohádkami? Když jim lidé začnou věřit.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Avallac'h.jpg');">
+      <div class="hero"></div>
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-sword.png" />
+      </div>
+      <div class="effect">
+        <img src="http://localhost:8080/img/icon-eye.png" />
+      </div>
+      <div class="power">0</div>
+      <div class="title">Avallac'h</div>
+      <hr>
+      <div class="flavor">Věštit budoucnost není žádná věda. Věda je věštit přesně.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Potracenka.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-sword.png" />
+      </div>
+      
+      <div class="power">4</div>
+      <div class="title">Potracenka</div>
+      <hr>
+      <div class="flavor">Přiznej své chyby a řádně je pohřbi – nebo tě budou strašit.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Krabopavouk.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-sword.png" />
+      </div>
+      <div class="effect">
+        <img src="http://localhost:8080/img/icon-helms.png" />
+      </div>
+      <div class="power">4</div>
+      <div class="title">Krabopavouk</div>
+      <hr>
+      <div class="flavor">Ohyzdnost – tím příroda říká „Drž se kurva stranou.“</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Krabopavouk.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-sword.png" />
+      </div>
+      <div class="effect">
+        <img src="http://localhost:8080/img/icon-helms.png" />
+      </div>
+      <div class="power">4</div>
+      <div class="title">Krabopavouk</div>
+      <hr>
+      <div class="flavor">Ohyzdnost – tím příroda říká „Drž se kurva stranou.“</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Krabopavouk.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-sword.png" />
+      </div>
+      <div class="effect">
+        <img src="http://localhost:8080/img/icon-helms.png" />
+      </div>
+      <div class="power">4</div>
+      <div class="title">Krabopavouk</div>
+      <hr>
+      <div class="flavor">Ohyzdnost – tím příroda říká „Drž se kurva stranou.“</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Zoltan Chivay.jpg');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-sword.png" />
+      </div>
+      
+      <div class="power">5</div>
+      <div class="title">Zoltan Chivay</div>
+      <hr>
+      <div class="flavor">Trpaslík by prý kvůli kamarádovi i visel. A Zoltan není žádnou výjimkou.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Hovězí obranná jednotka.webp');">
+      
+      <div class="background"></div>
+      <div class="type">
+        <img src="http://localhost:8080/img/icon-cow.png" />
+      </div>
+      
+      <div class="power">8</div>
+      <div class="title">Hovězí obranná jednotka</div>
+      <hr>
+      <div class="flavor">Grrrrr!</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Eredin – Smrtonoš.webp');">
+      
+      <div class="background"></div>
+      
+      <div class="effect">
+        <img src="http://localhost:8080/img/icon-Vrátí ti jednu kartu z odkládacího balíčku do ruky..png" />
+      </div>
+      <div class="power "></div>
+      <div class="title">Eredin – Smrtonoš</div>
+      <hr>
+      <div class="flavor">No tak. Ukaž mi své otočky, piruety a finty. Chci se dívat.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Eredin – Velitel Rudých jezdců.webp');">
+      
+      <div class="background"></div>
+      
+      <div class="effect">
+        <img src="http://localhost:8080/img/icon-Zdvojnásobí sílu všem [sword] (pokud v dané řadě není také [horn])..png" />
+      </div>
+      <div class="power "></div>
+      <div class="title">Eredin – Velitel Rudých jezdců</div>
+      <hr>
+      <div class="flavor">Zachovej si trochu důstojnosti. Vždyť víš, jak to skončí.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Eredin – Bořitel světů.webp');">
+      
+      <div class="background"></div>
+      
+      <div class="effect">
+        <img src="http://localhost:8080/img/icon-Zahodíš 2 karty a lízneš si z balíčku 1 kartu, kterou chceš..png" />
+      </div>
+      <div class="power "></div>
+      <div class="title">Eredin – Bořitel světů</div>
+      <hr>
+      <div class="flavor">Dostaň nás odsud! Hned!</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Eredin – Proradný.webp');">
+      
+      <div class="background"></div>
+      
+      <div class="effect">
+        <img src="http://localhost:8080/img/icon-Zdvojnásobí sílu všech [eye] karet (platí pro oba hráče)..png" />
+      </div>
+      <div class="power "></div>
+      <div class="title">Eredin – Proradný</div>
+      <hr>
+      <div class="flavor">Tohle si užívám. Jsi moje hračka.</div>
+    </div><div class="card monsters " style="background-image: url('http://localhost:8080/cards/Eredin – Král Divokého honu.webp');">
+      
+      <div class="background"></div>
+      
+      <div class="effect">
+        <img src="http://localhost:8080/img/icon-Vytáhneš z balíčku nějakou kartu počasí ([sun]/[fog]/[freeze]/[rain]) a ihned ji vyneseš..png" />
+      </div>
+      <div class="power "></div>
+      <div class="title">Eredin – Král Divokého honu</div>
+      <hr>
+      <div class="flavor">Je to nevyhnutelné.</div>
     </div>
       </div>
     </body>
