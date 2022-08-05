@@ -30,6 +30,12 @@ module.exports = (cardData) => {
     `<div class="card ${faction} ${className}" style="background-image: url('http://localhost:8080/cards/${title}.${imageType}');">
       ${className.includes('hero') ? '<div class="hero"></div>' : ''}
       <div class="background"></div>
+      ${!!type ? `<div class="type">
+        <img src="http://localhost:8080/img/icon-${type}.png" />
+      </div>` : ``}
+      ${!!effect ? `<div class="effect">
+        <img src="http://localhost:8080/img/icon-${effect}.png" />
+      </div>` : ``}
       ${parseInt(power) == power
         ? `<div class="power">${power}</div>`
         : `<div class="power ${power}"></div>`

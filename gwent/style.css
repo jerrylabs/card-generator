@@ -74,6 +74,38 @@ html, body {
   line-height: 18mm;
 }
 
+.power.decoy { background: transparent url('http://localhost:8080/img/icon-decoy.png') center / 1.5cm no-repeat; }
+.power.skull { background: transparent url('http://localhost:8080/img/icon-skull.png') center / 1.5cm no-repeat; }
+.power.sun { background: transparent url('http://localhost:8080/img/icon-sun.png') center / 1.5cm no-repeat; }
+.power.rain { background: transparent url('http://localhost:8080/img/icon-rain.png') center / 1.5cm no-repeat; }
+.power.freeze { background: transparent url('http://localhost:8080/img/icon-freeze.png') center / 1.5cm no-repeat; }
+.power.fog { background: transparent url('http://localhost:8080/img/icon-fog.png') center / 1.5cm no-repeat; }
+.power.horn { background: transparent url('http://localhost:8080/img/icon-horn.png') center / 1.5cm no-repeat; }
+
+.type, .effect {
+  position: absolute;
+  top: 31mm;
+  left: 1.2mm;
+  width: 15.5mm;
+  height: 15.5mm;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent url('http://localhost:8080/img/circle-orange.png') center / contain no-repeat;
+}
+.effect {
+  top: 52.5mm;
+  left: 1.1mm;
+  width: 14.5mm;
+  height: 14.5mm;
+  background: transparent url('http://localhost:8080/img/circle-white-silver.png') center / contain no-repeat;
+}
+.nilggaard .type { background-image: url('http://localhost:8080/img/circle-orange-gold.png'); }
+.nilggaard .effect { background-image: url('http://localhost:8080/img/circle-white-gold.png'); }
+.scoiatael .effect { background-image: url('http://localhost:8080/img/circle-white-bronze.png'); }
+.type img, .effect img { height: 90%; width: 90%; }
+.effect img { position: relative; left: 0.4mm; top: 0.3mm; }
+
 .title {
   font-family: "Alegreya";
   font-weight: bold;
@@ -156,6 +188,7 @@ hr {
   display: flex;
   align-items: center;
   justify-content: center;
+  background: none;
 }
 
 .effect__icon {
