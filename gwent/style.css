@@ -94,8 +94,6 @@ html, body {
   font-size: 11mm;
   line-height: 17.5mm;
   z-index: 2;
-  box-shadow: 1px 1px 3px;
-  border-radius: 10mm;
 }
 
 .hero ~ .power { color: white; box-shadow: none; }
@@ -119,7 +117,7 @@ html, body {
   justify-content: center;
   z-index: 3;
   background: transparent url('http://localhost:8080/img/circle-orange.png') center / contain no-repeat;
-  box-shadow: 1px 1px 5px;
+  box-shadow: 2px 2px 5px, -1px 0 2px;
   border-radius: 10mm;
 }
 .effect {
@@ -128,7 +126,6 @@ html, body {
   width: 14mm;
   height: 14mm;
   background: transparent url('http://localhost:8080/img/circle-white-silver.png') center / contain no-repeat;
-  box-shadow: 2px 2px 5px, -1px 0 0px;
 }
 .nilggaard .type { background-image: url('http://localhost:8080/img/circle-orange-gold.png'); }
 .nilggaard .effect { background-image: url('http://localhost:8080/img/circle-white-gold.png'); }
@@ -156,7 +153,7 @@ html, body {
   flex-direction: column;
 }
 
-.titleSmall .title { font-size: 4.6mm; }
+.titleSmall .title { font-size: 4.4mm; }
 
 hr {
   position: absolute;

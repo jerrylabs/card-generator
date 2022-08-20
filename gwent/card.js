@@ -3,7 +3,7 @@ const fs = require('fs');
 module.exports = (cardData) => {
 
   const {title, power, faction, type, effect, flavor, className} = cardData;
-  const imgFile = title.replace(':', ' -');
+  const imgFile = title.replace(':', ' -').replace('<br>', ' ');
   const imageType = fs.existsSync(`./${process.argv[2]}/cards/${imgFile}.jpg`) ? 'jpg' : 'webp';
   const imgTitle = imgFile.replace('\'', '\\\'');
   const isCommander = title.includes('--');

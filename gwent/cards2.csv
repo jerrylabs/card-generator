@@ -21,7 +21,7 @@
 "Štiplavý mráz","freeze","scoiatael","sword",,"Nejlepší na mrazu je, že mrtvoly nehnijí tak rychle.",
 "Štiplavý mráz","freeze","scoiatael","sword",,"Nejlepší na mrazu je, že mrtvoly nehnijí tak rychle.",
 "Schirrú",6,"scoiatael","catapult","devil","Je čas podívat se smrti do tváře.",
-"Yennefer z Vengerbergu",7,"scoiatael","arrow","heart","Oděná v černé a bílé, připomínala časné ráno v půli prosince.","hero"
+"Yennefer<br>z Vengerbergu",7,"scoiatael","arrow","heart","Oděná v černé a bílé, připomínala časné ráno v půli prosince.","hero"
 "Vriheddský kadet",4,"scoiatael","arrow",,"Zášť hoří jasněji než jakýkoliv oheň a tne hlouběji než jakákoliv zbraň.",
 "Toruviel",2,"scoiatael","arrow",,"Ráda bych tě zabila zblízka a koukala ti do očí... ale smrdíš mi, člověče.",
 "Milwa",10,"scoiatael","arrow","cross","S každým šípem myslím na tátu. Byl by pyšnej. Myslím.",
@@ -102,7 +102,7 @@
 "Zemní elementál",6,"monsters","catapult",,"Jak bojovat se zemním elementálem? Nijak. Uteč. Co nejrychleji.",
 "Krabopavoučí kolos",6,"monsters","catapult","helms","Vzácný poddruh krabopavouka. Velký jako slon, ale mnohem tužší.",
 "Wyverna",2,"monsters","arrow",,"Představ si křížence okřídleného hada a noční můry. Wyverny jsou horší.",
-"Yennefer z Vengerbergu",7,"monsters","arrow","heart","Oděná v černé a bílé, připomínala časné ráno v půli prosince.","hero"
+"Yennefer<br>z Vengerbergu",7,"monsters","arrow","heart","Oděná v černé a bílé, připomínala časné ráno v půli prosince.","hero"
 "Lešij",10,"monsters","arrow",,"V těchto lesích nikdy nelovíme.<br>Ani kdyby měla celá vesnice umřít hladem.","hero"
 "Hrobice",5,"monsters","arrow",,"Jejich dlouhé jazyky slouží k srkání morku – a bičování obětí.",
 "Chrlič",2,"monsters","arrow",,"Noční můra prastarých sochařů oživlá díky mágům.",
@@ -125,7 +125,7 @@
 "Nekker 2",2,"monsters","sword","helms","Ti parchanti jsou skoro až roztomilí, když pominete to zabíjení a tak.",
 "Nekker 3",2,"monsters","sword","helms","Ti parchanti jsou skoro až roztomilí, když pominete to zabíjení a tak.",
 "Morová panna",5,"monsters","sword",,"Nemocní se srocují kolem vředaté ženy obklopené hejnem vzteklých krys...",
-"Imlerith",10,"monsters","sword",,"Ladd nawh! Zabte je!<br>Pokryjte zemi jejich vnitřnostmi!",
+"Imlerith",10,"monsters","sword",,"Ladd nawh! Zabte je!<br>Pokryjte zemi jejich vnitřnostmi!","hero"
 "Gryf",5,"monsters","sword",,"Gryfové si s obětmi rádi hrají. Požírají je zaživa, kus po kusu.",
 "Geralt z Rivie",15,"monsters","sword",,"Jestli má svět zachránit tohle,<br>bude lepší nechat svět zemřít.","hero"
 "Ghúl",1,"monsters","sword","helms","Pokud jsou ghúlové součástí koloběhu života... pak je to zvrácený koloběh.",
