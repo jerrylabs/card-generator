@@ -63,7 +63,7 @@ const generateHtml = (cardsData, css, generateCardMarkup) => {
         printInstructions();
         return;
       } else {
-        csvFile = `${process.argv[2]}/${process.argv[cardsIndex + 1]}`;
+        csvFile = `${process.argv[2]}/${process.argv[cardsIndex + 1]}.csv`;
       }
     }
     const cssFile = `${process.argv[2]}/style.css`;
@@ -73,11 +73,6 @@ const generateHtml = (cardsData, css, generateCardMarkup) => {
 
     const customCardPath = `./${process.argv[2]}/card.js`;
     const generateCardMarkup = fs.existsSync(customCardPath) ? require(customCardPath) : generateDefaultCardMarkup;
-
-    // English variant
-    if (process.argv.includes('cards-en.csv')) {
-      cardsData = cardsData.map(cardData => ({...cardData, lang: 'english'}));
-    }
 
     const htmlData = generateHtml(cardsData, cssData, generateCardMarkup);
 

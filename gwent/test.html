@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <style type="text/css">
+      @page {
+        margin: 9mm 0 0 0;
+      }
+
+      body {
+        -webkit-print-color-adjust: exact;
+      }
+
+      @font-face {
+        font-family: "Linux Libertine G";
+        src: url("http://localhost:8080//fonts/LinLibertine_RB_G.ttf") format("truetype");
+      }
+
+      @font-face {
+        font-family: "Alegreya SC";
+        src: url("http://localhost:8080//fonts/Alegreya-Bold.ttf") format("truetype");
+      }
+
+      @font-face {
+        font-family: "Adobe Garamond Pro";
+        src: url("http://localhost:8080//fonts/AGaramondPro-Italic.otf") format("opentype");
+      }
+
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .cards {
+        text-align: center;
+        width: auto;
+        margin: 0 auto;
+        font-size: 0;
+      }
+
+      .card {
+        display: inline-block;
+        width: 6cm;
+        height: 11.3cm;
+        border-radius: 7mm;
+        border: 3mm solid black;
+        position: relative;
+        background: transparent top left no-repeat;
+        background-size: 61mm 106%;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cards">
+      <div class="card"></div></div>
+  </body>
+</html>

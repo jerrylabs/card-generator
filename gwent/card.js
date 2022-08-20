@@ -3,10 +3,12 @@ const fs = require('fs');
 module.exports = (cardData) => {
 
   const {title, power, faction, type, effect, flavor, className} = cardData;
-
-  const imageType = fs.existsSync(`./${process.argv[2]}/cards/${title}.jpg`) ? 'jpg' : 'webp';
+  const imgFile = title.replace(':', ' -');
+  const imageType = fs.existsSync(`./${process.argv[2]}/cards/${imgFile}.jpg`) ? 'jpg' : 'webp';
+  const imgTitle = imgFile.replace('\'', '\\\'');
   const isCommander = title.includes('--');
-  const displayTitle = title.replace(/ [1234]/, '');
+  const isHero = className.includes('hero');
+  const displayTitle = title.replace(/ [1234567]/, '');
 
   if (isCommander) {
     const [commanderTitle, commanderSubtitle] = displayTitle.split('--');
@@ -26,16 +28,18 @@ module.exports = (cardData) => {
     )
   }
 
+  const effects = effect && effect.split(' ');
+
   return (
-    `<div class="card ${faction} ${className.replace('hero', '')}" style="background-image: url('http://localhost:8080/cards/${title}.${imageType}');">
-      ${className.includes('hero') ? '<div class="hero"></div>' : ''}
+    `<div class="card ${faction} ${className.replace('hero', '')} ${effects.length > 1 ? `effects${effects.length}` : ''}" style="background-image: url('http://localhost:8080/cards/${imgTitle}.${imageType}');">
+      ${isHero ? '<div class="hero"></div><div class="heroLabel">&nbsp;Hrdina</div>' : ''}
       <div class="background"></div>
       ${!!type ? `<div class="type">
         <img src="http://localhost:8080/img/icon-${type}.png" />
       </div>` : ``}
-      ${!!effect ? `<div class="effect">
-        <img src="http://localhost:8080/img/icon-${effect}.png" />
-      </div>` : ``}
+      ${effects.length ? effects.map((e) => `<div class="effect">
+        <img src="http://localhost:8080/img/icon-${e}.png" />
+      </div>`).join('') : ``}
       ${parseInt(power) == power
         ? `<div class="power">${power}</div>`
         : `<div class="power ${power}"></div>`
