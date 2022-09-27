@@ -44,6 +44,7 @@ module.exports = (cardData) => {
         ? `<div class="power">${power}</div>`
         : `<div class="power ${power}"></div>`
       }
+      <div class="power shadow"></div>
       <div class="title">${displayTitle}</div>
       <hr>
       <div class="flavor">${flavor}</div>

@@ -69,7 +69,7 @@ html, body {
   left: -1px;
   border-radius: 4mm;
   background-size: 60mm;
-  z-index: 0;
+  z-index: 1;
 }
 .north .background { background-image: url('http://localhost:8080/img/bg-blue.png'); }
 .nilfgaard .background { background-image: url('http://localhost:8080/img/bg-black.png'); }
@@ -98,8 +98,17 @@ html, body {
   font-size: 11mm;
   line-height: 17.5mm;
   z-index: 2;
-  box-shadow: 1px 1px 3px;
-  border-radius: 10mm;
+}
+
+.power.shadow {
+  border-radius: 2cm;
+  background: black;
+  filter: blur(3px);
+  top: -1mm;
+  left: -1mm;
+  width: 18.5mm;
+  height: 18.5mm;
+  z-index: 0;
 }
 
 .hero ~ .power { color: white; box-shadow: none; }
@@ -123,7 +132,7 @@ html, body {
   justify-content: center;
   z-index: 3;
   background: transparent url('http://localhost:8080/img/circle-orange.png') center / contain no-repeat;
-  box-shadow: 2px 2px 5px, -1px 0 0px;
+  box-shadow: 2px 2px 5px, -3px 0 3px;
   border-radius: 10mm;
 }
 .effect {
@@ -157,6 +166,7 @@ html, body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  z-index: 2;
 }
 
 .titleSmall .title { font-size: 4.4mm; }
@@ -169,6 +179,7 @@ hr {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
   border: none;
   height: 0.5mm;
+  z-index: 2;
 }
 
 
@@ -185,6 +196,7 @@ hr {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 2;
 }
 
 .commander {
@@ -193,11 +205,11 @@ hr {
 
 .commander .background {
   position: absolute;
-  left: 0;
+  left: -0.5px;
   top: auto;
   bottom: 0;
   background-size: 61mm;
-  width: 100%;
+  width: calc(100% + 1px);
   height: 30mm;
   border-radius: 0 0 3mm 3mm;
 }
@@ -269,7 +281,7 @@ hr {
   background-size: auto 100%;
   left: -3mm;
   border-radius: 7mm;
-  z-index: 1;
+  z-index: 2;
   margin-top: 0mm;
   background-repeat: no-repeat;
 }
@@ -314,6 +326,7 @@ hr {
       
       
       <div class="power skull"></div>
+      <div class="power shadow"></div>
       <div class="title">Sežehnutí</div>
       <hr>
       <div class="flavor">Ohnivé sloupy promění i ty nejsilnější v&nbsp;popel. Všichni ostatní se třesou úžasem.</div>
@@ -323,6 +336,7 @@ hr {
       
       
       <div class="power skull"></div>
+      <div class="power shadow"></div>
       <div class="title">Sežehnutí</div>
       <hr>
       <div class="flavor">Ohnivé sloupy promění i ty nejsilnější v&nbsp;popel. Všichni ostatní se třesou úžasem.</div>
@@ -332,6 +346,7 @@ hr {
       
       
       <div class="power skull"></div>
+      <div class="power shadow"></div>
       <div class="title">Sežehnutí</div>
       <hr>
       <div class="flavor">Ohnivé sloupy promění i ty nejsilnější v&nbsp;popel. Všichni ostatní se třesou úžasem.</div>
@@ -341,6 +356,7 @@ hr {
       
       
       <div class="power sun"></div>
+      <div class="power shadow"></div>
       <div class="title">Jasná obloha</div>
       <hr>
       <div class="flavor">Slunce svítí, Dromle! Slunce svítí! Třeba nám ještě zbývá nějaká naděje…</div>
@@ -350,6 +366,7 @@ hr {
       
       
       <div class="power sun"></div>
+      <div class="power shadow"></div>
       <div class="title">Jasná obloha</div>
       <hr>
       <div class="flavor">Slunce svítí, Dromle! Slunce svítí! Třeba nám ještě zbývá nějaká naděje…</div>
@@ -359,6 +376,7 @@ hr {
       
       
       <div class="power sun"></div>
+      <div class="power shadow"></div>
       <div class="title">Jasná obloha</div>
       <hr>
       <div class="flavor">Slunce svítí, Dromle! Slunce svítí! Třeba nám ještě zbývá nějaká naděje…</div>
@@ -368,6 +386,7 @@ hr {
       
       
       <div class="power horn"></div>
+      <div class="power shadow"></div>
       <div class="title">Velitelský roh</div>
       <hr>
       <div class="flavor">Plus jedna k morálce, mínus tři ke&nbsp;sluchu.</div>
@@ -377,6 +396,7 @@ hr {
       
       
       <div class="power horn"></div>
+      <div class="power shadow"></div>
       <div class="title">Velitelský roh</div>
       <hr>
       <div class="flavor">Plus jedna k morálce, mínus tři ke&nbsp;sluchu.</div>
@@ -386,6 +406,7 @@ hr {
       
       
       <div class="power horn"></div>
+      <div class="power shadow"></div>
       <div class="title">Velitelský roh</div>
       <hr>
       <div class="flavor">Plus jedna k morálce, mínus tři ke&nbsp;sluchu.</div>
@@ -395,6 +416,7 @@ hr {
       
       
       <div class="power decoy"></div>
+      <div class="power shadow"></div>
       <div class="title">Návnada</div>
       <hr>
       <div class="flavor">Když ti dojdou sedláci, dají se šípy střílet docela dobře i do atrap.</div>
@@ -404,6 +426,7 @@ hr {
       
       
       <div class="power decoy"></div>
+      <div class="power shadow"></div>
       <div class="title">Návnada</div>
       <hr>
       <div class="flavor">Když ti dojdou sedláci, dají se šípy střílet docela dobře i do atrap.</div>
@@ -413,6 +436,7 @@ hr {
       
       
       <div class="power decoy"></div>
+      <div class="power shadow"></div>
       <div class="title">Návnada</div>
       <hr>
       <div class="flavor">Když ti dojdou sedláci, dají se šípy střílet docela dobře i do atrap.</div>
@@ -424,6 +448,7 @@ hr {
       </div>
       
       <div class="power rain"></div>
+      <div class="power shadow"></div>
       <div class="title">Prudký déšť</div>
       <hr>
       <div class="flavor">I déšť v týhle zemi smrdí jak chcanky.</div>
@@ -435,6 +460,7 @@ hr {
       </div>
       
       <div class="power rain"></div>
+      <div class="power shadow"></div>
       <div class="title">Prudký déšť</div>
       <hr>
       <div class="flavor">I déšť v týhle zemi smrdí jak chcanky.</div>
@@ -446,6 +472,7 @@ hr {
       </div>
       
       <div class="power rain"></div>
+      <div class="power shadow"></div>
       <div class="title">Prudký déšť</div>
       <hr>
       <div class="flavor">I déšť v týhle zemi smrdí jak chcanky.</div>
@@ -457,6 +484,7 @@ hr {
       </div>
       
       <div class="power fog"></div>
+      <div class="power shadow"></div>
       <div class="title">Neproniknutelná mlha</div>
       <hr>
       <div class="flavor">Sen každého dobrého velitele... a noční můra každého špatného.</div>
@@ -468,6 +496,7 @@ hr {
       </div>
       
       <div class="power fog"></div>
+      <div class="power shadow"></div>
       <div class="title">Neproniknutelná mlha</div>
       <hr>
       <div class="flavor">Sen každého dobrého velitele... a noční můra každého špatného.</div>
@@ -479,6 +508,7 @@ hr {
       </div>
       
       <div class="power fog"></div>
+      <div class="power shadow"></div>
       <div class="title">Neproniknutelná mlha</div>
       <hr>
       <div class="flavor">Sen každého dobrého velitele... a noční můra každého špatného.</div>
@@ -490,6 +520,7 @@ hr {
       </div>
       
       <div class="power freeze"></div>
+      <div class="power shadow"></div>
       <div class="title">Štiplavý mráz</div>
       <hr>
       <div class="flavor">Nejlepší na mrazu je, že mrtvoly nehnijí tak rychle.</div>
@@ -501,6 +532,7 @@ hr {
       </div>
       
       <div class="power freeze"></div>
+      <div class="power shadow"></div>
       <div class="title">Štiplavý mráz</div>
       <hr>
       <div class="flavor">Nejlepší na mrazu je, že mrtvoly nehnijí tak rychle.</div>
@@ -512,6 +544,7 @@ hr {
       </div>
       
       <div class="power freeze"></div>
+      <div class="power shadow"></div>
       <div class="title">Štiplavý mráz</div>
       <hr>
       <div class="flavor">Nejlepší na mrazu je, že mrtvoly nehnijí tak rychle.</div>
@@ -525,6 +558,7 @@ hr {
         <img src="http://localhost:8080/img/icon-devil.png" />
       </div>
       <div class="power">6</div>
+      <div class="power shadow"></div>
       <div class="title">Schirrú</div>
       <hr>
       <div class="flavor">Je čas podívat se smrti do tváře.</div>
@@ -538,6 +572,7 @@ hr {
         <img src="http://localhost:8080/img/icon-heart.png" />
       </div>
       <div class="power">7</div>
+      <div class="power shadow"></div>
       <div class="title">Yennefer<br>z Vengerbergu</div>
       <hr>
       <div class="flavor">Oděná v černé a bílé, připomínala časné ráno v půli prosince.</div>
@@ -549,6 +584,7 @@ hr {
       </div>
       
       <div class="power">4</div>
+      <div class="power shadow"></div>
       <div class="title">Vriheddský kadet</div>
       <hr>
       <div class="flavor">Zášť hoří jasněji než jakýkoliv oheň a tne hlouběji než jakákoliv zbraň.</div>
@@ -560,6 +596,7 @@ hr {
       </div>
       
       <div class="power">2</div>
+      <div class="power shadow"></div>
       <div class="title">Toruviel</div>
       <hr>
       <div class="flavor">Ráda bych tě zabila zblízka a koukala ti do očí... ale smrdíš mi, člověče.</div>
@@ -573,6 +610,7 @@ hr {
         <img src="http://localhost:8080/img/icon-cross.png" />
       </div>
       <div class="power">10</div>
+      <div class="power shadow"></div>
       <div class="title">Milwa</div>
       <hr>
       <div class="flavor">S každým šípem myslím na tátu. Byl by pyšnej. Myslím.</div>
@@ -584,6 +622,7 @@ hr {
       </div>
       
       <div class="power">1</div>
+      <div class="power shadow"></div>
       <div class="title">Riordain</div>
       <hr>
       <div class="flavor">Pohleď jim do očí, pas se na jejich hrůze. Pak zaútoč a zabij.</div>
@@ -595,6 +634,7 @@ hr {
       </div>
       
       <div class="power">10</div>
+      <div class="power shadow"></div>
       <div class="title">Saesenthessis</div>
       <hr>
       <div class="flavor">Krásná, čistá, zarputilá – dokonalá tvář povstání.</div>
@@ -606,6 +646,7 @@ hr {
       </div>
       
       <div class="power">6</div>
+      <div class="power shadow"></div>
       <div class="title">Ida Amean aep Sivney</div>
       <hr>
       <div class="flavor">Jsem Vědoucí. Má moc spočívá v tom, že mám znalosti. Ne v tom, že je sdílím.</div>
@@ -617,6 +658,7 @@ hr {
       </div>
       
       <div class="power">10</div>
+      <div class="power shadow"></div>
       <div class="title">Iorweth</div>
       <hr>
       <div class="flavor">Má zatraceně dobrou mušku. Na&nbsp;někoho, kdo má jen nedno oko.</div>
@@ -630,6 +672,7 @@ hr {
         <img src="http://localhost:8080/img/icon-heart.png" />
       </div>
       <div class="power">0</div>
+      <div class="power shadow"></div>
       <div class="title">Havekarská léčitelka</div>
       <hr>
       <div class="flavor">Jasně, že ti to zašiju. Ale zadarmo to nebude.</div>
@@ -643,6 +686,7 @@ hr {
         <img src="http://localhost:8080/img/icon-heart.png" />
       </div>
       <div class="power">0</div>
+      <div class="power shadow"></div>
       <div class="title">Havekarská léčitelka</div>
       <hr>
       <div class="flavor">Jasně, že ti to zašiju. Ale zadarmo to nebude.</div>
@@ -656,6 +700,7 @@ hr {
         <img src="http://localhost:8080/img/icon-heart.png" />
       </div>
       <div class="power">0</div>
+      <div class="power shadow"></div>
       <div class="title">Havekarská léčitelka</div>
       <hr>
       <div class="flavor">Jasně, že ti to zašiju. Ale zadarmo to nebude.</div>
@@ -667,6 +712,7 @@ hr {
       </div>
       
       <div class="power">10</div>
+      <div class="power shadow"></div>
       <div class="title">Eithné</div>
       <hr>
       <div class="flavor">Královna dryád má oči z taveného stříbra a srdce ze za studena kované oceli.</div>
@@ -680,6 +726,7 @@ hr {
         <img src="http://localhost:8080/img/icon-helms.png" />
       </div>
       <div class="power">2</div>
+      <div class="power shadow"></div>
       <div class="title">Elfský harcovník</div>
       <hr>
       <div class="flavor">Přestaň sebou mlít, ty posranej ušáku – nemůžu na tebe pořádně zamířit!</div>
@@ -693,6 +740,7 @@ hr {
         <img src="http://localhost:8080/img/icon-helms.png" />
       </div>
       <div class="power">2</div>
+      <div class="power shadow"></div>
       <div class="title">Elfský harcovník</div>
       <hr>
       <div class="flavor">Přestaň sebou mlít, ty posranej ušáku – nemůžu na tebe pořádně zamířit!</div>
@@ -706,6 +754,7 @@ hr {
         <img src="http://localhost:8080/img/icon-helms.png" />
       </div>
       <div class="power">2</div>
+      <div class="power shadow"></div>
       <div class="title">Elfský harcovník</div>
       <hr>
       <div class="flavor">Přestaň sebou mlít, ty posranej ušáku – nemůžu na tebe pořádně zamířit!</div>
@@ -717,6 +766,7 @@ hr {
       </div>
       
       <div class="power">4</div>
+      <div class="power shadow"></div>
       <div class="title">Střelec z Dol Blathanna</div>
       <hr>
       <div class="flavor">Ještě jeden krok, d'hoine. Šíp mezi očima ti bude slušet.</div>
@@ -730,6 +780,7 @@ hr {
         <img src="http://localhost:8080/img/icon-recycle.png" />
       </div>
       <div class="power">5</div>
+      <div class="power shadow"></div>
       <div class="title">Vriheddská brigáda</div>
       <hr>
       <div class="flavor">Vrihedd? Co to znamená?' 'Potíže.'</div>
@@ -743,6 +794,7 @@ hr {
         <img src="http://localhost:8080/img/icon-recycle.png" />
       </div>
       <div class="power">5</div>
+      <div class="power shadow"></div>
       <div class="title">Vriheddská brigáda</div>
       <hr>
       <div class="flavor">Vrihedd? Co to znamená?' 'Potíže.'</div>
@@ -756,6 +808,7 @@ hr {
         <img src="http://localhost:8080/img/icon-recycle.png" />
       </div>
       <div class="power">6</div>
+      <div class="power shadow"></div>
       <div class="title">Yaevinn</div>
       <hr>
       <div class="flavor">Jsme kapky deště, které se spojují<br>v silnou bouři.</div>
@@ -769,6 +822,7 @@ hr {
         <img src="http://localhost:8080/img/icon-recycle.png" />
       </div>
       <div class="power">3</div>
+      <div class="power shadow"></div>
       <div class="title">Ciaran aep Easnillien</div>
       <hr>
       <div class="flavor">Naši cestou ke svobodě nebude diplomacie, ale krveprolití.</div>
@@ -782,6 +836,7 @@ hr {
         <img src="http://localhost:8080/img/icon-recycle.png" />
       </div>
       <div class="power">6</div>
+      <div class="power shadow"></div>
       <div class="title">Barclay Els</div>
       <hr>
       <div class="flavor">Že naša medovina jak chcanky smrdí? Snadná rada – fláknu ti jednu do rypáku!</div>
@@ -795,6 +850,7 @@ hr {
         <img src="http://localhost:8080/img/icon-recycle.png" />
       </div>
       <div class="power">6</div>
+      <div class="power shadow"></div>
       <div class="title">Filavandrel aén Fidháil</div>
       <hr>
       <div class="flavor">Ačkoliv je nás teď zoufale málo, naše srdce planou jasněji než kdy dřív.</div>
@@ -808,6 +864,7 @@ hr {
         <img src="http://localhost:8080/img/icon-recycle.png" />
       </div>
       <div class="power">6</div>
+      <div class="power shadow"></div>
       <div class="title">Zvěd z Dol Blathanna</div>
       <hr>
       <div class="flavor">Stopují jako ohaři, běhají jako srny a&nbsp;zabíjejí jako chladnokrevní parchanti.</div>
@@ -821,6 +878,7 @@ hr {
         <img src="http://localhost:8080/img/icon-recycle.png" />
       </div>
       <div class="power">6</div>
+      <div class="power shadow"></div>
       <div class="title">Zvěd z Dol Blathanna</div>
       <hr>
       <div class="flavor">Stopují jako ohaři, běhají jako srny a&nbsp;zabíjejí jako chladnokrevní parchanti.</div>
@@ -834,6 +892,7 @@ hr {
         <img src="http://localhost:8080/img/icon-recycle.png" />
       </div>
       <div class="power">6</div>
+      <div class="power shadow"></div>
       <div class="title">Zvěd z Dol Blathanna</div>
       <hr>
       <div class="flavor">Stopují jako ohaři, běhají jako srny a&nbsp;zabíjejí jako chladnokrevní parchanti.</div>
@@ -845,6 +904,7 @@ hr {
       </div>
       
       <div class="power">5</div>
+      <div class="power shadow"></div>
       <div class="title">Zoltan Chivay</div>
       <hr>
       <div class="flavor">Trpaslík by prý kvůli kamarádovi i visel. A Zoltan není žádnou výjimkou.</div>
@@ -856,6 +916,7 @@ hr {
       </div>
       
       <div class="power">7</div>
+      <div class="power shadow"></div>
       <div class="title">Triss Ranuncul</div>
       <hr>
       <div class="flavor">Dokážu se o sebe postarat. Věř mi.</div>
@@ -867,6 +928,7 @@ hr {
       </div>
       
       <div class="power">6</div>
+      <div class="power shadow"></div>
       <div class="title">Vesemir</div>
       <hr>
       <div class="flavor">Jestli tě mají pověsit, požádej o vodu.<br>Než ji donesou, může se stát cokoliv.</div>
@@ -880,6 +942,7 @@ hr {
         <img src="http://localhost:8080/img/icon-devil.png" />
       </div>
       <div class="power">7</div>
+      <div class="power shadow"></div>
       <div class="title">Villentretenmerth</div>
       <hr>
       <div class="flavor">Taky si říká Borch Tři Kavky... jména mu moc nejdou.</div>
@@ -893,6 +956,7 @@ hr {
         <img src="http://localhost:8080/img/icon-cross.png" />
       </div>
       <div class="power">10</div>
+      <div class="power shadow"></div>
       <div class="title">Isengrim Faoiltiarna</div>
       <hr>
       <div class="flavor">Dojde jim to, jakmile spatří mou jizvu: uvědomění si okamžité smrti.</div>
@@ -904,6 +968,7 @@ hr {
       </div>
       
       <div class="power">5</div>
+      <div class="power shadow"></div>
       <div class="title">Mahakamští obránci</div>
       <hr>
       <div class="flavor">Řikam ti, my sa rodíme pro boj – sekáme<br>ich rychtyk v kolenech!</div>
@@ -915,6 +980,7 @@ hr {
       </div>
       
       <div class="power">5</div>
+      <div class="power shadow"></div>
       <div class="title">Mahakamští obránci</div>
       <hr>
       <div class="flavor">Řikam ti, my sa rodíme pro boj – sekáme<br>ich rychtyk v kolenech!</div>
@@ -926,6 +992,7 @@ hr {
       </div>
       
       <div class="power">5</div>
+      <div class="power shadow"></div>
       <div class="title">Mahakamští obránci</div>
       <hr>
       <div class="flavor">Řikam ti, my sa rodíme pro boj – sekáme<br>ich rychtyk v kolenech!</div>
@@ -937,6 +1004,7 @@ hr {
       </div>
       
       <div class="power">5</div>
+      <div class="power shadow"></div>
       <div class="title">Mahakamští obránci</div>
       <hr>
       <div class="flavor">Řikam ti, my sa rodíme pro boj – sekáme<br>ich rychtyk v kolenech!</div>
@@ -948,6 +1016,7 @@ hr {
       </div>
       
       <div class="power">5</div>
+      <div class="power shadow"></div>
       <div class="title">Mahakamští obránci</div>
       <hr>
       <div class="flavor">Řikam ti, my sa rodíme pro boj – sekáme<br>ich rychtyk v kolenech!</div>
@@ -961,6 +1030,7 @@ hr {
         <img src="http://localhost:8080/img/icon-helms.png" />
       </div>
       <div class="power">5</div>
+      <div class="power shadow"></div>
       <div class="title">Havekarská podpora</div>
       <hr>
       <div class="flavor">Bojuju za kohokoliv, kdo platí.<br>Nebo za toho, koho je snadnější okrást.</div>
@@ -974,6 +1044,7 @@ hr {
         <img src="http://localhost:8080/img/icon-helms.png" />
       </div>
       <div class="power">5</div>
+      <div class="power shadow"></div>
       <div class="title">Havekarská podpora</div>
       <hr>
       <div class="flavor">Bojuju za kohokoliv, kdo platí.<br>Nebo za toho, koho je snadnější okrást.</div>
@@ -987,6 +1058,7 @@ hr {
         <img src="http://localhost:8080/img/icon-helms.png" />
       </div>
       <div class="power">5</div>
+      <div class="power shadow"></div>
       <div class="title">Havekarská podpora</div>
       <hr>
       <div class="flavor">Bojuju za kohokoliv, kdo platí.<br>Nebo za toho, koho je snadnější okrást.</div>
@@ -1000,6 +1072,7 @@ hr {
         <img src="http://localhost:8080/img/icon-music.png" />
       </div>
       <div class="power">2</div>
+      <div class="power shadow"></div>
       <div class="title">Marigold</div>
       <hr>
       <div class="flavor">Marigolde, jsi cynik, proutník, kurevník, lhář – a můj nejlepší přítel.</div>
@@ -1011,6 +1084,7 @@ hr {
       </div>
       
       <div class="power">15</div>
+      <div class="power shadow"></div>
       <div class="title">Cirilla</div>
       <hr>
       <div class="flavor">Víš, kdy pohádky přestávají být pohádkami? Když jim lidé začnou věřit.</div>
@@ -1022,6 +1096,7 @@ hr {
       </div>
       
       <div class="power">5</div>
+      <div class="power shadow"></div>
       <div class="title">Emiel Regis Rohellec Terzieff</div>
       <hr>
       <div class="flavor">Lidé, alespoň ti slušní, by mi říkali příšera. Krev sající zrůda.</div>
@@ -1033,6 +1108,7 @@ hr {
       </div>
       
       <div class="power">15</div>
+      <div class="power shadow"></div>
       <div class="title">Geralt z Rivie</div>
       <hr>
       <div class="flavor">Jestli má svět zachránit tohle,<br>bude lepší nechat svět zemřít.</div>
@@ -1046,6 +1122,7 @@ hr {
         <img src="http://localhost:8080/img/icon-eye.png" />
       </div>
       <div class="power">0</div>
+      <div class="power shadow"></div>
       <div class="title">Avallac'h</div>
       <hr>
       <div class="flavor">Věštit budoucnost není žádná věda.<br>Věda je věštit přesně.</div>
@@ -1059,6 +1136,7 @@ hr {
         <img src="http://localhost:8080/img/icon-helms.png" />
       </div>
       <div class="power">3</div>
+      <div class="power shadow"></div>
       <div class="title">Trpasličí harcovník</div>
       <hr>
       <div class="flavor">Celičký život s krumpáčem dřu.<br>Válečný topor bude snazší.</div>
@@ -1072,6 +1150,7 @@ hr {
         <img src="http://localhost:8080/img/icon-helms.png" />
       </div>
       <div class="power">3</div>
+      <div class="power shadow"></div>
       <div class="title">Trpasličí harcovník</div>
       <hr>
       <div class="flavor">Celičký život s krumpáčem dřu.<br>Válečný topor bude snazší.</div>
@@ -1085,6 +1164,7 @@ hr {
         <img src="http://localhost:8080/img/icon-helms.png" />
       </div>
       <div class="power">3</div>
+      <div class="power shadow"></div>
       <div class="title">Trpasličí harcovník</div>
       <hr>
       <div class="flavor">Celičký život s krumpáčem dřu.<br>Válečný topor bude snazší.</div>
@@ -1098,6 +1178,7 @@ hr {
         <img src="http://localhost:8080/img/icon-cow.png" />
       </div>
       <div class="power">0</div>
+      <div class="power shadow"></div>
       <div class="title">Kráva</div>
       <hr>
       <div class="flavor">Bůůů!</div>
@@ -1109,6 +1190,7 @@ hr {
       </div>
       
       <div class="power">6</div>
+      <div class="power shadow"></div>
       <div class="title">Dennis Cranmer</div>
       <hr>
       <div class="flavor">Vím, jak plnit rozkazy, takže si ty rady nech pro sebe.</div>
@@ -1120,6 +1202,7 @@ hr {
       </div>
       
       <div class="power">8</div>
+      <div class="power shadow"></div>
       <div class="title">Hovězí obranná jednotka</div>
       <hr>
       <div class="flavor">Grrrrr!</div>
@@ -1184,6 +1267,7 @@ hr {
       
       
       <div class="power skull"></div>
+      <div class="power shadow"></div>
       <div class="title">Sežehnutí</div>
       <hr>
       <div class="flavor">Ohnivé sloupy promění i ty nejsilnější v&nbsp;popel. Všichni ostatní se třesou úžasem.</div>
@@ -1193,6 +1277,7 @@ hr {
       
       
       <div class="power skull"></div>
+      <div class="power shadow"></div>
       <div class="title">Sežehnutí</div>
       <hr>
       <div class="flavor">Ohnivé sloupy promění i ty nejsilnější v&nbsp;popel. Všichni ostatní se třesou úžasem.</div>
@@ -1202,6 +1287,7 @@ hr {
       
       
       <div class="power skull"></div>
+      <div class="power shadow"></div>
       <div class="title">Sežehnutí</div>
       <hr>
       <div class="flavor">Ohnivé sloupy promění i ty nejsilnější v&nbsp;popel. Všichni ostatní se třesou úžasem.</div>
@@ -1211,6 +1297,7 @@ hr {
       
       
       <div class="power sun"></div>
+      <div class="power shadow"></div>
       <div class="title">Jasná obloha</div>
       <hr>
       <div class="flavor">Slunce svítí, Dromle! Slunce svítí! Třeba nám ještě zbývá nějaká naděje…</div>
@@ -1220,6 +1307,7 @@ hr {
       
       
       <div class="power sun"></div>
+      <div class="power shadow"></div>
       <div class="title">Jasná obloha</div>
       <hr>
       <div class="flavor">Slunce svítí, Dromle! Slunce svítí! Třeba nám ještě zbývá nějaká naděje…</div>
@@ -1229,6 +1317,7 @@ hr {
       
       
       <div class="power sun"></div>
+      <div class="power shadow"></div>
       <div class="title">Jasná obloha</div>
       <hr>
       <div class="flavor">Slunce svítí, Dromle! Slunce svítí! Třeba nám ještě zbývá nějaká naděje…</div>
@@ -1238,6 +1327,7 @@ hr {
       
       
       <div class="power horn"></div>
+      <div class="power shadow"></div>
       <div class="title">Velitelský roh</div>
       <hr>
       <div class="flavor">Plus jedna k morálce, mínus tři ke&nbsp;sluchu.</div>
@@ -1247,6 +1337,7 @@ hr {
       
       
       <div class="power horn"></div>
+      <div class="power shadow"></div>
       <div class="title">Velitelský roh</div>
       <hr>
       <div class="flavor">Plus jedna k morálce, mínus tři ke&nbsp;sluchu.</div>
@@ -1256,6 +1347,7 @@ hr {
       
       
       <div class="power horn"></div>
+      <div class="power shadow"></div>
       <div class="title">Velitelský roh</div>
       <hr>
       <div class="flavor">Plus jedna k morálce, mínus tři ke&nbsp;sluchu.</div>
@@ -1265,6 +1357,7 @@ hr {
       
       
       <div class="power decoy"></div>
+      <div class="power shadow"></div>
       <div class="title">Návnada</div>
       <hr>
       <div class="flavor">Když ti dojdou sedláci, dají se šípy střílet docela dobře i do atrap.</div>
@@ -1274,6 +1367,7 @@ hr {
       
       
       <div class="power decoy"></div>
+      <div class="power shadow"></div>
       <div class="title">Návnada</div>
       <hr>
       <div class="flavor">Když ti dojdou sedláci, dají se šípy střílet docela dobře i do atrap.</div>
@@ -1283,6 +1377,7 @@ hr {
       
       
       <div class="power decoy"></div>
+      <div class="power shadow"></div>
       <div class="title">Návnada</div>
       <hr>
       <div class="flavor">Když ti dojdou sedláci, dají se šípy střílet docela dobře i do atrap.</div>
@@ -1294,6 +1389,7 @@ hr {
       </div>
       
       <div class="power rain"></div>
+      <div class="power shadow"></div>
       <div class="title">Prudký déšť</div>
       <hr>
       <div class="flavor">I déšť v týhle zemi smrdí jak chcanky.</div>
@@ -1305,6 +1401,7 @@ hr {
       </div>
       
       <div class="power rain"></div>
+      <div class="power shadow"></div>
       <div class="title">Prudký déšť</div>
       <hr>
       <div class="flavor">I déšť v týhle zemi smrdí jak chcanky.</div>
@@ -1316,6 +1413,7 @@ hr {
       </div>
       
       <div class="power rain"></div>
+      <div class="power shadow"></div>
       <div class="title">Prudký déšť</div>
       <hr>
       <div class="flavor">I déšť v týhle zemi smrdí jak chcanky.</div>
@@ -1327,6 +1425,7 @@ hr {
       </div>
       
       <div class="power fog"></div>
+      <div class="power shadow"></div>
       <div class="title">Neproniknutelná mlha</div>
       <hr>
       <div class="flavor">Sen každého dobrého velitele... a noční můra každého špatného.</div>
@@ -1338,6 +1437,7 @@ hr {
       </div>
       
       <div class="power fog"></div>
+      <div class="power shadow"></div>
       <div class="title">Neproniknutelná mlha</div>
       <hr>
       <div class="flavor">Sen každého dobrého velitele... a noční můra každého špatného.</div>
@@ -1349,6 +1449,7 @@ hr {
       </div>
       
       <div class="power fog"></div>
+      <div class="power shadow"></div>
       <div class="title">Neproniknutelná mlha</div>
       <hr>
       <div class="flavor">Sen každého dobrého velitele... a noční můra každého špatného.</div>
@@ -1360,6 +1461,7 @@ hr {
       </div>
       
       <div class="power freeze"></div>
+      <div class="power shadow"></div>
       <div class="title">Štiplavý mráz</div>
       <hr>
       <div class="flavor">Nejlepší na mrazu je, že mrtvoly nehnijí tak rychle.</div>
@@ -1371,6 +1473,7 @@ hr {
       </div>
       
       <div class="power freeze"></div>
+      <div class="power shadow"></div>
       <div class="title">Štiplavý mráz</div>
       <hr>
       <div class="flavor">Nejlepší na mrazu je, že mrtvoly nehnijí tak rychle.</div>
@@ -1382,6 +1485,7 @@ hr {
       </div>
       
       <div class="power freeze"></div>
+      <div class="power shadow"></div>
       <div class="title">Štiplavý mráz</div>
       <hr>
       <div class="flavor">Nejlepší na mrazu je, že mrtvoly nehnijí tak rychle.</div>
@@ -1395,6 +1499,7 @@ hr {
         <img src="http://localhost:8080/img/icon-cow.png" />
       </div>
       <div class="power">0</div>
+      <div class="power shadow"></div>
       <div class="title">Kráva</div>
       <hr>
       <div class="flavor">Bůůů!</div>
@@ -1406,6 +1511,7 @@ hr {
       </div>
       
       <div class="power">6</div>
+      <div class="power shadow"></div>
       <div class="title">Ohnivý elementál</div>
       <hr>
       <div class="flavor">Oheň je tak rozkošný.</div>
@@ -1417,6 +1523,7 @@ hr {
       </div>
       
       <div class="power">5</div>
+      <div class="power shadow"></div>
       <div class="title">Ledový obr</div>
       <hr>
       <div class="flavor">Uprchl jsem jednou v životě. Před ledovým obrem. A vůbec se za to nestydím.</div>
@@ -1428,6 +1535,7 @@ hr {
       </div>
       
       <div class="power">6</div>
+      <div class="power shadow"></div>
       <div class="title">Zemní elementál</div>
       <hr>
       <div class="flavor">Jak bojovat se zemním elementálem? Nijak. Uteč. Co nejrychleji.</div>
@@ -1441,6 +1549,7 @@ hr {
         <img src="http://localhost:8080/img/icon-helms.png" />
       </div>
       <div class="power">6</div>
+      <div class="power shadow"></div>
       <div class="title">Krabopavoučí kolos</div>
       <hr>
       <div class="flavor">Vzácný poddruh krabopavouka. Velký jako slon, ale mnohem tužší.</div>
@@ -1452,6 +1561,7 @@ hr {
       </div>
       
       <div class="power">2</div>
+      <div class="power shadow"></div>
       <div class="title">Wyverna</div>
       <hr>
       <div class="flavor">Představ si křížence okřídleného hada a noční můry. Wyverny jsou horší.</div>
@@ -1465,6 +1575,7 @@ hr {
         <img src="http://localhost:8080/img/icon-heart.png" />
       </div>
       <div class="power">7</div>
+      <div class="power shadow"></div>
       <div class="title">Yennefer<br>z Vengerbergu</div>
       <hr>
       <div class="flavor">Oděná v černé a bílé, připomínala časné ráno v půli prosince.</div>
@@ -1476,6 +1587,7 @@ hr {
       </div>
       
       <div class="power">10</div>
+      <div class="power shadow"></div>
       <div class="title">Lešij</div>
       <hr>
       <div class="flavor">V těchto lesích nikdy nelovíme.<br>Ani kdyby měla celá vesnice umřít hladem.</div>
@@ -1487,6 +1599,7 @@ hr {
       </div>
       
       <div class="power">5</div>
+      <div class="power shadow"></div>
       <div class="title">Hrobice</div>
       <hr>
       <div class="flavor">Jejich dlouhé jazyky slouží k srkání morku – a bičování obětí.</div>
@@ -1498,6 +1611,7 @@ hr {
       </div>
       
       <div class="power">2</div>
+      <div class="power shadow"></div>
       <div class="title">Chrlič</div>
       <hr>
       <div class="flavor">Noční můra prastarých sochařů oživlá díky mágům.</div>
@@ -1509,6 +1623,7 @@ hr {
       </div>
       
       <div class="power">2</div>
+      <div class="power shadow"></div>
       <div class="title">Endriaga</div>
       <hr>
       <div class="flavor">Hnízdo! Znič to hnízdo, nebo sem ty hajzlové pořád polezou!</div>
@@ -1520,6 +1635,7 @@ hr {
       </div>
       
       <div class="power">2</div>
+      <div class="power shadow"></div>
       <div class="title">Kurolišek</div>
       <hr>
       <div class="flavor">Rodí se z vejce, jež snesl kohout...<br>pokud věříte těm vidláckým žvástům.</div>
@@ -1533,6 +1649,7 @@ hr {
         <img src="http://localhost:8080/img/icon-devil.png" />
       </div>
       <div class="power">6</div>
+      <div class="power shadow"></div>
       <div class="title">Obří ropucha</div>
       <hr>
       <div class="flavor">Velká. Zlá. Hnusná.<br>Dřepí ve stokách.</div>
@@ -1548,6 +1665,7 @@ hr {
         <img src="http://localhost:8080/img/icon-cross.png" />
       </div>
       <div class="power">8</div>
+      <div class="power shadow"></div>
       <div class="title">Kajran</div>
       <hr>
       <div class="flavor">Zabít kajrana? Prosté. Vem nejlepší meč... prodej ho a najmi si zaklínače.</div>
@@ -1561,6 +1679,7 @@ hr {
         <img src="http://localhost:8080/img/icon-recycle.png" />
       </div>
       <div class="power">2</div>
+      <div class="power shadow"></div>
       <div class="title">Harpyje</div>
       <hr>
       <div class="flavor">Existuje mnoho druhů harpyjí a všechny kradou jako straky.</div>
@@ -1574,6 +1693,7 @@ hr {
         <img src="http://localhost:8080/img/icon-recycle.png" />
       </div>
       <div class="power">2</div>
+      <div class="power shadow"></div>
       <div class="title">Harpyje celaeno</div>
       <hr>
       <div class="flavor">Obyčejné harpyje se živí mršinami. Harpyje celaeno... se živí sny.</div>
@@ -1585,6 +1705,7 @@ hr {
       </div>
       
       <div class="power">7</div>
+      <div class="power shadow"></div>
       <div class="title">Triss Ranuncul</div>
       <hr>
       <div class="flavor">Dokážu se o sebe postarat. Věř mi.</div>
@@ -1598,6 +1719,7 @@ hr {
         <img src="http://localhost:8080/img/icon-recycle.png" />
       </div>
       <div class="power">4</div>
+      <div class="power shadow"></div>
       <div class="title">Upír: Bruxa</div>
       <hr>
       <div class="flavor">Bruxu můžeš zabít i kolíkem – tedy pokud je dlouhý jako bidlo.</div>
@@ -1611,6 +1733,7 @@ hr {
         <img src="http://localhost:8080/img/icon-recycle.png" />
       </div>
       <div class="power">4</div>
+      <div class="power shadow"></div>
       <div class="title">Upír: Ekimara</div>
       <hr>
       <div class="flavor">Kdo by pomyslel, že přerostlí netopýři budou prahnout po křiklavých špercích?</div>
@@ -1624,6 +1747,7 @@ hr {
         <img src="http://localhost:8080/img/icon-recycle.png" />
       </div>
       <div class="power">4</div>
+      <div class="power shadow"></div>
       <div class="title">Upír: Fleder</div>
       <hr>
       <div class="flavor">Vyšší upíři své oběti obejmou. Fledeři je roztrhají na kousky.</div>
@@ -1637,6 +1761,7 @@ hr {
         <img src="http://localhost:8080/img/icon-recycle.png" />
       </div>
       <div class="power">4</div>
+      <div class="power shadow"></div>
       <div class="title">Upír: Garkain</div>
       <hr>
       <div class="flavor">Krvesajové a mrchožrouti tak odporní, že nepřátelé zmrazí už svou ošklivostí.</div>
@@ -1650,6 +1775,7 @@ hr {
         <img src="http://localhost:8080/img/icon-recycle.png" />
       </div>
       <div class="power">4</div>
+      <div class="power shadow"></div>
       <div class="title">Upír: Katakan</div>
       <hr>
       <div class="flavor">Pijí krev pevniny už od Konjunkce.</div>
@@ -1661,6 +1787,7 @@ hr {
       </div>
       
       <div class="power">6</div>
+      <div class="power shadow"></div>
       <div class="title">Vesemir</div>
       <hr>
       <div class="flavor">Jestli tě mají pověsit, požádej o vodu.<br>Než ji donesou, může se stát cokoliv.</div>
@@ -1674,6 +1801,7 @@ hr {
         <img src="http://localhost:8080/img/icon-devil.png" />
       </div>
       <div class="power">7</div>
+      <div class="power shadow"></div>
       <div class="title">Villentretenmerth</div>
       <hr>
       <div class="flavor">Taky si říká Borch Tři Kavky... jména mu moc nejdou.</div>
@@ -1685,6 +1813,7 @@ hr {
       </div>
       
       <div class="power">5</div>
+      <div class="power shadow"></div>
       <div class="title">Vlkodlak</div>
       <hr>
       <div class="flavor">Vlci nejsou tak špatní, jak se říká. Vlkodlaci jsou však ještě horší.</div>
@@ -1698,6 +1827,7 @@ hr {
         <img src="http://localhost:8080/img/icon-helms.png" />
       </div>
       <div class="power">2</div>
+      <div class="power shadow"></div>
       <div class="title">Nekker</div>
       <hr>
       <div class="flavor">Ti parchanti jsou skoro až roztomilí, když pominete to zabíjení a tak.</div>
@@ -1711,6 +1841,7 @@ hr {
         <img src="http://localhost:8080/img/icon-helms.png" />
       </div>
       <div class="power">2</div>
+      <div class="power shadow"></div>
       <div class="title">Nekker</div>
       <hr>
       <div class="flavor">Ti parchanti jsou skoro až roztomilí, když pominete to zabíjení a tak.</div>
@@ -1724,6 +1855,7 @@ hr {
         <img src="http://localhost:8080/img/icon-helms.png" />
       </div>
       <div class="power">2</div>
+      <div class="power shadow"></div>
       <div class="title">Nekker</div>
       <hr>
       <div class="flavor">Ti parchanti jsou skoro až roztomilí, když pominete to zabíjení a tak.</div>
@@ -1735,6 +1867,7 @@ hr {
       </div>
       
       <div class="power">5</div>
+      <div class="power shadow"></div>
       <div class="title">Morová panna</div>
       <hr>
       <div class="flavor">Nemocní se srocují kolem vředaté ženy obklopené hejnem vzteklých krys...</div>
@@ -1746,6 +1879,7 @@ hr {
       </div>
       
       <div class="power">10</div>
+      <div class="power shadow"></div>
       <div class="title">Imlerith</div>
       <hr>
       <div class="flavor">Ladd nawh! Zabte je!<br>Pokryjte zemi jejich vnitřnostmi!</div>
@@ -1757,6 +1891,7 @@ hr {
       </div>
       
       <div class="power">5</div>
+      <div class="power shadow"></div>
       <div class="title">Gryf</div>
       <hr>
       <div class="flavor">Gryfové si s obětmi rádi hrají. Požírají je zaživa, kus po kusu.</div>
@@ -1768,6 +1903,7 @@ hr {
       </div>
       
       <div class="power">15</div>
+      <div class="power shadow"></div>
       <div class="title">Geralt z Rivie</div>
       <hr>
       <div class="flavor">Jestli má svět zachránit tohle,<br>bude lepší nechat svět zemřít.</div>
@@ -1781,6 +1917,7 @@ hr {
         <img src="http://localhost:8080/img/icon-helms.png" />
       </div>
       <div class="power">1</div>
+      <div class="power shadow"></div>
       <div class="title">Ghúl</div>
       <hr>
       <div class="flavor">Pokud jsou ghúlové součástí koloběhu života... pak je to zvrácený koloběh.</div>
@@ -1794,6 +1931,7 @@ hr {
         <img src="http://localhost:8080/img/icon-helms.png" />
       </div>
       <div class="power">1</div>
+      <div class="power shadow"></div>
       <div class="title">Ghúl</div>
       <hr>
       <div class="flavor">Pokud jsou ghúlové součástí koloběhu života... pak je to zvrácený koloběh.</div>
@@ -1807,6 +1945,7 @@ hr {
         <img src="http://localhost:8080/img/icon-helms.png" />
       </div>
       <div class="power">1</div>
+      <div class="power shadow"></div>
       <div class="title">Ghúl</div>
       <hr>
       <div class="flavor">Pokud jsou ghúlové součástí koloběhu života... pak je to zvrácený koloběh.</div>
@@ -1818,6 +1957,7 @@ hr {
       </div>
       
       <div class="power">2</div>
+      <div class="power shadow"></div>
       <div class="title">Mlhavec</div>
       <hr>
       <div class="flavor">Mlha se plíží na kočičích nohách.<br>Mlhavci se plíží na tělech svých obětí.</div>
@@ -1829,6 +1969,7 @@ hr {
       </div>
       
       <div class="power">5</div>
+      <div class="power shadow"></div>
       <div class="title">Vidlohon</div>
       <hr>
       <div class="flavor">Vidlo-ohon...? Pche! Jejich ohony<br>jsou spíš jak sekáčky.</div>
@@ -1840,6 +1981,7 @@ hr {
       </div>
       
       <div class="power">5</div>
+      <div class="power shadow"></div>
       <div class="title">Chiméra</div>
       <hr>
       <div class="flavor">„Co jsem to provedl?“ vykřikl mág, kterého vyděsil vlastní výtvor.</div>
@@ -1851,6 +1993,7 @@ hr {
       </div>
       
       <div class="power">6</div>
+      <div class="power shadow"></div>
       <div class="title">Běs</div>
       <hr>
       <div class="flavor">Běs vypadá tak trochu jako jelen.<br>Obrovský, zlý jelen.</div>
@@ -1862,6 +2005,7 @@ hr {
       </div>
       
       <div class="power">5</div>
+      <div class="power shadow"></div>
       <div class="title">Emiel Regis Rohellec Terzieff</div>
       <hr>
       <div class="flavor">Lidé, alespoň ti slušní, by mi říkali příšera. Krev sající zrůda.</div>
@@ -1873,6 +2017,7 @@ hr {
       </div>
       
       <div class="power">10</div>
+      <div class="power shadow"></div>
       <div class="title">Draug</div>
       <hr>
       <div class="flavor">Někteří muži si neumí připustit porážku. Někteří bojují i ze záhrobí.</div>
@@ -1886,6 +2031,7 @@ hr {
         <img src="http://localhost:8080/img/icon-helms.png" />
       </div>
       <div class="power">6</div>
+      <div class="power shadow"></div>
       <div class="title">Ježibaba: Vařena</div>
       <hr>
       <div class="flavor">My tě vykucháme, chlapče.<br>Bude z tebe dobrý vývar.</div>
@@ -1899,6 +2045,7 @@ hr {
         <img src="http://localhost:8080/img/icon-helms.png" />
       </div>
       <div class="power">6</div>
+      <div class="power shadow"></div>
       <div class="title">Ježibaba: Pletana</div>
       <hr>
       <div class="flavor">Cítím tvou bolest. Vidím tvůj strach...</div>
@@ -1912,6 +2059,7 @@ hr {
         <img src="http://localhost:8080/img/icon-helms.png" />
       </div>
       <div class="power">6</div>
+      <div class="power shadow"></div>
       <div class="title">Ježibaba: Šeptana</div>
       <hr>
       <div class="flavor">Budu tvou nejlepší – i tvou poslední.</div>
@@ -1925,6 +2073,7 @@ hr {
         <img src="http://localhost:8080/img/icon-music.png" />
       </div>
       <div class="power">2</div>
+      <div class="power shadow"></div>
       <div class="title">Marigold</div>
       <hr>
       <div class="flavor">Marigolde, jsi cynik, proutník, kurevník, lhář – a můj nejlepší přítel.</div>
@@ -1936,6 +2085,7 @@ hr {
       </div>
       
       <div class="power">15</div>
+      <div class="power shadow"></div>
       <div class="title">Cirilla</div>
       <hr>
       <div class="flavor">Víš, kdy pohádky přestávají být pohádkami? Když jim lidé začnou věřit.</div>
@@ -1949,6 +2099,7 @@ hr {
         <img src="http://localhost:8080/img/icon-eye.png" />
       </div>
       <div class="power">0</div>
+      <div class="power shadow"></div>
       <div class="title">Avallac'h</div>
       <hr>
       <div class="flavor">Věštit budoucnost není žádná věda.<br>Věda je věštit přesně.</div>
@@ -1960,6 +2111,7 @@ hr {
       </div>
       
       <div class="power">4</div>
+      <div class="power shadow"></div>
       <div class="title">Potracenka</div>
       <hr>
       <div class="flavor">Přiznej své chyby a řádně je pohřbi – nebo tě budou strašit.</div>
@@ -1973,6 +2125,7 @@ hr {
         <img src="http://localhost:8080/img/icon-helms.png" />
       </div>
       <div class="power">4</div>
+      <div class="power shadow"></div>
       <div class="title">Krabopavouk</div>
       <hr>
       <div class="flavor">Ohyzdnost – tím příroda říká „Drž se kurva stranou.“</div>
@@ -1986,6 +2139,7 @@ hr {
         <img src="http://localhost:8080/img/icon-helms.png" />
       </div>
       <div class="power">4</div>
+      <div class="power shadow"></div>
       <div class="title">Krabopavouk</div>
       <hr>
       <div class="flavor">Ohyzdnost – tím příroda říká „Drž se kurva stranou.“</div>
@@ -1999,6 +2153,7 @@ hr {
         <img src="http://localhost:8080/img/icon-helms.png" />
       </div>
       <div class="power">4</div>
+      <div class="power shadow"></div>
       <div class="title">Krabopavouk</div>
       <hr>
       <div class="flavor">Ohyzdnost – tím příroda říká „Drž se kurva stranou.“</div>
@@ -2010,6 +2165,7 @@ hr {
       </div>
       
       <div class="power">5</div>
+      <div class="power shadow"></div>
       <div class="title">Zoltan Chivay</div>
       <hr>
       <div class="flavor">Trpaslík by prý kvůli kamarádovi i visel. A Zoltan není žádnou výjimkou.</div>
@@ -2021,6 +2177,7 @@ hr {
       </div>
       
       <div class="power">8</div>
+      <div class="power shadow"></div>
       <div class="title">Hovězí obranná jednotka</div>
       <hr>
       <div class="flavor">Grrrrr!</div>
@@ -2085,6 +2242,7 @@ hr {
       
       
       <div class="power "></div>
+      <div class="power shadow"></div>
       <div class="title"> </div>
       <hr>
       <div class="flavor"></div>
