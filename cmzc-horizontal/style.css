@@ -102,6 +102,7 @@ html, body {
   height: 7.5mm; */
   color: yellow;
   letter-spacing: 0.5px;
+  text-shadow: 1px 2px 1px #472856;
 }
 
 .basic .title {
@@ -126,35 +127,41 @@ html, body {
   padding-right: 6.5mm;
 }
 
-.title-shadow {
+/*.title-shadow {
   color: black;
   filter: blur(3px);
   z-index: 0;
 }
+*/
 
 .voodoo .title {
-  background: none;
-  height: 11.5mm;
-  width: 42mm;
-  padding: 2.25mm 3mm 0 12mm;
-  box-sizing: border-box;
-  color: black;
-  font-size: 4mm;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: absolute;
+  z-index: 2;
+  top: 0mm;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "BadaBoom CE";
+  font-size: 5.6mm;
+  background-size: contain;
+  width: 44mm;
+  padding: 2.5mm 0 1mm;
+  /* line-height: 7mm;
+  height: 7.5mm; */
+  color: yellow;
+  letter-spacing: 0.5px;
+  text-shadow: 1px 2px 1px #472856;
 }
 
 .title span {
-  line-height: 5mm;
+  line-height: 6mm;
   vertical-align: middle;
   display: inline-block;
   position: relative;
-  top: -0.2mm;
+  top: 0.0mm;
 }
 
 .voodoo .title span {
-    line-height: 4mm;
+    line-height: 5mm;
 }
 
 .title-reversed {
@@ -313,8 +320,8 @@ html, body {
 }
 
 .voodoo .illustration {
-  top: 25.5mm;
-  width: 43mm;
+  top: 23.5mm;
+  width: 42.5mm;
   height: 25mm;
 }
 
@@ -330,6 +337,7 @@ html, body {
   font-size: 4.2mm;
   line-height: 1;
   font-weight: 700;
+  color: white;
 }
 
 .bio .text, .tech .text {
@@ -343,11 +351,12 @@ html, body {
   */
   font-family: "Mirza";
   padding: 2mm 11mm;
+
 }
 
 .bio .text-shadow, .tech .text-shadow {
   z-index: 0;
-  color: white;
+  color: black;
   filter: blur(2px);
 }
 /*
