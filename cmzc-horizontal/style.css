@@ -33,6 +33,7 @@ html, body {
   background-position: center center;
   border-radius: 3mm;
   position: relative;
+
 }
 
 .card:not(.background)::before {
