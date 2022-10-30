@@ -360,7 +360,7 @@ html, body {
   width: 44mm;
   background: none;
   padding: 1mm 3mm 2mm;
-  height: 26mm;
+  height: 24mm;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -499,21 +499,21 @@ html, body {
 } */
 
 .background {
-  background: #c8cdcb url(http://localhost:8080/imgs/backside-gear.png) center center no-repeat;
+  background: #c8cdcb url(http://localhost:8080/imgs/backside-gear.jpg) center center no-repeat;
   background-size: cover;
   transform: rotate(180deg);
   border-radius: 0;
-  box-shadow: 0 0 5mm #c8cdcb, 0 0 5mm #c8cdcb, 0 0 5mm #c8cdcb;
+  /* box-shadow: 0 0 5mm #c8cdcb, 0 0 5mm #c8cdcb, 0 0 5mm #c8cdcb; */
 }
 
 .background.voodoo {
-  background-image: url(http://localhost:8080/imgs/backside-voodoo.png);
+  background-image: url(http://localhost:8080/imgs/backside-voodoo.jpg);
 }
 
 .background.ruka {
-  background-image: url(http://localhost:8080/imgs/backside-ruka.png);
+  background-image: url(http://localhost:8080/imgs/backside-ruka.jpg);
 }
 
 .background.noha {
-  background-image: url(http://localhost:8080/imgs/backside-noha.png);
+  background-image: url(http://localhost:8080/imgs/backside-noha.jpg);
 }
