@@ -66,6 +66,17 @@ const generateHtml = (cardsData, css, generateCardMarkup) => {
         csvFile = `${process.argv[2]}/${process.argv[cardsIndex + 1]}.csv`;
       }
     }
+    let customOutputName = null;
+    // check for custom output file name
+    if (process.argv.includes('file')) {
+      const fileIndex = process.argv.indexOf('file');
+      if (process.argv.length < fileIndex + 1) {
+        printInstructions();
+        return;
+      } else {
+        customOutputName = process.argv[fileIndex + 1];
+      }
+    }
     const cssFile = `${process.argv[2]}/style.css`;
     const csvData = fs.readFileSync(csvFile, 'utf8');
     const cssData = fs.readFileSync(cssFile, 'utf8');
@@ -83,7 +94,7 @@ const generateHtml = (cardsData, css, generateCardMarkup) => {
 
 
     // Create HTML file
-    fs.writeFileSync(`${process.argv[2]}/${process.argv[2]}.html`, htmlData, function(err) {
+    fs.writeFileSync(`${process.argv[2]}/${customOutputName || process.argv[2]}.html`, htmlData, function(err) {
       if(err) {
           return console.log(err);
       }
