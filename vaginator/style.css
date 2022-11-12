@@ -31,7 +31,8 @@ html, body {
   position: relative;
   /* border-radius: 3mm; */
   border: 1px solid black;
-  font-family: cursive;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 4mm;
   padding: 2mm;
 }
 
@@ -40,5 +41,7 @@ html, body {
   height: 64.0mm;
 }
 
-.title { font-size: 6mm; }
+.title { font-size: 6mm; font-weight: bold; }
 .text { font-size: 4mm; position: absolute; bottom: 2mm; width: calc(100% - 4mm); }
+.extra .text { font-size: 3.3mm; }
+.vagina.big .text { font-size: 3.8mm; }
