@@ -133,10 +133,11 @@ html, body {
 }
 
 .voodoo .title {
-  background: none;
-  height: 11.5mm;
+  background: transparent url(http://localhost:8080/imgs/voodoo-icon.png) 0.5mm 0.5mm no-repeat;
+  background-size: 12mm;
+  height: 13.5mm;
   width: 42mm;
-  padding: 2.25mm 3mm 0 12mm;
+  padding: 2.25mm 3mm 2mm 12mm;
   box-sizing: border-box;
   color: black;
   font-size: 4mm;
@@ -365,7 +366,7 @@ html, body {
   align-items: center;
   justify-content: center;
   font-size: 3.7mm;
-  line-height: 1;
+  line-height: 0.9;
   left: 0;
 }
 

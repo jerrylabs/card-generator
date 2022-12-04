@@ -174,6 +174,9 @@ module.exports = (cardData) => {
   if (cardData.type === 'background') {
     return `<div class="card background ${cardData.title}"></div>`;
   }
+  if (!cardData.type) {
+    return '';
+  }
   return `<div
     class="card
       ${cardData.type || ''}

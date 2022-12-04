@@ -130,10 +130,13 @@ const getAnimatronMarkup = (card) => `
 
 module.exports = (cardData) => {
   if (cardData.type === 'background') {
+    return ''; //'<div class="card background"></div>';
+  }
+  if (cardData.type === 'background') {
     return '<div class="card background"></div>';
   }
   return `<div
-    class="card ${cardData.type || ''} ${cardData.type === 'quest' ? cardData.test : ''}
+    class="card ${cardData.type || ''} ${cardData.type === 'quest' ? cardData.test : ''} ${cardData.type === 'animatron' ? cardData.image : ''}
   ">
     ${cardData.type == 'animatron'
       ? getAnimatronMarkup(cardData)
