@@ -17,9 +17,9 @@ const getTestMarkup = (value, lang) => {
     let testImgNamePart, testDescription = '';
     if (value.includes('PI'))      { testImgNamePart = 'poweriq'; }
     else if (value.includes('PS')) { testImgNamePart = 'powerspeed'; }
-    else if (value.includes('P'))  { testImgNamePart = 'power'; testDescription = lang === 'english' ? 'your power' : 'na sílu'; }
-    else if (value.includes('S'))  { testImgNamePart = 'speed'; testDescription = lang === 'english' ? 'your speed' : 'na rychlost'; }
-    else if (value.includes('I'))  { testImgNamePart = 'iq'; testDescription = lang === 'english' ? 'intelligence' : 'na inteligenci'; }
+    else if (value.includes('P'))  { testImgNamePart = 'power'; testDescription = lang === 'english' ? 'your power' : 'Síly'; }
+    else if (value.includes('S'))  { testImgNamePart = 'speed'; testDescription = lang === 'english' ? 'your speed' : 'RYCHLOSTI'; }
+    else if (value.includes('I'))  { testImgNamePart = 'iq'; testDescription = lang === 'english' ? 'intelligence' : 'INTELIGENCE'; }
     markup = `
       <img class="test" src="http://localhost:8080/imgs/attr-${testImgNamePart}.png" />
       <div class="quest__label">test</div>
