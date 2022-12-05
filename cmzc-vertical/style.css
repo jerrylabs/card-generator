@@ -201,8 +201,8 @@ html, body {
 .quest__label { top: 55mm; left: 7mm; font-size: 9mm; color: white; }
 .quest__description { top: 58.5mm; font-size: 20px; color: #ddd; }
 .P .quest__description { left: 41mm; }
-.S .quest__description { right: 0.5mm; }
-.I .quest__description { right: 0.5mm; font-size: 18px; }
+.S .quest__description { left: 41mm; }
+.I .quest__description { left: 41mm; }
 .quest__success, .quest__fail { top: 64.3mm; font-size: 22px; }
 .quest__success { left: 7mm; color: #fcee28; }
 .quest__fail { left: 41mm; color: #b70000; }
