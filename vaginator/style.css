@@ -1,4 +1,6 @@
-@page { margin: 16.5mm 0 0 0; }
+@page {
+  margin: 9mm 0 0 0;
+}
 
 body {
   -webkit-print-color-adjust: exact;
@@ -7,26 +9,39 @@ body {
 html, body {
   margin: 0;
   padding: 0;
+  font-size: 0;
+}
+
+* {
+  background-repeat: no-repeat;
 }
 
 .cards {
   text-align: center;
-  font-size: 0;
 }
 
 .card {
+  font-size: 12px;
   display: inline-block;
+  overflow: hidden;
   width: 64.0mm;
   height: 88.0mm;
-  border: 0.2mm solid yellow;
-  padding: 1cm;
-  font-size: 5mm;
+  box-sizing: border-box;
+  page-break-inside: avoid;
+  position: relative;
+  /* border-radius: 3mm; */
+  border: 1px solid black;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 4mm;
+  padding: 2mm;
 }
 
-.card.bojovnik { border-color: red; }
-.card.rostlina { border-color: green; }
+.card.small {
+  width: 44.0mm;
+  height: 64.0mm;
+}
 
-.type { color: gray;}
-.title { font-weight: bold; }
-.text { font-style: italic;}
-.image { height: 170px; }
+.title { font-size: 6mm; font-weight: bold; }
+.text { font-size: 4mm; position: absolute; bottom: 2mm; width: calc(100% - 4mm); }
+.extra .text { font-size: 3.3mm; }
+.vagina.big .text { font-size: 3.8mm; }

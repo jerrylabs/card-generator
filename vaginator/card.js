@@ -1,10 +1,9 @@
-module.exports = (cardData) => (
-  `<div class="card ${cardData.type}"> ${
-    Object.keys(cardData).map(cardProperty => {
-       if (cardProperty === 'image') {
-         return `<img class="${cardProperty}" src="img/${cardData[cardProperty]}.jpg" />`
-       }
-       return `<div class="${cardProperty}">${cardData[cardProperty]}</div>`
-    }).join('')
-  }</div>`
+
+
+module.exports = ({type, title, subtitle, text}) => (
+  `<div class="card ${type}">
+  <div class="title">${title}</div>
+  ${subtitle ? `<div class="subtitle">${subtitle}</div>` : ''}
+  <div class="text">${text}</div>
+  </div>`
 )

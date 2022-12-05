@@ -29,16 +29,9 @@ html, body {
   position: relative;
 }
 
-
-.card.animatron {
-  width: 88mm;
-  height: 118mm;
-}
-
 .type, .text {
   display: none;
 }
-
 
 .title {
   position: absolute;
@@ -202,7 +195,7 @@ html, body {
   white-space: nowrap;
 }
 
-.quest__label { top: 55mm; left: 4mm; font-size: 9mm; color: white; }
+.quest__label { top: 55mm; left: 7mm; font-size: 9mm; color: white; }
 .quest__description { top: 58.5mm; font-size: 20px; color: #ddd; }
 .P .quest__description { left: 41mm; }
 .S .quest__description { left: 41mm; }
@@ -214,6 +207,12 @@ html, body {
 /************************************************************
  ***************** * * *  ANIMATRONS  * * * *****************
  ************************************************************/
+
+.card.animatron {
+  width: 88mm;
+  height: 118mm;
+  top: 21.5mm;
+}
 
 .animatron .title {
   top: 2mm;
@@ -278,12 +277,18 @@ html, body {
   font-size: 10.5mm;
   padding: 2.5mm 0 0 0;
   position: absolute;
-  top: 91mm;
+  top: 37mm;
   left: 21mm;
   z-index: 4;
   font-family: 'Impact Condensed';
   color: red;
 }
+
+.chuckie .animatron__cards { top: 3mm; }
+.animatron.chuckie .attribute { top: 4mm; }
+.barbie .animatron__cards { top: 93mm; }
+.animatron.barbie .attribute { top: 95mm; }
+.zombik .animatron__cards { top: 33mm; left: 51mm; }
 
 .animatron__reputation span { position: relative; z-index: 1; }
 .animatron__reputation span::before { position: absolute; z-index: -1; color: black; filter: blur(1px); content: '-2'; }

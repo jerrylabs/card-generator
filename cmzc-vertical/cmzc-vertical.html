@@ -33,16 +33,9 @@ html, body {
   position: relative;
 }
 
-
-.card.animatron {
-  width: 88mm;
-  height: 118mm;
-}
-
 .type, .text {
   display: none;
 }
-
 
 .title {
   position: absolute;
@@ -206,7 +199,7 @@ html, body {
   white-space: nowrap;
 }
 
-.quest__label { top: 55mm; left: 4mm; font-size: 9mm; color: white; }
+.quest__label { top: 55mm; left: 7mm; font-size: 9mm; color: white; }
 .quest__description { top: 58.5mm; font-size: 20px; color: #ddd; }
 .P .quest__description { left: 41mm; }
 .S .quest__description { left: 41mm; }
@@ -218,6 +211,12 @@ html, body {
 /************************************************************
  ***************** * * *  ANIMATRONS  * * * *****************
  ************************************************************/
+
+.card.animatron {
+  width: 88mm;
+  height: 118mm;
+  top: 21.25mm;
+}
 
 .animatron .title {
   top: 2mm;
@@ -282,12 +281,18 @@ html, body {
   font-size: 10.5mm;
   padding: 2.5mm 0 0 0;
   position: absolute;
-  top: 91mm;
+  top: 37mm;
   left: 21mm;
   z-index: 4;
   font-family: 'Impact Condensed';
   color: red;
 }
+
+.chuckie .animatron__cards { top: 3mm; }
+.animatron.chuckie .attribute { top: 4mm; }
+.barbie .animatron__cards { top: 93mm; }
+.animatron.barbie .attribute { top: 95mm; }
+.zombik .animatron__cards { top: 33mm; left: 51mm; }
 
 .animatron__reputation span { position: relative; z-index: 1; }
 .animatron__reputation span::before { position: absolute; z-index: -1; color: black; filter: blur(1px); content: '-2'; }
@@ -319,7 +324,7 @@ html, body {
     <body>
       <div class="cards">
         <div
-    class="card quest P
+    class="card quest P 
   ">
     
     <div class="type">quest</div><div class="title
@@ -347,7 +352,7 @@ html, body {
         <span class="val1">-1</span>
       </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/png/01-klika_namazana_lepidlem.png');"></div>
   </div><div
-    class="card quest P
+    class="card quest P 
   ">
     
     <div class="type">quest</div><div class="title
@@ -375,7 +380,7 @@ html, body {
         <span class="val1">-1</span>
       </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/png/02-neotevritelna_truhlicka.png');"></div>
   </div><div
-    class="card quest P
+    class="card quest P 
   ">
     
     <div class="type">quest</div><div class="title
@@ -403,7 +408,7 @@ html, body {
         <span class="val1">-1</span>
       </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/png/03-medvedi_past.png');"></div>
   </div><div
-    class="card quest P
+    class="card quest P 
   ">
     
     <div class="type">quest</div><div class="title
@@ -431,7 +436,7 @@ html, body {
         <span class="val1">-1</span>
       </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/png/04-padajici_mriz.png');"></div>
   </div><div
-    class="card quest P
+    class="card quest P 
   ">
     
     <div class="type">quest</div><div class="title
@@ -459,7 +464,7 @@ html, body {
         <span class="val1">-1</span>
       </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/png/05-drticka_smesneho_odpadu.png');"></div>
   </div><div
-    class="card quest P
+    class="card quest P 
   ">
     
     <div class="type">quest</div><div class="title
@@ -487,7 +492,7 @@ html, body {
         <span class="val1">-1</span>
       </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/png/06-spolknuti_vorvanem.png');"></div><div class="text">Ham!</div>
   </div><div
-    class="card quest P
+    class="card quest P 
   ">
     
     <div class="type">quest</div><div class="title
@@ -515,7 +520,7 @@ html, body {
         <span class="val2">-2</span>
       </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/png/07-lazen_s_piranemi.png');"></div>
   </div><div
-    class="card quest P
+    class="card quest P 
   ">
     
     <div class="type">quest</div><div class="title
@@ -545,7 +550,7 @@ html, body {
         <span class="val2">-2</span>
       </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/png/08-lisovna_plechu.png');"></div>
   </div><div
-    class="card quest P
+    class="card quest P 
   ">
     
     <div class="type">quest</div><div class="title
@@ -572,8 +577,8 @@ html, body {
       <div class="quest__penalty">
         <span class="val2">-2</span>
       </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/png/09-rajsky_plyn.png');"></div><div class="text">Och, ta vůně!</div>
-  </div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div
-    class="card quest P
+  </div><div
+    class="card quest P 
   ">
     
     <div class="type">quest</div><div class="title
@@ -601,7 +606,7 @@ html, body {
         <span class="val2">-2</span>
       </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/png/10-strevaleptajici_plyn.png');"></div>
   </div><div
-    class="card quest P
+    class="card quest P 
   ">
     
     <div class="type">quest</div><div class="title
@@ -631,7 +636,7 @@ html, body {
         <span class="val2">-2</span>
       </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/png/11-mistnost_cirkularek.png');"></div>
   </div><div
-    class="card quest P
+    class="card quest P 
   ">
     
     <div class="type">quest</div><div class="title
@@ -659,7 +664,7 @@ html, body {
         <span class="val3">-3</span>
       </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/png/12-kyselinokrvykyanidoslinny_biomutant.png');"></div>
   </div><div
-    class="card quest P
+    class="card quest P 
   ">
     
     <div class="type">quest</div><div class="title
@@ -689,7 +694,7 @@ html, body {
         <span class="val3">-3</span>
       </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/png/13-motoropilozuby_tygr.png');"></div>
   </div><div
-    class="card quest P
+    class="card quest P 
   ">
     
     <div class="type">quest</div><div class="title
@@ -717,7 +722,7 @@ html, body {
         <span class="val3">-3</span>
       </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/png/14-tyranosaurus.png');"></div><div class="text">Je to samice.</div>
   </div><div
-    class="card quest P
+    class="card quest P 
   ">
     
     <div class="type">quest</div><div class="title
@@ -747,7 +752,7 @@ html, body {
         <span class="val3">-3</span>
       </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/png/15-kabelnice.png');"></div>
   </div><div
-    class="card quest S
+    class="card quest S 
   ">
     
     <div class="type">quest</div><div class="title
@@ -775,7 +780,7 @@ html, body {
         <span class="val1">-1</span>
       </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/png/16-zapastena_truhlicka.png');"></div>
   </div><div
-    class="card quest S
+    class="card quest S 
   ">
     
     <div class="type">quest</div><div class="title
@@ -803,7 +808,7 @@ html, body {
         <span class="val1">-1</span>
       </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/png/17-laserovy_rezak.png');"></div>
   </div><div
-    class="card quest S
+    class="card quest S 
   ">
     
     <div class="type">quest</div><div class="title
@@ -830,8 +835,8 @@ html, body {
       <div class="quest__penalty">
         <span class="val1">-1</span>
       </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/png/18-pramen_kyseliny.png');"></div>
-  </div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div
-    class="card quest S
+  </div><div
+    class="card quest S 
   ">
     
     <div class="type">quest</div><div class="title
@@ -859,7 +864,7 @@ html, body {
         <span class="val1">-1</span>
       </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/png/19-bortici_se_chodba.png');"></div>
   </div><div
-    class="card quest S
+    class="card quest S 
   ">
     
     <div class="type">quest</div><div class="title
@@ -887,7 +892,7 @@ html, body {
         <span class="val1">-1</span>
       </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/png/20-propadlo.png');"></div>
   </div><div
-    class="card quest S
+    class="card quest S 
   ">
     
     <div class="type">quest</div><div class="title
@@ -915,7 +920,7 @@ html, body {
         <span class="val1">-1</span>
       </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/png/21-uzky_mustek.png');"></div>
   </div><div
-    class="card quest S
+    class="card quest S 
   ">
     
     <div class="type">quest</div><div class="title
@@ -943,7 +948,7 @@ html, body {
         <span class="val2">-2</span>
       </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/png/22-ohnivy_kruh.png');"></div><div class="text">Skok nebo smrt!</div>
   </div><div
-    class="card quest S
+    class="card quest S 
   ">
     
     <div class="type">quest</div><div class="title
@@ -971,7 +976,7 @@ html, body {
         <span class="val2">-2</span>
       </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/png/23-zhave_uhliky.png');"></div>
   </div><div
-    class="card quest S
+    class="card quest S 
   ">
     
     <div class="type">quest</div><div class="title
@@ -1001,7 +1006,7 @@ html, body {
         <span class="val2">-2</span>
       </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/png/24-bazen_kyseliny.png');"></div><div class="text">Běž rychle, ale opatrně!</div>
   </div><div
-    class="card quest S
+    class="card quest S 
   ">
     
     <div class="type">quest</div><div class="title
@@ -1029,7 +1034,7 @@ html, body {
         <span class="val2">-2</span>
       </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/png/25-naolejovana_sikma_plocha.png');"></div>
   </div><div
-    class="card quest S
+    class="card quest S 
   ">
     
     <div class="type">quest</div><div class="title
@@ -1059,7 +1064,7 @@ html, body {
         <span class="val2">-2</span>
       </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/png/26-lavova_mistnost.png');"></div><div class="text">Běž opatrně, ale rychle!</div>
   </div><div
-    class="card quest S
+    class="card quest S 
   ">
     
     <div class="type">quest</div><div class="title
@@ -1086,8 +1091,8 @@ html, body {
       <div class="quest__penalty">
         <span class="val3">-3</span>
       </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/png/27-padajici_pirane.png');"></div><div class="text">Piraně, všude piraně!</div>
-  </div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div
-    class="card quest S
+  </div><div
+    class="card quest S 
   ">
     
     <div class="type">quest</div><div class="title
@@ -1117,7 +1122,7 @@ html, body {
         <span class="val3">-3</span>
       </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/png/28-motyli_s_ziletkovymi_kridly.png');"></div><div class="text">Ostré jako laser.</div>
   </div><div
-    class="card quest S
+    class="card quest S 
   ">
     
     <div class="type">quest</div><div class="title
@@ -1145,7 +1150,7 @@ html, body {
         <span class="val3">-3</span>
       </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/png/29-hejno_divokych_srsnu.png');"></div><div class="text">Dorůstají až 80 cm.</div>
   </div><div
-    class="card quest S
+    class="card quest S 
   ">
     
     <div class="type">quest</div><div class="title
@@ -1175,7 +1180,7 @@ html, body {
         <span class="val3">-3</span>
       </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/png/30-valici_se_kamen.png');"></div>
   </div><div
-    class="card quest I
+    class="card quest I 
   ">
     
     <div class="type">quest</div><div class="title
@@ -1203,7 +1208,7 @@ html, body {
         <span class="val1">-1</span>
       </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/png/31-otravena_hostina.png');"></div><div class="text">Za 30 stříbrných Jidáš zakoupil slevněné koření.</div>
   </div><div
-    class="card quest I
+    class="card quest I 
   ">
     
     <div class="type">quest</div><div class="title
@@ -1231,7 +1236,7 @@ html, body {
         <span class="val1">-1</span>
       </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/png/32-lektvar_podivuhodneho_zapachu.png');"></div><div class="text">Jedo čuchnutí porazí slona.</div>
   </div><div
-    class="card quest I
+    class="card quest I 
   ">
     
     <div class="type">quest</div><div class="title
@@ -1259,7 +1264,7 @@ html, body {
         <span class="val1">-1</span>
       </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/png/33-lektvar_podezrele_svetelkujici_kapaliny.png');"></div><div class="text">Světélkuje v divném rytmu.</div>
   </div><div
-    class="card quest I
+    class="card quest I 
   ">
     
     <div class="type">quest</div><div class="title
@@ -1287,7 +1292,7 @@ html, body {
         <span class="val1">-1</span>
       </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/png/34-automat_s_obzerstvenim.png');"></div>
   </div><div
-    class="card quest I
+    class="card quest I 
   ">
     
     <div class="type">quest</div><div class="title
@@ -1315,7 +1320,7 @@ html, body {
         <span class="val1">-1</span>
       </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/png/35-hloupy_troll.png');"></div>
   </div><div
-    class="card quest I
+    class="card quest I 
   ">
     
     <div class="type">quest</div><div class="title
@@ -1342,8 +1347,8 @@ html, body {
       <div class="quest__penalty">
         <span class="val1">-1</span>
       </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/png/36-zamcene_dvere.png');"></div>
-  </div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div
-    class="card quest I
+  </div><div
+    class="card quest I 
   ">
     
     <div class="type">quest</div><div class="title
@@ -1371,7 +1376,7 @@ html, body {
         <span class="val2">-2</span>
       </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/png/37-zrcadlovy_labyrint.png');"></div>
   </div><div
-    class="card quest I
+    class="card quest I 
   ">
     
     <div class="type">quest</div><div class="title
@@ -1401,7 +1406,7 @@ html, body {
         <span class="val2">-2</span>
       </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/png/38-sifrovany_vzkaz.png');"></div><div class="text">Čitelný pouze za měsíčního svitu.</div>
   </div><div
-    class="card quest I
+    class="card quest I 
   ">
     
     <div class="type">quest</div><div class="title
@@ -1431,7 +1436,7 @@ html, body {
         <span class="val2">-2</span>
       </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/png/39-zapasteny_automat_s_obzerstvenim.png');"></div>
   </div><div
-    class="card quest I
+    class="card quest I 
   ">
     
     <div class="type">quest</div><div class="title
@@ -1459,7 +1464,7 @@ html, body {
         <span class="val2">-2</span>
       </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/png/40-laserova_mistnost.png');"></div>
   </div><div
-    class="card quest I
+    class="card quest I 
   ">
     
     <div class="type">quest</div><div class="title
@@ -1487,7 +1492,7 @@ html, body {
         <span class="val2">-2</span>
       </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/png/41-ozubena_kola.png');"></div>
   </div><div
-    class="card quest I
+    class="card quest I 
   ">
     
     <div class="type">quest</div><div class="title
@@ -1515,7 +1520,7 @@ html, body {
         <span class="val3">-3</span>
       </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/png/42-naslapne_miny.png');"></div>
   </div><div
-    class="card quest I
+    class="card quest I 
   ">
     
     <div class="type">quest</div><div class="title
@@ -1545,7 +1550,7 @@ html, body {
         <span class="val3">-3</span>
       </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/png/43-mistnost_bez_vychodu.png');"></div>
   </div><div
-    class="card quest I
+    class="card quest I 
   ">
     
     <div class="type">quest</div><div class="title
@@ -1575,7 +1580,7 @@ html, body {
         <span class="val3">-3</span>
       </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/png/44-zamek_vysokeho_napeti.png');"></div>
   </div><div
-    class="card quest I
+    class="card quest I 
   ">
     
     <div class="type">quest</div><div class="title
@@ -1602,8 +1607,8 @@ html, body {
       <div class="quest__penalty">
         <span class="val3">-3</span>
       </div><div class="quest__illustration" style="background-image: url('http://localhost:8080/imgs/ilus/png/45-vrtackoruky_klaun.png');"></div><div class="text">Vrrrr!</div>
-  </div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div class="card background"></div><div
-    class="card animatron 
+  </div><div
+    class="card animatron  chuckie
   ">
     
   <img class="joint provided bone bone1" src="http://localhost:8080/imgs/provided-bone.png">
@@ -1617,7 +1622,7 @@ html, body {
           src="http://localhost:8080/imgs/ilus/characters/chuckie.jpg"
           class="illustration" />
   </div><div
-    class="card animatron 
+    class="card animatron  barbie
   ">
     
   <img class="joint provided bone bone1" src="http://localhost:8080/imgs/provided-bone.png">
@@ -1631,7 +1636,7 @@ html, body {
           src="http://localhost:8080/imgs/ilus/characters/barbie.jpg"
           class="illustration" />
   </div><div
-    class="card animatron 
+    class="card animatron  retro
   ">
     
   <img class="joint provided bone bone1" src="http://localhost:8080/imgs/provided-bone.png">
@@ -1645,7 +1650,7 @@ html, body {
           src="http://localhost:8080/imgs/ilus/characters/retro.jpg"
           class="illustration" />
   </div><div
-    class="card animatron 
+    class="card animatron  humunculus
   ">
     
   <img class="joint provided bone bone1" src="http://localhost:8080/imgs/provided-bone.png">
@@ -1659,7 +1664,7 @@ html, body {
           src="http://localhost:8080/imgs/ilus/characters/humunculus.jpg"
           class="illustration" />
   </div><div
-    class="card animatron 
+    class="card animatron  zombik
   ">
     
   <img class="joint provided bone bone1" src="http://localhost:8080/imgs/provided-bone.png">
@@ -1673,7 +1678,7 @@ html, body {
           src="http://localhost:8080/imgs/ilus/characters/zombik.jpg"
           class="illustration" />
   </div><div
-    class="card animatron 
+    class="card animatron  zombik
   ">
     
   <img class="joint provided bone bone1" src="http://localhost:8080/imgs/provided-bone.png">
@@ -1687,7 +1692,7 @@ html, body {
           src="http://localhost:8080/imgs/ilus/characters/zombik.jpg"
           class="illustration" />
   </div><div
-    class="card animatron 
+    class="card animatron  zombik
   ">
     
   <img class="joint provided bone bone1" src="http://localhost:8080/imgs/provided-bone.png">
@@ -1701,7 +1706,7 @@ html, body {
           src="http://localhost:8080/imgs/ilus/characters/zombik.jpg"
           class="illustration" />
   </div><div
-    class="card animatron 
+    class="card animatron  zombik
   ">
     
   <img class="joint provided bone bone1" src="http://localhost:8080/imgs/provided-bone.png">
@@ -1715,7 +1720,7 @@ html, body {
           src="http://localhost:8080/imgs/ilus/characters/zombik.jpg"
           class="illustration" />
   </div><div
-    class="card animatron 
+    class="card animatron  gaybot
   ">
     
   <img class="joint provided bone bone1" src="http://localhost:8080/imgs/provided-bone.png">
@@ -1729,7 +1734,7 @@ html, body {
           src="http://localhost:8080/imgs/ilus/characters/gaybot.jpg"
           class="illustration" />
   </div><div
-    class="card animatron 
+    class="card animatron  replikant
   ">
     
   <img class="joint provided bone bone1" src="http://localhost:8080/imgs/provided-bone.png">
@@ -1743,7 +1748,7 @@ html, body {
           src="http://localhost:8080/imgs/ilus/characters/replikant.jpg"
           class="illustration" />
   </div><div
-    class="card animatron 
+    class="card animatron  loco
   ">
     
   <img class="joint provided bone bone1" src="http://localhost:8080/imgs/provided-bone.png">
@@ -1757,7 +1762,7 @@ html, body {
           src="http://localhost:8080/imgs/ilus/characters/loco.jpg"
           class="illustration" />
   </div><div
-    class="card animatron 
+    class="card animatron  klon
   ">
     
   <img class="joint provided bone bone1" src="http://localhost:8080/imgs/provided-bone.png">
@@ -1771,7 +1776,7 @@ html, body {
           src="http://localhost:8080/imgs/ilus/characters/klon.jpg"
           class="illustration" />
   </div><div
-    class="card animatron 
+    class="card animatron  zombik
   ">
     
   <img class="joint provided bone bone1" src="http://localhost:8080/imgs/provided-bone.png">
@@ -1785,7 +1790,7 @@ html, body {
           src="http://localhost:8080/imgs/ilus/characters/zombik.jpg"
           class="illustration" />
   </div><div
-    class="card animatron 
+    class="card animatron  zombik
   ">
     
   <img class="joint provided bone bone1" src="http://localhost:8080/imgs/provided-bone.png">
@@ -1799,7 +1804,7 @@ html, body {
           src="http://localhost:8080/imgs/ilus/characters/zombik.jpg"
           class="illustration" />
   </div><div
-    class="card animatron 
+    class="card animatron  zombik
   ">
     
   <img class="joint provided bone bone1" src="http://localhost:8080/imgs/provided-bone.png">
@@ -1813,7 +1818,7 @@ html, body {
           src="http://localhost:8080/imgs/ilus/characters/zombik.jpg"
           class="illustration" />
   </div><div
-    class="card animatron 
+    class="card animatron  zombik
   ">
     
   <img class="joint provided bone bone1" src="http://localhost:8080/imgs/provided-bone.png">
