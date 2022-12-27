@@ -57,8 +57,8 @@ const generateHtml = (cardsData, css, generateCardMarkup) => {
     let csvFile = `${process.argv[2]}/cards.csv`;
 
     // check for custom input file name
-    if (process.argv.includes('cards')) {
-      const cardsIndex = process.argv.indexOf('cards');
+    if (process.argv.includes('input')) {
+      const cardsIndex = process.argv.indexOf('input');
       if (process.argv.length < cardsIndex + 1) {
         printInstructions();
         return;
@@ -68,8 +68,8 @@ const generateHtml = (cardsData, css, generateCardMarkup) => {
     }
     let customOutputName = null;
     // check for custom output file name
-    if (process.argv.includes('file')) {
-      const fileIndex = process.argv.indexOf('file');
+    if (process.argv.includes('output')) {
+      const fileIndex = process.argv.indexOf('output');
       if (process.argv.length < fileIndex + 1) {
         printInstructions();
         return;

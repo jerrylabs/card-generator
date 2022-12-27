@@ -108,6 +108,7 @@ html, body {
 
 .basic .title {
   color: black;
+  text-shadow: none;
 }
 
 .title-long {
@@ -155,13 +156,16 @@ html, body {
   font-family: "BadaBoom CE";
   font-size: 5.6mm;
   background-size: contain;
-  width: 44mm;
+  width: 42mm;
   padding: 2.5mm 0 1mm;
-  /* line-height: 7mm;
-  height: 7.5mm; */
+  /* line-height: 7mm; */
+  min-height: 7mm;
   color: yellow;
   letter-spacing: 0.5px;
-  text-shadow: 1px 2px 1px #472856;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
 }
 
 .title span {
@@ -183,8 +187,8 @@ html, body {
 }
 
 .joint { position: absolute; z-index: 4; height: 1.5cm; }
-.joint.required { left: -4px; }
-.joint.provided { right: -0.5mm; }
+.joint.required { left: 0; }
+.joint.provided { right: 0; }
 .joint.single.bone { top: 1cm; }
 .joint.single.hand,
 .joint.single.leg { bottom: 1cm; }
@@ -363,10 +367,12 @@ html, body {
   */
   font-family: "Mirza";
   padding: 2mm 11mm;
+  text-shadow: 1px 1px 0px black, 0px 0px 2px black;
 
 }
 
 .bio .text-shadow, .tech .text-shadow {
+  display: none;
   z-index: 0;
   color: black;
   filter: blur(2px);
@@ -377,7 +383,7 @@ html, body {
 }
 */
 .voodoo .text {
- bottom: 0mm;
+  bottom: 2mm;
   width: 44mm;
   background: none;
   padding: 1mm 3mm 2mm;
@@ -388,6 +394,7 @@ html, body {
   font-size: 3.7mm;
   line-height: 0.9;
   left: 0;
+  text-shadow: 1px 1px 0px #472856, 0px 0px 2px #472856
 }
 
 .voodoo .text-long {

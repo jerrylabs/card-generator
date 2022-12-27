@@ -1,0 +1,5025 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <style type="text/css">
+        @page {
+  margin: 9mm 0 0 0;
+}
+
+body {
+  -webkit-print-color-adjust: exact;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+}
+
+* {
+  background-repeat: no-repeat;
+}
+
+.cards {
+  text-align: center;
+}
+
+.card {
+  font-size: 12px;
+  display: inline-block;
+  overflow: hidden;
+  width: 44.0mm;
+  height: 64.0mm;
+  box-sizing: border-box;
+  page-break-inside: avoid;
+  position: relative;
+  background-size: 100% 100%;
+  background-position: center center;
+  border-radius: 3mm;
+  position: relative;
+
+}
+
+.card:not(.background)::before {
+  content: ' ';
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  border: 1mm solid black;
+  border-radius: 3mm;
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.card-frame {
+  display: none;
+}
+
+.type {
+  display: none;
+}
+
+.card.bio { background-image: url(http://localhost:8080/imgs/background-bio.jpg); }
+.card.tech { background-image: url(http://localhost:8080/imgs/background-tech.jpg); }
+.card.basic { background-image: url(http://localhost:8080/imgs/background-basic.jpg); }
+.card.voodoo { background-image: url(http://localhost:8080/imgs/background-voodoo.jpg); }
+.card.quest { background-image: url(http://localhost:8080/imgs/background-quest.jpg); }
+
+.card-icons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-position: center center;
+  background-size: 100% 100%;
+}
+
+.card.bio .card-icons {
+  background-image: url(http://localhost:8080/imgs/icons-bio.png);
+}
+
+
+.card.tech .card-icons {
+  background-image: url(http://localhost:8080/imgs/icons-tech.png);
+}
+
+.card-vertical .card-icons {
+  height: 50%;
+  background-position: center top;
+  background-size: 100% 200%;
+}
+
+.title {
+  position: absolute;
+  z-index: 2;
+  top: 0mm;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "BadaBoom CE";
+  font-size: 5.6mm;
+  background-size: contain;
+  width: 44mm;
+  padding: 2.5mm 0 1mm;
+  /* line-height: 7mm;
+  height: 7.5mm; */
+  color: yellow;
+  letter-spacing: 0.5px;
+  text-shadow: 1px 2px 1px #472856;
+}
+
+.basic .title {
+  color: black;
+  text-shadow: none;
+}
+
+.title-long {
+  font-size: 5.3mm;
+}
+
+.card-double-joint .title {
+  width: 38mm;
+}
+
+.card-double-req-joint .title:not(.title-reversed),
+.card-double-prov-joint .title.title-reversed {
+  padding-left: 6.5mm;
+}
+
+.card-double-prov-joint .title:not(.title-reversed),
+.card-double-req-joint .title.title-reversed {
+  padding-right: 6.5mm;
+}
+
+/*.title-shadow {
+  color: black;
+  filter: blur(3px);
+  z-index: 0;
+}
+*/
+
+.voodoo .title {
+  /* background: transparent url(http://localhost:8080/imgs/voodoo-icon.png) 0.5mm 0.5mm no-repeat;
+  background-size: 12mm;
+  height: 13.5mm;
+  width: 42mm;
+  padding: 2.25mm 3mm 2mm 12mm;
+  box-sizing: border-box;
+  color: black;
+  font-size: 4mm;
+  display: flex;
+  align-items: center;
+  justify-content: center; */
+  position: absolute;
+  z-index: 2;
+  top: 0mm;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "BadaBoom CE";
+  font-size: 5.6mm;
+  background-size: contain;
+  width: 42mm;
+  padding: 2.5mm 0 1mm;
+  /* line-height: 7mm; */
+  min-height: 7mm;
+  color: yellow;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.title span {
+  line-height: 6mm;
+  vertical-align: middle;
+  display: inline-block;
+  position: relative;
+  top: 0.0mm;
+}
+
+.voodoo .title span {
+    line-height: 5mm;
+}
+
+.title-reversed {
+  top: auto;
+  bottom: 0mm;
+  transform: translateX(-50%) rotate(-180deg);
+}
+
+.joint { position: absolute; z-index: 4; height: 1.5cm; }
+.joint.required { left: 0; }
+.joint.provided { right: 0; }
+.joint.single.bone { top: 1cm; }
+.joint.single.hand,
+.joint.single.leg { bottom: 1cm; }
+.joint.first { top: -2.5mm; }
+.joint.second { bottom: -2.5mm; }
+
+.attributes, .lives, .rerolls {
+  position: absolute;
+  z-index: 2;
+  bottom: 10mm;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  line-height: 0;
+}
+
+.lives {
+  bottom: auto;
+  top: 11mm;
+}
+
+.lives-down {
+  top: auto;
+  bottom: 11mm;
+}
+
+.tech.card-vertical .lives-down {
+  bottom: 5mm;
+}
+
+.rerolls {
+  bottom: auto;
+  top: 10mm;
+}
+
+.card-has-joints.two-handed .rerolls {
+  bottom: 0;
+  height: 100%;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  left: 2.5mm;
+  justify-content: center;
+}
+
+.attribute {
+  width: 12mm;
+  margin: 0mm;
+}
+
+.life {
+  width: 10.5mm;
+  margin: -1mm 0;
+}
+
+.rerolls .life {
+  margin: 1.5mm 1mm 0;
+  vertical-align: top;
+}
+
+.two-handed .rerolls .life { margin: 1mm 1.5mm 0; }
+.two-handed .rerolls .life + .life { margin-top: -3.5mm ; }
+
+.test, .reroll {
+  width: 13mm;
+  height: 13mm;
+  display: inline-block;
+  background-repeat: no-repeat;
+}
+
+.reroll {
+  position: relative;
+}
+
+.reroll::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-size: contain;
+  content: ' ';
+  background-repeat: no-repeat;
+}
+
+.reroll img {
+  width: 100%;
+}
+
+.reroll-green::before { background-image: url(http://localhost:8080/imgs/reroll-green.png); }
+.reroll-red::before { background-image: url(http://localhost:8080/imgs/reroll-red.png); }
+
+.attributes,
+.lives {
+  position: static;
+  flex: 0 1 0;
+  display: flex;
+}
+
+.lives-and-attributes {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  top: 10.5mm;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.bio.card-has-joints .attr3 {
+  padding-left: 3mm;
+}
+
+.life, .attribute { margin: 1mm 0.5mm; }
+.attr3 .attribute,
+.attr3 .life { margin: 1mm -1mm; }
+.attr4 {margin-left: 3.5mm; }
+.attr4 .attribute { margin: 1mm -2mm; }
+.attr4 .life { margin: 1mm -2mm; }
+
+.card-vertical .rerolls .life {
+  margin: 2mm 0;
+}
+
+.card-has-joints .rerolls {
+  bottom: 11mm;
+  width: 100%;
+  display: flex;
+  top: auto;
+  justify-content: center;
+  height: auto;
+  flex-direction: row;
+  right: auto;
+}
+/* end of version */
+
+
+.illustration {
+  width: 100%;
+  height: auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.voodoo .illustration {
+  top: 23.5mm;
+  width: 42.5mm;
+  height: 25mm;
+}
+
+.text {
+  position: absolute;
+  z-index: 3;
+  left: 0mm;
+  bottom: 1mm;
+  width: 44mm;
+  font-family: "Mirza";
+  padding: 1mm;
+  box-sizing: border-box;
+  font-size: 4.2mm;
+  line-height: 1;
+  font-weight: 350;
+  color: white;
+}
+
+.bio .text, .tech .text {
+  display: flex;
+  align-items: center;
+  left: -10mm;
+  bottom: 0mm;
+  width: 64mm;
+  /*
+  background: radial-gradient(ellipse farthest-side at center 50%, rgba(255, 255, 255, 0.5) 80%, transparent 100%);
+  */
+  font-family: "Mirza";
+  padding: 2mm 11mm;
+  text-shadow: 1px 1px 0px black, 0px 0px 2px black;
+
+}
+
+.bio .text-shadow, .tech .text-shadow {
+  display: none;
+  z-index: 0;
+  color: black;
+  filter: blur(2px);
+}
+/*
+.bio .text.special, .tech .text.special {
+  background: radial-gradient(ellipse farthest-side at center 55%, rgba(255, 255, 255, 0.5) 80%, transparent 100%);
+}
+*/
+.voodoo .text {
+  bottom: 2mm;
+  width: 44mm;
+  background: none;
+  padding: 1mm 3mm 2mm;
+  height: 24mm;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.7mm;
+  line-height: 0.9;
+  left: 0;
+  text-shadow: 1px 1px 0px #472856, 0px 0px 2px #472856
+}
+
+.voodoo .text-long {
+  font-size: 3mm;
+  line-height: 1.1;
+}
+
+.voodoo .texts {
+  flex-direction: column;
+}
+
+.voodoo .text-part {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.voodoo .text .emo {
+  width: 12mm;
+  margin: -0.5mm;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.voodoo .text .emo.dice {
+  width: 9mm;
+  margin: 0 1mm;
+}
+
+.voodoo .texts .emo.dice {
+  margin: 0 0.2mm;
+}
+
+.voodoo .text.text-all .emo.dice {
+  margin: 0 0.1mm;
+}
+
+.voodoo .text .emo.arrow {
+  margin: -4.5mm;
+  z-index: 1;
+}
+
+.group-all {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.group {
+  display: flex;
+}
+
+.voodoo .text .group .emo {
+    width: 9mm;
+    margin: 0;
+}
+
+.emo-epic    { background-image: url(http://localhost:8080/imgs/emo-epic.png); }
+.emo-tragic  { background-image: url(http://localhost:8080/imgs/emo-tragic.png); }
+.emo-sad     { background-image: url(http://localhost:8080/imgs/emo-sad.png); }
+.emo-happy   { background-image: url(http://localhost:8080/imgs/emo-happy.png); }
+.emo-neutral { background-image: url(http://localhost:8080/imgs/emo-neutral.png); }
+
+.card-two-texts .text .emo {
+  width: 9mm;
+  margin: 0;
+}
+
+.card-two-texts .text .emo.arrow {
+  margin: -3.5mm;
+}
+
+.voodoo .test {
+  position: absolute;
+  top: 37.1mm;
+  left: 4.8mm;
+  transform: translate(-50%, -50%) !important;
+  z-index: 3;
+  width: 16mm;
+  height: 16mm;
+}
+
+.voodoo .or {
+  position: relative;
+  top: -0.5mm;
+}
+
+.texts-between { flex: 0 0 1mm; }
+
+/************************************************************
+ ***************** * * *    QUESTS    * * * *****************
+ ************************************************************/
+
+
+
+/* Fix last empty page */
+.cards {
+  margin-bottom: -10mm;
+}
+
+.cards {
+  overflow: hidden;
+}
+
+/************************************************************
+ ***************** * * *  BACK SIDES  * * * *****************
+ ************************************************************/
+
+/* .card.back-side {
+  background: white url(http://localhost:8080/imgs/cmzc-logo.png) center center no-repeat;
+  background-size: 3.5cm
+}
+
+.card.back-side:not(.quest) {
+  transform: rotate(180deg);
+}
+
+.card.quest.card.back-side {
+  background-size: 4.5cm;
+}
+
+.card.back-side.ruka {
+  background-image: url(http://localhost:8080/imgs/background-ruka.png);
+}
+
+.card.back-side.noha {
+  background-image: url(http://localhost:8080/imgs/background-noha.png);
+} */
+
+.background {
+  background: #c8cdcb url(http://localhost:8080/imgs/backside-gear.jpg) center center no-repeat;
+  background-size: cover;
+  transform: rotate(180deg);
+  border-radius: 0;
+  /* box-shadow: 0 0 5mm #c8cdcb, 0 0 5mm #c8cdcb, 0 0 5mm #c8cdcb; */
+}
+
+.background.voodoo {
+  background-image: url(http://localhost:8080/imgs/backside-voodoo.jpg);
+}
+
+.background.ruka {
+  background-image: url(http://localhost:8080/imgs/backside-ruka.jpg);
+}
+
+.background.noha {
+  background-image: url(http://localhost:8080/imgs/backside-noha.jpg);
+}
+      </style>
+    </head>
+    <body>
+      <div class="cards">
+        <div
+    class="card
+      bio
+      
+      card-has-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">bio</div><div class="title
+
+        
+        
+      ">
+        <span>Paže wrestlera</span>
+      </div><div class="title title-reversed
+          
+          "><span>Paže wrestlera</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Paže wrestlera</span>
+      </div><div class="title title-shadow title-reversed
+          
+          "><span>Paže wrestlera</span></div><img class="joint required single bone" src="http://localhost:8080/imgs/required-bone.png" /><img class="joint provided single hand" src="http://localhost:8080/imgs/provided-hand.png" /><div class="lives-and-attributes attr3">
+        <div class="attributes">
+          <img class="attribute attribute-power" src="http://localhost:8080/imgs/attr-power.png" /><img class="attribute attribute-power" src="http://localhost:8080/imgs/attr-power.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/imgs/heart.png" />
+        </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/Paže wrestlera.png"
+        class="illustration" />
+  </div><div
+    class="card
+      bio
+      
+      card-has-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">bio</div><div class="title
+
+        
+        
+      ">
+        <span>Vystřelovací pěst</span>
+      </div><div class="title title-reversed
+          
+          "><span>Vystřelovací pěst</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Vystřelovací pěst</span>
+      </div><div class="title title-shadow title-reversed
+          
+          "><span>Vystřelovací pěst</span></div><img class="joint required single bone" src="http://localhost:8080/imgs/required-bone.png" /><img class="joint provided single hand" src="http://localhost:8080/imgs/provided-hand.png" /><div class="lives-and-attributes attr3">
+        <div class="attributes">
+          <img class="attribute attribute-power" src="http://localhost:8080/imgs/attr-power.png" /><img class="attribute attribute-speed" src="http://localhost:8080/imgs/attr-speed.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/imgs/heart.png" />
+        </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/vystrelovaci pest copy.png"
+        class="illustration" />
+  </div><div
+    class="card
+      bio
+       card-with-text
+      card-has-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">bio</div><div class="title
+
+        
+        
+      ">
+        <span>Chmatákova ruka</span>
+      </div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Chmatákova ruka</span>
+      </div><img class="joint required single bone" src="http://localhost:8080/imgs/required-bone.png" /><img class="joint provided single hand" src="http://localhost:8080/imgs/provided-hand.png" /><div class="lives-and-attributes attr2">
+        <div class="attributes">
+          <img class="attribute attribute-speed" src="http://localhost:8080/imgs/attr-speed.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/imgs/heart.png" />
+        </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/chmatakova ruka.png"
+        class="illustration" /><div class="text special">Jednou za kolo si<br>můžeš vzít náhodnou kartu z ruky protihráče.</div><div class="text text-shadow">Jednou za kolo si<br>můžeš vzít náhodnou kartu z ruky protihráče.</div>
+  </div><div
+    class="card
+      bio
+      
+      card-has-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">bio</div><div class="title
+
+        
+        
+      ">
+        <span>Natažitelná ruka</span>
+      </div><div class="title title-reversed
+          
+          "><span>Natažitelná ruka</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Natažitelná ruka</span>
+      </div><div class="title title-shadow title-reversed
+          
+          "><span>Natažitelná ruka</span></div><img class="joint required single bone" src="http://localhost:8080/imgs/required-bone.png" /><img class="joint provided single hand" src="http://localhost:8080/imgs/provided-hand.png" /><div class="lives-and-attributes attr3">
+        <div class="attributes">
+          <img class="attribute attribute-speed" src="http://localhost:8080/imgs/attr-speed.png" /><img class="attribute attribute-iq" src="http://localhost:8080/imgs/attr-iq.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/imgs/heart.png" />
+        </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/natazitelna.png"
+        class="illustration" />
+  </div><div
+    class="card
+      bio
+      
+      card-has-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">bio</div><div class="title
+
+        
+        
+      ">
+        <span>Diablovo kopyto</span>
+      </div><div class="title title-reversed
+          
+          "><span>Diablovo kopyto</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Diablovo kopyto</span>
+      </div><div class="title title-shadow title-reversed
+          
+          "><span>Diablovo kopyto</span></div><img class="joint required single bone" src="http://localhost:8080/imgs/required-bone.png" /><img class="joint provided single leg" src="http://localhost:8080/imgs/provided-leg.png" /><div class="lives-and-attributes attr3">
+        <div class="attributes">
+          <img class="attribute attribute-power" src="http://localhost:8080/imgs/attr-power.png" /><img class="attribute attribute-speed" src="http://localhost:8080/imgs/attr-speed.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/imgs/heart.png" />
+        </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/kopyto.png"
+        class="illustration" />
+  </div><div
+    class="card
+      bio
+      
+      card-has-joints
+      card-double-joint
+      
+      card-double-prov-joint
+      
+      
+  ">
+    <div class="type">bio</div><div class="title
+
+        
+        
+      ">
+        <span>Opičí noha</span>
+      </div><div class="title title-reversed
+          
+          "><span>Opičí noha</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Opičí noha</span>
+      </div><div class="title title-shadow title-reversed
+          
+          "><span>Opičí noha</span></div><img class="joint required single bone" src="http://localhost:8080/imgs/required-bone.png" /><img class="joint provided first hand" src="http://localhost:8080/imgs/provided-hand.png" />
+            <img class="joint provided second leg" src="http://localhost:8080/imgs/provided-leg.png" /><div class="lives-and-attributes attr3">
+        <div class="attributes">
+          <img class="attribute attribute-speed" src="http://localhost:8080/imgs/attr-speed.png" /><img class="attribute attribute-speed" src="http://localhost:8080/imgs/attr-speed.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/imgs/heart.png" />
+        </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/opici noha-1.png"
+        class="illustration" />
+  </div><div
+    class="card
+      bio
+      
+      card-has-joints
+      card-double-joint
+      
+      card-double-prov-joint
+      
+      
+  ">
+    <div class="type">bio</div><div class="title
+
+        
+        
+      ">
+        <span>Žahavé chapadla</span>
+      </div><div class="title title-reversed
+          
+          "><span>Žahavé chapadla</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Žahavé chapadla</span>
+      </div><div class="title title-shadow title-reversed
+          
+          "><span>Žahavé chapadla</span></div><img class="joint required single bone" src="http://localhost:8080/imgs/required-bone.png" /><img class="joint provided first hand" src="http://localhost:8080/imgs/provided-hand.png" />
+            <img class="joint provided second hand" src="http://localhost:8080/imgs/provided-hand.png" /><div class="lives-and-attributes attr2">
+        <div class="attributes">
+          <img class="attribute attribute-power" src="http://localhost:8080/imgs/attr-power.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/imgs/heart.png" />
+        </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/chapadlo.png"
+        class="illustration" />
+  </div><div
+    class="card
+      bio
+      
+      card-has-joints
+      card-double-joint
+      
+      card-double-prov-joint
+      
+      
+  ">
+    <div class="type">bio</div><div class="title
+
+        
+        
+      ">
+        <span>Dual ruka</span>
+      </div><div class="title title-reversed
+          
+          "><span>Dual ruka</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Dual ruka</span>
+      </div><div class="title title-shadow title-reversed
+          
+          "><span>Dual ruka</span></div><img class="joint required single bone" src="http://localhost:8080/imgs/required-bone.png" /><img class="joint provided first hand" src="http://localhost:8080/imgs/provided-hand.png" />
+            <img class="joint provided second hand" src="http://localhost:8080/imgs/provided-hand.png" /><div class="lives-and-attributes attr2">
+        <div class="attributes">
+          <img class="attribute attribute-power" src="http://localhost:8080/imgs/attr-power.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/imgs/heart.png" />
+        </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/dual ruka.png"
+        class="illustration" />
+  </div><div
+    class="card
+      bio
+      
+      card-has-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">bio</div><div class="title
+
+         title-long
+        
+      ">
+        <span>Integrovaný rotačák</span>
+      </div><div class="title title-reversed
+           title-long
+          "><span>Integrovaný rotačák</span></div><div class="title title-shadow
+
+         title-long
+        
+      ">
+        <span>Integrovaný rotačák</span>
+      </div><div class="title title-shadow title-reversed
+           title-long
+          "><span>Integrovaný rotačák</span></div><img class="joint required single bone" src="http://localhost:8080/imgs/required-bone.png" /><div class="lives-and-attributes attr4">
+        <div class="attributes">
+          <img class="attribute attribute-speed" src="http://localhost:8080/imgs/attr-speed.png" /><img class="attribute attribute-speed" src="http://localhost:8080/imgs/attr-speed.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/imgs/heart.png" /><img class="life" src="http://localhost:8080/imgs/heart.png" />
+        </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/integrovany rotacak - N.png"
+        class="illustration" />
+  </div><div
+    class="card
+      bio
+      
+      card-has-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">bio</div><div class="title
+
+        
+        
+      ">
+        <span>Megavrták</span>
+      </div><div class="title title-reversed
+          
+          "><span>Megavrták</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Megavrták</span>
+      </div><div class="title title-shadow title-reversed
+          
+          "><span>Megavrták</span></div><img class="joint required single bone" src="http://localhost:8080/imgs/required-bone.png" /><div class="lives-and-attributes attr4">
+        <div class="attributes">
+          <img class="attribute attribute-power" src="http://localhost:8080/imgs/attr-power.png" /><img class="attribute attribute-power" src="http://localhost:8080/imgs/attr-power.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/imgs/heart.png" /><img class="life" src="http://localhost:8080/imgs/heart.png" />
+        </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/megavrtak.png"
+        class="illustration" />
+  </div><div
+    class="card
+      bio
+      
+      card-has-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">bio</div><div class="title
+
+        
+        
+      ">
+        <span>Kyber paže</span>
+      </div><div class="title title-reversed
+          
+          "><span>Kyber paže</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Kyber paže</span>
+      </div><div class="title title-shadow title-reversed
+          
+          "><span>Kyber paže</span></div><img class="joint provided single hand" src="http://localhost:8080/imgs/provided-hand.png" /><div class="lives-and-attributes attr2">
+        <div class="attributes">
+          <img class="attribute attribute-speed" src="http://localhost:8080/imgs/attr-speed.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/imgs/heart.png" />
+        </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/kyber paze.png"
+        class="illustration" />
+  </div><div
+    class="card
+      bio
+      
+      card-has-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">bio</div><div class="title
+
+        
+        
+      ">
+        <span>Sloní chobot</span>
+      </div><div class="title title-reversed
+          
+          "><span>Sloní chobot</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Sloní chobot</span>
+      </div><div class="title title-shadow title-reversed
+          
+          "><span>Sloní chobot</span></div><img class="joint provided single hand" src="http://localhost:8080/imgs/provided-hand.png" /><div class="lives-and-attributes attr2">
+        <div class="attributes">
+          <img class="attribute attribute-power" src="http://localhost:8080/imgs/attr-power.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/imgs/heart.png" />
+        </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/Sloní chobot.png"
+        class="illustration" />
+  </div><div
+    class="card
+      bio
+      
+      card-has-joints
+      card-double-joint
+      
+      card-double-prov-joint
+      
+      
+  ">
+    <div class="type">bio</div><div class="title
+
+        
+        
+      ">
+        <span>Roboruce</span>
+      </div><div class="title title-reversed
+          
+          "><span>Roboruce</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Roboruce</span>
+      </div><div class="title title-shadow title-reversed
+          
+          "><span>Roboruce</span></div><img class="joint provided first hand" src="http://localhost:8080/imgs/provided-hand.png" />
+            <img class="joint provided second hand" src="http://localhost:8080/imgs/provided-hand.png" /><div class="lives-and-attributes attr1">
+        <div class="attributes">
+          
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/imgs/heart.png" />
+        </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/dalsie ruky.png"
+        class="illustration" />
+  </div><div
+    class="card
+      bio
+      
+      card-has-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">bio</div><div class="title
+
+        
+        
+      ">
+        <span>Údní nástavec</span>
+      </div><div class="title title-reversed
+          
+          "><span>Údní nástavec</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Údní nástavec</span>
+      </div><div class="title title-shadow title-reversed
+          
+          "><span>Údní nástavec</span></div><img class="joint provided single bone" src="http://localhost:8080/imgs/provided-bone.png" /><div class="lives-and-attributes attr1">
+        <div class="attributes">
+          
+        </div>
+        <div class="lives lives-down
+        ">
+          <img class="life" src="http://localhost:8080/imgs/heart.png" />
+        </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/ud nastavec - N.png"
+        class="illustration" />
+  </div><div
+    class="card
+      bio
+      
+      card-has-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">bio</div><div class="title
+
+        
+        
+      ">
+        <span>Údní nástavec</span>
+      </div><div class="title title-reversed
+          
+          "><span>Údní nástavec</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Údní nástavec</span>
+      </div><div class="title title-shadow title-reversed
+          
+          "><span>Údní nástavec</span></div><img class="joint provided single bone" src="http://localhost:8080/imgs/provided-bone.png" /><div class="lives-and-attributes attr1">
+        <div class="attributes">
+          
+        </div>
+        <div class="lives lives-down
+        ">
+          <img class="life" src="http://localhost:8080/imgs/heart.png" />
+        </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/ud nastavec - N.png"
+        class="illustration" />
+  </div><div
+    class="card
+      bio
+      
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">bio</div><div class="title
+
+        
+        
+      ">
+        <span>Průhledná kůže</span>
+      </div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Průhledná kůže</span>
+      </div><div class="lives-and-attributes attr1">
+        <div class="attributes">
+          <img class="attribute attribute-iq" src="http://localhost:8080/imgs/attr-iq.png" />
+        </div>
+        <div class="lives 
+        ">
+          
+        </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/neviditelny plast.png"
+        class="illustration" />
+  </div><div
+    class="card
+      bio
+      
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">bio</div><div class="title
+
+        
+        
+      ">
+        <span>Laserové oko</span>
+      </div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Laserové oko</span>
+      </div><div class="lives-and-attributes attr1">
+        <div class="attributes">
+          <img class="attribute attribute-power" src="http://localhost:8080/imgs/attr-power.png" />
+        </div>
+        <div class="lives 
+        ">
+          
+        </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/laserove oko.png"
+        class="illustration" />
+  </div><div
+    class="card
+      bio
+      
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">bio</div><div class="title
+
+        
+        
+      ">
+        <span>Měňavost</span>
+      </div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Měňavost</span>
+      </div><div class="lives-and-attributes attr1">
+        <div class="attributes">
+          <img class="attribute attribute-iq" src="http://localhost:8080/imgs/attr-iq.png" />
+        </div>
+        <div class="lives 
+        ">
+          
+        </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/menavec.png"
+        class="illustration" />
+  </div><div
+    class="card
+      bio
+      
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">bio</div><div class="title
+
+        
+        
+      ">
+        <span>Kyselinný pot</span>
+      </div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Kyselinný pot</span>
+      </div><div class="lives-and-attributes attr1">
+        <div class="attributes">
+          <img class="attribute attribute-speed" src="http://localhost:8080/imgs/attr-speed.png" />
+        </div>
+        <div class="lives 
+        ">
+          
+        </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/pot aliena.png"
+        class="illustration" />
+  </div><div
+    class="card
+      bio
+      
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">bio</div><div class="title
+
+        
+        
+      ">
+        <span>Kyselinná krev</span>
+      </div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Kyselinná krev</span>
+      </div><div class="lives-and-attributes attr1">
+        <div class="attributes">
+          <img class="attribute attribute-power" src="http://localhost:8080/imgs/attr-power.png" />
+        </div>
+        <div class="lives 
+        ">
+          
+        </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/kyselina krev.png"
+        class="illustration" />
+  </div><div
+    class="card
+      bio
+      
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">bio</div><div class="title
+
+        
+        
+      ">
+        <span>Chameleoní kůže</span>
+      </div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Chameleoní kůže</span>
+      </div><div class="lives-and-attributes attr1">
+        <div class="attributes">
+          <img class="attribute attribute-iq" src="http://localhost:8080/imgs/attr-iq.png" />
+        </div>
+        <div class="lives 
+        ">
+          
+        </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/maskovani.png"
+        class="illustration" />
+  </div><div
+    class="card
+      bio
+      
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">bio</div><div class="title
+
+        
+        
+      ">
+        <span>Mozek asiata</span>
+      </div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Mozek asiata</span>
+      </div><div class="lives-and-attributes attr1">
+        <div class="attributes">
+          <img class="attribute attribute-iq" src="http://localhost:8080/imgs/attr-iq.png" />
+        </div>
+        <div class="lives 
+        ">
+          
+        </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/mozog aziata.png"
+        class="illustration" />
+  </div><div
+    class="card
+      bio
+      
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">bio</div><div class="title
+
+        
+        
+      ">
+        <span>Žhavá kůže</span>
+      </div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Žhavá kůže</span>
+      </div><div class="lives-and-attributes attr1">
+        <div class="attributes">
+          <img class="attribute attribute-power" src="http://localhost:8080/imgs/attr-power.png" />
+        </div>
+        <div class="lives 
+        ">
+          
+        </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/žhavá kuže.png"
+        class="illustration" />
+  </div><div
+    class="card
+      bio
+      
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">bio</div><div class="title
+
+        
+        
+      ">
+        <span>Mrazivý dech</span>
+      </div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Mrazivý dech</span>
+      </div><div class="lives-and-attributes attr1">
+        <div class="attributes">
+          <img class="attribute attribute-power" src="http://localhost:8080/imgs/attr-power.png" />
+        </div>
+        <div class="lives 
+        ">
+          
+        </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/Mrazivý dech.png"
+        class="illustration" />
+  </div><div
+    class="card
+      bio
+      
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">bio</div><div class="title
+
+        
+        
+      ">
+        <span>Srdeční pumpa</span>
+      </div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Srdeční pumpa</span>
+      </div><div class="lives-and-attributes attr1">
+        <div class="attributes">
+          <img class="attribute attribute-speed" src="http://localhost:8080/imgs/attr-speed.png" />
+        </div>
+        <div class="lives 
+        ">
+          
+        </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/Srdecní pumpa.png"
+        class="illustration" />
+  </div><div
+    class="card
+      bio
+      
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">bio</div><div class="title
+
+         title-long
+        
+      ">
+        <span>Hydraulický biceps</span>
+      </div><div class="title title-shadow
+
+         title-long
+        
+      ">
+        <span>Hydraulický biceps</span>
+      </div><div class="lives-and-attributes attr2">
+        <div class="attributes">
+          <img class="attribute attribute-power" src="http://localhost:8080/imgs/attr-power.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/imgs/heart.png" />
+        </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/hydraluicky biceps.png"
+        class="illustration" />
+  </div><div
+    class="card
+      bio
+      
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">bio</div><div class="title
+
+        
+        
+      ">
+        <span>Žraločí zuby</span>
+      </div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Žraločí zuby</span>
+      </div><div class="lives-and-attributes attr2">
+        <div class="attributes">
+          <img class="attribute attribute-power" src="http://localhost:8080/imgs/attr-power.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/imgs/heart.png" />
+        </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/Žraločí zuby .png"
+        class="illustration" />
+  </div><div
+    class="card
+      bio
+      
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">bio</div><div class="title
+
+        
+        
+      ">
+        <span>Titanové zuby</span>
+      </div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Titanové zuby</span>
+      </div><div class="lives-and-attributes attr2">
+        <div class="attributes">
+          <img class="attribute attribute-power" src="http://localhost:8080/imgs/attr-power.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/imgs/heart.png" />
+        </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/Titanové zuby.png"
+        class="illustration" />
+  </div><div
+    class="card
+      bio
+      
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">bio</div><div class="title
+
+        
+        
+      ">
+        <span>Netopýří uši</span>
+      </div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Netopýří uši</span>
+      </div><div class="lives-and-attributes attr2">
+        <div class="attributes">
+          <img class="attribute attribute-iq" src="http://localhost:8080/imgs/attr-iq.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/imgs/heart.png" />
+        </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/netopiri usi.png"
+        class="illustration" />
+  </div><div
+    class="card
+      bio
+      
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">bio</div><div class="title
+
+        
+        
+      ">
+        <span>Kachní žaludek</span>
+      </div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Kachní žaludek</span>
+      </div><div class="lives-and-attributes attr3">
+        <div class="attributes">
+          <img class="attribute attribute-power" src="http://localhost:8080/imgs/attr-power.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/imgs/heart.png" /><img class="life" src="http://localhost:8080/imgs/heart.png" />
+        </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/kachni zaludek.png"
+        class="illustration" />
+  </div><div
+    class="card
+      bio
+      
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">bio</div><div class="title
+
+        
+        
+      ">
+        <span>Kovová kostra</span>
+      </div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Kovová kostra</span>
+      </div><div class="lives-and-attributes attr3">
+        <div class="attributes">
+          <img class="attribute attribute-power" src="http://localhost:8080/imgs/attr-power.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/imgs/heart.png" /><img class="life" src="http://localhost:8080/imgs/heart.png" />
+        </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/kovova kostra.png"
+        class="illustration" />
+  </div><div
+    class="card
+      bio
+      
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">bio</div><div class="title
+
+        
+        
+      ">
+        <span>Statečné srdce</span>
+      </div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Statečné srdce</span>
+      </div><div class="lives-and-attributes attr3">
+        <div class="attributes">
+          
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/imgs/heart.png" /><img class="life" src="http://localhost:8080/imgs/heart.png" /><img class="life" src="http://localhost:8080/imgs/heart.png" />
+        </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/Statečné srdce.png"
+        class="illustration" />
+  </div><div
+    class="card
+      bio
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">bio</div><div class="title
+
+        
+        
+      ">
+        <span>Šmírákovo oko</span>
+      </div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Šmírákovo oko</span>
+      </div><div class="lives-and-attributes attr2">
+        <div class="attributes">
+          <img class="attribute attribute-iq" src="http://localhost:8080/imgs/attr-iq.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/imgs/heart.png" />
+        </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/smirakaovo oko.png"
+        class="illustration" /><div class="text">Jednou za kolo se můžeš podívat do karet na ruce jednoho protihráče.</div><div class="text text-shadow">Jednou za kolo se můžeš podívat do karet na ruce jednoho protihráče.</div>
+  </div><div
+    class="card
+      bio
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">bio</div><div class="title
+
+        
+        
+      ">
+        <span>Rentgenové oko</span>
+      </div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Rentgenové oko</span>
+      </div><div class="lives-and-attributes attr2">
+        <div class="attributes">
+          <img class="attribute attribute-iq" src="http://localhost:8080/imgs/attr-iq.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/imgs/heart.png" />
+        </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/rentgenove okp.png"
+        class="illustration" /><div class="text">Jednou za kolo se můžeš podívat na vrchní kartu z&nbsp;balíčku úkolů.</div><div class="text text-shadow">Jednou za kolo se můžeš podívat na vrchní kartu z&nbsp;balíčku úkolů.</div>
+  </div><div
+    class="card
+      bio
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">bio</div><div class="title
+
+        
+        
+      ">
+        <span>Kamenná kůže</span>
+      </div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Kamenná kůže</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/Kamenná koža.png"
+        class="illustration" /><div class="text">Při ztrátě více než jednoho života ztrácíš o&nbsp;život méně.</div><div class="text text-shadow">Při ztrátě více než jednoho života ztrácíš o&nbsp;život méně.</div>
+  </div><div
+    class="card
+      bio
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">bio</div><div class="title
+
+        
+        
+      ">
+        <span>Regenerace</span>
+      </div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Regenerace</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/regenerace.png"
+        class="illustration" /><div class="text">Můžeš si vykládat vylepšení přidávající životy z&nbsp;odhazovacího balíčku, jakoby jsi je měl v ruce.</div><div class="text text-shadow">Můžeš si vykládat vylepšení přidávající životy z&nbsp;odhazovacího balíčku, jakoby jsi je měl v ruce.</div>
+  </div><div
+    class="card
+      tech
+      
+      card-has-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">tech</div><div class="title
+
+        
+        
+      ">
+        <span>Sekáček</span>
+      </div><div class="title title-reversed
+          
+          "><span>Sekáček</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Sekáček</span>
+      </div><div class="title title-shadow title-reversed
+          
+          "><span>Sekáček</span></div><img class="joint required single hand" src="http://localhost:8080/imgs/required-hand.png" /><div class="rerolls"><img class="test" src="http://localhost:8080/imgs/test-power.png" />
+      <div class="reroll reroll-green">
+        <img src="http://localhost:8080/imgs/dice1.png" />
+      </div></div><img
+        src="http://localhost:8080/imgs/ilus/png/sekacek.png"
+        class="illustration" />
+  </div><div
+    class="card
+      tech
+      
+      card-has-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">tech</div><div class="title
+
+        
+        
+      ">
+        <span>Kostěný kyj</span>
+      </div><div class="title title-reversed
+          
+          "><span>Kostěný kyj</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Kostěný kyj</span>
+      </div><div class="title title-shadow title-reversed
+          
+          "><span>Kostěný kyj</span></div><img class="joint required single hand" src="http://localhost:8080/imgs/required-hand.png" /><div class="rerolls"><img class="test" src="http://localhost:8080/imgs/test-power.png" />
+      <div class="reroll reroll-green">
+        <img src="http://localhost:8080/imgs/dice1.png" />
+      </div></div><img
+        src="http://localhost:8080/imgs/ilus/png/kyj.png"
+        class="illustration" />
+  </div><div
+    class="card
+      tech
+      
+      card-has-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">tech</div><div class="title
+
+        
+        
+      ">
+        <span>Lopata</span>
+      </div><div class="title title-reversed
+          
+          "><span>Lopata</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Lopata</span>
+      </div><div class="title title-shadow title-reversed
+          
+          "><span>Lopata</span></div><img class="joint required single hand" src="http://localhost:8080/imgs/required-hand.png" /><div class="rerolls"><img class="test" src="http://localhost:8080/imgs/test-power.png" />
+      <div class="reroll reroll-green">
+        <img src="http://localhost:8080/imgs/dice1.png" />
+      </div></div><img
+        src="http://localhost:8080/imgs/ilus/png/lopata.png"
+        class="illustration" />
+  </div><div
+    class="card
+      tech
+      
+      card-has-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">tech</div><div class="title
+
+        
+        
+      ">
+        <span>Motorový nůž</span>
+      </div><div class="title title-reversed
+          
+          "><span>Motorový nůž</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Motorový nůž</span>
+      </div><div class="title title-shadow title-reversed
+          
+          "><span>Motorový nůž</span></div><img class="joint required single hand" src="http://localhost:8080/imgs/required-hand.png" /><div class="rerolls"><img class="test" src="http://localhost:8080/imgs/test-power.png" />
+      <div class="reroll reroll-green">
+        <img src="http://localhost:8080/imgs/dice1.png" />
+      </div></div><img
+        src="http://localhost:8080/imgs/ilus/png/motorovy nuz.png"
+        class="illustration" />
+  </div><div
+    class="card
+      tech
+      
+      card-has-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">tech</div><div class="title
+
+         title-long
+        
+      ">
+        <span>Stříkačka kyseliny</span>
+      </div><div class="title title-reversed
+           title-long
+          "><span>Stříkačka kyseliny</span></div><div class="title title-shadow
+
+         title-long
+        
+      ">
+        <span>Stříkačka kyseliny</span>
+      </div><div class="title title-shadow title-reversed
+           title-long
+          "><span>Stříkačka kyseliny</span></div><img class="joint required single hand" src="http://localhost:8080/imgs/required-hand.png" /><div class="rerolls"><img class="test" src="http://localhost:8080/imgs/test-power.png" />
+      <div class="reroll reroll-green">
+        <img src="http://localhost:8080/imgs/dice1.png" />
+      </div></div><img
+        src="http://localhost:8080/imgs/ilus/png/Stříkačka kyseliny.png"
+        class="illustration" />
+  </div><div
+    class="card
+      tech
+      
+      card-has-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">tech</div><div class="title
+
+        
+        
+      ">
+        <span>Laserový nůž</span>
+      </div><div class="title title-reversed
+          
+          "><span>Laserový nůž</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Laserový nůž</span>
+      </div><div class="title title-shadow title-reversed
+          
+          "><span>Laserový nůž</span></div><img class="joint required single hand" src="http://localhost:8080/imgs/required-hand.png" /><div class="rerolls"><img class="test" src="http://localhost:8080/imgs/test-power.png" />
+      <div class="reroll reroll-green">
+        <img src="http://localhost:8080/imgs/dice1.png" />
+      </div></div><img
+        src="http://localhost:8080/imgs/ilus/png/laser nuz.png"
+        class="illustration" />
+  </div><div
+    class="card
+      tech
+      
+      card-has-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">tech</div><div class="title
+
+         title-long
+        
+      ">
+        <span>Kapesní plamenomet</span>
+      </div><div class="title title-reversed
+           title-long
+          "><span>Kapesní plamenomet</span></div><div class="title title-shadow
+
+         title-long
+        
+      ">
+        <span>Kapesní plamenomet</span>
+      </div><div class="title title-shadow title-reversed
+           title-long
+          "><span>Kapesní plamenomet</span></div><img class="joint required single hand" src="http://localhost:8080/imgs/required-hand.png" /><div class="rerolls"><img class="test" src="http://localhost:8080/imgs/test-speed.png" />
+      <div class="reroll reroll-green">
+        <img src="http://localhost:8080/imgs/dice1.png" />
+      </div></div><img
+        src="http://localhost:8080/imgs/ilus/png/kapesni zapalovac.png"
+        class="illustration" />
+  </div><div
+    class="card
+      tech
+      
+      card-has-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">tech</div><div class="title
+
+        
+        
+      ">
+        <span>Katana</span>
+      </div><div class="title title-reversed
+          
+          "><span>Katana</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Katana</span>
+      </div><div class="title title-shadow title-reversed
+          
+          "><span>Katana</span></div><img class="joint required single hand" src="http://localhost:8080/imgs/required-hand.png" /><div class="rerolls"><img class="test" src="http://localhost:8080/imgs/test-powerspeed.png" />
+      <div class="reroll reroll-green">
+        <img src="http://localhost:8080/imgs/dice1.png" />
+      </div></div><img
+        src="http://localhost:8080/imgs/ilus/png/katana.png"
+        class="illustration" />
+  </div><div
+    class="card
+      tech
+      
+      card-has-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">tech</div><div class="title
+
+         title-long
+        
+      ">
+        <span>Vyhrocený bumerang</span>
+      </div><div class="title title-reversed
+           title-long
+          "><span>Vyhrocený bumerang</span></div><div class="title title-shadow
+
+         title-long
+        
+      ">
+        <span>Vyhrocený bumerang</span>
+      </div><div class="title title-shadow title-reversed
+           title-long
+          "><span>Vyhrocený bumerang</span></div><img class="joint required single hand" src="http://localhost:8080/imgs/required-hand.png" /><div class="rerolls"><img class="test" src="http://localhost:8080/imgs/test-powerspeed.png" />
+      <div class="reroll reroll-green">
+        <img src="http://localhost:8080/imgs/dice1.png" />
+      </div></div><img
+        src="http://localhost:8080/imgs/ilus/png/Vyhrocený bumerang.png"
+        class="illustration" />
+  </div><div
+    class="card
+      tech
+      
+      card-has-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">tech</div><div class="title
+
+        
+        
+      ">
+        <span>Zubařská vrtačka</span>
+      </div><div class="title title-reversed
+          
+          "><span>Zubařská vrtačka</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Zubařská vrtačka</span>
+      </div><div class="title title-shadow title-reversed
+          
+          "><span>Zubařská vrtačka</span></div><img class="joint required single hand" src="http://localhost:8080/imgs/required-hand.png" /><div class="rerolls"><img class="test" src="http://localhost:8080/imgs/test-poweriq.png" />
+      <div class="reroll reroll-green">
+        <img src="http://localhost:8080/imgs/dice1.png" />
+      </div></div><img
+        src="http://localhost:8080/imgs/ilus/png/Zubařská vrtacka.png"
+        class="illustration" />
+  </div><div
+    class="card
+      tech
+      
+      card-has-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">tech</div><div class="title
+
+        
+        
+      ">
+        <span>Flusačka žvýkaček</span>
+      </div><div class="title title-reversed
+          
+          "><span>Flusačka žvýkaček</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Flusačka žvýkaček</span>
+      </div><div class="title title-shadow title-reversed
+          
+          "><span>Flusačka žvýkaček</span></div><img class="joint required single hand" src="http://localhost:8080/imgs/required-hand.png" /><div class="rerolls"><img class="test" src="http://localhost:8080/imgs/test-speed.png" />
+      <div class="reroll reroll-red">
+        <img src="http://localhost:8080/imgs/dice1.png" />
+      </div></div><img
+        src="http://localhost:8080/imgs/ilus/png/Flusačka žvýkaček.png"
+        class="illustration" />
+  </div><div
+    class="card
+      tech
+      
+      card-has-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">tech</div><div class="title
+
+        
+        
+      ">
+        <span>Pepřový sprej</span>
+      </div><div class="title title-reversed
+          
+          "><span>Pepřový sprej</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Pepřový sprej</span>
+      </div><div class="title title-shadow title-reversed
+          
+          "><span>Pepřový sprej</span></div><img class="joint required single hand" src="http://localhost:8080/imgs/required-hand.png" /><div class="rerolls"><img class="test" src="http://localhost:8080/imgs/test-power.png" />
+      <div class="reroll reroll-red">
+        <img src="http://localhost:8080/imgs/dice1.png" />
+      </div></div><img
+        src="http://localhost:8080/imgs/ilus/png/Pepřový sprej.png"
+        class="illustration" />
+  </div><div
+    class="card
+      tech
+      
+      card-has-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">tech</div><div class="title
+
+        
+        
+      ">
+        <span>Neuropad</span>
+      </div><div class="title title-reversed
+          
+          "><span>Neuropad</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Neuropad</span>
+      </div><div class="title title-shadow title-reversed
+          
+          "><span>Neuropad</span></div><img class="joint required single hand" src="http://localhost:8080/imgs/required-hand.png" /><div class="rerolls"><img class="test" src="http://localhost:8080/imgs/test-iq.png" />
+      <div class="reroll reroll-red">
+        <img src="http://localhost:8080/imgs/dice1.png" />
+      </div></div><img
+        src="http://localhost:8080/imgs/ilus/png/neuropad.png"
+        class="illustration" />
+  </div><div
+    class="card
+      tech
+      
+      card-has-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">tech</div><div class="title
+
+        
+        
+      ">
+        <span>Kouzelnická hůlka</span>
+      </div><div class="title title-reversed
+          
+          "><span>Kouzelnická hůlka</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Kouzelnická hůlka</span>
+      </div><div class="title title-shadow title-reversed
+          
+          "><span>Kouzelnická hůlka</span></div><img class="joint required single hand" src="http://localhost:8080/imgs/required-hand.png" /><div class="rerolls">
+      <div class="reroll reroll-red">
+        <img src="http://localhost:8080/imgs/dice1.png" />
+      </div></div><img
+        src="http://localhost:8080/imgs/ilus/png/palicka.png"
+        class="illustration" />
+  </div><div
+    class="card
+      tech
+      
+      card-has-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">tech</div><div class="title
+
+         title-long
+        
+      ">
+        <span>Elektrická ostruha</span>
+      </div><div class="title title-reversed
+           title-long
+          "><span>Elektrická ostruha</span></div><div class="title title-shadow
+
+         title-long
+        
+      ">
+        <span>Elektrická ostruha</span>
+      </div><div class="title title-shadow title-reversed
+           title-long
+          "><span>Elektrická ostruha</span></div><img class="joint required single leg" src="http://localhost:8080/imgs/required-leg.png" /><div class="rerolls"><img class="test" src="http://localhost:8080/imgs/test-speed.png" />
+      <div class="reroll reroll-green">
+        <img src="http://localhost:8080/imgs/dice2.png" />
+      </div></div><img
+        src="http://localhost:8080/imgs/ilus/png/ostruha.png"
+        class="illustration" />
+  </div><div
+    class="card
+      tech
+      
+      card-has-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">tech</div><div class="title
+
+        
+        
+      ">
+        <span>Čakram</span>
+      </div><div class="title title-reversed
+          
+          "><span>Čakram</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Čakram</span>
+      </div><div class="title title-shadow title-reversed
+          
+          "><span>Čakram</span></div><img class="joint required single hand" src="http://localhost:8080/imgs/required-hand.png" /><div class="rerolls"><img class="test" src="http://localhost:8080/imgs/test-iq.png" />
+      <img class="test" src="http://localhost:8080/imgs/dice-cross.png" />
+    </div><img
+        src="http://localhost:8080/imgs/ilus/png/cakram.png"
+        class="illustration" />
+  </div><div
+    class="card
+      tech
+      
+      card-has-joints
+      card-double-joint
+      card-double-req-joint 
+      
+      two-handed
+      
+  ">
+    <div class="type">tech</div><div class="title
+
+        
+        
+      ">
+        <span>Kriketová pálka</span>
+      </div><div class="title title-reversed
+          
+          "><span>Kriketová pálka</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Kriketová pálka</span>
+      </div><div class="title title-shadow title-reversed
+          
+          "><span>Kriketová pálka</span></div><img class="joint required first hand" src="http://localhost:8080/imgs/required-hand.png" />
+            <img class="joint required second hand" src="http://localhost:8080/imgs/required-hand.png" /><div class="rerolls">
+      <img class="test" src="http://localhost:8080/imgs/dice-cross.png" />
+    </div><img
+        src="http://localhost:8080/imgs/ilus/png/kriketova palka-1.png"
+        class="illustration" />
+  </div><div
+    class="card
+      tech
+      
+      card-has-joints
+      card-double-joint
+      card-double-req-joint 
+      
+      two-handed
+      
+  ">
+    <div class="type">tech</div><div class="title
+
+        
+        
+      ">
+        <span>Řetězová pila</span>
+      </div><div class="title title-reversed
+          
+          "><span>Řetězová pila</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Řetězová pila</span>
+      </div><div class="title title-shadow title-reversed
+          
+          "><span>Řetězová pila</span></div><img class="joint required first hand" src="http://localhost:8080/imgs/required-hand.png" />
+            <img class="joint required second hand" src="http://localhost:8080/imgs/required-hand.png" /><div class="rerolls"><img class="test" src="http://localhost:8080/imgs/test-powerspeed.png" />
+      <div class="reroll reroll-green">
+        <img src="http://localhost:8080/imgs/dice2.png" />
+      </div></div><img
+        src="http://localhost:8080/imgs/ilus/png/Řetězová pila.png"
+        class="illustration" />
+  </div><div
+    class="card
+      tech
+      
+      card-has-joints
+      card-double-joint
+      card-double-req-joint 
+      
+      two-handed
+      
+  ">
+    <div class="type">tech</div><div class="title
+
+        
+        
+      ">
+        <span>Motorová pila</span>
+      </div><div class="title title-reversed
+          
+          "><span>Motorová pila</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Motorová pila</span>
+      </div><div class="title title-shadow title-reversed
+          
+          "><span>Motorová pila</span></div><img class="joint required first hand" src="http://localhost:8080/imgs/required-hand.png" />
+            <img class="joint required second hand" src="http://localhost:8080/imgs/required-hand.png" /><div class="rerolls"><img class="test" src="http://localhost:8080/imgs/test-powerspeed.png" />
+      <div class="reroll reroll-green">
+        <img src="http://localhost:8080/imgs/dice2.png" />
+      </div></div><img
+        src="http://localhost:8080/imgs/ilus/png/motorovka.png"
+        class="illustration" />
+  </div><div
+    class="card
+      tech
+      
+      card-has-joints
+      card-double-joint
+      card-double-req-joint 
+      
+      two-handed
+      
+  ">
+    <div class="type">tech</div><div class="title
+
+        
+        
+      ">
+        <span>Rotační kulomet</span>
+      </div><div class="title title-reversed
+          
+          "><span>Rotační kulomet</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Rotační kulomet</span>
+      </div><div class="title title-shadow title-reversed
+          
+          "><span>Rotační kulomet</span></div><img class="joint required first hand" src="http://localhost:8080/imgs/required-hand.png" />
+            <img class="joint required second hand" src="http://localhost:8080/imgs/required-hand.png" /><div class="rerolls"><img class="test" src="http://localhost:8080/imgs/test-powerspeed.png" />
+      <div class="reroll reroll-green">
+        <img src="http://localhost:8080/imgs/dice2.png" />
+      </div></div><img
+        src="http://localhost:8080/imgs/ilus/png/rotacak.png"
+        class="illustration" />
+  </div><div
+    class="card
+      tech
+      
+      card-has-joints
+      card-double-joint
+      card-double-req-joint 
+      
+      two-handed
+      
+  ">
+    <div class="type">tech</div><div class="title
+
+        
+        
+      ">
+        <span>Granátomet</span>
+      </div><div class="title title-reversed
+          
+          "><span>Granátomet</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Granátomet</span>
+      </div><div class="title title-shadow title-reversed
+          
+          "><span>Granátomet</span></div><img class="joint required first hand" src="http://localhost:8080/imgs/required-hand.png" />
+            <img class="joint required second hand" src="http://localhost:8080/imgs/required-hand.png" /><div class="rerolls"><img class="test" src="http://localhost:8080/imgs/test-powerspeed.png" />
+      <div class="reroll reroll-green">
+        <img src="http://localhost:8080/imgs/dice3.png" />
+      </div></div><img
+        src="http://localhost:8080/imgs/ilus/png/granatomet.png"
+        class="illustration" />
+  </div><div
+    class="card
+      tech
+      
+      card-has-joints
+      card-double-joint
+      card-double-req-joint 
+      
+      two-handed
+      
+  ">
+    <div class="type">tech</div><div class="title
+
+        
+        
+      ">
+        <span>Plasmomet</span>
+      </div><div class="title title-reversed
+          
+          "><span>Plasmomet</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Plasmomet</span>
+      </div><div class="title title-shadow title-reversed
+          
+          "><span>Plasmomet</span></div><img class="joint required first hand" src="http://localhost:8080/imgs/required-hand.png" />
+            <img class="joint required second hand" src="http://localhost:8080/imgs/required-hand.png" /><div class="rerolls"><img class="test" src="http://localhost:8080/imgs/test-powerspeed.png" />
+      <div class="reroll reroll-green">
+        <img src="http://localhost:8080/imgs/dice3.png" />
+      </div></div><img
+        src="http://localhost:8080/imgs/ilus/png/plasmomet.png"
+        class="illustration" />
+  </div><div
+    class="card
+      tech
+      
+      card-has-joints
+      card-double-joint
+      card-double-req-joint 
+      
+      two-handed
+      
+  ">
+    <div class="type">tech</div><div class="title
+
+        
+        
+      ">
+        <span>Raketomet</span>
+      </div><div class="title title-reversed
+          
+          "><span>Raketomet</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Raketomet</span>
+      </div><div class="title title-shadow title-reversed
+          
+          "><span>Raketomet</span></div><img class="joint required first hand" src="http://localhost:8080/imgs/required-hand.png" />
+            <img class="joint required second hand" src="http://localhost:8080/imgs/required-hand.png" /><div class="rerolls"><img class="test" src="http://localhost:8080/imgs/test-powerspeed.png" />
+      <div class="reroll reroll-green">
+        <img src="http://localhost:8080/imgs/dice3.png" />
+      </div></div><img
+        src="http://localhost:8080/imgs/ilus/png/raketomet.png"
+        class="illustration" />
+  </div><div
+    class="card
+      tech
+      
+      card-has-joints
+      card-double-joint
+      card-double-req-joint 
+      
+      two-handed
+      
+  ">
+    <div class="type">tech</div><div class="title
+
+         title-long
+        
+      ">
+        <span>Obouruční cirkulárka</span>
+      </div><div class="title title-reversed
+           title-long
+          "><span>Obouruční cirkulárka</span></div><div class="title title-shadow
+
+         title-long
+        
+      ">
+        <span>Obouruční cirkulárka</span>
+      </div><div class="title title-shadow title-reversed
+           title-long
+          "><span>Obouruční cirkulárka</span></div><img class="joint required first hand" src="http://localhost:8080/imgs/required-hand.png" />
+            <img class="joint required second hand" src="http://localhost:8080/imgs/required-hand.png" /><div class="rerolls"><img class="test" src="http://localhost:8080/imgs/test-powerspeed.png" />
+      <div class="reroll reroll-green">
+        <img src="http://localhost:8080/imgs/dice3.png" />
+      </div></div><img
+        src="http://localhost:8080/imgs/ilus/png/Obouruční cirkulárka.png"
+        class="illustration" />
+  </div><div
+    class="card
+      tech
+      
+      card-has-joints
+      card-double-joint
+      card-double-req-joint 
+      
+      two-handed
+      
+  ">
+    <div class="type">tech</div><div class="title
+
+        
+        
+      ">
+        <span>Hoverboard</span>
+      </div><div class="title title-reversed
+          
+          "><span>Hoverboard</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Hoverboard</span>
+      </div><div class="title title-shadow title-reversed
+          
+          "><span>Hoverboard</span></div><img class="joint required first leg" src="http://localhost:8080/imgs/required-leg.png" />
+            <img class="joint required second leg" src="http://localhost:8080/imgs/required-leg.png" /><div class="rerolls"><img class="test" src="http://localhost:8080/imgs/test-powerspeed.png" />
+      <div class="reroll reroll-green">
+        <img src="http://localhost:8080/imgs/dice2.png" />
+      </div></div><img
+        src="http://localhost:8080/imgs/ilus/png/board.png"
+        class="illustration" />
+  </div><div
+    class="card
+      tech
+      
+      card-has-joints
+      card-double-joint
+      card-double-req-joint 
+      
+      two-handed
+      
+  ">
+    <div class="type">tech</div><div class="title
+
+        
+        
+      ">
+        <span>Kulometný vozík</span>
+      </div><div class="title title-reversed
+          
+          "><span>Kulometný vozík</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Kulometný vozík</span>
+      </div><div class="title title-shadow title-reversed
+          
+          "><span>Kulometný vozík</span></div><img class="joint required first leg" src="http://localhost:8080/imgs/required-leg.png" />
+            <img class="joint required second leg" src="http://localhost:8080/imgs/required-leg.png" /><div class="rerolls"><img class="test" src="http://localhost:8080/imgs/test-powerspeed.png" />
+      <div class="reroll reroll-green">
+        <img src="http://localhost:8080/imgs/dice3.png" />
+      </div></div><img
+        src="http://localhost:8080/imgs/ilus/png/kulometny vozik.png"
+        class="illustration" />
+  </div><div
+    class="card
+      tech
+      
+      card-has-joints
+      card-double-joint
+      card-double-req-joint 
+      
+      two-handed
+      
+  ">
+    <div class="type">tech</div><div class="title
+
+        
+        
+      ">
+        <span>Elektro tříkolka</span>
+      </div><div class="title title-reversed
+          
+          "><span>Elektro tříkolka</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Elektro tříkolka</span>
+      </div><div class="title title-shadow title-reversed
+          
+          "><span>Elektro tříkolka</span></div><img class="joint required first leg" src="http://localhost:8080/imgs/required-leg.png" />
+            <img class="joint required second leg" src="http://localhost:8080/imgs/required-leg.png" /><div class="rerolls"><img class="test" src="http://localhost:8080/imgs/test-powerspeed.png" />
+      <div class="reroll reroll-green">
+        <img src="http://localhost:8080/imgs/dice3.png" />
+      </div></div><img
+        src="http://localhost:8080/imgs/ilus/png/Elektro tříkolka.png"
+        class="illustration" />
+  </div><div
+    class="card
+      tech
+      
+      card-has-joints
+      card-double-joint
+      card-double-req-joint 
+      
+      two-handed
+      
+  ">
+    <div class="type">tech</div><div class="title
+
+        
+        
+      ">
+        <span>Jízdní pásy</span>
+      </div><div class="title title-reversed
+          
+          "><span>Jízdní pásy</span></div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Jízdní pásy</span>
+      </div><div class="title title-shadow title-reversed
+          
+          "><span>Jízdní pásy</span></div><img class="joint required first bone" src="http://localhost:8080/imgs/required-bone.png" />
+            <img class="joint required second bone" src="http://localhost:8080/imgs/required-bone.png" /><div class="rerolls"><img class="test" src="http://localhost:8080/imgs/test-powerspeed.png" />
+      <div class="reroll reroll-green">
+        <img src="http://localhost:8080/imgs/dice2.png" />
+      </div>
+      <img class="life" src="http://localhost:8080/imgs/heart.png" /><img class="life" src="http://localhost:8080/imgs/heart.png" />
+    </div><img
+        src="http://localhost:8080/imgs/ilus/png/Jízdní pásy.png"
+        class="illustration" />
+  </div><div
+    class="card
+      tech
+      
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">tech</div><div class="title
+
+        
+        
+      ">
+        <span>Rentgenové čočky</span>
+      </div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Rentgenové čočky</span>
+      </div><div class="rerolls"><img class="test" src="http://localhost:8080/imgs/test-iq.png" />
+      <div class="reroll reroll-green">
+        <img src="http://localhost:8080/imgs/dice1.png" />
+      </div></div><img
+        src="http://localhost:8080/imgs/ilus/png/rentgenove čočky.png"
+        class="illustration" />
+  </div><div
+    class="card
+      tech
+      
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">tech</div><div class="title
+
+         title-long
+        
+      ">
+        <span>Brýle nočního vidění</span>
+      </div><div class="title title-shadow
+
+         title-long
+        
+      ">
+        <span>Brýle nočního vidění</span>
+      </div><div class="rerolls"><img class="test" src="http://localhost:8080/imgs/test-iq.png" />
+      <div class="reroll reroll-green">
+        <img src="http://localhost:8080/imgs/dice1.png" />
+      </div></div><img
+        src="http://localhost:8080/imgs/ilus/png/nocne videnie netreba.png"
+        class="illustration" />
+  </div><div
+    class="card
+      tech
+      
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">tech</div><div class="title
+
+        
+        
+      ">
+        <span>Kapesní arsenál</span>
+      </div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Kapesní arsenál</span>
+      </div><div class="rerolls">
+      <div class="reroll reroll-red">
+        <img src="http://localhost:8080/imgs/dice1.png" />
+      </div></div><img
+        src="http://localhost:8080/imgs/ilus/png/kapesni arsenal.png"
+        class="illustration" />
+  </div><div
+    class="card
+      tech
+      
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">tech</div><div class="title
+
+        
+        
+      ">
+        <span>Svářečské brýle</span>
+      </div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Svářečské brýle</span>
+      </div><div class="rerolls">
+      <div class="reroll reroll-green">
+        <img src="http://localhost:8080/imgs/dice-small-sad.png" />
+      </div></div><img
+        src="http://localhost:8080/imgs/ilus/png/svaracske bryle.png"
+        class="illustration" />
+  </div><div
+    class="card
+      tech
+      
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">tech</div><div class="title
+
+         title-long
+        
+      ">
+        <span>Neprůstřelná vesta</span>
+      </div><div class="title title-shadow
+
+         title-long
+        
+      ">
+        <span>Neprůstřelná vesta</span>
+      </div><div class="rerolls">
+      <div class="reroll reroll-green">
+        <img src="http://localhost:8080/imgs/dice-small-tragic.png" />
+      </div>
+      <img class="life" src="http://localhost:8080/imgs/heart.png" />
+    </div><img
+        src="http://localhost:8080/imgs/ilus/png/vesta.png"
+        class="illustration" />
+  </div><div
+    class="card
+      tech
+      
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">tech</div><div class="title
+
+        
+        
+      ">
+        <span>Ocelové brnění</span>
+      </div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Ocelové brnění</span>
+      </div><div class="rerolls"><img class="test" src="http://localhost:8080/imgs/test-power.png" />
+      <div class="reroll reroll-green">
+        <img src="http://localhost:8080/imgs/dice1.png" />
+      </div>
+      <img class="life" src="http://localhost:8080/imgs/heart.png" />
+    </div><img
+        src="http://localhost:8080/imgs/ilus/png/brnenie.png"
+        class="illustration" />
+  </div><div
+    class="card
+      tech
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">tech</div><div class="title
+
+        
+        
+      ">
+        <span>Granát</span>
+      </div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Granát</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/granat.png"
+        class="illustration" /><div class="text">Odhoď tuto kartu ze hry během testu na sílu před hodem kostkami. Úkol je automaticky splněn.</div><div class="text text-shadow">Odhoď tuto kartu ze hry během testu na sílu před hodem kostkami. Úkol je automaticky splněn.</div>
+  </div><div
+    class="card
+      tech
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">tech</div><div class="title
+
+        
+        
+      ">
+        <span>Jedovaté torpédo</span>
+      </div><div class="title title-shadow
+
+        
+        
+      ">
+        <span>Jedovaté torpédo</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/torpedo.png"
+        class="illustration" /><div class="text">Odhoď tuto kartu ze hry během testu na rychlost před hodem kostkami. Úkol je automaticky splněn.</div><div class="text text-shadow">Odhoď tuto kartu ze hry během testu na rychlost před hodem kostkami. Úkol je automaticky splněn.</div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">voodoo</div><div class="title
+
+        
+        
+      ">
+        <span>Anděl strážný</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/01_strazny_andel.jpg"
+        class="illustration" /><div class="text"><img class="emo" src="http://localhost:8080/imgs/emo-epic.png" /> </div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">voodoo</div><div class="title
+
+        
+        
+      ">
+        <span>Políbení múzy</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/polibeni.jpg"
+        class="illustration" /><div class="text"><img class="emo" src="http://localhost:8080/imgs/emo-epic.png" /> </div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">voodoo</div><div class="title
+
+        
+        
+      ">
+        <span>Upřímná nasranost</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/uprimna.jpg"
+        class="illustration" /><div class="text"><img class="emo" src="http://localhost:8080/imgs/emo-epic.png" /> </div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">voodoo</div><div class="title
+
+        
+        
+      ">
+        <span>Hodný pes</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/hodny.jpg"
+        class="illustration" /><div class="text"><img class="emo" src="http://localhost:8080/imgs/emo-epic.png" /> </div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">voodoo</div><div class="title
+
+        
+        
+      ">
+        <span>Deus ex machina</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/deus.jpg"
+        class="illustration" /><div class="text"><img class="emo" src="http://localhost:8080/imgs/emo-epic.png" /> </div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">voodoo</div><div class="title
+
+        
+        
+      ">
+        <span>Haluz jak sviňa</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/haluz.jpg"
+        class="illustration" /><div class="text"><img class="emo" src="http://localhost:8080/imgs/emo-epic.png" /> </div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">voodoo</div><div class="title
+
+        
+        
+      ">
+        <span>Virální mem</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/vitezstvi.jpg"
+        class="illustration" /><div class="text"><img class="emo" src="http://localhost:8080/imgs/emo-epic.png" /> </div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">voodoo</div><div class="title
+
+         title-long
+        
+      ">
+        <span>Vzpomínka na kung-fu movie</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/vzpominka.jpg"
+        class="illustration" /><div class="text"><img class="emo" src="http://localhost:8080/imgs/emo-epic.png" /> </div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">voodoo</div><div class="title
+
+        
+        
+      ">
+        <span>Zvrat ve scénáři</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/zvrat.jpg"
+        class="illustration" /><div class="text"><img class="emo" src="http://localhost:8080/imgs/emo-epic.png" /> </div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">voodoo</div><div class="title
+
+        
+        
+      ">
+        <span>Zvrtlý kotník</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/zvrtly.jpg"
+        class="illustration" /><div class="text"><img class="emo" src="http://localhost:8080/imgs/emo-tragic.png" /></div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">voodoo</div><div class="title
+
+        
+        
+      ">
+        <span>Zauzlená tkanička</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/zauzlena.jpg"
+        class="illustration" /><div class="text"><img class="emo" src="http://localhost:8080/imgs/emo-tragic.png" /></div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">voodoo</div><div class="title
+
+         title-long
+        
+      ">
+        <span>Skřípnutí do dveří</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/skripnuti.jpg"
+        class="illustration" /><div class="text"><img class="emo" src="http://localhost:8080/imgs/emo-tragic.png" /></div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">voodoo</div><div class="title
+
+        
+        
+      ">
+        <span>Sprostá bába</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/sprosta.jpg"
+        class="illustration" /><div class="text"><img class="emo" src="http://localhost:8080/imgs/emo-tragic.png" /></div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">voodoo</div><div class="title
+
+        
+        
+      ">
+        <span>Zlý pes</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/zly.jpg"
+        class="illustration" /><div class="text"><img class="emo" src="http://localhost:8080/imgs/emo-tragic.png" /></div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">voodoo</div><div class="title
+
+         title-long
+        
+      ">
+        <span>Nafukující se hemeroid</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/nafukujici.jpg"
+        class="illustration" /><div class="text"><img class="emo" src="http://localhost:8080/imgs/emo-tragic.png" /></div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">voodoo</div><div class="title
+
+        
+        
+      ">
+        <span>Padající šištice</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/padajici.jpg"
+        class="illustration" /><div class="text"><img class="emo" src="http://localhost:8080/imgs/emo-tragic.png" /></div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">voodoo</div><div class="title
+
+        
+        
+      ">
+        <span>Injekce s jedem</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/jed.jpg"
+        class="illustration" /><div class="text"><img class="emo" src="http://localhost:8080/imgs/emo-tragic.png" /></div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">voodoo</div><div class="title
+
+        
+        
+      ">
+        <span>Šlápnutí do hovna</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/slapnuti.jpg"
+        class="illustration" /><div class="text"><img class="emo" src="http://localhost:8080/imgs/emo-tragic.png" /></div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">voodoo</div><div class="title
+
+        
+        
+      ">
+        <span>Blesk</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/blesk.jpg"
+        class="illustration" /><div class="text"><img class="emo" src="http://localhost:8080/imgs/dice-cross.png" /><img class="emo" src="http://localhost:8080/imgs/dice-cross.png" /><img class="emo" src="http://localhost:8080/imgs/dice-cross.png" /></div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">voodoo</div><div class="title
+
+        
+        
+      ">
+        <span>Smradlavý dech</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/smradlavy.jpg"
+        class="illustration" /><div class="text"><img class="emo" src="http://localhost:8080/imgs/dice-cross.png" /></div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">voodoo</div><div class="title
+
+        
+        
+      ">
+        <span>Mrazivý paprsek</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/mrazivyp.jpg"
+        class="illustration" /><div class="text"><img class="emo" src="http://localhost:8080/imgs/dice-cross.png" /></div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">voodoo</div><div class="title
+
+        
+        
+      ">
+        <span>Pyrokineze</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/pyrokineze.jpg"
+        class="illustration" /><div class="text"><img class="emo emo-epic" src="http://localhost:8080/imgs/cross.png" /> nebo <img class="emo emo-tragic" src="http://localhost:8080/imgs/cross.png" /></div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">voodoo</div><div class="title
+
+        
+        
+      ">
+        <span>Talisman</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/talisman.jpg"
+        class="illustration" /><div class="text"><img class="emo dice" src="http://localhost:8080/imgs/dice-any.png" /> <img class="emo arrow" src="http://localhost:8080/imgs/arrow.png" /> <img class="emo dice" src="http://localhost:8080/imgs/dice-any.png" /></div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">voodoo</div><div class="title
+
+        
+        
+      ">
+        <span>Plamenné prdy</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/plamenne.jpg"
+        class="illustration" /><div class="text">všechny <img class="emo emo-sad" src="http://localhost:8080/imgs/cross.png" /></div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+       card-two-texts
+  ">
+    <div class="type">voodoo</div><div class="title
+
+        
+        
+      ">
+        <span>Nemrtvý mazlíček</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/nemrtvy.jpg"
+        class="illustration" /><div class="text texts">
+          <div class="text-part">všechny <img class="emo dice" src="http://localhost:8080/imgs/dice-neutral.png" /> <img class="emo arrow" src="http://localhost:8080/imgs/arrow.png" /> <img class="emo dice" src="http://localhost:8080/imgs/dice-happy.png" /></div>
+          <span class="white-shadow or">nebo</span>
+          <div class="text-part">všechny <img class="emo dice" src="http://localhost:8080/imgs/dice-neutral.png" /> <img class="emo arrow" src="http://localhost:8080/imgs/arrow.png" /> <img class="emo dice" src="http://localhost:8080/imgs/dice-sad.png" /></div>
+        </div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+       card-two-texts
+  ">
+    <div class="type">voodoo</div><div class="title
+
+        
+        
+      ">
+        <span>Levitace</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/levitace.jpg"
+        class="illustration" /><div class="text texts">
+          <div class="text-part">všechny <img class="emo emo-happy" src="http://localhost:8080/imgs/cross.png" /></div>
+          <span class="white-shadow or">nebo</span>
+          <div class="text-part">všechny <img class="emo emo-sad" src="http://localhost:8080/imgs/cross.png" /></div>
+        </div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+       card-two-texts
+  ">
+    <div class="type">voodoo</div><div class="title
+
+         title-long
+        
+      ">
+        <span>Explodující flusanec</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/explodujici.jpg"
+        class="illustration" /><div class="text texts">
+          <div class="text-part">všechny <img class="emo dice" src="http://localhost:8080/imgs/dice-neutral.png" /> <img class="emo arrow" src="http://localhost:8080/imgs/arrow.png" /> <img class="emo dice" src="http://localhost:8080/imgs/dice-happy.png" /></div>
+          <span class="texts-between"></span>
+          <div class="text-part">všechny <img class="emo dice" src="http://localhost:8080/imgs/dice-sad.png" /> <img class="emo arrow" src="http://localhost:8080/imgs/arrow.png" /> <img class="emo dice" src="http://localhost:8080/imgs/dice-happy.png" /></div>
+        </div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+       card-two-texts
+  ">
+    <div class="type">voodoo</div><div class="title
+
+        
+        
+      ">
+        <span>Hypnóza</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/hypnoza.jpg"
+        class="illustration" /><div class="text texts">
+          <div class="text-part">všechny <img class="emo emo-epic" src="http://localhost:8080/imgs/cross.png" /></div>
+          <span class="texts-between"></span>
+          <div class="text-part">všechny <img class="emo emo-tragic" src="http://localhost:8080/imgs/cross.png" /></div>
+        </div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+       card-two-texts
+  ">
+    <div class="type">voodoo</div><div class="title
+
+         title-long
+        
+      ">
+        <span>Ukolébavající skřehot</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/ukolebavajici.jpg"
+        class="illustration" /><div class="text texts">
+          <div class="text-part">všechny <img class="emo dice" src="http://localhost:8080/imgs/dice-epic.png" /> <img class="emo arrow" src="http://localhost:8080/imgs/arrow.png" /> <img class="emo dice" src="http://localhost:8080/imgs/dice-happy.png" /></div>
+          <span class="texts-between"></span>
+          <div class="text-part">všechny <img class="emo dice" src="http://localhost:8080/imgs/dice-tragic.png" /> <img class="emo arrow" src="http://localhost:8080/imgs/arrow.png" /> <img class="emo dice" src="http://localhost:8080/imgs/dice-sad.png" /></div>
+        </div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">voodoo</div><div class="title
+
+        
+        
+      ">
+        <span>Pyromancie</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/pyromancie.jpg"
+        class="illustration" /><img class="test" src="http://localhost:8080/imgs/test-powerspeed.png" /><div class="text"><div class="reroll reroll-red"><img src="http://localhost:8080/imgs/dice2.png"></div></div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">voodoo</div><div class="title
+
+        
+        
+      ">
+        <span>Oslepující záře</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/oslepujici.jpg"
+        class="illustration" /><div class="text">V jakémkoliv testu přehoď libovolný počet kostek.</div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">voodoo</div><div class="title
+
+        
+        
+      ">
+        <span>Mozkokašící řev</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/mozkokasici.jpg"
+        class="illustration" /><img class="test" src="http://localhost:8080/imgs/test-iq.png" /><div class="text"><img class="emo dice" src="http://localhost:8080/imgs/dice-any.png" /> <img class="emo arrow" src="http://localhost:8080/imgs/arrow.png" /> <img class="emo dice" src="http://localhost:8080/imgs/dice-any.png" /></div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">voodoo</div><div class="title
+
+        
+        
+      ">
+        <span>Plynná forma</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/plynna.jpg"
+        class="illustration" /><img class="test" src="http://localhost:8080/imgs/test-iq.png" /><div class="text"><img class="emo dice" src="http://localhost:8080/imgs/dice-any.png" /> <img class="emo arrow" src="http://localhost:8080/imgs/arrow.png" /> <img class="emo dice" src="http://localhost:8080/imgs/dice-any.png" /></div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+       card-two-texts
+  ">
+    <div class="type">voodoo</div><div class="title
+
+        
+        
+      ">
+        <span>Masotrhající řev</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/masotrhajici.jpg"
+        class="illustration" /><img class="test" src="http://localhost:8080/imgs/test-power.png" /><div class="text texts">
+          <div class="text-part"> <img class="emo" src="http://localhost:8080/imgs/emo-happy.png" /><img class="emo" src="http://localhost:8080/imgs/emo-happy.png" /></div>
+          <span class="white-shadow or">nebo</span>
+          <div class="text-part"><img class="emo" src="http://localhost:8080/imgs/emo-sad.png" /><img class="emo" src="http://localhost:8080/imgs/emo-sad.png" /></div>
+        </div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+       card-two-texts
+  ">
+    <div class="type">voodoo</div><div class="title
+
+        
+        
+      ">
+        <span>Extatický tanec</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/extaticky.jpg"
+        class="illustration" /><img class="test" src="http://localhost:8080/imgs/test-speed.png" /><div class="text texts">
+          <div class="text-part"> <img class="emo" src="http://localhost:8080/imgs/emo-happy.png" /><img class="emo" src="http://localhost:8080/imgs/emo-happy.png" /></div>
+          <span class="white-shadow or">nebo</span>
+          <div class="text-part"><img class="emo" src="http://localhost:8080/imgs/emo-sad.png" /><img class="emo" src="http://localhost:8080/imgs/emo-sad.png" /></div>
+        </div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+       card-two-texts
+  ">
+    <div class="type">voodoo</div><div class="title
+
+        
+        
+      ">
+        <span>Démonický pohled</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/demonicky.jpg"
+        class="illustration" /><img class="test" src="http://localhost:8080/imgs/test-iq.png" /><div class="text texts">
+          <div class="text-part"> <img class="emo" src="http://localhost:8080/imgs/emo-happy.png" /><img class="emo" src="http://localhost:8080/imgs/emo-happy.png" /></div>
+          <span class="white-shadow or">nebo</span>
+          <div class="text-part"><img class="emo" src="http://localhost:8080/imgs/emo-sad.png" /><img class="emo" src="http://localhost:8080/imgs/emo-sad.png" /></div>
+        </div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+       card-two-texts
+  ">
+    <div class="type">voodoo</div><div class="title
+
+        
+        
+      ">
+        <span>Zmenšení</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/zmenseni.jpg"
+        class="illustration" /><img class="test" src="http://localhost:8080/imgs/test-power.png" /><div class="text texts">
+          <div class="text-part"> <img class="emo emo-tragic" src="http://localhost:8080/imgs/cross.png" /></div>
+          <span class="white-shadow or">nebo</span>
+          <div class="text-part">všechny <img class="emo dice" src="http://localhost:8080/imgs/dice-happy.png" /> <img class="emo arrow" src="http://localhost:8080/imgs/arrow.png" /> <img class="emo dice" src="http://localhost:8080/imgs/dice-double.png" /></div>
+        </div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+       card-two-texts
+  ">
+    <div class="type">voodoo</div><div class="title
+
+         title-long
+        
+      ">
+        <span>Démonická rychlost</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/demonicka.jpg"
+        class="illustration" /><img class="test" src="http://localhost:8080/imgs/test-speed.png" /><div class="text texts">
+          <div class="text-part"> <img class="emo emo-tragic" src="http://localhost:8080/imgs/cross.png" /></div>
+          <span class="white-shadow or">nebo</span>
+          <div class="text-part">všechny <img class="emo dice" src="http://localhost:8080/imgs/dice-happy.png" /> <img class="emo arrow" src="http://localhost:8080/imgs/arrow.png" /> <img class="emo dice" src="http://localhost:8080/imgs/dice-double.png" /></div>
+        </div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+       card-two-texts
+  ">
+    <div class="type">voodoo</div><div class="title
+
+        
+        
+      ">
+        <span>Neviditelnost</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/neviditelnost.jpg"
+        class="illustration" /><img class="test" src="http://localhost:8080/imgs/test-iq.png" /><div class="text texts">
+          <div class="text-part"> <img class="emo emo-tragic" src="http://localhost:8080/imgs/cross.png" /></div>
+          <span class="white-shadow or">nebo</span>
+          <div class="text-part">všechny <img class="emo dice" src="http://localhost:8080/imgs/dice-happy.png" /> <img class="emo arrow" src="http://localhost:8080/imgs/arrow.png" /> <img class="emo dice" src="http://localhost:8080/imgs/dice-double.png" /></div>
+        </div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+       card-two-texts
+  ">
+    <div class="type">voodoo</div><div class="title
+
+        
+        
+      ">
+        <span>Moment osvícení</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/moment.jpg"
+        class="illustration" /><img class="test" src="http://localhost:8080/imgs/test-iq.png" /><div class="text texts">
+          <div class="text-part"><img class="emo dice" src="http://localhost:8080/imgs/dice-epic.png" /> <img class="emo arrow" src="http://localhost:8080/imgs/arrow.png" /> <img class="emo dice" src="http://localhost:8080/imgs/dice-any.png" /></div>
+          <span class="white-shadow or">nebo</span>
+          <div class="text-part"><img class="emo dice" src="http://localhost:8080/imgs/dice-tragic.png" /> <img class="emo arrow" src="http://localhost:8080/imgs/arrow.png" /> <img class="emo dice" src="http://localhost:8080/imgs/dice-any.png" /></div>
+        </div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+       card-two-texts
+  ">
+    <div class="type">voodoo</div><div class="title
+
+        
+        
+      ">
+        <span>Betonový vývrh</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/betonovy.jpg"
+        class="illustration" /><img class="test" src="http://localhost:8080/imgs/test-power.png" /><div class="text texts">
+          <div class="text-part"><img class="emo dice" src="http://localhost:8080/imgs/dice-epic.png" /> <img class="emo arrow" src="http://localhost:8080/imgs/arrow.png" /> <img class="emo dice" src="http://localhost:8080/imgs/dice-any.png" /></div>
+          <span class="white-shadow or">nebo</span>
+          <div class="text-part"><img class="emo dice" src="http://localhost:8080/imgs/dice-tragic.png" /> <img class="emo arrow" src="http://localhost:8080/imgs/arrow.png" /> <img class="emo dice" src="http://localhost:8080/imgs/dice-any.png" /></div>
+        </div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">voodoo</div><div class="title
+
+        
+        
+      ">
+        <span>360° úhel pohledu</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/360.jpg"
+        class="illustration" /><img class="test" src="http://localhost:8080/imgs/test-speed.png" /><div class="text"><div class="group-all"><span class="white-shadow">všechny</span><div class="group"><img class="emo dice" src="http://localhost:8080/imgs/dice-happy.png" /><img class="emo dice" src="http://localhost:8080/imgs/dice-double.png" /></div></div> <img class="emo arrow" src="http://localhost:8080/imgs/arrow.png" /><img class="emo dice" src="http://localhost:8080/imgs/dice-epic.png" /></div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">voodoo</div><div class="title
+
+        
+        
+      ">
+        <span>Zvětšení</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/zvetseni.jpg"
+        class="illustration" /><img class="test" src="http://localhost:8080/imgs/test-power.png" /><div class="text"><div class="group-all"><span class="white-shadow">všechny</span><div class="group"><img class="emo dice" src="http://localhost:8080/imgs/dice-happy.png" /><img class="emo dice" src="http://localhost:8080/imgs/dice-double.png" /></div></div> <img class="emo arrow" src="http://localhost:8080/imgs/arrow.png" /><img class="emo dice" src="http://localhost:8080/imgs/dice-epic.png" /></div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">voodoo</div><div class="title
+
+        
+        
+      ">
+        <span>Zkameňující dotyk</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/zkamenujici.jpg"
+        class="illustration" /><img class="test" src="http://localhost:8080/imgs/test-power.png" /><div class="text"><div class="group-all"><span class="white-shadow">všechny</span><div class="group"><img class="emo dice" src="http://localhost:8080/imgs/dice-happy.png" /><img class="emo dice" src="http://localhost:8080/imgs/dice-double.png" /></div></div> <img class="emo arrow" src="http://localhost:8080/imgs/arrow.png" /><img class="emo dice" src="http://localhost:8080/imgs/dice-any.png" /></div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">voodoo</div><div class="title
+
+        
+        
+      ">
+        <span>Amok</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/amok.jpg"
+        class="illustration" /><img class="test" src="http://localhost:8080/imgs/test-power.png" /><div class="text"><div class="group-all"><span class="white-shadow">všechny</span><div class="group"><img class="emo dice" src="http://localhost:8080/imgs/dice-happy.png" /><img class="emo dice" src="http://localhost:8080/imgs/dice-double.png" /><img class="emo dice" src="http://localhost:8080/imgs/dice-neutral.png" /></div></div> <img class="emo arrow" src="http://localhost:8080/imgs/arrow.png" /><img class="emo dice" src="http://localhost:8080/imgs/dice-any.png" /></div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">voodoo</div><div class="title
+
+        
+        
+      ">
+        <span>Vize</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/vize.jpg"
+        class="illustration" /><div class="text">Podívej se na vrchní 3&nbsp;karty jakéhokoliv balíčku a libovolně je seřaď.</div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">voodoo</div><div class="title
+
+        
+        
+      ">
+        <span>Intuice</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/intuice.jpg"
+        class="illustration" /><div class="text">Podívej se na vrchních 5&nbsp;karet balíčku vylepšení a libovolně je seřaď.</div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">voodoo</div><div class="title
+
+        
+        
+      ">
+        <span>Pomatení</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/pomateni.jpg"
+        class="illustration" /><div class="text">V jakémkoliv testu přetoč všechny kostky na protilehlou stranu.</div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">voodoo</div><div class="title
+
+        
+        
+      ">
+        <span>Nabídni oběť</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/nabidni.jpg"
+        class="illustration" /><div class="text">Během tvého testu vyber protihráče, který se ho musí pokusit splnit místo tebe (kostkami hází znovu).</div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">voodoo</div><div class="title
+
+         title-long
+        
+      ">
+        <span>Nostalgické vzpomínky</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/nostalgicke.jpg"
+        class="illustration" /><div class="text">Vem si do ruky jednu kartu z jakéhokoliv odhazovacího balíčku.</div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">voodoo</div><div class="title
+
+         title-long
+        
+      ">
+        <span>Ďábelská inspirace</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/dabelska.jpg"
+        class="illustration" /><div class="text">Přiber si 3 karty.</div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">voodoo</div><div class="title
+
+        
+        
+      ">
+        <span>Falešná důvěra</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/falesna.jpg"
+        class="illustration" /><div class="text">Během protihráčova testu vyber hráče, který se ho musí pokusit splnit místo původního hráče (kostkami hází znovu).</div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">voodoo</div><div class="title
+
+        
+        
+      ">
+        <span>Nalákání do pasti</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/nalakani.jpg"
+        class="illustration" /><div class="text">Vylož v protihráčově kole před výběrem úkolu. V tomto kole vybereš ty, který úkol se pokusí splnit, místo něj.</div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">voodoo</div><div class="title
+
+         title-long
+        
+      ">
+        <span>Náhodná teleportace</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/nahodna.jpg"
+        class="illustration" /><div class="text">Během jakéhokoliv testu se hráč místo původního úkolu musí pokusit splnit nový úkol z vrchu balíčku (kostkami hází znovu).</div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">voodoo</div><div class="title
+
+        
+        
+      ">
+        <span>Zaječí pacička</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/zajeci.jpg"
+        class="illustration" /><div class="text">Vylož ihned po jiné VOODOO kartě. Tato karta je zrušena.</div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">voodoo</div><div class="title
+
+        
+        
+      ">
+        <span>Erupce na slunci</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/erupce.jpg"
+        class="illustration" /><div class="text">Vylož ihned po jiné VOODOO kartě. Tato karta je zrušena.</div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">voodoo</div><div class="title
+
+        
+        
+      ">
+        <span>Nečekaný prd</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/necekany.jpg"
+        class="illustration" /><div class="text">Vylož ihned po jiné VOODOO kartě. Tato karta je zrušena.</div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">voodoo</div><div class="title
+
+         title-long
+        
+      ">
+        <span>Mozkový elektrošok</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/mozkovy.jpg"
+        class="illustration" /><div class="text">V tomto kole se po vyhodnocení plnění úkolu musí aktivní hráč pokusit o splnění dalšího úkolu navíc.</div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">voodoo</div><div class="title
+
+         title-long
+        
+      ">
+        <span>Našel jsi na zemi lízátko</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/nasel.jpg"
+        class="illustration" /><div class="text">Přiber si 2 vylepšení a vylož si 1 vylepšení.</div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">voodoo</div><div class="title
+
+         title-long
+        
+      ">
+        <span>Slevněný energy drink</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/slevneny.jpg"
+        class="illustration" /><div class="text">Přiber si 2 vylepšení a vylož si 1 vylepšení.</div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">voodoo</div><div class="title
+
+         title-long
+        
+      ">
+        <span>Čokodortík s malinami</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/cokodortik.jpg"
+        class="illustration" /><div class="text">Přiber si 3 vylepšení a vylož si 1 nebo 2 vylepšení.</div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">voodoo</div><div class="title
+
+        
+        
+      ">
+        <span>Zhnití</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/zhniti.jpg"
+        class="illustration" /><div class="text">Znič jedno protihráčovo vylepšení umožňující přehazování kostek.</div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">voodoo</div><div class="title
+
+         title-long
+        
+      ">
+        <span>Nepopsatelně sprostý trik</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/nepopsatelne.jpg"
+        class="illustration" /><div class="text">Vyměň si karty v ruce s libovolným protihráčem.</div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">voodoo</div><div class="title
+
+        
+        
+      ">
+        <span>Zmrtvýchvstání</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/zmrtvychvstani.jpg"
+        class="illustration" /><div class="text">Ze všech Zombií se stanou opět Animatroni a doplní si chybějící Ruce a Nohy. Přiber si 1 kartu.</div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">voodoo</div><div class="title
+
+         title-long
+        
+      ">
+        <span>Kontejner od charity</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/kontejner.jpg"
+        class="illustration" /><div class="text">Vyber směr. Každý hráč předá své karty v ruce sousedovi v daném směru.</div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">voodoo</div><div class="title
+
+        
+        
+      ">
+        <span>Detoxikace</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/detoxikace.jpg"
+        class="illustration" /><div class="text">Vyber protihráče, který musí odhodit všechny své karty v ruce kromě jedné.</div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">voodoo</div><div class="title
+
+         title-long
+        
+      ">
+        <span>Naštval jsi fanoušky!</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/nastval.jpg"
+        class="illustration" /><div class="text">Vylož ihned po úspěšném testu protihráče. Místo něj získáváš tento splněný úkol ty.</div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">voodoo</div><div class="title
+
+         title-long
+        
+      ">
+        <span>Dvě mouchy jednou ranou</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/dve.jpg"
+        class="illustration" /><div class="text">Vylož ihned po úspěšném testu. Hráč automaticky (bez testu) splní i další z vyložených úkolů vyžadující test na stejnou vlastnost.</div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">voodoo</div><div class="title
+
+         title-long
+        
+      ">
+        <span>Odvážnému štěstí přeje</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/odvaznemu.jpg"
+        class="illustration" /><div class="text">Vylož před otočením nového úkolu z vrchu balíčku. Úkol bude automaticky splněn (bez testu).</div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">voodoo</div><div class="title
+
+         title-long
+        
+      ">
+        <span>Diváci žádají opakování</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/divaci.jpg"
+        class="illustration" /><div class="text">Vylož ihned po úspěšném testu. Test je třeba absolvovat ještě jednou.</div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">voodoo</div><div class="title
+
+        
+        
+      ">
+        <span>Skandál</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/skandal.jpg"
+        class="illustration" /><div class="text">Vyber směr. Každý hráč musí předat jeden ze svých splněných úkolů sousedovi ve vybraném směru.</div>
+  </div><div
+    class="card
+      voodoo
+       card-with-text
+      card-no-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">voodoo</div><div class="title
+
+        
+        
+      ">
+        <span>Trapas</span>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/jpg/trapas.jpg"
+        class="illustration" /><div class="text">Vyber protihráče a urči jeho souseda, kterému musí předat jeden ze svých splněných úkolů.</div>
+  </div><div
+    class="card
+      basic
+      
+      card-has-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">basic</div><div class="title
+
+        
+        
+      ">
+        <span>Ruka</span>
+      </div><div class="title title-reversed
+          
+          "><span>Ruka</span></div><img class="joint required single bone" src="http://localhost:8080/imgs/required-bone.png" /><img class="joint provided single hand" src="http://localhost:8080/imgs/provided-hand.png" /><div class="lives-and-attributes attr2">
+        <div class="attributes">
+          <img class="attribute attribute-power" src="http://localhost:8080/imgs/attr-power.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/imgs/heart.png" />
+        </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/ruka.png"
+        class="illustration" />
+  </div><div
+    class="card
+      basic
+      
+      card-has-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">basic</div><div class="title
+
+        
+        
+      ">
+        <span>Ruka</span>
+      </div><div class="title title-reversed
+          
+          "><span>Ruka</span></div><img class="joint required single bone" src="http://localhost:8080/imgs/required-bone.png" /><img class="joint provided single hand" src="http://localhost:8080/imgs/provided-hand.png" /><div class="lives-and-attributes attr2">
+        <div class="attributes">
+          <img class="attribute attribute-power" src="http://localhost:8080/imgs/attr-power.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/imgs/heart.png" />
+        </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/ruka.png"
+        class="illustration" />
+  </div><div
+    class="card
+      basic
+      
+      card-has-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">basic</div><div class="title
+
+        
+        
+      ">
+        <span>Ruka</span>
+      </div><div class="title title-reversed
+          
+          "><span>Ruka</span></div><img class="joint required single bone" src="http://localhost:8080/imgs/required-bone.png" /><img class="joint provided single hand" src="http://localhost:8080/imgs/provided-hand.png" /><div class="lives-and-attributes attr2">
+        <div class="attributes">
+          <img class="attribute attribute-power" src="http://localhost:8080/imgs/attr-power.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/imgs/heart.png" />
+        </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/ruka.png"
+        class="illustration" />
+  </div><div
+    class="card
+      basic
+      
+      card-has-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">basic</div><div class="title
+
+        
+        
+      ">
+        <span>Noha</span>
+      </div><div class="title title-reversed
+          
+          "><span>Noha</span></div><img class="joint required single bone" src="http://localhost:8080/imgs/required-bone.png" /><img class="joint provided single leg" src="http://localhost:8080/imgs/provided-leg.png" /><div class="lives-and-attributes attr2">
+        <div class="attributes">
+          <img class="attribute attribute-speed" src="http://localhost:8080/imgs/attr-speed.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/imgs/heart.png" />
+        </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/noha.png"
+        class="illustration" />
+  </div><div
+    class="card
+      basic
+      
+      card-has-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">basic</div><div class="title
+
+        
+        
+      ">
+        <span>Noha</span>
+      </div><div class="title title-reversed
+          
+          "><span>Noha</span></div><img class="joint required single bone" src="http://localhost:8080/imgs/required-bone.png" /><img class="joint provided single leg" src="http://localhost:8080/imgs/provided-leg.png" /><div class="lives-and-attributes attr2">
+        <div class="attributes">
+          <img class="attribute attribute-speed" src="http://localhost:8080/imgs/attr-speed.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/imgs/heart.png" />
+        </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/noha.png"
+        class="illustration" />
+  </div><div
+    class="card
+      basic
+      
+      card-has-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">basic</div><div class="title
+
+        
+        
+      ">
+        <span>Noha</span>
+      </div><div class="title title-reversed
+          
+          "><span>Noha</span></div><img class="joint required single bone" src="http://localhost:8080/imgs/required-bone.png" /><img class="joint provided single leg" src="http://localhost:8080/imgs/provided-leg.png" /><div class="lives-and-attributes attr2">
+        <div class="attributes">
+          <img class="attribute attribute-speed" src="http://localhost:8080/imgs/attr-speed.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/imgs/heart.png" />
+        </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/noha.png"
+        class="illustration" />
+  </div><div
+    class="card
+      basic
+      
+      card-has-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">basic</div><div class="title
+
+        
+        
+      ">
+        <span>Ruka</span>
+      </div><div class="title title-reversed
+          
+          "><span>Ruka</span></div><img class="joint required single bone" src="http://localhost:8080/imgs/required-bone.png" /><img class="joint provided single hand" src="http://localhost:8080/imgs/provided-hand.png" /><div class="lives-and-attributes attr2">
+        <div class="attributes">
+          <img class="attribute attribute-power" src="http://localhost:8080/imgs/attr-power.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/imgs/heart.png" />
+        </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/ruka.png"
+        class="illustration" />
+  </div><div
+    class="card
+      basic
+      
+      card-has-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">basic</div><div class="title
+
+        
+        
+      ">
+        <span>Ruka</span>
+      </div><div class="title title-reversed
+          
+          "><span>Ruka</span></div><img class="joint required single bone" src="http://localhost:8080/imgs/required-bone.png" /><img class="joint provided single hand" src="http://localhost:8080/imgs/provided-hand.png" /><div class="lives-and-attributes attr2">
+        <div class="attributes">
+          <img class="attribute attribute-power" src="http://localhost:8080/imgs/attr-power.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/imgs/heart.png" />
+        </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/ruka.png"
+        class="illustration" />
+  </div><div
+    class="card
+      basic
+      
+      card-has-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">basic</div><div class="title
+
+        
+        
+      ">
+        <span>Ruka</span>
+      </div><div class="title title-reversed
+          
+          "><span>Ruka</span></div><img class="joint required single bone" src="http://localhost:8080/imgs/required-bone.png" /><img class="joint provided single hand" src="http://localhost:8080/imgs/provided-hand.png" /><div class="lives-and-attributes attr2">
+        <div class="attributes">
+          <img class="attribute attribute-power" src="http://localhost:8080/imgs/attr-power.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/imgs/heart.png" />
+        </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/ruka.png"
+        class="illustration" />
+  </div><div
+    class="card
+      basic
+      
+      card-has-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">basic</div><div class="title
+
+        
+        
+      ">
+        <span>Noha</span>
+      </div><div class="title title-reversed
+          
+          "><span>Noha</span></div><img class="joint required single bone" src="http://localhost:8080/imgs/required-bone.png" /><img class="joint provided single leg" src="http://localhost:8080/imgs/provided-leg.png" /><div class="lives-and-attributes attr2">
+        <div class="attributes">
+          <img class="attribute attribute-speed" src="http://localhost:8080/imgs/attr-speed.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/imgs/heart.png" />
+        </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/noha.png"
+        class="illustration" />
+  </div><div
+    class="card
+      basic
+      
+      card-has-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">basic</div><div class="title
+
+        
+        
+      ">
+        <span>Noha</span>
+      </div><div class="title title-reversed
+          
+          "><span>Noha</span></div><img class="joint required single bone" src="http://localhost:8080/imgs/required-bone.png" /><img class="joint provided single leg" src="http://localhost:8080/imgs/provided-leg.png" /><div class="lives-and-attributes attr2">
+        <div class="attributes">
+          <img class="attribute attribute-speed" src="http://localhost:8080/imgs/attr-speed.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/imgs/heart.png" />
+        </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/noha.png"
+        class="illustration" />
+  </div><div
+    class="card
+      basic
+      
+      card-has-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">basic</div><div class="title
+
+        
+        
+      ">
+        <span>Noha</span>
+      </div><div class="title title-reversed
+          
+          "><span>Noha</span></div><img class="joint required single bone" src="http://localhost:8080/imgs/required-bone.png" /><img class="joint provided single leg" src="http://localhost:8080/imgs/provided-leg.png" /><div class="lives-and-attributes attr2">
+        <div class="attributes">
+          <img class="attribute attribute-speed" src="http://localhost:8080/imgs/attr-speed.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/imgs/heart.png" />
+        </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/noha.png"
+        class="illustration" />
+  </div><div
+    class="card
+      basic
+      
+      card-has-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">basic</div><div class="title
+
+        
+        
+      ">
+        <span>Ruka</span>
+      </div><div class="title title-reversed
+          
+          "><span>Ruka</span></div><img class="joint required single bone" src="http://localhost:8080/imgs/required-bone.png" /><img class="joint provided single hand" src="http://localhost:8080/imgs/provided-hand.png" /><div class="lives-and-attributes attr2">
+        <div class="attributes">
+          <img class="attribute attribute-power" src="http://localhost:8080/imgs/attr-power.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/imgs/heart.png" />
+        </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/ruka.png"
+        class="illustration" />
+  </div><div
+    class="card
+      basic
+      
+      card-has-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">basic</div><div class="title
+
+        
+        
+      ">
+        <span>Ruka</span>
+      </div><div class="title title-reversed
+          
+          "><span>Ruka</span></div><img class="joint required single bone" src="http://localhost:8080/imgs/required-bone.png" /><img class="joint provided single hand" src="http://localhost:8080/imgs/provided-hand.png" /><div class="lives-and-attributes attr2">
+        <div class="attributes">
+          <img class="attribute attribute-power" src="http://localhost:8080/imgs/attr-power.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/imgs/heart.png" />
+        </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/ruka.png"
+        class="illustration" />
+  </div><div
+    class="card
+      basic
+      
+      card-has-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">basic</div><div class="title
+
+        
+        
+      ">
+        <span>Ruka</span>
+      </div><div class="title title-reversed
+          
+          "><span>Ruka</span></div><img class="joint required single bone" src="http://localhost:8080/imgs/required-bone.png" /><img class="joint provided single hand" src="http://localhost:8080/imgs/provided-hand.png" /><div class="lives-and-attributes attr2">
+        <div class="attributes">
+          <img class="attribute attribute-power" src="http://localhost:8080/imgs/attr-power.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/imgs/heart.png" />
+        </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/ruka.png"
+        class="illustration" />
+  </div><div
+    class="card
+      basic
+      
+      card-has-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">basic</div><div class="title
+
+        
+        
+      ">
+        <span>Noha</span>
+      </div><div class="title title-reversed
+          
+          "><span>Noha</span></div><img class="joint required single bone" src="http://localhost:8080/imgs/required-bone.png" /><img class="joint provided single leg" src="http://localhost:8080/imgs/provided-leg.png" /><div class="lives-and-attributes attr2">
+        <div class="attributes">
+          <img class="attribute attribute-speed" src="http://localhost:8080/imgs/attr-speed.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/imgs/heart.png" />
+        </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/noha.png"
+        class="illustration" />
+  </div><div
+    class="card
+      basic
+      
+      card-has-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">basic</div><div class="title
+
+        
+        
+      ">
+        <span>Noha</span>
+      </div><div class="title title-reversed
+          
+          "><span>Noha</span></div><img class="joint required single bone" src="http://localhost:8080/imgs/required-bone.png" /><img class="joint provided single leg" src="http://localhost:8080/imgs/provided-leg.png" /><div class="lives-and-attributes attr2">
+        <div class="attributes">
+          <img class="attribute attribute-speed" src="http://localhost:8080/imgs/attr-speed.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/imgs/heart.png" />
+        </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/noha.png"
+        class="illustration" />
+  </div><div
+    class="card
+      basic
+      
+      card-has-joints
+      
+      
+      
+      
+      
+  ">
+    <div class="type">basic</div><div class="title
+
+        
+        
+      ">
+        <span>Noha</span>
+      </div><div class="title title-reversed
+          
+          "><span>Noha</span></div><img class="joint required single bone" src="http://localhost:8080/imgs/required-bone.png" /><img class="joint provided single leg" src="http://localhost:8080/imgs/provided-leg.png" /><div class="lives-and-attributes attr2">
+        <div class="attributes">
+          <img class="attribute attribute-speed" src="http://localhost:8080/imgs/attr-speed.png" />
+        </div>
+        <div class="lives 
+        ">
+          <img class="life" src="http://localhost:8080/imgs/heart.png" />
+        </div>
+      </div><img
+        src="http://localhost:8080/imgs/ilus/png/noha.png"
+        class="illustration" />
+  </div>
+      </div>
+    </body>
+  </html>

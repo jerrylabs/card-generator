@@ -149,11 +149,7 @@ html, body {
   left: -2mm;
 }
 
-.quest__reputation span { position: relative; z-index: 1; }
-.quest__reputation span::before { position: absolute; z-index: -1; color: white; filter: blur(1px); }
-.quest__reputation span.val1::before { content: '1'; }
-.quest__reputation span.val2::before { content: '2'; }
-.quest__reputation span.val3::before { content: '3'; }
+.quest__reputation span { position: relative; z-index: 1; text-shadow: 1px 1px 0px #472856, 0px 0px 2px #472856; }
 
 .quest__reputation.v1 { padding-left: 0.5mm; }
 
@@ -163,15 +159,10 @@ html, body {
   background: transparent url(http://localhost:8080/imgs/quest-cards.png) center center no-repeat;
   background-size: contain;
   box-sizing: border-box;
-  padding: 3.45mm 2mm 0 0;
-  font-size: 5mm;
+  padding: 3.9mm 1mm 0 0;
+  font-size: 4.5mm;
+  text-shadow: 1px 1px 0px #472856, 0px 0px 2px #472856;
 }
-
-.quest__cards span { position: relative; z-index: 1; }
-.quest__cards span::before { position: absolute; z-index: -1; color: white; filter: blur(1px); }
-.quest__cards span.val1::before { content: '+1'; }
-.quest__cards span.val2::before { content: '+2'; }
-.quest__cards span.val3::before { content: '+3'; }
 
 .quest__penalty {
  position: absolute;
@@ -185,13 +176,9 @@ html, body {
   box-sizing: border-box;
   font-size: 7mm;
   line-height: 15mm;
-}
 
-.quest__penalty span { position: relative; z-index: 1; }
-.quest__penalty span::before { position: absolute; z-index: -1; color: white; filter: blur(1px); }
-.quest__penalty span.val1::before { content: '-1'; }
-.quest__penalty span.val2::before { content: '-2'; }
-.quest__penalty span.val3::before { content: '-3'; }
+  text-shadow: 1px 1px 0px black, 0px 0px 2px black;
+}
 
 .quest__label, .quest__description, .quest__success, .quest__fail {
   position: absolute;
@@ -218,7 +205,7 @@ html, body {
 .card.animatron {
   width: 88mm;
   height: 118mm;
-  top: 21.25mm;
+  top: 21.5mm;
 }
 
 .animatron .title {
@@ -258,13 +245,14 @@ html, body {
   background: transparent url(http://localhost:8080/imgs/quest-cards.png) center center no-repeat;
   background-size: contain;
   box-sizing: border-box;
-  padding: 6.5mm 0mm 0 0;
-  font-size: 12mm;
+  padding: 7.5mm 0mm 0 0;
+  font-size: 11mm;
   position: absolute;
   top: 89mm;
   left: 44mm;
   z-index: 4;
   font-family: 'Impact Condensed';
+  text-shadow: 1px 1px 0px #472856, 0px 0px 2px #472856;
 }
 
 .animatron .attribute {
@@ -288,17 +276,11 @@ html, body {
   left: 21mm;
   z-index: 4;
   font-family: 'Impact Condensed';
-
+  text-shadow: 1px 1px 0px #472856, 0px 0px 2px #472856;
 }
-
-.chuckie .animatron__cards { top: 3mm; }
-.animatron.chuckie .attribute { top: 4mm; }
 .barbie .animatron__cards { top: 93mm; }
 .animatron.barbie .attribute { top: 95mm; }
 .zombik .animatron__cards { top: 33mm; left: 51mm; }
-
-.animatron__reputation span { position: relative; z-index: 1; }
-.animatron__reputation span::before { position: absolute; z-index: -1; color: black; filter: blur(1px); content: '-2'; }
 
 /* Fix last empty page */
 .cards {
