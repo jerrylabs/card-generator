@@ -39,7 +39,7 @@ html, body {
   background-position: center center;
   font-size: 5mm;
   background-size: cover;
-  border-radius: 5mm;
+  border-radius: 4mm;
   overflow: visible;
   vertical-align: bottom;
 }
@@ -102,32 +102,38 @@ html, body {
   width: 100%;
   display: flex;
   height: 19mm;
-  font-size: 3mm;
+  font-size: 2.5mm;
+  line-height: 1.2;
   justify-content: center;
   align-items: center;
 }
 
-.text-long { font-size: 2.8mm; }
+/* .text-long { font-size: 2.8mm; } */
 .text div { width: 32mm;}
 
 .attributes {
   position: absolute;
-  width: 14mm;
-  top: 42mm;
+  width: 9mm;
+  top: 39mm;
   font-size: 4mm;
   font-weight: bold;
+  background-size: cover;
+  height: 23mm;
+  box-sizing: border-box;
+  padding-top: 2.5mm;
+  background-position: right center;
 }
 
-.attribute {
-  padding-left: 9mm;
-  background-size: 3mm 3mm;
-  background-position: 5mm center;
-  position: relative;
-}
+.balance .attributes { background-image: url(http://localhost:8080/assets/attributes-mramor.png); }
+.progress .attributes { background-image: url(http://localhost:8080/assets/attributes-metal.png); }
 
-.attribute::before { display:block;
+.attribute { position: relative; padding-left: 3.5mm; }
+
+.attribute::before {
+  display:block;
+  display: block;
   position: absolute;
-  left: 6.2mm;
+  left: 0.5mm;
   filter: saturate(0) brightness(80%) contrast(2000%);
   font-size: 3mm;
   width: 4mm;
@@ -139,5 +145,5 @@ html, body {
 .attribute.defense::before { content: '🛡️'; }
 .attribute.value::before { content: '💎'; }
 
-.attributes + .text { text-align: left; left: 14mm; justify-content: start; }
-.attributes + .text div { width: 25mm;}
+.attributes + .text { text-align: left; left: 11mm; justify-content: start; }
+.attributes + .text div { width: 27mm;}
