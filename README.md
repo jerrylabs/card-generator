@@ -25,7 +25,8 @@ input: folder named {folder_name} including:
 
 Optional parameters:
 * log - throws up the HTML data directly to the console
-* cards - custom file instead of cards.csv, name must follow as next parameter
+* input - custom file instead of cards.csv, name must follow as next parameter
+* output - set different name for html result file for alternative/additional files
 
 See "test" folder for demonstrative example including comments with further instructions where needed. Please to not hesitate to contact me or pull request any interesting idea since this is my first Node.js server script.
 
@@ -38,8 +39,8 @@ node generate test
 
 which should do the stuff and generate test.html in the test folder. In fact you do not need http-server because images are not working in default card generating function.
 
-Generate english CMZC cards:
+Generate english CMZC cards from cards-en.csv file info cmzc-horizontal-en.html file:
 
 ```
-node generate cmzc-horizontal cards cards-en.csv
+node generate cmzc-horizontal input cards-en output cmzc-horizontal-en
 ```

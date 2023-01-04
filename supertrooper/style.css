@@ -83,6 +83,7 @@ html, body {
 }
 
 .title div { max-width: 24mm; }
+.balance .title div { position: relative; left: 0.4mm; }
 
 .image {
   z-index: -1;
