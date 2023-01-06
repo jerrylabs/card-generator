@@ -12,6 +12,12 @@ body {
     url("http://localhost:8080/fonts/CopperplateGothicBoldCE-Regular.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "Pica";
+  src:
+    url("http://localhost:8080/fonts/IMFellDWPica-Regular.ttf") format("truetype");
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -82,7 +88,8 @@ html, body {
   font-size: 2.8mm;
 }
 
-.title div { max-width: 24mm; }
+.title.title-small { font-size: 2.6mm; }
+.title div { max-width: 23mm; }
 .balance .title div { position: relative; left: 0.4mm; }
 
 .image {
@@ -102,14 +109,25 @@ html, body {
   width: 100%;
   display: flex;
   height: 19mm;
-  font-size: 2.5mm;
+  font-size: 3mm;
   line-height: 1.2;
   justify-content: center;
   align-items: center;
+  font-family: "Pica";
+  z-index: 2;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 
+.text__icon { filter: saturate(0) brightness(80%) contrast(2000%); }
+.text__icon.🌕 { text-shadow: 0 0.3mm black; }
+.text__action { font-size: 120%; position: relative; top: 0.15em; padding: 0 0.1em; color: white; line-height: 0.5; }
+.text__action + .text__action { padding-left: 0; }
+.text__action::before { display: block; content: '@'; position: absolute; -webkit-text-stroke: 0.5mm black; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: -1; }
 /* .text-long { font-size: 2.8mm; } */
 .text div { width: 32mm;}
+.text .flavor { font-style: italic; font-size: 2.5mm; font-family: "Adobe Garamond Pro"; }
 
 .attributes {
   position: absolute;
@@ -122,12 +140,25 @@ html, body {
   box-sizing: border-box;
   padding-top: 2.5mm;
   background-position: right center;
+  z-index: 2;
 }
 
 .balance .attributes { background-image: url(http://localhost:8080/assets/attributes-mramor.png); }
 .progress .attributes { background-image: url(http://localhost:8080/assets/attributes-metal.png); }
 
-.attribute { position: relative; padding-left: 3.5mm; }
+.attributes.shadow {
+  box-shadow: -0.5mm 0 2mm black, 0mm -1mm 2mm black;
+  top: 41mm;
+  border-radius: 4mm;
+  z-index: 1;
+  width: 6.4mm;
+  height: 20mm;
+  left: 2mm;
+}
+
+.progress .attributes.shadow { box-shadow: 0.5mm 0 2mm black, 0mm -1mm 2mm black; }
+
+.attribute { position: relative; padding-left: 3.2mm; letter-spacing: -0.3mm; }
 
 .attribute::before {
   display:block;
@@ -145,5 +176,18 @@ html, body {
 .attribute.defense::before { content: '🛡️'; }
 .attribute.value::before { content: '💎'; }
 
-.attributes + .text { text-align: left; left: 11mm; justify-content: start; }
-.attributes + .text div { width: 27mm;}
+.attributes + .text { text-align: left; left: 10.2mm; width: 28mm; }
+.attributes + .text div { width: 100%;}
+
+.copyleft {
+  position: absolute;
+  bottom: 0.2mm;
+  left: 50%;
+  transform: translateX(-50%);
+  color: lightgray;
+  text-shadow: 0 0 0.2mm black, -0.1mm -0.1mm 0.01mm black;
+  font-size: 1.4mm;
+}
+
+.progress .copyleft { text-shadow: 0 0 0.2mm black, -0.1mm -0.1mm 0.01mm black, 0 -0.2mm black; }
+.copyleft span { font-variant: small-caps; }

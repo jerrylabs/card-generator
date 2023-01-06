@@ -16,6 +16,12 @@ body {
     url("http://localhost:8080/fonts/CopperplateGothicBoldCE-Regular.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "Pica";
+  src:
+    url("http://localhost:8080/fonts/IMFellDWPica-Regular.ttf") format("truetype");
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -86,7 +92,8 @@ html, body {
   font-size: 2.8mm;
 }
 
-.title div { max-width: 24mm; }
+.title.title-small { font-size: 2.6mm; }
+.title div { max-width: 23mm; }
 .balance .title div { position: relative; left: 0.4mm; }
 
 .image {
@@ -106,14 +113,25 @@ html, body {
   width: 100%;
   display: flex;
   height: 19mm;
-  font-size: 2.5mm;
+  font-size: 3mm;
   line-height: 1.2;
   justify-content: center;
   align-items: center;
+  font-family: "Pica";
+  z-index: 2;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 
+.text__icon { filter: saturate(0) brightness(80%) contrast(2000%); }
+.text__icon.🌕 { text-shadow: 0 0.3mm black; }
+.text__action { font-size: 120%; position: relative; top: 0.15em; padding: 0 0.1em; color: white; line-height: 0.5; }
+.text__action + .text__action { padding-left: 0; }
+.text__action::before { display: block; content: '@'; position: absolute; -webkit-text-stroke: 0.5mm black; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: -1; }
 /* .text-long { font-size: 2.8mm; } */
 .text div { width: 32mm;}
+.text .flavor { font-style: italic; font-size: 2.5mm; font-family: "Adobe Garamond Pro"; }
 
 .attributes {
   position: absolute;
@@ -126,10 +144,23 @@ html, body {
   box-sizing: border-box;
   padding-top: 2.5mm;
   background-position: right center;
+  z-index: 2;
 }
 
 .balance .attributes { background-image: url(http://localhost:8080/assets/attributes-mramor.png); }
 .progress .attributes { background-image: url(http://localhost:8080/assets/attributes-metal.png); }
+
+.attributes.shadow {
+  box-shadow: -0.5mm 0 2mm black, 0mm -1mm 2mm black;
+  top: 41mm;
+  border-radius: 4mm;
+  z-index: 1;
+  width: 6.4mm;
+  height: 20mm;
+  left: 2mm;
+}
+
+.progress .attributes.shadow { box-shadow: 0.5mm 0 2mm black, 0mm -1mm 2mm black; }
 
 .attribute { position: relative; padding-left: 3.5mm; }
 
@@ -149,8 +180,21 @@ html, body {
 .attribute.defense::before { content: '🛡️'; }
 .attribute.value::before { content: '💎'; }
 
-.attributes + .text { text-align: left; left: 11mm; justify-content: start; }
-.attributes + .text div { width: 27mm;}
+.attributes + .text { text-align: left; left: 10.2mm; width: 28mm; }
+.attributes + .text div { width: 100%;}
+
+.copyleft {
+  position: absolute;
+  bottom: 0.2mm;
+  left: 50%;
+  transform: translateX(-50%);
+  color: lightgray;
+  text-shadow: 0 0 0.2mm black, -0.1mm -0.1mm 0.01mm black;
+  font-size: 1.4mm;
+}
+
+.progress .copyleft { text-shadow: 0 0 0.2mm black, -0.1mm -0.1mm 0.01mm black, 0 -0.2mm black; }
+.copyleft span { font-variant: small-caps; }
       </style>
     </head>
     <body>
@@ -168,8 +212,13 @@ html, body {
           <div class="attribute defense">4</div>
           <div class="attribute value">3</div>
         </div>
+        <div class="attributes shadow"></div>
       
-      <div class="text "><div>Mutant<br>Smrtonosnost</div></div>
+      <div class="text">
+        <div>Mutant<br>Smrtonosnost</div>
+        <div class="flavor">„Ve městě je krmení dost.“</div>
+      </div>
+      <div class="copyleft"><span>cc</span> JerryLabs 2023</div>
     </div>
   
     <div class="card balance">
@@ -184,8 +233,139 @@ html, body {
           <div class="attribute defense">3</div>
           <div class="attribute value">3</div>
         </div>
+        <div class="attributes shadow"></div>
       
-      <div class="text "><div>Na začátku kola se podívej na vrchní kartu svého balíčku. Můžeš ji dát dospod.</div></div>
+      <div class="text text-long">
+        <div>Na začátku svého kola se podívej na vrchní kartu svého balíčku. Můžeš ji dát dospod.</div>
+        
+      </div>
+      <div class="copyleft"><span>cc</span> JerryLabs 2023</div>
+    </div>
+  
+    <div class="card balance">
+      <div class="icon-type trooper"></div>
+      <div class="icon-affiliation balance"></div>
+      <div class="title"><div>Všežravý prasopes</div></div>
+      <div class="image" style="background-image: url('http://localhost:8080/images/prasopes.jpg');" /></div>
+      
+        <div class="attributes">
+          <div class="attribute fight">2</div>
+          <div class="attribute shoot">0</div>
+          <div class="attribute defense">1</div>
+          <div class="attribute value">1</div>
+        </div>
+        <div class="attributes shadow"></div>
+      
+      <div class="text text-long">
+        <div>Mutant<br><span class="text__action">@</span>, vrať bojovníka z&nbsp;jakéhokoliv hrobu dospod balíčku: +3&nbsp;k&nbsp;<span class="text__icon 👊">👊</span> a&nbsp;️<span class="text__icon 🛡️">🛡️</span> toto kolo.</div>
+        
+      </div>
+      <div class="copyleft"><span>cc</span> JerryLabs 2023</div>
+    </div>
+  
+    <div class="card balance">
+      <div class="icon-type trooper"></div>
+      <div class="icon-affiliation balance"></div>
+      <div class="title"><div>Raptoří nájezdník</div></div>
+      <div class="image" style="background-image: url('http://localhost:8080/images/raptorrider.jpg');" /></div>
+      
+        <div class="attributes">
+          <div class="attribute fight">4</div>
+          <div class="attribute shoot">2</div>
+          <div class="attribute defense">4</div>
+          <div class="attribute value">3</div>
+        </div>
+        <div class="attributes shadow"></div>
+      
+      <div class="text">
+        <div><span class="text__action">@</span>: +2 k <span class="text__icon 👊">👊</span> a smrtonosnost toto kolo.</div>
+        <div class="flavor">„Přijíždí nepozván, odjíždí nepoznán.“</div>
+      </div>
+      <div class="copyleft"><span>cc</span> JerryLabs 2023</div>
+    </div>
+  
+    <div class="card balance">
+      <div class="icon-type trooper"></div>
+      <div class="icon-affiliation balance"></div>
+      <div class="title"><div>Slizoid</div></div>
+      <div class="image" style="background-image: url('http://localhost:8080/images/slizoid.jpg');" /></div>
+      
+        <div class="attributes">
+          <div class="attribute fight">5</div>
+          <div class="attribute shoot">0</div>
+          <div class="attribute defense">5</div>
+          <div class="attribute value">4</div>
+        </div>
+        <div class="attributes shadow"></div>
+      
+      <div class="text">
+        <div>Mutant<br>Na začátku tvého kola získáváš 2 <span class="text__icon 🌕">🌕</span>.</div>
+        
+      </div>
+      <div class="copyleft"><span>cc</span> JerryLabs 2023</div>
+    </div>
+  
+    <div class="card balance">
+      <div class="icon-type trooper"></div>
+      <div class="icon-affiliation balance"></div>
+      <div class="title"><div>Regulátor</div></div>
+      <div class="image" style="background-image: url('http://localhost:8080/images/regulator.jpg');" /></div>
+      
+        <div class="attributes">
+          <div class="attribute fight">3</div>
+          <div class="attribute shoot">2</div>
+          <div class="attribute defense">3</div>
+          <div class="attribute value">3</div>
+        </div>
+        <div class="attributes shadow"></div>
+      
+      <div class="text text-long">
+        <div>Pokud má na konci tvého kola protihráč více <span class="text__icon 🌕">🌕</span> než ty, ztrácí 1&nbsp;<span class="text__icon 🌕">🌕</span> a ty získáš 1 <span class="text__icon 🌕">🌕</span>.</div>
+        
+      </div>
+      <div class="copyleft"><span>cc</span> JerryLabs 2023</div>
+    </div>
+  
+    <div class="card balance">
+      <div class="icon-type trooper"></div>
+      <div class="icon-affiliation balance"></div>
+      <div class="title"><div>Ekofanatik</div></div>
+      <div class="image" style="background-image: url('http://localhost:8080/images/ekofanatic.jpg');" /></div>
+      
+        <div class="attributes">
+          <div class="attribute fight">1</div>
+          <div class="attribute shoot">0</div>
+          <div class="attribute defense">2</div>
+          <div class="attribute value">1</div>
+        </div>
+        <div class="attributes shadow"></div>
+      
+      <div class="text">
+        <div>Vyložení všech bojovníků stojí o 1 <span class="text__icon 🌕">🌕</span> více.</div>
+        
+      </div>
+      <div class="copyleft"><span>cc</span> JerryLabs 2023</div>
+    </div>
+  
+    <div class="card balance">
+      <div class="icon-type trooper"></div>
+      <div class="icon-affiliation balance"></div>
+      <div class="title"><div>Mystický poustevník</div></div>
+      <div class="image" style="background-image: url('http://localhost:8080/images/hermit.jpg');" /></div>
+      
+        <div class="attributes">
+          <div class="attribute fight">1</div>
+          <div class="attribute shoot">1</div>
+          <div class="attribute defense">2</div>
+          <div class="attribute value">2</div>
+        </div>
+        <div class="attributes shadow"></div>
+      
+      <div class="text">
+        <div>Všichni tví ostatní bojovníci získávají<br>+2 k <span class="text__icon 👊">👊</span>, <span class="text__icon 🎯">🎯</span> a <span class="text__icon 🛡️">🛡️</span>.</div>
+        
+      </div>
+      <div class="copyleft"><span>cc</span> JerryLabs 2023</div>
     </div>
   
     <div class="card progress">
@@ -200,14 +380,19 @@ html, body {
           <div class="attribute defense">3</div>
           <div class="attribute value">3</div>
         </div>
+        <div class="attributes shadow"></div>
       
-      <div class="text "><div>Robot<br>Když zabije bojovníka, získáváš navíc 1 🏆.</div></div>
+      <div class="text">
+        <div>Robot<br>Když zabije bojovníka, získáváš navíc 1 <span class="text__icon 🏆">🏆</span>.</div>
+        
+      </div>
+      <div class="copyleft"><span>cc</span> JerryLabs 2023</div>
     </div>
   
     <div class="card progress">
       <div class="icon-type trooper"></div>
       <div class="icon-affiliation progress"></div>
-      <div class="title"><div>Terénní průzkumník</div></div>
+      <div class="title"><div>Pralesní stráž</div></div>
       <div class="image" style="background-image: url('http://localhost:8080/images/ranger.jpg');" /></div>
       
         <div class="attributes">
@@ -216,8 +401,97 @@ html, body {
           <div class="attribute defense">2</div>
           <div class="attribute value">2</div>
         </div>
+        <div class="attributes shadow"></div>
       
-      <div class="text text-long"><div>Bonusy jeho zbraní jsou zvětšeny o +1. Když útočí nebo je napaden, přiber si kartu.</div></div>
+      <div class="text text-long">
+        <div>Bonusy jeho zbraní jsou zvětšeny o +1. Když útočí nebo je napaden, přiber si kartu.</div>
+        
+      </div>
+      <div class="copyleft"><span>cc</span> JerryLabs 2023</div>
+    </div>
+  
+    <div class="card progress">
+      <div class="icon-type trooper"></div>
+      <div class="icon-affiliation progress"></div>
+      <div class="title title-small"><div>Paprskometčík</div></div>
+      <div class="image" style="background-image: url('http://localhost:8080/images/railgunman.jpg');" /></div>
+      
+        <div class="attributes">
+          <div class="attribute fight">1</div>
+          <div class="attribute shoot">4</div>
+          <div class="attribute defense">2</div>
+          <div class="attribute value">3</div>
+        </div>
+        <div class="attributes shadow"></div>
+      
+      <div class="text">
+        <div><span class="text__action">@</span>: +2 k <span class="text__icon 🎯">🎯</span>, smrtonosnost a první útok <span class="text__icon 🎯">🎯</span> toto kolo.</div>
+        
+      </div>
+      <div class="copyleft"><span>cc</span> JerryLabs 2023</div>
+    </div>
+  
+    <div class="card progress">
+      <div class="icon-type trooper"></div>
+      <div class="icon-affiliation progress"></div>
+      <div class="title"><div>Cirkulobot</div></div>
+      <div class="image" style="background-image: url('http://localhost:8080/images/cirkulobot.jpg');" /></div>
+      
+        <div class="attributes">
+          <div class="attribute fight">4</div>
+          <div class="attribute shoot">1</div>
+          <div class="attribute defense">3</div>
+          <div class="attribute value">3</div>
+        </div>
+        <div class="attributes shadow"></div>
+      
+      <div class="text text-long">
+        <div>Robot<br>Když při útoku zraní bojovníka, může navíc ihned zaútočit přímo na&nbsp;hráče. </div>
+        
+      </div>
+      <div class="copyleft"><span>cc</span> JerryLabs 2023</div>
+    </div>
+  
+    <div class="card progress">
+      <div class="icon-type trooper"></div>
+      <div class="icon-affiliation progress"></div>
+      <div class="title"><div>Titán</div></div>
+      <div class="image" style="background-image: url('http://localhost:8080/images/titan.jpg');" /></div>
+      
+        <div class="attributes">
+          <div class="attribute fight">6</div>
+          <div class="attribute shoot">6</div>
+          <div class="attribute defense">6</div>
+          <div class="attribute value">6</div>
+        </div>
+        <div class="attributes shadow"></div>
+      
+      <div class="text">
+        <div>Robot<br>Za každého bojovníka v&nbsp;bitvě stojí vyložení Titána o 1 <span class="text__icon 🌕">🌕</span> méně.</div>
+        
+      </div>
+      <div class="copyleft"><span>cc</span> JerryLabs 2023</div>
+    </div>
+  
+    <div class="card progress">
+      <div class="icon-type trooper"></div>
+      <div class="icon-affiliation progress"></div>
+      <div class="title"><div>Vzdušná pěchota</div></div>
+      <div class="image" style="background-image: url('http://localhost:8080/images/aeroinfantry.jpg');" /></div>
+      
+        <div class="attributes">
+          <div class="attribute fight">3</div>
+          <div class="attribute shoot">4</div>
+          <div class="attribute defense">4</div>
+          <div class="attribute value">4</div>
+        </div>
+        <div class="attributes shadow"></div>
+      
+      <div class="text text-long">
+        <div>Protivníci v souboji ztrácí smrtonosnost. Odhoď kartu z ruky:<br>+1 k <span class="text__icon 👊">👊</span>, <span class="text__icon 🎯">🎯</span> nebo <span class="text__icon 🛡️">🛡️</span>.</div>
+        
+      </div>
+      <div class="copyleft"><span>cc</span> JerryLabs 2023</div>
     </div>
   
       </div>

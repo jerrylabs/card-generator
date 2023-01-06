@@ -1,5 +1,15 @@
-"title","type","affiliation","attributes","image","text"
-"Přešlechtěný lidožrav","trooper","balance","5/0/4/3","lidozrav","Mutant<br>Smrtonosnost"
-"Pouštní pátrači","trooper","balance","3/3/3/3","patraci","Na začátku kola se podívej na vrchní kartu svého balíčku. Můžeš ji dát dospod."
-"Exterminátor","trooper","progress","3/3/3/3","exterminator","Robot<br>Když zabije bojovníka, získáváš navíc 1 🏆."
-"Terénní průzkumník","trooper","progress","3/1/2/2","ranger","Bonusy jeho zbraní jsou zvětšeny o +1. Když útočí nebo je napaden, přiber si kartu."
+"title","type","affiliation","attributes","image","text","flavor"
+"Přešlechtěný lidožrav","trooper","balance","5/0/4/3","lidozrav","Mutant<br>Smrtonosnost","Ve městě je krmení dost."
+"Pouštní pátrači","trooper","balance","3/3/3/3","patraci","Na začátku svého kola se podívej na vrchní kartu svého balíčku. Můžeš ji dát dospod.",
+"Všežravý prasopes","trooper","balance","2/0/1/1","prasopes","Mutant<br>@, vrať bojovníka z&nbsp;jakéhokoliv hrobu dospod balíčku: +3&nbsp;k&nbsp;👊 a&nbsp;️🛡️ toto kolo.",
+"Raptoří nájezdník","trooper","balance","4/2/4/3","raptorrider","@: +2 k 👊 a smrtonosnost toto kolo.","Přijíždí nepozván, odjíždí nepoznán."
+"Slizoid","trooper","balance","5/0/5/4","slizoid","Mutant<br>Na začátku tvého kola získáváš 2 🌕.",
+"Regulátor","trooper","balance","3/2/3/3","regulator","Pokud má na konci tvého kola protihráč více 🌕 než ty, ztrácí 1&nbsp;🌕 a ty získáš 1 🌕.",
+"Ekofanatik","trooper","balance","1/0/2/1","ekofanatic","Vyložení všech bojovníků stojí o 1 🌕 více.",
+"Mystický poustevník","trooper","balance","1/1/2/2","hermit","Všichni tví ostatní bojovníci získávají<br>+2 k 👊, 🎯 a 🛡️.",
+"Exterminátor","trooper","progress","3/3/3/3","exterminator","Robot<br>Když zabije bojovníka, získáváš navíc 1 🏆.",
+"Pralesní stráž","trooper","progress","3/1/2/2","ranger","Bonusy jeho zbraní jsou zvětšeny o +1. Když útočí nebo je napaden, přiber si kartu.",
+"Paprskometčík","trooper","progress","1/4/2/3","railgunman","@: +2 k 🎯, smrtonosnost a první útok 🎯 toto kolo.",
+"Cirkulobot","trooper","progress","4/1/3/3","cirkulobot","Robot<br>Když při útoku zraní bojovníka, může navíc ihned zaútočit přímo na&nbsp;hráče. ",
+"Titán","trooper","progress","6/6/6/6","titan","Robot<br>Za každého bojovníka v&nbsp;bitvě stojí vyložení Titána o 1 🌕 méně.",
+"Vzdušná pěchota","trooper","progress","3/4/4/4","aeroinfantry","Protivníci v souboji ztrácí smrtonosnost. Odhoď kartu z ruky:<br>+1 k 👊, 🎯 nebo 🛡️.",
