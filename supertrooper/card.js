@@ -3,15 +3,22 @@ module.exports = (cardData) => {
 
   const fixTextIcons = (text) => text
     .replace(/(🏆|🌕|💰|👊|🎯|🛡️|💎)/g, '<span class="text__icon $1">$1</span>')
-    .replace(/@/,'<span class="text__action">@</span>')
+    .replace(/@(?!\!)/g,'<span class="text__action">@</span>')
+    .replace(/@\!/g,'<span class="text__action text__action-attack">@</span>')
 
-  const longestTitleWord = Math.max(cardData.title.split(' ').map(w => w.length));
+  const longestTitleWord = Math.max(...cardData.title.split(' ').map(w => w.length));
+  let titleClasses = ['title'];
+  if (longestTitleWord > 12) {
+    titleClasses.push('title-small');
+  } else if (longestTitleWord > 11) {
+    titleClasses.push('title-medium');
+  }
 
   return `
     <div class="card ${cardData.affiliation}">
       <div class="icon-type ${cardData.type}"></div>
       <div class="icon-affiliation ${cardData.affiliation}"></div>
-      <div class="title${longestTitleWord > 12 ? ' title-small' : ''}"><div>${cardData.title}</div></div>
+      <div class="${titleClasses.join(' ')}"><div>${cardData.title}</div></div>
       <div class="image" style="background-image: url('http://localhost:8080/images/${cardData.image}.jpg');" /></div>
       ${attributes ? `
         <div class="attributes">

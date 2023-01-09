@@ -66,9 +66,14 @@ html, body {
 .card.progress { background-image: url(http://localhost:8080/assets/kolecka.png); }
 
 .icon-type, .icon-affiliation { height: 9mm; width: 9mm; position: absolute; background-size: cover; top: 2mm; z-index: -1; }
-.icon-type { left: 1.5mm; }
+.icon-type { left: 1.6mm; top: 2.2mm; }
 .icon-affiliation { top: 1.7mm; right: 1.2mm; }
-.icon-type.trooper { background-image: url(http://localhost:8080/icons/sword.png); }
+.icon-type.trooper { left: 1.5mm; top: 2mm; background-image: url(http://localhost:8080/icons/sword.png); }
+.icon-type.gear { background-image: url(http://localhost:8080/icons/axe.png); }
+.icon-type.event { background-image: url(http://localhost:8080/icons/storm.png); }
+.icon-type.factor { background-image: url(http://localhost:8080/icons/cog.png); }
+.icon-type.surprise { background-image: url(http://localhost:8080/icons/bum.png); }
+.icon-type.building { background-image: url(http://localhost:8080/icons/house.png); }
 .icon-affiliation.balance { top: 2.2mm; right: 1.8mm; height: 8mm; width: 8mm; background-image: url(http://localhost:8080/icons/balance.png); }
 .icon-affiliation.progress { top: 2.7mm; background-image: url(http://localhost:8080/icons/progress.png); }
 
@@ -88,8 +93,10 @@ html, body {
   font-size: 2.8mm;
 }
 
+
+.title.title-medium { font-size: 2.7mm; }
 .title.title-small { font-size: 2.6mm; }
-.title div { max-width: 23mm; }
+.title div { max-width: 22mm; }
 .balance .title div { position: relative; left: 0.4mm; }
 
 .image {
@@ -123,8 +130,9 @@ html, body {
 .text__icon { filter: saturate(0) brightness(80%) contrast(2000%); }
 .text__icon.🌕 { text-shadow: 0 0.3mm black; }
 .text__action { font-size: 120%; position: relative; top: 0.15em; padding: 0 0.1em; color: white; line-height: 0.5; }
+.text__action-attack { color: #f44336; }
 .text__action + .text__action { padding-left: 0; }
-.text__action::before { display: block; content: '@'; position: absolute; -webkit-text-stroke: 0.5mm black; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: -1; }
+.text__action::before { display: block; content: '@'; position: absolute; -webkit-text-stroke: 0.5mm black; top: 55%; left: 50%; transform: translate(-50%, -50%); z-index: -1; }
 /* .text-long { font-size: 2.8mm; } */
 .text div { width: 32mm;}
 .text .flavor { font-style: italic; font-size: 2.5mm; font-family: "Adobe Garamond Pro"; }
