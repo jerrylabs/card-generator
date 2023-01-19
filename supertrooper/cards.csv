@@ -72,7 +72,7 @@
 "Časová smyčka","event","progress",,"timeloop","V tomto kole získáváš navíc @!@!.","Co můžeš udělat včera, neodkládej na předevčírem."
 "Masivní ofenzíva","event","progress",,"offensive","Vylož jako dvě akce. Během příští útočné akce můžeš postupně provést oddělený útok s každým svým bojovníkem zvlášť.",
 "Vem to za mě, kámo","surprise","progress",,"help","Nahraď tvého napadeného bojovníka v souboji za&nbsp;jiného tvého tebou určeného bojovníka.",
-"Vem to za mě, kámo","surprise","progress",,"help","Nahraď tvého napadeného bojovníka v souboji za&nbsp;jiného tvého tebou určeného bojovníka.",
+"Veřejný nepřítel","factor","progress",,"wanted","Vylož na bojovníka, který zabil nějakého tvého bojovníka. Za zabití cíleného bojovníka získáváš navíc 3 🏆.",
 "Pečlivá příprava","event","progress",,"preparation","V tomto kole nemůže tvůj protihráč vykládat žádná překvapení, ledaže zruší tuto kartu.",
 "Sluneční erupce","surprise","progress",,"eruption","Cílová právě zahraná karta události, okolnosti nebo překvapení je zrušena.",
 "Sluneční erupce","surprise","progress",,"eruption","Cílová právě zahraná karta události, okolnosti nebo překvapení je zrušena.",

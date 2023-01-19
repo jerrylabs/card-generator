@@ -72,7 +72,7 @@
 "Time loop","event","progress",,"timeloop","You get extra @!@! this turn.","Co můžeš udělat včera, neodkládej na předevčírem."
 "Massive offensive","event","progress",,"offensive","Use as 2 actions. During your next attack action, you can make separate attacks with each of your warriors.",
 "Take over, buddy","surprise","progress",,"help","Replace your attacked warrior in combat with another one of yours in battle.",
-"Take over, buddy","surprise","progress",,"help","Replace your attacked warrior in combat with another one of yours in battle.",
+"Public enemy","factor","progress",,"wanted","Attach to target warrior who killed one of your warriors. If you kill targeted warrior, you get extra 3 🏆.",
 "Punctual preparation","event","progress",,"preparation","This turn your opponent cannot use any surprise unless cancelling this card.",
 "Solar eruption","surprise","progress",,"eruption","Target event, factor or surprise card just played is cancelled.",
 "Solar eruption","surprise","progress",,"eruption","Target event, factor or surprise card just played is cancelled.",
