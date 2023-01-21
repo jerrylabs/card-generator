@@ -372,7 +372,7 @@ html, body {
 }
 
 .bio .text-shadow, .tech .text-shadow {
-  display: none;
+  /* display: none; */
   z-index: 0;
   color: black;
   filter: blur(2px);
@@ -382,6 +382,9 @@ html, body {
   background: radial-gradient(ellipse farthest-side at center 55%, rgba(255, 255, 255, 0.5) 80%, transparent 100%);
 }
 */
+
+.voodoo .title { font-size: 4.7mm; }
+
 .voodoo .text {
   bottom: 2mm;
   width: 44mm;
@@ -394,7 +397,9 @@ html, body {
   font-size: 3.7mm;
   line-height: 0.9;
   left: 0;
-  text-shadow: 1px 1px 0px #472856, 0px 0px 2px #472856
+  color: black;
+  /* text-shadow: 1px 1px 0px #472856, 0px 0px 2px #472856;
+  -webkit-text-stroke: 0.1mm #472856; */
 }
 
 .voodoo .text-long {
