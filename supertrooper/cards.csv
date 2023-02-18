@@ -7,8 +7,8 @@
 "Všežravý prasopes","trooper","balance","2/0/1/1","prasopes","Mutant<br>@, vrať bojovníka z&nbsp;jakéhokoliv hrobu dospod balíčku: +3&nbsp;k&nbsp;👊 a&nbsp;️🛡️ toto kolo.",
 "Raptoří nájezdník","trooper","balance","4/2/4/3","raptorrider","@: +2 k 👊 a smrtonosnost toto kolo.","Přijíždí nepozván, odjíždí nepoznán."
 "Raptoří nájezdník","trooper","balance","4/2/4/3","raptorrider","@: +2 k 👊 a smrtonosnost toto kolo.","Přijíždí nepozván, odjíždí nepoznán."
-"Slizoid","trooper","balance","5/0/5/4","slizoid","Mutant<br>Na začátku tvého kola získáváš 2 🌕.",
-"Slizoid","trooper","balance","5/0/5/4","slizoid","Mutant<br>Na začátku tvého kola získáváš 2 🌕.",
+"Slizoid","trooper","balance","5/0/5/4","slizoid","Mutant<br>Na začátku tvého kola získáváš 1 🌕.",
+"Slizoid","trooper","balance","5/0/5/4","slizoid","Mutant<br>Na začátku tvého kola získáváš 1 🌕.",
 "Regulátor","trooper","balance","3/2/3/3","regulator","Pokud má na konci tvého kola protihráč více 🌕 než ty, ztrácí 1&nbsp;🌕 a ty získáš 1 🌕.",
 "Ekofanatik","trooper","balance","1/0/2/1","ekofanatic","Vyložení všech dalších bojovníků stojí o 1 🌕 více.",
 "Ekofanatik","trooper","balance","1/0/2/1","ekofanatic","Vyložení všech dalších bojovníků stojí o 1 🌕 více.",
@@ -50,8 +50,8 @@
 "Pralesní stráž","trooper","progress","3/1/2/2","ranger","Bonusy jejích zbraní jsou zvětšeny o +1. Když útočí nebo je napadena, přiber si kartu.",
 "Paprskometčík","trooper","progress","1/4/2/3","railgunman","@: +2 k 🎯, smrtonosnost a první útok 🎯 toto kolo.",
 "Paprskometčík","trooper","progress","1/4/2/3","railgunman","@: +2 k 🎯, smrtonosnost a první útok 🎯 toto kolo.",
-"Cirkulobot","trooper","progress","4/1/3/3","cirkulobot","Robot<br>Když při útoku zraní bojovníka, může navíc ihned zaútočit přímo na&nbsp;hráče. ",
-"Cirkulobot","trooper","progress","4/1/3/3","cirkulobot","Robot<br>Když při útoku zraní bojovníka, může navíc ihned zaútočit přímo na&nbsp;hráče. ",
+"Cirkulobot","trooper","progress","4/1/3/3","cirkulobot","Robot<br>Když při útoku zraní bojovníka, může navíc ihned zaútočit přímo na&nbsp;hráče (i když je kryt).",
+"Cirkulobot","trooper","progress","4/1/3/3","cirkulobot","Robot<br>Když při útoku zraní bojovníka, může navíc ihned zaútočit přímo na&nbsp;hráče (i když je kryt).",
 "Titán","trooper","progress","6/6/6/6","titan","Robot<br>Za každého bojovníka v&nbsp;bitvě stojí vyložení Titána o 1 🌕 méně.",
 "Vzdušná pěchota","trooper","progress","3/4/4/4","aeroinfantry","Protivníci v souboji ztrácí smrtonosnost. Odhoď kartu z ruky:<br>+1 k 👊, 🎯 nebo 🛡️ toto kolo.",
 "Vzdušná pěchota","trooper","progress","3/4/4/4","aeroinfantry","Protivníci v souboji ztrácí smrtonosnost. Odhoď kartu z ruky:<br>+1 k 👊, 🎯 nebo 🛡️ toto kolo.",
@@ -67,7 +67,7 @@
 "Plasmová puška","gear","progress",,"plasmarifle","Obouruční zbraň<br>+4 k 🎯","Projektily ionizovaného plynu kontrolovaného elektromagnety dosahují teploty přes 10.000 °C."
 "AC-41 „Paštikovač“","gear","progress",,"ac41","Obouruční zbraň<br>+3 k 👊 a +2 k 🎯","Středně těžký kulomet s&nbsp;integrovaným vyskakovacím bajonetem."
 "AC-41 „Paštikovač“","gear","progress",,"ac41","Obouruční zbraň<br>+3 k 👊 a +2 k 🎯","Středně těžký kulomet s&nbsp;integrovaným vyskakovacím bajonetem."
-"Mega vylepšení","factor","progress",,"mega","Bonusy cílené zbraně jsou zdvojnásobeny.","Super anti kontra multi extra unikátní."
+"Mega vylepšení","factor","progress",,"mega","Bonusy cíleného vercajku jsou zdvojnásobeny.","Super anti kontra multi extra unikátní."
 "Časová smyčka","event","progress",,"timeloop","V tomto kole získáváš navíc @!@!.","Co můžeš udělat včera, neodkládej na předevčírem."
 "Časová smyčka","event","progress",,"timeloop","V tomto kole získáváš navíc @!@!.","Co můžeš udělat včera, neodkládej na předevčírem."
 "Masivní ofenzíva","event","progress",,"offensive","Vylož jako dvě akce. Během příští útočné akce můžeš postupně provést oddělený útok s každým svým bojovníkem zvlášť.",
