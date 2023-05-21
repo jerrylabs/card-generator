@@ -6,6 +6,9 @@ module.exports = (cardData) => {
   if (cardData.title.length >= 20) {
     titleLong = ' extralong';
   }
+  if (cardData.type === 'border') {
+    return '<div id="pageborder"></div>'
+  }
   if (cardData.type == 'car') {
     return `
       <div class="card ${cardData.type} ${cardData.level}">

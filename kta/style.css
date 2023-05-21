@@ -206,3 +206,13 @@ html, body {
   position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;
   background: transparent url(http://localhost:8080/bg/christmas.png) center center / contain no-repeat;
 }
+
+#pageborder {
+  position:fixed;
+  left: 0;
+  right: 0;
+  top: -9mm;
+  bottom: 0;
+  border-left: 1cm solid #ddd;
+  border-bottom: 0.7cm solid #ddd;
+}

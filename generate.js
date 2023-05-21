@@ -36,6 +36,7 @@ const generateHtml = (cardsData, css, generateCardMarkup) => {
       </style>
     </head>
     <body>
+      <div id="pageborder"></div>
       <div class="cards">
         ${cardsMarkups.join('')}
       </div>
