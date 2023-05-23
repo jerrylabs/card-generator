@@ -130,6 +130,8 @@ html, body {
 .mission .ilus { padding-left: 4mm; width: 36mm; top: 18mm; z-index:2; height: auto; left: 0; }
 .m1000 .ilus { top: 24mm; }
 .m5000 .ilus, .m6000 .ilus, .m7000 .ilus { top: 15mm; }
+.ilus.shiny { width: 44mm; top: 12mm; padding: 0; }
+.special .text.shiny { top: 34mm; }
 
 .reqs {
   display: flex;
