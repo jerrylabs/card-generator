@@ -154,11 +154,14 @@ const getFieldMarkup = (title, value, card) => {
           ${card.disjunction ? `<span class="white-shadow or">${card.lang === 'english' ? 'or' : 'nebo'}</span>` : '<span class="texts-between"></span>' }
           <div class="text-part">${getTextMarkup(card.text2, card.lang)}</div>
         </div>`;
+        markup += `<div class="text texts text-shadow">
+          <div class="text-part">${getTextMarkup(value, card.lang)}</div>
+          ${card.disjunction ? `<span class="white-shadow or">${card.lang === 'english' ? 'or' : 'nebo'}</span>` : '<span class="texts-between"></span>' }
+          <div class="text-part">${getTextMarkup(card.text2, card.lang)}</div>
+        </div>`;
       } else {
-          markup =  `<div class="text${value.includes('<br>') ? ' special' : ''}">${getTextMarkup(value, card.lang)}</div>`;
-          if (card.type === 'bio' || card.type === 'tech') {
-            markup += `<div class="text text-shadow">${getTextMarkup(value, card.lang)}</div>`;
-          }
+        markup =  `<div class="text${value.includes('<br>') ? ' special' : ''}">${getTextMarkup(value, card.lang)}</div>`;
+        markup += `<div class="text text-shadow">${getTextMarkup(value, card.lang)}</div>`;
       }
     break;
     case 'test':

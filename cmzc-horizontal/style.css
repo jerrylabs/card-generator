@@ -242,7 +242,7 @@ html, body {
 
 .life {
   width: 10.5mm;
-  margin: -1mm 0;
+  margin: 1mm 0 0 0;
 }
 
 .rerolls .life {
@@ -299,16 +299,16 @@ html, body {
   justify-content: center;
 }
 
-.bio.card-has-joints .attr3 {
+/* .bio.card-has-joints .attr3 {
   padding-left: 3mm;
-}
+} */
 
-.life, .attribute { margin: 1mm 0.5mm; }
-.attr3 .attribute,
-.attr3 .life { margin: 1mm -1mm; }
-.attr4 {margin-left: 3.5mm; }
+.attribute { margin: 1mm 0.5mm; }
+.attr3 .attribute { margin: 1mm -1mm; }
+.attr3 .life { margin: 1mm 0 0 -1mm; }
+/* .attr4 {margin-left: 3.5mm; } */
 .attr4 .attribute { margin: 1mm -2mm; }
-.attr4 .life { margin: 1mm -2mm; }
+.attr4 .life { margin: 1mm -1mm 0 -2mm; }
 
 .card-vertical .rerolls .life {
   margin: 2mm 0;
@@ -397,9 +397,9 @@ html, body {
   font-size: 3.7mm;
   line-height: 0.9;
   left: 0;
-  color: black;
-  /* text-shadow: 1px 1px 0px #472856, 0px 0px 2px #472856;
-  -webkit-text-stroke: 0.1mm #472856; */
+  /* color: black; */
+  text-shadow: 1px 1px 0px #472856, 0px 0px 2px #472856;
+  /* -webkit-text-stroke: 0.1mm #472856; */
 }
 
 .voodoo .text-long {
@@ -439,7 +439,7 @@ html, body {
 }
 
 .voodoo .text .emo.arrow {
-  margin: -4.5mm;
+  margin: 0 -4.5mm 0 -3mm;
   z-index: 1;
 }
 
@@ -456,7 +456,7 @@ html, body {
 
 .voodoo .text .group .emo {
     width: 9mm;
-    margin: 0;
+    margin: 0 -0.5mm;
 }
 
 .emo-epic    { background-image: url(http://localhost:8080/imgs/emo-epic.png); }
@@ -471,7 +471,7 @@ html, body {
 }
 
 .card-two-texts .text .emo.arrow {
-  margin: -3.5mm;
+  margin: 0 -3.5mm 0 -2.3mm;
 }
 
 .voodoo .test {
