@@ -1,91 +1,91 @@
-"title","type","affiliation","attributes","image","text","flavor"
-"Predatory alien","trooper","balance","5/0/4/3","lidozrav","Mutant<br>Lethality","There's plenty of food in the city."
-"Predatory alien","trooper","balance","5/0/4/3","lidozrav","Mutant<br>Lethality","There's plenty of food in the city."
-"Seekers","trooper","balance","3/3/3/3","patraci","At the start of your turn, look at the top card of your deck. You can put it at the bottom.",
-"Seekers","trooper","balance","3/3/3/3","patraci","At the start of your turn, look at the top card of your deck. You can put it at the bottom.",
-"Omnivorous pigdog","trooper","balance","2/0/1/1","prasopes","Mutant<br>@, return a warrior from&nbsp;any grave to the bottom of a deck: +3&nbsp;to&nbsp;👊 a&nbsp;️🛡️ this turn.",
-"Všežravý prasopes","trooper","balance","2/0/1/1","prasopes","Mutant<br>@, return a warrior from&nbsp;any grave to the bottom of a deck: +3&nbsp;to&nbsp;👊 a&nbsp;️🛡️ this turn.",
-"Raptor rider","trooper","balance","4/2/4/3","raptorrider","@: +2 to 👊 and lethality this turn.","Riders on the storm."
-"Raptor rider","trooper","balance","4/2/4/3","raptorrider","@: +2 to 👊 and lethality this turn.","Riders on the storm."
-"Bloboid","trooper","balance","5/0/5/4","slizoid","Mutant<br>At the start of your turn, you get 1 🌕.",
-"Bloboid","trooper","balance","5/0/5/4","slizoid","Mutant<br>At the start of your turn, you get 1 🌕.",
-"Regulator","trooper","balance","3/2/3/3","regulator","At the end of your turn, if your opponent has more 🌕 than you, they lose 1&nbsp;🌕 and you get 1 🌕.",
-"Ecofanatic","trooper","balance","1/0/2/1","ekofanatic","Deploying any warrior costs 1 🌕 more.",
-"Ecofanatic","trooper","balance","1/0/2/1","ekofanatic","Deploying any warrior costs 1 🌕 more.",
-"Mystic hermit","trooper","balance","1/1/2/2","hermit","All your other warriors get<br>+2 to 👊, 🎯 and 🛡️.",
-"Mystic hermit","trooper","balance","1/1/2/2","hermit","All your other warriors get<br>+2 to 👊, 🎯 and 🛡️.",
-"Align with Universe","event","balance",,"alignment","Copy an event card from opponent's grave.",
-"Get outta here!","surprise","balance",,"escape","Use during combat. Combat is cancelled. You lose 1&nbsp;🏆 (if you have any).",
-"Piece of junk","surprise","balance",,"defect","Target gear is destroyed.","Není nad poctivou ruční práci."
-"Piece of junk","surprise","balance",,"defect","Target gear is destroyed.","Není nad poctivou ruční práci."
-"Solar eruption","surprise","balance",,"eruption","Target event, factor or surprise card just played is cancelled.",
-"Solar eruption","surprise","balance",,"eruption","Target event, factor or surprise card just played is cancelled.",
-"Solar eruption","surprise","balance",,"eruption","Target event, factor or surprise card just played is cancelled.",
-"Battle lust","event","balance",,"battlelust","You get extra @@@! this turn.","Teď poznáš hněv přírody!"
-"Battle lust","event","balance",,"battlelust","You get extra @@@! this turn.","Teď poznáš hněv přírody!"
-"Two-handed razorblade","gear","balance",,"gilette","Two-handed weapon<br>+4 to 👊","Někdo tady potřebuje manikúru?!"
-"Two-handed razorblade","gear","balance",,"gilette","Two-handed weapon<br>+4 to 👊","Někdo tady potřebuje manikúru?!"
-"Two-handed razorblade","gear","balance",,"gilette","Two-handed weapon<br>+4 to 👊","Někdo tady potřebuje manikúru?!"
-"Crystal spear","gear","balance",,"crystalspear","Two-handed weapon<br>+3 to 👊 and 🎯","Krystal nabitý bleskem dokáže při&nbsp;správném použití usmažit cokoliv."
-"Crystal spear","gear","balance",,"crystalspear","Two-handed weapon<br>+3 to 👊 and 🎯","Krystal nabitý bleskem dokáže při&nbsp;správném použití usmažit cokoliv."
-"Crystal spear","gear","balance",,"crystalspear","Two-handed weapon<br>+3 to 👊 and 🎯","Krystal nabitý bleskem dokáže při&nbsp;správném použití usmažit cokoliv."
-"Camouflage","gear","balance",,"camo","All your warriors get +2 to 🛡️.","S námi si na schovávanou hrát nechceš."
-"Camouflage","gear","balance",,"camo","All your warriors get +2 to 🛡️.","S námi si na schovávanou hrát nechceš."
-"Supply sabotage","event","balance",,"sabotage","Look at your opponent's hand and choose a card to put at the bottom of the deck.",
-"Lookout tower","building","balance",,"tower","All your warriors get +1 to 🎯.","Zdejší vyhlídka na atomový hřib je celoživotní zážitek."
-"Chaos in logistics","surprise","balance",,"logistics","Move target just deployed warrior to the bottom of the deck.",
-"Hydroponic farm","building","balance",,"hydrofarm","At the start of your turn you get 1 🌕.","Čerstvé bylinky pro svěžího ducha a kvalitní trávení."
-"Herb broth","gear","balance",,"herbs","@: Heal target warrior except user.","To je normální houbovej čaj."
-"Explosive charge","gear","balance",,"dynamite","@@, destroy Explosive charge: Destroy target warrior or building.",
-"Explosive charge","gear","balance",,"dynamite","@@, destroy Explosive charge: Destroy target warrior or building.",
-"Bulky hulk","factor","balance",,"clumsy2","Targeted warrior with 🛡️ greater than gets -5 to 🛡️.","Když začínáš, no tak tu máš.<br>Byl jsi velkej, já měl kuráž."
-"Battle carnage","factor","balance",,"battlefury","All warriors get +3 to 👊 and 🎯. If any player has no warriors in battle, destroy Battle carnage.",
-"Brown fog","factor","balance",,"brownfog","All warriors get  -3&nbsp;to&nbsp;🎯. If any player has no warriors in battle, destroy Brown fog.",
-"Acid rain","event","balance",,"acidrain","Use as 2 actions. Heal all wounded warriors and injure all other warriors.",
-"Cloning","event","balance",,"cloning","Pay 🌕 equal to lesser half of 💎 of target warrior in your grave. Return it to the battle.",
-"Defender of the wasteland","factor","balance",,"guard","Targeted warriors covers all your other warriors from attack.",
-"Exterminator","trooper","progress","3/3/3/3","exterminator","Robot<br>When kills a warrior, you get extra 1 🏆.",
-"Exterminator","trooper","progress","3/3/3/3","exterminator","Robot<br>When kills a warrior, you get extra 1 🏆.",
-"Jungle patrol","trooper","progress","3/1/2/2","ranger","Bonuses of its weapons are enhanced by +1. When attacks or attacked, draw a card.",
-"Jungle patrol","trooper","progress","3/1/2/2","ranger","Bonuses of its weapons are enhanced by +1. When attacks or attacked, draw a card.",
-"Railgunman","trooper","progress","1/4/2/3","railgunman","@: +2 to 🎯, lethality and first striky by 🎯 this turn.",
-"Railgunman","trooper","progress","1/4/2/3","railgunman","@: +2 to 🎯, lethality and first striky by 🎯 this turn.",
-"Circulobot","trooper","progress","4/1/3/3","cirkulobot","Robot<br>When injures a warrior, it can additionaly immediately attack the player (even covered).",
-"Circulobot","trooper","progress","4/1/3/3","cirkulobot","Robot<br>When injures a warrior, it can additionaly immediately attack the player (even covered).",
-"Titan","trooper","progress","6/6/6/6","titan","Robot<br>For each warrior in battle deploying Titan costs 1 🌕 less.",
-"Air infantry","trooper","progress","3/4/4/4","aeroinfantry","Its enemies in combat lose lethality. Discard a card from your hand:<br>+1 to 👊, 🎯 or 🛡️ this turn.",
-"Air infantry","trooper","progress","3/4/4/4","aeroinfantry","Its enemies in combat lose lethality. Discard a card from your hand:<br>+1 to 👊, 🎯 or 🛡️ this turn.",
-"Explodron","trooper","progress","10/0/1/1","explodron","Robot<br>When injured, it's killed outright.","Vrrr... Booom!"
-"Explodron","trooper","progress","10/0/1/1","explodron","Robot<br>When injured, it's killed outright.","Vrrr... Booom!"
-"Street patrol","trooper","progress","3/2/4/3","police","When attacked, return a gear card from your grave to your hand.",
-"Street patrol","trooper","progress","3/2/4/3","police","When attacked, return a gear card from your grave to your hand.",
-"Titan armor","gear","progress",,"titanarmor","Armor<br>+3 to 🛡️","Cítíš brnění po celém těle? Tak to seš tu správně u těžké pěchoty!"
-"Titan armor","gear","progress",,"titanarmor","Armor<br>+3 to 🛡️","Cítíš brnění po celém těle? Tak to seš tu správně u těžké pěchoty!"
-"Titan armor","gear","progress",,"titanarmor","Armor<br>+3 to 🛡️","Cítíš brnění po celém těle? Tak to seš tu správně u těžké pěchoty!"
-"Plasma rifle","gear","progress",,"plasmarifle","Two-handed weapon<br>+4 to 🎯","Projektily ionizovaného plynu kontrolovaného elektromagnety dosahují teploty přes 10.000 °C."
-"Plasma rifle","gear","progress",,"plasmarifle","Two-handed weapon<br>+4 to 🎯","Projektily ionizovaného plynu kontrolovaného elektromagnety dosahují teploty přes 10.000 °C."
-"Plasma rifle","gear","progress",,"plasmarifle","Two-handed weapon<br>+4 to 🎯","Projektily ionizovaného plynu kontrolovaného elektromagnety dosahují teploty přes 10.000 °C."
-"AC-41 „Patemaker“","gear","progress",,"ac41","Two-handed weapon<br>+3 to 👊 and +2 to 🎯","Středně těžký kulomet s&nbsp;integrovaným vyskakovacím bajonetem."
-"AC-41 „Patemaker“","gear","progress",,"ac41","Two-handed weapon<br>+3 to 👊 and +2 to 🎯","Středně těžký kulomet s&nbsp;integrovaným vyskakovacím bajonetem."
-"Mega upgrade","factor","progress",,"mega","Bonuses of targeted gear are doubled.","Super anti kontra multi extra unikátní."
-"Time loop","event","progress",,"timeloop","You get extra @!@! this turn.","Co můžeš udělat včera, neodkládej na předevčírem."
-"Time loop","event","progress",,"timeloop","You get extra @!@! this turn.","Co můžeš udělat včera, neodkládej na předevčírem."
-"Massive offensive","event","progress",,"offensive","Use as 2 actions. During your next attack action, you can make separate attacks with each of your warriors.",
-"Take over, buddy","surprise","progress",,"help","Replace your attacked warrior in combat with another one of yours in battle.",
-"Public enemy","factor","progress",,"wanted","Attach to target warrior who killed one of your warriors. If you kill targeted warrior, you get extra 3 🏆.",
-"Punctual preparation","event","progress",,"preparation","This turn your opponent cannot use any surprise unless cancelling this card.",
-"Solar eruption","surprise","progress",,"eruption","Target event, factor or surprise card just played is cancelled.",
-"Solar eruption","surprise","progress",,"eruption","Target event, factor or surprise card just played is cancelled.",
-"Explosive charge","gear","progress",,"dynamite","@@, destroy Explosive charge: Destroy target warrior or building.",
-"Explosive charge","gear","progress",,"dynamite","@@, destroy Explosive charge: Destroy target warrior or building.",
-"Explosive charge","gear","progress",,"dynamite","@@, destroy Explosive charge: Destroy target warrior or building.",
-"Looted goods","event","progress",,"stolengear","Use as 2 actions. Take up to three gears from your opponent's grave and attach them to your warriors.",
-"Evacuate","surprise","progress",,"evacuate","Use when your warrior is attacked. Return it to your hand.",
-"Hydroponic farm","building","progress",,"hydrofarm","At the start of your turn you get 1 🌕.","Čerstvé bylinky pro svěžího ducha a kvalitní trávení."
-"Airborne drop","event","progress",,"airborne","Deploying your warriors costs 3&nbsp;🌕 less this turn.",
-"Nuclear charge","gear","progress",,"atomic","@@@, destroy Nuclear charge: Destroy all warriors and buildings in battle. Lose 1 🏆 for each opponent's warrior destroyed.",
-"Clumsy","factor","progress",,"clumsy","Targeted warrior gets -3&nbsp;to&nbsp;🛡️.","Přežili jste někdy Den Blbec?"
-"Flood of shit","factor","progress",,"wasteflood","All warriors get -3&nbsp;to&nbsp;👊. If any player has no warriors in battle, destroy Flood of shit.",
-"Tactic trick","surprise","progress",,"tactictip","Use in combat to change the tactics (👊 to 🎯 or vice versa).",
-"Explosive ammo","gear","progress",,"dumdum","All your warriors get lethal 🎯.","To neděláš dobře s tou sirkou."
-"Light bombardment","event","progress",,"lightbombardment","Use as 2 actions. All warriors with 🛡️ 3 or less are injured. All others get -3 to 🛡️ this turn.",
+title,type,affiliation,attributes,image,text,flavor
+Predatory alien,trooper,balance,5/0/4/3,lidozrav,Mutant<br>Lethality,There's plenty of food in the city.
+Predatory alien,trooper,balance,5/0/4/3,lidozrav,Mutant<br>Lethality,There's plenty of food in the city.
+Seekers,trooper,balance,3/3/3/3,patraci,"At the start of your turn, look at the top card of your deck. You can put it at the bottom.",
+Seekers,trooper,balance,3/3/3/3,patraci,"At the start of your turn, look at the top card of your deck. You can put it at the bottom.",
+Omnivorous pigdog,trooper,balance,2/0/1/1,prasopes,"Mutant<br>@, return a warrior from&nbsp;any grave to the bottom of a deck: +3&nbsp;to&nbsp;👊 a&nbsp;️🛡️ this turn.",
+Všežravý prasopes,trooper,balance,2/0/1/1,prasopes,"Mutant<br>@, return a warrior from&nbsp;any grave to the bottom of a deck: +3&nbsp;to&nbsp;👊 a&nbsp;️🛡️ this turn.",
+Raptor rider,trooper,balance,4/2/4/3,raptorrider,@: +2 to 👊 and lethality this turn.,Riders on the storm.
+Raptor rider,trooper,balance,4/2/4/3,raptorrider,@: +2 to 👊 and lethality this turn.,Riders on the storm.
+Bloboid,trooper,balance,5/0/5/3,slizoid,"Mutant<br>At the start of your turn, you get 1 🌕.",
+Bloboid,trooper,balance,5/0/5/3,slizoid,"Mutant<br>At the start of your turn, you get 1 🌕.",
+Regulator,trooper,balance,3/2/3/3,regulator,"At the end of your turn, if your opponent has more 🌕 than you, they lose 1&nbsp;🌕 and you get 1 🌕.",
+Ecofanatic,trooper,balance,1/0/2/1,ekofanatic,Deploying any warrior costs 1 🌕 more.,
+Ecofanatic,trooper,balance,1/0/2/1,ekofanatic,Deploying any warrior costs 1 🌕 more.,
+Mystic hermit,trooper,balance,1/1/2/2,hermit,"All your other warriors get<br>+2 to 👊, 🎯 and 🛡️.",
+Mystic hermit,trooper,balance,1/1/2/2,hermit,"All your other warriors get<br>+2 to 👊, 🎯 and 🛡️.",
+Align with Universe,event,balance,,alignment,Copy an event card from opponent's grave.,
+Get outta here!,surprise,balance,,escape,Use during combat. Combat is cancelled. You lose 1&nbsp;🏆 (if you have any).,
+Piece of junk,surprise,balance,,defect,Target gear is destroyed.,Honest handcraft is the best.
+Piece of junk,surprise,balance,,defect,Target gear is destroyed.,Honest handcraft is the best.
+Solar eruption,surprise,balance,,eruption,"Target event, factor or surprise card just played is cancelled.",
+Solar eruption,surprise,balance,,eruption,"Target event, factor or surprise card just played is cancelled.",
+Solar eruption,surprise,balance,,eruption,"Target event, factor or surprise card just played is cancelled.",
+Battle lust,event,balance,,battlelust,You get extra @@@! this turn.,Now you will feel the wrath of nature!
+Battle lust,event,balance,,battlelust,You get extra @@@! this turn.,Now you will feel the wrath of nature!
+Two-handed razorblade,gear,balance,,gilette,Two-handed weapon<br>+4 to 👊,Somebody called for manicure?
+Two-handed razorblade,gear,balance,,gilette,Two-handed weapon<br>+4 to 👊,Somebody called for manicure?
+Two-handed razorblade,gear,balance,,gilette,Two-handed weapon<br>+4 to 👊,Somebody called for manicure?
+Crystal spear,gear,balance,,crystalspear,Two-handed weapon<br>+3 to 👊 and 🎯,Crystal energized by lightning can fry anything.
+Crystal spear,gear,balance,,crystalspear,Two-handed weapon<br>+3 to 👊 and 🎯,Crystal energized by lightning can fry anything.
+Crystal spear,gear,balance,,crystalspear,Two-handed weapon<br>+3 to 👊 and 🎯,Crystal energized by lightning can fry anything.
+Camouflage,gear,balance,,camo,All your warriors get +2 to 🛡️.,Peekaboo!
+Camouflage,gear,balance,,camo,All your warriors get +2 to 🛡️.,Peekaboo!
+Supply sabotage,event,balance,,sabotage,Look at your opponent's hand and choose a card to put at the bottom of the deck.,
+Lookout tower,building,balance,,tower,All your warriors get +1 to 🎯.,Nuclear mushroom sightseeing is life experience. 
+Chaos in logistics,surprise,balance,,logistics,Move target just deployed warrior to the bottom of the deck.,
+Hydroponic farm,building,balance,,hydrofarm,At the start of your turn you get 1 🌕.,Fresh herbs for fresh mind and fresh digestion.
+Herb broth,gear,balance,,herbs,@: Heal target warrior except user.,Classic mushroom tea.
+Explosive charge,gear,balance,,dynamite,"@@, destroy Explosive charge: Destroy target warrior or building.",
+Explosive charge,gear,balance,,dynamite,"@@, destroy Explosive charge: Destroy target warrior or building.",
+Bulky hulk,factor,balance,,clumsy2,Targeted warrior with 🛡️ greater than gets -5 to 🛡️.,He is so big. I can’t miss.
+Battle carnage,factor,balance,,battlefury,"All warriors get +3 to 👊 and 🎯. If any player has no warriors in battle, destroy Battle carnage.",
+Brown fog,factor,balance,,brownfog,"All warriors get  -3&nbsp;to&nbsp;🎯. If any player has no warriors in battle, destroy Brown fog.",
+Acid rain,event,balance,,acidrain,Use as 2 actions. Heal all wounded warriors and injure all other warriors.,
+Cloning,event,balance,,cloning,Pay 🌕 equal to lesser half of 💎 of target warrior in your grave. Return it to the battle.,
+Defender of the wasteland,factor,balance,,guard,Targeted warriors covers all your other warriors from attack.,
+Exterminator,trooper,progress,3/3/3/3,exterminator,"Robot<br>When kills a warrior, you get extra 1 🏆.",
+Exterminator,trooper,progress,3/3/3/3,exterminator,"Robot<br>When kills a warrior, you get extra 1 🏆.",
+Jungle patrol,trooper,progress,3/1/2/2,ranger,"Bonuses of its gear are enhanced by +1. When attacks or attacked, draw a card.",
+Jungle patrol,trooper,progress,3/1/2/2,ranger,"Bonuses of its gear are enhanced by +1. When attacks or attacked, draw a card.",
+Railgunman,trooper,progress,1/4/2/3,railgunman,"@: +2 to 🎯, lethality and first striky by 🎯 this turn.",
+Railgunman,trooper,progress,1/4/2/3,railgunman,"@: +2 to 🎯, lethality and first striky by 🎯 this turn.",
+Circulobot,trooper,progress,4/1/3/3,cirkulobot,"Robot<br>When injures a warrior, it can additionaly immediately attack the player (even covered).",
+Circulobot,trooper,progress,4/1/3/3,cirkulobot,"Robot<br>When injures a warrior, it can additionaly immediately attack the player (even covered).",
+Titan,trooper,progress,6/6/6/6,titan,Robot<br>For each warrior in battle deploying Titan costs 1 🌕 less.,
+Air infantry,trooper,progress,3/4/4/4,aeroinfantry,"Its enemies in combat lose lethality. Discard a card from your hand:<br>+1 to 👊, 🎯 or 🛡️ this turn.",
+Air infantry,trooper,progress,3/4/4/4,aeroinfantry,"Its enemies in combat lose lethality. Discard a card from your hand:<br>+1 to 👊, 🎯 or 🛡️ this turn.",
+Explodron,trooper,progress,10/0/1/1,explodron,"Robot<br>When injured, it's killed outright.",Vrrr... Booom!
+Explodron,trooper,progress,10/0/1/1,explodron,"Robot<br>When injured, it's killed outright.",Vrrr... Booom!
+Street patrol,trooper,progress,3/2/4/3,police,"When attacked, return a gear card from your grave to your hand.",
+Street patrol,trooper,progress,3/2/4/3,police,"When attacked, return a gear card from your grave to your hand.",
+Titan armor,gear,progress,,titanarmor,Armor<br>+3 to 🛡️,Feel armor all over your body in the heavy infantry.
+Titan armor,gear,progress,,titanarmor,Armor<br>+3 to 🛡️,Feel armor all over your body in the heavy infantry.
+Titan armor,gear,progress,,titanarmor,Armor<br>+3 to 🛡️,Feel armor all over your body in the heavy infantry.
+Plasma rifle,gear,progress,,plasmarifle,Two-handed weapon<br>+4 to 🎯,Ionized gas projectiles controlled by electromagnets can reach temperature over 10.000 °C.
+Plasma rifle,gear,progress,,plasmarifle,Two-handed weapon<br>+4 to 🎯,Ionized gas projectiles controlled by electromagnets can reach temperature over 10.000 °C.
+Plasma rifle,gear,progress,,plasmarifle,Two-handed weapon<br>+4 to 🎯,Ionized gas projectiles controlled by electromagnets can reach temperature over 10.000 °C.
+AC-41 „Patemaker“,gear,progress,,ac41,"Two-handed weapon<br>+3 to 👊, +2 to 🎯 and lethality",Medium machine gun with integrated pop-up bayonet.
+AC-41 „Patemaker“,gear,progress,,ac41,"Two-handed weapon<br>+3 to 👊, +2 to 🎯 and lethality",Medium machine gun with integrated pop-up bayonet.
+Mega upgrade,factor,progress,,mega,Bonuses of targeted gear are doubled.,Super anti kontra multi extra unicate.
+Time loop,event,progress,,timeloop,You get extra @!@! this turn.,"What you can do yesterday, don't put off to day before yesterday."
+Time loop,event,progress,,timeloop,You get extra @!@! this turn.,"What you can do yesterday, don't put off to day before yesterday."
+Massive offensive,event,progress,,offensive,"Use as 2 actions. During your next attack action, you can make separate attacks with each of your warriors.",
+"Take over, buddy",surprise,progress,,help,Replace your attacked warrior in combat with another one of yours in battle.,
+Public enemy,factor,progress,,wanted,"Attach to target warrior who killed one of your warriors. If you kill targeted warrior, you get extra 3 🏆.",
+Punctual preparation,event,progress,,preparation,This card cannot be cancelled. Chosen opponent reveals their hand and discards all surprise cards.,
+Solar eruption,surprise,progress,,eruption,"Target event, factor or surprise card just played is cancelled.",
+Solar eruption,surprise,progress,,eruption,"Target event, factor or surprise card just played is cancelled.",
+Explosive charge,gear,progress,,dynamite,"@@, destroy Explosive charge: Destroy target warrior or building.",
+Explosive charge,gear,progress,,dynamite,"@@, destroy Explosive charge: Destroy target warrior or building.",
+Explosive charge,gear,progress,,dynamite,"@@, destroy Explosive charge: Destroy target warrior or building.",
+Looted goods,event,progress,,stolengear,Use as 2 actions. Take up to three gears from your opponent's grave and attach them to your warriors.,
+Evacuate,surprise,progress,,evacuate,Use when your warrior is attacked. Return it to your hand.,
+Hydroponic farm,building,progress,,hydrofarm,At the start of your turn you get 1 🌕.,Fresh herbs for fresh mind and fresh digestion.
+Airborne drop,event,progress,,airborne,Deploying your warriors costs 3&nbsp;🌕 less this turn.,
+Nuclear charge,gear,progress,,atomic,"@@@, destroy Nuclear charge: Destroy all warriors and buildings in battle. Lose 1 🏆 for each opponent's warrior destroyed.",
+Clumsy,factor,progress,,clumsy,Targeted warrior gets -3&nbsp;to&nbsp;🛡️.,Have you ever survived a day of jerk?
+Flood of shit,factor,progress,,wasteflood,"All warriors get -3&nbsp;to&nbsp;👊. If any player has no warriors in battle, destroy Flood of shit.",
+Tactic trick,surprise,progress,,tactictip,Use in combat to change the tactics (👊 to 🎯 or vice versa).,
+Explosive ammo,gear,progress,,dumdum,All your warriors get lethal 🎯.,You're not doing it right with that match.
+Light bombardment,event,progress,,lightbombardment,Use as 2 actions. All warriors with 🛡️ 3 or less are injured. All others get -3 to 🛡️ this turn.,
