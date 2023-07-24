@@ -55,8 +55,8 @@ Cirkulobot,trooper,progress,4/1/3/3,cirkulobot,"Robot<br>Když při útoku zran�
 Titán,trooper,progress,6/6/6/6,titan,Robot<br>Za každého bojovníka v&nbsp;bitvě stojí vyložení Titána o 1 🌕 méně.,
 Vzdušná pěchota,trooper,progress,3/4/4/4,aeroinfantry,"Protivníci v souboji ztrácí smrtonosnost. Odhoď kartu z ruky:<br>+1 k 👊, 🎯 nebo 🛡️ toto kolo.",
 Vzdušná pěchota,trooper,progress,3/4/4/4,aeroinfantry,"Protivníci v souboji ztrácí smrtonosnost. Odhoď kartu z ruky:<br>+1 k 👊, 🎯 nebo 🛡️ toto kolo.",
-Explodron,trooper,progress,10/0/1/1,explodron,"Robot<br>Když je zraněn, je rovnou zabit.",Vrrr... Booom!
-Explodron,trooper,progress,10/0/1/1,explodron,"Robot<br>Když je zraněn, je rovnou zabit.",Vrrr... Booom!
+Explodron,trooper,progress,10/0/1/2,explodron,"Robot<br>Když zaútočí, všichni účastníci souboje získávají smrtonosnost.",Vrrr... Booom!
+Explodron,trooper,progress,10/0/1/2,explodron,"Robot<br>Když zaútočí, všichni účastníci souboje získávají smrtonosnost.",Vrrr... Booom!
 Pouliční stráž,trooper,progress,3/2/4/3,police,"Když je napadena, vrať si jeden vercajk z tvého hrobu do ruky.",
 Pouliční stráž,trooper,progress,3/2/4/3,police,"Když je napadena, vrať si jeden vercajk z tvého hrobu do ruky.",
 Titanová zbroj,gear,progress,,titanarmor,Zbroj<br>+3 k 🛡️,Cítíš brnění po celém těle? Tak to seš tu správně u těžké pěchoty!
@@ -86,6 +86,6 @@ Výsadek,event,progress,,airborne,V tomto kole jsou všichni tví vykládání b
 Nukleární nálož,gear,progress,,atomic,"@@@, znič Nukleární nálož: Znič všechny bojovníky a stavby ve hře. Za každého protihráčova bojovníka ztrácíš 1 🏆.",
 Šmatlavec,factor,progress,,clumsy,Cílený bojovník obdrží -3&nbsp;k&nbsp;🛡️.,Přežili jste někdy Den Blbec?
 Záplava sajrajtu,factor,progress,,wasteflood,"Všichni bojovníci obdrží -3&nbsp;k&nbsp;👊. Pokud nějaký hráč nemá v bitvě žádné bojovníky, je Záplava sajrajtu zničena.",
-Taktická finta,surprise,progress,,tactictip,Vylož v souboji a změň jeho taktiku (👊 místo 🎯 nebo naopak).,
+Recyklace,event,progress,,recycle,Vrať si z hrobu do ruky až&nbsp;3&nbsp;roboty.,
 Explosivní munice,gear,progress,,dumdum,Všichní tví bojovníci získávají smrtonosnou 🎯.,To neděláš dobře s tou sirkou.
 Lehké bombardování,event,progress,,lightbombardment,Vylož jako 2 akce. Všichni bojovníci s 🛡️ 3 a méně jsou zraněni. Všichni ostatní obdrží -3 k 🛡️ toto kolo.,
