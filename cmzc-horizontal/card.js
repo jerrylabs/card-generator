@@ -12,7 +12,7 @@ shortcut = (c) => {
 }
 
 const getJointMarkup = (order, rel, type) =>
-  `<img class="joint ${rel} ${order} ${type}" src="http://localhost:8080/imgs/${rel}-${type}.png" />`;
+  `<img class="joint ${rel} ${order} ${type}" src="http://localhost:8080/imgs/${rel}-${type}2.png" />`;
 
 const getLifeMarkup = (c, i) => `<img class="life" src="http://localhost:8080/imgs/${shortcut(c)}.png" />`;
 
