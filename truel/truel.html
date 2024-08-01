@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <style type="text/css">
+        @page { margin: 9mm 0 0 0; }
+
+body {
+  -webkit-print-color-adjust: exact;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  font-family: Arial;
+}
+
+* {
+  background-repeat: no-repeat;
+}
+
+.cards {
+  text-align: center;
+}
+
+.card {
+  display: inline-block;
+  overflow: hidden;
+  width: 44.0mm;
+  height: 64.0mm;
+  box-sizing: border-box;
+  page-break-inside: avoid;
+  position: relative;
+  background-size: 100% 100%;
+  background-position: center center;
+  background: black;
+  font-size: 0.75cm;
+  background: white;
+  border-radius: 2mm;
+  overflow: visible;
+  vertical-align: bottom;
+}
+
+.card::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  background: black;
+  height: 100%;
+  width: 100%;
+}
+
+.card .type {
+  position: absolute;
+  top: 0.25cm;
+  left: 0.25cm;
+  text-align: left;
+  filter: grayscale(100%);
+}
+
+.card .value {
+  position: absolute;
+  top: 1.5cm;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.card .special {
+  position: absolute;
+  bottom: 0.25cm;
+  right: 0.25cm;
+  text-align: right;
+}
+
+.card .value{
+  top: 1.5cm;
+  font-size: 2cm;
+}
+
+.card.value:not(.triumph) .value{
+  top: 2cm;
+}
+
+.card.player .value{
+  top: 1.25cm;
+}
+
+.description {
+  position: absolute;
+  top: 3.5cm;
+  left: 0;
+  width: 100%;
+  justify-content: center;
+  padding: 0 0.25cm;
+  box-sizing: border-box;
+  height: 2cm;
+  display: flex;
+  align-items: center;
+}
+
+.triumph {
+  background-image: url('//localhost:8080/duha.jpg');
+  background-position: center 1.1cm;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+}
+
+.card.triumph .value {  -webkit-text-stroke: 0.5mm white; font-weight: bold; top: 1.3cm; }
+
+.value.red {
+  filter: grayscale(100%) invert(15%) sepia(84%) saturate(7493%) hue-rotate(1deg) brightness(111%) contrast(117%);
+}
+
+.value.green {
+  filter: grayscale(100%) invert(29%) sepia(23%) saturate(2886%) hue-rotate(65deg) brightness(95%) contrast(105%);
+}
+
+.value.blue {
+  filter: grayscale(100%) invert(8%) sepia(100%) saturate(6909%) hue-rotate(247deg) brightness(103%) contrast(140%);
+}
+
+
+      </style>
+    </head>
+    <body>
+      <div id="pageborder"></div>
+      <div class="cards">
+        
+      <div class="card value">
+        <div class="frame"></div>
+        <div class="type"><span>X</span></div>
+        <div class="value"><span>-3</span></div>
+        <div class="special"><span>❤️</span></div>
+      </div>
+    
+      <div class="card value">
+        <div class="frame"></div>
+        <div class="type"><span>X</span></div>
+        <div class="value"><span>-3</span></div>
+        <div class="special"><span>☀️</span></div>
+      </div>
+    
+      <div class="card value">
+        <div class="frame"></div>
+        <div class="type"><span>X</span></div>
+        <div class="value"><span>-2</span></div>
+        <div class="special"><span>⭐</span></div>
+      </div>
+    
+      <div class="card value">
+        <div class="frame"></div>
+        <div class="type"><span>X</span></div>
+        <div class="value"><span>-2</span></div>
+        <div class="special"><span>❤️</span></div>
+      </div>
+    
+      <div class="card value">
+        <div class="frame"></div>
+        <div class="type"><span>X</span></div>
+        <div class="value"><span>-2</span></div>
+        <div class="special"><span>☀️</span></div>
+      </div>
+    
+      <div class="card value">
+        <div class="frame"></div>
+        <div class="type"><span>X</span></div>
+        <div class="value"><span>-1</span></div>
+        <div class="special"><span>⭐</span></div>
+      </div>
+    
+      <div class="card value">
+        <div class="frame"></div>
+        <div class="type"><span>X</span></div>
+        <div class="value"><span>-1</span></div>
+        <div class="special"><span>❤️</span></div>
+      </div>
+    
+      <div class="card value">
+        <div class="frame"></div>
+        <div class="type"><span>X</span></div>
+        <div class="value"><span>-1</span></div>
+        <div class="special"><span>☀️</span></div>
+      </div>
+    
+      <div class="card value">
+        <div class="frame"></div>
+        <div class="type"><span>X</span></div>
+        <div class="value"><span>-1</span></div>
+        <div class="special"><span>⭐</span></div>
+      </div>
+    
+      <div class="card value">
+        <div class="frame"></div>
+        <div class="type"><span>X</span></div>
+        <div class="value"><span>+1</span></div>
+        <div class="special"><span>❤️</span></div>
+      </div>
+    
+      <div class="card value">
+        <div class="frame"></div>
+        <div class="type"><span>X</span></div>
+        <div class="value"><span>+1</span></div>
+        <div class="special"><span>☀️</span></div>
+      </div>
+    
+      <div class="card value">
+        <div class="frame"></div>
+        <div class="type"><span>X</span></div>
+        <div class="value"><span>+1</span></div>
+        <div class="special"><span>⭐</span></div>
+      </div>
+    
+      <div class="card value">
+        <div class="frame"></div>
+        <div class="type"><span>X</span></div>
+        <div class="value"><span>+1</span></div>
+        <div class="special"><span>❤️</span></div>
+      </div>
+    
+      <div class="card value">
+        <div class="frame"></div>
+        <div class="type"><span>X</span></div>
+        <div class="value"><span>+1</span></div>
+        <div class="special"><span>☀️</span></div>
+      </div>
+    
+      <div class="card value">
+        <div class="frame"></div>
+        <div class="type"><span>X</span></div>
+        <div class="value"><span>+1</span></div>
+        <div class="special"><span>⭐</span></div>
+      </div>
+    
+      <div class="card value">
+        <div class="frame"></div>
+        <div class="type"><span>X</span></div>
+        <div class="value"><span>+2</span></div>
+        <div class="special"><span>❤️</span></div>
+      </div>
+    
+      <div class="card value">
+        <div class="frame"></div>
+        <div class="type"><span>X</span></div>
+        <div class="value"><span>+2</span></div>
+        <div class="special"><span>☀️</span></div>
+      </div>
+    
+      <div class="card value">
+        <div class="frame"></div>
+        <div class="type"><span>X</span></div>
+        <div class="value"><span>+2</span></div>
+        <div class="special"><span>⭐</span></div>
+      </div>
+    
+      <div class="card value">
+        <div class="frame"></div>
+        <div class="type"><span>X</span></div>
+        <div class="value"><span>+2</span></div>
+        <div class="special"><span>❤️</span></div>
+      </div>
+    
+      <div class="card value">
+        <div class="frame"></div>
+        <div class="type"><span>X</span></div>
+        <div class="value"><span>+2</span></div>
+        <div class="special"><span>☀️</span></div>
+      </div>
+    
+      <div class="card value">
+        <div class="frame"></div>
+        <div class="type"><span>X</span></div>
+        <div class="value"><span>+2</span></div>
+        <div class="special"><span>⭐</span></div>
+      </div>
+    
+      <div class="card value">
+        <div class="frame"></div>
+        <div class="type"><span>X</span></div>
+        <div class="value"><span>+2</span></div>
+        <div class="special"><span>❤️</span></div>
+      </div>
+    
+      <div class="card value">
+        <div class="frame"></div>
+        <div class="type"><span>X</span></div>
+        <div class="value"><span>+3</span></div>
+        <div class="special"><span>☀️</span></div>
+      </div>
+    
+      <div class="card value">
+        <div class="frame"></div>
+        <div class="type"><span>X</span></div>
+        <div class="value"><span>+3</span></div>
+        <div class="special"><span>⭐</span></div>
+      </div>
+    
+      <div class="card value">
+        <div class="frame"></div>
+        <div class="type"><span>X</span></div>
+        <div class="value"><span>+3</span></div>
+        <div class="special"><span>❤️</span></div>
+      </div>
+    
+      <div class="card value">
+        <div class="frame"></div>
+        <div class="type"><span>X</span></div>
+        <div class="value"><span>+3</span></div>
+        <div class="special"><span>☀️</span></div>
+      </div>
+    
+      <div class="card value">
+        <div class="frame"></div>
+        <div class="type"><span>X</span></div>
+        <div class="value"><span>+3</span></div>
+        <div class="special"><span>⭐</span></div>
+      </div>
+    
+      <div class="card type">
+        <div class="frame"></div>
+        <div class="type"><span>☐</span></div>
+        <div class="value "><span>⬡</span></div>
+        <div class="description"><span>políčka</span></div>
+        <div class="special"><span>❤️</span></div>
+      </div>
+    
+      <div class="card type">
+        <div class="frame"></div>
+        <div class="type"><span>☐</span></div>
+        <div class="value "><span>⬡</span></div>
+        <div class="description"><span>políčka</span></div>
+        <div class="special"><span>☀️</span></div>
+      </div>
+    
+      <div class="card type">
+        <div class="frame"></div>
+        <div class="type"><span>☐</span></div>
+        <div class="value "><span>⬡</span></div>
+        <div class="description"><span>políčka</span></div>
+        <div class="special"><span>⭐</span></div>
+      </div>
+    
+      <div class="card type">
+        <div class="frame"></div>
+        <div class="type"><span>☐</span></div>
+        <div class="value "><span>⬡</span></div>
+        <div class="description"><span>políčka</span></div>
+        <div class="special"><span>❤️</span></div>
+      </div>
+    
+      <div class="card type">
+        <div class="frame"></div>
+        <div class="type"><span>☐</span></div>
+        <div class="value "><span>⬡</span></div>
+        <div class="description"><span>políčka</span></div>
+        <div class="special"><span>☀️</span></div>
+      </div>
+    
+      <div class="card type">
+        <div class="frame"></div>
+        <div class="type"><span>☐</span></div>
+        <div class="value "><span>⬡</span></div>
+        <div class="description"><span>políčka</span></div>
+        <div class="special"><span>⭐</span></div>
+      </div>
+    
+      <div class="card type">
+        <div class="frame"></div>
+        <div class="type"><span>☐</span></div>
+        <div class="value "><span>⬡</span></div>
+        <div class="description"><span>políčka</span></div>
+        <div class="special"><span>❤️</span></div>
+      </div>
+    
+      <div class="card type">
+        <div class="frame"></div>
+        <div class="type"><span>☐</span></div>
+        <div class="value "><span>⬡</span></div>
+        <div class="description"><span>políčka</span></div>
+        <div class="special"><span>☀️</span></div>
+      </div>
+    
+      <div class="card type">
+        <div class="frame"></div>
+        <div class="type"><span>☐</span></div>
+        <div class="value "><span>⬡</span></div>
+        <div class="description"><span>políčka</span></div>
+        <div class="special"><span>⭐</span></div>
+      </div>
+    
+      <div class="card type">
+        <div class="frame"></div>
+        <div class="type"><span>☐</span></div>
+        <div class="value "><span>🂡</span></div>
+        <div class="description"><span>karty</span></div>
+        <div class="special"><span>❤️</span></div>
+      </div>
+    
+      <div class="card type">
+        <div class="frame"></div>
+        <div class="type"><span>☐</span></div>
+        <div class="value "><span>🂡</span></div>
+        <div class="description"><span>karty</span></div>
+        <div class="special"><span>☀️</span></div>
+      </div>
+    
+      <div class="card type">
+        <div class="frame"></div>
+        <div class="type"><span>☐</span></div>
+        <div class="value "><span>🂡</span></div>
+        <div class="description"><span>karty</span></div>
+        <div class="special"><span>⭐</span></div>
+      </div>
+    
+      <div class="card type">
+        <div class="frame"></div>
+        <div class="type"><span>☐</span></div>
+        <div class="value "><span>🂡</span></div>
+        <div class="description"><span>karty</span></div>
+        <div class="special"><span>❤️</span></div>
+      </div>
+    
+      <div class="card type">
+        <div class="frame"></div>
+        <div class="type"><span>☐</span></div>
+        <div class="value "><span>🂡</span></div>
+        <div class="description"><span>karty</span></div>
+        <div class="special"><span>☀️</span></div>
+      </div>
+    
+      <div class="card type">
+        <div class="frame"></div>
+        <div class="type"><span>☐</span></div>
+        <div class="value "><span>🂡</span></div>
+        <div class="description"><span>karty</span></div>
+        <div class="special"><span>⭐</span></div>
+      </div>
+    
+      <div class="card type">
+        <div class="frame"></div>
+        <div class="type"><span>☐</span></div>
+        <div class="value "><span>🂡</span></div>
+        <div class="description"><span>karty</span></div>
+        <div class="special"><span>❤️</span></div>
+      </div>
+    
+      <div class="card type">
+        <div class="frame"></div>
+        <div class="type"><span>☐</span></div>
+        <div class="value "><span>🂡</span></div>
+        <div class="description"><span>karty</span></div>
+        <div class="special"><span>☀️</span></div>
+      </div>
+    
+      <div class="card type">
+        <div class="frame"></div>
+        <div class="type"><span>☐</span></div>
+        <div class="value "><span>🂡</span></div>
+        <div class="description"><span>karty</span></div>
+        <div class="special"><span>⭐</span></div>
+      </div>
+    
+      <div class="card type">
+        <div class="frame"></div>
+        <div class="type"><span>☐</span></div>
+        <div class="value red"><span>💎</span></div>
+        <div class="description"><span>rubíny</span></div>
+        <div class="special"><span>❤️</span></div>
+      </div>
+    
+      <div class="card type">
+        <div class="frame"></div>
+        <div class="type"><span>☐</span></div>
+        <div class="value red"><span>💎</span></div>
+        <div class="description"><span>rubíny</span></div>
+        <div class="special"><span>☀️</span></div>
+      </div>
+    
+      <div class="card type">
+        <div class="frame"></div>
+        <div class="type"><span>☐</span></div>
+        <div class="value red"><span>💎</span></div>
+        <div class="description"><span>rubíny</span></div>
+        <div class="special"><span>⭐</span></div>
+      </div>
+    
+      <div class="card type">
+        <div class="frame"></div>
+        <div class="type"><span>☐</span></div>
+        <div class="value blue"><span>💎</span></div>
+        <div class="description"><span>safíry</span></div>
+        <div class="special"><span>❤️</span></div>
+      </div>
+    
+      <div class="card type">
+        <div class="frame"></div>
+        <div class="type"><span>☐</span></div>
+        <div class="value blue"><span>💎</span></div>
+        <div class="description"><span>safíry</span></div>
+        <div class="special"><span>☀️</span></div>
+      </div>
+    
+      <div class="card type">
+        <div class="frame"></div>
+        <div class="type"><span>☐</span></div>
+        <div class="value blue"><span>💎</span></div>
+        <div class="description"><span>safíry</span></div>
+        <div class="special"><span>⭐</span></div>
+      </div>
+    
+      <div class="card type">
+        <div class="frame"></div>
+        <div class="type"><span>☐</span></div>
+        <div class="value green"><span>💎</span></div>
+        <div class="description"><span>smaragdy</span></div>
+        <div class="special"><span>❤️</span></div>
+      </div>
+    
+      <div class="card type">
+        <div class="frame"></div>
+        <div class="type"><span>☐</span></div>
+        <div class="value green"><span>💎</span></div>
+        <div class="description"><span>smaragdy</span></div>
+        <div class="special"><span>☀️</span></div>
+      </div>
+    
+      <div class="card type">
+        <div class="frame"></div>
+        <div class="type"><span>☐</span></div>
+        <div class="value green"><span>💎</span></div>
+        <div class="description"><span>smaragdy</span></div>
+        <div class="special"><span>⭐</span></div>
+      </div>
+    
+      <div class="card player">
+        <div class="frame"></div>
+        <div class="type"><span>👤</span></div>
+        <div class="value red"><span>👤</span></div>
+        <div class="description"><span>červený hráč</span></div>
+        <div class="special"><span>❤️</span></div>
+      </div>
+    
+      <div class="card player">
+        <div class="frame"></div>
+        <div class="type"><span>👤</span></div>
+        <div class="value red"><span>👤</span></div>
+        <div class="description"><span>červený hráč</span></div>
+        <div class="special"><span>☀️</span></div>
+      </div>
+    
+      <div class="card player">
+        <div class="frame"></div>
+        <div class="type"><span>👤</span></div>
+        <div class="value red"><span>👤</span></div>
+        <div class="description"><span>červený hráč</span></div>
+        <div class="special"><span>⭐</span></div>
+      </div>
+    
+      <div class="card player">
+        <div class="frame"></div>
+        <div class="type"><span>👤</span></div>
+        <div class="value red"><span>👤</span></div>
+        <div class="description"><span>červený hráč</span></div>
+        <div class="special"><span>❤️</span></div>
+      </div>
+    
+      <div class="card player">
+        <div class="frame"></div>
+        <div class="type"><span>👤</span></div>
+        <div class="value red"><span>👤</span></div>
+        <div class="description"><span>červený hráč</span></div>
+        <div class="special"><span>☀️</span></div>
+      </div>
+    
+      <div class="card player">
+        <div class="frame"></div>
+        <div class="type"><span>👤</span></div>
+        <div class="value red"><span>👤</span></div>
+        <div class="description"><span>červený hráč</span></div>
+        <div class="special"><span>⭐</span></div>
+      </div>
+    
+      <div class="card player">
+        <div class="frame"></div>
+        <div class="type"><span>👤</span></div>
+        <div class="value red"><span>👤</span></div>
+        <div class="description"><span>červený hráč</span></div>
+        <div class="special"><span>❤️</span></div>
+      </div>
+    
+      <div class="card player">
+        <div class="frame"></div>
+        <div class="type"><span>👤</span></div>
+        <div class="value red"><span>👤</span></div>
+        <div class="description"><span>červený hráč</span></div>
+        <div class="special"><span>☀️</span></div>
+      </div>
+    
+      <div class="card player">
+        <div class="frame"></div>
+        <div class="type"><span>👤</span></div>
+        <div class="value red"><span>👤</span></div>
+        <div class="description"><span>červený hráč</span></div>
+        <div class="special"><span>⭐</span></div>
+      </div>
+    
+      <div class="card player">
+        <div class="frame"></div>
+        <div class="type"><span>👤</span></div>
+        <div class="value blue"><span>👤</span></div>
+        <div class="description"><span>modrý hráč</span></div>
+        <div class="special"><span>❤️</span></div>
+      </div>
+    
+      <div class="card player">
+        <div class="frame"></div>
+        <div class="type"><span>👤</span></div>
+        <div class="value blue"><span>👤</span></div>
+        <div class="description"><span>modrý hráč</span></div>
+        <div class="special"><span>☀️</span></div>
+      </div>
+    
+      <div class="card player">
+        <div class="frame"></div>
+        <div class="type"><span>👤</span></div>
+        <div class="value blue"><span>👤</span></div>
+        <div class="description"><span>modrý hráč</span></div>
+        <div class="special"><span>⭐</span></div>
+      </div>
+    
+      <div class="card player">
+        <div class="frame"></div>
+        <div class="type"><span>👤</span></div>
+        <div class="value blue"><span>👤</span></div>
+        <div class="description"><span>modrý hráč</span></div>
+        <div class="special"><span>❤️</span></div>
+      </div>
+    
+      <div class="card player">
+        <div class="frame"></div>
+        <div class="type"><span>👤</span></div>
+        <div class="value blue"><span>👤</span></div>
+        <div class="description"><span>modrý hráč</span></div>
+        <div class="special"><span>☀️</span></div>
+      </div>
+    
+      <div class="card player">
+        <div class="frame"></div>
+        <div class="type"><span>👤</span></div>
+        <div class="value blue"><span>👤</span></div>
+        <div class="description"><span>modrý hráč</span></div>
+        <div class="special"><span>⭐</span></div>
+      </div>
+    
+      <div class="card player">
+        <div class="frame"></div>
+        <div class="type"><span>👤</span></div>
+        <div class="value blue"><span>👤</span></div>
+        <div class="description"><span>modrý hráč</span></div>
+        <div class="special"><span>❤️</span></div>
+      </div>
+    
+      <div class="card player">
+        <div class="frame"></div>
+        <div class="type"><span>👤</span></div>
+        <div class="value blue"><span>👤</span></div>
+        <div class="description"><span>modrý hráč</span></div>
+        <div class="special"><span>☀️</span></div>
+      </div>
+    
+      <div class="card player">
+        <div class="frame"></div>
+        <div class="type"><span>👤</span></div>
+        <div class="value blue"><span>👤</span></div>
+        <div class="description"><span>modrý hráč</span></div>
+        <div class="special"><span>⭐</span></div>
+      </div>
+    
+      <div class="card player">
+        <div class="frame"></div>
+        <div class="type"><span>👤</span></div>
+        <div class="value green"><span>👤</span></div>
+        <div class="description"><span>zelený hráč</span></div>
+        <div class="special"><span>❤️</span></div>
+      </div>
+    
+      <div class="card player">
+        <div class="frame"></div>
+        <div class="type"><span>👤</span></div>
+        <div class="value green"><span>👤</span></div>
+        <div class="description"><span>zelený hráč</span></div>
+        <div class="special"><span>☀️</span></div>
+      </div>
+    
+      <div class="card player">
+        <div class="frame"></div>
+        <div class="type"><span>👤</span></div>
+        <div class="value green"><span>👤</span></div>
+        <div class="description"><span>zelený hráč</span></div>
+        <div class="special"><span>⭐</span></div>
+      </div>
+    
+      <div class="card player">
+        <div class="frame"></div>
+        <div class="type"><span>👤</span></div>
+        <div class="value green"><span>👤</span></div>
+        <div class="description"><span>zelený hráč</span></div>
+        <div class="special"><span>❤️</span></div>
+      </div>
+    
+      <div class="card player">
+        <div class="frame"></div>
+        <div class="type"><span>👤</span></div>
+        <div class="value green"><span>👤</span></div>
+        <div class="description"><span>zelený hráč</span></div>
+        <div class="special"><span>☀️</span></div>
+      </div>
+    
+      <div class="card player">
+        <div class="frame"></div>
+        <div class="type"><span>👤</span></div>
+        <div class="value green"><span>👤</span></div>
+        <div class="description"><span>zelený hráč</span></div>
+        <div class="special"><span>⭐</span></div>
+      </div>
+    
+      <div class="card player">
+        <div class="frame"></div>
+        <div class="type"><span>👤</span></div>
+        <div class="value green"><span>👤</span></div>
+        <div class="description"><span>zelený hráč</span></div>
+        <div class="special"><span>❤️</span></div>
+      </div>
+    
+      <div class="card player">
+        <div class="frame"></div>
+        <div class="type"><span>👤</span></div>
+        <div class="value green"><span>👤</span></div>
+        <div class="description"><span>zelený hráč</span></div>
+        <div class="special"><span>☀️</span></div>
+      </div>
+    
+      <div class="card player">
+        <div class="frame"></div>
+        <div class="type"><span>👤</span></div>
+        <div class="value green"><span>👤</span></div>
+        <div class="description"><span>zelený hráč</span></div>
+        <div class="special"><span>⭐</span></div>
+      </div>
+    
+      <div class="card triumph value">
+        <div class="frame"></div>
+        <div class="type"><span>X</span></div>
+        <div class="value"><span>?</span></div>
+        <div class="description">jakákoliv hodnota</div>
+        <div class="special"><span>⭐</span></div>
+      </div>
+    
+      <div class="card triumph value">
+        <div class="frame"></div>
+        <div class="type"><span>X</span></div>
+        <div class="value"><span>?</span></div>
+        <div class="description">jakákoliv hodnota</div>
+        <div class="special"><span>⭐</span></div>
+      </div>
+    
+      <div class="card triumph value">
+        <div class="frame"></div>
+        <div class="type"><span>X</span></div>
+        <div class="value"><span>?</span></div>
+        <div class="description">jakákoliv hodnota</div>
+        <div class="special"><span>⭐</span></div>
+      </div>
+    
+      <div class="card triumph player">
+        <div class="frame"></div>
+        <div class="type"><span>👤</span></div>
+        <div class="value"><span>?</span></div>
+        <div class="description">jakýkoliv hráč</div>
+        <div class="special"><span>☀️</span></div>
+      </div>
+    
+      <div class="card triumph player">
+        <div class="frame"></div>
+        <div class="type"><span>👤</span></div>
+        <div class="value"><span>?</span></div>
+        <div class="description">jakýkoliv hráč</div>
+        <div class="special"><span>☀️</span></div>
+      </div>
+    
+      <div class="card triumph player">
+        <div class="frame"></div>
+        <div class="type"><span>👤</span></div>
+        <div class="value"><span>?</span></div>
+        <div class="description">jakýkoliv hráč</div>
+        <div class="special"><span>☀️</span></div>
+      </div>
+    
+      <div class="card triumph type">
+        <div class="frame"></div>
+        <div class="type"><span>☐</span></div>
+        <div class="value"><span>?</span></div>
+        <div class="description">jakákoliv jednotka</div>
+        <div class="special"><span>❤️</span></div>
+      </div>
+    
+      <div class="card triumph type">
+        <div class="frame"></div>
+        <div class="type"><span>☐</span></div>
+        <div class="value"><span>?</span></div>
+        <div class="description">jakákoliv jednotka</div>
+        <div class="special"><span>❤️</span></div>
+      </div>
+    
+      <div class="card triumph type">
+        <div class="frame"></div>
+        <div class="type"><span>☐</span></div>
+        <div class="value"><span>?</span></div>
+        <div class="description">jakákoliv jednotka</div>
+        <div class="special"><span>❤️</span></div>
+      </div>
+    
+      </div>
+    </body>
+  </html>
