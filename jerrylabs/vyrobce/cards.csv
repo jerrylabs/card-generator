@@ -1,0 +1,64 @@
+type,text,color,cost,buy,profit1,profit2,profit3,profit4,profitmax,expand
+F,Na základě rozhodnutí jednatele začal být váš zdravotnický prostředek uváděn na&nbsp;trh jako doplněk stravy. SÚKL tuto změnu zjistil a udělil pokutu 3000 Kč.,,,,,,,,,
+F,Zúčastnil ses školení v Porta Medica. Tvoje regulatorní znalost tě posune před tvoji konkurenci. Postup na&nbsp;nejbližší políčko konzultant a dostáváš 1000 Kč.,,,,,,,,,
+F,"Dáš na radu Porta Medica a zavčas před certifikací dle MDR provedeš PMCF zkoušku. V důsledku toho projdeš certifikací bez neshod, získáš náskok před konkurencí, každý z tvých protihráčů ti musí dát 200 Kč.",,,,,,,,,
+F,"Přišel čas nutnosti recertifikace tvého portfolia prostředků. Za každý jednotlivý prostředek, který vlastníš, zaplať 500 Kč. ",,,,,,,,,
+F,"Došlo ke snížení DPH, obdržíš 2000 Kč.",,,,,,,,,
+F,"Ozvala se ti paní Adámková, že dlužíš čtyři faktury. Zaplať 400 Kč, a za každého konzultanta, kterého máš, dalších 100 Kč.",,,,,,,,,
+F,Tvůj jednorázový ZP není jednorázový. Vrať na daních 1000 Kč.,,,,,,,,,
+F,"SÚKL vydal stanovisko, že tvoje ZP jsou třída I, ušetřil jsi 2000 kč na každý svůj prostředek za certifikaci.",,,,,,,,,
+F,"Vyšel nový MDCG dokument, který je kupodivu přínosný. Zjednodušení, zrychlení a vyjasnění procesů tě posouvá až na start, kde obdržíš 4000 Kč.",,,,,,,,,
+F,Oznámený subjekt si při auditu nevšiml tvé falešné zdi ve skladu. Prošel jsi auditem bez neshody a získáváš 3000 Kč.,,,,,,,,,
+F,"Vyšla nová revize normy a z gap analýzy ti vyšlo, že musíš přetestovat. Náklady na testování jsou 100&nbsp;Kč.",,,,,,,,,
+F,"Za každý svůj obsazený trh zaplať 800 Kč, za každý svůj obsazený celosvětový trh zaplať 2300 Kč.",,,,,,,,,
+F,"SÚKL vydal stanovisko k čl.16 konkurenční firmě, ve kterém tvrdí, že pro přebalování ZP není třeba certifikace od oznámeného subjektu, zatímco tobě certifikaci přikázal. Dej 500 Kč hráči napravo.",,,,,,,,,
+F,Neuvěřitelné se stalo skutečností. Eudamed byl zprovozněn! Každý hráč dostane 200 Kč.,,,,,,,,,
+ ,,,,,,,,,,
+N,"Tvůj konzultant Volenec nedorazil na&nbsp;audit, protože neměl kde přistát se svým letadlem. Audit se odložil, jedno kolo nehraješ.",,,,,,,,,
+N,Pokoušíš se zaregistrovat do ISZP. 2&nbsp;kola nehraješ.,,,,,,,,,
+N,"Nemáš dokumentovaný návrh a vývoj, jdi na políčko <i>Pozastavení certifikátu</i>, bez obdržení 4000, pokud jsi prošel startem.",,,,,,,,,
+N,Uvedl jsi na trh lubrikační gel s&nbsp;heslem „česnek proti vodě utáhne dvě lodě“. SÚKL chce doložit klinická data dokládající toto tvrzení. Zahajuješ klinickou zkoušku s&nbsp;loděmi a&nbsp;posouváš se o&nbsp;3&nbsp;pole zpět.,,,,,,,,,
+N,"Uvedl jsi na trh latexové rukavice bez latexu. SÚKL toto vyhodnotil jako klamání zákazníka, 2&nbsp;kola nehraješ.",,,,,,,,,
+N,"Máš neschopného interního regulatory zaměstnance. Jdi na nejbližší políčko <i>Konzultant</i>, obdržíš 4000, pokud jsi cestou dopředu prošel <i>Start</i>.",,,,,,,,,
+N,"Provedl jsi významnou změnu prostředku, která má finanční dopady. Aby ses dozvěděl jaké to jsou, jdi zpět na&nbsp;nejbližší políčko <i>Finance</i>. ",,,,,,,,,
+N,"Získal jsi konzultační hodiny Porta Medica zdarma. Tyto hodiny můžeš využít pro zrušení <i>Pozastavení certifikátu</i> (kartu lze uchovat na později, nebo prodat). ",,,,,,,,,
+N,"Porta Medica vydala komentář k MDR. Tak tě to zaujalo, že ses hned přihlásil na&nbsp;<i>Konferenci ZP</i>. Postup na toto políčko a&nbsp;pokud cestou projdeš startem, obdržíš 4000 Kč. ",,,,,,,,,
+N,Na kontrolu od SÚKL do tvé společnosti se ohlásila inspektorka Turcsányiová. I&nbsp;přes předložené důkazy je důsledkem posunutí zpět na start bez obdržení 4000 Kč.,,,,,,,,,
+N,"Konzultant ti doporučil, abys nechal vypršet certifikát pro tvůj <i>legacy device</i>. Vracíš se na start <u>bez</u> obdržení 4000 Kč.",,,,,,,,,
+N,"Konkurence podala anonymní hlášení na tvůj oznámený subjekt, ten tě do prověření situace posouvá na <i>Pozastavení certifikátu</i>, nicméně obdržíš 4000 Kč, pokud jsi cestou prošel start.",,,,,,,,,
+N,"Podařilo se ti uvést na trh izolační budku s heslem: „ticho léčí“ jako zdravotnický prostředek. Začínáš nový byznys, to tě posouvá na start a&nbsp;obdržíš 4000 Kč.",,,,,,,,,
+N,"Doktor ti řekl, že máš pohlavně přenosnou chorobu. Jsi zodpovědný a nahlásíš to všem svým dosavadním partnerům skrz <i>STDinder</i>. Posouváš se zpět na toto políčko a&nbsp;obdržíš 4000 Kč",,,,,,,,,
+ ,,,,,,,,,,
+P,výtěrová tyčinka do dutin,ca4300,1200,40,200,600,1800,3200,5000,1000
+P,tamponáda sterilní ,ca4300,1200,40,200,600,1800,3200,5000,1000
+P,rozvěrač břišní ,8a4115,2000,120,600,1800,5400,8000,11000,1000
+P,peán,8a4116,2000,120,600,1800,5400,8000,11000,1000
+P,rektální manipulátor ,8a4117,2400,160,800,2000,6000,9000,12000,1000
+P,sběrný vak na moč ,0180c5,2800,200,1000,3000,9000,12500,15000,2000
+P,postel s měřicí funkcí ,0180c6,2800,200,1000,3000,9000,12500,15000,2000
+P,kapátko,0180c7,2800,240,1200,3600,10000,14000,18000,2000
+P,močový katetr ,6caf16,3600,280,1400,4000,11000,15000,19000,2000
+P,rektální čípek na fisury ,6caf17,3600,280,1400,4000,11000,15000,19000,2000
+P,sací katetr ,6caf18,4000,320,600,4400,12000,16000,20000,2000
+P,infuzní pumpa ,e42f72,4400,360,1800,5000,14000,17000,21000,3000
+P,kondom ,e42f73,4400,360,1800,5000,14000,17000,21000,3000
+P,RTG ,e42f74,4800,400,2000,6000,15000,18000,22000,3000
+P,pacemaker ,f6ba04,5200,440,2200,6600,16000,19500,23000,3000
+P,spinální stent ,f6ba05,5200,440,2200,6600,16000,19500,23000,3000
+P,AED ,f6ba06,5600,580,2400,7200,17000,20500,24000,3000
+P,penilní filler ,227140,6000,500,2600,7800,18000,22000,25500,4000
+P,prsní implantát,227141,6000,500,2600,7800,18000,22000,25500,4000
+P,IPL,227142,6400,560,3000,9000,20000,24000,28000,4000
+P,Anurex ,432e6e,7000,700,3500,10000,22000,26000,30000,4000
+P,STDinder ,433e6e,8000,1000,4000,12000,28000,34000,40000,4000
+,,,,,,,,,,
+,,,,,,,,,,
+C,1. konzultant Dymáček,,,,,,,,,
+C,2. konzultant Hančl,,,,,,,,,
+C,3. konzultant Volenec,,,,,,,,,
+C,4. konzultant Tavandžis,,,,,,,,,
+ ,,,,,,,,,,
+ ,,,,,,,,,,
+PŘEPRAVA,"<div class=""data borderb"">  <div class=""label"">   Pořizovací cena distribuční sítě  </div>  <div class=""value"">   3&nbsp;000,-  </div> </div><p>POUŽITÍ PŘEPRAVY:<br> 80 x hodnota hozená na kostkách, pokud hráč vlastnící Přepravu vlastní i kartu Konsignační sklad, obdrží za použití přepravy 200 x hodnotu hozenou na kostkách </p>",,,,,,,,,
+KONSIGNAČNÍ SKLAD,"<div class=""data borderb"">  <div class=""label"">   Pořizovací cena konsignačního skladu  </div>  <div class=""value"">   3&nbsp;000,-  </div> </div><p>POUŽITÍ KONSIGNAČNÍHO SKLADU:<br> 80 x hodnota hozená na kostkách, pokud hráč vlastnící Konsignační sklad vlastní i kartu Přeprava, obdrží za použití přepravy 200 x hodnotu hozenou na kostkách</p>",,,,,,,,,
+ ,,,,,,,,,,
