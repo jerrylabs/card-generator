@@ -1,5 +1,5 @@
 module.exports = (cardData) => {
-  let symbol = 'X'
+  let symbol = '❌'
   if (cardData.type.includes('type')) {
     symbol = '☐'
   }
@@ -21,7 +21,7 @@ module.exports = (cardData) => {
         <div class="type"><span>${symbol}</span></div>
         <div class="value"><span>?</span></div>
         <div class="description">${description}</div>
-        <div class="special"><span>${cardData.special}</span></div>
+        <div class="special  ${cardData.special}"><span>${cardData.special}</span></div>
       </div>
     `;
     }
@@ -32,7 +32,7 @@ module.exports = (cardData) => {
         <div class="frame"></div>
         <div class="type"><span>${symbol}</span></div>
         <div class="value"><span>${cardData.value > 0 ? '+' : ''}${cardData.value}</span></div>
-        <div class="special"><span>${cardData.special}</span></div>
+        <div class="special  ${cardData.special}"><span>${cardData.special}</span></div>
       </div>
     `;
   }
@@ -65,7 +65,7 @@ module.exports = (cardData) => {
         <div class="type"><span>${symbol}</span></div>
         <div class="value ${color}"><span>${value}</span></div>
         <div class="description"><span>${type}</span></div>
-        <div class="special"><span>${cardData.special}</span></div>
+        <div class="special ${cardData.special}"><span>${cardData.special}</span></div>
       </div>
     `;
   }
@@ -83,7 +83,7 @@ module.exports = (cardData) => {
         <div class="type"><span>${symbol}</span></div>
         <div class="value ${cardData.value}"><span>👤</span></div>
         <div class="description"><span>${color} hráč</span></div>
-        <div class="special"><span>${cardData.special}</span></div>
+        <div class="special  ${cardData.special}"><span>${cardData.special}</span></div>
       </div>
     `;
   }
