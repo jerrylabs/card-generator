@@ -18,6 +18,13 @@ body {
     url("http://localhost:8080/fonts/IMFellDWPica-Regular.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "SegoeEmoji";
+  src:
+    url("http://localhost:8080/fonts/seguiemj.ttf") format("truetype");
+}
+
+
 html, body {
   margin: 0;
   padding: 0;
@@ -127,7 +134,7 @@ html, body {
   flex-direction: column;
 }
 
-.text__icon { filter: saturate(0) brightness(80%) contrast(2000%); }
+.text__icon { filter: saturate(0) brightness(80%) contrast(2000%); font-family: "SegoeEmoji";}
 .text__icon.🌕 { text-shadow: 0 0.3mm black; }
 .text__action { font-size: 120%; position: relative; top: 0.15em; padding: 0 0.1em; color: white; line-height: 0.5; }
 .text__action-attack { color: #f44336; }
@@ -177,6 +184,7 @@ html, body {
   font-size: 3mm;
   width: 4mm;
   text-align: center;
+  font-family: "SegoeEmoji";
  }
 
 .attribute.fight::before { content: '👊'; }

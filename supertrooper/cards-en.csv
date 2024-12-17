@@ -4,7 +4,7 @@ Predatory alien,trooper,balance,5/0/4/3,lidozrav,Mutant<br>Lethality,There's ple
 Seekers,trooper,balance,3/3/3/3,patraci,"At the start of your turn, look at the top card of your deck. You can put it at the bottom.",
 Seekers,trooper,balance,3/3/3/3,patraci,"At the start of your turn, look at the top card of your deck. You can put it at the bottom.",
 Omnivorous pigdog,trooper,balance,2/0/1/1,prasopes,"Mutant<br>@, return a warrior from&nbsp;any grave to the bottom of a deck: +3&nbsp;to&nbsp;👊 a&nbsp;️🛡️ this turn.",
-Všežravý prasopes,trooper,balance,2/0/1/1,prasopes,"Mutant<br>@, return a warrior from&nbsp;any grave to the bottom of a deck: +3&nbsp;to&nbsp;👊 a&nbsp;️🛡️ this turn.",
+Omnivorous pigdog,trooper,balance,2/0/1/1,prasopes,"Mutant<br>@, return a warrior from&nbsp;any grave to the bottom of a deck: +3&nbsp;to&nbsp;👊 a&nbsp;️🛡️ this turn.",
 Raptor rider,trooper,balance,4/2/4/3,raptorrider,@: +2 to 👊 and lethality this turn.,Riders on the storm.
 Raptor rider,trooper,balance,4/2/4/3,raptorrider,@: +2 to 👊 and lethality this turn.,Riders on the storm.
 Bloboid,trooper,balance,5/0/5/3,slizoid,"Mutant<br>At the start of your turn, you get 1 🌕.",
@@ -32,13 +32,13 @@ Crystal spear,gear,balance,,crystalspear,Two-handed weapon<br>+3 to 👊 and �
 Camouflage,gear,balance,,camo,All your warriors get +2 to 🛡️.,Peekaboo!
 Camouflage,gear,balance,,camo,All your warriors get +2 to 🛡️.,Peekaboo!
 Supply sabotage,event,balance,,sabotage,Look at your opponent's hand and choose a card to put at the bottom of the deck.,
-Lookout tower,building,balance,,tower,All your warriors get +1 to 🎯.,Nuclear mushroom sightseeing is life experience. 
+Lookout tower,building,balance,,tower,All your warriors get +1 to 🎯.,Nuclear mushroom sightseeing is life experience.
 Chaos in logistics,surprise,balance,,logistics,Move target just deployed warrior to the bottom of the deck.,
 Hydroponic farm,building,balance,,hydrofarm,At the start of your turn you get 1 🌕.,Fresh herbs for fresh mind and fresh digestion.
 Herb broth,gear,balance,,herbs,@: Heal target warrior except user.,Classic mushroom tea.
 Explosive charge,gear,balance,,dynamite,"@@, destroy Explosive charge: Destroy target warrior or building.",
 Explosive charge,gear,balance,,dynamite,"@@, destroy Explosive charge: Destroy target warrior or building.",
-Bulky hulk,factor,balance,,clumsy2,Targeted warrior with 🛡️ greater than gets -5 to 🛡️.,He is so big. I can’t miss.
+Bulky hulk,factor,balance,,clumsy2,Targeted warrior with 🛡️ greater than 5 gets -5 to 🛡️.,He is so big. I can’t miss.
 Battle carnage,factor,balance,,battlefury,"All warriors get +3 to 👊 and 🎯. If any player has no warriors in battle, destroy Battle carnage.",
 Brown fog,factor,balance,,brownfog,"All warriors get  -3&nbsp;to&nbsp;🎯. If any player has no warriors in battle, destroy Brown fog.",
 Acid rain,event,balance,,acidrain,Use as 2 actions. Heal all wounded warriors and injure all other warriors.,
@@ -48,8 +48,8 @@ Exterminator,trooper,progress,3/3/3/3,exterminator,"Robot<br>When kills a warrio
 Exterminator,trooper,progress,3/3/3/3,exterminator,"Robot<br>When kills a warrior, you get extra 1 🏆.",
 Jungle patrol,trooper,progress,3/1/2/2,ranger,"Bonuses of its gear are enhanced by +1. When attacks or attacked, draw a card.",
 Jungle patrol,trooper,progress,3/1/2/2,ranger,"Bonuses of its gear are enhanced by +1. When attacks or attacked, draw a card.",
-Railgunman,trooper,progress,1/4/2/3,railgunman,"@: +2 to 🎯, lethality and first striky by 🎯 this turn.",
-Railgunman,trooper,progress,1/4/2/3,railgunman,"@: +2 to 🎯, lethality and first striky by 🎯 this turn.",
+Railgunman,trooper,progress,1/4/2/3,railgunman,"@: +2 to 🎯, lethality and first strike by 🎯 this turn.",
+Railgunman,trooper,progress,1/4/2/3,railgunman,"@: +2 to 🎯, lethality and first strike by 🎯 this turn.",
 Circulobot,trooper,progress,4/1/3/3,cirkulobot,"Robot<br>When injures a warrior, it can additionaly immediately attack the player (even covered).",
 Circulobot,trooper,progress,4/1/3/3,cirkulobot,"Robot<br>When injures a warrior, it can additionaly immediately attack the player (even covered).",
 Titan,trooper,progress,6/6/6/6,titan,Robot<br>For each warrior in battle deploying Titan costs 1 🌕 less.,
@@ -62,9 +62,9 @@ Street patrol,trooper,progress,3/2/4/3,police,"When attacked, return a gear card
 Titan armor,gear,progress,,titanarmor,Armor<br>+3 to 🛡️,Feel armor all over your body in the heavy infantry.
 Titan armor,gear,progress,,titanarmor,Armor<br>+3 to 🛡️,Feel armor all over your body in the heavy infantry.
 Titan armor,gear,progress,,titanarmor,Armor<br>+3 to 🛡️,Feel armor all over your body in the heavy infantry.
-Plasma rifle,gear,progress,,plasmarifle,Two-handed weapon<br>+4 to 🎯,Ionized gas projectiles controlled by electromagnets can reach temperature over 10.000 °C.
-Plasma rifle,gear,progress,,plasmarifle,Two-handed weapon<br>+4 to 🎯,Ionized gas projectiles controlled by electromagnets can reach temperature over 10.000 °C.
-Plasma rifle,gear,progress,,plasmarifle,Two-handed weapon<br>+4 to 🎯,Ionized gas projectiles controlled by electromagnets can reach temperature over 10.000 °C.
+Plasma rifle,gear,progress,,plasmarifle,Two-handed weapon<br>+4 to 🎯,Ionized projectiles controlled by electromagnets can reach temperature over 10.000 °C.
+Plasma rifle,gear,progress,,plasmarifle,Two-handed weapon<br>+4 to 🎯,Ionized projectiles controlled by electromagnets can reach temperature over 10.000 °C.
+Plasma rifle,gear,progress,,plasmarifle,Two-handed weapon<br>+4 to 🎯,Ionized projectiles controlled by electromagnets can reach temperature over 10.000 °C.
 AC-41 „Patemaker“,gear,progress,,ac41,"Two-handed weapon<br>+3 to 👊, +2 to 🎯 and lethality",Medium machine gun with integrated pop-up bayonet.
 AC-41 „Patemaker“,gear,progress,,ac41,"Two-handed weapon<br>+3 to 👊, +2 to 🎯 and lethality",Medium machine gun with integrated pop-up bayonet.
 Mega upgrade,factor,progress,,mega,Bonuses of targeted gear are doubled.,Super anti kontra multi extra unicate.
