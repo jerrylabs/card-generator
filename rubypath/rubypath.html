@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <style type="text/css">
+        @page { margin: 9mm 0 0 0; }
+
+body {
+  -webkit-print-color-adjust: exact;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 0mm;
+  font-family: Sualtim;
+}
+
+@font-face {
+  font-family: "Sualtim";
+  src: url("http://localhost:8080/font/Sualtim.otf") format("opentype");
+}
+
+* {
+  background-repeat: no-repeat;
+}
+
+.cards {
+  text-align: center;
+}
+
+.card {
+  display: inline-block;
+  overflow: hidden;
+  width: 55.84mm;
+  height: 94.83mm;
+  box-sizing: border-box;
+  page-break-inside: avoid;
+  position: relative;
+  background: white;
+  font-size: 6mm;
+
+}
+
+.card .frame {
+  background-size: cover;
+  position: absolute;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.card.item .frame { background-image: url('frames/item.png'); }
+.card.event .frame { background-image: url('frames/event-middle.png'); }
+.card.scroll .frame { background-image: url('frames/scroll.png'); }
+.card.poison .frame { background-image: url('frames/poison.png'); }
+
+.image {
+  position: absolute;
+  z-index: 1;
+  height: 67mm;
+  width: 46mm;
+  top: 9mm;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-size: cover;
+  background-position: center;
+}
+
+.name {
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  top: 2.3mm;
+  text-align: center;
+  padding: 0px 16mm;
+  box-sizing: border-box;
+  font-size: 4mm;
+  height: 8mm;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 3mm;
+}
+
+.text {
+  z-index: 3;
+  position: absolute;
+  font-size: 4mm;
+  line-height: 4mm;
+  width: 100%;
+  box-sizing: border-box;
+  top: 64mm;
+  padding: 0 10mm;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 22mm;
+}
+
+      </style>
+    </head>
+    <body>
+      <div id="pageborder"></div>
+      <div class="cards">
+        
+    <div class="card item">
+      
+      <div class="frame"></div>
+      <div class="name"><span>Magická kostka</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card item">
+      
+      <div class="frame"></div>
+      <div class="name"><span>Magický rubín</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card item">
+      
+      <div class="frame"></div>
+      <div class="name"><span>Lektvar proti hadímu jedu</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card item">
+      
+      <div class="frame"></div>
+      <div class="name"><span>Amulet štěstí</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card item">
+      
+      <div class="frame"></div>
+      <div class="name"><span>Mince</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card item">
+      
+      <div class="frame"></div>
+      <div class="name"><span>Meč</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card item">
+      
+      <div class="frame"></div>
+      <div class="name"><span>Lucerna</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card item">
+      
+      <div class="frame"></div>
+      <div class="name"><span>Mapa lesa</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card event">
+      
+      <div class="frame"></div>
+      <div class="name"><span>Dobré počasí</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card event">
+      <div class="image" style="background-image: url('ilus/loupeznik.jpg')"></div>
+      <div class="frame"></div>
+      <div class="name"><span>Loupežník</span></div>
+      <div class="text"><span>Náhodně zahoď kartu předmětu. Pokud nemáš žádnou kartu, zahoď rubín.</span></div>
+    </div>
+  
+    <div class="card event">
+      <div class="image" style="background-image: url('ilus/loupeznik.jpg')"></div>
+      <div class="frame"></div>
+      <div class="name"><span>Loupežník</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card event">
+      
+      <div class="frame"></div>
+      <div class="name"><span>Poklad</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card event">
+      
+      <div class="frame"></div>
+      <div class="name"><span>Zapomenutý rubín</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card event">
+      
+      <div class="frame"></div>
+      <div class="name"><span>Zapomenutý rubín</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card event">
+      
+      <div class="frame"></div>
+      <div class="name"><span>Štědrý pocestný</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card event">
+      
+      <div class="frame"></div>
+      <div class="name"><span>Zapomenutý rubín</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card event">
+      
+      <div class="frame"></div>
+      <div class="name"><span>Žebrák</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card event">
+      
+      <div class="frame"></div>
+      <div class="name"><span>Žebrák</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card event">
+      
+      <div class="frame"></div>
+      <div class="name"><span>Duch</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card event">
+      
+      <div class="frame"></div>
+      <div class="name"><span>Duch</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card event">
+      
+      <div class="frame"></div>
+      <div class="name"><span>Cesta je volná</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card event">
+      
+      <div class="frame"></div>
+      <div class="name"><span>Cesta je volná</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card event">
+      
+      <div class="frame"></div>
+      <div class="name"><span>Špatné počasí</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card event">
+      
+      <div class="frame"></div>
+      <div class="name"><span>Ztracený rubín</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card event">
+      
+      <div class="frame"></div>
+      <div class="name"><span>Ztracený rubín</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card event">
+      
+      <div class="frame"></div>
+      <div class="name"><span>Špatné počasí</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card event">
+      
+      <div class="frame"></div>
+      <div class="name"><span>Cesta je volná</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card event">
+      
+      <div class="frame"></div>
+      <div class="name"><span>Dobré počasí</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card event">
+      
+      <div class="frame"></div>
+      <div class="name"><span>Magický rubín</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card event">
+      <div class="image" style="background-image: url('ilus/loupeznik.jpg')"></div>
+      <div class="frame"></div>
+      <div class="name"><span>Loupežník</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card event">
+      
+      <div class="frame"></div>
+      <div class="name"><span>Magický rubín</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card event">
+      
+      <div class="frame"></div>
+      <div class="name"><span>Špatné znamení</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card event">
+      
+      <div class="frame"></div>
+      <div class="name"><span>Špatné znamení</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card event">
+      
+      <div class="frame"></div>
+      <div class="name"><span>Štědrý pocestný</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card event">
+      
+      <div class="frame"></div>
+      <div class="name"><span>Věštec</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card event">
+      
+      <div class="frame"></div>
+      <div class="name"><span>Věštec</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card scroll">
+      
+      <div class="frame"></div>
+      <div class="name"><span>Hamižnost</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card scroll">
+      
+      <div class="frame"></div>
+      <div class="name"><span>Nesmírné bohatství</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card scroll">
+      
+      <div class="frame"></div>
+      <div class="name"><span>Nečekané přemístění</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card scroll">
+      
+      <div class="frame"></div>
+      <div class="name"><span>Kouzelný portál</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card scroll">
+      
+      <div class="frame"></div>
+      <div class="name"><span>Nenávist</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card scroll">
+      
+      <div class="frame"></div>
+      <div class="name"><span>Zrádná magie</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card scroll">
+      
+      <div class="frame"></div>
+      <div class="name"><span>Prastaré ruiny</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card scroll">
+      
+      <div class="frame"></div>
+      <div class="name"><span>Špatná volba</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card scroll">
+      
+      <div class="frame"></div>
+      <div class="name"><span>Tíha rubínů</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card scroll">
+      
+      <div class="frame"></div>
+      <div class="name"><span>Poslušnost</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card scroll">
+      
+      <div class="frame"></div>
+      <div class="name"><span>Nadpřirozená rychlost</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card scroll">
+      
+      <div class="frame"></div>
+      <div class="name"><span>Rázová vlna</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card scroll">
+      
+      <div class="frame"></div>
+      <div class="name"><span>Obranné kouzlo</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card scroll">
+      
+      <div class="frame"></div>
+      <div class="name"><span>Obranné kouzlo</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card poison">
+      
+      <div class="frame"></div>
+      <div class="name"><span>Hadí jed</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card poison">
+      
+      <div class="frame"></div>
+      <div class="name"><span>Hadí jed</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card poison">
+      
+      <div class="frame"></div>
+      <div class="name"><span>Hadí jed</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card poison">
+      
+      <div class="frame"></div>
+      <div class="name"><span>Hadí jed</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card poison">
+      
+      <div class="frame"></div>
+      <div class="name"><span>Hadí jed</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card poison">
+      
+      <div class="frame"></div>
+      <div class="name"><span>Hadí jed</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card poison">
+      
+      <div class="frame"></div>
+      <div class="name"><span>Hadí jed</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card poison">
+      
+      <div class="frame"></div>
+      <div class="name"><span>Hadí jed</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card poison">
+      
+      <div class="frame"></div>
+      <div class="name"><span>Hadí jed</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card poison">
+      
+      <div class="frame"></div>
+      <div class="name"><span>Hadí jed</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card poison">
+      
+      <div class="frame"></div>
+      <div class="name"><span>🙂</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card poison">
+      
+      <div class="frame"></div>
+      <div class="name"><span>🙂</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card poison">
+      
+      <div class="frame"></div>
+      <div class="name"><span>🙂</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card poison">
+      
+      <div class="frame"></div>
+      <div class="name"><span>🙂</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card poison">
+      
+      <div class="frame"></div>
+      <div class="name"><span>🙂</span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+      </div>
+    </body>
+  </html>
