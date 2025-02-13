@@ -49,6 +49,7 @@ html, body {
 
 .card.item .frame { background-image: url('frames/item.png'); }
 .card.event .frame { background-image: url('frames/event-middle.png'); }
+.card.event.long-text .frame { background-image: url('frames/event-big.png'); }
 .card.scroll .frame { background-image: url('frames/scroll.png'); }
 .card.poison .frame { background-image: url('frames/poison.png'); }
 
@@ -62,6 +63,10 @@ html, body {
   transform: translate(-50%, 0);
   background-size: cover;
   background-position: center;
+}
+
+.item .image {
+  height: 72mm;
 }
 
 .name {
@@ -93,4 +98,30 @@ html, body {
   justify-content: center;
   align-items: center;
   height: 22mm;
+}
+
+.item .text {
+  top: 71mm;
+}
+
+.long-text .text, .scroll .text {
+  top: 61mm;
+  padding: 0 6mm;
+  height: 23mm;
+}
+
+.ultra-long-text .text {
+  font-size: 3.5mm;
+  line-height: 3mm;
+}
+
+.mega-fucking-long-text .text {
+  top: 60mm;
+  line-height: 2.8mm;
+}
+
+.text__icon {
+  filter: saturate(0) brightness(90%) contrast(200%);
+  font-family: "SegoeEmoji";
+  font-size: 7mm;
 }
