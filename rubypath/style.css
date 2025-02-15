@@ -85,6 +85,14 @@ html, body {
   line-height: 3mm;
 }
 
+path {
+  fill: transparent;
+}
+
+text {
+  fill: black;
+}
+
 .text {
   z-index: 3;
   position: absolute;
@@ -121,7 +129,7 @@ html, body {
 }
 
 .text__icon {
-  filter: saturate(0) brightness(90%) contrast(200%);
-  font-family: "SegoeEmoji";
+  /* filter: saturate(0) brightness(90%) contrast(200%); */
+  font-family: "Noto Emoji Light";
   font-size: 7mm;
 }
