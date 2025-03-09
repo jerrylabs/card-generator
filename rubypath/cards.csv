@@ -1,12 +1,13 @@
 type,name,image,text
-item,Magická kostka,kostka,🎲
-item,Magický rubín,magickyrubin,💎
-item,Lektvar proti hadímu jedu,lektvar,🧉
-item,Amulet štěstí,amulet,📿
-item,Mince,mince,🪙
-item,Meč,mec,🔪
-item,Lucerna,lucerna,🏮
-item,Mapa lesa,mapa,📜
+item,Magická kostka,kostka,
+item,Magický rubín,magickyrubin,
+item,Lektvar proti hadímu jedu,lektvar,
+item,Amulet štěstí,amulet,
+item,Mince,mince,
+item,Meč,mec,
+item,Lucerna,lucerna,
+item,Mapa lesa,mapa,
+item,Kouzelný svitek,svitek,
 event,Dobré počasí,dobre-pocasi,V příštím tahu přičti k&nbsp;hodu kostkou +1.
 event,Loupežník,loupeznik,"Náhodně zahoď kartu předmětu. Pokud nemáš žádnou kartu, zahoď<br>rubín."
 event,Loupežník,loupeznik,"Náhodně zahoď kartu předmětu. Pokud nemáš žádnou kartu, zahoď<br>rubín."
@@ -59,8 +60,8 @@ poison,Hadí jed,hadi-jed,Do konce hry odečítej od&nbsp;hodu kostkou -1.
 poison,Hadí jed,hadi-jed,Do konce hry odečítej od&nbsp;hodu kostkou -1.
 poison,Hadí jed,hadi-jed,Do konce hry odečítej od&nbsp;hodu kostkou -1.
 poison,Hadí jed,hadi-jed,Do konce hry odečítej od&nbsp;hodu kostkou -1.
-poison,Uf...!,UF,🙂
-poison,Uf...!,UF,🙂
-poison,Uf...!,UF,🙂
-poison,Uf...!,UF,🙂
-poison,Uf...!,UF,🙂
+poison,Uf...!,UF,Nic se nestalo.
+poison,Uf...!,UF,Nic se nestalo.
+poison,Uf...!,UF,Nic se nestalo.
+poison,Uf...!,UF,Nic se nestalo.
+poison,Uf...!,UF,Nic se nestalo.
