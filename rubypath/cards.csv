@@ -1,6 +1,6 @@
 type,name,image,text
 item,Magická kostka,kostka,
-item,Magický rubín,magickyrubin,
+item,Magický rubín,magickyrubin2,
 item,Lektvar proti hadímu jedu,lektvar,
 item,Amulet štěstí,amulet,
 item,Mince,mince,
@@ -23,14 +23,14 @@ event,Duch,duch,Couvni o 2 pole zpět.
 event,Cesta je volná,volna-cesta,Nic se nestalo.
 event,Cesta je volná,volna-cesta,Nic se nestalo.
 event,Špatné počasí,spatne-pocasi,V příštím tahu odečti od hodu kostkou -2.
-event,Ztracený rubín,ztraceny-rubin,"Polož 1 ze svých rubínů<br>na pole, na kterém stojíš. Pokud nemáš rubín, polož zde 1 rubín ze společné zásoby rubínů. Hráč, který ukončí pohyb na tomto poli, si<br>vezme tento rubín a netáhne<br>kartu událostí."
-event,Ztracený rubín,ztraceny-rubin,"Polož 1 ze svých rubínů<br>na pole, na kterém stojíš. Pokud nemáš rubín, polož zde 1 rubín ze společné zásoby rubínů. Hráč, který ukončí pohyb na tomto poli, si<br>vezme tento rubín a netáhne<br>kartu událostí."
+event,Ztracený rubín,ztraceny-rubin3,"Polož 1 ze svých rubínů<br>na pole, na kterém stojíš. Pokud nemáš rubín, polož zde 1 rubín ze společné zásoby rubínů. Hráč, který ukončí pohyb na tomto poli, si<br>vezme tento rubín a netáhne<br>kartu událostí."
+event,Ztracený rubín,ztraceny-rubin3,"Polož 1 ze svých rubínů<br>na pole, na kterém stojíš. Pokud nemáš rubín, polož zde 1 rubín ze společné zásoby rubínů. Hráč, který ukončí pohyb na tomto poli, si<br>vezme tento rubín a netáhne<br>kartu událostí."
 event,Špatné počasí,spatne-pocasi,V příštím tahu odečti od hodu kostkou -2.
 event,Cesta je volná,volna-cesta,Nic se nestalo.
 event,Dobré počasí,dobre-pocasi,V příštím tahu přičti k&nbsp;hodu kostkou +1.
-event,Magický rubín,magickyrubin,"Vezmi si kartu předmětu magický rubín. Pokud kartu již máš, nic se nestalo."
+event,Magický rubín,ztraceny-rubin,"Vezmi si kartu předmětu magický rubín. Pokud kartu již máš, nic se nestalo."
 event,Loupežník,loupeznik,"Náhodně zahoď kartu předmětu. Pokud nemáš žádnou kartu, zahoď<br>rubín."
-event,Magický rubín,magickyrubin,"Vezmi si kartu předmětu magický rubín. Pokud kartu již máš, nic se nestalo."
+event,Magický rubín,ztraceny-rubin,"Vezmi si kartu předmětu magický rubín. Pokud kartu již máš, nic se nestalo."
 event,Špatné znamení,zle-znameni,Do konce hry<br>se ti při hodu kostkou<br>nepočítá 6.
 event,Špatné znamení,zle-znameni,Do konce hry<br>se ti při hodu kostkou<br>nepočítá 6.
 event,Štědrý pocestný,pocestny,"Vezmi si náhodně kartu předmětu, kterou nemáš."
@@ -47,7 +47,7 @@ scroll,Špatná volba,spatna-volba,"Hoď kostkou, kouzlo je sesláno, pokud hod�
 scroll,Tíha rubínů,tiha-rubinu,"Hoď kostkou, kouzlo je<br>sesláno, pokud hodíš 1-3. Předej<br>kartu jinému hráči, ten musí do konce hry při akci POHYB odečíst od<br>hodu kostkou1 za každý<br>rubín,který má."
 scroll,Poslušnost,poslusnost,"Hoď kostkou,<br>kouzlo je sesláno, pokud hodíš<br>1-3. Předej kartu jinému hráči, ten<br>se musí při akci POHYB pohybovat pouze směrem k&nbsp;sesilateli kouzla, dokud se nedostane na stejné pole nebo za něj. Potom kartu<br>vyřaď ze hry."
 scroll,Nadpřirozená rychlost,nadprirozena-rychlost,"Hoď kostkou, kouzlo je<br>sesláno, pokud hodíš 4-6.<br>Do konce hry při akci<br>POHYB přičítej k&nbsp;hodu<br>kostkou 1."
-scroll,Rázová vlna,razova-vlna,"Hoď kostkou,<br>kouzlo je sesláno, pokud hodíš<br>4-6. Všichni hráči do 10 polí od<br>tebe hodí 2x kostkou a posunou<br>se zpět o hodnotu hozenou<br>na kostkách."
+scroll,Rázová vlna,razova-vlna,"Hoď kostkou,<br>kouzlo je sesláno, pokud hodíš<br>4-6. Všichni hráči do 10 polí před<br>tebou hodí 2x kostkou a posunou<br>se zpět o hodnotu hozenou<br>na kostkách."
 scroll,Obranné kouzlo,obranne-kouzlo,"Kouzlo je sesláno automaticky. Zruš jedno kouzlo, které<br>na tebe působí."
 scroll,Obranné kouzlo,obranne-kouzlo,"Kouzlo je sesláno automaticky. Zruš jedno kouzlo, které<br>na tebe působí."
 poison,Hadí jed,hadi-jed,Do konce hry odečítej od&nbsp;hodu kostkou -1.
