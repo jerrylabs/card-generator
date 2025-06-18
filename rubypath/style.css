@@ -97,16 +97,17 @@ text {
 .text {
   z-index: 3;
   position: absolute;
-  font-size: 4mm;
-  line-height: 4mm;
+  font-size: 3.5mm;
+  line-height: 1;
   width: 100%;
   box-sizing: border-box;
-  top: 65mm;
+  top: 64mm;
   padding: 0 10mm;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 22mm;
+  font-family: "Berlin Sans FB CE";
 }
 
 .item .text {
@@ -114,19 +115,22 @@ text {
 }
 
 .long-text .text, .scroll .text {
-  top: 61mm;
+  top: 61.5mm;
   padding: 0 6mm;
   height: 23mm;
+  font-size: 3.4mm;
 }
 
 .ultra-long-text .text {
-  font-size: 3.5mm;
-  line-height: 3mm;
+  font-size: 2.9mm;
+  line-height: 2.9mm;
+  top: 61.5mm;
+
 }
 
 .mega-fucking-long-text .text {
-  top: 60mm;
-  line-height: 2.8mm;
+  top: 62.5mm;
+  line-height: 2.7mm;
 }
 
 .text__icon {

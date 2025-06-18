@@ -101,16 +101,17 @@ text {
 .text {
   z-index: 3;
   position: absolute;
-  font-size: 4mm;
-  line-height: 4mm;
+  font-size: 3.5mm;
+  line-height: 1;
   width: 100%;
   box-sizing: border-box;
-  top: 65mm;
+  top: 64mm;
   padding: 0 10mm;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 22mm;
+  font-family: "Berlin Sans FB CE";
 }
 
 .item .text {
@@ -118,19 +119,22 @@ text {
 }
 
 .long-text .text, .scroll .text {
-  top: 61mm;
+  top: 61.5mm;
   padding: 0 6mm;
   height: 23mm;
+  font-size: 3.4mm;
 }
 
 .ultra-long-text .text {
-  font-size: 3.5mm;
-  line-height: 3mm;
+  font-size: 2.9mm;
+  line-height: 2.9mm;
+  top: 61.5mm;
+
 }
 
 .mega-fucking-long-text .text {
-  top: 60mm;
-  line-height: 2.8mm;
+  top: 62.5mm;
+  line-height: 2.7mm;
 }
 
 .text__icon {
@@ -211,21 +215,196 @@ text {
       <div class="image" style="background-image: url('ilus/dobre-pocasi.jpg')"></div>
       <div class="frame"></div>
       <div class="name"><span> Dobré počasí </span></div>
-      <div class="text"><span>V příštím tahu přičti k&nbsp;hodu kostkou +1.</span></div>
+      <div class="text"><span>V příštím tahu přičti k&nbsp;hodu kostkou 1.</span></div>
     </div>
   
     <div class="card event">
-      <div class="image" style="background-image: url('ilus/loupeznik.jpg')"></div>
+      <div class="image" style="background-image: url('ilus/dobre-pocasi.jpg')"></div>
       <div class="frame"></div>
-      <div class="name"><span> Loupežník </span></div>
-      <div class="text"><span>Náhodně zahoď kartu předmětu. Pokud nemáš žádnou kartu, zahoď<br>rubín.</span></div>
+      <div class="name"><span> Dobré počasí </span></div>
+      <div class="text"><span>V příštím tahu přičti k&nbsp;hodu kostkou 1.</span></div>
     </div>
   
     <div class="card event">
-      <div class="image" style="background-image: url('ilus/loupeznik.jpg')"></div>
+      <div class="image" style="background-image: url('ilus/volna-cesta.jpg')"></div>
+      <div class="frame"></div>
+      <div class="name"><span> Cesta je volná </span></div>
+      <div class="text"><span>Nic se nestalo.</span></div>
+    </div>
+  
+    <div class="card event">
+      <div class="image" style="background-image: url('ilus/volna-cesta.jpg')"></div>
+      <div class="frame"></div>
+      <div class="name"><span> Cesta je volná </span></div>
+      <div class="text"><span>Nic se nestalo.</span></div>
+    </div>
+  
+    <div class="card event">
+      <div class="image" style="background-image: url('ilus/volna-cesta.jpg')"></div>
+      <div class="frame"></div>
+      <div class="name"><span> Cesta je volná </span></div>
+      <div class="text"><span>Nic se nestalo.</span></div>
+    </div>
+  
+    <div class="card event">
+      <div class="image" style="background-image: url('ilus/spatne-pocasi.jpg')"></div>
+      <div class="frame"></div>
+      <div class="name"><span> Špatné počasí </span></div>
+      <div class="text"><span>V příštím tahu odečti od&nbsp;hodu kostkou 2.</span></div>
+    </div>
+  
+    <div class="card event">
+      <div class="image" style="background-image: url('ilus/spatne-pocasi.jpg')"></div>
+      <div class="frame"></div>
+      <div class="name"><span> Špatné počasí </span></div>
+      <div class="text"><span>V příštím tahu odečti od&nbsp;hodu kostkou 2.</span></div>
+    </div>
+  
+    <div class="card event">
+      <div class="image" style="background-image: url('ilus/spatne-pocasi.jpg')"></div>
+      <div class="frame"></div>
+      <div class="name"><span> Špatné počasí </span></div>
+      <div class="text"><span>V příštím tahu odečti od&nbsp;hodu kostkou 2.</span></div>
+    </div>
+  
+    <div class="card event">
+      <div class="image" style="background-image: url('ilus/zapomenuty-rubin.jpg')"></div>
+      <div class="frame"></div>
+      <div class="name"><span> Zapomenutý rubín </span></div>
+      <div class="text"><span>Vrať se na nejbližší<br>pole s rubínem a proveď jeho efekt.</span></div>
+    </div>
+  
+    <div class="card event">
+      <div class="image" style="background-image: url('ilus/zapomenuty-rubin.jpg')"></div>
+      <div class="frame"></div>
+      <div class="name"><span> Zapomenutý rubín </span></div>
+      <div class="text"><span>Vrať se na nejbližší<br>pole s rubínem a proveď jeho efekt.</span></div>
+    </div>
+  
+    <div class="card event">
+      <div class="image" style="background-image: url('ilus/zapomenuty-rubin.jpg')"></div>
+      <div class="frame"></div>
+      <div class="name"><span> Zapomenutý rubín </span></div>
+      <div class="text"><span>Vrať se na nejbližší<br>pole s rubínem a proveď jeho efekt.</span></div>
+    </div>
+  
+    <div class="card event long-text ultra-long-text">
+      <div class="image" style="background-image: url('ilus/ztraceny-rubin3.jpg')"></div>
+      <div class="frame"></div>
+      <div class="name"><span> Ztracený rubín </span></div>
+      <div class="text"><span>Polož 1 ze svých rubínů<br>na pole, na kterém stojíš. Pokud nemáš rubín, polož zde 1 rubín ze společné zásoby rubínů. Od teď je toto pole považováno za pole<br>s rubínem, dokud tento rubín<br>někdo nesebere.</span></div>
+    </div>
+  
+    <div class="card event long-text ultra-long-text">
+      <div class="image" style="background-image: url('ilus/ztraceny-rubin3.jpg')"></div>
+      <div class="frame"></div>
+      <div class="name"><span> Ztracený rubín </span></div>
+      <div class="text"><span>Polož 1 ze svých rubínů<br>na pole, na kterém stojíš. Pokud nemáš rubín, polož zde 1 rubín ze společné zásoby rubínů. Od teď je toto pole považováno za pole<br>s rubínem, dokud tento rubín<br>někdo nesebere.</span></div>
+    </div>
+  
+    <div class="card event">
+      <div class="image" style="background-image: url('ilus/ztraceny-rubin.jpg')"></div>
+      <div class="frame"></div>
+      <div class="name"><span> Magický rubín </span></div>
+      <div class="text"><span>Vezmi si kartu předmětu magický rubín. Pokud kartu již máš, nic se nestalo.</span></div>
+    </div>
+  
+    <div class="card event">
+      <div class="image" style="background-image: url('ilus/ztraceny-rubin.jpg')"></div>
+      <div class="frame"></div>
+      <div class="name"><span> Magický rubín </span></div>
+      <div class="text"><span>Vezmi si kartu předmětu magický rubín. Pokud kartu již máš, nic se nestalo.</span></div>
+    </div>
+  
+    <div class="card event">
+      <div class="image" style="background-image: url('ilus/duch.jpg')"></div>
+      <div class="frame"></div>
+      <div class="name"><span> Duch </span></div>
+      <div class="text"><span>Couvni o 2 pole zpět<br>a proveď efekt pole.</span></div>
+    </div>
+  
+    <div class="card event">
+      <div class="image" style="background-image: url('ilus/duch.jpg')"></div>
+      <div class="frame"></div>
+      <div class="name"><span> Duch </span></div>
+      <div class="text"><span>Couvni o 2 pole zpět<br>a proveď efekt pole.</span></div>
+    </div>
+  
+    <div class="card event long-text">
+      <div class="image" style="background-image: url('ilus/zebrak.jpg')"></div>
+      <div class="frame"></div>
+      <div class="name"><span> Žebrák </span></div>
+      <div class="text"><span>Pokud neodhodíš<br>kartu mince, vynecháváš<br>svůj příští tah. Pokud nemáš<br>kartu mince, můžeš<br> odhodit rubín.</span></div>
+    </div>
+  
+    <div class="card event long-text">
+      <div class="image" style="background-image: url('ilus/zebrak.jpg')"></div>
+      <div class="frame"></div>
+      <div class="name"><span> Žebrák </span></div>
+      <div class="text"><span>Pokud neodhodíš<br>kartu mince, vynecháváš<br>svůj příští tah. Pokud nemáš<br>kartu mince, můžeš<br> odhodit rubín.</span></div>
+    </div>
+  
+    <div class="card event">
+      <div class="image" style="background-image: url('ilus/pocestny.jpg')"></div>
+      <div class="frame"></div>
+      <div class="name"><span> Štědrý pocestný </span></div>
+      <div class="text"><span>Vezmi si náhodně<br>kartu předmětu,<br>kterou nemáš.</span></div>
+    </div>
+  
+    <div class="card event">
+      <div class="image" style="background-image: url('ilus/pocestny.jpg')"></div>
+      <div class="frame"></div>
+      <div class="name"><span> Štědrý pocestný </span></div>
+      <div class="text"><span>Vezmi si náhodně<br>kartu předmětu,<br>kterou nemáš.</span></div>
+    </div>
+  
+    <div class="card event long-text">
+      <div class="image" style="background-image: url('ilus/vestec.jpg')"></div>
+      <div class="frame"></div>
+      <div class="name"><span> Věštec </span></div>
+      <div class="text"><span>Podívej se na horní<br>2 karty předmětu kouzelný svitek a vrať je zpět v&nbsp;libovolném pořadí.</span></div>
+    </div>
+  
+    <div class="card event long-text">
+      <div class="image" style="background-image: url('ilus/vestec.jpg')"></div>
+      <div class="frame"></div>
+      <div class="name"><span> Věštec </span></div>
+      <div class="text"><span>Podívej se na horní<br>2 karty předmětu kouzelný svitek a vrať je zpět v&nbsp;libovolném pořadí.</span></div>
+    </div>
+  
+    <div class="card event long-text ultra-long-text">
+      <div class="image" style="background-image: url('ilus/zle-znameni.jpg')"></div>
+      <div class="frame"></div>
+      <div class="name"><span> Špatné znamení </span></div>
+      <div class="text"><span>Do konce hry se ti<br>při hodu kostkou nepočítá 6.<br>Pokud máš amulet štěstí, polož<br>tuto kartu pod něj. Dokud máš<br>amulet štěstí, tato karta<br>nemá žádný účinek.</span></div>
+    </div>
+  
+    <div class="card event long-text ultra-long-text">
+      <div class="image" style="background-image: url('ilus/zle-znameni.jpg')"></div>
+      <div class="frame"></div>
+      <div class="name"><span> Špatné znamení </span></div>
+      <div class="text"><span>Do konce hry se ti<br>při hodu kostkou nepočítá 6.<br>Pokud máš amulet štěstí, polož<br>tuto kartu pod něj. Dokud máš<br>amulet štěstí, tato karta<br>nemá žádný účinek.</span></div>
+    </div>
+  
+    <div class="card event long-text">
+      <div class="image" style="background-image: url('ilus/loupeznik3.jpg')"></div>
       <div class="frame"></div>
       <div class="name"><span> Loupežník </span></div>
-      <div class="text"><span>Náhodně zahoď kartu předmětu. Pokud nemáš žádnou kartu, zahoď<br>rubín.</span></div>
+      <div class="text"><span>Náhodně odhoď kartu<br>předmětu. Pokud nemáš žádnou kartu, odhoď rubín. Pokud máš meč, tato<br> karta nemá žádný<br>účinek.</span></div>
+    </div>
+  
+    <div class="card event long-text">
+      <div class="image" style="background-image: url('ilus/loupeznik3.jpg')"></div>
+      <div class="frame"></div>
+      <div class="name"><span> Loupežník </span></div>
+      <div class="text"><span>Náhodně odhoď kartu<br>předmětu. Pokud nemáš žádnou kartu, odhoď rubín. Pokud máš meč, tato<br> karta nemá žádný<br>účinek.</span></div>
+    </div>
+  
+    <div class="card event long-text">
+      <div class="image" style="background-image: url('ilus/loupeznik3.jpg')"></div>
+      <div class="frame"></div>
+      <div class="name"><span> Loupežník </span></div>
+      <div class="text"><span>Náhodně odhoď kartu<br>předmětu. Pokud nemáš žádnou kartu, odhoď rubín. Pokud máš meč, tato<br> karta nemá žádný<br>účinek.</span></div>
     </div>
   
     <div class="card event">
@@ -235,193 +414,25 @@ text {
       <div class="text"><span>Vezmi si 2 rubíny<br>a kartu mince.</span></div>
     </div>
   
-    <div class="card event">
-      <div class="image" style="background-image: url('ilus/zapomenuty-rubin.jpg')"></div>
-      <div class="frame"></div>
-      <div class="name"><span> Zapomenutý rubín </span></div>
-      <div class="text"><span>Vrať se na nejbližší<br>pole s rubínem.</span></div>
-    </div>
-  
-    <div class="card event">
-      <div class="image" style="background-image: url('ilus/zapomenuty-rubin.jpg')"></div>
-      <div class="frame"></div>
-      <div class="name"><span> Zapomenutý rubín </span></div>
-      <div class="text"><span>Vrať se na nejbližší<br>pole s rubínem.</span></div>
-    </div>
-  
-    <div class="card event">
-      <div class="image" style="background-image: url('ilus/pocestny.jpg')"></div>
-      <div class="frame"></div>
-      <div class="name"><span> Štědrý pocestný </span></div>
-      <div class="text"><span>Vezmi si náhodně kartu předmětu, kterou nemáš.</span></div>
-    </div>
-  
-    <div class="card event">
-      <div class="image" style="background-image: url('ilus/zapomenuty-rubin.jpg')"></div>
-      <div class="frame"></div>
-      <div class="name"><span> Zapomenutý rubín </span></div>
-      <div class="text"><span>Vrať se na nejbližší pole s rubínem.</span></div>
-    </div>
-  
-    <div class="card event long-text">
-      <div class="image" style="background-image: url('ilus/zebrak.jpg')"></div>
-      <div class="frame"></div>
-      <div class="name"><span> Žebrák </span></div>
-      <div class="text"><span>Pokud neodhodíš kartu mince, vynecháváš svůj příští tah. Pokud nemáš kartu mince,<br>můžeš odhodit rubín.</span></div>
-    </div>
-  
-    <div class="card event long-text">
-      <div class="image" style="background-image: url('ilus/zebrak.jpg')"></div>
-      <div class="frame"></div>
-      <div class="name"><span> Žebrák </span></div>
-      <div class="text"><span>Pokud neodhodíš kartu mince, vynecháváš svůj příští tah. Pokud nemáš kartu mince,<br>můžeš odhodit rubín.</span></div>
-    </div>
-  
-    <div class="card event">
-      <div class="image" style="background-image: url('ilus/duch.jpg')"></div>
-      <div class="frame"></div>
-      <div class="name"><span> Duch </span></div>
-      <div class="text"><span>Couvni o 2 pole zpět.</span></div>
-    </div>
-  
-    <div class="card event">
-      <div class="image" style="background-image: url('ilus/duch.jpg')"></div>
-      <div class="frame"></div>
-      <div class="name"><span> Duch </span></div>
-      <div class="text"><span>Couvni o 2 pole zpět.</span></div>
-    </div>
-  
-    <div class="card event">
-      <div class="image" style="background-image: url('ilus/volna-cesta.jpg')"></div>
-      <div class="frame"></div>
-      <div class="name"><span> Cesta je volná </span></div>
-      <div class="text"><span>Nic se nestalo.</span></div>
-    </div>
-  
-    <div class="card event">
-      <div class="image" style="background-image: url('ilus/volna-cesta.jpg')"></div>
-      <div class="frame"></div>
-      <div class="name"><span> Cesta je volná </span></div>
-      <div class="text"><span>Nic se nestalo.</span></div>
-    </div>
-  
-    <div class="card event">
-      <div class="image" style="background-image: url('ilus/spatne-pocasi.jpg')"></div>
-      <div class="frame"></div>
-      <div class="name"><span> Špatné počasí </span></div>
-      <div class="text"><span>V příštím tahu odečti od hodu kostkou -2.</span></div>
-    </div>
-  
-    <div class="card event long-text ultra-long-text">
-      <div class="image" style="background-image: url('ilus/ztraceny-rubin3.jpg')"></div>
-      <div class="frame"></div>
-      <div class="name"><span> Ztracený rubín </span></div>
-      <div class="text"><span>Polož 1 ze svých rubínů<br>na pole, na kterém stojíš. Pokud nemáš rubín, polož zde 1 rubín ze společné zásoby rubínů. Hráč, který ukončí pohyb na tomto poli, si<br>vezme tento rubín a netáhne<br>kartu událostí.</span></div>
-    </div>
-  
-    <div class="card event long-text ultra-long-text">
-      <div class="image" style="background-image: url('ilus/ztraceny-rubin3.jpg')"></div>
-      <div class="frame"></div>
-      <div class="name"><span> Ztracený rubín </span></div>
-      <div class="text"><span>Polož 1 ze svých rubínů<br>na pole, na kterém stojíš. Pokud nemáš rubín, polož zde 1 rubín ze společné zásoby rubínů. Hráč, který ukončí pohyb na tomto poli, si<br>vezme tento rubín a netáhne<br>kartu událostí.</span></div>
-    </div>
-  
-    <div class="card event">
-      <div class="image" style="background-image: url('ilus/spatne-pocasi.jpg')"></div>
-      <div class="frame"></div>
-      <div class="name"><span> Špatné počasí </span></div>
-      <div class="text"><span>V příštím tahu odečti od hodu kostkou -2.</span></div>
-    </div>
-  
-    <div class="card event">
-      <div class="image" style="background-image: url('ilus/volna-cesta.jpg')"></div>
-      <div class="frame"></div>
-      <div class="name"><span> Cesta je volná </span></div>
-      <div class="text"><span>Nic se nestalo.</span></div>
-    </div>
-  
-    <div class="card event">
-      <div class="image" style="background-image: url('ilus/dobre-pocasi.jpg')"></div>
-      <div class="frame"></div>
-      <div class="name"><span> Dobré počasí </span></div>
-      <div class="text"><span>V příštím tahu přičti k&nbsp;hodu kostkou +1.</span></div>
-    </div>
-  
-    <div class="card event">
-      <div class="image" style="background-image: url('ilus/ztraceny-rubin.jpg')"></div>
-      <div class="frame"></div>
-      <div class="name"><span> Magický rubín </span></div>
-      <div class="text"><span>Vezmi si kartu předmětu magický rubín. Pokud kartu již máš, nic se nestalo.</span></div>
-    </div>
-  
-    <div class="card event">
-      <div class="image" style="background-image: url('ilus/loupeznik.jpg')"></div>
-      <div class="frame"></div>
-      <div class="name"><span> Loupežník </span></div>
-      <div class="text"><span>Náhodně zahoď kartu předmětu. Pokud nemáš žádnou kartu, zahoď<br>rubín.</span></div>
-    </div>
-  
-    <div class="card event">
-      <div class="image" style="background-image: url('ilus/ztraceny-rubin.jpg')"></div>
-      <div class="frame"></div>
-      <div class="name"><span> Magický rubín </span></div>
-      <div class="text"><span>Vezmi si kartu předmětu magický rubín. Pokud kartu již máš, nic se nestalo.</span></div>
-    </div>
-  
-    <div class="card event">
-      <div class="image" style="background-image: url('ilus/zle-znameni.jpg')"></div>
-      <div class="frame"></div>
-      <div class="name"><span> Špatné znamení </span></div>
-      <div class="text"><span>Do konce hry<br>se ti při hodu kostkou<br>nepočítá 6.</span></div>
-    </div>
-  
-    <div class="card event">
-      <div class="image" style="background-image: url('ilus/zle-znameni.jpg')"></div>
-      <div class="frame"></div>
-      <div class="name"><span> Špatné znamení </span></div>
-      <div class="text"><span>Do konce hry<br>se ti při hodu kostkou<br>nepočítá 6.</span></div>
-    </div>
-  
-    <div class="card event">
-      <div class="image" style="background-image: url('ilus/pocestny.jpg')"></div>
-      <div class="frame"></div>
-      <div class="name"><span> Štědrý pocestný </span></div>
-      <div class="text"><span>Vezmi si náhodně kartu předmětu, kterou nemáš.</span></div>
-    </div>
-  
-    <div class="card event long-text">
-      <div class="image" style="background-image: url('ilus/vestec.jpg')"></div>
-      <div class="frame"></div>
-      <div class="name"><span> Věštec </span></div>
-      <div class="text"><span>Podívej se na horní 2 karty předmětu kouzelný svitek<br>a vrať je zpět v&nbsp;libovolném<br>pořadí.</span></div>
-    </div>
-  
-    <div class="card event long-text">
-      <div class="image" style="background-image: url('ilus/vestec.jpg')"></div>
-      <div class="frame"></div>
-      <div class="name"><span> Věštec </span></div>
-      <div class="text"><span>Podívej se na horní 2 karty předmětu kouzelný svitek<br>a vrať je zpět v&nbsp;libovolném<br>pořadí.</span></div>
-    </div>
-  
     <div class="card scroll long-text ultra-long-text">
       <div class="image" style="background-image: url('ilus/hamiznost.jpg')"></div>
       <div class="frame"></div>
       <div class="name"><span> Hamižnost </span></div>
-      <div class="text"><span>Hoď kostkou, kouzlo<br>je sesláno, pokud hodíš 1-3. Předej kartu jinému hráči, ten musí do&nbsp;konce hry v&nbsp;každém svém tahu provést<br>akci HLEDÁNÍRUBÍNŮ,<br>pokud je to možné.</span></div>
+      <div class="text"><span>Hoď kostkou, kouzlo je<br>sesláno, pokud hodíš 1-3. Předej kartu jinému hráči, ten musí do&nbsp;konce hry v&nbsp;každém svém tahu provést akci HLEDÁNÍ<br>RUBÍNŮ, pokud je to<br>možné.</span></div>
     </div>
   
     <div class="card scroll long-text">
       <div class="image" style="background-image: url('ilus/nesmirne-bohatstvi.jpg')"></div>
       <div class="frame"></div>
       <div class="name"><span> Nesmírné bohatství </span></div>
-      <div class="text"><span>Hoď kostkou, kouzlo je<br>sesláno, pokud hodíš 4-6.<br>Vezmi si 5 rubínů ze společné zásoby rubínů.</span></div>
+      <div class="text"><span>Hoď kostkou, kouzlo je<br>sesláno, pokud hodíš 4-6.<br>Vezmi si 5 rubínů<br>ze společné zásoby<br>rubínů.</span></div>
     </div>
   
-    <div class="card scroll long-text ultra-long-text">
+    <div class="card scroll long-text">
       <div class="image" style="background-image: url('ilus/necekane-premisteni.jpg')"></div>
       <div class="frame"></div>
       <div class="name"><span> Nečekané přemístění </span></div>
-      <div class="text"><span>Hoď kostkou, kouzlo<br>je sesláno, pokud hodíš 4-6.<br>Vyměň si místo na hracím plánu s&nbsp;jiným hráčem do 10 polí od tebe<br>  a proveď efekt pole.  </span></div>
+      <div class="text"><span>Hoď kostkou, kouzlo<br>je sesláno, pokud hodíš 4-6.<br>Vyměň si místo na hracím plánu s&nbsp;jiným hráčem do 10 polí od tebe a proveď<br>efekt pole.</span></div>
     </div>
   
     <div class="card scroll long-text ultra-long-text">
@@ -435,14 +446,14 @@ text {
       <div class="image" style="background-image: url('ilus/nenavist.jpg')"></div>
       <div class="frame"></div>
       <div class="name"><span> Nenávist </span></div>
-      <div class="text"><span>Hoď kostkou, kouzlo je<br>sesláno, pokud hodíš 1-3. Předej kartu jinému hráči, tomu se do konce hry při hodu kostkou nepočítá 5.</span></div>
+      <div class="text"><span>Hoď kostkou, kouzlo je<br>sesláno, pokud hodíš 1-3. Předej kartu jinému hráči, tomu se do konce hry<br>při hodu kostkou<br>nepočítá 5.</span></div>
     </div>
   
     <div class="card scroll long-text">
       <div class="image" style="background-image: url('ilus/zradna-magie.jpg')"></div>
       <div class="frame"></div>
       <div class="name"><span> Zrádná magie </span></div>
-      <div class="text"><span>Magie se obrátila proti tobě. Kartu ihned otoč lícem nahoru. Do konce hry nemůžeš používat předměty magická kostka a&nbsp;magický rubín.</span></div>
+      <div class="text"><span>Magie se obrátila proti<br> tobě. Kartu ihned otoč lícem nahoru. Do konce hry nemůžeš používat předměty magická <br>kostka a magický<br>rubín.</span></div>
     </div>
   
     <div class="card scroll long-text">
@@ -453,24 +464,24 @@ text {
     </div>
   
     <div class="card scroll long-text ultra-long-text">
-      <div class="image" style="background-image: url('ilus/spatna-volba.jpg')"></div>
+      <div class="image" style="background-image: url('ilus/Spatna-volba2.jpg')"></div>
       <div class="frame"></div>
       <div class="name"><span> Špatná volba </span></div>
-      <div class="text"><span>Hoď kostkou, kouzlo je sesláno, pokud hodíš 1-3. Předej kartu jinému hráči, ten musí do konce hry při akci POHYB házet kostkou dvakrát a&nbsp;vybrat vždy nižší číslo.</span></div>
+      <div class="text"><span>Hoď kostkou, kouzlo je sesláno, pokud hodíš 1-3. Předej kartu jinému hráči, ten musí do konce hry při akci POHYB házet kostkou<br>2x a&nbsp;vybrat vždy nižší číslo.</span></div>
     </div>
   
     <div class="card scroll long-text ultra-long-text">
       <div class="image" style="background-image: url('ilus/tiha-rubinu.jpg')"></div>
       <div class="frame"></div>
       <div class="name"><span> Tíha rubínů </span></div>
-      <div class="text"><span>Hoď kostkou, kouzlo je<br>sesláno, pokud hodíš 1-3. Předej<br>kartu jinému hráči, ten musí do konce hry při akci POHYB odečíst od<br>hodu kostkou1 za každý<br>rubín,který má.</span></div>
+      <div class="text"><span>Hoď kostkou, kouzlo je<br>sesláno, pokud hodíš 1-3. Předej<br>kartu jinému hráči, ten musí do konce hry při akci POHYB odečíst od hodu kostkou 1 za každý<br>rubín, který má.</span></div>
     </div>
   
     <div class="card scroll long-text ultra-long-text mega-fucking-long-text">
       <div class="image" style="background-image: url('ilus/poslusnost.jpg')"></div>
       <div class="frame"></div>
       <div class="name"><span> Poslušnost </span></div>
-      <div class="text"><span>Hoď kostkou,<br>kouzlo je sesláno, pokud hodíš<br>1-3. Předej kartu jinému hráči, ten<br>se musí při akci POHYB pohybovat pouze směrem k&nbsp;sesilateli kouzla, dokud se nedostane na stejné pole nebo za něj. Potom kartu<br>vyřaď ze hry.</span></div>
+      <div class="text"><span>Hoď kostkou,<br>kouzlo je sesláno, pokud hodíš<br>1-3. Předej kartu jinému hráči, ten<br>se musí při akci POHYB pohybovat pouze směrem k&nbsp;sesilateli kouzla, dokud se nedostane na stejné<br>pole nebo za něj. Potom<br>kartu vyřaď<br>ze hry.</span></div>
     </div>
   
     <div class="card scroll long-text">
@@ -491,84 +502,84 @@ text {
       <div class="image" style="background-image: url('ilus/obranne-kouzlo.jpg')"></div>
       <div class="frame"></div>
       <div class="name"><span> Obranné kouzlo </span></div>
-      <div class="text"><span>Kouzlo je sesláno automaticky. Zruš jedno kouzlo, které<br>na tebe působí.</span></div>
+      <div class="text"><span>Kouzlo je sesláno<br>automaticky. Zruš jedno kouzlo, které na tebe<br>působí.</span></div>
     </div>
   
     <div class="card scroll">
       <div class="image" style="background-image: url('ilus/obranne-kouzlo.jpg')"></div>
       <div class="frame"></div>
       <div class="name"><span> Obranné kouzlo </span></div>
-      <div class="text"><span>Kouzlo je sesláno automaticky. Zruš jedno kouzlo, které<br>na tebe působí.</span></div>
+      <div class="text"><span>Kouzlo je sesláno<br>automaticky. Zruš jedno kouzlo, které na tebe<br>působí.</span></div>
     </div>
   
     <div class="card poison">
       <div class="image" style="background-image: url('ilus/hadi-jed.jpg')"></div>
       <div class="frame"></div>
       <div class="name"><span> Hadí jed </span></div>
-      <div class="text"><span>Do konce hry odečítej od&nbsp;hodu kostkou -1.</span></div>
+      <div class="text"><span>Do konce hry odečítej od&nbsp;hodu kostkou 1.</span></div>
     </div>
   
     <div class="card poison">
       <div class="image" style="background-image: url('ilus/hadi-jed.jpg')"></div>
       <div class="frame"></div>
       <div class="name"><span> Hadí jed </span></div>
-      <div class="text"><span>Do konce hry odečítej od&nbsp;hodu kostkou -1.</span></div>
+      <div class="text"><span>Do konce hry odečítej od&nbsp;hodu kostkou 1.</span></div>
     </div>
   
     <div class="card poison">
       <div class="image" style="background-image: url('ilus/hadi-jed.jpg')"></div>
       <div class="frame"></div>
       <div class="name"><span> Hadí jed </span></div>
-      <div class="text"><span>Do konce hry odečítej od&nbsp;hodu kostkou -1.</span></div>
+      <div class="text"><span>Do konce hry odečítej od&nbsp;hodu kostkou 1.</span></div>
     </div>
   
     <div class="card poison">
       <div class="image" style="background-image: url('ilus/hadi-jed.jpg')"></div>
       <div class="frame"></div>
       <div class="name"><span> Hadí jed </span></div>
-      <div class="text"><span>Do konce hry odečítej od&nbsp;hodu kostkou -1.</span></div>
+      <div class="text"><span>Do konce hry odečítej od&nbsp;hodu kostkou 1.</span></div>
     </div>
   
     <div class="card poison">
       <div class="image" style="background-image: url('ilus/hadi-jed.jpg')"></div>
       <div class="frame"></div>
       <div class="name"><span> Hadí jed </span></div>
-      <div class="text"><span>Do konce hry odečítej od&nbsp;hodu kostkou -1.</span></div>
+      <div class="text"><span>Do konce hry odečítej od&nbsp;hodu kostkou 1.</span></div>
     </div>
   
     <div class="card poison">
       <div class="image" style="background-image: url('ilus/hadi-jed.jpg')"></div>
       <div class="frame"></div>
       <div class="name"><span> Hadí jed </span></div>
-      <div class="text"><span>Do konce hry odečítej od&nbsp;hodu kostkou -1.</span></div>
+      <div class="text"><span>Do konce hry odečítej od&nbsp;hodu kostkou 1.</span></div>
     </div>
   
     <div class="card poison">
       <div class="image" style="background-image: url('ilus/hadi-jed.jpg')"></div>
       <div class="frame"></div>
       <div class="name"><span> Hadí jed </span></div>
-      <div class="text"><span>Do konce hry odečítej od&nbsp;hodu kostkou -1.</span></div>
+      <div class="text"><span>Do konce hry odečítej od&nbsp;hodu kostkou 1.</span></div>
     </div>
   
     <div class="card poison">
       <div class="image" style="background-image: url('ilus/hadi-jed.jpg')"></div>
       <div class="frame"></div>
       <div class="name"><span> Hadí jed </span></div>
-      <div class="text"><span>Do konce hry odečítej od&nbsp;hodu kostkou -1.</span></div>
+      <div class="text"><span>Do konce hry odečítej od&nbsp;hodu kostkou 1.</span></div>
     </div>
   
     <div class="card poison">
       <div class="image" style="background-image: url('ilus/hadi-jed.jpg')"></div>
       <div class="frame"></div>
       <div class="name"><span> Hadí jed </span></div>
-      <div class="text"><span>Do konce hry odečítej od&nbsp;hodu kostkou -1.</span></div>
+      <div class="text"><span>Do konce hry odečítej od&nbsp;hodu kostkou 1.</span></div>
     </div>
   
     <div class="card poison">
       <div class="image" style="background-image: url('ilus/hadi-jed.jpg')"></div>
       <div class="frame"></div>
       <div class="name"><span> Hadí jed </span></div>
-      <div class="text"><span>Do konce hry odečítej od&nbsp;hodu kostkou -1.</span></div>
+      <div class="text"><span>Do konce hry odečítej od&nbsp;hodu kostkou 1.</span></div>
     </div>
   
     <div class="card poison">
