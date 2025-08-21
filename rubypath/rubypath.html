@@ -2,7 +2,7 @@
   <html>
     <head>
       <style type="text/css">
-        @page { margin: 9mm 0 0 0; }
+        @page { margin: 9mm 0 0 0; background: #ddd; }
 
 body {
   -webkit-print-color-adjust: exact;
@@ -24,8 +24,19 @@ html, body {
   background-repeat: no-repeat;
 }
 
+#pageborder {
+  position:fixed;
+  height: calc(100% - 1cm);
+  width: calc(100% - 2cm);
+  top: 0;
+  left: 1cm;
+  z-index: 0;
+  background: white;
+}
+
 .cards {
   text-align: center;
+  scale: 0.8775;
 }
 
 .card {
@@ -125,11 +136,12 @@ text {
   font-size: 3.4mm;
 }
 
+.longer-text .text {
+  font-size: 3.2mm;
+
+}
 .ultra-long-text .text {
   font-size: 2.9mm;
-  line-height: 2.9mm;
-  top: 61.5mm;
-
 }
 
 .mega-fucking-long-text .text {
@@ -156,9 +168,72 @@ text {
     </div>
   
     <div class="card item">
+      <div class="image" style="background-image: url('ilus/kostka.jpg')"></div>
+      <div class="frame"></div>
+      <div class="name"><span> Magická kostka </span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card item">
+      <div class="image" style="background-image: url('ilus/kostka.jpg')"></div>
+      <div class="frame"></div>
+      <div class="name"><span> Magická kostka </span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card item">
+      <div class="image" style="background-image: url('ilus/kostka.jpg')"></div>
+      <div class="frame"></div>
+      <div class="name"><span> Magická kostka </span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card item">
       <div class="image" style="background-image: url('ilus/magickyrubin.jpg')"></div>
       <div class="frame"></div>
       <div class="name"><span> Magický rubín </span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card item">
+      <div class="image" style="background-image: url('ilus/magickyrubin.jpg')"></div>
+      <div class="frame"></div>
+      <div class="name"><span> Magický rubín </span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card item">
+      <div class="image" style="background-image: url('ilus/magickyrubin.jpg')"></div>
+      <div class="frame"></div>
+      <div class="name"><span> Magický rubín </span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card item">
+      <div class="image" style="background-image: url('ilus/magickyrubin.jpg')"></div>
+      <div class="frame"></div>
+      <div class="name"><span> Magický rubín </span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card item">
+      <div class="image" style="background-image: url('ilus/lektvar.jpg')"></div>
+      <div class="frame"></div>
+      <div class="name"><span> Lektvar proti hadímu jedu </span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card item">
+      <div class="image" style="background-image: url('ilus/lektvar.jpg')"></div>
+      <div class="frame"></div>
+      <div class="name"><span> Lektvar proti hadímu jedu </span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card item">
+      <div class="image" style="background-image: url('ilus/lektvar.jpg')"></div>
+      <div class="frame"></div>
+      <div class="name"><span> Lektvar proti hadímu jedu </span></div>
       <div class="text"><span></span></div>
     </div>
   
@@ -177,9 +252,72 @@ text {
     </div>
   
     <div class="card item">
+      <div class="image" style="background-image: url('ilus/amulet.jpg')"></div>
+      <div class="frame"></div>
+      <div class="name"><span> Amulet štěstí </span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card item">
+      <div class="image" style="background-image: url('ilus/amulet.jpg')"></div>
+      <div class="frame"></div>
+      <div class="name"><span> Amulet štěstí </span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card item">
+      <div class="image" style="background-image: url('ilus/amulet.jpg')"></div>
+      <div class="frame"></div>
+      <div class="name"><span> Amulet štěstí </span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card item">
       <div class="image" style="background-image: url('ilus/mince.jpg')"></div>
       <div class="frame"></div>
       <div class="name"><span> Mince </span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card item">
+      <div class="image" style="background-image: url('ilus/mince.jpg')"></div>
+      <div class="frame"></div>
+      <div class="name"><span> Mince </span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card item">
+      <div class="image" style="background-image: url('ilus/mince.jpg')"></div>
+      <div class="frame"></div>
+      <div class="name"><span> Mince </span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card item">
+      <div class="image" style="background-image: url('ilus/mince.jpg')"></div>
+      <div class="frame"></div>
+      <div class="name"><span> Mince </span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card item">
+      <div class="image" style="background-image: url('ilus/mec.jpg')"></div>
+      <div class="frame"></div>
+      <div class="name"><span> Meč </span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card item">
+      <div class="image" style="background-image: url('ilus/mec.jpg')"></div>
+      <div class="frame"></div>
+      <div class="name"><span> Meč </span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card item">
+      <div class="image" style="background-image: url('ilus/mec.jpg')"></div>
+      <div class="frame"></div>
+      <div class="name"><span> Meč </span></div>
       <div class="text"><span></span></div>
     </div>
   
@@ -198,6 +336,27 @@ text {
     </div>
   
     <div class="card item">
+      <div class="image" style="background-image: url('ilus/lucerna.jpg')"></div>
+      <div class="frame"></div>
+      <div class="name"><span> Lucerna </span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card item">
+      <div class="image" style="background-image: url('ilus/lucerna.jpg')"></div>
+      <div class="frame"></div>
+      <div class="name"><span> Lucerna </span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card item">
+      <div class="image" style="background-image: url('ilus/lucerna.jpg')"></div>
+      <div class="frame"></div>
+      <div class="name"><span> Lucerna </span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card item">
       <div class="image" style="background-image: url('ilus/mapa.jpg')"></div>
       <div class="frame"></div>
       <div class="name"><span> Mapa lesa </span></div>
@@ -205,9 +364,23 @@ text {
     </div>
   
     <div class="card item">
-      <div class="image" style="background-image: url('ilus/svitek.jpg')"></div>
+      <div class="image" style="background-image: url('ilus/mapa.jpg')"></div>
       <div class="frame"></div>
-      <div class="name"><span> Kouzelný svitek </span></div>
+      <div class="name"><span> Mapa lesa </span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card item">
+      <div class="image" style="background-image: url('ilus/mapa.jpg')"></div>
+      <div class="frame"></div>
+      <div class="name"><span> Mapa lesa </span></div>
+      <div class="text"><span></span></div>
+    </div>
+  
+    <div class="card item">
+      <div class="image" style="background-image: url('ilus/mapa.jpg')"></div>
+      <div class="frame"></div>
+      <div class="name"><span> Mapa lesa </span></div>
       <div class="text"><span></span></div>
     </div>
   
@@ -288,14 +461,14 @@ text {
       <div class="text"><span>Vrať se na nejbližší<br>pole s rubínem a proveď jeho efekt.</span></div>
     </div>
   
-    <div class="card event long-text ultra-long-text">
+    <div class="card event long-text longer-text ultra-long-text">
       <div class="image" style="background-image: url('ilus/ztraceny-rubin3.jpg')"></div>
       <div class="frame"></div>
       <div class="name"><span> Ztracený rubín </span></div>
       <div class="text"><span>Polož 1 ze svých rubínů<br>na pole, na kterém stojíš. Pokud nemáš rubín, polož zde 1 rubín ze společné zásoby rubínů. Od teď je toto pole považováno za pole<br>s rubínem, dokud tento rubín<br>někdo nesebere.</span></div>
     </div>
   
-    <div class="card event long-text ultra-long-text">
+    <div class="card event long-text longer-text ultra-long-text">
       <div class="image" style="background-image: url('ilus/ztraceny-rubin3.jpg')"></div>
       <div class="frame"></div>
       <div class="name"><span> Ztracený rubín </span></div>
@@ -372,14 +545,14 @@ text {
       <div class="text"><span>Podívej se na horní<br>2 karty předmětu kouzelný svitek a vrať je zpět v&nbsp;libovolném pořadí.</span></div>
     </div>
   
-    <div class="card event long-text ultra-long-text">
+    <div class="card event long-text longer-text">
       <div class="image" style="background-image: url('ilus/zle-znameni.jpg')"></div>
       <div class="frame"></div>
       <div class="name"><span> Špatné znamení </span></div>
       <div class="text"><span>Do konce hry se ti<br>při hodu kostkou nepočítá 6.<br>Pokud máš amulet štěstí, polož<br>tuto kartu pod něj. Dokud máš<br>amulet štěstí, tato karta<br>nemá žádný účinek.</span></div>
     </div>
   
-    <div class="card event long-text ultra-long-text">
+    <div class="card event long-text longer-text">
       <div class="image" style="background-image: url('ilus/zle-znameni.jpg')"></div>
       <div class="frame"></div>
       <div class="name"><span> Špatné znamení </span></div>
@@ -414,7 +587,7 @@ text {
       <div class="text"><span>Vezmi si 2 rubíny<br>a kartu mince.</span></div>
     </div>
   
-    <div class="card scroll long-text ultra-long-text">
+    <div class="card scroll long-text longer-text ultra-long-text">
       <div class="image" style="background-image: url('ilus/hamiznost.jpg')"></div>
       <div class="frame"></div>
       <div class="name"><span> Hamižnost </span></div>
@@ -435,7 +608,7 @@ text {
       <div class="text"><span>Hoď kostkou, kouzlo<br>je sesláno, pokud hodíš 4-6.<br>Vyměň si místo na hracím plánu s&nbsp;jiným hráčem do 10 polí od tebe a proveď<br>efekt pole.</span></div>
     </div>
   
-    <div class="card scroll long-text ultra-long-text">
+    <div class="card scroll long-text longer-text">
       <div class="image" style="background-image: url('ilus/kouzelny-portal.jpg')"></div>
       <div class="frame"></div>
       <div class="name"><span> Kouzelný portál </span></div>
@@ -463,21 +636,21 @@ text {
       <div class="text"><span>Jazyk na tomto svitku nejsi schopen rozluštit. Svitek je bezcenný a nelze ho<br>použít.</span></div>
     </div>
   
-    <div class="card scroll long-text ultra-long-text">
+    <div class="card scroll long-text longer-text ultra-long-text">
       <div class="image" style="background-image: url('ilus/Spatna-volba2.jpg')"></div>
       <div class="frame"></div>
       <div class="name"><span> Špatná volba </span></div>
-      <div class="text"><span>Hoď kostkou, kouzlo je sesláno, pokud hodíš 1-3. Předej kartu jinému hráči, ten musí do konce hry při akci POHYB házet kostkou<br>2x a&nbsp;vybrat vždy nižší číslo.</span></div>
+      <div class="text"><span>Hoď kostkou, kouzlo je<br>sesláno, pokud hodíš 1-3. Předej kartu jinému hráči, ten musí do konce hry při akci POHYB<br>házet kostkou 2x a&nbsp;vybrat<br> vždy nižší číslo.</span></div>
     </div>
   
-    <div class="card scroll long-text ultra-long-text">
+    <div class="card scroll long-text longer-text ultra-long-text">
       <div class="image" style="background-image: url('ilus/tiha-rubinu.jpg')"></div>
       <div class="frame"></div>
       <div class="name"><span> Tíha rubínů </span></div>
       <div class="text"><span>Hoď kostkou, kouzlo je<br>sesláno, pokud hodíš 1-3. Předej<br>kartu jinému hráči, ten musí do konce hry při akci POHYB odečíst od hodu kostkou 1 za každý<br>rubín, který má.</span></div>
     </div>
   
-    <div class="card scroll long-text ultra-long-text mega-fucking-long-text">
+    <div class="card scroll long-text longer-text ultra-long-text mega-fucking-long-text">
       <div class="image" style="background-image: url('ilus/poslusnost.jpg')"></div>
       <div class="frame"></div>
       <div class="name"><span> Poslušnost </span></div>
@@ -491,11 +664,11 @@ text {
       <div class="text"><span>Hoď kostkou, kouzlo je<br>sesláno, pokud hodíš 4-6.<br>Do konce hry při akci<br>POHYB přičítej k&nbsp;hodu<br>kostkou 1.</span></div>
     </div>
   
-    <div class="card scroll long-text ultra-long-text">
+    <div class="card scroll long-text longer-text">
       <div class="image" style="background-image: url('ilus/razova-vlna.jpg')"></div>
       <div class="frame"></div>
       <div class="name"><span> Rázová vlna </span></div>
-      <div class="text"><span>Hoď kostkou,<br>kouzlo je sesláno, pokud hodíš<br>4-6. Všichni hráči do 10 polí před<br>tebou hodí 2x kostkou a posunou<br>se zpět o hodnotu hozenou<br>na kostkách.</span></div>
+      <div class="text"><span>Hoď kostkou,<br>kouzlo je sesláno, pokud hodíš<br>4-6. Všichni hráči do 10 polí před<br>tebou hodí 2x kostkou a posunou se zpět o hodnotu hozenou na kostkách.</span></div>
     </div>
   
     <div class="card scroll">

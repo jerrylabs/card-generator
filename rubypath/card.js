@@ -15,6 +15,9 @@ textLenghtClasses = (length) => {
     classes = `${classes} long-text`;
   }
   if (length > 150) {
+    classes = `${classes} longer-text`;
+  }
+  if (length > 170) {
     classes = `${classes} ultra-long-text`;
   }
   if (length > 230) {

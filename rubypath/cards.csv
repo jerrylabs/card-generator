@@ -1,13 +1,36 @@
 type,name,image,text
 item,Magická kostka,kostka,
+item,Magická kostka,kostka,
+item,Magická kostka,kostka,
+item,Magická kostka,kostka,
+item,Magický rubín,magickyrubin,
+item,Magický rubín,magickyrubin,
+item,Magický rubín,magickyrubin,
 item,Magický rubín,magickyrubin,
 item,Lektvar proti hadímu jedu,lektvar,
+item,Lektvar proti hadímu jedu,lektvar,
+item,Lektvar proti hadímu jedu,lektvar,
+item,Lektvar proti hadímu jedu,lektvar,
+item,Amulet štěstí,amulet,
+item,Amulet štěstí,amulet,
+item,Amulet štěstí,amulet,
 item,Amulet štěstí,amulet,
 item,Mince,mince,
+item,Mince,mince,
+item,Mince,mince,
+item,Mince,mince,
+item,Meč,mec,
+item,Meč,mec,
+item,Meč,mec,
 item,Meč,mec,
 item,Lucerna,lucerna,
+item,Lucerna,lucerna,
+item,Lucerna,lucerna,
+item,Lucerna,lucerna,
 item,Mapa lesa,mapa,
-item,Kouzelný svitek,svitek,
+item,Mapa lesa,mapa,
+item,Mapa lesa,mapa,
+item,Mapa lesa,mapa,
 event,Dobré počasí,dobre-pocasi,V příštím tahu přičti k&nbsp;hodu kostkou 1.
 event,Dobré počasí,dobre-pocasi,V příštím tahu přičti k&nbsp;hodu kostkou 1.
 event,Cesta je volná,volna-cesta,Nic se nestalo.
@@ -44,11 +67,11 @@ scroll,Kouzelný portál,kouzelny-portal,"Hoď kostkou,<br>kouzlo je sesláno, p
 scroll,Nenávist,nenavist,"Hoď kostkou, kouzlo je<br>sesláno, pokud hodíš 1-3. Předej kartu jinému hráči, tomu se do konce hry<br>při hodu kostkou<br>nepočítá 5."
 scroll,Zrádná magie,zradna-magie,Magie se obrátila proti<br> tobě. Kartu ihned otoč lícem nahoru. Do konce hry nemůžeš používat předměty magická <br>kostka a magický<br>rubín.
 scroll,Prastaré runy,runy,Jazyk na tomto svitku nejsi schopen rozluštit. Svitek je bezcenný a nelze ho<br>použít.
-scroll,Špatná volba,Spatna-volba2,"Hoď kostkou, kouzlo je sesláno, pokud hodíš 1-3. Předej kartu jinému hráči, ten musí do konce hry při akci POHYB házet kostkou<br>2x a&nbsp;vybrat vždy nižší číslo."
+scroll,Špatná volba,Spatna-volba2,"Hoď kostkou, kouzlo je<br>sesláno, pokud hodíš 1-3. Předej kartu jinému hráči, ten musí do konce hry při akci POHYB<br>házet kostkou 2x a&nbsp;vybrat<br> vždy nižší číslo."
 scroll,Tíha rubínů,tiha-rubinu,"Hoď kostkou, kouzlo je<br>sesláno, pokud hodíš 1-3. Předej<br>kartu jinému hráči, ten musí do konce hry při akci POHYB odečíst od hodu kostkou 1 za každý<br>rubín, který má."
 scroll,Poslušnost,poslusnost,"Hoď kostkou,<br>kouzlo je sesláno, pokud hodíš<br>1-3. Předej kartu jinému hráči, ten<br>se musí při akci POHYB pohybovat pouze směrem k&nbsp;sesilateli kouzla, dokud se nedostane na stejné<br>pole nebo za něj. Potom<br>kartu vyřaď<br>ze hry."
 scroll,Nadpřirozená rychlost,nadprirozena-rychlost,"Hoď kostkou, kouzlo je<br>sesláno, pokud hodíš 4-6.<br>Do konce hry při akci<br>POHYB přičítej k&nbsp;hodu<br>kostkou 1."
-scroll,Rázová vlna,razova-vlna,"Hoď kostkou,<br>kouzlo je sesláno, pokud hodíš<br>4-6. Všichni hráči do 10 polí před<br>tebou hodí 2x kostkou a posunou<br>se zpět o hodnotu hozenou<br>na kostkách."
+scroll,Rázová vlna,razova-vlna,"Hoď kostkou,<br>kouzlo je sesláno, pokud hodíš<br>4-6. Všichni hráči do 10 polí před<br>tebou hodí 2x kostkou a posunou se zpět o hodnotu hozenou na kostkách."
 scroll,Obranné kouzlo,obranne-kouzlo,"Kouzlo je sesláno<br>automaticky. Zruš jedno kouzlo, které na tebe<br>působí."
 scroll,Obranné kouzlo,obranne-kouzlo,"Kouzlo je sesláno<br>automaticky. Zruš jedno kouzlo, které na tebe<br>působí."
 poison,Hadí jed,hadi-jed,Do konce hry odečítej od&nbsp;hodu kostkou 1.
