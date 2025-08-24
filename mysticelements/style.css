@@ -8,8 +8,29 @@ html, body {
   font-size: 0;
 }
 
+#pageborder {
+  position:fixed;
+  height: calc(100% - 1cm);
+  width: calc(100% - 2cm);
+  top: 0;
+  left: 1cm;
+  z-index: 0;
+  background: white;
+}
+
+@font-face {
+  font-family: "FantaisieArtistique.otf";
+  src: url("http://localhost:8080/font/FantaisieArtistique.otf.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Sualtim";
+  src: url("http://localhost:8080/font/Sualtim.otf") format("opentype");
+}
+
 * {
   background-repeat: no-repeat;
+  box-sizing: border-box;
 }
 
 .cards {
@@ -20,43 +41,62 @@ html, body {
   font-size: 12px;
   display: inline-block;
   overflow: hidden;
-  width: 44.0mm;
-  height: 64.0mm;
+  width: 61.0mm;
+  height: 112.0mm;
   box-sizing: border-box;
   page-break-inside: avoid;
   position: relative;
+  border-radius: 5mm;
 }
 
-.card-frame {
+.card__edge {
   height: 100%;
   width: 100%;
   top: 0;
   left: 0;
-  border: 2mm solid white;
+  border: 1cm solid #02081c;
   box-sizing: border-box;
   position: absolute;
+  z-index: 1;
+}
+
+.card__frame {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 3;
+  background-size: contain;
+}
+
+.card__frame--w {
+  background-image: url(http://localhost:8080/card_components/border_white.png);
+}
+
+.card__name {
+  height: 22mm;
+  width: 100%;
+  font-size: 7mm;
+  z-index: 5;
+  background-image: url(http://localhost:8080/card_components/title_bg.png);
+  position: absolute;
+  top: 5mm;
+  font-family: FantaisieArtistique;
+  background-size: contain;
+  padding-top: 2mm;
+  text-transform: uppercase;
+}
+
+.card__image {
+  position: absolute;
   z-index: 2;
+  width: 49mm;
+  left: 6mm;
+  top: 10MM;
 }
 
-.type {
-  display: none;
-}
-
-.card.quest {
-  background: transparent url(http://localhost:8080/imgs/background-quest.jpg) center center;
-  background-size: 100% 100%;
-}
-
-
-/************************************************************
- ***************** * * *  BACK SIDES  * * * *****************
- ************************************************************/
-
-.card.back-side {
-  background: white url(http://localhost:8080/imgs/cmzc-logo.png) center center no-repeat;
-  background-size: 3.5cm
-}
-
-.card.back-side:not(.quest) {
-  transform: rotate(180deg);
+.card__image img {
+  width: 100%;
 }

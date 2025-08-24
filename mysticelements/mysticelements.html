@@ -1,0 +1,1556 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <style type="text/css">
+        body {
+  -webkit-print-color-adjust: exact;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+}
+
+#pageborder {
+  position:fixed;
+  height: calc(100% - 1cm);
+  width: calc(100% - 2cm);
+  top: 0;
+  left: 1cm;
+  z-index: 0;
+  background: white;
+}
+
+@font-face {
+  font-family: "FantaisieArtistique.otf";
+  src: url("http://localhost:8080/font/FantaisieArtistique.otf.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Sualtim";
+  src: url("http://localhost:8080/font/Sualtim.otf") format("opentype");
+}
+
+* {
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+}
+
+.cards {
+  text-align: center;
+}
+
+.card {
+  font-size: 12px;
+  display: inline-block;
+  overflow: hidden;
+  width: 61.0mm;
+  height: 112.0mm;
+  box-sizing: border-box;
+  page-break-inside: avoid;
+  position: relative;
+  border-radius: 5mm;
+}
+
+.card__edge {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border: 1cm solid #02081c;
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 1;
+}
+
+.card__frame {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 3;
+  background-size: contain;
+}
+
+.card__frame--w {
+  background-image: url(http://localhost:8080/card_components/border_white.png);
+}
+
+.card__name {
+  height: 22mm;
+  width: 100%;
+  font-size: 7mm;
+  z-index: 5;
+  background-image: url(http://localhost:8080/card_components/title_bg.png);
+  position: absolute;
+  top: 5mm;
+  font-family: FantaisieArtistique;
+  background-size: contain;
+  padding-top: 2mm;
+  text-transform: uppercase;
+}
+
+.card__image {
+  position: absolute;
+  z-index: 2;
+  width: 49mm;
+  left: 6mm;
+  top: 10MM;
+}
+
+.card__image img {
+  width: 100%;
+}
+
+      </style>
+    </head>
+    <body>
+      <div id="pageborder"></div>
+      <div class="cards">
+        <div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--w"></div>
+      <div class="card__name">Angel</div>
+      <div class="card__cost">5</div>
+      <div class="card__image">
+        <img src="ilus/Angel.png" alt="Angel">
+      </div>
+      <div class="card__status">Flying guard unit</div>
+      <div class="card__text">When attacked, prepare it after combat.</div>
+      <div class="card__power">5</div>
+      <div class="card__health">5</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--w"></div>
+      <div class="card__name">Paladin</div>
+      <div class="card__cost">4</div>
+      <div class="card__image">
+        <img src="ilus/Paladin.png" alt="Paladin">
+      </div>
+      <div class="card__status">Guard unit</div>
+      <div class="card__text">Reduce all 💥 dealt to Paladin by 1.</div>
+      <div class="card__power">4</div>
+      <div class="card__health">4</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--w"></div>
+      <div class="card__name">Monk</div>
+      <div class="card__cost">3</div>
+      <div class="card__image">
+        <img src="ilus/Monk.png" alt="Monk">
+      </div>
+      <div class="card__status">unit</div>
+      <div class="card__text">When your unit is killed, promote Cleric.</div>
+      <div class="card__power">3</div>
+      <div class="card__health">3</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--w"></div>
+      <div class="card__name">Unicorn</div>
+      <div class="card__cost">3</div>
+      <div class="card__image">
+        <img src="ilus/Unicorn.png" alt="Unicorn">
+      </div>
+      <div class="card__status">unit</div>
+      <div class="card__text">Cannot be killed unless 3 ANY ENERGY is paid.</div>
+      <div class="card__power">2</div>
+      <div class="card__health">2</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--w"></div>
+      <div class="card__name">Pegasus</div>
+      <div class="card__cost">3</div>
+      <div class="card__image">
+        <img src="ilus/Pegasus.png" alt="Pegasus">
+      </div>
+      <div class="card__status">Flying unit</div>
+      <div class="card__text">USE: Any unit gets flying this turn.</div>
+      <div class="card__power">2</div>
+      <div class="card__health">2</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--w"></div>
+      <div class="card__name">Priest</div>
+      <div class="card__cost">1</div>
+      <div class="card__image">
+        <img src="ilus/Priest.png" alt="Priest">
+      </div>
+      <div class="card__status">unit</div>
+      <div class="card__text">USE: Return a card from your grave to the hand.</div>
+      <div class="card__power">1</div>
+      <div class="card__health">1</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--w"></div>
+      <div class="card__name">Healer</div>
+      <div class="card__cost">2</div>
+      <div class="card__image">
+        <img src="ilus/Healer.png" alt="Healer">
+      </div>
+      <div class="card__status">unit</div>
+      <div class="card__text">USE: Heal all 💥 from any unit.</div>
+      <div class="card__power">1</div>
+      <div class="card__health">1</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--w"></div>
+      <div class="card__name">Hermit</div>
+      <div class="card__cost">3</div>
+      <div class="card__image">
+        <img src="ilus/Hermit.png" alt="Hermit">
+      </div>
+      <div class="card__status">unit</div>
+      <div class="card__text">All your other units are guards.</div>
+      <div class="card__power">0</div>
+      <div class="card__health">1</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--w"></div>
+      <div class="card__name">Blessing</div>
+      <div class="card__cost">5</div>
+      <div class="card__image">
+        <img src="ilus/Blessing.png" alt="Blessing">
+      </div>
+      <div class="card__status">wonder</div>
+      <div class="card__text">Heal all 💥 from each of your units.</div>
+      
+      
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--w"></div>
+      <div class="card__name">Halo</div>
+      <div class="card__cost">3</div>
+      <div class="card__image">
+        <img src="ilus/Halo.png" alt="Halo">
+      </div>
+      <div class="card__status">charm</div>
+      <div class="card__text">+3 ⚔️ & +3 🛡️ to charmed unit. At your turn start: heal up to 💥💥.</div>
+      <div class="card__power">+3</div>
+      <div class="card__health">+3</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--w"></div>
+      <div class="card__name">Shield</div>
+      <div class="card__cost">2</div>
+      <div class="card__image">
+        <img src="ilus/Shield.png" alt="Shield">
+      </div>
+      <div class="card__status">charm</div>
+      <div class="card__text">Heal charmed unit, then it gets +5 🛡️</div>
+      
+      <div class="card__health">+5</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--w"></div>
+      <div class="card__name">Light</div>
+      <div class="card__cost">1</div>
+      <div class="card__image">
+        <img src="ilus/Light.png" alt="Light">
+      </div>
+      <div class="card__status">wonder</div>
+      <div class="card__text">Opponent discards a non-white card of your choice.</div>
+      
+      
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--w"></div>
+      <div class="card__name">Hope</div>
+      <div class="card__cost">1</div>
+      <div class="card__image">
+        <img src="ilus/Hope.png" alt="Hope">
+      </div>
+      <div class="card__status">wonder</div>
+      <div class="card__text">Return a card from your grave to your hand.</div>
+      
+      
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--w"></div>
+      <div class="card__name">Sanctuary</div>
+      <div class="card__cost">4</div>
+      <div class="card__image">
+        <img src="ilus/Sanctuary.png" alt="Sanctuary">
+      </div>
+      <div class="card__status">relic</div>
+      <div class="card__text">USE: Heal up to 💥💥.</div>
+      
+      
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--w"></div>
+      <div class="card__name">Prayer</div>
+      <div class="card__cost">1</div>
+      <div class="card__image">
+        <img src="ilus/Prayer.png" alt="Prayer">
+      </div>
+      <div class="card__status">wonder</div>
+      <div class="card__text">Reveal top card of your deck or grave. If it's white, play it for free.</div>
+      
+      
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--y"></div>
+      <div class="card__name">Chariot</div>
+      <div class="card__cost">3</div>
+      <div class="card__image">
+        <img src="ilus/Chariot.png" alt="Chariot">
+      </div>
+      <div class="card__status">Shooting guarding tempo unit</div>
+      <div class="card__text"></div>
+      <div class="card__power">4</div>
+      <div class="card__health">2</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--y"></div>
+      <div class="card__name">Legionnaire</div>
+      <div class="card__cost">4</div>
+      <div class="card__image">
+        <img src="ilus/Legionnaire.png" alt="Legionnaire">
+      </div>
+      <div class="card__status">unit</div>
+      <div class="card__text">When deployed, promote all your other units.</div>
+      <div class="card__power">3</div>
+      <div class="card__health">3</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--y"></div>
+      <div class="card__name">Marshall</div>
+      <div class="card__cost">4</div>
+      <div class="card__image">
+        <img src="ilus/Marshall.png" alt="Marshall">
+      </div>
+      <div class="card__status">unit</div>
+      <div class="card__text">USE: Prepare up to two units.</div>
+      <div class="card__power">3</div>
+      <div class="card__health">3</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--y"></div>
+      <div class="card__name">Sphinx</div>
+      <div class="card__cost">3</div>
+      <div class="card__image">
+        <img src="ilus/Sphinx.png" alt="Sphinx">
+      </div>
+      <div class="card__status">unit</div>
+      <div class="card__text">When non-yellow unit attacks, deal 💥 to attacking player.</div>
+      <div class="card__power">3</div>
+      <div class="card__health">4</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--y"></div>
+      <div class="card__name">Scarabeus</div>
+      <div class="card__cost">2</div>
+      <div class="card__image">
+        <img src="ilus/Scarabeus.png" alt="Scarabeus">
+      </div>
+      <div class="card__status">unit</div>
+      <div class="card__text">USE: Exhaust any unit and prepare any unit.</div>
+      <div class="card__power">2</div>
+      <div class="card__health">2</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--y"></div>
+      <div class="card__name">Pharaoh</div>
+      <div class="card__cost">6</div>
+      <div class="card__image">
+        <img src="ilus/Pharaoh.png" alt="Pharaoh">
+      </div>
+      <div class="card__status">unit</div>
+      <div class="card__text">Deal 💥 to your unit: get 1 ANY ENERGY.</div>
+      <div class="card__power">2</div>
+      <div class="card__health">6</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--y"></div>
+      <div class="card__name">Mummy</div>
+      <div class="card__cost">5</div>
+      <div class="card__image">
+        <img src="ilus/Mummy.png" alt="Mummy">
+      </div>
+      <div class="card__status">Guard unit</div>
+      <div class="card__text">At your turn start, heal all its 💥.</div>
+      <div class="card__power">4</div>
+      <div class="card__health">6</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--y"></div>
+      <div class="card__name">Wurm</div>
+      <div class="card__cost">8</div>
+      <div class="card__image">
+        <img src="ilus/Wurm.png" alt="Wurm">
+      </div>
+      <div class="card__status">unit</div>
+      <div class="card__text">At your turn start, destroy any exhausted unit or relic.</div>
+      <div class="card__power">7</div>
+      <div class="card__health">7</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--y"></div>
+      <div class="card__name">Lightning</div>
+      <div class="card__cost">2</div>
+      <div class="card__image">
+        <img src="ilus/Lightning.png" alt="Lightning">
+      </div>
+      <div class="card__status">wonder</div>
+      <div class="card__text">Deal 💥💥💥💥</div>
+      
+      
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--y"></div>
+      <div class="card__name">Law</div>
+      <div class="card__cost">5</div>
+      <div class="card__image">
+        <img src="ilus/Law.png" alt="Law">
+      </div>
+      <div class="card__status">wonder</div>
+      <div class="card__text">Destroy any card in battle.</div>
+      
+      
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--y"></div>
+      <div class="card__name">Obey</div>
+      <div class="card__cost">2</div>
+      <div class="card__image">
+        <img src="ilus/Obey.png" alt="Obey">
+      </div>
+      <div class="card__status">wonder</div>
+      <div class="card__text">Prepare (if neded) and use any unit.</div>
+      
+      
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--y"></div>
+      <div class="card__name">Obelisk</div>
+      <div class="card__cost">4</div>
+      <div class="card__image">
+        <img src="ilus/Obelisk.png" alt="Obelisk">
+      </div>
+      <div class="card__status">relic</div>
+      <div class="card__text">USE: Prepare any unit.</div>
+      
+      
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--y"></div>
+      <div class="card__name">Gold</div>
+      <div class="card__cost">1</div>
+      <div class="card__image">
+        <img src="ilus/Gold.png" alt="Gold">
+      </div>
+      <div class="card__status">charm</div>
+      <div class="card__text">Charmed unit gets: "USE: Get 2 ENERGY of any one color."</div>
+      
+      
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--y"></div>
+      <div class="card__name">Coliseum</div>
+      <div class="card__cost">4</div>
+      <div class="card__image">
+        <img src="ilus/Coliseum.png" alt="Coliseum">
+      </div>
+      <div class="card__status">relic</div>
+      <div class="card__text">USE: Promote any unit.</div>
+      
+      
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--y"></div>
+      <div class="card__name">Judgement</div>
+      <div class="card__cost">10</div>
+      <div class="card__image">
+        <img src="ilus/Judgement.png" alt="Judgement">
+      </div>
+      <div class="card__status">wonder</div>
+      <div class="card__text">Destroy all non-yellow units.</div>
+      
+      
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--b"></div>
+      <div class="card__name">Kraken</div>
+      <div class="card__cost">7</div>
+      <div class="card__image">
+        <img src="ilus/Kraken.png" alt="Kraken">
+      </div>
+      <div class="card__status">unit</div>
+      <div class="card__text">Cannot be destroyed unless 3 MANA is paid.</div>
+      <div class="card__power">8</div>
+      <div class="card__health">8</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--b"></div>
+      <div class="card__name">Pirate</div>
+      <div class="card__cost">4</div>
+      <div class="card__image">
+        <img src="ilus/Pirate.png" alt="Pirate">
+      </div>
+      <div class="card__status">unit</div>
+      <div class="card__text">USE: Steal 1 ANY ENERGY</div>
+      <div class="card__power">4</div>
+      <div class="card__health">4</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--b"></div>
+      <div class="card__name">Merfolk</div>
+      <div class="card__cost">3</div>
+      <div class="card__image">
+        <img src="ilus/Merfolk.png" alt="Merfolk">
+      </div>
+      <div class="card__status">unit</div>
+      <div class="card__text">+3 ⚔️ & +3 🛡️ if you have other blue unit in the battle.</div>
+      <div class="card__power">3</div>
+      <div class="card__health">3</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--b"></div>
+      <div class="card__name">Manta</div>
+      <div class="card__cost">4</div>
+      <div class="card__image">
+        <img src="ilus/Manta.png" alt="Manta">
+      </div>
+      <div class="card__status">Flying unit</div>
+      <div class="card__text">When attacks, other unit gets flying this turn.</div>
+      <div class="card__power">5</div>
+      <div class="card__health">5</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--b"></div>
+      <div class="card__name">Siren</div>
+      <div class="card__cost">4</div>
+      <div class="card__image">
+        <img src="ilus/Siren.png" alt="Siren">
+      </div>
+      <div class="card__status">unit</div>
+      <div class="card__text">USE: Return an unit to the hand.</div>
+      <div class="card__power">3</div>
+      <div class="card__health">2</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--b"></div>
+      <div class="card__name">Nayad</div>
+      <div class="card__cost">4</div>
+      <div class="card__image">
+        <img src="ilus/Nayad.png" alt="Nayad">
+      </div>
+      <div class="card__status">unit</div>
+      <div class="card__text">USE: Exhaust any unit.</div>
+      <div class="card__power">2</div>
+      <div class="card__health">3</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--b"></div>
+      <div class="card__name">Gorgon</div>
+      <div class="card__cost">5</div>
+      <div class="card__image">
+        <img src="ilus/Gorgon.png" alt="Gorgon">
+      </div>
+      <div class="card__status">Guard unit</div>
+      <div class="card__text">When damages an unit, destroy it.</div>
+      <div class="card__power">2</div>
+      <div class="card__health">6</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--b"></div>
+      <div class="card__name">Serpent</div>
+      <div class="card__cost">6</div>
+      <div class="card__image">
+        <img src="ilus/Serpent.png" alt="Serpent">
+      </div>
+      <div class="card__status">unit</div>
+      <div class="card__text">Does not prepare at your turn start. 3 BLUE ENERGY: Prepare it.</div>
+      <div class="card__power">7</div>
+      <div class="card__health">7</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--b"></div>
+      <div class="card__name">Tide</div>
+      <div class="card__cost">2</div>
+      <div class="card__image">
+        <img src="ilus/Tide.png" alt="Tide">
+      </div>
+      <div class="card__status">wonder</div>
+      <div class="card__text">Return an unit to the hand.</div>
+      
+      
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--b"></div>
+      <div class="card__name">Mist</div>
+      <div class="card__cost">4</div>
+      <div class="card__image">
+        <img src="ilus/Mist.png" alt="Mist">
+      </div>
+      <div class="card__status">wonder</div>
+      <div class="card__text">Shuffle an unit to the deck.</div>
+      
+      
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--b"></div>
+      <div class="card__name">Chill</div>
+      <div class="card__cost">3</div>
+      <div class="card__image">
+        <img src="ilus/Chill.png" alt="Chill">
+      </div>
+      <div class="card__status">charm</div>
+      <div class="card__text">Exchaust charmed unit. It cannot be prepared unless 3 ANY ENERGY is paid.</div>
+      
+      
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--b"></div>
+      <div class="card__name">Flood</div>
+      <div class="card__cost">5</div>
+      <div class="card__image">
+        <img src="ilus/Flood.png" alt="Flood">
+      </div>
+      <div class="card__status">wonder</div>
+      <div class="card__text">Shuffle any card from the battle to the deck.</div>
+      
+      
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--b"></div>
+      <div class="card__name">Coral</div>
+      <div class="card__cost">5</div>
+      <div class="card__image">
+        <img src="ilus/Coral.png" alt="Coral">
+      </div>
+      <div class="card__status">relic</div>
+      <div class="card__text">USE: Get 2 ANY ENERGY.</div>
+      
+      
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--b"></div>
+      <div class="card__name">Orb</div>
+      <div class="card__cost">3</div>
+      <div class="card__image">
+        <img src="ilus/Orb.png" alt="Orb">
+      </div>
+      <div class="card__status">relic</div>
+      <div class="card__text">Your hand limit is increased by 1.</div>
+      
+      
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--b"></div>
+      <div class="card__name">Mirror</div>
+      <div class="card__cost">2</div>
+      <div class="card__image">
+        <img src="ilus/Mirror.png" alt="Mirror">
+      </div>
+      <div class="card__status">wonder</div>
+      <div class="card__text">Copy the effect of wonder on the top of any grave.</div>
+      
+      
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--n"></div>
+      <div class="card__name">Zombie</div>
+      <div class="card__cost">2</div>
+      <div class="card__image">
+        <img src="ilus/Zombie.png" alt="Zombie">
+      </div>
+      <div class="card__status">unit</div>
+      <div class="card__text">Can be deployed from grave.</div>
+      <div class="card__power">2</div>
+      <div class="card__health">2</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--n"></div>
+      <div class="card__name">Skeleton</div>
+      <div class="card__cost">1</div>
+      <div class="card__image">
+        <img src="ilus/Skeleton.png" alt="Skeleton">
+      </div>
+      <div class="card__status">unit</div>
+      <div class="card__text">When an unit is killed, put Skeleton from grave to the battle.</div>
+      <div class="card__power">1</div>
+      <div class="card__health">1</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--n"></div>
+      <div class="card__name">Vampire</div>
+      <div class="card__cost">5</div>
+      <div class="card__image">
+        <img src="ilus/Vampire.png" alt="Vampire">
+      </div>
+      <div class="card__status">Flying unit</div>
+      <div class="card__text">USE: move all 💥 from Vampire to any unit.</div>
+      <div class="card__power">5</div>
+      <div class="card__health">5</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--n"></div>
+      <div class="card__name">Lich</div>
+      <div class="card__cost">5</div>
+      <div class="card__image">
+        <img src="ilus/Lich.png" alt="Lich">
+      </div>
+      <div class="card__status">unit</div>
+      <div class="card__text">USE: Return an unit from grave to battle.</div>
+      <div class="card__power">5</div>
+      <div class="card__health">5</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--n"></div>
+      <div class="card__name">Succubus</div>
+      <div class="card__cost">2</div>
+      <div class="card__image">
+        <img src="ilus/Succubus.png" alt="Succubus">
+      </div>
+      <div class="card__status">Flying unit</div>
+      <div class="card__text">When plunders, steal 1 ANY ENERGY, convert it to BLACK ENERGY.</div>
+      <div class="card__power">3</div>
+      <div class="card__health">1</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--n"></div>
+      <div class="card__name">Ghoul</div>
+      <div class="card__cost">4</div>
+      <div class="card__image">
+        <img src="ilus/Ghoul.png" alt="Ghoul">
+      </div>
+      <div class="card__status">unit</div>
+      <div class="card__text">When unit is killed, promote twice.</div>
+      <div class="card__power">3</div>
+      <div class="card__health">3</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--n"></div>
+      <div class="card__name">Spectre</div>
+      <div class="card__cost">3</div>
+      <div class="card__image">
+        <img src="ilus/Spectre.png" alt="Spectre">
+      </div>
+      <div class="card__status">Flying unit</div>
+      <div class="card__text">When plunders, player must discard a card of their choice.</div>
+      <div class="card__power">4</div>
+      <div class="card__health">4</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--n"></div>
+      <div class="card__name">Wraith</div>
+      <div class="card__cost">6</div>
+      <div class="card__image">
+        <img src="ilus/Wraith.png" alt="Wraith">
+      </div>
+      <div class="card__status">Flying tempo unit</div>
+      <div class="card__text">When plunders, player must discard a card of your choice.</div>
+      <div class="card__power">6</div>
+      <div class="card__health">4</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--n"></div>
+      <div class="card__name">Necromancy</div>
+      <div class="card__cost">3</div>
+      <div class="card__image">
+        <img src="ilus/Necromancy.png" alt="Necromancy">
+      </div>
+      <div class="card__status">wonder</div>
+      <div class="card__text">Return an unit from grave to battle.</div>
+      
+      
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--n"></div>
+      <div class="card__name">Rot</div>
+      <div class="card__cost">5</div>
+      <div class="card__image">
+        <img src="ilus/Rot.png" alt="Rot">
+      </div>
+      <div class="card__status">wonder</div>
+      <div class="card__text">Destroy any card in battle.</div>
+      
+      
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--n"></div>
+      <div class="card__name">Plague</div>
+      <div class="card__cost">4</div>
+      <div class="card__image">
+        <img src="ilus/Plague.png" alt="Plague">
+      </div>
+      <div class="card__status">wonder</div>
+      <div class="card__text">Demote all units twice.</div>
+      
+      
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--n"></div>
+      <div class="card__name">Drain</div>
+      <div class="card__cost">3</div>
+      <div class="card__image">
+        <img src="ilus/Drain.png" alt="Drain">
+      </div>
+      <div class="card__status">wonder</div>
+      <div class="card__text">Steal all ANY ENERGY, convert it to BLACK ENERGY.</div>
+      
+      
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--n"></div>
+      <div class="card__name">Soul</div>
+      <div class="card__cost">3</div>
+      <div class="card__image">
+        <img src="ilus/Soul.png" alt="Soul">
+      </div>
+      <div class="card__status">charm</div>
+      <div class="card__text">When charmed unit is killed, return it to battle and move Soul to other unit.</div>
+      
+      
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--n"></div>
+      <div class="card__name">Tomb</div>
+      <div class="card__cost">5</div>
+      <div class="card__image">
+        <img src="ilus/Tomb.png" alt="Tomb">
+      </div>
+      <div class="card__status">relic</div>
+      <div class="card__text">USE: Demote any unit.</div>
+      
+      
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--n"></div>
+      <div class="card__name">Decay</div>
+      <div class="card__cost">1</div>
+      <div class="card__image">
+        <img src="ilus/Decay.png" alt="Decay">
+      </div>
+      <div class="card__status">charm</div>
+      <div class="card__text">At your turn start, demote charmed unit.</div>
+      
+      
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--g"></div>
+      <div class="card__name">Elf</div>
+      <div class="card__cost">3</div>
+      <div class="card__image">
+        <img src="ilus/Elf.png" alt="Elf">
+      </div>
+      <div class="card__status">Shooting unit</div>
+      <div class="card__text">All your units have: "USE: add 1 ANY ENERGY"</div>
+      <div class="card__power">3</div>
+      <div class="card__health">2</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--g"></div>
+      <div class="card__name">Druid</div>
+      <div class="card__cost">1</div>
+      <div class="card__image">
+        <img src="ilus/Druid.png" alt="Druid">
+      </div>
+      <div class="card__status">unit</div>
+      <div class="card__text">At your turn start get 1 ANY ENERGY.</div>
+      <div class="card__power">0</div>
+      <div class="card__health">1</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--g"></div>
+      <div class="card__name">Dryad</div>
+      <div class="card__cost">4</div>
+      <div class="card__image">
+        <img src="ilus/Dryad.png" alt="Dryad">
+      </div>
+      <div class="card__status">Shooting guard unit</div>
+      <div class="card__text">When opponent draw 3 cards or more, promote any unit.</div>
+      <div class="card__power">4</div>
+      <div class="card__health">3</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--g"></div>
+      <div class="card__name">Beast</div>
+      <div class="card__cost">4</div>
+      <div class="card__image">
+        <img src="ilus/Beast.png" alt="Beast">
+      </div>
+      <div class="card__status">Tempo unit</div>
+      <div class="card__text"></div>
+      <div class="card__power">4</div>
+      <div class="card__health">4</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--g"></div>
+      <div class="card__name">Treefolk</div>
+      <div class="card__cost">5</div>
+      <div class="card__image">
+        <img src="ilus/Treefolk.png" alt="Treefolk">
+      </div>
+      <div class="card__status">Guard unit</div>
+      <div class="card__text">At your turn start heal up to 💥💥 from it.</div>
+      <div class="card__power">3</div>
+      <div class="card__health">5</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--g"></div>
+      <div class="card__name">Faerie</div>
+      <div class="card__cost">1</div>
+      <div class="card__image">
+        <img src="ilus/Faerie.png" alt="Faerie">
+      </div>
+      <div class="card__status">Flying unit</div>
+      <div class="card__text">When used, draw a card.</div>
+      <div class="card__power">1</div>
+      <div class="card__health">1</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--g"></div>
+      <div class="card__name">Sentinel</div>
+      <div class="card__cost">5</div>
+      <div class="card__image">
+        <img src="ilus/Sentinel.png" alt="Sentinel">
+      </div>
+      <div class="card__status">Shooting tempo guard unit</div>
+      <div class="card__text"></div>
+      <div class="card__power">5</div>
+      <div class="card__health">3</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--g"></div>
+      <div class="card__name">Antler</div>
+      <div class="card__cost">9</div>
+      <div class="card__image">
+        <img src="ilus/Antler.png" alt="Antler">
+      </div>
+      <div class="card__status">Guard unit</div>
+      <div class="card__text">When non-green unit attacks, prepare Antler.</div>
+      <div class="card__power">6</div>
+      <div class="card__health">6</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--g"></div>
+      <div class="card__name">Grow</div>
+      <div class="card__cost">1</div>
+      <div class="card__image">
+        <img src="ilus/Grow.png" alt="Grow">
+      </div>
+      <div class="card__status">charm</div>
+      <div class="card__text">At your turn start, promote charmed unit.</div>
+      
+      
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--g"></div>
+      <div class="card__name">Spring</div>
+      <div class="card__cost">3</div>
+      <div class="card__image">
+        <img src="ilus/Spring.png" alt="Spring">
+      </div>
+      <div class="card__status">wonder</div>
+      <div class="card__text">Heal up to 💥💥💥 from each of your units.</div>
+      
+      
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--g"></div>
+      <div class="card__name">Bloom</div>
+      <div class="card__cost">2</div>
+      <div class="card__image">
+        <img src="ilus/Bloom.png" alt="Bloom">
+      </div>
+      <div class="card__status">wonder</div>
+      <div class="card__text">Get 5 ANY ENERGY.</div>
+      
+      
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--g"></div>
+      <div class="card__name">Roots</div>
+      <div class="card__cost">3</div>
+      <div class="card__image">
+        <img src="ilus/Roots.png" alt="Roots">
+      </div>
+      <div class="card__status">charm</div>
+      <div class="card__text">Exchaust charmed unit. It cannot be prepared unless 3 ANY ENERGY is paid.</div>
+      
+      
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--g"></div>
+      <div class="card__name">Thorns</div>
+      <div class="card__cost">1</div>
+      <div class="card__image">
+        <img src="ilus/Thorns.png" alt="Thorns">
+      </div>
+      <div class="card__status">charm</div>
+      <div class="card__text">Charmed unit gets +3 ⚔️ & +3 🛡️.</div>
+      <div class="card__power">+3</div>
+      <div class="card__health">+3</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--g"></div>
+      <div class="card__name">Grove</div>
+      <div class="card__cost">2</div>
+      <div class="card__image">
+        <img src="ilus/Grove.png" alt="Grove">
+      </div>
+      <div class="card__status">relic</div>
+      <div class="card__text">USE: Get 1 ANY ENERGY.</div>
+      
+      
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--g"></div>
+      <div class="card__name">Nectar</div>
+      <div class="card__cost">2</div>
+      <div class="card__image">
+        <img src="ilus/Nectar.png" alt="Nectar">
+      </div>
+      <div class="card__status">wonder</div>
+      <div class="card__text">Return top 7 cards from your deep grave back to the top of the deck.</div>
+      
+      
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--o"></div>
+      <div class="card__name">Titan</div>
+      <div class="card__cost">6</div>
+      <div class="card__image">
+        <img src="ilus/Titan.png" alt="Titan">
+      </div>
+      <div class="card__status">unit</div>
+      <div class="card__text">When deployed, destroy any card in battle.</div>
+      <div class="card__power">7</div>
+      <div class="card__health">7</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--o"></div>
+      <div class="card__name">Barbarian</div>
+      <div class="card__cost">3</div>
+      <div class="card__image">
+        <img src="ilus/Barbarian.png" alt="Barbarian">
+      </div>
+      <div class="card__status">unit</div>
+      <div class="card__text">Promote after each its combat.</div>
+      <div class="card__power">4</div>
+      <div class="card__health">3</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--o"></div>
+      <div class="card__name">Dwarf</div>
+      <div class="card__cost">3</div>
+      <div class="card__image">
+        <img src="ilus/Dwarf.png" alt="Dwarf">
+      </div>
+      <div class="card__status">unit</div>
+      <div class="card__text">USE: Promote an unit.</div>
+      <div class="card__power">2</div>
+      <div class="card__health">2</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--o"></div>
+      <div class="card__name">Giant</div>
+      <div class="card__cost">5</div>
+      <div class="card__image">
+        <img src="ilus/Giant.png" alt="Giant">
+      </div>
+      <div class="card__status">Guard unit</div>
+      <div class="card__text">When kills an unit, heal up to 💥💥 from it.</div>
+      <div class="card__power">6</div>
+      <div class="card__health">6</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--o"></div>
+      <div class="card__name">Yetti</div>
+      <div class="card__cost">5</div>
+      <div class="card__image">
+        <img src="ilus/Yetti.png" alt="Yetti">
+      </div>
+      <div class="card__status">unit</div>
+      <div class="card__text">When damaged, put a card in from your grave on top of the deck.</div>
+      <div class="card__power">4</div>
+      <div class="card__health">5</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--o"></div>
+      <div class="card__name">Troll</div>
+      <div class="card__cost">5</div>
+      <div class="card__image">
+        <img src="ilus/Troll.png" alt="Troll">
+      </div>
+      <div class="card__status">unit</div>
+      <div class="card__text">When plunders, player must discard a card of their choice.</div>
+      <div class="card__power">5</div>
+      <div class="card__health">4</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--o"></div>
+      <div class="card__name">Gnome</div>
+      <div class="card__cost">1</div>
+      <div class="card__image">
+        <img src="ilus/Gnome.png" alt="Gnome">
+      </div>
+      <div class="card__status">unit</div>
+      <div class="card__text">If deployed or killed, return top card from your grave to the hand.</div>
+      <div class="card__power">1</div>
+      <div class="card__health">1</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--o"></div>
+      <div class="card__name">Ogre</div>
+      <div class="card__cost">4</div>
+      <div class="card__image">
+        <img src="ilus/Ogre.png" alt="Ogre">
+      </div>
+      <div class="card__status">unit</div>
+      <div class="card__text">Double ⚔️ when plundering.</div>
+      <div class="card__power">4</div>
+      <div class="card__health">3</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--o"></div>
+      <div class="card__name">Golem</div>
+      <div class="card__cost">5</div>
+      <div class="card__image">
+        <img src="ilus/Golem.png" alt="Golem">
+      </div>
+      <div class="card__status">Guard unit</div>
+      <div class="card__text">When attacked, deal 💥💥 to attacking unit.</div>
+      <div class="card__power">5</div>
+      <div class="card__health">5</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--o"></div>
+      <div class="card__name">Spear</div>
+      <div class="card__cost">3</div>
+      <div class="card__image">
+        <img src="ilus/Spear.png" alt="Spear">
+      </div>
+      <div class="card__status">relic</div>
+      <div class="card__text">Use: +3 ⚔️ to any unit this turn.</div>
+      <div class="card__power">+3</div>
+      
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--o"></div>
+      <div class="card__name">Stomp</div>
+      <div class="card__cost">2</div>
+      <div class="card__image">
+        <img src="ilus/Stomp.png" alt="Stomp">
+      </div>
+      <div class="card__status">wonder</div>
+      <div class="card__text">Deal 💥💥💥💥.</div>
+      
+      
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--o"></div>
+      <div class="card__name">Brawl</div>
+      <div class="card__cost">6</div>
+      <div class="card__image">
+        <img src="ilus/Brawl.png" alt="Brawl">
+      </div>
+      <div class="card__status">wonder</div>
+      <div class="card__text">Prepare all your units and relics.</div>
+      
+      
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--o"></div>
+      <div class="card__name">Stone</div>
+      <div class="card__cost">1</div>
+      <div class="card__image">
+        <img src="ilus/Stone.png" alt="Stone">
+      </div>
+      <div class="card__status">charm</div>
+      <div class="card__text">Charmed unit gets +3 ⚔️ & +3 🛡️</div>
+      <div class="card__power">+3</div>
+      <div class="card__health">+3</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--o"></div>
+      <div class="card__name">Shrine</div>
+      <div class="card__cost">4</div>
+      <div class="card__image">
+        <img src="ilus/Shrine.png" alt="Shrine">
+      </div>
+      <div class="card__status">relic</div>
+      <div class="card__text">USE: Prepare any unit.</div>
+      
+      
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--o"></div>
+      <div class="card__name">Crush</div>
+      <div class="card__cost">5</div>
+      <div class="card__image">
+        <img src="ilus/Crush.png" alt="Crush">
+      </div>
+      <div class="card__status">wonder</div>
+      <div class="card__text">Destroy any card in battle.</div>
+      
+      
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--r"></div>
+      <div class="card__name">Dragon</div>
+      <div class="card__cost">6</div>
+      <div class="card__image">
+        <img src="ilus/Dragon.png" alt="Dragon">
+      </div>
+      <div class="card__status">Flying unit</div>
+      <div class="card__text">1 RED ENERGY: Deal 💥.</div>
+      <div class="card__power">7</div>
+      <div class="card__health">6</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--r"></div>
+      <div class="card__name">Goblin</div>
+      <div class="card__cost">1</div>
+      <div class="card__image">
+        <img src="ilus/Goblin.png" alt="Goblin">
+      </div>
+      <div class="card__status">Tempo unit</div>
+      <div class="card__text"></div>
+      <div class="card__power">2</div>
+      <div class="card__health">1</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--r"></div>
+      <div class="card__name">Devil</div>
+      <div class="card__cost">3</div>
+      <div class="card__image">
+        <img src="ilus/Devil.png" alt="Devil">
+      </div>
+      <div class="card__status">Tempo unit</div>
+      <div class="card__text">USE: Draw 3 cards.</div>
+      <div class="card__power">4</div>
+      <div class="card__health">2</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--r"></div>
+      <div class="card__name">Elemental</div>
+      <div class="card__cost">6</div>
+      <div class="card__image">
+        <img src="ilus/Elemental.png" alt="Elemental">
+      </div>
+      <div class="card__status">unit</div>
+      <div class="card__text">When plunders, heal all its 💥.</div>
+      <div class="card__power">6</div>
+      <div class="card__health">6</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--r"></div>
+      <div class="card__name">Pyromancer</div>
+      <div class="card__cost">2</div>
+      <div class="card__image">
+        <img src="ilus/Pyromancer.png" alt="Pyromancer">
+      </div>
+      <div class="card__status">unit</div>
+      <div class="card__text">USE: Deal 2 💥</div>
+      <div class="card__power">2</div>
+      <div class="card__health">2</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--r"></div>
+      <div class="card__name">Imp</div>
+      <div class="card__cost">3</div>
+      <div class="card__image">
+        <img src="ilus/Imp.png" alt="Imp">
+      </div>
+      <div class="card__status">Flying unit</div>
+      <div class="card__text">When deployed, deal 💥💥.</div>
+      <div class="card__power">2</div>
+      <div class="card__health">1</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--r"></div>
+      <div class="card__name">Kobold</div>
+      <div class="card__cost">2</div>
+      <div class="card__image">
+        <img src="ilus/Kobold.png" alt="Kobold">
+      </div>
+      <div class="card__status">Tempo unit</div>
+      <div class="card__text"></div>
+      <div class="card__power">3</div>
+      <div class="card__health">2</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--r"></div>
+      <div class="card__name">Salamander</div>
+      <div class="card__cost">2</div>
+      <div class="card__image">
+        <img src="ilus/Salamander.png" alt="Salamander">
+      </div>
+      <div class="card__status">unit</div>
+      <div class="card__text">RED MANA: Deal 💥 to Salamander and 💥 to any unit.</div>
+      <div class="card__power">1</div>
+      <div class="card__health">3</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--r"></div>
+      <div class="card__name">Flame</div>
+      <div class="card__cost">2</div>
+      <div class="card__image">
+        <img src="ilus/Flame.png" alt="Flame">
+      </div>
+      <div class="card__status">wonder</div>
+      <div class="card__text">Deal 💥💥💥💥.</div>
+      
+      
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--r"></div>
+      <div class="card__name">Inferno</div>
+      <div class="card__cost">4</div>
+      <div class="card__image">
+        <img src="ilus/Inferno.png" alt="Inferno">
+      </div>
+      <div class="card__status">wonder</div>
+      <div class="card__text">Deal 💥💥💥💥 to all non-red units.</div>
+      
+      
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--r"></div>
+      <div class="card__name">Lava</div>
+      <div class="card__cost">3</div>
+      <div class="card__image">
+        <img src="ilus/Lava.png" alt="Lava">
+      </div>
+      <div class="card__status">wonder</div>
+      <div class="card__text">Destroy any relic or non-flying unit.</div>
+      
+      
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--r"></div>
+      <div class="card__name">Volcano</div>
+      <div class="card__cost">4</div>
+      <div class="card__image">
+        <img src="ilus/Volcano.png" alt="Volcano">
+      </div>
+      <div class="card__status">relic</div>
+      <div class="card__text">USE: Deal 💥.</div>
+      
+      
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--r"></div>
+      <div class="card__name">Blast</div>
+      <div class="card__cost">4</div>
+      <div class="card__image">
+        <img src="ilus/Blast.png" alt="Blast">
+      </div>
+      <div class="card__status">wonder</div>
+      <div class="card__text">Deal 💥💥💥 to each of up to 3 units.</div>
+      
+      
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--r"></div>
+      <div class="card__name">Circle</div>
+      <div class="card__cost">4</div>
+      <div class="card__image">
+        <img src="ilus/Circle.png" alt="Circle">
+      </div>
+      <div class="card__status">relic</div>
+      <div class="card__text">USE: Prepare any unit.</div>
+      
+      
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--r"></div>
+      <div class="card__name">Speed</div>
+      <div class="card__cost">2</div>
+      <div class="card__image">
+        <img src="ilus/Speed.png" alt="Speed">
+      </div>
+      <div class="card__status">wonder</div>
+      <div class="card__text">Draw 4 cards.</div>
+      
+      
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--p"></div>
+      <div class="card__name">Shaman</div>
+      <div class="card__cost">3</div>
+      <div class="card__image">
+        <img src="ilus/Shaman.png" alt="Shaman">
+      </div>
+      <div class="card__status">unit</div>
+      <div class="card__text">USE: Promote an unit and deal 💥💥 to it.</div>
+      <div class="card__power">2</div>
+      <div class="card__health">3</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--p"></div>
+      <div class="card__name">Demon</div>
+      <div class="card__cost">4</div>
+      <div class="card__image">
+        <img src="ilus/Demon.png" alt="Demon">
+      </div>
+      <div class="card__status">Flying unit</div>
+      <div class="card__text">Card limit of the opponent is reduced by 1.</div>
+      <div class="card__power">4</div>
+      <div class="card__health">4</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--p"></div>
+      <div class="card__name">Witch</div>
+      <div class="card__cost">5</div>
+      <div class="card__image">
+        <img src="ilus/Witch.png" alt="Witch">
+      </div>
+      <div class="card__status"></div>
+      <div class="card__text">USE: Move all 💥 from one unit to any other unit.</div>
+      <div class="card__power">2</div>
+      <div class="card__health">4</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--p"></div>
+      <div class="card__name">Parasite</div>
+      <div class="card__cost">1</div>
+      <div class="card__image">
+        <img src="ilus/Parasite.png" alt="Parasite">
+      </div>
+      <div class="card__status"></div>
+      <div class="card__text">USE: Steal 2 ENERGY, convert it to PURPLE ENERGY.</div>
+      <div class="card__power">2</div>
+      <div class="card__health">1</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--p"></div>
+      <div class="card__name">Horror</div>
+      <div class="card__cost">5</div>
+      <div class="card__image">
+        <img src="ilus/Horror.png" alt="Horror">
+      </div>
+      <div class="card__status"></div>
+      <div class="card__text">USE: Exhaust up to two units</div>
+      <div class="card__power">5</div>
+      <div class="card__health">5</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--p"></div>
+      <div class="card__name">Fanatic</div>
+      <div class="card__cost">1</div>
+      <div class="card__image">
+        <img src="ilus/Fanatic.png" alt="Fanatic">
+      </div>
+      <div class="card__status"></div>
+      <div class="card__text">When killed, return a purple unit from grave to battle.</div>
+      <div class="card__power">3</div>
+      <div class="card__health">1</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--p"></div>
+      <div class="card__name">Scarecrow</div>
+      <div class="card__cost">4</div>
+      <div class="card__image">
+        <img src="ilus/Scarecrow.png" alt="Scarecrow">
+      </div>
+      <div class="card__status"></div>
+      <div class="card__text">USE: Exhaust an unit.</div>
+      <div class="card__power">5</div>
+      <div class="card__health">3</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--p"></div>
+      <div class="card__name">Demogorgon</div>
+      <div class="card__cost">7</div>
+      <div class="card__image">
+        <img src="ilus/Demogorgon.png" alt="Demogorgon">
+      </div>
+      <div class="card__status"></div>
+      <div class="card__text">USE: Destroy any unit.</div>
+      <div class="card__power">6</div>
+      <div class="card__health">4</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--p"></div>
+      <div class="card__name">Overlord</div>
+      <div class="card__cost">8</div>
+      <div class="card__image">
+        <img src="ilus/Overlord.png" alt="Overlord">
+      </div>
+      <div class="card__status"></div>
+      <div class="card__text">At your turn start gets an ability of any unit until your next turn.</div>
+      <div class="card__power">6</div>
+      <div class="card__health">6</div>
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--p"></div>
+      <div class="card__name">Madness</div>
+      <div class="card__cost">3</div>
+      <div class="card__image">
+        <img src="ilus/Madness.png" alt="Madness">
+      </div>
+      <div class="card__status">charm</div>
+      <div class="card__text">Double ⚔️ and 💥 dealt to charmed unit.</div>
+      
+      
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--p"></div>
+      <div class="card__name">Nightmare</div>
+      <div class="card__cost">2</div>
+      <div class="card__image">
+        <img src="ilus/Nightmare.png" alt="Nightmare">
+      </div>
+      <div class="card__status">charm</div>
+      <div class="card__text">Charmed unit gets -3 ⚔️. When killed, move Darkness to another unit.</div>
+      <div class="card__power">-3</div>
+      
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--p"></div>
+      <div class="card__name">Ritual</div>
+      <div class="card__cost">1</div>
+      <div class="card__image">
+        <img src="ilus/Ritual.png" alt="Ritual">
+      </div>
+      <div class="card__status">wonder</div>
+      <div class="card__text">Put a purple unit from your hand or grave to battle.</div>
+      
+      
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--p"></div>
+      <div class="card__name">Sacrifice</div>
+      <div class="card__cost">1</div>
+      <div class="card__image">
+        <img src="ilus/Sacrifice.png" alt="Sacrifice">
+      </div>
+      <div class="card__status">wonder</div>
+      <div class="card__text">Move all 💥 from one unit to another.</div>
+      
+      
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--p"></div>
+      <div class="card__name">Void</div>
+      <div class="card__cost">5</div>
+      <div class="card__image">
+        <img src="ilus/Void.png" alt="Void">
+      </div>
+      <div class="card__status">wonder</div>
+      <div class="card__text">Destroy any card in battle.</div>
+      
+      
+    </div><div class="card">
+      <div class="card__edge"></div>
+      <div class="card__frame card__frame--p"></div>
+      <div class="card__name">Paranoia</div>
+      <div class="card__cost">4</div>
+      <div class="card__image">
+        <img src="ilus/Paranoia.png" alt="Paranoia">
+      </div>
+      <div class="card__status">wonder</div>
+      <div class="card__text">Opponent discards all cards.</div>
+      
+      
+    </div>
+      </div>
+    </body>
+  </html>
