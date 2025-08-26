@@ -121,8 +121,42 @@ html, body {
   position: relative;
 }
 
+
+.card__status {
+  height: 18.9mm;
+  width: 100%;
+  font-size: 5mm;
+  z-index: 5;
+  background-image: url(http://localhost:8080/card_components/status_bg.png);
+  position: absolute;
+  top: 67.85mm;
+  font-family: FantaisieArtistique;
+  background-size: contain;
+  padding-top: 11.5mm;
+  text-transform: capitalize;
+}
+
 .card__energy--shift1 { top: 0.5mm; }
 .card__energy--shift2 { top: 1.5mm; }
 .card__energy--shift3 { top: -3mm; z-index: -1;}
 .card__energy--shift4 { top: -2.5mm; z-index: -1;}
 .card__energy--shift5 { top: -1.5mm; z-index: -1;}
+
+
+.card__text {
+  height: 28.3mm;
+  width: 52.5mm;
+  font-size: 5mm;
+  z-index: 4;
+  background-image: url(http://localhost:8080/card_components/text_bg.png);
+  position: absolute;
+  top: 80mm;
+  left: 3.75mm;
+  font-family: Sualtim;
+  background-size: contain;
+  padding: 5mm 8mm 4mm;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
