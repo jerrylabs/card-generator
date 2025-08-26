@@ -98,12 +98,38 @@ html, body {
   z-index: 2;
   width: 49mm;
   left: 6mm;
-  top: 10MM;
+  top: 14mm;
 }
 
 .card__image img {
   width: 100%;
 }
+
+.card__cost {
+  position: absolute;
+  top: 13mm;
+  width: 3.1cm;
+  text-align: center;
+  z-index: 4;
+  left: 1.5cm;
+  line-height: 1;
+}
+
+.card__energy {
+  display: inline-block;
+  width: 8mm;
+  height: 8mm;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0 -1.15mm;
+  position: relative;
+}
+
+.card__energy--shift1 { top: 0.5mm; }
+.card__energy--shift2 { top: 1.5mm; }
+.card__energy--shift3 { top: -3mm; z-index: -1;}
+.card__energy--shift4 { top: -2.5mm; z-index: -1;}
+.card__energy--shift5 { top: -1.5mm; z-index: -1;}
 
       </style>
     </head>
@@ -114,7 +140,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--w"></div>
       <div class="card__name">Angel</div>
-      <div class="card__cost">5</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift2" src="card_components/energy-w.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-w.png" alt="Energy"><img class="card__energy" src="card_components/energy-w.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-w.png" alt="Energy"><img class="card__energy card__energy--shift2" src="card_components/energy-w.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Angel.png" alt="Angel">
       </div>
@@ -126,7 +154,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--w"></div>
       <div class="card__name">Paladin</div>
-      <div class="card__cost">4</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift1" src="card_components/energy-w.png" alt="Energy"><img class="card__energy" src="card_components/energy-w.png" alt="Energy"><img class="card__energy" src="card_components/energy-w.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-w.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Paladin.png" alt="Paladin">
       </div>
@@ -138,7 +168,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--w"></div>
       <div class="card__name">Monk</div>
-      <div class="card__cost">3</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift1" src="card_components/energy-w.png" alt="Energy"><img class="card__energy" src="card_components/energy-w.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-w.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Monk.png" alt="Monk">
       </div>
@@ -150,7 +182,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--w"></div>
       <div class="card__name">Unicorn</div>
-      <div class="card__cost">3</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift1" src="card_components/energy-w.png" alt="Energy"><img class="card__energy" src="card_components/energy-w.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-w.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Unicorn.png" alt="Unicorn">
       </div>
@@ -162,7 +196,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--w"></div>
       <div class="card__name">Pegasus</div>
-      <div class="card__cost">3</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift1" src="card_components/energy-w.png" alt="Energy"><img class="card__energy" src="card_components/energy-w.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-w.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Pegasus.png" alt="Pegasus">
       </div>
@@ -174,7 +210,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--w"></div>
       <div class="card__name">Priest</div>
-      <div class="card__cost">1</div>
+      <div class="card__cost">
+        <img class="card__energy" src="card_components/energy-w.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Priest.png" alt="Priest">
       </div>
@@ -186,7 +224,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--w"></div>
       <div class="card__name">Healer</div>
-      <div class="card__cost">2</div>
+      <div class="card__cost">
+        <img class="card__energy" src="card_components/energy-w.png" alt="Energy"><img class="card__energy" src="card_components/energy-w.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Healer.png" alt="Healer">
       </div>
@@ -198,7 +238,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--w"></div>
       <div class="card__name">Hermit</div>
-      <div class="card__cost">3</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift1" src="card_components/energy-w.png" alt="Energy"><img class="card__energy" src="card_components/energy-w.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-w.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Hermit.png" alt="Hermit">
       </div>
@@ -210,7 +252,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--w"></div>
       <div class="card__name">Blessing</div>
-      <div class="card__cost">5</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift2" src="card_components/energy-w.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-w.png" alt="Energy"><img class="card__energy" src="card_components/energy-w.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-w.png" alt="Energy"><img class="card__energy card__energy--shift2" src="card_components/energy-w.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Blessing.png" alt="Blessing">
       </div>
@@ -222,7 +266,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--w"></div>
       <div class="card__name">Halo</div>
-      <div class="card__cost">3</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift1" src="card_components/energy-w.png" alt="Energy"><img class="card__energy" src="card_components/energy-w.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-w.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Halo.png" alt="Halo">
       </div>
@@ -234,7 +280,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--w"></div>
       <div class="card__name">Shield</div>
-      <div class="card__cost">2</div>
+      <div class="card__cost">
+        <img class="card__energy" src="card_components/energy-w.png" alt="Energy"><img class="card__energy" src="card_components/energy-w.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Shield.png" alt="Shield">
       </div>
@@ -246,7 +294,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--w"></div>
       <div class="card__name">Light</div>
-      <div class="card__cost">1</div>
+      <div class="card__cost">
+        <img class="card__energy" src="card_components/energy-w.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Light.png" alt="Light">
       </div>
@@ -258,7 +308,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--w"></div>
       <div class="card__name">Hope</div>
-      <div class="card__cost">1</div>
+      <div class="card__cost">
+        <img class="card__energy" src="card_components/energy-w.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Hope.png" alt="Hope">
       </div>
@@ -270,7 +322,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--w"></div>
       <div class="card__name">Sanctuary</div>
-      <div class="card__cost">4</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift1" src="card_components/energy-w.png" alt="Energy"><img class="card__energy" src="card_components/energy-w.png" alt="Energy"><img class="card__energy" src="card_components/energy-w.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-w.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Sanctuary.png" alt="Sanctuary">
       </div>
@@ -282,7 +336,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--w"></div>
       <div class="card__name">Prayer</div>
-      <div class="card__cost">1</div>
+      <div class="card__cost">
+        <img class="card__energy" src="card_components/energy-w.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Prayer.png" alt="Prayer">
       </div>
@@ -294,7 +350,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--y"></div>
       <div class="card__name">Chariot</div>
-      <div class="card__cost">3</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift1" src="card_components/energy-y.png" alt="Energy"><img class="card__energy" src="card_components/energy-y.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-y.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Chariot.png" alt="Chariot">
       </div>
@@ -306,7 +364,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--y"></div>
       <div class="card__name">Legionnaire</div>
-      <div class="card__cost">4</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift1" src="card_components/energy-y.png" alt="Energy"><img class="card__energy" src="card_components/energy-y.png" alt="Energy"><img class="card__energy" src="card_components/energy-y.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-y.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Legionnaire.png" alt="Legionnaire">
       </div>
@@ -318,7 +378,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--y"></div>
       <div class="card__name">Marshall</div>
-      <div class="card__cost">4</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift1" src="card_components/energy-y.png" alt="Energy"><img class="card__energy" src="card_components/energy-y.png" alt="Energy"><img class="card__energy" src="card_components/energy-y.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-y.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Marshall.png" alt="Marshall">
       </div>
@@ -330,7 +392,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--y"></div>
       <div class="card__name">Sphinx</div>
-      <div class="card__cost">3</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift1" src="card_components/energy-y.png" alt="Energy"><img class="card__energy" src="card_components/energy-y.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-y.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Sphinx.png" alt="Sphinx">
       </div>
@@ -342,7 +406,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--y"></div>
       <div class="card__name">Scarabeus</div>
-      <div class="card__cost">2</div>
+      <div class="card__cost">
+        <img class="card__energy" src="card_components/energy-y.png" alt="Energy"><img class="card__energy" src="card_components/energy-y.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Scarabeus.png" alt="Scarabeus">
       </div>
@@ -354,7 +420,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--y"></div>
       <div class="card__name">Pharaoh</div>
-      <div class="card__cost">6</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift2" src="card_components/energy-y.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-y.png" alt="Energy"><img class="card__energy" src="card_components/energy-y.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-y.png" alt="Energy"><img class="card__energy card__energy--shift2" src="card_components/energy-y.png" alt="Energy"><img class="card__energy card__energy--shift3" src="card_components/energy-y.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Pharaoh.png" alt="Pharaoh">
       </div>
@@ -366,7 +434,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--y"></div>
       <div class="card__name">Mummy</div>
-      <div class="card__cost">5</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift2" src="card_components/energy-y.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-y.png" alt="Energy"><img class="card__energy" src="card_components/energy-y.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-y.png" alt="Energy"><img class="card__energy card__energy--shift2" src="card_components/energy-y.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Mummy.png" alt="Mummy">
       </div>
@@ -378,7 +448,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--y"></div>
       <div class="card__name">Wurm</div>
-      <div class="card__cost">8</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift2" src="card_components/energy-y.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-y.png" alt="Energy"><img class="card__energy" src="card_components/energy-y.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-y.png" alt="Energy"><img class="card__energy card__energy--shift2" src="card_components/energy-y.png" alt="Energy"><img class="card__energy card__energy--shift4" src="card_components/energy-y.png" alt="Energy"><img class="card__energy card__energy--shift3" src="card_components/energy-y.png" alt="Energy"><img class="card__energy card__energy--shift4" src="card_components/energy-y.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Wurm.png" alt="Wurm">
       </div>
@@ -390,7 +462,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--y"></div>
       <div class="card__name">Lightning</div>
-      <div class="card__cost">2</div>
+      <div class="card__cost">
+        <img class="card__energy" src="card_components/energy-y.png" alt="Energy"><img class="card__energy" src="card_components/energy-y.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Lightning.png" alt="Lightning">
       </div>
@@ -402,7 +476,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--y"></div>
       <div class="card__name">Law</div>
-      <div class="card__cost">5</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift2" src="card_components/energy-y.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-y.png" alt="Energy"><img class="card__energy" src="card_components/energy-y.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-y.png" alt="Energy"><img class="card__energy card__energy--shift2" src="card_components/energy-y.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Law.png" alt="Law">
       </div>
@@ -414,7 +490,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--y"></div>
       <div class="card__name">Obey</div>
-      <div class="card__cost">2</div>
+      <div class="card__cost">
+        <img class="card__energy" src="card_components/energy-y.png" alt="Energy"><img class="card__energy" src="card_components/energy-y.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Obey.png" alt="Obey">
       </div>
@@ -426,7 +504,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--y"></div>
       <div class="card__name">Obelisk</div>
-      <div class="card__cost">4</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift1" src="card_components/energy-y.png" alt="Energy"><img class="card__energy" src="card_components/energy-y.png" alt="Energy"><img class="card__energy" src="card_components/energy-y.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-y.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Obelisk.png" alt="Obelisk">
       </div>
@@ -438,7 +518,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--y"></div>
       <div class="card__name">Gold</div>
-      <div class="card__cost">1</div>
+      <div class="card__cost">
+        <img class="card__energy" src="card_components/energy-y.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Gold.png" alt="Gold">
       </div>
@@ -450,7 +532,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--y"></div>
       <div class="card__name">Coliseum</div>
-      <div class="card__cost">4</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift1" src="card_components/energy-y.png" alt="Energy"><img class="card__energy" src="card_components/energy-y.png" alt="Energy"><img class="card__energy" src="card_components/energy-y.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-y.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Coliseum.png" alt="Coliseum">
       </div>
@@ -462,7 +546,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--y"></div>
       <div class="card__name">Judgement</div>
-      <div class="card__cost">10</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift2" src="card_components/energy-y.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-y.png" alt="Energy"><img class="card__energy" src="card_components/energy-y.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-y.png" alt="Energy"><img class="card__energy card__energy--shift2" src="card_components/energy-y.png" alt="Energy"><img class="card__energy card__energy--shift5" src="card_components/energy-y.png" alt="Energy"><img class="card__energy card__energy--shift4" src="card_components/energy-y.png" alt="Energy"><img class="card__energy card__energy--shift3" src="card_components/energy-y.png" alt="Energy"><img class="card__energy card__energy--shift4" src="card_components/energy-y.png" alt="Energy"><img class="card__energy card__energy--shift5" src="card_components/energy-y.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Judgement.png" alt="Judgement">
       </div>
@@ -474,7 +560,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--b"></div>
       <div class="card__name">Kraken</div>
-      <div class="card__cost">7</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift2" src="card_components/energy-b.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-b.png" alt="Energy"><img class="card__energy" src="card_components/energy-b.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-b.png" alt="Energy"><img class="card__energy card__energy--shift2" src="card_components/energy-b.png" alt="Energy"><img class="card__energy card__energy--shift3" src="card_components/energy-b.png" alt="Energy"><img class="card__energy card__energy--shift3" src="card_components/energy-b.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Kraken.png" alt="Kraken">
       </div>
@@ -486,7 +574,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--b"></div>
       <div class="card__name">Pirate</div>
-      <div class="card__cost">4</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift1" src="card_components/energy-b.png" alt="Energy"><img class="card__energy" src="card_components/energy-b.png" alt="Energy"><img class="card__energy" src="card_components/energy-b.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-b.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Pirate.png" alt="Pirate">
       </div>
@@ -498,7 +588,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--b"></div>
       <div class="card__name">Merfolk</div>
-      <div class="card__cost">3</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift1" src="card_components/energy-b.png" alt="Energy"><img class="card__energy" src="card_components/energy-b.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-b.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Merfolk.png" alt="Merfolk">
       </div>
@@ -510,7 +602,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--b"></div>
       <div class="card__name">Manta</div>
-      <div class="card__cost">4</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift1" src="card_components/energy-b.png" alt="Energy"><img class="card__energy" src="card_components/energy-b.png" alt="Energy"><img class="card__energy" src="card_components/energy-b.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-b.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Manta.png" alt="Manta">
       </div>
@@ -522,7 +616,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--b"></div>
       <div class="card__name">Siren</div>
-      <div class="card__cost">4</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift1" src="card_components/energy-b.png" alt="Energy"><img class="card__energy" src="card_components/energy-b.png" alt="Energy"><img class="card__energy" src="card_components/energy-b.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-b.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Siren.png" alt="Siren">
       </div>
@@ -534,7 +630,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--b"></div>
       <div class="card__name">Nayad</div>
-      <div class="card__cost">4</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift1" src="card_components/energy-b.png" alt="Energy"><img class="card__energy" src="card_components/energy-b.png" alt="Energy"><img class="card__energy" src="card_components/energy-b.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-b.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Nayad.png" alt="Nayad">
       </div>
@@ -546,7 +644,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--b"></div>
       <div class="card__name">Gorgon</div>
-      <div class="card__cost">5</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift2" src="card_components/energy-b.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-b.png" alt="Energy"><img class="card__energy" src="card_components/energy-b.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-b.png" alt="Energy"><img class="card__energy card__energy--shift2" src="card_components/energy-b.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Gorgon.png" alt="Gorgon">
       </div>
@@ -558,7 +658,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--b"></div>
       <div class="card__name">Serpent</div>
-      <div class="card__cost">6</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift2" src="card_components/energy-b.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-b.png" alt="Energy"><img class="card__energy" src="card_components/energy-b.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-b.png" alt="Energy"><img class="card__energy card__energy--shift2" src="card_components/energy-b.png" alt="Energy"><img class="card__energy card__energy--shift3" src="card_components/energy-b.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Serpent.png" alt="Serpent">
       </div>
@@ -570,7 +672,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--b"></div>
       <div class="card__name">Tide</div>
-      <div class="card__cost">2</div>
+      <div class="card__cost">
+        <img class="card__energy" src="card_components/energy-b.png" alt="Energy"><img class="card__energy" src="card_components/energy-b.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Tide.png" alt="Tide">
       </div>
@@ -582,7 +686,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--b"></div>
       <div class="card__name">Mist</div>
-      <div class="card__cost">4</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift1" src="card_components/energy-b.png" alt="Energy"><img class="card__energy" src="card_components/energy-b.png" alt="Energy"><img class="card__energy" src="card_components/energy-b.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-b.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Mist.png" alt="Mist">
       </div>
@@ -594,7 +700,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--b"></div>
       <div class="card__name">Chill</div>
-      <div class="card__cost">3</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift1" src="card_components/energy-b.png" alt="Energy"><img class="card__energy" src="card_components/energy-b.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-b.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Chill.png" alt="Chill">
       </div>
@@ -606,7 +714,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--b"></div>
       <div class="card__name">Flood</div>
-      <div class="card__cost">5</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift2" src="card_components/energy-b.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-b.png" alt="Energy"><img class="card__energy" src="card_components/energy-b.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-b.png" alt="Energy"><img class="card__energy card__energy--shift2" src="card_components/energy-b.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Flood.png" alt="Flood">
       </div>
@@ -618,7 +728,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--b"></div>
       <div class="card__name">Coral</div>
-      <div class="card__cost">5</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift2" src="card_components/energy-b.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-b.png" alt="Energy"><img class="card__energy" src="card_components/energy-b.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-b.png" alt="Energy"><img class="card__energy card__energy--shift2" src="card_components/energy-b.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Coral.png" alt="Coral">
       </div>
@@ -630,7 +742,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--b"></div>
       <div class="card__name">Orb</div>
-      <div class="card__cost">3</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift1" src="card_components/energy-b.png" alt="Energy"><img class="card__energy" src="card_components/energy-b.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-b.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Orb.png" alt="Orb">
       </div>
@@ -642,7 +756,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--b"></div>
       <div class="card__name">Mirror</div>
-      <div class="card__cost">2</div>
+      <div class="card__cost">
+        <img class="card__energy" src="card_components/energy-b.png" alt="Energy"><img class="card__energy" src="card_components/energy-b.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Mirror.png" alt="Mirror">
       </div>
@@ -654,7 +770,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--n"></div>
       <div class="card__name">Zombie</div>
-      <div class="card__cost">2</div>
+      <div class="card__cost">
+        <img class="card__energy" src="card_components/energy-n.png" alt="Energy"><img class="card__energy" src="card_components/energy-n.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Zombie.png" alt="Zombie">
       </div>
@@ -666,7 +784,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--n"></div>
       <div class="card__name">Skeleton</div>
-      <div class="card__cost">1</div>
+      <div class="card__cost">
+        <img class="card__energy" src="card_components/energy-n.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Skeleton.png" alt="Skeleton">
       </div>
@@ -678,7 +798,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--n"></div>
       <div class="card__name">Vampire</div>
-      <div class="card__cost">5</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift2" src="card_components/energy-n.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-n.png" alt="Energy"><img class="card__energy" src="card_components/energy-n.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-n.png" alt="Energy"><img class="card__energy card__energy--shift2" src="card_components/energy-n.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Vampire.png" alt="Vampire">
       </div>
@@ -690,7 +812,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--n"></div>
       <div class="card__name">Lich</div>
-      <div class="card__cost">5</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift2" src="card_components/energy-n.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-n.png" alt="Energy"><img class="card__energy" src="card_components/energy-n.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-n.png" alt="Energy"><img class="card__energy card__energy--shift2" src="card_components/energy-n.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Lich.png" alt="Lich">
       </div>
@@ -702,7 +826,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--n"></div>
       <div class="card__name">Succubus</div>
-      <div class="card__cost">2</div>
+      <div class="card__cost">
+        <img class="card__energy" src="card_components/energy-n.png" alt="Energy"><img class="card__energy" src="card_components/energy-n.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Succubus.png" alt="Succubus">
       </div>
@@ -714,7 +840,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--n"></div>
       <div class="card__name">Ghoul</div>
-      <div class="card__cost">4</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift1" src="card_components/energy-n.png" alt="Energy"><img class="card__energy" src="card_components/energy-n.png" alt="Energy"><img class="card__energy" src="card_components/energy-n.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-n.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Ghoul.png" alt="Ghoul">
       </div>
@@ -726,7 +854,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--n"></div>
       <div class="card__name">Spectre</div>
-      <div class="card__cost">3</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift1" src="card_components/energy-n.png" alt="Energy"><img class="card__energy" src="card_components/energy-n.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-n.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Spectre.png" alt="Spectre">
       </div>
@@ -738,7 +868,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--n"></div>
       <div class="card__name">Wraith</div>
-      <div class="card__cost">6</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift2" src="card_components/energy-n.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-n.png" alt="Energy"><img class="card__energy" src="card_components/energy-n.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-n.png" alt="Energy"><img class="card__energy card__energy--shift2" src="card_components/energy-n.png" alt="Energy"><img class="card__energy card__energy--shift3" src="card_components/energy-n.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Wraith.png" alt="Wraith">
       </div>
@@ -750,7 +882,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--n"></div>
       <div class="card__name">Necromancy</div>
-      <div class="card__cost">3</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift1" src="card_components/energy-n.png" alt="Energy"><img class="card__energy" src="card_components/energy-n.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-n.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Necromancy.png" alt="Necromancy">
       </div>
@@ -762,7 +896,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--n"></div>
       <div class="card__name">Rot</div>
-      <div class="card__cost">5</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift2" src="card_components/energy-n.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-n.png" alt="Energy"><img class="card__energy" src="card_components/energy-n.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-n.png" alt="Energy"><img class="card__energy card__energy--shift2" src="card_components/energy-n.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Rot.png" alt="Rot">
       </div>
@@ -774,7 +910,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--n"></div>
       <div class="card__name">Plague</div>
-      <div class="card__cost">4</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift1" src="card_components/energy-n.png" alt="Energy"><img class="card__energy" src="card_components/energy-n.png" alt="Energy"><img class="card__energy" src="card_components/energy-n.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-n.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Plague.png" alt="Plague">
       </div>
@@ -786,7 +924,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--n"></div>
       <div class="card__name">Drain</div>
-      <div class="card__cost">3</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift1" src="card_components/energy-n.png" alt="Energy"><img class="card__energy" src="card_components/energy-n.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-n.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Drain.png" alt="Drain">
       </div>
@@ -798,7 +938,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--n"></div>
       <div class="card__name">Soul</div>
-      <div class="card__cost">3</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift1" src="card_components/energy-n.png" alt="Energy"><img class="card__energy" src="card_components/energy-n.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-n.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Soul.png" alt="Soul">
       </div>
@@ -810,7 +952,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--n"></div>
       <div class="card__name">Tomb</div>
-      <div class="card__cost">5</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift2" src="card_components/energy-n.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-n.png" alt="Energy"><img class="card__energy" src="card_components/energy-n.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-n.png" alt="Energy"><img class="card__energy card__energy--shift2" src="card_components/energy-n.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Tomb.png" alt="Tomb">
       </div>
@@ -822,7 +966,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--n"></div>
       <div class="card__name">Decay</div>
-      <div class="card__cost">1</div>
+      <div class="card__cost">
+        <img class="card__energy" src="card_components/energy-n.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Decay.png" alt="Decay">
       </div>
@@ -834,7 +980,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--g"></div>
       <div class="card__name">Elf</div>
-      <div class="card__cost">3</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift1" src="card_components/energy-g.png" alt="Energy"><img class="card__energy" src="card_components/energy-g.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-g.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Elf.png" alt="Elf">
       </div>
@@ -846,7 +994,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--g"></div>
       <div class="card__name">Druid</div>
-      <div class="card__cost">1</div>
+      <div class="card__cost">
+        <img class="card__energy" src="card_components/energy-g.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Druid.png" alt="Druid">
       </div>
@@ -858,7 +1008,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--g"></div>
       <div class="card__name">Dryad</div>
-      <div class="card__cost">4</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift1" src="card_components/energy-g.png" alt="Energy"><img class="card__energy" src="card_components/energy-g.png" alt="Energy"><img class="card__energy" src="card_components/energy-g.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-g.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Dryad.png" alt="Dryad">
       </div>
@@ -870,7 +1022,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--g"></div>
       <div class="card__name">Beast</div>
-      <div class="card__cost">4</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift1" src="card_components/energy-g.png" alt="Energy"><img class="card__energy" src="card_components/energy-g.png" alt="Energy"><img class="card__energy" src="card_components/energy-g.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-g.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Beast.png" alt="Beast">
       </div>
@@ -882,7 +1036,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--g"></div>
       <div class="card__name">Treefolk</div>
-      <div class="card__cost">5</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift2" src="card_components/energy-g.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-g.png" alt="Energy"><img class="card__energy" src="card_components/energy-g.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-g.png" alt="Energy"><img class="card__energy card__energy--shift2" src="card_components/energy-g.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Treefolk.png" alt="Treefolk">
       </div>
@@ -894,7 +1050,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--g"></div>
       <div class="card__name">Faerie</div>
-      <div class="card__cost">1</div>
+      <div class="card__cost">
+        <img class="card__energy" src="card_components/energy-g.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Faerie.png" alt="Faerie">
       </div>
@@ -906,7 +1064,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--g"></div>
       <div class="card__name">Sentinel</div>
-      <div class="card__cost">5</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift2" src="card_components/energy-g.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-g.png" alt="Energy"><img class="card__energy" src="card_components/energy-g.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-g.png" alt="Energy"><img class="card__energy card__energy--shift2" src="card_components/energy-g.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Sentinel.png" alt="Sentinel">
       </div>
@@ -918,7 +1078,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--g"></div>
       <div class="card__name">Antler</div>
-      <div class="card__cost">9</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift2" src="card_components/energy-g.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-g.png" alt="Energy"><img class="card__energy" src="card_components/energy-g.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-g.png" alt="Energy"><img class="card__energy card__energy--shift2" src="card_components/energy-g.png" alt="Energy"><img class="card__energy card__energy--shift4" src="card_components/energy-g.png" alt="Energy"><img class="card__energy card__energy--shift3" src="card_components/energy-g.png" alt="Energy"><img class="card__energy card__energy--shift3" src="card_components/energy-g.png" alt="Energy"><img class="card__energy card__energy--shift4" src="card_components/energy-g.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Antler.png" alt="Antler">
       </div>
@@ -930,7 +1092,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--g"></div>
       <div class="card__name">Grow</div>
-      <div class="card__cost">1</div>
+      <div class="card__cost">
+        <img class="card__energy" src="card_components/energy-g.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Grow.png" alt="Grow">
       </div>
@@ -942,7 +1106,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--g"></div>
       <div class="card__name">Spring</div>
-      <div class="card__cost">3</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift1" src="card_components/energy-g.png" alt="Energy"><img class="card__energy" src="card_components/energy-g.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-g.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Spring.png" alt="Spring">
       </div>
@@ -954,7 +1120,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--g"></div>
       <div class="card__name">Bloom</div>
-      <div class="card__cost">2</div>
+      <div class="card__cost">
+        <img class="card__energy" src="card_components/energy-g.png" alt="Energy"><img class="card__energy" src="card_components/energy-g.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Bloom.png" alt="Bloom">
       </div>
@@ -966,7 +1134,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--g"></div>
       <div class="card__name">Roots</div>
-      <div class="card__cost">3</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift1" src="card_components/energy-g.png" alt="Energy"><img class="card__energy" src="card_components/energy-g.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-g.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Roots.png" alt="Roots">
       </div>
@@ -978,7 +1148,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--g"></div>
       <div class="card__name">Thorns</div>
-      <div class="card__cost">1</div>
+      <div class="card__cost">
+        <img class="card__energy" src="card_components/energy-g.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Thorns.png" alt="Thorns">
       </div>
@@ -990,7 +1162,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--g"></div>
       <div class="card__name">Grove</div>
-      <div class="card__cost">2</div>
+      <div class="card__cost">
+        <img class="card__energy" src="card_components/energy-g.png" alt="Energy"><img class="card__energy" src="card_components/energy-g.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Grove.png" alt="Grove">
       </div>
@@ -1002,7 +1176,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--g"></div>
       <div class="card__name">Nectar</div>
-      <div class="card__cost">2</div>
+      <div class="card__cost">
+        <img class="card__energy" src="card_components/energy-g.png" alt="Energy"><img class="card__energy" src="card_components/energy-g.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Nectar.png" alt="Nectar">
       </div>
@@ -1014,7 +1190,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--o"></div>
       <div class="card__name">Titan</div>
-      <div class="card__cost">6</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift2" src="card_components/energy-o.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-o.png" alt="Energy"><img class="card__energy" src="card_components/energy-o.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-o.png" alt="Energy"><img class="card__energy card__energy--shift2" src="card_components/energy-o.png" alt="Energy"><img class="card__energy card__energy--shift3" src="card_components/energy-o.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Titan.png" alt="Titan">
       </div>
@@ -1026,7 +1204,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--o"></div>
       <div class="card__name">Barbarian</div>
-      <div class="card__cost">3</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift1" src="card_components/energy-o.png" alt="Energy"><img class="card__energy" src="card_components/energy-o.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-o.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Barbarian.png" alt="Barbarian">
       </div>
@@ -1038,7 +1218,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--o"></div>
       <div class="card__name">Dwarf</div>
-      <div class="card__cost">3</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift1" src="card_components/energy-o.png" alt="Energy"><img class="card__energy" src="card_components/energy-o.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-o.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Dwarf.png" alt="Dwarf">
       </div>
@@ -1050,7 +1232,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--o"></div>
       <div class="card__name">Giant</div>
-      <div class="card__cost">5</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift2" src="card_components/energy-o.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-o.png" alt="Energy"><img class="card__energy" src="card_components/energy-o.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-o.png" alt="Energy"><img class="card__energy card__energy--shift2" src="card_components/energy-o.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Giant.png" alt="Giant">
       </div>
@@ -1062,7 +1246,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--o"></div>
       <div class="card__name">Yetti</div>
-      <div class="card__cost">5</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift2" src="card_components/energy-o.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-o.png" alt="Energy"><img class="card__energy" src="card_components/energy-o.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-o.png" alt="Energy"><img class="card__energy card__energy--shift2" src="card_components/energy-o.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Yetti.png" alt="Yetti">
       </div>
@@ -1074,7 +1260,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--o"></div>
       <div class="card__name">Troll</div>
-      <div class="card__cost">5</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift2" src="card_components/energy-o.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-o.png" alt="Energy"><img class="card__energy" src="card_components/energy-o.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-o.png" alt="Energy"><img class="card__energy card__energy--shift2" src="card_components/energy-o.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Troll.png" alt="Troll">
       </div>
@@ -1086,7 +1274,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--o"></div>
       <div class="card__name">Gnome</div>
-      <div class="card__cost">1</div>
+      <div class="card__cost">
+        <img class="card__energy" src="card_components/energy-o.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Gnome.png" alt="Gnome">
       </div>
@@ -1098,7 +1288,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--o"></div>
       <div class="card__name">Ogre</div>
-      <div class="card__cost">4</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift1" src="card_components/energy-o.png" alt="Energy"><img class="card__energy" src="card_components/energy-o.png" alt="Energy"><img class="card__energy" src="card_components/energy-o.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-o.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Ogre.png" alt="Ogre">
       </div>
@@ -1110,7 +1302,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--o"></div>
       <div class="card__name">Golem</div>
-      <div class="card__cost">5</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift2" src="card_components/energy-o.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-o.png" alt="Energy"><img class="card__energy" src="card_components/energy-o.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-o.png" alt="Energy"><img class="card__energy card__energy--shift2" src="card_components/energy-o.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Golem.png" alt="Golem">
       </div>
@@ -1122,7 +1316,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--o"></div>
       <div class="card__name">Spear</div>
-      <div class="card__cost">3</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift1" src="card_components/energy-o.png" alt="Energy"><img class="card__energy" src="card_components/energy-o.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-o.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Spear.png" alt="Spear">
       </div>
@@ -1134,7 +1330,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--o"></div>
       <div class="card__name">Stomp</div>
-      <div class="card__cost">2</div>
+      <div class="card__cost">
+        <img class="card__energy" src="card_components/energy-o.png" alt="Energy"><img class="card__energy" src="card_components/energy-o.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Stomp.png" alt="Stomp">
       </div>
@@ -1146,7 +1344,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--o"></div>
       <div class="card__name">Brawl</div>
-      <div class="card__cost">6</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift2" src="card_components/energy-o.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-o.png" alt="Energy"><img class="card__energy" src="card_components/energy-o.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-o.png" alt="Energy"><img class="card__energy card__energy--shift2" src="card_components/energy-o.png" alt="Energy"><img class="card__energy card__energy--shift3" src="card_components/energy-o.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Brawl.png" alt="Brawl">
       </div>
@@ -1158,7 +1358,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--o"></div>
       <div class="card__name">Stone</div>
-      <div class="card__cost">1</div>
+      <div class="card__cost">
+        <img class="card__energy" src="card_components/energy-o.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Stone.png" alt="Stone">
       </div>
@@ -1170,7 +1372,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--o"></div>
       <div class="card__name">Shrine</div>
-      <div class="card__cost">4</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift1" src="card_components/energy-o.png" alt="Energy"><img class="card__energy" src="card_components/energy-o.png" alt="Energy"><img class="card__energy" src="card_components/energy-o.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-o.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Shrine.png" alt="Shrine">
       </div>
@@ -1182,7 +1386,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--o"></div>
       <div class="card__name">Crush</div>
-      <div class="card__cost">5</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift2" src="card_components/energy-o.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-o.png" alt="Energy"><img class="card__energy" src="card_components/energy-o.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-o.png" alt="Energy"><img class="card__energy card__energy--shift2" src="card_components/energy-o.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Crush.png" alt="Crush">
       </div>
@@ -1194,7 +1400,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--r"></div>
       <div class="card__name">Dragon</div>
-      <div class="card__cost">6</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift2" src="card_components/energy-r.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-r.png" alt="Energy"><img class="card__energy" src="card_components/energy-r.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-r.png" alt="Energy"><img class="card__energy card__energy--shift2" src="card_components/energy-r.png" alt="Energy"><img class="card__energy card__energy--shift3" src="card_components/energy-r.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Dragon.png" alt="Dragon">
       </div>
@@ -1206,7 +1414,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--r"></div>
       <div class="card__name">Goblin</div>
-      <div class="card__cost">1</div>
+      <div class="card__cost">
+        <img class="card__energy" src="card_components/energy-r.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Goblin.png" alt="Goblin">
       </div>
@@ -1218,7 +1428,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--r"></div>
       <div class="card__name">Devil</div>
-      <div class="card__cost">3</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift1" src="card_components/energy-r.png" alt="Energy"><img class="card__energy" src="card_components/energy-r.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-r.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Devil.png" alt="Devil">
       </div>
@@ -1230,7 +1442,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--r"></div>
       <div class="card__name">Elemental</div>
-      <div class="card__cost">6</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift2" src="card_components/energy-r.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-r.png" alt="Energy"><img class="card__energy" src="card_components/energy-r.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-r.png" alt="Energy"><img class="card__energy card__energy--shift2" src="card_components/energy-r.png" alt="Energy"><img class="card__energy card__energy--shift3" src="card_components/energy-r.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Elemental.png" alt="Elemental">
       </div>
@@ -1242,7 +1456,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--r"></div>
       <div class="card__name">Pyromancer</div>
-      <div class="card__cost">2</div>
+      <div class="card__cost">
+        <img class="card__energy" src="card_components/energy-r.png" alt="Energy"><img class="card__energy" src="card_components/energy-r.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Pyromancer.png" alt="Pyromancer">
       </div>
@@ -1254,7 +1470,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--r"></div>
       <div class="card__name">Imp</div>
-      <div class="card__cost">3</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift1" src="card_components/energy-r.png" alt="Energy"><img class="card__energy" src="card_components/energy-r.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-r.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Imp.png" alt="Imp">
       </div>
@@ -1266,7 +1484,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--r"></div>
       <div class="card__name">Kobold</div>
-      <div class="card__cost">2</div>
+      <div class="card__cost">
+        <img class="card__energy" src="card_components/energy-r.png" alt="Energy"><img class="card__energy" src="card_components/energy-r.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Kobold.png" alt="Kobold">
       </div>
@@ -1278,7 +1498,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--r"></div>
       <div class="card__name">Salamander</div>
-      <div class="card__cost">2</div>
+      <div class="card__cost">
+        <img class="card__energy" src="card_components/energy-r.png" alt="Energy"><img class="card__energy" src="card_components/energy-r.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Salamander.png" alt="Salamander">
       </div>
@@ -1290,7 +1512,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--r"></div>
       <div class="card__name">Flame</div>
-      <div class="card__cost">2</div>
+      <div class="card__cost">
+        <img class="card__energy" src="card_components/energy-r.png" alt="Energy"><img class="card__energy" src="card_components/energy-r.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Flame.png" alt="Flame">
       </div>
@@ -1302,7 +1526,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--r"></div>
       <div class="card__name">Inferno</div>
-      <div class="card__cost">4</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift1" src="card_components/energy-r.png" alt="Energy"><img class="card__energy" src="card_components/energy-r.png" alt="Energy"><img class="card__energy" src="card_components/energy-r.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-r.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Inferno.png" alt="Inferno">
       </div>
@@ -1314,7 +1540,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--r"></div>
       <div class="card__name">Lava</div>
-      <div class="card__cost">3</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift1" src="card_components/energy-r.png" alt="Energy"><img class="card__energy" src="card_components/energy-r.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-r.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Lava.png" alt="Lava">
       </div>
@@ -1326,7 +1554,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--r"></div>
       <div class="card__name">Volcano</div>
-      <div class="card__cost">4</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift1" src="card_components/energy-r.png" alt="Energy"><img class="card__energy" src="card_components/energy-r.png" alt="Energy"><img class="card__energy" src="card_components/energy-r.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-r.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Volcano.png" alt="Volcano">
       </div>
@@ -1338,7 +1568,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--r"></div>
       <div class="card__name">Blast</div>
-      <div class="card__cost">4</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift1" src="card_components/energy-r.png" alt="Energy"><img class="card__energy" src="card_components/energy-r.png" alt="Energy"><img class="card__energy" src="card_components/energy-r.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-r.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Blast.png" alt="Blast">
       </div>
@@ -1350,7 +1582,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--r"></div>
       <div class="card__name">Circle</div>
-      <div class="card__cost">4</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift1" src="card_components/energy-r.png" alt="Energy"><img class="card__energy" src="card_components/energy-r.png" alt="Energy"><img class="card__energy" src="card_components/energy-r.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-r.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Circle.png" alt="Circle">
       </div>
@@ -1362,7 +1596,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--r"></div>
       <div class="card__name">Speed</div>
-      <div class="card__cost">2</div>
+      <div class="card__cost">
+        <img class="card__energy" src="card_components/energy-r.png" alt="Energy"><img class="card__energy" src="card_components/energy-r.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Speed.png" alt="Speed">
       </div>
@@ -1374,7 +1610,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--p"></div>
       <div class="card__name">Shaman</div>
-      <div class="card__cost">3</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift1" src="card_components/energy-p.png" alt="Energy"><img class="card__energy" src="card_components/energy-p.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-p.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Shaman.png" alt="Shaman">
       </div>
@@ -1386,7 +1624,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--p"></div>
       <div class="card__name">Demon</div>
-      <div class="card__cost">4</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift1" src="card_components/energy-p.png" alt="Energy"><img class="card__energy" src="card_components/energy-p.png" alt="Energy"><img class="card__energy" src="card_components/energy-p.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-p.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Demon.png" alt="Demon">
       </div>
@@ -1398,7 +1638,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--p"></div>
       <div class="card__name">Witch</div>
-      <div class="card__cost">5</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift2" src="card_components/energy-p.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-p.png" alt="Energy"><img class="card__energy" src="card_components/energy-p.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-p.png" alt="Energy"><img class="card__energy card__energy--shift2" src="card_components/energy-p.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Witch.png" alt="Witch">
       </div>
@@ -1410,7 +1652,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--p"></div>
       <div class="card__name">Parasite</div>
-      <div class="card__cost">1</div>
+      <div class="card__cost">
+        <img class="card__energy" src="card_components/energy-p.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Parasite.png" alt="Parasite">
       </div>
@@ -1422,7 +1666,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--p"></div>
       <div class="card__name">Horror</div>
-      <div class="card__cost">5</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift2" src="card_components/energy-p.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-p.png" alt="Energy"><img class="card__energy" src="card_components/energy-p.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-p.png" alt="Energy"><img class="card__energy card__energy--shift2" src="card_components/energy-p.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Horror.png" alt="Horror">
       </div>
@@ -1434,7 +1680,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--p"></div>
       <div class="card__name">Fanatic</div>
-      <div class="card__cost">1</div>
+      <div class="card__cost">
+        <img class="card__energy" src="card_components/energy-p.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Fanatic.png" alt="Fanatic">
       </div>
@@ -1446,7 +1694,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--p"></div>
       <div class="card__name">Scarecrow</div>
-      <div class="card__cost">4</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift1" src="card_components/energy-p.png" alt="Energy"><img class="card__energy" src="card_components/energy-p.png" alt="Energy"><img class="card__energy" src="card_components/energy-p.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-p.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Scarecrow.png" alt="Scarecrow">
       </div>
@@ -1458,7 +1708,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--p"></div>
       <div class="card__name">Demogorgon</div>
-      <div class="card__cost">7</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift2" src="card_components/energy-p.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-p.png" alt="Energy"><img class="card__energy" src="card_components/energy-p.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-p.png" alt="Energy"><img class="card__energy card__energy--shift2" src="card_components/energy-p.png" alt="Energy"><img class="card__energy card__energy--shift3" src="card_components/energy-p.png" alt="Energy"><img class="card__energy card__energy--shift3" src="card_components/energy-p.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Demogorgon.png" alt="Demogorgon">
       </div>
@@ -1470,7 +1722,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--p"></div>
       <div class="card__name">Overlord</div>
-      <div class="card__cost">8</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift2" src="card_components/energy-p.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-p.png" alt="Energy"><img class="card__energy" src="card_components/energy-p.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-p.png" alt="Energy"><img class="card__energy card__energy--shift2" src="card_components/energy-p.png" alt="Energy"><img class="card__energy card__energy--shift4" src="card_components/energy-p.png" alt="Energy"><img class="card__energy card__energy--shift3" src="card_components/energy-p.png" alt="Energy"><img class="card__energy card__energy--shift4" src="card_components/energy-p.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Overlord.png" alt="Overlord">
       </div>
@@ -1482,7 +1736,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--p"></div>
       <div class="card__name">Madness</div>
-      <div class="card__cost">3</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift1" src="card_components/energy-p.png" alt="Energy"><img class="card__energy" src="card_components/energy-p.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-p.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Madness.png" alt="Madness">
       </div>
@@ -1494,7 +1750,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--p"></div>
       <div class="card__name">Nightmare</div>
-      <div class="card__cost">2</div>
+      <div class="card__cost">
+        <img class="card__energy" src="card_components/energy-p.png" alt="Energy"><img class="card__energy" src="card_components/energy-p.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Nightmare.png" alt="Nightmare">
       </div>
@@ -1506,7 +1764,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--p"></div>
       <div class="card__name">Ritual</div>
-      <div class="card__cost">1</div>
+      <div class="card__cost">
+        <img class="card__energy" src="card_components/energy-p.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Ritual.png" alt="Ritual">
       </div>
@@ -1518,7 +1778,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--p"></div>
       <div class="card__name">Sacrifice</div>
-      <div class="card__cost">1</div>
+      <div class="card__cost">
+        <img class="card__energy" src="card_components/energy-p.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Sacrifice.png" alt="Sacrifice">
       </div>
@@ -1530,7 +1792,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--p"></div>
       <div class="card__name">Void</div>
-      <div class="card__cost">5</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift2" src="card_components/energy-p.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-p.png" alt="Energy"><img class="card__energy" src="card_components/energy-p.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-p.png" alt="Energy"><img class="card__energy card__energy--shift2" src="card_components/energy-p.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Void.png" alt="Void">
       </div>
@@ -1542,7 +1806,9 @@ html, body {
       <div class="card__edge"></div>
       <div class="card__frame card__frame--p"></div>
       <div class="card__name">Paranoia</div>
-      <div class="card__cost">4</div>
+      <div class="card__cost">
+        <img class="card__energy card__energy--shift1" src="card_components/energy-p.png" alt="Energy"><img class="card__energy" src="card_components/energy-p.png" alt="Energy"><img class="card__energy" src="card_components/energy-p.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-p.png" alt="Energy">
+      </div>
       <div class="card__image">
         <img src="ilus/Paranoia.png" alt="Paranoia">
       </div>

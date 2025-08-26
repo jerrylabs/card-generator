@@ -94,9 +94,35 @@ html, body {
   z-index: 2;
   width: 49mm;
   left: 6mm;
-  top: 10MM;
+  top: 14mm;
 }
 
 .card__image img {
   width: 100%;
 }
+
+.card__cost {
+  position: absolute;
+  top: 13.4mm;
+  width: 3.1cm;
+  text-align: center;
+  z-index: 4;
+  left: 1.5cm;
+  line-height: 1;
+}
+
+.card__energy {
+  display: inline-block;
+  width: 8mm;
+  height: 8mm;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0 -1.15mm;
+  position: relative;
+}
+
+.card__energy--shift1 { top: 0.5mm; }
+.card__energy--shift2 { top: 1.5mm; }
+.card__energy--shift3 { top: -3mm; z-index: -1;}
+.card__energy--shift4 { top: -2.5mm; z-index: -1;}
+.card__energy--shift5 { top: -1.5mm; z-index: -1;}
