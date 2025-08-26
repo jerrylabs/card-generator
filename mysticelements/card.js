@@ -3,7 +3,16 @@ module.exports = (cardData) => {
   return `<div class="card">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--${color}"></div>
-      <div class="card__name">${name}</div>
+      <div class="card__name">
+        <svg viewBox="0 -2 30 8" xmlns="http://www.w3.org/2000/svg">
+          <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
+          <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
+            <textPath href="#MyPath" startOffset="1">
+              ${name}
+            </textPath>
+          </text>
+        </svg>
+      </div>
       <div class="card__cost">
         ${Array.from(Array(parseInt(cost)).keys()).map((i) => {
           let mid_index = Math.min((cost - 1) / 2.0, 2);
