@@ -34,8 +34,27 @@ module.exports = (cardData) => {
         <img src="ilus/${name}.png" alt="${name}">
       </div>
       <div class="card__status">${status}</div>
-      <div class="card__text">${text}</div>
-      ${power ? `<div class="card__power">${power}</div>` : ''}
-      ${health ? `<div class="card__health">${health}</div>` : ''}
+      <div class="card__text${power ? ' card__text--with-power' : ''}${health ? ' card__text--with-health' : ''}">
+        ${filterText(text)}
+      </div>
+      ${power ? `
+        <div class="card__power">
+          ${power}
+          <br>
+          <span class="card__symbol">⚔</span>
+        </div>
+      ` : ''}
+      ${health ? `
+        <div class="card__health">
+          ${health}
+          <br>
+          <span class="card__symbol">🛡</span>
+        </div>
+      ` : ''}
     </div>`;
 }
+
+const filterText = (text) => text
+  .replace(/((💥)+|⚔|🛡)/g, '<span class="text__emoji">$1</span>')
+  .replace(/\-/g, '&#8288-&#8288')
+  .replace(/ a /g, ' a&nbsp;');

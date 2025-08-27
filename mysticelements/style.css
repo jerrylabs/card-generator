@@ -20,12 +20,20 @@ html, body {
 
 @font-face {
   font-family: "FantaisieArtistique.otf";
-  src: url("font/FantaisieArtistique.otf.otf") format("opentype");
+  src: url("http://localhost:8080/font/FantaisieArtistique.otf") format("opentype");
 }
 
 @font-face {
   font-family: "Sualtim";
-  src: url("font/Sualtim.otf") format("opentype");
+  src: url("http://localhost:8080/font/Sualtim.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Noto Emoji";
+  src:
+    url("http://localhost:8080/font/NotoEmoji-Light.svg") format("svg"),
+    url("http://localhost:8080/font/NotoEmoji-Light.otf") format("opentype"),
+    url("http://localhost:8080/font/NotoEmoji-Light.ttf") format("truetype");
 }
 
 * {
@@ -142,7 +150,6 @@ html, body {
 .card__energy--shift4 { top: -2.5mm; z-index: -1;}
 .card__energy--shift5 { top: -1.5mm; z-index: -1;}
 
-
 .card__text {
   height: 28.3mm;
   width: 52.5mm;
@@ -154,9 +161,61 @@ html, body {
   left: 3.75mm;
   font-family: Sualtim;
   background-size: contain;
-  padding: 5mm 8mm 4mm;
+  padding: 5mm 3.5mm 3.5mm;
   line-height: 1;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.card__text--with-power { padding-left: 11.1mm; }
+.card__text--with-health { padding-right: 11.1mm; }
+
+.card__text.card__text--with-power.card__text--with-health {
+  width: 53mm;
+}
+
+.text__emoji {
+  white-space: nowrap;
+  font-family: "Noto Emoji";
+  display: contents;
+  line-height: 0.5;
+}
+
+.card__power {
+  height: 21.42mm;
+  width: 14.65mm;
+  z-index: 5;
+  background-image: url(card_components/power_bg.png);
+  position: absolute;
+  bottom: 1.6mm;
+  left: 0mm;
+  background-size: contain;
+  padding: 7mm 0 0 1mm;
+  text-align: center;
+  font-family: FantaisieArtistique;
+  font-size: 10mm;
+  line-height: 5mm;
+}
+
+.card__symbol {
+  font-size: 4mm;
+  font-family: 'Noto Emoji';
+}
+
+.card__health {
+  height: 20.83mm;
+  width: 13.8mm;
+  z-index: 5;
+  background-image: url(card_components/health_bg.png);
+  position: absolute;
+  bottom: 1.6mm;
+  right: 0mm;
+  background-size: contain;
+  padding: 6.5mm 0 0 1mm;
+  line-height: 1;
+  text-align: center;
+  font-family: FantaisieArtistique;
+  font-size: 10mm;
+  line-height: 5mm;
 }
