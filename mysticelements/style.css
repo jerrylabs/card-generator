@@ -20,12 +20,12 @@ html, body {
 
 @font-face {
   font-family: "FantaisieArtistique.otf";
-  src: url("http://localhost:8080/font/FantaisieArtistique.otf.otf") format("opentype");
+  src: url("font/FantaisieArtistique.otf.otf") format("opentype");
 }
 
 @font-face {
   font-family: "Sualtim";
-  src: url("http://localhost:8080/font/Sualtim.otf") format("opentype");
+  src: url("font/Sualtim.otf") format("opentype");
 }
 
 * {
@@ -72,7 +72,7 @@ html, body {
 }
 
 .card__frame--w {
-  background-image: url(http://localhost:8080/card_components/border_white.png);
+  background-image: url(card_components/border_white.png);
 }
 
 .card__name {
@@ -80,7 +80,7 @@ html, body {
   width: 100%;
   font-size: 7mm;
   z-index: 5;
-  background-image: url(http://localhost:8080/card_components/title_bg.png);
+  background-image: url(card_components/title_bg.png);
   position: absolute;
   top: 5mm;
   font-family: FantaisieArtistique;
@@ -127,7 +127,7 @@ html, body {
   width: 100%;
   font-size: 5mm;
   z-index: 5;
-  background-image: url(http://localhost:8080/card_components/status_bg.png);
+  background-image: url(card_components/status_bg.png);
   position: absolute;
   top: 67.85mm;
   font-family: FantaisieArtistique;
@@ -148,7 +148,7 @@ html, body {
   width: 52.5mm;
   font-size: 5mm;
   z-index: 4;
-  background-image: url(http://localhost:8080/card_components/text_bg.png);
+  background-image: url(card_components/text_bg.png);
   position: absolute;
   top: 80mm;
   left: 3.75mm;
