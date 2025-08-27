@@ -33,7 +33,16 @@ module.exports = (cardData) => {
       <div class="card__image">
         <img src="ilus/${name}.png" alt="${name}">
       </div>
-      <div class="card__status">${status}</div>
+      <div class="card__status">
+        <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
+          <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
+          <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
+            <textPath href="#MyPath2" startOffset="1">
+              ${status}
+            </textPath>
+          </text>
+        </svg>
+      </div>
       <div class="card__text${power ? ' card__text--with-power' : ''}${health ? ' card__text--with-health' : ''}">
         ${filterText(text)}
       </div>
