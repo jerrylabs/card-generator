@@ -87,6 +87,10 @@ html, body {
   background-image: url(card_components/border_white.png);
 }
 
+.card__frame--y {
+  background-image: url(card_components/border_yellow.png);
+}
+
 .card__name {
   height: 22mm;
   width: 100%;
@@ -111,6 +115,12 @@ html, body {
 
 .card__image img {
   width: 100%;
+}
+
+.card__image--no-text {
+  width: 42mm;
+  left: 9.5mm;
+  top: 14mm;
 }
 
 .card__cost {
@@ -146,6 +156,18 @@ html, body {
   background-size: contain;
   padding-top: 7.5mm;
   text-transform: capitalize;
+}
+
+.card__status--no-text {
+  top: 78.85mm;
+  height: 30mm;
+  padding-top: 9mm;
+  background-image: url(card_components/status_bg_bigger.png);
+}
+
+.card__status--row2 {
+  position: relative;
+  top: -1cm;
 }
 
 .card__energy--shift1 { top: 0.5mm; }
@@ -184,6 +206,19 @@ html, body {
   font-family: "Noto Emoji";
   display: contents;
   line-height: 0.5;
+}
+
+.text__energy-wrap {
+  white-space: nowrap;
+  display: contents;
+}
+
+.text__energy {
+  height: 5mm;
+  width: 5mm;
+  vertical-align: middle;
+  display: inline-block;
+  margin: -5mm 0;
 }
 
 .card__power {
@@ -257,10 +292,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        When attacked, prepare it after combat.
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            When attacked, prepare it after combat.
+          </div>
+        </div>
+      
       
         <div class="card__power">
           5
@@ -303,10 +343,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        Reduce all <span class="text__emoji">💥</span> dealt to Paladin by&nbsp;1.
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            Reduce all <span class="text__emoji">💥</span> dealt to Paladin by&nbsp;1.
+          </div>
+        </div>
+      
       
         <div class="card__power">
           4
@@ -349,10 +394,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        When your unit is killed, promote Monk.
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            When your unit is killed, promote Monk.
+          </div>
+        </div>
+      
       
         <div class="card__power">
           3
@@ -395,10 +445,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        Cannot be killed unless 3 ANY ENERGY is paid.
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            Cannot be killed unless <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span> are paid.
+          </div>
+        </div>
+      
       
         <div class="card__power">
           2
@@ -441,10 +496,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        USE: Any unit gets flying this turn.
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            USE: Any unit gets flying this turn.
+          </div>
+        </div>
+      
       
         <div class="card__power">
           2
@@ -487,10 +547,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        USE: Return a&nbsp;card from your grave to the hand.
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            USE: Return a&nbsp;card from your grave to the hand.
+          </div>
+        </div>
+      
       
         <div class="card__power">
           1
@@ -533,10 +598,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        USE: Heal all <span class="text__emoji">💥</span> from any unit.
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            USE: Heal all <span class="text__emoji">💥</span> from any unit.
+          </div>
+        </div>
+      
       
         <div class="card__power">
           1
@@ -579,10 +649,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        All your other units are guards.
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            All your other units are guards.
+          </div>
+        </div>
+      
       
         <div class="card__power">
           0
@@ -625,10 +700,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text">
-        Heal all <span class="text__emoji">💥</span> from each of your units.
-      </div>
+      
+        <div class="card__text">
+          <div>
+            Heal all <span class="text__emoji">💥</span> from each of your units.
+          </div>
+        </div>
+      
       
       
     </div><div class="card">
@@ -659,10 +739,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        At your turn start: Heal <span class="text__emoji">💥💥</span>.
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            At your turn start: Heal <span class="text__emoji">💥💥</span>.
+          </div>
+        </div>
+      
       
         <div class="card__power">
           +3
@@ -705,10 +790,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-health">
-        Heal charmed unit.
-      </div>
+      
+        <div class="card__text card__text--with-health">
+          <div>
+            Heal charmed unit.
+          </div>
+        </div>
+      
       
       
         <div class="card__health">
@@ -745,10 +835,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text">
-        Opponent discards a&nbsp;non&#8288-&#8288white card of your choice.
-      </div>
+      
+        <div class="card__text">
+          <div>
+            Opponent discards a&nbsp;non&#8288-&#8288white card of your choice.
+          </div>
+        </div>
+      
       
       
     </div><div class="card">
@@ -779,10 +874,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text">
-        Return a&nbsp;card from your grave to your hand.
-      </div>
+      
+        <div class="card__text">
+          <div>
+            Return a&nbsp;card from your grave to your hand.
+          </div>
+        </div>
+      
       
       
     </div><div class="card">
@@ -813,10 +913,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text">
-        USE: Heal <span class="text__emoji">💥💥</span>.
-      </div>
+      
+        <div class="card__text">
+          <div>
+            USE: Heal <span class="text__emoji">💥💥</span>.
+          </div>
+        </div>
+      
       
       
     </div><div class="card">
@@ -847,10 +952,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text">
-        Reveal top card of your deck or grave. If it's white, play it for free.
-      </div>
+      
+        <div class="card__text">
+          <div>
+            Reveal top card of your deck or grave. If it's white, play it for free.
+          </div>
+        </div>
+      
       
       
     </div><div class="card">
@@ -869,22 +979,30 @@ html, body {
       <div class="card__cost">
         <img class="card__energy card__energy--shift1" src="card_components/energy-y.png" alt="Energy"><img class="card__energy" src="card_components/energy-y.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-y.png" alt="Energy">
       </div>
-      <div class="card__image">
+      <div class="card__image card__image--no-text">
         <img src="ilus/Chariot.png" alt="Chariot">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--no-text">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              Shooting guarding tempo unit
+              Shooting guard
             </textPath>
           </text>
         </svg>
-      </div>
-      <div class="card__text card__text--with-power card__text--with-health">
+        
+        <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg" class="card__status--row2">
+          <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
+          <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
+            <textPath href="#MyPath2" startOffset="1">
+              tempo unit
+            </textPath>
+          </text>
+        </svg>
         
       </div>
+      
       
         <div class="card__power">
           4
@@ -927,10 +1045,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        When deployed, promote all your other units.
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            When deployed, promote all your other units.
+          </div>
+        </div>
+      
       
         <div class="card__power">
           3
@@ -973,10 +1096,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        USE: Prepare up to two units.
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            USE: Prepare up to two units.
+          </div>
+        </div>
+      
       
         <div class="card__power">
           3
@@ -1019,10 +1147,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        When non&#8288-&#8288yellow unit attacks, deal <span class="text__emoji">💥</span> to attacking player.
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            When non&#8288-&#8288yellow unit attacks, deal <span class="text__emoji">💥</span> to attacking player.
+          </div>
+        </div>
+      
       
         <div class="card__power">
           3
@@ -1065,10 +1198,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        USE: Exhaust any unit and prepare any unit.
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            USE: Exhaust any unit and prepare any unit.
+          </div>
+        </div>
+      
       
         <div class="card__power">
           2
@@ -1111,10 +1249,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        Deal <span class="text__emoji">💥</span> to your unit: get 1 ANY ENERGY.
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            Deal <span class="text__emoji">💥</span> to your unit: get <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span>.
+          </div>
+        </div>
+      
       
         <div class="card__power">
           2
@@ -1157,10 +1300,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        At your turn start: Heal all its <span class="text__emoji">💥</span>.
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            At your turn start: Heal all its <span class="text__emoji">💥</span>.
+          </div>
+        </div>
+      
       
         <div class="card__power">
           4
@@ -1203,10 +1351,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        At your turn start: Destroy any exhausted unit or relic.
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            At your turn start: Destroy any exhausted unit or relic.
+          </div>
+        </div>
+      
       
         <div class="card__power">
           7
@@ -1249,10 +1402,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text">
-        Deal <span class="text__emoji">💥💥💥💥</span>
-      </div>
+      
+        <div class="card__text">
+          <div>
+            Deal <span class="text__emoji">💥💥💥💥</span>
+          </div>
+        </div>
+      
       
       
     </div><div class="card">
@@ -1283,10 +1441,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text">
-        Destroy any card in battle.
-      </div>
+      
+        <div class="card__text">
+          <div>
+            Destroy any card in battle.
+          </div>
+        </div>
+      
       
       
     </div><div class="card">
@@ -1317,10 +1480,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text">
-        Prepare (if neded) and use any unit.
-      </div>
+      
+        <div class="card__text">
+          <div>
+            Prepare (if neded) and use any unit.
+          </div>
+        </div>
+      
       
       
     </div><div class="card">
@@ -1351,10 +1519,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text">
-        USE: Prepare any unit.
-      </div>
+      
+        <div class="card__text">
+          <div>
+            USE: Prepare any unit.
+          </div>
+        </div>
+      
       
       
     </div><div class="card">
@@ -1385,10 +1558,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text">
-        Charmed unit gets: "USE: Get 2 ANY ENERGY."
-      </div>
+      
+        <div class="card__text">
+          <div>
+            Charmed unit gets: "USE: Get <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span>."
+          </div>
+        </div>
+      
       
       
     </div><div class="card">
@@ -1419,10 +1597,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text">
-        USE: Promote any unit.
-      </div>
+      
+        <div class="card__text">
+          <div>
+            USE: Promote any unit.
+          </div>
+        </div>
+      
       
       
     </div><div class="card">
@@ -1453,10 +1636,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text">
-        Destroy all non&#8288-&#8288yellow units.
-      </div>
+      
+        <div class="card__text">
+          <div>
+            Destroy all non&#8288-&#8288yellow units.
+          </div>
+        </div>
+      
       
       
     </div><div class="card">
@@ -1487,10 +1675,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        Cannot be destroyed unless 3 MANA is paid.
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            Cannot be killed unless <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span> are paid.
+          </div>
+        </div>
+      
       
         <div class="card__power">
           8
@@ -1533,10 +1726,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        USE: Steal 1 ANY ENERGY
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            USE: Steal <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span>.
+          </div>
+        </div>
+      
       
         <div class="card__power">
           4
@@ -1579,10 +1777,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        +3 <span class="text__emoji">⚔</span>️ & +3 <span class="text__emoji">🛡</span>️ if you have other blue unit in the battle.
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            +3 <span class="text__emoji">⚔</span>️ & +3 <span class="text__emoji">🛡</span>️ if you have other blue unit in the battle.
+          </div>
+        </div>
+      
       
         <div class="card__power">
           3
@@ -1625,10 +1828,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        When attacks, other unit gets flying this turn.
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            When attacks, other unit gets flying this turn.
+          </div>
+        </div>
+      
       
         <div class="card__power">
           5
@@ -1671,10 +1879,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        USE: Return an unit to the hand.
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            USE: Return an unit to the hand.
+          </div>
+        </div>
+      
       
         <div class="card__power">
           3
@@ -1717,10 +1930,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        USE: Exhaust any unit.
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            USE: Exhaust any unit.
+          </div>
+        </div>
+      
       
         <div class="card__power">
           2
@@ -1763,10 +1981,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        When damages an unit, destroy it.
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            When damages an unit, destroy it.
+          </div>
+        </div>
+      
       
         <div class="card__power">
           2
@@ -1809,10 +2032,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        Does not prepare at your turn start. 3 BLUE ENERGY: Prepare it.
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            Does not prepare at your turn start. <span class="text__energy-wrap">[B][B][B]</span>: Prepare it.
+          </div>
+        </div>
+      
       
         <div class="card__power">
           7
@@ -1855,10 +2083,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text">
-        Return an unit to the hand.
-      </div>
+      
+        <div class="card__text">
+          <div>
+            Return an unit to the hand.
+          </div>
+        </div>
+      
       
       
     </div><div class="card">
@@ -1889,10 +2122,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text">
-        Shuffle an unit to the deck.
-      </div>
+      
+        <div class="card__text">
+          <div>
+            Shuffle an unit to the deck.
+          </div>
+        </div>
+      
       
       
     </div><div class="card">
@@ -1923,10 +2161,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text">
-        Exchaust charmed unit. It cannot be prepared unless 3 ANY ENERGY is paid.
-      </div>
+      
+        <div class="card__text">
+          <div>
+            Exchaust charmed unit. It cannot be prepared unless <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span> are paid.
+          </div>
+        </div>
+      
       
       
     </div><div class="card">
@@ -1957,10 +2200,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text">
-        Shuffle any card from the battle to the deck.
-      </div>
+      
+        <div class="card__text">
+          <div>
+            Shuffle any card from the battle to the deck.
+          </div>
+        </div>
+      
       
       
     </div><div class="card">
@@ -1991,10 +2239,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text">
-        USE: Get 2 ANY ENERGY.
-      </div>
+      
+        <div class="card__text">
+          <div>
+            USE: Get <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span>.
+          </div>
+        </div>
+      
       
       
     </div><div class="card">
@@ -2025,10 +2278,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text">
-        Your hand limit is increased by 1.
-      </div>
+      
+        <div class="card__text">
+          <div>
+            Your hand limit is increased by 1.
+          </div>
+        </div>
+      
       
       
     </div><div class="card">
@@ -2059,10 +2317,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text">
-        Copy the effect of wonder on the top of any grave.
-      </div>
+      
+        <div class="card__text">
+          <div>
+            Copy the effect of wonder on the top of any grave.
+          </div>
+        </div>
+      
       
       
     </div><div class="card">
@@ -2093,10 +2356,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        Can be deployed from grave.
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            Can be deployed from grave.
+          </div>
+        </div>
+      
       
         <div class="card__power">
           2
@@ -2139,10 +2407,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        When an unit is killed, put Skeleton from grave to the battle.
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            When an unit is killed, put Skeleton from grave to the battle.
+          </div>
+        </div>
+      
       
         <div class="card__power">
           1
@@ -2185,10 +2458,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        USE: move all <span class="text__emoji">💥</span> from Vampire to any unit.
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            USE: move all <span class="text__emoji">💥</span> from Vampire to any unit.
+          </div>
+        </div>
+      
       
         <div class="card__power">
           5
@@ -2231,10 +2509,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        USE: Return an unit from grave to battle.
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            USE: Return an unit from grave to battle.
+          </div>
+        </div>
+      
       
         <div class="card__power">
           5
@@ -2277,10 +2560,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        When plunders, steal 1 ANY ENERGY, convert it to BLACK ENERGY.
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            When plunders, steal <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span>, convert it to <span class="text__energy-wrap">[N]</span>.
+          </div>
+        </div>
+      
       
         <div class="card__power">
           3
@@ -2323,10 +2611,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        When unit is killed, promote twice.
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            When unit is killed, promote twice.
+          </div>
+        </div>
+      
       
         <div class="card__power">
           3
@@ -2369,10 +2662,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        When plunders, player must discard a&nbsp;card of their choice.
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            When plunders, player must discard a&nbsp;card of their choice.
+          </div>
+        </div>
+      
       
         <div class="card__power">
           4
@@ -2415,10 +2713,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        When plunders, player must discard a&nbsp;card of your choice.
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            When plunders, player must discard a&nbsp;card of your choice.
+          </div>
+        </div>
+      
       
         <div class="card__power">
           6
@@ -2461,10 +2764,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text">
-        Return an unit from grave to battle.
-      </div>
+      
+        <div class="card__text">
+          <div>
+            Return an unit from grave to battle.
+          </div>
+        </div>
+      
       
       
     </div><div class="card">
@@ -2495,10 +2803,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text">
-        Destroy any card in battle.
-      </div>
+      
+        <div class="card__text">
+          <div>
+            Destroy any card in battle.
+          </div>
+        </div>
+      
       
       
     </div><div class="card">
@@ -2529,10 +2842,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text">
-        Demote all units twice.
-      </div>
+      
+        <div class="card__text">
+          <div>
+            Demote all units twice.
+          </div>
+        </div>
+      
       
       
     </div><div class="card">
@@ -2563,10 +2881,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text">
-        Steal all ANY ENERGY, convert it to BLACK ENERGY.
-      </div>
+      
+        <div class="card__text">
+          <div>
+            Steal all [E, convert it to <span class="text__energy-wrap">[B]</span>.
+          </div>
+        </div>
+      
       
       
     </div><div class="card">
@@ -2597,10 +2920,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text">
-        When charmed unit is killed, return it to battle demoted and move Soul to other non&#8288-&#8288demoted unit.
-      </div>
+      
+        <div class="card__text">
+          <div>
+            When charmed unit is killed, return it to battle demoted and move Soul to other non&#8288-&#8288demoted unit.
+          </div>
+        </div>
+      
       
       
     </div><div class="card">
@@ -2631,10 +2959,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text">
-        USE: Demote any unit.
-      </div>
+      
+        <div class="card__text">
+          <div>
+            USE: Demote any unit.
+          </div>
+        </div>
+      
       
       
     </div><div class="card">
@@ -2665,10 +2998,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text">
-        At your turn start: Demote charmed unit.
-      </div>
+      
+        <div class="card__text">
+          <div>
+            At your turn start: Demote charmed unit.
+          </div>
+        </div>
+      
       
       
     </div><div class="card">
@@ -2699,10 +3037,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        All your units have: "USE: add 1 ANY ENERGY"
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            All your units have: "USE: add 1 <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span>."
+          </div>
+        </div>
+      
       
         <div class="card__power">
           3
@@ -2745,10 +3088,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        At your turn start: Get 1 ANY ENERGY.
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            At your turn start: Get <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span>.
+          </div>
+        </div>
+      
       
         <div class="card__power">
           0
@@ -2791,10 +3139,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        When opponent draw 3 cards or more, promote any unit.
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            When opponent draw 3 cards or more, promote any unit.
+          </div>
+        </div>
+      
       
         <div class="card__power">
           4
@@ -2825,10 +3178,10 @@ html, body {
       <div class="card__cost">
         <img class="card__energy card__energy--shift1" src="card_components/energy-g.png" alt="Energy"><img class="card__energy" src="card_components/energy-g.png" alt="Energy"><img class="card__energy" src="card_components/energy-g.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-g.png" alt="Energy">
       </div>
-      <div class="card__image">
+      <div class="card__image card__image--no-text">
         <img src="ilus/Beast.png" alt="Beast">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--no-text">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
@@ -2837,10 +3190,9 @@ html, body {
             </textPath>
           </text>
         </svg>
-      </div>
-      <div class="card__text card__text--with-power card__text--with-health">
         
       </div>
+      
       
         <div class="card__power">
           4
@@ -2883,10 +3235,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        At your turn start: Heal <span class="text__emoji">💥💥</span> from it.
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            At your turn start: Heal <span class="text__emoji">💥💥</span> from it.
+          </div>
+        </div>
+      
       
         <div class="card__power">
           3
@@ -2929,10 +3286,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        When used, draw a&nbsp;card.
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            When used, draw a&nbsp;card.
+          </div>
+        </div>
+      
       
         <div class="card__power">
           1
@@ -2963,22 +3325,30 @@ html, body {
       <div class="card__cost">
         <img class="card__energy card__energy--shift2" src="card_components/energy-g.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-g.png" alt="Energy"><img class="card__energy" src="card_components/energy-g.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-g.png" alt="Energy"><img class="card__energy card__energy--shift2" src="card_components/energy-g.png" alt="Energy">
       </div>
-      <div class="card__image">
+      <div class="card__image card__image--no-text">
         <img src="ilus/Centaur.png" alt="Centaur">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--no-text">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              Shooting tempo guard unit
+              Shooting tempo
             </textPath>
           </text>
         </svg>
-      </div>
-      <div class="card__text card__text--with-power card__text--with-health">
+        
+        <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg" class="card__status--row2">
+          <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
+          <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
+            <textPath href="#MyPath2" startOffset="1">
+              guard unit
+            </textPath>
+          </text>
+        </svg>
         
       </div>
+      
       
         <div class="card__power">
           5
@@ -3021,10 +3391,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        When non&#8288-&#8288green unit attacks, prepare Antler.
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            When non&#8288-&#8288green unit attacks, prepare Antler.
+          </div>
+        </div>
+      
       
         <div class="card__power">
           6
@@ -3067,10 +3442,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text">
-        At your turn start: Promote charmed unit.
-      </div>
+      
+        <div class="card__text">
+          <div>
+            At your turn start: Promote charmed unit.
+          </div>
+        </div>
+      
       
       
     </div><div class="card">
@@ -3101,10 +3481,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text">
-        Heal <span class="text__emoji">💥💥💥</span> from each of your units.
-      </div>
+      
+        <div class="card__text">
+          <div>
+            Heal <span class="text__emoji">💥💥💥</span> from each of your units.
+          </div>
+        </div>
+      
       
       
     </div><div class="card">
@@ -3135,10 +3520,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text">
-        Get 5 ANY ENERGY.
-      </div>
+      
+        <div class="card__text">
+          <div>
+            Get <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span>.
+          </div>
+        </div>
+      
       
       
     </div><div class="card">
@@ -3169,10 +3559,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text">
-        Exchaust charmed unit. It cannot be prepared unless 3 ANY ENERGY is paid.
-      </div>
+      
+        <div class="card__text">
+          <div>
+            Exchaust charmed unit. It cannot be prepared unless <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span> are paid.
+          </div>
+        </div>
+      
       
       
     </div><div class="card">
@@ -3191,10 +3586,10 @@ html, body {
       <div class="card__cost">
         <img class="card__energy" src="card_components/energy-g.png" alt="Energy">
       </div>
-      <div class="card__image">
+      <div class="card__image card__image--no-text">
         <img src="ilus/Thorns.png" alt="Thorns">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--no-text">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
@@ -3203,10 +3598,9 @@ html, body {
             </textPath>
           </text>
         </svg>
-      </div>
-      <div class="card__text card__text--with-power card__text--with-health">
         
       </div>
+      
       
         <div class="card__power">
           +3
@@ -3249,10 +3643,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text">
-        USE: Get 1 ANY ENERGY.
-      </div>
+      
+        <div class="card__text">
+          <div>
+            USE: Get <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span>.
+          </div>
+        </div>
+      
       
       
     </div><div class="card">
@@ -3283,10 +3682,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text">
-        Return top 7 cards from your deep grave back to the top of the deck.
-      </div>
+      
+        <div class="card__text">
+          <div>
+            Return top 7 cards from your deep grave back to the top of the deck.
+          </div>
+        </div>
+      
       
       
     </div><div class="card">
@@ -3317,10 +3721,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        When deployed, destroy any card in battle.
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            When deployed, destroy any card in battle.
+          </div>
+        </div>
+      
       
         <div class="card__power">
           7
@@ -3363,10 +3772,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        Promote after each its combat.
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            Promote after each its combat.
+          </div>
+        </div>
+      
       
         <div class="card__power">
           4
@@ -3409,10 +3823,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        USE: Promote an unit.
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            USE: Promote an unit.
+          </div>
+        </div>
+      
       
         <div class="card__power">
           2
@@ -3455,10 +3874,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        When kills an unit, heal <span class="text__emoji">💥💥</span> from it.
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            When kills an unit, heal <span class="text__emoji">💥💥</span> from it.
+          </div>
+        </div>
+      
       
         <div class="card__power">
           6
@@ -3501,10 +3925,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        When damaged, put a&nbsp;card in from your grave on top of the deck.
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            When damaged, put a&nbsp;card from your grave on top of the deck.
+          </div>
+        </div>
+      
       
         <div class="card__power">
           4
@@ -3547,10 +3976,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        When plunders, player must discard a&nbsp;card of their choice.
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            When plunders, player must discard a&nbsp;card of their choice.
+          </div>
+        </div>
+      
       
         <div class="card__power">
           5
@@ -3593,10 +4027,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        If deployed or killed, return top card from your grave to the hand.
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            If deployed or killed, return top card from your grave to the hand.
+          </div>
+        </div>
+      
       
         <div class="card__power">
           1
@@ -3639,10 +4078,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        Double <span class="text__emoji">⚔</span>️ when plundering.
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            Double <span class="text__emoji">⚔</span>️ when plundering.
+          </div>
+        </div>
+      
       
         <div class="card__power">
           4
@@ -3685,10 +4129,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        When attacked, deal <span class="text__emoji">💥💥</span> to attacking unit.
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            When attacked, deal <span class="text__emoji">💥💥</span> to attacking unit.
+          </div>
+        </div>
+      
       
         <div class="card__power">
           5
@@ -3731,10 +4180,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text">
-        Use: +3 <span class="text__emoji">⚔</span>️ to any unit this turn.
-      </div>
+      
+        <div class="card__text">
+          <div>
+            Use: +3 <span class="text__emoji">⚔</span>️ to any unit this turn.
+          </div>
+        </div>
+      
       
       
     </div><div class="card">
@@ -3765,10 +4219,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text">
-        Deal <span class="text__emoji">💥💥💥💥</span>.
-      </div>
+      
+        <div class="card__text">
+          <div>
+            Deal <span class="text__emoji">💥💥💥💥</span>.
+          </div>
+        </div>
+      
       
       
     </div><div class="card">
@@ -3799,10 +4258,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text">
-        Prepare all your units and relics.
-      </div>
+      
+        <div class="card__text">
+          <div>
+            Prepare all your units and relics.
+          </div>
+        </div>
+      
       
       
     </div><div class="card">
@@ -3821,10 +4285,10 @@ html, body {
       <div class="card__cost">
         <img class="card__energy" src="card_components/energy-o.png" alt="Energy">
       </div>
-      <div class="card__image">
+      <div class="card__image card__image--no-text">
         <img src="ilus/Stone.png" alt="Stone">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--no-text">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
@@ -3833,10 +4297,9 @@ html, body {
             </textPath>
           </text>
         </svg>
-      </div>
-      <div class="card__text card__text--with-power card__text--with-health">
         
       </div>
+      
       
         <div class="card__power">
           +3
@@ -3879,10 +4342,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text">
-        USE: Prepare any unit.
-      </div>
+      
+        <div class="card__text">
+          <div>
+            USE: Prepare any unit.
+          </div>
+        </div>
+      
       
       
     </div><div class="card">
@@ -3913,10 +4381,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text">
-        Destroy any card in battle.
-      </div>
+      
+        <div class="card__text">
+          <div>
+            Destroy any card in battle.
+          </div>
+        </div>
+      
       
       
     </div><div class="card">
@@ -3947,10 +4420,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        1 RED ENERGY: Deal <span class="text__emoji">💥</span>.
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            <span class="text__energy-wrap">[R]</span>: Deal <span class="text__emoji">💥</span>.
+          </div>
+        </div>
+      
       
         <div class="card__power">
           7
@@ -3981,10 +4459,10 @@ html, body {
       <div class="card__cost">
         <img class="card__energy" src="card_components/energy-r.png" alt="Energy">
       </div>
-      <div class="card__image">
+      <div class="card__image card__image--no-text">
         <img src="ilus/Goblin.png" alt="Goblin">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--no-text">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
@@ -3993,10 +4471,9 @@ html, body {
             </textPath>
           </text>
         </svg>
-      </div>
-      <div class="card__text card__text--with-power card__text--with-health">
         
       </div>
+      
       
         <div class="card__power">
           2
@@ -4039,10 +4516,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        USE: Draw 3 cards.
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            USE: Draw 3 cards.
+          </div>
+        </div>
+      
       
         <div class="card__power">
           4
@@ -4085,10 +4567,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        When plunders, heal all its <span class="text__emoji">💥</span>.
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            When plunders, heal all its <span class="text__emoji">💥</span>.
+          </div>
+        </div>
+      
       
         <div class="card__power">
           6
@@ -4131,10 +4618,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        USE: Deal <span class="text__emoji">💥💥</span>.
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            USE: Deal <span class="text__emoji">💥💥</span>.
+          </div>
+        </div>
+      
       
         <div class="card__power">
           2
@@ -4177,10 +4669,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        When deployed, deal <span class="text__emoji">💥💥</span>.
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            When deployed, deal <span class="text__emoji">💥💥</span>.
+          </div>
+        </div>
+      
       
         <div class="card__power">
           2
@@ -4211,10 +4708,10 @@ html, body {
       <div class="card__cost">
         <img class="card__energy" src="card_components/energy-r.png" alt="Energy"><img class="card__energy" src="card_components/energy-r.png" alt="Energy">
       </div>
-      <div class="card__image">
+      <div class="card__image card__image--no-text">
         <img src="ilus/Kobold.png" alt="Kobold">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--no-text">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
@@ -4223,10 +4720,9 @@ html, body {
             </textPath>
           </text>
         </svg>
-      </div>
-      <div class="card__text card__text--with-power card__text--with-health">
         
       </div>
+      
       
         <div class="card__power">
           3
@@ -4269,10 +4765,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        RED MANA: Deal <span class="text__emoji">💥</span> to Salamander and <span class="text__emoji">💥</span> to any unit.
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            RED MANA: Deal <span class="text__emoji">💥</span> to Salamander and <span class="text__emoji">💥</span> to any unit.
+          </div>
+        </div>
+      
       
         <div class="card__power">
           1
@@ -4315,10 +4816,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text">
-        Deal <span class="text__emoji">💥💥💥💥</span>.
-      </div>
+      
+        <div class="card__text">
+          <div>
+            Deal <span class="text__emoji">💥💥💥💥</span>.
+          </div>
+        </div>
+      
       
       
     </div><div class="card">
@@ -4349,10 +4855,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text">
-        Deal <span class="text__emoji">💥💥💥💥</span> to all non&#8288-&#8288red units.
-      </div>
+      
+        <div class="card__text">
+          <div>
+            Deal <span class="text__emoji">💥💥💥💥</span> to all non&#8288-&#8288red units.
+          </div>
+        </div>
+      
       
       
     </div><div class="card">
@@ -4383,10 +4894,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text">
-        Destroy any relic or non&#8288-&#8288flying unit.
-      </div>
+      
+        <div class="card__text">
+          <div>
+            Destroy any relic or non&#8288-&#8288flying unit.
+          </div>
+        </div>
+      
       
       
     </div><div class="card">
@@ -4417,10 +4933,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text">
-        USE: Deal <span class="text__emoji">💥</span>.
-      </div>
+      
+        <div class="card__text">
+          <div>
+            USE: Deal <span class="text__emoji">💥</span>.
+          </div>
+        </div>
+      
       
       
     </div><div class="card">
@@ -4451,10 +4972,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text">
-        Deal <span class="text__emoji">💥💥💥</span> to each of up to 3 units.
-      </div>
+      
+        <div class="card__text">
+          <div>
+            Deal <span class="text__emoji">💥💥💥</span> to each of up to 3 units.
+          </div>
+        </div>
+      
       
       
     </div><div class="card">
@@ -4485,10 +5011,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text">
-        USE: Prepare any unit.
-      </div>
+      
+        <div class="card__text">
+          <div>
+            USE: Prepare any unit.
+          </div>
+        </div>
+      
       
       
     </div><div class="card">
@@ -4519,10 +5050,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text">
-        Draw 4 cards.
-      </div>
+      
+        <div class="card__text">
+          <div>
+            Draw 4 cards.
+          </div>
+        </div>
+      
       
       
     </div><div class="card">
@@ -4553,10 +5089,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        USE: Promote an unit and deal <span class="text__emoji">💥💥</span> to it.
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            USE: Promote an unit and deal <span class="text__emoji">💥💥</span> to it.
+          </div>
+        </div>
+      
       
         <div class="card__power">
           2
@@ -4599,10 +5140,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        Card limit of the opponent is reduced by 1.
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            Card limit of the opponent is reduced by 1.
+          </div>
+        </div>
+      
       
         <div class="card__power">
           4
@@ -4645,10 +5191,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        USE: Move all <span class="text__emoji">💥</span> from one unit to any other unit.
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            USE: Move all <span class="text__emoji">💥</span> from one unit to any other unit.
+          </div>
+        </div>
+      
       
         <div class="card__power">
           2
@@ -4691,10 +5242,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        USE: Steal 2 ANY ENERGY, convert it to PURPLE ENERGY.
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            USE: Steal <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span>, convert it to <span class="text__energy-wrap">[P]</span>.
+          </div>
+        </div>
+      
       
         <div class="card__power">
           2
@@ -4737,10 +5293,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        USE: Exhaust up to two units
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            USE: Exhaust up to two units
+          </div>
+        </div>
+      
       
         <div class="card__power">
           5
@@ -4783,10 +5344,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        When killed, return a&nbsp;purple unit from grave to battle.
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            When killed, return a&nbsp;purple unit from grave to battle.
+          </div>
+        </div>
+      
       
         <div class="card__power">
           3
@@ -4829,10 +5395,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        USE: Exhaust an unit.
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            USE: Exhaust an unit.
+          </div>
+        </div>
+      
       
         <div class="card__power">
           5
@@ -4875,10 +5446,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        USE: Destroy any unit.
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            USE: Destroy any unit.
+          </div>
+        </div>
+      
       
         <div class="card__power">
           6
@@ -4921,10 +5497,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power card__text--with-health">
-        At your turn start: Gets an ability of any unit until your next turn.
-      </div>
+      
+        <div class="card__text card__text--with-power card__text--with-health">
+          <div>
+            At your turn start: Gets an ability of any unit until your next turn.
+          </div>
+        </div>
+      
       
         <div class="card__power">
           6
@@ -4967,10 +5548,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text">
-        Double <span class="text__emoji">⚔</span>️ and <span class="text__emoji">💥</span> dealt to charmed unit.
-      </div>
+      
+        <div class="card__text">
+          <div>
+            Double <span class="text__emoji">⚔</span>️ and <span class="text__emoji">💥</span> dealt to charmed unit.
+          </div>
+        </div>
+      
       
       
     </div><div class="card">
@@ -5001,10 +5587,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text card__text--with-power">
-        If charmed unit is killed, move Darkness to another unit.
-      </div>
+      
+        <div class="card__text card__text--with-power">
+          <div>
+            If charmed unit is killed, move Darkness to another unit.
+          </div>
+        </div>
+      
       
         <div class="card__power">
           -3
@@ -5041,10 +5632,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text">
-        Put a&nbsp;purple unit from your hand or grave to battle.
-      </div>
+      
+        <div class="card__text">
+          <div>
+            Put a&nbsp;purple unit from your hand or grave to battle.
+          </div>
+        </div>
+      
       
       
     </div><div class="card">
@@ -5075,10 +5671,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text">
-        Move all <span class="text__emoji">💥</span> from one unit to another.
-      </div>
+      
+        <div class="card__text">
+          <div>
+            Move all <span class="text__emoji">💥</span> from one unit to another.
+          </div>
+        </div>
+      
       
       
     </div><div class="card">
@@ -5109,10 +5710,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text">
-        Destroy any card in battle.
-      </div>
+      
+        <div class="card__text">
+          <div>
+            Destroy any card in battle.
+          </div>
+        </div>
+      
       
       
     </div><div class="card">
@@ -5143,10 +5749,15 @@ html, body {
             </textPath>
           </text>
         </svg>
+        
       </div>
-      <div class="card__text">
-        Opponent discards all cards.
-      </div>
+      
+        <div class="card__text">
+          <div>
+            Opponent discards all cards.
+          </div>
+        </div>
+      
       
       
     </div>
