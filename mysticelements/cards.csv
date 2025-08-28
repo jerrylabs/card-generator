@@ -17,7 +17,7 @@ Prayer,Modlitba,wonder,w,1,,,"Reveal top card of your deck or grave. If it's whi
 Chariot,Jezdec,Shooting guard tempo unit,y,3,4,2,,
 Legionnaire,Legionář,unit,y,4,3,3,"When deployed, promote all your other units.",
 Marshall,Maršál,unit,y,4,3,3,USE: Prepare up to two units.,
-Sphinx,Sfinga,unit,y,3,3,4,"When non-yellow unit attacks, deal 💥 to attacking player.",
+Sphinx,Sfinga,Guard unit,y,3,3,4,"When non-yellow unit attacks, deal 💥 to attacking player.",
 Scarabeus,Skarab,unit,y,2,2,2,USE: Exhaust any unit and prepare any unit.,
 Pharaoh,Faraon,unit,y,6,2,6,Deal 💥 to your unit: get [E].,
 Mummy,Mumie,Guard unit,y,5,4,6,"At your turn start: Heal all its 💥.",
