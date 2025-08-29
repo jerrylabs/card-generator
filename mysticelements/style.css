@@ -1,4 +1,7 @@
-@page { margin: 42mm 0 0 0; }
+
+@page {
+  margin: 0 0 0 0;
+}
 
 body {
   -webkit-print-color-adjust: exact;
@@ -10,15 +13,31 @@ html, body {
   font-size: 0;
 }
 
+@media print {
+  body {
+    background: blue;
+  }
+}
+
 #pageborder {
+  width: 100%;
+  height: calc(100% - 2cm);
+  width: calc(100% - 2cm);
+  background: white;
+  position: fixed;
+  top: 1cm;
+  left: 1cm;
+}
+
+/* #pageborder {
   position:fixed;
   height: calc(100% - 1cm);
   width: calc(100% - 2cm);
   top: 0;
   left: 1cm;
-  z-index: 0;
+  z-index: 1;
   background: white;
-}
+} */
 
 @font-face {
   font-family: "FantaisieArtistique.otf";
@@ -59,6 +78,15 @@ html, body {
   border-radius: 5mm;
 }
 
+@media print {
+  .card:nth-child(12n+1),
+  .card:nth-child(12n+2),
+  .card:nth-child(12n+3),
+  .card:nth-child(12n+4) {
+    margin-top: 42mm;
+  }
+}
+
 .card__edge {
   height: 100%;
   width: 100%;
@@ -81,13 +109,10 @@ html, body {
   background-size: contain;
 }
 
-.card__frame--w {
-  background-image: url(card_components/border_white.png);
-}
-
-.card__frame--y {
-  background-image: url(card_components/border_yellow.png);
-}
+.card__frame--w { background-image: url(card_components/border_white.png); }
+.card__frame--y { background-image: url(card_components/border_yellow.png); }
+.card__frame--b { background-image: url(card_components/border_blue.png); }
+.card__frame--n { background-image: url(card_components/border_black.png); }
 
 .card__name {
   height: 22mm;
@@ -99,7 +124,7 @@ html, body {
   top: 5mm;
   font-family: FantaisieArtistique;
   background-size: contain;
-  padding-top: 1mm;
+  padding-top: 1.5mm;
   text-transform: uppercase;
 }
 
@@ -159,13 +184,17 @@ html, body {
 .card__status--no-text {
   top: 78.85mm;
   height: 30mm;
+  padding-top: 8mm;
+}
+
+.card__status--bigger {
   padding-top: 9mm;
   background-image: url(card_components/status_bg_bigger.png);
 }
 
 .card__status--row2 {
   position: relative;
-  top: -1cm;
+  top: -12mm;
 }
 
 .card__energy--shift1 { top: 0.5mm; }

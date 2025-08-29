@@ -38,7 +38,7 @@ module.exports = (cardData) => {
       <div class="card__image${!!text ? '' : ' card__image--no-text'}">
         <img src="ilus/${name}.png" alt="${name}">
       </div>
-      <div class="card__status${!!text ? '' : ' card__status--no-text'}">
+      <div class="card__status${!!text ? '' : ' card__status--no-text'}${longStatus ? ' card__status--bigger' : ''}">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
@@ -89,4 +89,6 @@ const filterText = (text) => text
   .replace(/((\[[A-Z]\])+)/g, '<span class="text__energy-wrap">$1</span>')
   .replace(/\[E\]/g, '<img class="text__energy" src="card_components/energy-any.png" alt="[E]">')
   .replace(/\[W\]/g, '<img class="text__energy" src="card_components/energy-w.png" alt="[W]">')
-  .replace(/\[Y\]/g, '<img class="text__energy" src="card_components/energy-y.png" alt="[Y]">');
+  .replace(/\[Y\]/g, '<img class="text__energy" src="card_components/energy-y.png" alt="[Y]">')
+  .replace(/\[B\]/g, '<img class="text__energy" src="card_components/energy-b.png" alt="[B]">')
+  .replace(/\[N\]/g, '<img class="text__energy" src="card_components/energy-n.png" alt="[N]">');

@@ -2,7 +2,10 @@
   <html>
     <head>
       <style type="text/css">
-        @page { margin: 42mm 0 0 0; }
+        
+@page {
+  margin: 0 0 0 0;
+}
 
 body {
   -webkit-print-color-adjust: exact;
@@ -14,15 +17,31 @@ html, body {
   font-size: 0;
 }
 
+@media print {
+  body {
+    background: blue;
+  }
+}
+
 #pageborder {
+  width: 100%;
+  height: calc(100% - 2cm);
+  width: calc(100% - 2cm);
+  background: white;
+  position: fixed;
+  top: 1cm;
+  left: 1cm;
+}
+
+/* #pageborder {
   position:fixed;
   height: calc(100% - 1cm);
   width: calc(100% - 2cm);
   top: 0;
   left: 1cm;
-  z-index: 0;
+  z-index: 1;
   background: white;
-}
+} */
 
 @font-face {
   font-family: "FantaisieArtistique.otf";
@@ -63,6 +82,15 @@ html, body {
   border-radius: 5mm;
 }
 
+@media print {
+  .card:nth-child(12n+1),
+  .card:nth-child(12n+2),
+  .card:nth-child(12n+3),
+  .card:nth-child(12n+4) {
+    margin-top: 42mm;
+  }
+}
+
 .card__edge {
   height: 100%;
   width: 100%;
@@ -85,13 +113,10 @@ html, body {
   background-size: contain;
 }
 
-.card__frame--w {
-  background-image: url(card_components/border_white.png);
-}
-
-.card__frame--y {
-  background-image: url(card_components/border_yellow.png);
-}
+.card__frame--w { background-image: url(card_components/border_white.png); }
+.card__frame--y { background-image: url(card_components/border_yellow.png); }
+.card__frame--b { background-image: url(card_components/border_blue.png); }
+.card__frame--n { background-image: url(card_components/border_black.png); }
 
 .card__name {
   height: 22mm;
@@ -103,7 +128,7 @@ html, body {
   top: 5mm;
   font-family: FantaisieArtistique;
   background-size: contain;
-  padding-top: 1mm;
+  padding-top: 1.5mm;
   text-transform: uppercase;
 }
 
@@ -163,13 +188,17 @@ html, body {
 .card__status--no-text {
   top: 78.85mm;
   height: 30mm;
+  padding-top: 8mm;
+}
+
+.card__status--bigger {
   padding-top: 9mm;
   background-image: url(card_components/status_bg_bigger.png);
 }
 
 .card__status--row2 {
   position: relative;
-  top: -1cm;
+  top: -12mm;
 }
 
 .card__energy--shift1 { top: 0.5mm; }
@@ -984,7 +1013,7 @@ html, body {
       <div class="card__image card__image--no-text">
         <img src="ilus/Chariot.png" alt="Chariot">
       </div>
-      <div class="card__status card__status--no-text">
+      <div class="card__status card__status--no-text card__status--bigger">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
@@ -1912,7 +1941,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Nayad
+              Naiad
             </textPath>
           </text>
         </svg>
@@ -1921,7 +1950,7 @@ html, body {
         <img class="card__energy card__energy--shift1" src="card_components/energy-b.png" alt="Energy"><img class="card__energy" src="card_components/energy-b.png" alt="Energy"><img class="card__energy" src="card_components/energy-b.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-b.png" alt="Energy">
       </div>
       <div class="card__image">
-        <img src="ilus/Nayad.png" alt="Nayad">
+        <img src="ilus/Naiad.png" alt="Naiad">
       </div>
       <div class="card__status">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
@@ -2039,7 +2068,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            Does not prepare at your turn start. <span class="text__energy-wrap">[B][B][B]</span>: Prepare it.
+            Does not prepare at your turn start. <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-b.png" alt="[B]"><img class="text__energy" src="card_components/energy-b.png" alt="[B]"><img class="text__energy" src="card_components/energy-b.png" alt="[B]"></span>: Prepare it.
           </div>
         </div>
       
@@ -2567,7 +2596,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            When plunders, steal <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span>, convert it to <span class="text__energy-wrap">[N]</span>.
+            When plunders, steal <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span>, convert it to <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-n.png" alt="[N]"></span>.
           </div>
         </div>
       
@@ -2888,7 +2917,7 @@ html, body {
       
         <div class="card__text">
           <div>
-            Steal all [E, convert it to <span class="text__energy-wrap">[B]</span>.
+            Steal all <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span>, convert it to <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-n.png" alt="[N]"></span>.
           </div>
         </div>
       
@@ -3330,12 +3359,12 @@ html, body {
       <div class="card__image card__image--no-text">
         <img src="ilus/Centaur.png" alt="Centaur">
       </div>
-      <div class="card__status card__status--no-text">
+      <div class="card__status card__status--no-text card__status--bigger">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              Shooting tempo
+              Shooting guard
             </textPath>
           </text>
         </svg>
@@ -3344,7 +3373,7 @@ html, body {
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              guard unit
+              tempo unit
             </textPath>
           </text>
         </svg>
