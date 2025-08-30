@@ -1,4 +1,4 @@
-@page { margin: 9mm 0 0 0; background: #ddd; }
+@page { margin: 9mm 0 0 0; }
 
 body {
   -webkit-print-color-adjust: exact;

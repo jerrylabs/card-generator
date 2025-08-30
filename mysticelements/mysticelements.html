@@ -117,6 +117,7 @@ html, body {
 .card__frame--y { background-image: url(card_components/border_yellow.png); }
 .card__frame--b { background-image: url(card_components/border_blue.png); }
 .card__frame--n { background-image: url(card_components/border_black.png); }
+.card__frame--g { background-image: url(card_components/border_green.png); }
 
 .card__name {
   height: 22mm;
@@ -288,6 +289,11 @@ html, body {
   font-family: FantaisieArtistique;
   font-size: 10mm;
   line-height: 5mm;
+}
+
+/* TEMP skip W, Y, B, N */
+.card:nth-child(-n+60) {
+  display: none;
 }
 
       </style>
@@ -2775,7 +2781,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Necromancy
+              Death
             </textPath>
           </text>
         </svg>
@@ -2784,7 +2790,7 @@ html, body {
         <img class="card__energy card__energy--shift1" src="card_components/energy-n.png" alt="Energy"><img class="card__energy" src="card_components/energy-n.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-n.png" alt="Energy">
       </div>
       <div class="card__image">
-        <img src="ilus/Necromancy.png" alt="Necromancy">
+        <img src="ilus/Death.png" alt="Death">
       </div>
       <div class="card__status">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
@@ -5508,7 +5514,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Overlord
+              Dark lord
             </textPath>
           </text>
         </svg>
@@ -5517,7 +5523,7 @@ html, body {
         <img class="card__energy card__energy--shift2" src="card_components/energy-p.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-p.png" alt="Energy"><img class="card__energy" src="card_components/energy-p.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-p.png" alt="Energy"><img class="card__energy card__energy--shift2" src="card_components/energy-p.png" alt="Energy"><img class="card__energy card__energy--shift4" src="card_components/energy-p.png" alt="Energy"><img class="card__energy card__energy--shift3" src="card_components/energy-p.png" alt="Energy"><img class="card__energy card__energy--shift4" src="card_components/energy-p.png" alt="Energy">
       </div>
       <div class="card__image">
-        <img src="ilus/Overlord.png" alt="Overlord">
+        <img src="ilus/Dark lord.png" alt="Dark lord">
       </div>
       <div class="card__status">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
