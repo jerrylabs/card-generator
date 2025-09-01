@@ -115,6 +115,8 @@ html, body {
 .card__frame--n { background-image: url(card_components/border_black.png); }
 .card__frame--g { background-image: url(card_components/border_green.png); }
 .card__frame--o { background-image: url(card_components/border_brown.png); }
+.card__frame--r { background-image: url(card_components/border_red.png); }
+.card__frame--p { background-image: url(card_components/border_purple.png); }
 
 .card__name {
   height: 22mm;
@@ -235,6 +237,8 @@ html, body {
   font-family: "Noto Emoji";
   display: contents;
   line-height: 0.5;
+  vertical-align: middle;
+  display: inline-block;
 }
 
 .text__energy-wrap {
@@ -288,7 +292,7 @@ html, body {
   line-height: 5mm;
 }
 
-/* TEMP skip W, Y, B, N */
-.card:nth-child(-n+75) {
+/* TEMP skip W, Y, B, N
+.card:nth-child(-n+90) {
   display: none;
-}
+}*/

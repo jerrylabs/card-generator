@@ -91,4 +91,6 @@ const filterText = (text) => text
   .replace(/\[W\]/g, '<img class="text__energy" src="card_components/energy-w.png" alt="[W]">')
   .replace(/\[Y\]/g, '<img class="text__energy" src="card_components/energy-y.png" alt="[Y]">')
   .replace(/\[B\]/g, '<img class="text__energy" src="card_components/energy-b.png" alt="[B]">')
-  .replace(/\[N\]/g, '<img class="text__energy" src="card_components/energy-n.png" alt="[N]">');
+  .replace(/\[N\]/g, '<img class="text__energy" src="card_components/energy-n.png" alt="[N]">')
+  .replace(/\[R\]/g, '<img class="text__energy" src="card_components/energy-r.png" alt="[R]">')
+  .replace(/\[P\]/g, '<img class="text__energy" src="card_components/energy-p.png" alt="[P]">');

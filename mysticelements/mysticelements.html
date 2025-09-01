@@ -119,6 +119,8 @@ html, body {
 .card__frame--n { background-image: url(card_components/border_black.png); }
 .card__frame--g { background-image: url(card_components/border_green.png); }
 .card__frame--o { background-image: url(card_components/border_brown.png); }
+.card__frame--r { background-image: url(card_components/border_red.png); }
+.card__frame--p { background-image: url(card_components/border_purple.png); }
 
 .card__name {
   height: 22mm;
@@ -239,6 +241,8 @@ html, body {
   font-family: "Noto Emoji";
   display: contents;
   line-height: 0.5;
+  vertical-align: middle;
+  display: inline-block;
 }
 
 .text__energy-wrap {
@@ -292,10 +296,10 @@ html, body {
   line-height: 5mm;
 }
 
-/* TEMP skip W, Y, B, N */
-.card:nth-child(-n+75) {
+/* TEMP skip W, Y, B, N
+.card:nth-child(-n+90) {
   display: none;
-}
+}*/
 
       </style>
     </head>
@@ -1241,7 +1245,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            USE: Exhaust any unit and prepare any unit.
+            USE: Exhaust any unit and prepare any other unit.
           </div>
         </div>
       
@@ -1922,7 +1926,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            USE: Return an unit to the hand.
+            USE: Return any unit to the hand.
           </div>
         </div>
       
@@ -2126,7 +2130,7 @@ html, body {
       
         <div class="card__text">
           <div>
-            Return an unit to the hand.
+            Return any unit to the hand.
           </div>
         </div>
       
@@ -2165,7 +2169,7 @@ html, body {
       
         <div class="card__text">
           <div>
-            Shuffle an unit to the deck.
+            Shuffle any unit to the deck.
           </div>
         </div>
       
@@ -2552,7 +2556,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            USE: Return an unit from grave to battle.
+            USE: Return any unit from grave to battle.
           </div>
         </div>
       
@@ -2807,7 +2811,7 @@ html, body {
       
         <div class="card__text">
           <div>
-            Return an unit from grave to battle.
+            Return any unit from grave to battle.
           </div>
         </div>
       
@@ -3866,7 +3870,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            USE: Promote an unit.
+            USE: Promote any unit.
           </div>
         </div>
       
@@ -4223,7 +4227,7 @@ html, body {
       
         <div class="card__text">
           <div>
-            Use: +3 <span class="text__emoji">⚔</span>️ to any unit this turn.
+            USE: +3 <span class="text__emoji">⚔</span>️ to any unit this turn.
           </div>
         </div>
       
@@ -4463,7 +4467,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            <span class="text__energy-wrap">[R]</span>: Deal <span class="text__emoji">💥</span>.
+            <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-r.png" alt="[R]"></span>: Deal <span class="text__emoji">💥</span>.
           </div>
         </div>
       
@@ -4808,7 +4812,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            RED MANA: Deal <span class="text__emoji">💥</span> to Salamander and <span class="text__emoji">💥</span> to any unit.
+            <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-r.png" alt="[R]"></span>: Deal <span class="text__emoji">💥</span> to Salamander and <span class="text__emoji">💥</span> to any unit.
           </div>
         </div>
       
@@ -5132,7 +5136,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            USE: Promote an unit and deal <span class="text__emoji">💥💥</span> to it.
+            USE: Promote any unit and deal <span class="text__emoji">💥💥</span> to it.
           </div>
         </div>
       
@@ -5285,7 +5289,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            USE: Steal <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span>, convert it to <span class="text__energy-wrap">[P]</span>.
+            USE: Steal <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span>, convert it to <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-p.png" alt="[P]"></span>.
           </div>
         </div>
       
@@ -5438,7 +5442,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            USE: Exhaust an unit.
+            USE: Exhaust any unit.
           </div>
         </div>
       
