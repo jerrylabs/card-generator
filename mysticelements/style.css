@@ -292,7 +292,8 @@ html, body {
   line-height: 5mm;
 }
 
-/* TEMP skip W, Y, B, N
+/* TEMP skip
 .card:nth-child(-n+90) {
   display: none;
-}*/
+}
+*/
