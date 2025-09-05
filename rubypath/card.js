@@ -1,4 +1,4 @@
-module.exports = (cardData, i) => {
+module.exports = (cardData, i, extraParams) => {
   return `
     <div class="card ${cardData.type}${textLenghtClasses(cardData.text.length)}">
       ${cardData.image ? `<div class="image" style="background-image: url('ilus/${cardData.image}.jpg')"></div>` : ''}

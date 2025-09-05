@@ -1,9 +1,11 @@
-module.exports = (cardData) => {
-  const { cost, color, name, status, text, power, health } = cardData;
+module.exports = (cardData, i, extraParams) => {
+  const czech = extraParams.includes('cs');
+  const { cost, color, name, status, text, power, health, csname, cstext } = cardData;
   const longStatus = status.split(' ').length > 3;
+  const displayedStatus = czech ? translateStatus(status, 'cs') : status;
   const longStatusParts = longStatus ? [
-    status.split(' ').slice(0, 2).join(' '),
-    status.split(' ').slice(-2).join(' ')
+    displayedStatus.split(' ').slice(0, 2).join(' '),
+    displayedStatus.split(' ').slice(-2).join(' ')
   ] : null;
   return `<div class="card">
       <div class="card__edge"></div>
@@ -13,7 +15,7 @@ module.exports = (cardData) => {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              ${name}
+              ${czech ? csname : name}
             </textPath>
           </text>
         </svg>
@@ -38,12 +40,12 @@ module.exports = (cardData) => {
       <div class="card__image${!!text ? '' : ' card__image--no-text'}">
         <img src="ilus/${name}.png" alt="${name}">
       </div>
-      <div class="card__status${!!text ? '' : ' card__status--no-text'}${longStatus ? ' card__status--bigger' : ''}">
+      <div class="card__status${!!text ? '' : ' card__status--no-text'}${longStatus ? ' card__status--bigger' : ''}${czech ? ' card__status--czech' : ''}">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              ${longStatus ? longStatusParts[0] : status}
+              ${longStatus ? longStatusParts[0] : displayedStatus}
             </textPath>
           </text>
         </svg>
@@ -61,7 +63,7 @@ module.exports = (cardData) => {
       ${text ? `
         <div class="card__text${power ? ' card__text--with-power' : ''}${health ? ' card__text--with-health' : ''}">
           <div>
-            ${filterText(text)}
+            ${filterText(czech ? cstext : text)}
           </div>
         </div>
       ` : ''}
@@ -94,3 +96,21 @@ const filterText = (text) => text
   .replace(/\[N\]/g, '<img class="text__energy" src="card_components/energy-n.png" alt="[N]">')
   .replace(/\[R\]/g, '<img class="text__energy" src="card_components/energy-r.png" alt="[R]">')
   .replace(/\[P\]/g, '<img class="text__energy" src="card_components/energy-p.png" alt="[P]">');
+
+const translateStatus = (status, lang) => {
+  switch (lang) {
+    case 'cs':
+      const czechStatus = status.toLowerCase()
+        .replace('unit', 'tvor')
+        .replace('guard', 'strážný')
+        .replace('flying', 'létající')
+        .replace('shooting', 'střelecký')
+        .replace('tempo', 'rychlý')
+        .replace('charm', 'čár')
+        .replace('wonder', 'kouzlo')
+        .replace('relic', 'relikvie');
+      return `${czechStatus.slice(0, 1).toUpperCase()}${czechStatus.slice(1)}`;
+    default:
+      return status;
+  }
+}

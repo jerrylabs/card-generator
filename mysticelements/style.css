@@ -126,7 +126,7 @@ html, body {
   background-image: url(card_components/title_bg.png);
   position: absolute;
   top: 5mm;
-  font-family: FantaisieArtistique;
+  font-family: FantaisieArtistique, Sualtim;
   background-size: contain;
   padding-top: 1.5mm;
   text-transform: uppercase;
@@ -185,6 +185,8 @@ html, body {
   text-transform: capitalize;
 }
 
+.card__status--czech { text-transform: none; }
+
 .card__status--no-text {
   top: 78.85mm;
   height: 30mm;
@@ -236,14 +238,13 @@ html, body {
   white-space: nowrap;
   font-family: "Noto Emoji";
   display: contents;
-  line-height: 0.5;
+  line-height: 1mm;
   vertical-align: middle;
   display: inline-block;
 }
 
 .text__energy-wrap {
   white-space: nowrap;
-  display: contents;
 }
 
 .text__energy {
@@ -251,7 +252,8 @@ html, body {
   width: 5mm;
   vertical-align: middle;
   display: inline-block;
-  margin: -5mm 0;
+  line-height: 1mm;
+  margin: -6mm 0 -5mm 0;
 }
 
 .card__power {

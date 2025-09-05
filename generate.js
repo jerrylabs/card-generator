@@ -26,8 +26,8 @@ const generateDefaultCardMarkup = cardData => (
   }</div>`
 );
 
-const generateHtml = (cardsData, css, generateCardMarkup) => {
-  let cardsMarkups = cardsData.map(generateCardMarkup);
+const generateHtml = (cardsData, css, generateCardMarkup, extraParams) => {
+  let cardsMarkups = cardsData.map((cardData, i) => generateCardMarkup(cardData, i, extraParams));
   return `<!DOCTYPE html>
   <html>
     <head>
@@ -86,7 +86,7 @@ const generateHtml = (cardsData, css, generateCardMarkup) => {
     const customCardPath = `./${process.argv[2]}/card.js`;
     const generateCardMarkup = fs.existsSync(customCardPath) ? require(customCardPath) : generateDefaultCardMarkup;
 
-    const htmlData = generateHtml(cardsData, cssData, generateCardMarkup);
+    const htmlData = generateHtml(cardsData, cssData, generateCardMarkup, process.argv.slice(3));
 
     // Checking output HTML in console
     if (process.argv.includes('log')) {

@@ -130,7 +130,7 @@ html, body {
   background-image: url(card_components/title_bg.png);
   position: absolute;
   top: 5mm;
-  font-family: FantaisieArtistique;
+  font-family: FantaisieArtistique, Sualtim;
   background-size: contain;
   padding-top: 1.5mm;
   text-transform: uppercase;
@@ -189,6 +189,8 @@ html, body {
   text-transform: capitalize;
 }
 
+.card__status--czech { text-transform: none; }
+
 .card__status--no-text {
   top: 78.85mm;
   height: 30mm;
@@ -240,14 +242,13 @@ html, body {
   white-space: nowrap;
   font-family: "Noto Emoji";
   display: contents;
-  line-height: 0.5;
+  line-height: 1mm;
   vertical-align: middle;
   display: inline-block;
 }
 
 .text__energy-wrap {
   white-space: nowrap;
-  display: contents;
 }
 
 .text__energy {
@@ -255,7 +256,8 @@ html, body {
   width: 5mm;
   vertical-align: middle;
   display: inline-block;
-  margin: -5mm 0;
+  line-height: 1mm;
+  margin: -6mm 0 -5mm 0;
 }
 
 .card__power {
@@ -314,7 +316,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Angel
+              Anděl
             </textPath>
           </text>
         </svg>
@@ -325,12 +327,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Angel.png" alt="Angel">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              Flying guard unit
+              Létající strážný tvor
             </textPath>
           </text>
         </svg>
@@ -339,7 +341,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            When attacked, prepare it after combat.
+            Když je napaden, po souboji jej připrav.
           </div>
         </div>
       
@@ -376,12 +378,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Paladin.png" alt="Paladin">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              Guard unit
+              Strážný tvor
             </textPath>
           </text>
         </svg>
@@ -390,7 +392,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            Reduce all <span class="text__emoji">💥</span> dealt to Paladin by&nbsp;1.
+            Všechna <span class="text__emoji">💥</span> obdržená Paladinem jsou snížena o&nbsp;1.
           </div>
         </div>
       
@@ -416,7 +418,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Monk
+              Mnich
             </textPath>
           </text>
         </svg>
@@ -427,12 +429,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Monk.png" alt="Monk">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              unit
+              Tvor
             </textPath>
           </text>
         </svg>
@@ -441,7 +443,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            When your unit is killed, promote Monk.
+            Když je tvůj tvor zabit, posil Mnicha.
           </div>
         </div>
       
@@ -467,7 +469,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Unicorn
+              Jednorožec
             </textPath>
           </text>
         </svg>
@@ -478,12 +480,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Unicorn.png" alt="Unicorn">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              unit
+              Tvor
             </textPath>
           </text>
         </svg>
@@ -492,7 +494,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            Cannot be killed unless <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span> are paid.
+            Nemůže být zabit, pokud nejsou zaplaceny <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span>.
           </div>
         </div>
       
@@ -518,7 +520,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Pegasus
+              Pegas
             </textPath>
           </text>
         </svg>
@@ -529,12 +531,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Pegasus.png" alt="Pegasus">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              Flying unit
+              Létající tvor
             </textPath>
           </text>
         </svg>
@@ -543,7 +545,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            USE: Any unit gets flying this turn.
+            UŽIJ: Jakýkoliv tvor je toto kolo létající.
           </div>
         </div>
       
@@ -569,7 +571,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Priest
+              Kněz
             </textPath>
           </text>
         </svg>
@@ -580,12 +582,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Priest.png" alt="Priest">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              unit
+              Tvor
             </textPath>
           </text>
         </svg>
@@ -594,7 +596,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            USE: Return a&nbsp;card from your grave to the hand.
+            UŽIJ: Vrať si kartu z&nbsp;hrobu do ruky.
           </div>
         </div>
       
@@ -620,7 +622,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Healer
+              Léčitel
             </textPath>
           </text>
         </svg>
@@ -631,12 +633,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Healer.png" alt="Healer">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              unit
+              Tvor
             </textPath>
           </text>
         </svg>
@@ -645,7 +647,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            USE: Heal all <span class="text__emoji">💥</span> from any unit.
+            UŽIJ: Vyleč všechna <span class="text__emoji">💥</span> z&nbsp;jednoho tvora.
           </div>
         </div>
       
@@ -671,7 +673,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Hermit
+              Poustevník
             </textPath>
           </text>
         </svg>
@@ -682,12 +684,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Hermit.png" alt="Hermit">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              unit
+              Tvor
             </textPath>
           </text>
         </svg>
@@ -696,7 +698,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            All your other units are guards.
+            Všichni tví ostatní tvoři jsou strážní.
           </div>
         </div>
       
@@ -722,7 +724,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Blessing
+              Požehnání
             </textPath>
           </text>
         </svg>
@@ -733,12 +735,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Blessing.png" alt="Blessing">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              wonder
+              Kouzlo
             </textPath>
           </text>
         </svg>
@@ -747,7 +749,7 @@ html, body {
       
         <div class="card__text">
           <div>
-            Heal all <span class="text__emoji">💥</span> from each of your units.
+            Vyleč všechna <span class="text__emoji">💥</span> všech tvých tvorů.
           </div>
         </div>
       
@@ -761,7 +763,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Halo
+              Záře
             </textPath>
           </text>
         </svg>
@@ -772,12 +774,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Halo.png" alt="Halo">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              charm
+              Čár
             </textPath>
           </text>
         </svg>
@@ -786,7 +788,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            At your turn start: Heal <span class="text__emoji">💥💥</span>.
+            Na začátku tahu: Vyleč <span class="text__emoji">💥💥</span>.
           </div>
         </div>
       
@@ -812,7 +814,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Shield
+              Štít
             </textPath>
           </text>
         </svg>
@@ -823,12 +825,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Shield.png" alt="Shield">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              charm
+              Čár
             </textPath>
           </text>
         </svg>
@@ -837,7 +839,7 @@ html, body {
       
         <div class="card__text card__text--with-health">
           <div>
-            Heal charmed unit.
+            Vyleč začarovaného tvora.
           </div>
         </div>
       
@@ -857,7 +859,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Light
+              Osvícení
             </textPath>
           </text>
         </svg>
@@ -868,12 +870,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Light.png" alt="Light">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              wonder
+              Kouzlo
             </textPath>
           </text>
         </svg>
@@ -882,7 +884,7 @@ html, body {
       
         <div class="card__text">
           <div>
-            Opponent discards a&nbsp;non&#8288-&#8288white card of your choice.
+            Soupeř odhodí nebílou kartu dle tvého výběru.
           </div>
         </div>
       
@@ -896,7 +898,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Hope
+              Víra
             </textPath>
           </text>
         </svg>
@@ -907,12 +909,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Hope.png" alt="Hope">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              wonder
+              Kouzlo
             </textPath>
           </text>
         </svg>
@@ -921,7 +923,7 @@ html, body {
       
         <div class="card__text">
           <div>
-            Return a&nbsp;card from your grave to your hand.
+            Vrať si kartu z&nbsp;hrobu do ruky.
           </div>
         </div>
       
@@ -935,7 +937,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Sanctuary
+              Kaple
             </textPath>
           </text>
         </svg>
@@ -946,12 +948,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Sanctuary.png" alt="Sanctuary">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              relic
+              Relikvie
             </textPath>
           </text>
         </svg>
@@ -960,7 +962,7 @@ html, body {
       
         <div class="card__text">
           <div>
-            USE: Heal <span class="text__emoji">💥💥</span>.
+            UŽIJ: Vyleč <span class="text__emoji">💥💥</span>.
           </div>
         </div>
       
@@ -974,7 +976,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Prayer
+              Modlitba
             </textPath>
           </text>
         </svg>
@@ -985,12 +987,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Prayer.png" alt="Prayer">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              wonder
+              Kouzlo
             </textPath>
           </text>
         </svg>
@@ -999,7 +1001,7 @@ html, body {
       
         <div class="card__text">
           <div>
-            Reveal top card of your deck or grave. If it's white, play it for free.
+            Odhal vrchní kartu tvého balíčku nebo hrobu. Pokud je bílá, zadarmo ji vylož.
           </div>
         </div>
       
@@ -1013,7 +1015,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Chariot
+              Jezdec
             </textPath>
           </text>
         </svg>
@@ -1024,12 +1026,12 @@ html, body {
       <div class="card__image card__image--no-text">
         <img src="ilus/Chariot.png" alt="Chariot">
       </div>
-      <div class="card__status card__status--no-text card__status--bigger">
+      <div class="card__status card__status--no-text card__status--bigger card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              Shooting guard
+              Střelecký strážný
             </textPath>
           </text>
         </svg>
@@ -1038,7 +1040,7 @@ html, body {
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              tempo unit
+              rychlý tvor
             </textPath>
           </text>
         </svg>
@@ -1067,7 +1069,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Legionnaire
+              Legionář
             </textPath>
           </text>
         </svg>
@@ -1078,12 +1080,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Legionnaire.png" alt="Legionnaire">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              unit
+              Tvor
             </textPath>
           </text>
         </svg>
@@ -1092,7 +1094,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            When deployed, promote all your other units.
+            Při nasazení posil všechny tvé ostatní tvory.
           </div>
         </div>
       
@@ -1118,7 +1120,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Marshall
+              Maršál
             </textPath>
           </text>
         </svg>
@@ -1129,12 +1131,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Marshall.png" alt="Marshall">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              unit
+              Tvor
             </textPath>
           </text>
         </svg>
@@ -1143,7 +1145,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            USE: Prepare up to two units.
+            UŽIJ: Připrav až dva jiné tvory.
           </div>
         </div>
       
@@ -1169,7 +1171,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Sphinx
+              Sfinga
             </textPath>
           </text>
         </svg>
@@ -1180,12 +1182,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Sphinx.png" alt="Sphinx">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              Guard unit
+              Strážný tvor
             </textPath>
           </text>
         </svg>
@@ -1194,7 +1196,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            When non&#8288-&#8288yellow unit attacks, deal <span class="text__emoji">💥</span> to attacking player.
+            Když nežlutý tvor zaútočí, hráč obdrží <span class="text__emoji">💥</span>.
           </div>
         </div>
       
@@ -1220,7 +1222,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Scarabeus
+              Skarab
             </textPath>
           </text>
         </svg>
@@ -1231,12 +1233,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Scarabeus.png" alt="Scarabeus">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              unit
+              Tvor
             </textPath>
           </text>
         </svg>
@@ -1245,7 +1247,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            USE: Exhaust any unit and prepare any other unit.
+            UŽIJ: Vyčerpej jakéhokoliv tvora a&nbsp;připrav jiného.
           </div>
         </div>
       
@@ -1271,7 +1273,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Pharaoh
+              Faraon
             </textPath>
           </text>
         </svg>
@@ -1282,12 +1284,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Pharaoh.png" alt="Pharaoh">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              unit
+              Tvor
             </textPath>
           </text>
         </svg>
@@ -1296,7 +1298,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            Deal <span class="text__emoji">💥</span> to your unit: get <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span>.
+            Uděl <span class="text__emoji">💥</span> tvému tvoru: získej <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span>.
           </div>
         </div>
       
@@ -1322,7 +1324,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Mummy
+              Mumie
             </textPath>
           </text>
         </svg>
@@ -1333,12 +1335,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Mummy.png" alt="Mummy">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              Guard unit
+              Strážný tvor
             </textPath>
           </text>
         </svg>
@@ -1347,7 +1349,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            At your turn start: Heal all its <span class="text__emoji">💥</span>.
+            Na začátku tahu: Vyleč všechna její <span class="text__emoji">💥</span>.
           </div>
         </div>
       
@@ -1373,7 +1375,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Wurm
+              Červ
             </textPath>
           </text>
         </svg>
@@ -1384,12 +1386,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Wurm.png" alt="Wurm">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              unit
+              Tvor
             </textPath>
           </text>
         </svg>
@@ -1398,7 +1400,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            At your turn start: Destroy any exhausted unit or relic.
+            Na začátku tahu: Znič jakéhokoliv vyčerpaného tvora nebo relikvii.
           </div>
         </div>
       
@@ -1424,7 +1426,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Lightning
+              Blesk
             </textPath>
           </text>
         </svg>
@@ -1435,12 +1437,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Lightning.png" alt="Lightning">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              wonder
+              Kouzlo
             </textPath>
           </text>
         </svg>
@@ -1449,7 +1451,7 @@ html, body {
       
         <div class="card__text">
           <div>
-            Deal <span class="text__emoji">💥💥💥💥</span>
+            Uděl <span class="text__emoji">💥💥💥💥</span>.
           </div>
         </div>
       
@@ -1463,7 +1465,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Law
+              Zákon
             </textPath>
           </text>
         </svg>
@@ -1474,12 +1476,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Law.png" alt="Law">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              wonder
+              Kouzlo
             </textPath>
           </text>
         </svg>
@@ -1488,7 +1490,7 @@ html, body {
       
         <div class="card__text">
           <div>
-            Destroy any card in battle.
+            Znič jakoukoliv kartu v&nbsp;bitvě.
           </div>
         </div>
       
@@ -1502,7 +1504,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Obey
+              Příkaz
             </textPath>
           </text>
         </svg>
@@ -1513,12 +1515,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Obey.png" alt="Obey">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              wonder
+              Kouzlo
             </textPath>
           </text>
         </svg>
@@ -1527,7 +1529,7 @@ html, body {
       
         <div class="card__text">
           <div>
-            Prepare (if neded) and use any unit.
+            Připrav (pokud je třeba) a&nbsp;použij jakéhokoliv tvora.
           </div>
         </div>
       
@@ -1552,12 +1554,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Obelisk.png" alt="Obelisk">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              relic
+              Relikvie
             </textPath>
           </text>
         </svg>
@@ -1566,7 +1568,7 @@ html, body {
       
         <div class="card__text">
           <div>
-            USE: Prepare any unit.
+            UŽIJ: Připrav jakéhokoliv tvora.
           </div>
         </div>
       
@@ -1580,7 +1582,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Gold
+              Zlato
             </textPath>
           </text>
         </svg>
@@ -1591,12 +1593,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Gold.png" alt="Gold">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              charm
+              Čár
             </textPath>
           </text>
         </svg>
@@ -1605,7 +1607,7 @@ html, body {
       
         <div class="card__text">
           <div>
-            Charmed unit gets: "USE: Get <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span>."
+            Začarovaný tvor má: "UŽIJ: Získej <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span>.“
           </div>
         </div>
       
@@ -1619,7 +1621,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Coliseum
+              Koloseum
             </textPath>
           </text>
         </svg>
@@ -1630,12 +1632,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Coliseum.png" alt="Coliseum">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              relic
+              Relikvie
             </textPath>
           </text>
         </svg>
@@ -1644,7 +1646,7 @@ html, body {
       
         <div class="card__text">
           <div>
-            USE: Promote any unit.
+            UŽIJ: Posil jakéhokoliv tvora.
           </div>
         </div>
       
@@ -1658,7 +1660,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Judgement
+              Soud
             </textPath>
           </text>
         </svg>
@@ -1669,12 +1671,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Judgement.png" alt="Judgement">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              wonder
+              Kouzlo
             </textPath>
           </text>
         </svg>
@@ -1683,7 +1685,7 @@ html, body {
       
         <div class="card__text">
           <div>
-            Destroy all non&#8288-&#8288yellow units.
+            Znič všechny nežluté tvory.
           </div>
         </div>
       
@@ -1708,12 +1710,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Kraken.png" alt="Kraken">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              unit
+              Tvor
             </textPath>
           </text>
         </svg>
@@ -1722,7 +1724,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            Cannot be killed unless <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span> are paid.
+            Nemůže být zabit, pokud nejsou zaplaceny <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span>.
           </div>
         </div>
       
@@ -1748,7 +1750,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Pirate
+              Pirát
             </textPath>
           </text>
         </svg>
@@ -1759,12 +1761,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Pirate.png" alt="Pirate">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              unit
+              Tvor
             </textPath>
           </text>
         </svg>
@@ -1773,7 +1775,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            USE: Steal <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span>.
+            UŽIJ: Ukradni <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span>.
           </div>
         </div>
       
@@ -1810,12 +1812,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Merfolk.png" alt="Merfolk">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              unit
+              Tvor
             </textPath>
           </text>
         </svg>
@@ -1824,7 +1826,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            +3 <span class="text__emoji">⚔</span>️ & +3 <span class="text__emoji">🛡</span>️ if you have other blue unit in the battle.
+            +3 <span class="text__emoji">⚔</span>️ & +3 <span class="text__emoji">🛡</span>️ pokud máš jiného modrého tvora v&nbsp;bitvě.
           </div>
         </div>
       
@@ -1861,12 +1863,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Manta.png" alt="Manta">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              Flying unit
+              Létající tvor
             </textPath>
           </text>
         </svg>
@@ -1875,7 +1877,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            When attacks, other unit gets flying this turn.
+            Když zaútočí, jiný tvor se stane toto kolo létajícím.
           </div>
         </div>
       
@@ -1901,7 +1903,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Siren
+              Siréna
             </textPath>
           </text>
         </svg>
@@ -1912,12 +1914,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Siren.png" alt="Siren">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              unit
+              Tvor
             </textPath>
           </text>
         </svg>
@@ -1926,7 +1928,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            USE: Return any unit to the hand.
+            UŽIJ: Vrať jakéhokoliv tvora do ruky.
           </div>
         </div>
       
@@ -1952,7 +1954,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Naiad
+              Najáda
             </textPath>
           </text>
         </svg>
@@ -1963,12 +1965,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Naiad.png" alt="Naiad">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              unit
+              Tvor
             </textPath>
           </text>
         </svg>
@@ -1977,7 +1979,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            USE: Exhaust any unit.
+            UŽIJ: Vyčerpej jakéhokoliv tvora.
           </div>
         </div>
       
@@ -2003,7 +2005,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Gorgon
+              Gorgona
             </textPath>
           </text>
         </svg>
@@ -2014,12 +2016,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Gorgon.png" alt="Gorgon">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              Guard unit
+              Strážný tvor
             </textPath>
           </text>
         </svg>
@@ -2028,7 +2030,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            When damages an unit, destroy it.
+            Když poškodí tvora, znič ho.
           </div>
         </div>
       
@@ -2054,7 +2056,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Serpent
+              Mořský had
             </textPath>
           </text>
         </svg>
@@ -2065,12 +2067,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Serpent.png" alt="Serpent">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              unit
+              Tvor
             </textPath>
           </text>
         </svg>
@@ -2079,7 +2081,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            Does not prepare at your turn start. <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-b.png" alt="[B]"><img class="text__energy" src="card_components/energy-b.png" alt="[B]"><img class="text__energy" src="card_components/energy-b.png" alt="[B]"></span>: Prepare it.
+            Nepřipravuje se na začátku tvého kola. <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-b.png" alt="[B]"><img class="text__energy" src="card_components/energy-b.png" alt="[B]"><img class="text__energy" src="card_components/energy-b.png" alt="[B]"></span>: Připrav ho.
           </div>
         </div>
       
@@ -2105,7 +2107,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Tide
+              Vlna
             </textPath>
           </text>
         </svg>
@@ -2116,12 +2118,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Tide.png" alt="Tide">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              wonder
+              Kouzlo
             </textPath>
           </text>
         </svg>
@@ -2130,7 +2132,7 @@ html, body {
       
         <div class="card__text">
           <div>
-            Return any unit to the hand.
+            Vrať jakéhokoliv tvora do ruky.
           </div>
         </div>
       
@@ -2144,7 +2146,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Mist
+              Mlha
             </textPath>
           </text>
         </svg>
@@ -2155,12 +2157,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Mist.png" alt="Mist">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              wonder
+              Kouzlo
             </textPath>
           </text>
         </svg>
@@ -2169,7 +2171,7 @@ html, body {
       
         <div class="card__text">
           <div>
-            Shuffle any unit to the deck.
+            Zamíchej jakéhokoliv tvora do balíčku.
           </div>
         </div>
       
@@ -2183,7 +2185,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Chill
+              Chlad
             </textPath>
           </text>
         </svg>
@@ -2194,12 +2196,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Chill.png" alt="Chill">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              charm
+              Čár
             </textPath>
           </text>
         </svg>
@@ -2208,7 +2210,7 @@ html, body {
       
         <div class="card__text">
           <div>
-            Exchaust charmed unit. It cannot be prepared unless <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span> are paid.
+            Vyčerpej začarovaného tvora. Nelze ho připravit, pokud nejsou zaplaceny <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span>.
           </div>
         </div>
       
@@ -2222,7 +2224,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Flood
+              Záplava
             </textPath>
           </text>
         </svg>
@@ -2233,12 +2235,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Flood.png" alt="Flood">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              wonder
+              Kouzlo
             </textPath>
           </text>
         </svg>
@@ -2247,7 +2249,7 @@ html, body {
       
         <div class="card__text">
           <div>
-            Shuffle any card from the battle to the deck.
+            Zamíchej jakoukoliv kartu z&nbsp;bitvy do balíčku.
           </div>
         </div>
       
@@ -2261,7 +2263,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Coral
+              Korál
             </textPath>
           </text>
         </svg>
@@ -2272,12 +2274,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Coral.png" alt="Coral">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              relic
+              Relikvie
             </textPath>
           </text>
         </svg>
@@ -2286,7 +2288,7 @@ html, body {
       
         <div class="card__text">
           <div>
-            USE: Get <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span>.
+            UŽIJ: Získej <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span>.
           </div>
         </div>
       
@@ -2311,12 +2313,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Orb.png" alt="Orb">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              relic
+              Relikvie
             </textPath>
           </text>
         </svg>
@@ -2325,7 +2327,7 @@ html, body {
       
         <div class="card__text">
           <div>
-            Your hand limit is increased by 1.
+            Tvůj limit karet je zvýšen o&nbsp;1.
           </div>
         </div>
       
@@ -2339,7 +2341,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Mirror
+              Zrcadlo
             </textPath>
           </text>
         </svg>
@@ -2350,12 +2352,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Mirror.png" alt="Mirror">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              wonder
+              Kouzlo
             </textPath>
           </text>
         </svg>
@@ -2364,7 +2366,7 @@ html, body {
       
         <div class="card__text">
           <div>
-            Copy the effect of wonder on the top of any grave.
+            Zkopíruj kouzlo na vrchu jakéhokoliv hrobu.
           </div>
         </div>
       
@@ -2389,12 +2391,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Zombie.png" alt="Zombie">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              unit
+              Tvor
             </textPath>
           </text>
         </svg>
@@ -2403,7 +2405,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            Can be deployed from grave.
+            Může být nasazena z&nbsp;hrobu.
           </div>
         </div>
       
@@ -2429,7 +2431,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Skeleton
+              Kostlivec
             </textPath>
           </text>
         </svg>
@@ -2440,12 +2442,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Skeleton.png" alt="Skeleton">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              unit
+              Tvor
             </textPath>
           </text>
         </svg>
@@ -2454,7 +2456,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            When an unit is killed, put Skeleton from grave to the battle.
+            Když je jakýkoliv tvor zabit, vrať Kostlivce z&nbsp;hrobu do bitvy.
           </div>
         </div>
       
@@ -2480,7 +2482,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Vampire
+              Upír
             </textPath>
           </text>
         </svg>
@@ -2491,12 +2493,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Vampire.png" alt="Vampire">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              Flying unit
+              Létající tvor
             </textPath>
           </text>
         </svg>
@@ -2505,7 +2507,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            USE: move all <span class="text__emoji">💥</span> from Vampire to any unit.
+            UŽIJ: Přesuň všechny <span class="text__emoji">💥</span> z&nbsp;Upíra na jakékoliv tvora.
           </div>
         </div>
       
@@ -2542,12 +2544,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Lich.png" alt="Lich">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              unit
+              Tvor
             </textPath>
           </text>
         </svg>
@@ -2556,7 +2558,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            USE: Return any unit from grave to battle.
+            UŽIJ: Vrať jakékoliv tvora z&nbsp;hrobu do bitvy.
           </div>
         </div>
       
@@ -2582,7 +2584,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Succubus
+              Sukuba
             </textPath>
           </text>
         </svg>
@@ -2593,12 +2595,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Succubus.png" alt="Succubus">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              Flying unit
+              Létající tvor
             </textPath>
           </text>
         </svg>
@@ -2607,7 +2609,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            When plunders, steal <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span>, convert it to <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-n.png" alt="[N]"></span>.
+            Při plenění ukradni <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span>, převeď ji na <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-n.png" alt="[N]"></span>.
           </div>
         </div>
       
@@ -2633,7 +2635,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Ghoul
+              Ghúl
             </textPath>
           </text>
         </svg>
@@ -2644,12 +2646,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Ghoul.png" alt="Ghoul">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              unit
+              Tvor
             </textPath>
           </text>
         </svg>
@@ -2658,7 +2660,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            When unit is killed, promote twice.
+            Když je jakýkoliv tvor zabit, posil Ghoula dvakrát.
           </div>
         </div>
       
@@ -2684,7 +2686,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Spectre
+              Přízrak
             </textPath>
           </text>
         </svg>
@@ -2695,12 +2697,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Spectre.png" alt="Spectre">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              Flying unit
+              Létající tvor
             </textPath>
           </text>
         </svg>
@@ -2709,7 +2711,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            When plunders, player must discard a&nbsp;card of their choice.
+            Při plenění musí hráč odhodit kartu podle svého výběru.
           </div>
         </div>
       
@@ -2735,7 +2737,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Wraith
+              Duch
             </textPath>
           </text>
         </svg>
@@ -2746,12 +2748,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Wraith.png" alt="Wraith">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              Flying tempo unit
+              Létající rychlý tvor
             </textPath>
           </text>
         </svg>
@@ -2760,7 +2762,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            When plunders, player must discard a&nbsp;card of your choice.
+            Při plenění musí hráč odhodit kartu podle tvého výběru.
           </div>
         </div>
       
@@ -2786,7 +2788,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Death
+              Smrt
             </textPath>
           </text>
         </svg>
@@ -2797,12 +2799,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Death.png" alt="Death">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              wonder
+              Kouzlo
             </textPath>
           </text>
         </svg>
@@ -2811,7 +2813,7 @@ html, body {
       
         <div class="card__text">
           <div>
-            Return any unit from grave to battle.
+            Vrať jakéhokoliv tvora z&nbsp;hrobu do bitvy.
           </div>
         </div>
       
@@ -2825,7 +2827,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Rot
+              Zhnití
             </textPath>
           </text>
         </svg>
@@ -2836,12 +2838,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Rot.png" alt="Rot">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              wonder
+              Kouzlo
             </textPath>
           </text>
         </svg>
@@ -2850,7 +2852,7 @@ html, body {
       
         <div class="card__text">
           <div>
-            Destroy any card in battle.
+            Znič jakoukoliv kartu v&nbsp;bitvě.
           </div>
         </div>
       
@@ -2864,7 +2866,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Plague
+              Mor
             </textPath>
           </text>
         </svg>
@@ -2875,12 +2877,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Plague.png" alt="Plague">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              wonder
+              Kouzlo
             </textPath>
           </text>
         </svg>
@@ -2889,7 +2891,7 @@ html, body {
       
         <div class="card__text">
           <div>
-            Demote all units twice.
+            Oslab všechny tvory v&nbsp;bitvě dvakrát.
           </div>
         </div>
       
@@ -2903,7 +2905,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Drain
+              Vysátí
             </textPath>
           </text>
         </svg>
@@ -2914,12 +2916,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Drain.png" alt="Drain">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              wonder
+              Kouzlo
             </textPath>
           </text>
         </svg>
@@ -2928,7 +2930,7 @@ html, body {
       
         <div class="card__text">
           <div>
-            Steal all <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span>, convert it to <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-n.png" alt="[N]"></span>.
+            Ukradni všechny <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span>, převeď je na <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-n.png" alt="[N]"></span>.
           </div>
         </div>
       
@@ -2942,7 +2944,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Soul
+              Duše
             </textPath>
           </text>
         </svg>
@@ -2953,12 +2955,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Soul.png" alt="Soul">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              charm
+              Čár
             </textPath>
           </text>
         </svg>
@@ -2967,7 +2969,7 @@ html, body {
       
         <div class="card__text">
           <div>
-            When charmed unit is killed, return it to battle demoted and move Soul to other non&#8288-&#8288demoted unit.
+            Zabitý začarovaný tvor se vrátí do bitvy oslabený a&nbsp;Duše se přesune na jiného neoslabeného tvora.
           </div>
         </div>
       
@@ -2981,7 +2983,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Tomb
+              Hrobka
             </textPath>
           </text>
         </svg>
@@ -2992,12 +2994,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Tomb.png" alt="Tomb">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              relic
+              Relikvie
             </textPath>
           </text>
         </svg>
@@ -3006,7 +3008,7 @@ html, body {
       
         <div class="card__text">
           <div>
-            USE: Demote any unit.
+            UŽIJ: Oslab jakéhokoliv tvora.
           </div>
         </div>
       
@@ -3020,7 +3022,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Decay
+              Úpadek
             </textPath>
           </text>
         </svg>
@@ -3031,12 +3033,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Decay.png" alt="Decay">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              charm
+              Čár
             </textPath>
           </text>
         </svg>
@@ -3045,7 +3047,7 @@ html, body {
       
         <div class="card__text">
           <div>
-            At your turn start: Demote charmed unit.
+            Na začátku tahu: Oslab začarovaného tvora.
           </div>
         </div>
       
@@ -3070,12 +3072,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Elf.png" alt="Elf">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              Shooting unit
+              Střelecký tvor
             </textPath>
           </text>
         </svg>
@@ -3084,7 +3086,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            All your units have: "USE: add 1 <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span>."
+            Všichni tví tvorové mají: "UŽIJ: Získej <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span>."
           </div>
         </div>
       
@@ -3121,12 +3123,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Druid.png" alt="Druid">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              unit
+              Tvor
             </textPath>
           </text>
         </svg>
@@ -3135,7 +3137,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            At your turn start: Get <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span>.
+            Na začátku tahu: Získej <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span>.
           </div>
         </div>
       
@@ -3161,7 +3163,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Dryad
+              Divoženka
             </textPath>
           </text>
         </svg>
@@ -3172,12 +3174,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Dryad.png" alt="Dryad">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              Shooting guard unit
+              Střelecký strážný tvor
             </textPath>
           </text>
         </svg>
@@ -3186,7 +3188,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            When opponent draw 3 cards or more, promote any unit.
+            Když si soupeř lízne 3 a&nbsp;více karet, posil jakéhokoliv tvora.
           </div>
         </div>
       
@@ -3212,7 +3214,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Beast
+              Šelma
             </textPath>
           </text>
         </svg>
@@ -3223,12 +3225,12 @@ html, body {
       <div class="card__image card__image--no-text">
         <img src="ilus/Beast.png" alt="Beast">
       </div>
-      <div class="card__status card__status--no-text">
+      <div class="card__status card__status--no-text card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              Tempo unit
+              Rychlý tvor
             </textPath>
           </text>
         </svg>
@@ -3257,7 +3259,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Treefolk
+              Ent
             </textPath>
           </text>
         </svg>
@@ -3268,12 +3270,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Treefolk.png" alt="Treefolk">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              Guard unit
+              Strážný tvor
             </textPath>
           </text>
         </svg>
@@ -3282,7 +3284,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            At your turn start: Heal <span class="text__emoji">💥💥</span> from it.
+            Na začátku tahu: Vyleč z&nbsp;něj <span class="text__emoji">💥💥</span>.
           </div>
         </div>
       
@@ -3308,7 +3310,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Faerie
+              Víla
             </textPath>
           </text>
         </svg>
@@ -3319,12 +3321,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Faerie.png" alt="Faerie">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              Flying unit
+              Létající tvor
             </textPath>
           </text>
         </svg>
@@ -3333,7 +3335,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            When used, draw a&nbsp;card.
+            Když je použita, lízni si kartu.
           </div>
         </div>
       
@@ -3359,7 +3361,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Centaur
+              Kentaur
             </textPath>
           </text>
         </svg>
@@ -3370,12 +3372,12 @@ html, body {
       <div class="card__image card__image--no-text">
         <img src="ilus/Centaur.png" alt="Centaur">
       </div>
-      <div class="card__status card__status--no-text card__status--bigger">
+      <div class="card__status card__status--no-text card__status--bigger card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              Shooting guard
+              Střelecký strážný
             </textPath>
           </text>
         </svg>
@@ -3384,7 +3386,7 @@ html, body {
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              tempo unit
+              rychlý tvor
             </textPath>
           </text>
         </svg>
@@ -3413,7 +3415,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Antler
+              Paroh
             </textPath>
           </text>
         </svg>
@@ -3424,12 +3426,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Antler.png" alt="Antler">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              Guard unit
+              Strážný tvor
             </textPath>
           </text>
         </svg>
@@ -3438,7 +3440,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            When non&#8288-&#8288green unit attacks, prepare Antler.
+            Když útočí nezelený tvor, připrav Paroha.
           </div>
         </div>
       
@@ -3464,7 +3466,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Grow
+              Růst
             </textPath>
           </text>
         </svg>
@@ -3475,12 +3477,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Grow.png" alt="Grow">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              charm
+              Čár
             </textPath>
           </text>
         </svg>
@@ -3489,7 +3491,7 @@ html, body {
       
         <div class="card__text">
           <div>
-            At your turn start: Promote charmed unit.
+            Na začátku tahu: Posil začarovaného tvora.
           </div>
         </div>
       
@@ -3503,7 +3505,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Spring
+              Pramen
             </textPath>
           </text>
         </svg>
@@ -3514,12 +3516,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Spring.png" alt="Spring">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              wonder
+              Kouzlo
             </textPath>
           </text>
         </svg>
@@ -3528,7 +3530,7 @@ html, body {
       
         <div class="card__text">
           <div>
-            Heal <span class="text__emoji">💥💥💥</span> from each of your units.
+            Vyleč <span class="text__emoji">💥💥💥</span> z&nbsp;každého tvého tvora.
           </div>
         </div>
       
@@ -3542,7 +3544,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Bloom
+              Rozkvět
             </textPath>
           </text>
         </svg>
@@ -3553,12 +3555,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Bloom.png" alt="Bloom">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              wonder
+              Kouzlo
             </textPath>
           </text>
         </svg>
@@ -3567,7 +3569,7 @@ html, body {
       
         <div class="card__text">
           <div>
-            Get <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span>.
+            Získej <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span>.
           </div>
         </div>
       
@@ -3581,7 +3583,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Roots
+              Kořeň
             </textPath>
           </text>
         </svg>
@@ -3592,12 +3594,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Roots.png" alt="Roots">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              charm
+              Čár
             </textPath>
           </text>
         </svg>
@@ -3606,7 +3608,7 @@ html, body {
       
         <div class="card__text">
           <div>
-            Exchaust charmed unit. It cannot be prepared unless <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span> are paid.
+            Vyčerpej začarovaného tvora. Nelze ho připravit, pokud nejsou zaplaceny <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span>.
           </div>
         </div>
       
@@ -3620,7 +3622,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Thorns
+              Trnisko
             </textPath>
           </text>
         </svg>
@@ -3631,12 +3633,12 @@ html, body {
       <div class="card__image card__image--no-text">
         <img src="ilus/Thorns.png" alt="Thorns">
       </div>
-      <div class="card__status card__status--no-text">
+      <div class="card__status card__status--no-text card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              charm
+              Čár
             </textPath>
           </text>
         </svg>
@@ -3665,7 +3667,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Grove
+              Háj
             </textPath>
           </text>
         </svg>
@@ -3676,12 +3678,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Grove.png" alt="Grove">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              relic
+              Relikvie
             </textPath>
           </text>
         </svg>
@@ -3690,7 +3692,7 @@ html, body {
       
         <div class="card__text">
           <div>
-            USE: Get <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span>.
+            UŽIJ: Získej <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span>.
           </div>
         </div>
       
@@ -3704,7 +3706,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Nectar
+              Nektar
             </textPath>
           </text>
         </svg>
@@ -3715,12 +3717,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Nectar.png" alt="Nectar">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              wonder
+              Kouzlo
             </textPath>
           </text>
         </svg>
@@ -3729,7 +3731,7 @@ html, body {
       
         <div class="card__text">
           <div>
-            Return top 7 cards from your deep grave back to the top of the deck.
+            Vrať 7 karet z&nbsp;tvého hlubokého hrobu zpět na vrch balíčku.
           </div>
         </div>
       
@@ -3743,7 +3745,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Titan
+              Titán
             </textPath>
           </text>
         </svg>
@@ -3754,12 +3756,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Titan.png" alt="Titan">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              unit
+              Tvor
             </textPath>
           </text>
         </svg>
@@ -3768,7 +3770,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            When deployed, destroy any card in battle.
+            Při nasazení znič jakoukoliv kartu v&nbsp;bitvě.
           </div>
         </div>
       
@@ -3794,7 +3796,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Barbarian
+              Barbar
             </textPath>
           </text>
         </svg>
@@ -3805,12 +3807,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Barbarian.png" alt="Barbarian">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              unit
+              Tvor
             </textPath>
           </text>
         </svg>
@@ -3819,7 +3821,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            Promote after each its combat.
+            Po každém jeho souboji je posilněn.
           </div>
         </div>
       
@@ -3845,7 +3847,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Dwarf
+              Trpajzlík
             </textPath>
           </text>
         </svg>
@@ -3856,12 +3858,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Dwarf.png" alt="Dwarf">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              unit
+              Tvor
             </textPath>
           </text>
         </svg>
@@ -3870,7 +3872,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            USE: Promote any unit.
+            UŽIJ: Posil jakéhokoliv tvora.
           </div>
         </div>
       
@@ -3896,7 +3898,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Giant
+              Obr
             </textPath>
           </text>
         </svg>
@@ -3907,12 +3909,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Giant.png" alt="Giant">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              Guard unit
+              Strážný tvor
             </textPath>
           </text>
         </svg>
@@ -3921,7 +3923,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            When kills an unit, heal <span class="text__emoji">💥💥</span> from it.
+            Když zabije tvora, vyleč z&nbsp;něj <span class="text__emoji">💥💥</span>.
           </div>
         </div>
       
@@ -3958,12 +3960,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Yetti.png" alt="Yetti">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              unit
+              Tvor
             </textPath>
           </text>
         </svg>
@@ -3972,7 +3974,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            When damaged, put a&nbsp;card from your grave on top of the deck.
+            Když je poškozen, vrať kartu ze svého hrobu na vrch balíčku.
           </div>
         </div>
       
@@ -4009,12 +4011,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Troll.png" alt="Troll">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              unit
+              Tvor
             </textPath>
           </text>
         </svg>
@@ -4023,7 +4025,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            When plunders, player must discard a&nbsp;card of their choice.
+            Při plenění musí hráč odhodit kartu podle svého výběru.
           </div>
         </div>
       
@@ -4049,7 +4051,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Gnome
+              Gnóm
             </textPath>
           </text>
         </svg>
@@ -4060,12 +4062,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Gnome.png" alt="Gnome">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              unit
+              Tvor
             </textPath>
           </text>
         </svg>
@@ -4074,7 +4076,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            If deployed or killed, return top card from your grave to the hand.
+            Při nasazení nebo zabití vrať vrchní kartu ze svého hrobu do ruky.
           </div>
         </div>
       
@@ -4100,7 +4102,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Ogre
+              Ogr
             </textPath>
           </text>
         </svg>
@@ -4111,12 +4113,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Ogre.png" alt="Ogre">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              unit
+              Tvor
             </textPath>
           </text>
         </svg>
@@ -4125,7 +4127,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            Double <span class="text__emoji">⚔</span>️ when plundering.
+            Dvojnásobná <span class="text__emoji">⚔</span>️ při plenění.
           </div>
         </div>
       
@@ -4162,12 +4164,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Golem.png" alt="Golem">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              Guard unit
+              Strážný tvor
             </textPath>
           </text>
         </svg>
@@ -4176,7 +4178,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            When attacked, deal <span class="text__emoji">💥💥</span> to attacking unit.
+            Když je napaden, uděl <span class="text__emoji">💥💥</span> útočícímu tvoru.
           </div>
         </div>
       
@@ -4202,7 +4204,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Spear
+              Kopí
             </textPath>
           </text>
         </svg>
@@ -4213,12 +4215,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Spear.png" alt="Spear">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              relic
+              Relikvie
             </textPath>
           </text>
         </svg>
@@ -4227,7 +4229,7 @@ html, body {
       
         <div class="card__text">
           <div>
-            USE: +3 <span class="text__emoji">⚔</span>️ to any unit this turn.
+            UŽIJ: +3 <span class="text__emoji">⚔</span>️ jakémukoliv tvoru v&nbsp;tomto tahu.
           </div>
         </div>
       
@@ -4241,7 +4243,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Stomp
+              Dup!
             </textPath>
           </text>
         </svg>
@@ -4252,12 +4254,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Stomp.png" alt="Stomp">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              wonder
+              Kouzlo
             </textPath>
           </text>
         </svg>
@@ -4266,7 +4268,7 @@ html, body {
       
         <div class="card__text">
           <div>
-            Deal <span class="text__emoji">💥💥💥💥</span>.
+            Uděl <span class="text__emoji">💥💥💥💥</span>.
           </div>
         </div>
       
@@ -4280,7 +4282,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Brawl
+              Bitka
             </textPath>
           </text>
         </svg>
@@ -4291,12 +4293,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Brawl.png" alt="Brawl">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              wonder
+              Kouzlo
             </textPath>
           </text>
         </svg>
@@ -4305,7 +4307,7 @@ html, body {
       
         <div class="card__text">
           <div>
-            Prepare all your units and relics.
+            Připrav všechny své tvory a&nbsp;relikvie.
           </div>
         </div>
       
@@ -4319,7 +4321,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Stone
+              Kameň
             </textPath>
           </text>
         </svg>
@@ -4330,12 +4332,12 @@ html, body {
       <div class="card__image card__image--no-text">
         <img src="ilus/Stone.png" alt="Stone">
       </div>
-      <div class="card__status card__status--no-text">
+      <div class="card__status card__status--no-text card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              charm
+              Čár
             </textPath>
           </text>
         </svg>
@@ -4364,7 +4366,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Shrine
+              Svatyně
             </textPath>
           </text>
         </svg>
@@ -4375,12 +4377,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Shrine.png" alt="Shrine">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              relic
+              Relikvie
             </textPath>
           </text>
         </svg>
@@ -4389,7 +4391,7 @@ html, body {
       
         <div class="card__text">
           <div>
-            USE: Prepare any unit.
+            UŽIJ: Připrav jakéhokoliv tvora.
           </div>
         </div>
       
@@ -4403,7 +4405,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Crush
+              Křup!
             </textPath>
           </text>
         </svg>
@@ -4414,12 +4416,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Crush.png" alt="Crush">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              wonder
+              Kouzlo
             </textPath>
           </text>
         </svg>
@@ -4428,7 +4430,7 @@ html, body {
       
         <div class="card__text">
           <div>
-            Destroy any card in battle.
+            Znič jakoukoliv kartu v&nbsp;bitvě.
           </div>
         </div>
       
@@ -4442,7 +4444,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Dragon
+              Drak
             </textPath>
           </text>
         </svg>
@@ -4453,12 +4455,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Dragon.png" alt="Dragon">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              Flying unit
+              Létající tvor
             </textPath>
           </text>
         </svg>
@@ -4467,7 +4469,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-r.png" alt="[R]"></span>: Deal <span class="text__emoji">💥</span>.
+            <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-r.png" alt="[R]"></span>: Uděl <span class="text__emoji">💥</span>.
           </div>
         </div>
       
@@ -4504,12 +4506,12 @@ html, body {
       <div class="card__image card__image--no-text">
         <img src="ilus/Goblin.png" alt="Goblin">
       </div>
-      <div class="card__status card__status--no-text">
+      <div class="card__status card__status--no-text card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              Tempo unit
+              Rychlý tvor
             </textPath>
           </text>
         </svg>
@@ -4538,7 +4540,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Devil
+              Čert
             </textPath>
           </text>
         </svg>
@@ -4549,12 +4551,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Devil.png" alt="Devil">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              Tempo unit
+              Rychlý tvor
             </textPath>
           </text>
         </svg>
@@ -4563,7 +4565,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            USE: Draw 3 cards.
+            UŽIJ: Lízni si 3 karty.
           </div>
         </div>
       
@@ -4589,7 +4591,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Elemental
+              Elementál
             </textPath>
           </text>
         </svg>
@@ -4600,12 +4602,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Elemental.png" alt="Elemental">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              unit
+              Tvor
             </textPath>
           </text>
         </svg>
@@ -4614,7 +4616,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            When plunders, heal all its <span class="text__emoji">💥</span>.
+            Při plenění vyleč všechny jeho <span class="text__emoji">💥</span>.
           </div>
         </div>
       
@@ -4640,7 +4642,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Pyromancer
+              Pyromant
             </textPath>
           </text>
         </svg>
@@ -4651,12 +4653,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Pyromancer.png" alt="Pyromancer">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              unit
+              Tvor
             </textPath>
           </text>
         </svg>
@@ -4665,7 +4667,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            USE: Deal <span class="text__emoji">💥💥</span>.
+            UŽIJ: Uděl <span class="text__emoji">💥💥</span>.
           </div>
         </div>
       
@@ -4702,12 +4704,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Imp.png" alt="Imp">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              Flying unit
+              Létající tvor
             </textPath>
           </text>
         </svg>
@@ -4716,7 +4718,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            When deployed, deal <span class="text__emoji">💥💥</span>.
+            Při nasazení uděl <span class="text__emoji">💥💥</span>.
           </div>
         </div>
       
@@ -4753,12 +4755,12 @@ html, body {
       <div class="card__image card__image--no-text">
         <img src="ilus/Kobold.png" alt="Kobold">
       </div>
-      <div class="card__status card__status--no-text">
+      <div class="card__status card__status--no-text card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              Tempo unit
+              Rychlý tvor
             </textPath>
           </text>
         </svg>
@@ -4787,7 +4789,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Salamander
+              Salamandr
             </textPath>
           </text>
         </svg>
@@ -4798,12 +4800,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Salamander.png" alt="Salamander">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              unit
+              Tvor
             </textPath>
           </text>
         </svg>
@@ -4812,7 +4814,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-r.png" alt="[R]"></span>: Deal <span class="text__emoji">💥</span> to Salamander and <span class="text__emoji">💥</span> to any unit.
+            <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-r.png" alt="[R]"></span>: Uděl <span class="text__emoji">💥</span> Salamandrovi a&nbsp;<span class="text__emoji">💥</span> jakémukoliv tvoru.
           </div>
         </div>
       
@@ -4838,7 +4840,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Flame
+              Plamen
             </textPath>
           </text>
         </svg>
@@ -4849,12 +4851,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Flame.png" alt="Flame">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              wonder
+              Kouzlo
             </textPath>
           </text>
         </svg>
@@ -4863,7 +4865,7 @@ html, body {
       
         <div class="card__text">
           <div>
-            Deal <span class="text__emoji">💥💥💥💥</span>.
+            Uděl <span class="text__emoji">💥💥💥💥</span>.
           </div>
         </div>
       
@@ -4877,7 +4879,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Inferno
+              Peklo
             </textPath>
           </text>
         </svg>
@@ -4888,12 +4890,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Inferno.png" alt="Inferno">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              wonder
+              Kouzlo
             </textPath>
           </text>
         </svg>
@@ -4902,7 +4904,7 @@ html, body {
       
         <div class="card__text">
           <div>
-            Deal <span class="text__emoji">💥💥💥💥</span> to all non&#8288-&#8288red units.
+            Uděl <span class="text__emoji">💥💥💥💥</span> všem nečerveným tvorům.
           </div>
         </div>
       
@@ -4916,7 +4918,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Lava
+              Láva
             </textPath>
           </text>
         </svg>
@@ -4927,12 +4929,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Lava.png" alt="Lava">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              wonder
+              Kouzlo
             </textPath>
           </text>
         </svg>
@@ -4941,7 +4943,7 @@ html, body {
       
         <div class="card__text">
           <div>
-            Destroy any relic or non&#8288-&#8288flying unit.
+            Znič jakoukoliv relikvii nebo nelétajícího tvora.
           </div>
         </div>
       
@@ -4955,7 +4957,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Volcano
+              Sopka
             </textPath>
           </text>
         </svg>
@@ -4966,12 +4968,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Volcano.png" alt="Volcano">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              relic
+              Relikvie
             </textPath>
           </text>
         </svg>
@@ -4980,7 +4982,7 @@ html, body {
       
         <div class="card__text">
           <div>
-            USE: Deal <span class="text__emoji">💥</span>.
+            UŽIJ: Uděl <span class="text__emoji">💥</span>.
           </div>
         </div>
       
@@ -4994,7 +4996,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Blast
+              Bum!
             </textPath>
           </text>
         </svg>
@@ -5005,12 +5007,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Blast.png" alt="Blast">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              wonder
+              Kouzlo
             </textPath>
           </text>
         </svg>
@@ -5019,7 +5021,7 @@ html, body {
       
         <div class="card__text">
           <div>
-            Deal <span class="text__emoji">💥💥💥</span> to each of up to 3 units.
+            Uděl <span class="text__emoji">💥💥💥</span> každému z&nbsp;až 3 tvorů.
           </div>
         </div>
       
@@ -5033,7 +5035,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Circle
+              Kruh
             </textPath>
           </text>
         </svg>
@@ -5044,12 +5046,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Circle.png" alt="Circle">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              relic
+              Relikvie
             </textPath>
           </text>
         </svg>
@@ -5058,7 +5060,7 @@ html, body {
       
         <div class="card__text">
           <div>
-            USE: Prepare any unit.
+            UŽIJ: Připrav jakéhokoliv tvora.
           </div>
         </div>
       
@@ -5072,7 +5074,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Speed
+              Rychlost
             </textPath>
           </text>
         </svg>
@@ -5083,12 +5085,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Speed.png" alt="Speed">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              wonder
+              Kouzlo
             </textPath>
           </text>
         </svg>
@@ -5097,7 +5099,7 @@ html, body {
       
         <div class="card__text">
           <div>
-            Draw 4 cards. Then get <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span>.
+            Lízni si 4 karty. Poté získej <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span>.
           </div>
         </div>
       
@@ -5111,7 +5113,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Shaman
+              Šaman
             </textPath>
           </text>
         </svg>
@@ -5122,12 +5124,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Shaman.png" alt="Shaman">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              unit
+              Tvor
             </textPath>
           </text>
         </svg>
@@ -5136,7 +5138,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            USE: Promote any unit and deal <span class="text__emoji">💥💥</span> to it.
+            UŽIJ: Posil jakéhokoliv tvora a&nbsp;uděl mu <span class="text__emoji">💥💥</span>.
           </div>
         </div>
       
@@ -5162,7 +5164,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Demon
+              Démon
             </textPath>
           </text>
         </svg>
@@ -5173,12 +5175,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Demon.png" alt="Demon">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              Flying unit
+              Létající tvor
             </textPath>
           </text>
         </svg>
@@ -5187,7 +5189,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            Card limit of the opponent is reduced by 1.
+            Limit karet protivníka je snížen o 1.
           </div>
         </div>
       
@@ -5213,7 +5215,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Witch
+              Čarodějnice
             </textPath>
           </text>
         </svg>
@@ -5224,12 +5226,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Witch.png" alt="Witch">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              unit
+              Tvor
             </textPath>
           </text>
         </svg>
@@ -5238,7 +5240,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            USE: Move all <span class="text__emoji">💥</span> from one unit to any other unit.
+            UŽIJ: Přesuň všechny <span class="text__emoji">💥</span> z&nbsp;jednoho tvora na jiného tvora.
           </div>
         </div>
       
@@ -5264,7 +5266,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Parasite
+              Parazit
             </textPath>
           </text>
         </svg>
@@ -5275,12 +5277,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Parasite.png" alt="Parasite">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              unit
+              Tvor
             </textPath>
           </text>
         </svg>
@@ -5289,7 +5291,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            USE: Steal <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span>, convert it to <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-p.png" alt="[P]"></span>.
+            UŽIJ: Ukradni <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span>, převeď je na <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-p.png" alt="[P]"></span>.
           </div>
         </div>
       
@@ -5315,7 +5317,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Horror
+              Hrůznost
             </textPath>
           </text>
         </svg>
@@ -5326,12 +5328,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Horror.png" alt="Horror">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              unit
+              Tvor
             </textPath>
           </text>
         </svg>
@@ -5340,7 +5342,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            USE: Exhaust up to two units
+            UŽIJ: Vyčerpej až dva tvory.
           </div>
         </div>
       
@@ -5366,7 +5368,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Fanatic
+              Fanatik
             </textPath>
           </text>
         </svg>
@@ -5377,12 +5379,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Fanatic.png" alt="Fanatic">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              unit
+              Tvor
             </textPath>
           </text>
         </svg>
@@ -5391,7 +5393,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            When killed, return other purple unit from grave to battle.
+            Když je zabit, vrať jiného fialového tvora z&nbsp;hrobu do bitvy.
           </div>
         </div>
       
@@ -5417,7 +5419,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Scarecrow
+              Strašák
             </textPath>
           </text>
         </svg>
@@ -5428,12 +5430,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Scarecrow.png" alt="Scarecrow">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              unit
+              Tvor
             </textPath>
           </text>
         </svg>
@@ -5442,7 +5444,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            USE: Exhaust any unit.
+            UŽIJ: Vyčerpej jakéhokoliv tvora.
           </div>
         </div>
       
@@ -5468,7 +5470,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Demogorgon
+              Demogorgona
             </textPath>
           </text>
         </svg>
@@ -5479,12 +5481,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Demogorgon.png" alt="Demogorgon">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              unit
+              Tvor
             </textPath>
           </text>
         </svg>
@@ -5493,7 +5495,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            USE: Destroy any unit.
+            UŽIJ: Znič jakéhokoliv tvora.
           </div>
         </div>
       
@@ -5519,7 +5521,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Dark lord
+              Pán temnoty
             </textPath>
           </text>
         </svg>
@@ -5530,12 +5532,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Dark lord.png" alt="Dark lord">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              unit
+              Tvor
             </textPath>
           </text>
         </svg>
@@ -5544,7 +5546,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            At your turn start: Gets an ability of any unit until your next turn.
+            Na začátku tahu: Získává schopnost jiného tvora.
           </div>
         </div>
       
@@ -5570,7 +5572,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Madness
+              Šílenství
             </textPath>
           </text>
         </svg>
@@ -5581,12 +5583,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Madness.png" alt="Madness">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              charm
+              Čár
             </textPath>
           </text>
         </svg>
@@ -5595,7 +5597,7 @@ html, body {
       
         <div class="card__text">
           <div>
-            Double <span class="text__emoji">⚔</span>️ and <span class="text__emoji">💥</span> dealt to charmed unit.
+            Dvojnásobná <span class="text__emoji">⚔</span>️ a&nbsp;udělené <span class="text__emoji">💥</span> začarovanému tvoru.
           </div>
         </div>
       
@@ -5609,7 +5611,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Nightmare
+              Můra
             </textPath>
           </text>
         </svg>
@@ -5620,12 +5622,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Nightmare.png" alt="Nightmare">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              charm
+              Čár
             </textPath>
           </text>
         </svg>
@@ -5634,7 +5636,7 @@ html, body {
       
         <div class="card__text card__text--with-power">
           <div>
-            If charmed unit is killed, move Nightmare to another unit.
+            Pokud je začarovaný tvor zabit, přesuň Můru na jiného tvora.
           </div>
         </div>
       
@@ -5654,7 +5656,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Ritual
+              Rituál
             </textPath>
           </text>
         </svg>
@@ -5665,12 +5667,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Ritual.png" alt="Ritual">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              wonder
+              Kouzlo
             </textPath>
           </text>
         </svg>
@@ -5679,7 +5681,7 @@ html, body {
       
         <div class="card__text">
           <div>
-            Put a&nbsp;purple unit from your hand or grave to battle.
+            Dej fialového tvora z&nbsp;tvé ruky nebo hrobu do bitvy.
           </div>
         </div>
       
@@ -5693,7 +5695,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Sacrifice
+              Oběť
             </textPath>
           </text>
         </svg>
@@ -5704,12 +5706,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Sacrifice.png" alt="Sacrifice">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              wonder
+              Kouzlo
             </textPath>
           </text>
         </svg>
@@ -5718,7 +5720,7 @@ html, body {
       
         <div class="card__text">
           <div>
-            Move all <span class="text__emoji">💥</span> from one unit to another.
+            Přesuň všechny <span class="text__emoji">💥</span> z&nbsp;jednoho tvora na jiného.
           </div>
         </div>
       
@@ -5732,7 +5734,7 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Void
+              Nicota
             </textPath>
           </text>
         </svg>
@@ -5743,12 +5745,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Void.png" alt="Void">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              wonder
+              Kouzlo
             </textPath>
           </text>
         </svg>
@@ -5757,7 +5759,7 @@ html, body {
       
         <div class="card__text">
           <div>
-            Destroy any card in battle.
+            Znič jakoukoliv kartu v&nbsp;bitvě.
           </div>
         </div>
       
@@ -5782,12 +5784,12 @@ html, body {
       <div class="card__image">
         <img src="ilus/Paranoia.png" alt="Paranoia">
       </div>
-      <div class="card__status">
+      <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              wonder
+              Kouzlo
             </textPath>
           </text>
         </svg>
@@ -5796,7 +5798,7 @@ html, body {
       
         <div class="card__text">
           <div>
-            Opponent discards all cards.
+            Protivník odhodí všechny karty.
           </div>
         </div>
       
