@@ -1,11 +1,11 @@
 type,title,level,requirements,acc,speed,endurance,ilus,pic,logo
 car,Cremrolet Posrando,standard,,1,3,2,minivan,01-cremrolet-posrando.jpg,cremrolet
-car,Shitroën Moskvago,standard,,1,2,3,minivan,02-shitroen-moskvago.jpg,shitroen
+car,Psouda Dědova,standard,,1,2,3,sedan,pshouda-dedkova.jpg,pshouda
 car,Shitroën Sratchkus,standard,,2,3,2,cuv,03-shitroen-sratchkus.jpg,shitroen
 car,Sracia Fluster,standard,,2,2,3,suv,04-sracia-fluster.jpg,sracia
 car,Fiask Multiprdla,standard,,1,3,3,minivan,05-fiask-multipla.jpg,fiask
 car,Frnd Mucus,standard,,1,3,2,cuv,06-frnd-mucus.jpg,frnd
-car,Hnuyday IQ20,standard,,1,2,2,hatchback,06-hnuyday-iq20.jpg,hnuydai
+car,Hnuyday Hancar,standard,,1,2,2,hatchback,hnuyday-iq30.jpg,hnuydai
 car,Kakia Pee'd,standard,,2,3,2,hatchback,08-kakia-peed.jpg,kakia
 car,Lama Chliva,standard,,1,1,5,sedan,09-lama-chliva.jpg,lama
 car,Hnissan Meshqai,standard,,2,2,2,coupe,10-hnissan-meshqai.jpg,hnissan
@@ -14,13 +14,13 @@ car,Snopel Castrat,standard,,2,3,2,hatchback,12-snopel-castrat.jpg,snopel
 car,Hlenault Blio,standard,,1,3,2,hatchback,13-hlenault-blio.jpg,hlenault
 car,Hlenault Végane,standard,,2,3,3,sedan,14-hlenault-vegan.jpg,hlenault
 car,Hownda Paccord,standard,,1,3,2,sedan,15-hownda-pacord.jpg,hownda
-car,Pshouda Felacia,standard,,1,2,2,hatchback,16-pshouda-felacia.jpg,pshouda
+car,Pshouda Felacia,standard,,1,2,2,hatchback,pshouda-felacia.jpg,pshouda
 car,Pshouda Coctavia,standard,,1,3,2,cuv,17-pshouda-ochcavia.jpg,pshouda
 car,Pshouda Shitigo,standard,,1,2,1,micro,18-pshouda-shitigo.jpg,pshouda
 car,Su-u’baru Depreza,standard,,2,2,3,cuv,19-suubaru-depreza.jpg,suubaru
 car,Seppuki Vogon,standard,,1,2,1,micro,20-seppuki-vogon.jpg,seppuki
 car,Yotoya Colorra,standard,,1,3,2,hatchback,21-yotoya-colorra.jpg,yotoya
-car,Yotoya Yahryz,standard,,1,3,1,micro,22-yotoya-yahryz.jpg,yotoya
+car,Hownda Pitrocar,standard,,1,3,1,hatchback,pitrocar.jpg,hownda
 car,Koksladen Dolf,standard,,1,4,1,hatchback,23-koksladen-dolf.jpg,koksladen
 car,Fiask Shunto,standard,,1,2,2,micro,24-fiask-shpunto.jpg,fiask
 car,Beta Julietta,premium,,2,4,3,roadster,25-beta-julietta.jpg,betajulietta
@@ -53,60 +53,60 @@ car,Xciplimivtom Hitsumishi,deluxe,,3,5,4,supercar,51-xiplimiftom-hitsumishi.jpg
 car,Morsche Masturbo,deluxe,,5,5,3,supercar,52-morshe.jpg,morshe
 car,Naserati Safraporte,deluxe,,4,5,3,supercar,53-naserati.jpg,naserati
 car,Seppuki SeX4,deluxe,,4,5,3,supercar,54-seppuki.jpg,seppuki
-mission,Dárek pro milenku,1000,,,,,,,
-mission,Barva vyšlá z módy,1000,,,,,,,
+mission,Dárek pro Hanku,1000,,,,,,,
+mission,Červená vyšlá z módy,1000,,,,,,,
 mission,Odměna za vysvědčení,1000,,,,,,,
-mission,Rekonstrukce zahrady,1000,,,,,,,
-mission,Manželka se učí řídit,1000,,,,,,,
-mission,Zadřený motor,1000,,,,,,,
-mission,Načichlé potahy,1000,,,,,,,
-mission,Krumpáč v kapotě,1000,,,,,,,
-mission,Oprýskaný lak,1000,,,,,,,
-mission,Svoz odpadu,1000,,,,,,,
-mission,Taxi pro padělatele,2000,S,,,,,,
-mission,Převoz kufříku,2000,S,,,,,,
-mission,Usychající fíkus,2000,S,,,,,,
-mission,Získej informátora,2000,P,,,,,,
-mission,Uspokoj gamblera,2000,P,,,,,,
-mission,Uklidni závisláka,2000,P,,,,,,
-mission,Vybílení trafiky,2000,G,,,,,,
-mission,Výpalné z DVD půjčovny,2000,G,,,,,,
+mission,Rekonstrukce bytu,1000,,,,,,,
+mission,Hanka se učí řídit,1000,,,,,,,
+mission,Kafíčko u Pikoly,1000,,,,,,,
+mission,Barunka poblila potahy,1000,,,,,,,
+mission,Někdo do tebe nacouval na parkále,1000,,,,,,,
+mission,Shnilý prahy lak,1000,,,,,,,
+mission,Blokové čištění,1000,,,,,,,
+mission,Taxi pro kapelu,2000,S,,,,,,
+mission,Převoz Barunky,2000,S,,,,,,
+mission,Usychající kytičky,2000,S,,,,,,
+mission,Získej kamarády,2000,P,,,,,,
+mission,Uspokoj kamarády,2000,P,,,,,,
+mission,Uklidni Hanku,2000,P,,,,,,
+mission,Vybílení hospody,2000,G,,,,,,
+mission,Výpalné ze Sona,2000,G,,,,,,
 mission,Holubi k večeři,2000,G,,,,,,
 mission,Postraš zlobivce,2000,D,,,,,,
-mission,Boss chce pizzu,3000,SS,,,,,,
-mission,Policejní spiknutí,3000,PP,,,,,,
-mission,Zásoby na párty,3000,GG,,,,,,
-mission,Zlikviduj důkazy,3000,SP,,,,,,
+mission,Ondra chce pizzu,3000,SS,,,,,,
+mission,Dovolená v Barceloně,3000,PP,,,,,,
+mission,Odpal u Míča,3000,GG,,,,,,
+mission,Dovolená v Tallinu,3000,SP,,,,,,
 mission,Lehké varování,3000,SG,,,,,,
 mission,Falešné otisky,3000,PG,,,,,,
-mission,Na šéfa se netroubí!,3000,SD,,,,,,
+mission,Na Adama se netroubí!,3000,SD,,,,,,
 mission,Drzý policajt,3000,PD,,,,,,
 mission,Pořádná blyštivá bouchačka,3000,GD,,,,,,
-mission,Boss chce víc pizzy,4000,SSS,,,,,,
-mission,Policejní gang,4000,PPP,,,,,,
-mission,Zásoby na pořádnou párty,4000,GGG,,,,,,
+mission,Ondra chce víc pizzy,4000,SSS,,,,,,
+mission,Adam's gang,4000,PPP,,,,,,
+mission,Zásoby na párty u Pavla,4000,GGG,,,,,,
 mission,Ukradni důkazy,4000,SSP,,,,,,
-mission,Eskort zabijáka,4000,SSG,,,,,,
-mission,Nečekaná odplata,4000,SSD,,,,,,
-mission,Zabavení střeliva,4000,PPG,,,,,,
-mission,Potřebujem do novin,4000,PPD,,,,,,
-mission,Pizza byla otrávena!,5000,SSSS,,,,,,
-mission,Nejlepší honička,5000,PPPP,,,,,,
-mission,Brutální přestřelka,5000,GGGG,,,,,,
+mission,Projížďka ze Sárou,4000,SSG,,,,,,
+mission,Dovolená v Barceloně,4000,SSD,,,,,,
+mission,Procházka s Barunkou,4000,PPG,,,,,,
+mission,Schůzka s paní Grmolcovou,4000,PPD,,,,,,
+mission,Fingers Up,5000,SSSS,,,,,,
+mission,Nejlepší hoňka,5000,PPPP,,,,,,
+mission,Brutální odpal,5000,GGGG,,,,,,
 mission,Vyřizování účtů,5000,SSPP,,,,,,
 mission,Žhavé zboží,5000,SSGG,,,,,,
 mission,Žhavé výstřely,5000,PPGG,,,,,,
-mission,Poselství ze záhrobí,5000,SSDD,,,,,,
+mission,Poselství od ex,5000,SSDD,,,,,,
 mission,Bankovní prácička,6000,SSPPG,,,,,,
 mission,Vyčištění rajónu,6000,PPGGD,,,,,,
-mission,Dej mu za vyučenou,6000,SSGGD,,,,,,
-mission,Šéf byl uražen!,6000,SPGDD,,,,,,
-mission,Šéf se zlobí!,6000,SPGDD,,,,,,
+mission,Dej Leošovi za vyučenou,6000,SSGGD,,,,,,
+mission,Ondřej byl uražen!,6000,SPGDD,,,,,,
+mission,Ondřej se zlobí!,6000,SPGDD,,,,,,
 mission,Královský diamant,7000,SSPPGG,,,,,,
 mission,Velká vlaková loupež,7000,SSPPDD,,,,,,
 mission,Poklad velkého šéfa,7000,SSGGDD,,,,,,
-mission,Šperky starostovy manželky,7000,PPGGDD,,,,,,
-mission,Policejní trezor,7000,SPPPGD,,,,,,
+mission,Šperky Pavlovy manželky,7000,PPGGDD,,,,,,
+mission,Adamův trezor,7000,SPPPGD,,,,,,
 pagebreak,,,,,,,,,
 action,Skautuj,,Do svého rajónu před sebe vylož auto z~vrchu balíčku. ,,,,scout,,
 action,Kraď!,,"Nasedni do jakéhokoliv volného auta. Podle vrchního auta z balíčku urči, kolik tě začne pronásledovat policajtů. U auta ze soupeřova rajónu přičti jednoho navíc.",,,,steal,,
