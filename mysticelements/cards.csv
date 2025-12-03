@@ -1,9 +1,9 @@
 name,csname,status,color,cost,power,health,text,cstext
-Angel,Anděl,Flying guard unit,w,5,5,5,"When attacked, prepare it after combat.","Když je napaden, po souboji jej připrav."
+Angel,Anděl,Flying guard unit,w,5,5,5,"When attacked, prepare it.","Když je napaden, připrav jej."
 Paladin,Paladin,Guard unit,w,4,4,4,Reduce all 💥 dealt to Paladin by&nbsp;1.,Všechna 💥 obdržená Paladinem jsou snížena o&nbsp;1.
-Monk,Mnich,unit,w,3,3,3,"When your unit is killed, promote Monk.","Když je tvůj tvor zabit, posil Mnicha."
+Monk,Mnich,unit,w,3,3,3,"When your unit is attacked, prepare Monk.","Když je tvůj tvor napaden, připrav Mnicha."
 Unicorn,Jednorožec,unit,w,3,2,2,Cannot be killed unless [E][E][E] are paid.,"Nemůže být zabit, pokud nejsou zaplaceny [E][E][E]."
-Pegasus,Pegas,Flying unit,w,3,2,2,USE: Any unit gets flying this turn.,UŽIJ: Jakýkoliv tvor je toto kolo létající.
+Pegasus,Pegas,Flying unit,w,3,2,2,USE: Prepare any unit. It gets flying this turn.,UŽIJ: Připrav jakéhokoliv tvora. Získá létání do konce tahu.
 Priest,Kněz,unit,w,1,1,1,USE: Return a card from your grave to the hand.,UŽIJ: Vrať si kartu z&nbsp;hrobu do ruky.
 Healer,Léčitel,unit,w,2,1,1,USE: Heal all 💥 from any unit.,UŽIJ: Vyleč všechna 💥 z&nbsp;jednoho tvora.
 Hermit,Poustevník,unit,w,3,0,1,All your other units are guards.,Všichni tví ostatní tvoři jsou strážní.
