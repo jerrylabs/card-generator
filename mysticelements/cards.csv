@@ -3,24 +3,24 @@ Angel,Anděl,Flying guard unit,w,5,5,5,"When attacked, prepare it.","Když je na
 Paladin,Paladin,Guard unit,w,4,4,4,Reduce all 💥 dealt to Paladin by&nbsp;1.,Všechna 💥 obdržená Paladinem jsou snížena o&nbsp;1.
 Monk,Mnich,unit,w,3,3,3,"When your unit is attacked, prepare Monk.","Když je tvůj tvor napaden, připrav Mnicha."
 Unicorn,Jednorožec,unit,w,3,2,2,Cannot be killed unless [E][E][E] are paid.,"Nemůže být zabit, pokud nejsou zaplaceny [E][E][E]."
-Pegasus,Pegas,Flying unit,w,3,2,2,USE: Prepare any unit. It gets flying this turn.,UŽIJ: Připrav jakéhokoliv tvora. Získá létání do konce tahu.
+Pegasus,Pegas,Flying unit,w,3,2,2,USE: Prepare any unit. It's flying this turn.,UŽIJ: Připrav jakéhokoliv tvora. Tento tah je létající.
 Priest,Kněz,unit,w,1,1,1,USE: Return a card from your grave to the hand.,UŽIJ: Vrať si kartu z&nbsp;hrobu do ruky.
-Healer,Léčitel,unit,w,2,1,1,USE: Heal all 💥 from any unit.,UŽIJ: Vyleč všechna 💥 z&nbsp;jednoho tvora.
+Healer,Léčitel,unit,w,2,1,1,USE: Fully heal an unit.,UŽIJ: Zcela vyleč jednoho tvora.
 Hermit,Poustevník,unit,w,3,0,1,All your other units are guards.,Všichni tví ostatní tvoři jsou strážní.
-Blessing,Požehnání,wonder,w,5,,,Heal all 💥 from each of your units.,Vyleč všechna 💥 všech tvých tvorů.
+Blessing,Požehnání,wonder,w,4,,,Fully heal all your units., Zcela vyleč všechny tvé tvory.
 Halo,Záře,charm,w,3,+3,+3,At your turn start: Heal 💥💥.,Na začátku tahu: Vyleč 💥💥.
-Shield,Štít,charm,w,2,,+5,Heal charmed unit.,Vyleč začarovaného tvora.
+Shield,Štít,charm,w,2,,+5,Fully heal charmed unit.,Zcela vyleč začarovaného tvora.
 Light,Osvícení,wonder,w,1,,,Opponent discards a non-white card of your choice.,Soupeř odhodí nebílou kartu dle tvého výběru.
 Hope,Víra,wonder,w,1,,,Return a card from your grave to your hand.,Vrať si kartu z&nbsp;hrobu do ruky.
 Sanctuary,Kaple,relic,w,4,,,USE: Heal 💥💥.,UŽIJ: Vyleč 💥💥.
 Prayer,Modlitba,wonder,w,1,,,"Reveal top card of your deck or grave. If it's white, play it for free.","Odhal vrchní kartu tvého balíčku nebo hrobu. Pokud je bílá, zadarmo ji vylož."
 Chariot,Jezdec,Shooting guard tempo unit,y,3,4,2,,
-Legionnaire,Legionář,unit,y,4,3,3,"When deployed, promote all your other units.",Při nasazení posil všechny tvé ostatní tvory.
+Legionnaire,Legionář,unit,y,4,3,3,"When deployed, prepare all your other units.",Při nasazení připrav všechny tvé ostatní tvory.
 Marshall,Maršál,unit,y,4,3,3,USE: Prepare up to two other units.,UŽIJ: Připrav až dva jiné tvory.
 Sphinx,Sfinga,Guard unit,y,3,3,4,"When non-yellow unit attacks, deal 💥 to attacking player.","Když nežlutý tvor zaútočí, hráč obdrží 💥."
 Scarabeus,Skarab,unit,y,2,2,2,USE: Exhaust any unit and prepare any other unit.,UŽIJ: Vyčerpej jakéhokoliv tvora a připrav jiného.
 Pharaoh,Faraon,unit,y,6,2,6,Deal 💥 to your unit: get [E].,Uděl 💥 tvému tvoru: získej [E].
-Mummy,Mumie,Guard unit,y,5,4,6,At your turn start: Heal all its 💥.,Na začátku tahu: Vyleč všechna její 💥.
+Mummy,Mumie,Guard unit,y,5,4,6,At your turn start: It's fully healed.,Na začátku tahu: Je zcela vyléčena.
 Wurm,Červ,unit,y,8,7,7,At your turn start: Destroy any exhausted unit or relic.,Na začátku tahu: Znič jakéhokoliv vyčerpaného tvora nebo relikvii.
 Lightning,Blesk,wonder,y,2,,,Deal 💥💥💥💥.,Uděl 💥💥💥💥.
 Law,Zákon,wonder,y,5,,,Destroy any card in battle.,Znič jakoukoliv kartu v&nbsp;bitvě.
@@ -30,7 +30,7 @@ Gold,Zlato,charm,y,1,,,"Charmed unit gets: ""USE: Get [E][E].""","Začarovaný t
 Coliseum,Koloseum,relic,y,4,,,USE: Promote any unit.,UŽIJ: Posil jakéhokoliv tvora.
 Judgement,Soud,wonder,y,10,,,Destroy all non-yellow units.,Znič všechny nežluté tvory.
 Kraken,Kraken,unit,b,7,8,8,Cannot be killed unless [E][E][E] are paid.,"Nemůže být zabit, pokud nejsou zaplaceny [E][E][E]."
-Pirate,Pirát,unit,b,4,4,4,USE: Steal [E].,UŽIJ: Ukradni [E].
+Pirate,Pirát,unit,b,4,4,4,USE: Steal up to [E][E].,UŽIJ: Ukradni až [E][E].
 Merfolk,Merfolk,unit,b,3,3,3,+3 ⚔️ & +3 🛡️ if you have other blue unit in the battle.,+3 ⚔️ & +3 🛡️ pokud máš jiného modrého tvora v&nbsp;bitvě.
 Manta,Manta,Flying unit,b,4,5,5,"When attacks, other unit gets flying this turn.","Když zaútočí, jiný tvor se stane toto kolo létajícím."
 Siren,Siréna,unit,b,4,3,2,USE: Return any unit to the hand.,UŽIJ: Vrať jakéhokoliv tvora do ruky.
@@ -42,7 +42,7 @@ Mist,Mlha,wonder,b,4,,,Shuffle any unit to the deck.,Zamíchej jakéhokoliv tvor
 Chill,Chlad,charm,b,3,,,Exchaust charmed unit. It cannot be prepared unless [E][E][E] are paid.,"Vyčerpej začarovaného tvora. Nelze ho připravit, pokud nejsou zaplaceny [E][E][E]."
 Flood,Záplava,wonder,b,5,,,Shuffle any card from the battle to the deck.,Zamíchej jakoukoliv kartu z&nbsp;bitvy do balíčku.
 Coral,Korál,relic,b,5,,,USE: Get [E][E].,UŽIJ: Získej [E][E].
-Orb,Orb,relic,b,3,,,Your hand limit is increased by 1.,Tvůj limit karet je zvýšen o&nbsp;1.
+Orb,Orb,relic,b,2,,,Your hand limit is increased by 1.,Tvůj limit karet je zvýšen o&nbsp;1.
 Mirror,Zrcadlo,wonder,b,2,,,Copy the effect of wonder on the top of any grave.,Zkopíruj kouzlo na vrchu jakéhokoliv hrobu.
 Zombie,Zombie,unit,n,2,2,2,Can be deployed from grave.,Může být nasazena z&nbsp;hrobu.
 Skeleton,Kostlivec,unit,n,1,1,1,"When an unit is killed, put Skeleton from grave to the battle.","Když je jakýkoliv tvor zabit, vrať Kostlivce z&nbsp;hrobu do bitvy."
@@ -55,20 +55,20 @@ Wraith,Duch,Flying tempo unit,n,6,6,4,"When plunders, player must discard a card
 Death,Smrt,wonder,n,3,,,Return any unit from grave to battle.,Vrať jakéhokoliv tvora z&nbsp;hrobu do bitvy.
 Rot,Zhnití,wonder,n,5,,,Destroy any card in battle.,Znič jakoukoliv kartu v&nbsp;bitvě.
 Plague,Mor,wonder,n,4,,,Demote all units twice.,Oslab všechny tvory v&nbsp;bitvě dvakrát.
-Drain,Vysátí,wonder,n,3,,,"Steal all [E], convert it to [N].","Ukradni všechny [E], převeď je na [N]."
-Soul,Duše,charm,n,3,,,"When charmed unit is killed, return it to battle demoted and move Soul to other non-demoted unit.","Zabitý začarovaný tvor se vrátí do bitvy oslabený a Duše se přesune na jiného neoslabeného tvora."
-Tomb,Hrobka,relic,n,5,,,USE: Demote any unit.,UŽIJ: Oslab jakéhokoliv tvora.
-Decay,Úpadek,charm,n,1,,,At your turn start: Demote charmed unit.,Na začátku tahu: Oslab začarovaného tvora.
+Drain,Vysátí,wonder,n,2,,,"Steal all [E], convert it to [N].","Ukradni všechny [E], převeď je na [N]."
+Soul,Duše,charm,n,3,,,"When charmed unit is killed, charm other unit from your grave and return it to battle.","Když je začarovaný tvor zabit, přesuň Duši na jiného tvora a vrať ho z tvého hrobu do bitvy."
+Tomb,Hrobka,relic,n,4,,,USE: Demote any unit.,UŽIJ: Oslab jakéhokoliv tvora.
+Decay,Úpadek,charm,n,1,,,At each turn start: Demote charmed unit.,Na začátku každého tahu: Oslab začarovaného tvora.
 Elf,Elf,Shooting unit,g,3,3,2,"All your units have: ""USE: Get [E].""","Všichni tví tvorové mají: ""UŽIJ: Získej [E]."""
-Druid,Druid,unit,g,1,0,1,At your turn start: Get [E].,Na začátku tahu: Získej [E].
-Dryad,Divoženka,Shooting guard unit,g,4,4,3,"When opponent draw 3 cards or more, promote any unit.","Když si soupeř lízne 3 a více karet, posil jakéhokoliv tvora."
+Druid,Druid,unit,g,1,0,1,At your turn start: Get [E].,Na začátku tvého tahu: Získej [E].
+Dryad,Divoženka,Shooting guard unit,g,4,4,3,"[E]: Get [E].","[E]: Získej [E]."
 Beast,Šelma,Tempo unit,g,4,4,4,,
-Treefolk,Ent,Guard unit,g,5,3,5,At your turn start: Heal 💥💥 from it.,Na začátku tahu: Vyleč z&nbsp;něj 💥💥.
+Treefolk,Ent,Guard unit,g,5,3,5,At your turn start: Heal 💥💥 from it.,Na začátku tvého tahu: Vyleč z&nbsp;něj 💥💥.
 Faerie,Víla,Flying unit,g,1,1,1,"When used, draw a card.","Když je použita, lízni si kartu."
 Centaur,Kentaur,Shooting guard tempo unit,g,5,5,3,,
-Antler,Paroh,Guard unit,g,9,6,6,"When non-green unit attacks, prepare Antler.","Když útočí nezelený tvor, připrav Paroha."
-Grow,Růst,charm,g,1,,,At your turn start: Promote charmed unit.,Na začátku tahu: Posil začarovaného tvora.
-Spring,Pramen,wonder,g,3,,,Heal 💥💥💥 from each of your units.,Vyleč 💥💥💥 z&nbsp;každého tvého tvora.
+Antler,Paroh,Guard unit,g,8,6,6,"When non-green unit attacks, prepare Antler.","Když útočí nezelený tvor, připrav Paroha."
+Grow,Růst,charm,g,1,,,At each turn start: Promote charmed unit.,Na začátku každého tahu: Posil začarovaného tvora.
+Spring,Pramen,wonder,g,2,,,Heal 💥💥💥 from each of your units.,Vyleč 💥💥💥 z&nbsp;každého tvého tvora.
 Bloom,Rozkvět,wonder,g,2,,,Get [E][E][E][E][E].,Získej [E][E][E][E][E].
 Roots,Kořeň,charm,g,3,,,Exchaust charmed unit. It cannot be prepared unless [E][E][E] are paid.,"Vyčerpej začarovaného tvora. Nelze ho připravit, pokud nejsou zaplaceny [E][E][E]."
 Thorns,Trnisko,charm,g,1,+3,+3,,
@@ -85,14 +85,14 @@ Ogre,Ogr,unit,o,4,4,3,Double ⚔️ when plundering.,Dvojnásobná ⚔️ při p
 Golem,Golem,Guard unit,o,5,5,5,"When attacked, deal 💥💥 to attacking unit.","Když je napaden, uděl 💥💥 útočícímu tvoru."
 Spear,Kopí,relic,o,3,,,USE: +3 ⚔️ to any unit this turn.,UŽIJ: +3 ⚔️ jakémukoliv tvoru v&nbsp;tomto tahu.
 Stomp,Dup!,wonder,o,2,,,Deal 💥💥💥💥.,Uděl 💥💥💥💥.
-Brawl,Bitka,wonder,o,6,,,Prepare all your units and relics.,Připrav všechny své tvory a relikvie.
+War song,Válečná píseň,wonder,o,5,,,Prepare all your units and relics.,Připrav všechny své tvory a relikvie.
 Stone,Kameň,charm,o,1,+3,+3,,
 Shrine,Svatyně,relic,o,4,,,USE: Prepare any unit.,UŽIJ: Připrav jakéhokoliv tvora.
 Crush,Křup!,wonder,o,5,,,Destroy any card in battle.,Znič jakoukoliv kartu v&nbsp;bitvě.
 Dragon,Drak,Flying unit,r,6,7,6,[R]: Deal 💥.,[R]: Uděl 💥.
 Goblin,Goblin,Tempo unit,r,1,2,1,,
 Devil,Čert,Tempo unit,r,3,4,2,USE: Draw 3 cards.,UŽIJ: Lízni si 3 karty.
-Elemental,Elementál,unit,r,6,6,6,"When plunders, heal all its 💥.","Při plenění vyleč všechny jeho 💥."
+Elemental,Elementál,unit,r,6,6,6,"When plunders, it's fully healed.","Při plenění jej zcela vyleč."
 Pyromancer,Pyromant,unit,r,2,2,2,USE: Deal 💥💥.,UŽIJ: Uděl 💥💥.
 Imp,Imp,Flying unit,r,3,2,1,"When deployed, deal 💥💥.","Při nasazení uděl 💥💥."
 Kobold,Kobold,Tempo unit,r,2,3,2,,
@@ -106,16 +106,16 @@ Circle,Kruh,relic,r,4,,,USE: Prepare any unit.,UŽIJ: Připrav jakéhokoliv tvor
 Speed,Rychlost,wonder,r,2,,,Draw 4 cards. Then get [E][E].,Lízni si 4 karty. Poté získej [E][E].
 Shaman,Šaman,unit,p,3,2,3,USE: Promote any unit and deal 💥💥 to it.,UŽIJ: Posil jakéhokoliv tvora a uděl mu 💥💥.
 Demon,Démon,Flying unit,p,4,4,4,Card limit of the opponent is reduced by 1.,Limit karet protivníka je snížen o 1.
-Witch,Čarodějnice,unit,p,5,2,4,USE: Move all 💥 from one unit to any other unit.,UŽIJ: Přesuň všechny 💥 z&nbsp;jednoho tvora na jiného tvora.
-Parasite,Parazit,unit,p,1,2,1,"USE: Steal [E][E], convert it to [P].","UŽIJ: Ukradni [E][E], převeď je na [P]."
+Witch,Čarodějnice,unit,p,4,2,4,USE: Move all 💥 from one unit to any other unit.,UŽIJ: Přesuň všechny 💥 z&nbsp;jednoho tvora na jiného tvora.
+Parasite,Parazit,unit,p,1,2,1,"USE: Steal up to [E][E], convert it to [P].","UŽIJ: Ukradni až [E][E], převeď je na [P]."
 Horror,Hrůznost,unit,p,5,5,5,USE: Exhaust up to two units.,UŽIJ: Vyčerpej až dva tvory.
 Fanatic,Fanatik,unit,p,1,3,1,"When killed, return other purple unit from grave to battle.","Když je zabit, vrať jiného fialového tvora z&nbsp;hrobu do bitvy."
 Scarecrow,Strašák,unit,p,4,5,3,USE: Exhaust any unit.,UŽIJ: Vyčerpej jakéhokoliv tvora.
-Demogorgon,Demogorgona,unit,p,7,6,4,USE: Destroy any unit.,UŽIJ: Znič jakéhokoliv tvora.
-Dark lord,Pán temnoty,unit,p,8,6,6,At your turn start: Gets an ability of any other unit.,Na začátku tahu: Získává schopnost jiného tvora.
+Demogorgon,Demogorgona,unit,p,6,6,4,USE: Destroy any unit.,UŽIJ: Znič jakéhokoliv tvora.
+Dark lord,Pán temnoty,unit,p,8,6,6,Has abilities of all units in battle.,Má schopnosti všech tvorů v bitvě.
 Madness,Šílenství,charm,p,3,,,Double ⚔️ and 💥 dealt to charmed unit.,Dvojnásobná ⚔️ a udělené 💥 začarovanému tvoru.
-Nightmare,Můra,charm,p,2,-3,,"If charmed unit is killed, move Nightmare to another unit.","Pokud je začarovaný tvor zabit, přesuň Můru na jiného tvora."
+Nightmare,Můra,charm,p,1,-3,,"If charmed unit is killed, move Nightmare to another unit.","Pokud je začarovaný tvor zabit, přesuň Můru na jiného tvora."
 Ritual,Rituál,wonder,p,1,,,Put a purple unit from your hand or grave to battle.,Dej fialového tvora z&nbsp;tvé ruky nebo hrobu do bitvy.
 Sacrifice,Oběť,wonder,p,1,,,Move all 💥 from one unit to another.,Přesuň všechny 💥 z&nbsp;jednoho tvora na jiného.
 Void,Nicota,wonder,p,5,,,Destroy any card in battle.,Znič jakoukoliv kartu v&nbsp;bitvě.
-Paranoia,Paranoia,wonder,p,4,,,Opponent discards all cards.,Protivník odhodí všechny karty.
+Paranoia,Paranoia,wonder,p,5,,,Opponent discards all cards.,Protivník odhodí všechny karty.
