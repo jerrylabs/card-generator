@@ -15,7 +15,7 @@ Hope,Víra,wonder,w,1,,,Return a card from your grave to your hand.,Vrať si kar
 Sanctuary,Kaple,relic,w,4,,,USE: Heal 💥💥.,UŽIJ: Vyleč 💥💥.
 Prayer,Modlitba,wonder,w,1,,,"Reveal top card of your deck or grave. If it's white, play it for free.","Odhal vrchní kartu tvého balíčku nebo hrobu. Pokud je bílá, zadarmo ji vylož."
 Chariot,Jezdec,Shooting guard tempo unit,y,3,4,2,,
-Legionnaire,Legionář,unit,y,4,3,3,"When deployed, prepare all your other units.",Při nasazení připrav všechny tvé ostatní tvory.
+Legionnaire,Legionář,unit,y,3,3,3,"When deployed, promote all your other units.",Při nasazení posil všechny tvé ostatní tvory.
 Marshall,Maršál,unit,y,4,3,3,USE: Prepare up to two other units.,UŽIJ: Připrav až dva jiné tvory.
 Sphinx,Sfinga,Guard unit,y,3,3,4,"When non-yellow unit attacks, deal 💥 to attacking player.","Když nežlutý tvor zaútočí, hráč obdrží 💥."
 Scarabeus,Skarab,unit,y,2,2,2,USE: Exhaust any unit and prepare any other unit.,UŽIJ: Vyčerpej jakéhokoliv tvora a připrav jiného.
