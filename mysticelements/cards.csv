@@ -20,7 +20,7 @@ Marshall,Maršál,unit,y,4,3,3,USE: Prepare up to two other units.,UŽIJ: Připr
 Sphinx,Sfinga,Guard unit,y,3,3,4,"When non-yellow unit attacks, deal 💥 to attacking player.","Když nežlutý tvor zaútočí, hráč obdrží 💥."
 Scarabeus,Skarab,unit,y,2,2,2,USE: Exhaust any unit and prepare any other unit.,UŽIJ: Vyčerpej jakéhokoliv tvora a připrav jiného.
 Pharaoh,Faraon,unit,y,6,2,6,Deal 💥 to your unit: get [E].,Uděl 💥 tvému tvoru: získej [E].
-Mummy,Mumie,Guard unit,y,5,4,6,At your turn start: It's fully healed.,Na začátku tahu: Je zcela vyléčena.
+Mummy,Mumie,Guard unit,y,5,4,6,"At your turn start: If damaged, it's fully healed.","Na začátku tahu: Pokud je poškozena, je zcela vyléčena."
 Wurm,Červ,unit,y,8,7,7,At your turn start: Destroy any exhausted unit or relic.,Na začátku tahu: Znič jakéhokoliv vyčerpaného tvora nebo relikvii.
 Lightning,Blesk,wonder,y,2,,,Deal 💥💥💥💥.,Uděl 💥💥💥💥.
 Law,Zákon,wonder,y,5,,,Destroy any card in battle.,Znič jakoukoliv kartu v&nbsp;bitvě.
@@ -103,7 +103,7 @@ Lava,Láva,wonder,r,3,,,Destroy any relic or non-flying unit.,Znič jakoukoliv r
 Volcano,Sopka,relic,r,4,,,USE: Deal 💥.,UŽIJ: Uděl 💥.
 Blast,Bum!,wonder,r,3,,,Deal 💥💥💥 to each of up to 3 units.,Uděl 💥💥💥 každému z&nbsp;až 3 tvorů.
 Circle,Kruh,relic,r,4,,,USE: Prepare any unit.,UŽIJ: Připrav jakéhokoliv tvora.
-Speed,Rychlost,wonder,r,2,,,Draw 4 cards. Then get [E][E].,Lízni si 4 karty. Poté získej [E][E].
+Speed,Rychlost,charm,r,2,+4,,Prepare charmed unit.,Připrav očarovaného tvora.
 Shaman,Šaman,unit,p,3,2,3,USE: Promote any unit and deal 💥💥 to it.,UŽIJ: Posil jakéhokoliv tvora a uděl mu 💥💥.
 Demon,Démon,Flying unit,p,4,4,4,Card limit of the opponent is reduced by 1.,Limit karet protivníka je snížen o 1.
 Witch,Čarodějnice,unit,p,4,2,4,USE: Move all 💥 from one unit to any other unit.,UŽIJ: Přesuň všechny 💥 z&nbsp;jednoho tvora na jiného tvora.
