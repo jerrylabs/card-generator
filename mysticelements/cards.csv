@@ -7,7 +7,7 @@ Pegasus,Pegas,Flying unit,w,3,2,2,USE: Prepare any unit. It's flying this turn.,
 Priest,Kněz,unit,w,1,1,1,USE: Return a card from your grave to the hand.,UŽIJ: Vrať si kartu z&nbsp;hrobu do ruky.
 Healer,Léčitel,unit,w,2,1,1,USE: Fully heal an unit.,UŽIJ: Zcela vyleč jednoho tvora.
 Hermit,Poustevník,unit,w,3,0,1,All your other units are guards.,Všichni tví ostatní tvoři jsou strážní.
-Blessing,Požehnání,wonder,w,4,,,Fully heal all your units., Zcela vyleč všechny tvé tvory.
+Blessing,Požehnání,wonder,w,5,,,Fully heal and promote all your units., Zcela vyleč a posil všechny tvé tvory.
 Halo,Záře,charm,w,3,+3,+3,At your turn start: Heal 💥💥.,Na začátku tahu: Vyleč 💥💥.
 Shield,Štít,charm,w,2,,+5,Fully heal charmed unit.,Zcela vyleč začarovaného tvora.
 Light,Osvícení,wonder,w,1,,,Opponent discards a non-white card of your choice.,Soupeř odhodí nebílou kartu dle tvého výběru.
@@ -112,7 +112,7 @@ Horror,Hrůznost,unit,p,5,5,5,USE: Exhaust up to two units.,UŽIJ: Vyčerpej až
 Fanatic,Fanatik,unit,p,1,3,1,"When killed, return other purple unit from grave to battle.","Když je zabit, vrať jiného fialového tvora z&nbsp;hrobu do bitvy."
 Scarecrow,Strašák,unit,p,4,5,3,USE: Exhaust any unit.,UŽIJ: Vyčerpej jakéhokoliv tvora.
 Demogorgon,Demogorgona,unit,p,6,6,4,USE: Destroy any unit.,UŽIJ: Znič jakéhokoliv tvora.
-Dark lord,Pán temnoty,unit,p,8,6,6,Has abilities of all units in battle.,Má schopnosti všech tvorů v bitvě.
+Dark lord,Pán temnoty,unit,p,8,6,6,Has abilities of all units in battle.,Má schopnosti všech tvorů v&nbsp;bitvě.
 Madness,Šílenství,charm,p,3,,,Double ⚔️ and 💥 dealt to charmed unit.,Dvojnásobná ⚔️ a udělené 💥 začarovanému tvoru.
 Nightmare,Můra,charm,p,1,-3,,"If charmed unit is killed, move Nightmare to another unit.","Pokud je začarovaný tvor zabit, přesuň Můru na jiného tvora."
 Ritual,Rituál,wonder,p,1,,,Put a purple unit from your hand or grave to battle.,Dej fialového tvora z&nbsp;tvé ruky nebo hrobu do bitvy.

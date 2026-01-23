@@ -45,7 +45,7 @@ html, body {
 
 @font-face {
   font-family: "FantaisieArtistique.otf";
-  src: url("http://localhost:8080/font/FantaisieArtistique.otf") format("opentype");
+  src: url("http://localhost:8080/font/FantaisieArtistique.ttf") format("truetype");
 }
 
 @font-face {
@@ -183,7 +183,7 @@ html, body {
   background-image: url(card_components/status_bg.png);
   position: absolute;
   top: 67.85mm;
-  font-family: FantaisieArtistique;
+  font-family: FantaisieArtistique, Sualtim;
   background-size: contain;
   padding-top: 7.5mm;
   text-transform: capitalize;
@@ -224,7 +224,7 @@ html, body {
   left: 3.75mm;
   font-family: Sualtim;
   background-size: contain;
-  padding: 5mm 3.5mm 3.5mm;
+  padding: 7mm 3.5mm 3.5mm;
   line-height: 1;
   display: flex;
   align-items: center;
@@ -341,7 +341,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            Když je napaden, po souboji jej připrav.
+            Když je napaden, připrav jej.
           </div>
         </div>
       
@@ -443,7 +443,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            Když je tvůj tvor zabit, posil Mnicha.
+            Když je tvůj tvor napaden, připrav Mnicha.
           </div>
         </div>
       
@@ -545,7 +545,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            UŽIJ: Jakýkoliv tvor je toto kolo létající.
+            UŽIJ: Připrav jakéhokoliv tvora. Tento tah je létající.
           </div>
         </div>
       
@@ -647,7 +647,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            UŽIJ: Vyleč všechna <span class="text__emoji">💥</span> z&nbsp;jednoho tvora.
+            UŽIJ: Zcela vyleč jednoho tvora.
           </div>
         </div>
       
@@ -749,7 +749,7 @@ html, body {
       
         <div class="card__text">
           <div>
-            Vyleč všechna <span class="text__emoji">💥</span> všech tvých tvorů.
+             Zcela vyleč a&nbsp;posil všechny tvé tvory.
           </div>
         </div>
       
@@ -839,7 +839,7 @@ html, body {
       
         <div class="card__text card__text--with-health">
           <div>
-            Vyleč začarovaného tvora.
+            Zcela vyleč začarovaného tvora.
           </div>
         </div>
       
@@ -1075,7 +1075,7 @@ html, body {
         </svg>
       </div>
       <div class="card__cost">
-        <img class="card__energy card__energy--shift1" src="card_components/energy-y.png" alt="Energy"><img class="card__energy" src="card_components/energy-y.png" alt="Energy"><img class="card__energy" src="card_components/energy-y.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-y.png" alt="Energy">
+        <img class="card__energy card__energy--shift1" src="card_components/energy-y.png" alt="Energy"><img class="card__energy" src="card_components/energy-y.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-y.png" alt="Energy">
       </div>
       <div class="card__image">
         <img src="ilus/Legionnaire.png" alt="Legionnaire">
@@ -1349,7 +1349,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            Na začátku tahu: Vyleč všechna její <span class="text__emoji">💥</span>.
+            Na začátku tahu: Pokud je poškozena, je zcela vyléčena.
           </div>
         </div>
       
@@ -1775,7 +1775,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            UŽIJ: Ukradni <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span>.
+            UŽIJ: Ukradni až <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span>.
           </div>
         </div>
       
@@ -2308,7 +2308,7 @@ html, body {
         </svg>
       </div>
       <div class="card__cost">
-        <img class="card__energy card__energy--shift1" src="card_components/energy-b.png" alt="Energy"><img class="card__energy" src="card_components/energy-b.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-b.png" alt="Energy">
+        <img class="card__energy" src="card_components/energy-b.png" alt="Energy"><img class="card__energy" src="card_components/energy-b.png" alt="Energy">
       </div>
       <div class="card__image">
         <img src="ilus/Orb.png" alt="Orb">
@@ -2911,7 +2911,7 @@ html, body {
         </svg>
       </div>
       <div class="card__cost">
-        <img class="card__energy card__energy--shift1" src="card_components/energy-n.png" alt="Energy"><img class="card__energy" src="card_components/energy-n.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-n.png" alt="Energy">
+        <img class="card__energy" src="card_components/energy-n.png" alt="Energy"><img class="card__energy" src="card_components/energy-n.png" alt="Energy">
       </div>
       <div class="card__image">
         <img src="ilus/Drain.png" alt="Drain">
@@ -2969,7 +2969,7 @@ html, body {
       
         <div class="card__text">
           <div>
-            Zabitý začarovaný tvor se vrátí do bitvy oslabený a&nbsp;Duše se přesune na jiného neoslabeného tvora.
+            Když je začarovaný tvor zabit, přesuň Duši na jiného tvora a&nbsp;vrať ho z tvého hrobu do bitvy.
           </div>
         </div>
       
@@ -2989,7 +2989,7 @@ html, body {
         </svg>
       </div>
       <div class="card__cost">
-        <img class="card__energy card__energy--shift2" src="card_components/energy-n.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-n.png" alt="Energy"><img class="card__energy" src="card_components/energy-n.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-n.png" alt="Energy"><img class="card__energy card__energy--shift2" src="card_components/energy-n.png" alt="Energy">
+        <img class="card__energy card__energy--shift1" src="card_components/energy-n.png" alt="Energy"><img class="card__energy" src="card_components/energy-n.png" alt="Energy"><img class="card__energy" src="card_components/energy-n.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-n.png" alt="Energy">
       </div>
       <div class="card__image">
         <img src="ilus/Tomb.png" alt="Tomb">
@@ -3047,7 +3047,7 @@ html, body {
       
         <div class="card__text">
           <div>
-            Na začátku tahu: Oslab začarovaného tvora.
+            Na začátku každého tahu: Oslab začarovaného tvora.
           </div>
         </div>
       
@@ -3137,7 +3137,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            Na začátku tahu: Získej <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span>.
+            Na začátku tvého tahu: Získej <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span>.
           </div>
         </div>
       
@@ -3188,7 +3188,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            Když si soupeř lízne 3 a&nbsp;více karet, posil jakéhokoliv tvora.
+            <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span>: Získej <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span>.
           </div>
         </div>
       
@@ -3284,7 +3284,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            Na začátku tahu: Vyleč z&nbsp;něj <span class="text__emoji">💥💥</span>.
+            Na začátku tvého tahu: Vyleč z&nbsp;něj <span class="text__emoji">💥💥</span>.
           </div>
         </div>
       
@@ -3421,7 +3421,7 @@ html, body {
         </svg>
       </div>
       <div class="card__cost">
-        <img class="card__energy card__energy--shift2" src="card_components/energy-g.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-g.png" alt="Energy"><img class="card__energy" src="card_components/energy-g.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-g.png" alt="Energy"><img class="card__energy card__energy--shift2" src="card_components/energy-g.png" alt="Energy"><img class="card__energy card__energy--shift4" src="card_components/energy-g.png" alt="Energy"><img class="card__energy card__energy--shift3" src="card_components/energy-g.png" alt="Energy"><img class="card__energy card__energy--shift3" src="card_components/energy-g.png" alt="Energy"><img class="card__energy card__energy--shift4" src="card_components/energy-g.png" alt="Energy">
+        <img class="card__energy card__energy--shift2" src="card_components/energy-g.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-g.png" alt="Energy"><img class="card__energy" src="card_components/energy-g.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-g.png" alt="Energy"><img class="card__energy card__energy--shift2" src="card_components/energy-g.png" alt="Energy"><img class="card__energy card__energy--shift4" src="card_components/energy-g.png" alt="Energy"><img class="card__energy card__energy--shift3" src="card_components/energy-g.png" alt="Energy"><img class="card__energy card__energy--shift4" src="card_components/energy-g.png" alt="Energy">
       </div>
       <div class="card__image">
         <img src="ilus/Antler.png" alt="Antler">
@@ -3491,7 +3491,7 @@ html, body {
       
         <div class="card__text">
           <div>
-            Na začátku tahu: Posil začarovaného tvora.
+            Na začátku každého tahu: Posil začarovaného tvora.
           </div>
         </div>
       
@@ -3511,7 +3511,7 @@ html, body {
         </svg>
       </div>
       <div class="card__cost">
-        <img class="card__energy card__energy--shift1" src="card_components/energy-g.png" alt="Energy"><img class="card__energy" src="card_components/energy-g.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-g.png" alt="Energy">
+        <img class="card__energy" src="card_components/energy-g.png" alt="Energy"><img class="card__energy" src="card_components/energy-g.png" alt="Energy">
       </div>
       <div class="card__image">
         <img src="ilus/Spring.png" alt="Spring">
@@ -4282,16 +4282,16 @@ html, body {
           <path id="MyPath" fill="none" stroke="none"  d="M 0 5 Q 15 -5 30 5" pathLength="2" />
           <text class="title is-4" font-size="3.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath" startOffset="1">
-              Bitka
+              Válečná píseň
             </textPath>
           </text>
         </svg>
       </div>
       <div class="card__cost">
-        <img class="card__energy card__energy--shift2" src="card_components/energy-o.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-o.png" alt="Energy"><img class="card__energy" src="card_components/energy-o.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-o.png" alt="Energy"><img class="card__energy card__energy--shift2" src="card_components/energy-o.png" alt="Energy"><img class="card__energy card__energy--shift3" src="card_components/energy-o.png" alt="Energy">
+        <img class="card__energy card__energy--shift2" src="card_components/energy-o.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-o.png" alt="Energy"><img class="card__energy" src="card_components/energy-o.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-o.png" alt="Energy"><img class="card__energy card__energy--shift2" src="card_components/energy-o.png" alt="Energy">
       </div>
       <div class="card__image">
-        <img src="ilus/Brawl.png" alt="Brawl">
+        <img src="ilus/War song.png" alt="War song">
       </div>
       <div class="card__status card__status--czech">
         <svg viewBox="0 4 30 8" xmlns="http://www.w3.org/2000/svg">
@@ -4616,7 +4616,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            Při plenění vyleč všechny jeho <span class="text__emoji">💥</span>.
+            Při plenění jej zcela vyleč.
           </div>
         </div>
       
@@ -5090,19 +5090,25 @@ html, body {
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              Kouzlo
+              Čár
             </textPath>
           </text>
         </svg>
         
       </div>
       
-        <div class="card__text">
+        <div class="card__text card__text--with-power">
           <div>
-            Lízni si 4 karty. Poté získej <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span>.
+            Připrav očarovaného tvora.
           </div>
         </div>
       
+      
+        <div class="card__power">
+          +4
+          <br>
+          <span class="card__symbol">⚔</span>
+        </div>
       
       
     </div><div class="card">
@@ -5221,7 +5227,7 @@ html, body {
         </svg>
       </div>
       <div class="card__cost">
-        <img class="card__energy card__energy--shift2" src="card_components/energy-p.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-p.png" alt="Energy"><img class="card__energy" src="card_components/energy-p.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-p.png" alt="Energy"><img class="card__energy card__energy--shift2" src="card_components/energy-p.png" alt="Energy">
+        <img class="card__energy card__energy--shift1" src="card_components/energy-p.png" alt="Energy"><img class="card__energy" src="card_components/energy-p.png" alt="Energy"><img class="card__energy" src="card_components/energy-p.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-p.png" alt="Energy">
       </div>
       <div class="card__image">
         <img src="ilus/Witch.png" alt="Witch">
@@ -5291,7 +5297,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            UŽIJ: Ukradni <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span>, převeď je na <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-p.png" alt="[P]"></span>.
+            UŽIJ: Ukradni až <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span>, převeď je na <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-p.png" alt="[P]"></span>.
           </div>
         </div>
       
@@ -5476,7 +5482,7 @@ html, body {
         </svg>
       </div>
       <div class="card__cost">
-        <img class="card__energy card__energy--shift2" src="card_components/energy-p.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-p.png" alt="Energy"><img class="card__energy" src="card_components/energy-p.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-p.png" alt="Energy"><img class="card__energy card__energy--shift2" src="card_components/energy-p.png" alt="Energy"><img class="card__energy card__energy--shift3" src="card_components/energy-p.png" alt="Energy"><img class="card__energy card__energy--shift3" src="card_components/energy-p.png" alt="Energy">
+        <img class="card__energy card__energy--shift2" src="card_components/energy-p.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-p.png" alt="Energy"><img class="card__energy" src="card_components/energy-p.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-p.png" alt="Energy"><img class="card__energy card__energy--shift2" src="card_components/energy-p.png" alt="Energy"><img class="card__energy card__energy--shift3" src="card_components/energy-p.png" alt="Energy">
       </div>
       <div class="card__image">
         <img src="ilus/Demogorgon.png" alt="Demogorgon">
@@ -5546,7 +5552,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            Na začátku tahu: Získává schopnost jiného tvora.
+            Má schopnosti všech tvorů v&nbsp;bitvě.
           </div>
         </div>
       
@@ -5617,7 +5623,7 @@ html, body {
         </svg>
       </div>
       <div class="card__cost">
-        <img class="card__energy" src="card_components/energy-p.png" alt="Energy"><img class="card__energy" src="card_components/energy-p.png" alt="Energy">
+        <img class="card__energy" src="card_components/energy-p.png" alt="Energy">
       </div>
       <div class="card__image">
         <img src="ilus/Nightmare.png" alt="Nightmare">
@@ -5779,7 +5785,7 @@ html, body {
         </svg>
       </div>
       <div class="card__cost">
-        <img class="card__energy card__energy--shift1" src="card_components/energy-p.png" alt="Energy"><img class="card__energy" src="card_components/energy-p.png" alt="Energy"><img class="card__energy" src="card_components/energy-p.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-p.png" alt="Energy">
+        <img class="card__energy card__energy--shift2" src="card_components/energy-p.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-p.png" alt="Energy"><img class="card__energy" src="card_components/energy-p.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-p.png" alt="Energy"><img class="card__energy card__energy--shift2" src="card_components/energy-p.png" alt="Energy">
       </div>
       <div class="card__image">
         <img src="ilus/Paranoia.png" alt="Paranoia">

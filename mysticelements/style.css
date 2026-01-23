@@ -41,7 +41,7 @@ html, body {
 
 @font-face {
   font-family: "FantaisieArtistique.otf";
-  src: url("http://localhost:8080/font/FantaisieArtistique.otf") format("opentype");
+  src: url("http://localhost:8080/font/FantaisieArtistique.ttf") format("truetype");
 }
 
 @font-face {
@@ -179,7 +179,7 @@ html, body {
   background-image: url(card_components/status_bg.png);
   position: absolute;
   top: 67.85mm;
-  font-family: FantaisieArtistique;
+  font-family: FantaisieArtistique, Sualtim;
   background-size: contain;
   padding-top: 7.5mm;
   text-transform: capitalize;
@@ -220,7 +220,7 @@ html, body {
   left: 3.75mm;
   font-family: Sualtim;
   background-size: contain;
-  padding: 5mm 3.5mm 3.5mm;
+  padding: 7mm 3.5mm 3.5mm;
   line-height: 1;
   display: flex;
   align-items: center;
