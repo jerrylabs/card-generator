@@ -12,7 +12,7 @@ Halo,Záře,charm,w,3,+3,+3,At your turn start: Heal 💥💥.,Na začátku tahu
 Shield,Štít,charm,w,2,,+5,Fully heal charmed unit.,Zcela vyleč začarovaného tvora.
 Light,Osvícení,wonder,w,1,,,Opponent discards a non-white card of your choice.,Soupeř odhodí nebílou kartu dle tvého výběru.
 Hope,Víra,wonder,w,1,,,Return a card from your grave to your hand.,Vrať si kartu z&nbsp;hrobu do ruky.
-Sanctuary,Kaple,relic,w,4,,,USE: Heal 💥💥.,UŽIJ: Vyleč 💥💥.
+Sanctuary,Chrám,relic,w,4,,,USE: Heal 💥💥.,UŽIJ: Vyleč 💥💥.
 Prayer,Modlitba,wonder,w,1,,,"Reveal top card of your deck or grave. If it's white, play it for free.","Odhal vrchní kartu tvého balíčku nebo hrobu. Pokud je bílá, zadarmo ji vylož."
 Chariot,Jezdec,Shooting guard tempo unit,y,3,4,2,,
 Legionnaire,Legionář,unit,y,3,3,3,"When deployed, promote all your other units.",Při nasazení posil všechny tvé ostatní tvory.
@@ -34,7 +34,7 @@ Pirate,Pirát,unit,b,4,4,4,USE: Steal up to [E][E].,UŽIJ: Ukradni až [E][E].
 Merfolk,Merfolk,unit,b,3,3,3,+3 ⚔️ & +3 🛡️ if you have other blue unit in the battle.,+3 ⚔️ & +3 🛡️ pokud máš jiného modrého tvora v&nbsp;bitvě.
 Manta,Manta,Flying unit,b,4,5,5,"When attacks, other unit gets flying this turn.","Když zaútočí, jiný tvor se stane toto kolo létajícím."
 Siren,Siréna,unit,b,4,3,2,USE: Return any unit to the hand.,UŽIJ: Vrať jakéhokoliv tvora do ruky.
-Naiad,Najáda,unit,b,4,2,3,USE: Exhaust any unit.,UŽIJ: Vyčerpej jakéhokoliv tvora.
+Naiad,Najáda,unit,b,3,2,3,USE: Exhaust any unit.,UŽIJ: Vyčerpej jakéhokoliv tvora.
 Gorgon,Gorgona,Guard unit,b,5,2,6,"When damages an unit, destroy it.","Když poškodí tvora, znič ho."
 Serpent,Mořský had,unit,b,6,7,7,Does not prepare at your turn start. [B][B][B]: Prepare it.,"Nepřipravuje se na začátku tvého kola. [B][B][B]: Připrav ho."
 Tide,Vlna,wonder,b,2,,,Return any unit to the hand.,Vrať jakéhokoliv tvora do ruky.
