@@ -78,12 +78,31 @@ html, body {
   border-radius: 5mm;
 }
 
+.card--smaller {
+  zoom: 0.8;
+}
+
 @media print {
   .card:nth-child(12n+1),
   .card:nth-child(12n+2),
   .card:nth-child(12n+3),
   .card:nth-child(12n+4) {
     margin-top: 42mm;
+  }
+
+  .card--smaller:nth-child(12n+1),
+  .card--smaller:nth-child(12n+2),
+  .card--smaller:nth-child(12n+3),
+  .card--smaller:nth-child(12n+4) {
+    margin-top: 0;
+  }
+
+  .card--smaller:nth-child(20n+1),
+  .card--smaller:nth-child(20n+2),
+  .card--smaller:nth-child(20n+3),
+  .card--smaller:nth-child(20n+4),
+  .card--smaller:nth-child(20n+5) {
+    margin-top: 33.5mm;
   }
 }
 

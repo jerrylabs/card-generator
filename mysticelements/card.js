@@ -1,5 +1,6 @@
 module.exports = (cardData, i, extraParams) => {
   const czech = extraParams.includes('cs');
+  const smaller = extraParams.includes('small');
   const { cost, color, name, status, text, power, health, csname, cstext } = cardData;
   const longStatus = status.split(' ').length > 3;
   const displayedStatus = czech ? translateStatus(status, 'cs') : status;
@@ -7,7 +8,7 @@ module.exports = (cardData, i, extraParams) => {
     displayedStatus.split(' ').slice(0, 2).join(' '),
     displayedStatus.split(' ').slice(-2).join(' ')
   ] : null;
-  return `<div class="card">
+  return `<div class="card${smaller ? ' card--smaller' : ''}"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--${color}"></div>
       <div class="card__name">
@@ -106,7 +107,7 @@ const translateStatus = (status, lang) => {
         .replace('flying', 'létající')
         .replace('shooting', 'střelecký')
         .replace('tempo', 'rychlý')
-        .replace('charm', 'čár')
+        .replace('charm', 'očarování')
         .replace('wonder', 'kouzlo')
         .replace('relic', 'relikvie');
       return `${czechStatus.slice(0, 1).toUpperCase()}${czechStatus.slice(1)}`;

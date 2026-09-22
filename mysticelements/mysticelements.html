@@ -82,12 +82,31 @@ html, body {
   border-radius: 5mm;
 }
 
+.card--smaller {
+  zoom: 0.8;
+}
+
 @media print {
   .card:nth-child(12n+1),
   .card:nth-child(12n+2),
   .card:nth-child(12n+3),
   .card:nth-child(12n+4) {
     margin-top: 42mm;
+  }
+
+  .card--smaller:nth-child(12n+1),
+  .card--smaller:nth-child(12n+2),
+  .card--smaller:nth-child(12n+3),
+  .card--smaller:nth-child(12n+4) {
+    margin-top: 0;
+  }
+
+  .card--smaller:nth-child(20n+1),
+  .card--smaller:nth-child(20n+2),
+  .card--smaller:nth-child(20n+3),
+  .card--smaller:nth-child(20n+4),
+  .card--smaller:nth-child(20n+5) {
+    margin-top: 33.5mm;
   }
 }
 
@@ -308,7 +327,7 @@ html, body {
     <body>
       <div id="pageborder"></div>
       <div class="cards">
-        <div class="card">
+        <div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--w"></div>
       <div class="card__name">
@@ -359,7 +378,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--w"></div>
       <div class="card__name">
@@ -410,7 +429,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--w"></div>
       <div class="card__name">
@@ -443,7 +462,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            Když je tvůj tvor napaden, připrav Mnicha.
+            Když je tvůj tvor napaden, posil Mnicha.
           </div>
         </div>
       
@@ -461,7 +480,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--w"></div>
       <div class="card__name">
@@ -512,7 +531,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--w"></div>
       <div class="card__name">
@@ -545,7 +564,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            UŽIJ: Připrav jakéhokoliv tvora. Tento tah je létající.
+            UŽIJ: Připrav jakéhokoliv tvora. Je létající po zbytek tahu.
           </div>
         </div>
       
@@ -563,7 +582,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--w"></div>
       <div class="card__name">
@@ -596,7 +615,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            UŽIJ: Vrať si kartu z&nbsp;hrobu do ruky.
+            UŽIJ: Vrať si kartu z&nbsp;hrobu do&nbsp;ruky.
           </div>
         </div>
       
@@ -614,7 +633,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--w"></div>
       <div class="card__name">
@@ -647,7 +666,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            UŽIJ: Zcela vyleč jednoho tvora.
+            UŽIJ: Vyleč jakéhokoliv tvora.
           </div>
         </div>
       
@@ -660,12 +679,12 @@ html, body {
       
       
         <div class="card__health">
-          2
+          3
           <br>
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--w"></div>
       <div class="card__name">
@@ -716,7 +735,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--w"></div>
       <div class="card__name">
@@ -749,13 +768,13 @@ html, body {
       
         <div class="card__text">
           <div>
-             Zcela vyleč a&nbsp;posil všechny tvé tvory.
+            Zcela vyleč a&nbsp;připrav všechny tvé tvory.
           </div>
         </div>
       
       
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--w"></div>
       <div class="card__name">
@@ -779,7 +798,7 @@ html, body {
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              Čár
+              Očarování
             </textPath>
           </text>
         </svg>
@@ -788,7 +807,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            Na začátku tahu: Vyleč <span class="text__emoji">💥💥</span>.
+            Na začátku tahu vyleč očarovaného tvora.
           </div>
         </div>
       
@@ -806,7 +825,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--w"></div>
       <div class="card__name">
@@ -830,7 +849,7 @@ html, body {
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              Čár
+              Očarování
             </textPath>
           </text>
         </svg>
@@ -839,19 +858,19 @@ html, body {
       
         <div class="card__text card__text--with-health">
           <div>
-            Zcela vyleč začarovaného tvora.
+            Všechna <span class="text__emoji">💥</span> obdržená očarovaným tvorem jsou snížena o&nbsp;1.
           </div>
         </div>
       
       
       
         <div class="card__health">
-          +5
+          +4
           <br>
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--w"></div>
       <div class="card__name">
@@ -890,7 +909,7 @@ html, body {
       
       
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--w"></div>
       <div class="card__name">
@@ -929,7 +948,7 @@ html, body {
       
       
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--w"></div>
       <div class="card__name">
@@ -962,13 +981,13 @@ html, body {
       
         <div class="card__text">
           <div>
-            UŽIJ: Vyleč <span class="text__emoji">💥💥</span>.
+            UŽIJ: Vyleč jakéhokoliv tvora nebo vrať 2 karty z hlubokého hrobu na vrch balíčku.
           </div>
         </div>
       
       
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--w"></div>
       <div class="card__name">
@@ -1007,7 +1026,7 @@ html, body {
       
       
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--y"></div>
       <div class="card__name">
@@ -1061,7 +1080,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--y"></div>
       <div class="card__name">
@@ -1094,7 +1113,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            Při nasazení posil všechny tvé ostatní tvory.
+            Při vyložení posil všechny tvé ostatní tvory.
           </div>
         </div>
       
@@ -1112,7 +1131,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--y"></div>
       <div class="card__name">
@@ -1163,7 +1182,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--y"></div>
       <div class="card__name">
@@ -1214,7 +1233,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--y"></div>
       <div class="card__name">
@@ -1265,7 +1284,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--y"></div>
       <div class="card__name">
@@ -1316,7 +1335,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--y"></div>
       <div class="card__name">
@@ -1349,7 +1368,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            Na začátku tahu: Pokud je poškozena, je zcela vyléčena.
+            Na začátku tahu: Je vyléčena.
           </div>
         </div>
       
@@ -1367,7 +1386,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--y"></div>
       <div class="card__name">
@@ -1418,7 +1437,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--y"></div>
       <div class="card__name">
@@ -1457,7 +1476,7 @@ html, body {
       
       
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--y"></div>
       <div class="card__name">
@@ -1490,13 +1509,13 @@ html, body {
       
         <div class="card__text">
           <div>
-            Znič jakoukoliv kartu v&nbsp;bitvě.
+            Znič jakoukoliv vyloženou kartu.
           </div>
         </div>
       
       
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--y"></div>
       <div class="card__name">
@@ -1529,13 +1548,13 @@ html, body {
       
         <div class="card__text">
           <div>
-            Připrav (pokud je třeba) a&nbsp;použij jakéhokoliv tvora.
+            Připrav (pokud je třeba) jakéhokoliv tvora. Toto kolo ho ovládáš ty.
           </div>
         </div>
       
       
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--y"></div>
       <div class="card__name">
@@ -1574,7 +1593,7 @@ html, body {
       
       
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--y"></div>
       <div class="card__name">
@@ -1598,7 +1617,7 @@ html, body {
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              Čár
+              Očarování
             </textPath>
           </text>
         </svg>
@@ -1613,7 +1632,7 @@ html, body {
       
       
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--y"></div>
       <div class="card__name">
@@ -1652,7 +1671,7 @@ html, body {
       
       
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--y"></div>
       <div class="card__name">
@@ -1691,7 +1710,7 @@ html, body {
       
       
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--b"></div>
       <div class="card__name">
@@ -1742,7 +1761,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--b"></div>
       <div class="card__name">
@@ -1793,7 +1812,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--b"></div>
       <div class="card__name">
@@ -1826,7 +1845,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            +3 <span class="text__emoji">⚔</span>️ & +3 <span class="text__emoji">🛡</span>️ pokud máš jiného modrého tvora v&nbsp;bitvě.
+            +3 <span class="text__emoji">⚔</span>️ & +3 <span class="text__emoji">🛡</span>️ pokud máš vyloženého jiného modrého tvora.
           </div>
         </div>
       
@@ -1844,7 +1863,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--b"></div>
       <div class="card__name">
@@ -1895,7 +1914,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--b"></div>
       <div class="card__name">
@@ -1928,7 +1947,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            UŽIJ: Vrať jakéhokoliv tvora do ruky.
+            UŽIJ: Vrať jakéhokoliv vyloženého tvora do ruky.
           </div>
         </div>
       
@@ -1946,7 +1965,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--b"></div>
       <div class="card__name">
@@ -1997,7 +2016,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--b"></div>
       <div class="card__name">
@@ -2048,7 +2067,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--b"></div>
       <div class="card__name">
@@ -2099,7 +2118,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--b"></div>
       <div class="card__name">
@@ -2138,7 +2157,7 @@ html, body {
       
       
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--b"></div>
       <div class="card__name">
@@ -2171,13 +2190,13 @@ html, body {
       
         <div class="card__text">
           <div>
-            Zamíchej jakéhokoliv tvora do balíčku.
+            Zamíchej jakéhokoliv vyloženého tvora do balíčku.
           </div>
         </div>
       
       
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--b"></div>
       <div class="card__name">
@@ -2201,7 +2220,7 @@ html, body {
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              Čár
+              Očarování
             </textPath>
           </text>
         </svg>
@@ -2216,7 +2235,7 @@ html, body {
       
       
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--b"></div>
       <div class="card__name">
@@ -2255,7 +2274,7 @@ html, body {
       
       
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--b"></div>
       <div class="card__name">
@@ -2294,7 +2313,7 @@ html, body {
       
       
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--b"></div>
       <div class="card__name">
@@ -2333,7 +2352,7 @@ html, body {
       
       
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--b"></div>
       <div class="card__name">
@@ -2372,7 +2391,7 @@ html, body {
       
       
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--n"></div>
       <div class="card__name">
@@ -2405,7 +2424,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            Může být nasazena z&nbsp;hrobu.
+            <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-n.png" alt="[N]"><img class="text__energy" src="card_components/energy-n.png" alt="[N]"></span>: Je oživena.
           </div>
         </div>
       
@@ -2423,7 +2442,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--n"></div>
       <div class="card__name">
@@ -2456,7 +2475,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            Když je jakýkoliv tvor zabit, vrať Kostlivce z&nbsp;hrobu do bitvy.
+            Když je jakýkoliv tvor zabit, oživ Kostlivce.
           </div>
         </div>
       
@@ -2474,7 +2493,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--n"></div>
       <div class="card__name">
@@ -2525,7 +2544,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--n"></div>
       <div class="card__name">
@@ -2558,7 +2577,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            UŽIJ: Vrať jakékoliv tvora z&nbsp;hrobu do bitvy.
+            UŽIJ: Oživ jakéhokoliv tvého tvora.
           </div>
         </div>
       
@@ -2576,7 +2595,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--n"></div>
       <div class="card__name">
@@ -2609,7 +2628,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            Při plenění ukradni <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span>, převeď ji na <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-n.png" alt="[N]"></span>.
+            Když poškodí hráče, ukradni tomu <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span>, převeď ji na <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-n.png" alt="[N]"></span>.
           </div>
         </div>
       
@@ -2627,7 +2646,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--n"></div>
       <div class="card__name">
@@ -2678,7 +2697,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--n"></div>
       <div class="card__name">
@@ -2711,7 +2730,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            Při plenění musí hráč odhodit kartu podle svého výběru.
+            Když poškodí hráče, musí odhodit kartu podle svého výběru.
           </div>
         </div>
       
@@ -2729,7 +2748,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--n"></div>
       <div class="card__name">
@@ -2762,7 +2781,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            Při plenění musí hráč odhodit kartu podle tvého výběru.
+            Když poškodí hráče, musí odhodit kartu podle tvého výběru.
           </div>
         </div>
       
@@ -2780,7 +2799,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--n"></div>
       <div class="card__name">
@@ -2813,13 +2832,13 @@ html, body {
       
         <div class="card__text">
           <div>
-            Vrať jakéhokoliv tvora z&nbsp;hrobu do bitvy.
+            Oživ jakéhokoliv tvého tvora.
           </div>
         </div>
       
       
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--n"></div>
       <div class="card__name">
@@ -2852,13 +2871,13 @@ html, body {
       
         <div class="card__text">
           <div>
-            Znič jakoukoliv kartu v&nbsp;bitvě.
+            Znič jakoukoliv vyloženou kartu.
           </div>
         </div>
       
       
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--n"></div>
       <div class="card__name">
@@ -2891,13 +2910,13 @@ html, body {
       
         <div class="card__text">
           <div>
-            Oslab všechny tvory v&nbsp;bitvě dvakrát.
+            Všechny vyložené tvory vyčerpej a&nbsp;dvakrát oslab.
           </div>
         </div>
       
       
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--n"></div>
       <div class="card__name">
@@ -2936,7 +2955,7 @@ html, body {
       
       
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--n"></div>
       <div class="card__name">
@@ -2960,7 +2979,7 @@ html, body {
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              Čár
+              Očarování
             </textPath>
           </text>
         </svg>
@@ -2969,13 +2988,13 @@ html, body {
       
         <div class="card__text">
           <div>
-            Když je začarovaný tvor zabit, přesuň Duši na jiného tvora z tvého hrobu a&nbsp;vrať ho do bitvy.
+            Pokud je začarovaný tvor zabit, pohřbi ho hluboko, oživ jiného a&nbsp;přesuň Duši na něj.
           </div>
         </div>
       
       
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--n"></div>
       <div class="card__name">
@@ -3014,7 +3033,7 @@ html, body {
       
       
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--n"></div>
       <div class="card__name">
@@ -3038,7 +3057,7 @@ html, body {
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              Čár
+              Očarování
             </textPath>
           </text>
         </svg>
@@ -3053,7 +3072,7 @@ html, body {
       
       
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--g"></div>
       <div class="card__name">
@@ -3086,7 +3105,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            Všichni tví tvorové mají: "UŽIJ: Získej <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span>."
+            UŽIJ: Získej <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span> za každého tvého vyloženého tvora.
           </div>
         </div>
       
@@ -3104,7 +3123,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--g"></div>
       <div class="card__name">
@@ -3155,7 +3174,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--g"></div>
       <div class="card__name">
@@ -3206,7 +3225,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--g"></div>
       <div class="card__name">
@@ -3251,7 +3270,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--g"></div>
       <div class="card__name">
@@ -3284,7 +3303,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            Na začátku tvého tahu: Vyleč z&nbsp;něj <span class="text__emoji">💥💥</span>.
+            Na začátku tvého tahu: Je vyléčen.
           </div>
         </div>
       
@@ -3302,7 +3321,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--g"></div>
       <div class="card__name">
@@ -3335,7 +3354,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            Když je použita, každý hráč získá <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span>.
+            Když je použita, získáváš <span class="text__energy-wrap"><img class="text__energy" src="card_components/energy-any.png" alt="[E]"></span>.
           </div>
         </div>
       
@@ -3353,7 +3372,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--g"></div>
       <div class="card__name">
@@ -3407,7 +3426,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--g"></div>
       <div class="card__name">
@@ -3458,7 +3477,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--g"></div>
       <div class="card__name">
@@ -3482,7 +3501,7 @@ html, body {
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              Čár
+              Očarování
             </textPath>
           </text>
         </svg>
@@ -3497,7 +3516,7 @@ html, body {
       
       
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--g"></div>
       <div class="card__name">
@@ -3530,13 +3549,13 @@ html, body {
       
         <div class="card__text">
           <div>
-            Vyleč <span class="text__emoji">💥💥💥</span> z&nbsp;každého tvého tvora.
+            Vyleč a&nbsp;posil všechny tvé tvory.
           </div>
         </div>
       
       
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--g"></div>
       <div class="card__name">
@@ -3575,7 +3594,7 @@ html, body {
       
       
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--g"></div>
       <div class="card__name">
@@ -3599,7 +3618,7 @@ html, body {
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              Čár
+              Očarování
             </textPath>
           </text>
         </svg>
@@ -3614,7 +3633,7 @@ html, body {
       
       
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--g"></div>
       <div class="card__name">
@@ -3638,7 +3657,7 @@ html, body {
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              Čár
+              Očarování
             </textPath>
           </text>
         </svg>
@@ -3659,7 +3678,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--g"></div>
       <div class="card__name">
@@ -3698,7 +3717,7 @@ html, body {
       
       
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--g"></div>
       <div class="card__name">
@@ -3731,13 +3750,13 @@ html, body {
       
         <div class="card__text">
           <div>
-            Vrať 7 karet z&nbsp;tvého hlubokého hrobu zpět na vrch balíčku.
+            Vrať 7 karet z&nbsp;hlubokého hrobu zpět na vrch balíčku.
           </div>
         </div>
       
       
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--o"></div>
       <div class="card__name">
@@ -3770,7 +3789,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            Při nasazení znič jakoukoliv kartu v&nbsp;bitvě.
+            Při vyložení znič jakoukoliv vyloženou kartu.
           </div>
         </div>
       
@@ -3788,7 +3807,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--o"></div>
       <div class="card__name">
@@ -3839,7 +3858,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--o"></div>
       <div class="card__name">
@@ -3853,7 +3872,7 @@ html, body {
         </svg>
       </div>
       <div class="card__cost">
-        <img class="card__energy card__energy--shift1" src="card_components/energy-o.png" alt="Energy"><img class="card__energy" src="card_components/energy-o.png" alt="Energy"><img class="card__energy card__energy--shift1" src="card_components/energy-o.png" alt="Energy">
+        <img class="card__energy" src="card_components/energy-o.png" alt="Energy"><img class="card__energy" src="card_components/energy-o.png" alt="Energy">
       </div>
       <div class="card__image">
         <img src="ilus/Dwarf.png" alt="Dwarf">
@@ -3890,7 +3909,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--o"></div>
       <div class="card__name">
@@ -3923,7 +3942,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            Když zabije tvora, vyleč z&nbsp;něj <span class="text__emoji">💥💥</span>.
+            Když zabije tvora, je vyléčen.
           </div>
         </div>
       
@@ -3941,7 +3960,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--o"></div>
       <div class="card__name">
@@ -3992,7 +4011,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--o"></div>
       <div class="card__name">
@@ -4025,7 +4044,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            Při plenění musí hráč odhodit kartu podle svého výběru.
+            Když poškodí hráče, musí odhodit kartu podle svého výběru.
           </div>
         </div>
       
@@ -4043,7 +4062,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--o"></div>
       <div class="card__name">
@@ -4076,7 +4095,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            Při nasazení nebo zabití vrať vrchní kartu ze svého hrobu do ruky.
+            Při vyložení nebo zabití vrať vrchní kartu ze svého hrobu do ruky.
           </div>
         </div>
       
@@ -4094,7 +4113,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--o"></div>
       <div class="card__name">
@@ -4127,7 +4146,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            Dvojnásobná <span class="text__emoji">⚔</span>️ při plenění.
+            Když poškodí hráče, je poškození zdvojnásobeno.
           </div>
         </div>
       
@@ -4145,7 +4164,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--o"></div>
       <div class="card__name">
@@ -4196,7 +4215,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--o"></div>
       <div class="card__name">
@@ -4235,7 +4254,7 @@ html, body {
       
       
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--o"></div>
       <div class="card__name">
@@ -4274,7 +4293,7 @@ html, body {
       
       
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--o"></div>
       <div class="card__name">
@@ -4307,13 +4326,13 @@ html, body {
       
         <div class="card__text">
           <div>
-            Připrav všechny své tvory a&nbsp;relikvie.
+            Připrav a&nbsp;posil všechny své tvory.
           </div>
         </div>
       
       
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--o"></div>
       <div class="card__name">
@@ -4337,7 +4356,7 @@ html, body {
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              Čár
+              Očarování
             </textPath>
           </text>
         </svg>
@@ -4358,7 +4377,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--o"></div>
       <div class="card__name">
@@ -4397,7 +4416,7 @@ html, body {
       
       
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--o"></div>
       <div class="card__name">
@@ -4430,13 +4449,13 @@ html, body {
       
         <div class="card__text">
           <div>
-            Znič jakoukoliv kartu v&nbsp;bitvě.
+            Znič jakoukoliv vyloženou kartu.
           </div>
         </div>
       
       
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--r"></div>
       <div class="card__name">
@@ -4487,7 +4506,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--r"></div>
       <div class="card__name">
@@ -4532,7 +4551,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--r"></div>
       <div class="card__name">
@@ -4583,7 +4602,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--r"></div>
       <div class="card__name">
@@ -4616,7 +4635,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            Při plenění vyleč všechna jeho <span class="text__emoji">💥</span>.
+            Když poškodí hráče, je vyléčen.
           </div>
         </div>
       
@@ -4634,7 +4653,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--r"></div>
       <div class="card__name">
@@ -4685,7 +4704,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--r"></div>
       <div class="card__name">
@@ -4718,7 +4737,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            Při nasazení uděl <span class="text__emoji">💥💥</span>.
+            Při vyložení uděl <span class="text__emoji">💥💥</span>.
           </div>
         </div>
       
@@ -4736,7 +4755,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--r"></div>
       <div class="card__name">
@@ -4781,7 +4800,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--r"></div>
       <div class="card__name">
@@ -4832,7 +4851,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--r"></div>
       <div class="card__name">
@@ -4871,7 +4890,7 @@ html, body {
       
       
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--r"></div>
       <div class="card__name">
@@ -4910,7 +4929,7 @@ html, body {
       
       
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--r"></div>
       <div class="card__name">
@@ -4949,7 +4968,7 @@ html, body {
       
       
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--r"></div>
       <div class="card__name">
@@ -4988,7 +5007,7 @@ html, body {
       
       
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--r"></div>
       <div class="card__name">
@@ -5027,7 +5046,7 @@ html, body {
       
       
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--r"></div>
       <div class="card__name">
@@ -5066,7 +5085,7 @@ html, body {
       
       
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--r"></div>
       <div class="card__name">
@@ -5090,7 +5109,7 @@ html, body {
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              Čár
+              Očarování
             </textPath>
           </text>
         </svg>
@@ -5099,7 +5118,7 @@ html, body {
       
         <div class="card__text card__text--with-power">
           <div>
-            Připrav očarovaného tvora.
+            Při vyložení připrav očarovaného tvora.
           </div>
         </div>
       
@@ -5111,7 +5130,7 @@ html, body {
         </div>
       
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--p"></div>
       <div class="card__name">
@@ -5162,7 +5181,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--p"></div>
       <div class="card__name">
@@ -5213,7 +5232,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--p"></div>
       <div class="card__name">
@@ -5246,7 +5265,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            UŽIJ: Přesuň všechny <span class="text__emoji">💥</span> z&nbsp;jednoho tvora na jiného tvora.
+            UŽIJ: Přesuň všechny žetony z&nbsp;jednoho tvora na jiného tvora.
           </div>
         </div>
       
@@ -5264,7 +5283,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--p"></div>
       <div class="card__name">
@@ -5315,7 +5334,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--p"></div>
       <div class="card__name">
@@ -5366,7 +5385,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--p"></div>
       <div class="card__name">
@@ -5417,7 +5436,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--p"></div>
       <div class="card__name">
@@ -5468,7 +5487,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--p"></div>
       <div class="card__name">
@@ -5519,7 +5538,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--p"></div>
       <div class="card__name">
@@ -5552,7 +5571,7 @@ html, body {
       
         <div class="card__text card__text--with-power card__text--with-health">
           <div>
-            Má schopnosti všech tvorů v&nbsp;bitvě.
+            Když je vyložen, má schopnosti všech ostatních vyložených tvorů.
           </div>
         </div>
       
@@ -5570,7 +5589,7 @@ html, body {
           <span class="card__symbol">🛡</span>
         </div>
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--p"></div>
       <div class="card__name">
@@ -5594,7 +5613,7 @@ html, body {
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              Čár
+              Očarování
             </textPath>
           </text>
         </svg>
@@ -5603,13 +5622,13 @@ html, body {
       
         <div class="card__text">
           <div>
-            Dvojnásobná <span class="text__emoji">⚔</span>️ a&nbsp;udělené <span class="text__emoji">💥</span> začarovanému tvoru.
+            Udělené i obdržené poškození začarovaným tvorem je zdvojnásobeno.
           </div>
         </div>
       
       
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--p"></div>
       <div class="card__name">
@@ -5633,7 +5652,7 @@ html, body {
           <path id="MyPath2" fill="none" stroke="none"  d="M 0 5 Q 15 10 30 5" pathLength="2" />
           <text class="title is-4" font-size="2.5" dominant-baseline="middle" text-anchor="middle">
             <textPath href="#MyPath2" startOffset="1">
-              Čár
+              Očarování
             </textPath>
           </text>
         </svg>
@@ -5642,7 +5661,7 @@ html, body {
       
         <div class="card__text card__text--with-power">
           <div>
-            Pokud je začarovaný tvor zabit, přesuň Můru na jiného tvora.
+            Pokud je začarovaný tvor zabit, přesuň Můru na jiného vyloženého tvora.
           </div>
         </div>
       
@@ -5654,7 +5673,7 @@ html, body {
         </div>
       
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--p"></div>
       <div class="card__name">
@@ -5687,13 +5706,13 @@ html, body {
       
         <div class="card__text">
           <div>
-            Dej fialového tvora z&nbsp;tvé ruky nebo hrobu do bitvy.
+            Vylož fialového tvora z&nbsp;tvé ruky nebo hrobu do bitvy zadarmo.
           </div>
         </div>
       
       
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--p"></div>
       <div class="card__name">
@@ -5726,13 +5745,13 @@ html, body {
       
         <div class="card__text">
           <div>
-            Přesuň všechny <span class="text__emoji">💥</span> z&nbsp;jednoho tvora na jiného.
+            Přesuň všechny žetony z&nbsp;jednoho tvora na jiného.
           </div>
         </div>
       
       
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--p"></div>
       <div class="card__name">
@@ -5765,13 +5784,13 @@ html, body {
       
         <div class="card__text">
           <div>
-            Znič jakoukoliv kartu v&nbsp;bitvě.
+            Znič jakoukoliv vyloženou kartu.
           </div>
         </div>
       
       
       
-    </div><div class="card">
+    </div><div class="card card--smaller"">
       <div class="card__edge"></div>
       <div class="card__frame card__frame--p"></div>
       <div class="card__name">
